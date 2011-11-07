@@ -182,7 +182,7 @@
         -->
 
         <p>Take a look at <a
-        href="http://wiki.grml.org/doku.php?id=grml_2011.05">grml_2011.05 @ grml-wiki</a>.
+        href="/bugs/known/">the known bugs list</a>.
         Please report problems using information on <a
           href="/bugs/">grml.org/bugs/</a>.</p>
 
@@ -200,8 +200,7 @@
         <p>Your comments, bug reports, patches, and suggestions will help
         fixing bugs and improving future releases. If you find a problem with
         the release please check <a
-          href="http://wiki.grml.org/doku.php?id=grml_2011.05">grml_2011.05 @
-          grml-wiki</a> and report problems using information on <a
+          href="/bugs/known/">the known bugs list</a> and report problems using information on <a
           href="/bugs/">grml.org/bugs/</a>. Please send your feedback and
         feature requests <a href="/contact/">to the Grml team</a>!</p>
 

@@ -304,7 +304,7 @@
         -->
 
         <p>Take a look at <a
-        href="http://wiki.grml.org/doku.php?id=grml_2010.04">grml_2010.04 @ grml-wiki</a>.
+        href="/bugs/known/">the list</a>.
         Please report problems using information on <a
           href="/bugs/">grml.org/bugs/</a>.</p>
 
