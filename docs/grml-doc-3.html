@@ -1,0 +1,353 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+ <META NAME="GENERATOR" CONTENT="LinuxDoc-Tools 0.9.21">
+ <TITLE>grml - Linux for system administrators and texttool users: texttool-users tasks</TITLE>
+ <LINK HREF="grml-doc-4.html" REL=next>
+ <LINK HREF="grml-doc-2.html" REL=previous>
+ <LINK HREF="grml-doc.html#toc3" REL=contents>
+</HEAD>
+<BODY>
+<A HREF="grml-doc-4.html">Next</A>
+<A HREF="grml-doc-2.html">Previous</A>
+<A HREF="grml-doc.html#toc3">Contents</A>
+<HR>
+<H2><A NAME="s3">3.</A> <A HREF="grml-doc.html#toc3">texttool-users tasks</A></H2>
+
+<H2><A NAME="zsh"></A> <A NAME="ss3.1">3.1</A> <A HREF="grml-doc.html#toc3.1">exploring the zsh</A>
+</H2>
+
+<H3>introduction</H3>
+
+<P>The default shell of grml is the zsh. You'll find a preconfigured zsh.
+Main configuration of zsh is located in /etc/zsh/. This documentation
+covers current version of zsh (>=4.2).</P>
+
+<H3>completition system</H3>
+
+<P>You'll get a zsh with the completition mechanism. grml system loads the
+completion mechanism by default:</P>
+<P>
+<BLOCKQUOTE><CODE>
+<HR>
+<PRE>
+autoload -U compinit &amp;&amp; compinit
+zmodload -i zsh/complist
+</PRE>
+<HR>
+</CODE></BLOCKQUOTE>
+</P>
+<P>Now it is possible to use the powerful completition mechanism of zsh.
+For example file completition is something you might know from other shells:</P>
+<P>
+<BLOCKQUOTE><CODE>
+<HR>
+<PRE>
+mika@grml /tmp/mplayer-1.0-pre4 % vim debian/cont&lt;press tab>
+</PRE>
+<HR>
+</CODE></BLOCKQUOTE>
+</P>
+<P>But zsh can provide completition also by detecting the context:
+<BLOCKQUOTE><CODE>
+<HR>
+<PRE>
+mika@grml ~ % ssh grml@&lt;press tab>
+completing host
+grml       localhost
+</PRE>
+<HR>
+</CODE></BLOCKQUOTE>
+</P>
+<P>And it's possible to extend and adjust the completition mechanism.
+Take a look at the Makefile-completition:</P>
+<P>
+<BLOCKQUOTE><CODE>
+<HR>
+<PRE>
+mika@grml /tmp/mplayer-1.0-pre4 % debian/rules &lt;press tab>
+completing make target
+binary           binary-indep     build-stamp      configure        install          patch-stamp
+binary-arch      build            clean            configure-stamp  patch            unpatch
+</PRE>
+<HR>
+</CODE></BLOCKQUOTE>
+</P>
+<P>The following listing is the output provided by running 'bindkey' on zsh
+configuration on the grml system. Notice that the sequence '^[' in bindkey
+commands refers to the escape key.  '^' refers to the control key.  '^A' is
+the short form for ctrl-a. Take a closer look at it because using
+keybindings for special task is a very important step to become a poweruser
+on the command line.</P>
+<P>
+<BLOCKQUOTE><CODE>
+<HR>
+<PRE>
+"^@" set-mark-command
+"^A" beginning-of-line
+"^B" backward-char
+"^D" delete-char-or-list
+"^E" end-of-line
+"^F" forward-char
+"^G" send-break
+"^H" backward-delete-char
+"^I" expand-or-complete
+"^J" accept-line
+"^K" kill-line
+"^L" clear-screen
+"^M" accept-line
+"^N" down-line-or-history
+"^O" accept-line-and-down-history
+"^P" up-line-or-history
+"^Q" push-line
+"^R" history-incremental-search-backward
+"^S" history-incremental-search-forward
+"^T" transpose-chars
+"^U" kill-whole-line
+"^V" quoted-insert
+"^W" backward-kill-word
+"^X^B" vi-match-bracket
+"^X^F" vi-find-next-char
+"^X^J" vi-join
+"^X^K" kill-buffer
+"^X^N" infer-next-history
+"^X^O" overwrite-mode
+"^X^R" _read_comp
+"^X^U" undo
+"^X^V" vi-cmd-mode
+"^X^X" exchange-point-and-mark
+"^X^Z" predict-on
+"^X*" expand-word
+"^X=" what-cursor-position
+"^X?" _complete_debug
+"^XC" _correct_filename
+"^XG" list-expand
+"^XK" expand-kept-result
+"^Xa" _expand_alias
+"^Xc" _correct_word
+"^Xd" _list_expansions
+"^Xe" _expand_word
+"^Xg" list-expand
+"^Xh" _complete_help
+"^Xk" insert-kept-result
+"^Xm" _most_recent_file
+"^Xn" _next_tags
+"^Xr" history-incremental-search-backward
+"^Xs" history-incremental-search-forward
+"^Xt" _complete_tag
+"^Xu" undo
+"^X~" _bash_list-choices
+"^Y" yank
+"^Z" predict-off
+"^[^D" list-choices
+"^[^G" send-break
+"^[^H" backward-kill-word
+"^[^I" self-insert-unmeta
+"^[^J" self-insert-unmeta
+"^[^L" clear-screen
+"^[^M" self-insert-unmeta
+"^[^_" copy-prev-word
+"^[ " expand-history
+"^[!" expand-history
+"^[\"" quote-region
+"^[\$" spell-word
+"^['" quote-line
+"^[," _history-complete-newer
+"^[-" neg-argument
+"^[." insert-last-word
+"^[/" _history-complete-older
+"^[0" digit-argument
+"^[1" digit-argument
+"^[2" digit-argument
+"^[3" digit-argument
+"^[4" digit-argument
+"^[5" digit-argument
+"^[6" digit-argument
+"^[7" digit-argument
+"^[8" digit-argument
+"^[9" digit-argument
+"^[&lt;" beginning-of-buffer-or-history
+"^[>" end-of-buffer-or-history
+"^[?" which-command
+"^[A" accept-and-hold
+"^[B" backward-word
+"^[C" capitalize-word
+"^[D" kill-word
+"^[F" forward-word
+"^[G" get-line
+"^[H" run-help
+"^[L" down-case-word
+"^[N" history-search-forward
+"^[OA" up-line-or-history
+"^[OB" down-line-or-history
+"^[OC" forward-char
+"^[OD" backward-char
+"^[P" history-search-backward
+"^[Q" push-line
+"^[S" spell-word
+"^[T" transpose-words
+"^[U" up-case-word
+"^[W" copy-region-as-kill
+"^[[1~" beginning-of-line
+"^[[3~" delete-char
+"^[[4~" end-of-line
+"^[[A" up-line-or-search
+"^[[B" down-line-or-search
+"^[[C" forward-char
+"^[[D" backward-char
+"^[_" insert-last-word
+"^[a" accept-and-hold
+"^[b" backward-word
+"^[c" capitalize-word
+"^[d" kill-word
+"^[e" edit-command-line
+"^[f" forward-word
+"^[g" get-line
+"^[h" run-help
+"^[l" down-case-word
+"^[n" history-search-forward
+"^[p" history-search-backward
+"^[q" push-line
+"^[s" spell-word
+"^[t" transpose-words
+"^[u" up-case-word
+"^[w" copy-region-as-kill
+"^[x" execute-named-cmd
+"^[y" yank-pop
+"^[z" execute-last-named-cmd
+"^[|" vi-goto-column
+"^[~" _bash_complete-word
+"^[^?" backward-kill-word
+"^_" undo
+" "-"~" self-insert
+"^?" backward-delete-char
+"\M-^@"-"\M-^?" self-insert
+</PRE>
+<HR>
+</CODE></BLOCKQUOTE>
+</P>
+<P>zsh supports many options (see 'man 1 zshoptions' for more details).
+To get the current settings run the command 'setopt' without any options.
+On the grml system you'll find the following options set:</P>
+<P>
+<DL>
+
+<DT><B>append_history</B><DD><P>If this is set, zsh sessions will append their history
+list to the history file, rather than overwrite it. Thus, multiple parallel
+zsh sessions will all have their history lists added to the history file,
+in the order they are killed.</P>
+
+<DT><B>autocd</B><DD><P>If a command is issued that can't be executed as a normal
+command, and the command is the name of a directory, perform the cd command
+to that directory.</P>
+
+<DT><B>noclobber</B><DD><P>Does not allow `>' redirection to truncate existing files,
+and `>>' to create files. You must use `>!' or `>|' to truncate a file, and
+`>>!' or `>>|' to create a file. This options is prevents files from being
+deleted by accident.</P>
+
+<DT><B>correct</B><DD><P>Try to correct the spelling of commands. Note that, when the
+HASH_LIST_ALL option is not set or when some directories in the path are
+not readable, this may falsely report spelling errors the first time some
+commands are used.</P>
+
+<DT><B>extendedglob</B><DD><P>Treat the `#', `&nbsp;' and `^' characters as part of
+patterns for filename generation, etc. (An initial unquoted `&nbsp;' always
+produces named directory expansion.)</P>
+
+<DT><B>extendedhistory</B><DD><P>Save each command's beginning timestamp (in seconds
+since the epoch) and the duration (in seconds) to the history file.</P>
+
+<DT><B>hash_list_all</B><DD><P>Whenever a command completion is attempted, make sure
+the entire command path is hashed first. This makes the first completion
+slower.</P>
+
+<DT><B>histallowclobber</B><DD><P>Add `|' to output redirections in the history. This
+allows history references to clobber files even when CLOBBER is unset.</P>
+
+<DT><B>histignorealldups</B><DD><P>If a new command line being added to the history
+list duplicates an older one, the older command is removed from the list
+(even if it is not the previous event).</P>
+
+<DT><B>histignorespace</B><DD><P>Remove command lines from the history list when the
+first character on the line is a space, or when one of the expanded aliases
+contains a leading space. Note that the command lingers in the internal
+history until the next command is entered before it vanishes, allowing you
+to briefly reuse or edit the line. If you want to make it vanish right away
+without entering another command, type a space and press return.</P>
+
+<DT><B>interactive</B><DD><P>This is an interactive shell. This option is set upon
+initialisation if the standard input is a tty and commands are being read
+from standard input. (See the discussion of SHIN_STDIN.) This heuristic may
+be overridden by specifying a state for this option on the command line.
+The value of this option cannot be changed anywhere other than the command
+line.</P>
+
+<DT><B>monitor</B><DD><P>Allow job control. Set by default in interactive shells.</P>
+
+<DT><B>notify</B><DD><P>Report the status of background jobs immediately, rather than
+waiting until just before printing a prompt.</P>
+
+<DT><B>promptsubst</B><DD><P>If set, parameter expansion, command substitution and
+arithmetic expansion are performed in prompts. Substitutions within prompts
+do not affect the command status.</P>
+
+<DT><B>norcs</B><DD><P>After /etc/zshenv is sourced on startup, source the .zshenv,
+/etc/zprofile, .zprofile, /etc/zshrc, .zshrc, /etc/zlogin, .zlogin, and
+.zlogout files, as described in the section `Files'. If this option is
+unset, the /etc/zshenv file is still sourced, but any of the others will
+not be; it can be set at any time to prevent the remaining startup files
+after the currently executing one from being sourced.</P>
+
+<DT><B>sharehistory</B><DD><P>This option both imports new commands from the history
+file, and also causes your typed commands to be appended to the history
+file. If you find that you want more control over when commands get
+imported, you may wish to turn SHARE_HISTORY off, INC_APPEND_HISTORY on,
+and then manually import commands whenever you need them using `fc -RI'.</P>
+
+<DT><B>shinstdin</B><DD><P>Commands are being read from the standard input. Commands
+are read from standard input if no command is specified with -c and no file
+of commands is specified. If SHIN_STDIN is set explicitly on the command
+line, any argument that would otherwise have been taken as a file to run
+will instead be treated as a normal positional parameter. Note that setting
+or unsetting this option on the command line does not necessarily affect
+the state the option will have while the shell is running - that is purely
+an indicator of whether on not commands are actually being read from
+standard input. The value of this option cannot be changed anywhere other
+than the command line.</P>
+
+<DT><B>zle</B><DD><P>Use the zsh line editor. Set by default in interactive shells
+connected to a terminal.</P>
+
+</DL>
+</P>
+
+<H2><A NAME="ss3.2">3.2</A> <A HREF="grml-doc.html#toc3.2">powerusing without X</A>
+</H2>
+
+<H3>zsh</H3>
+
+<P>See section zsh for more details.</P>
+
+<H3>screen</H3>
+
+<P>...</P>
+
+<H3>vim</H3>
+
+<P>...</P>
+
+<H3>mutt</H3>
+
+<P>grml-mutt</P>
+
+<H3>slrn</H3>
+
+<P>grml-slrn</P>
+
+<HR>
+<A HREF="grml-doc-4.html">Next</A>
+<A HREF="grml-doc-2.html">Previous</A>
+<A HREF="grml-doc.html#toc3">Contents</A>
+</BODY>
+</HTML>

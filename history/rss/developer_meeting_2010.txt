@@ -1,0 +1,3 @@
+Results of Hackathon
+
+<p>The <strong>hackathon for next Grml release</strong> took place on 4th and 5th november 2010 in the fantastic hackerspace <a href="http://metalab.at/">Metalab</a> in Vienna/Austria. Find the details about it in the <a href="/reports/devmeeting_2010/">Minutes of the Grml Developer Meeting 2010</a>.</p>

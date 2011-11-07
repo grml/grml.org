@@ -1,0 +1,4 @@
+Daily grml snapshots
+
+<a href="http://grml.supersized.org/archives/269-Daily-grml-snapshots.html">Daily builds of grml</a> are available
+on <a href="http://daily.grml.org/">daily.grml.org</a>.

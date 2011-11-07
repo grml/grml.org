@@ -1,0 +1,5 @@
+grml development blog
+
+A grml development blog is available at <a
+href="http://grml.supersized.org/">grml.supersized.org</a>. Syndicate the blog if you
+are interested in development and current news on grml.

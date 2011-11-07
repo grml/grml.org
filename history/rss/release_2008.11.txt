@@ -1,0 +1,3 @@
+Grml - new stable releases available: grml/grml-medium/grml-small and grml64/grml64-medium/grml64-small version 2008.11
+
+<p>grml version 2008.11 (all grml flavours) - codename Schluchtenscheisser - has been released. Check out the <a href="http://grml.org/changelogs/">release announcements</a> for details. Grab the ISOs from <a href="http://grml.org/download/">one of grml's mirrors</a>.</p>

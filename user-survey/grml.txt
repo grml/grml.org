@@ -1,0 +1,112 @@
+***** Thanks for all of you who contributed! ************
+***** User survey was running until 15th april 2007 *****
+***** Results will be available soon.... ****************
+
+Hi,
+
+I am pleased to announce that I am running a grml user survey.  The
+purpose of this is to help grml developers gain a better idea of what
+the grml user community is really doing and using, and what aspects
+people would most like to see improved.
+
+This user survey is heavily based on the survey done by Bryan O'Sullivan
+for the Mercurial Project:
+http://www.selenic.com/pipermail/mercurial/2006-April/007513.html
+Mercurial is a great distributed version control system used at grml, see
+http://grml.org/mercurial/
+
+Please participate! If you know grml users who do not read the
+grml mailing list, please forward the survey to them and ask them to
+take part. The more people that respond, the more useful the survey
+will be!
+
+Please send your responses directly to me (mika@grml.org), and do *not*
+CC the mailing list.
+
+Regarding privacy: I will not share your name or contact information
+with anyone else unless you explicitly allow me to, but I may quote you
+anonymously (unless you would prefer me not to).
+
+At the end of February 2007 I will post a report to the grml mailing
+list and the grml wiki.
+
+Thanks again for taking part!
+
+---->8 cut here 8<----
+
+About you
+
+    1. What country are you in?  What is your preferred language?
+
+Getting started with grml
+
+    1. How did you hear about grml?
+    2. Did you encounter any problems with grml when starting to use it
+       and if so which ones?
+    3. Since which release do you use grml?
+    4. Which version(s) of grml do you currently use?
+
+Your habits
+
+    1. Do you use grml for private use, work, unpaid projects, or even all of them?
+    2. How do you obtain grml? Internet (http, ftp, bittorent or rsync?),
+       magazines (Linux-Magazin, Linux-User,...), CD from friends?
+    3. Do you use any other Live-CDs?
+          * If yes: which ones and why?
+          * If yes: how does grml compare to other Live-CDs you have used?
+    4. Which operating systems/distribution do you usually work with?
+    5. Do you use any platforms not x86 based?
+          * If yes, which ones and how often? (daily, weekly,...)
+    6. Which languages do you speak and which ones do you use via
+       lang=... bootoption with grml?
+
+What you think of grml
+
+    1. Overall, how happy are you with grml?
+    2. What do you like about using grml?
+    3. What would you most like to see improved about grml?
+       (features, bugs, plugins, documentation, ... - whatever you think of)
+    4. If you want to see grml more widely used, what do you
+       think we could do to make this happen?
+
+Documentation
+
+    1. Do you use the grml wiki? If yes, do you find it useful?
+    2. Do you find available documentation useful?
+    3. What is your favourite user documentation for any software
+       projects or products you have used?
+
+Which tools do you use
+
+    1. Which tools do you use most frequently on grml?
+    2. Which scripts of the following ones do you use? [add yes/no]
+          * grml-ap:
+          * grml-bridge:
+          * grml-crypt:
+          * grml-debootstrap
+          * grml-network:
+          * grml-router:
+          * grml-vpn:
+          * grml-x:
+    3. Do you use grml as harddisk installation (grml2hd)?
+          * If yes: why?
+    4. Do you use grml on your usb device through grml2usb?
+    5. Do you use any special bootoption on regular base?
+
+Getting help, staying in touch
+
+    1. Have you tried to get grml help from other people?
+          * If yes, did you get these problems resolved quickly and to
+            your liking?
+    2. Have you used the bug database?
+          * If yes, did you find it useful, easy to use?
+    3. Do you subscribe to the mailing list?
+          * If yes, do you find it useful, and traffic levels OK?
+    4. Do you use the IRC channel (#grml on irc.freenode.net)?
+          * If no, did you know that grml developers use
+            IRC, and that there's almost 24-hour help available?
+
+Open forum
+
+    1. What other comments or suggestions do you have that are not
+       covered by the questions above?

@@ -1,0 +1,4 @@
+Relaunch of website.
+
+Website relaunched with XHTML 1.0 Strict and CSS-only layout.
+Michael Gebetsroither joined the grml-team.

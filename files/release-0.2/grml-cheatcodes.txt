@@ -1,0 +1,139 @@
+                     CHEATCODES AND HINTS FOR GRML V0.2
+==============================================================================
+
+These options (can be combined) work from the isolinux bootprompt:
+
+grml      acpi=off                  Disable ACPI configuration in Kernel 2.6
+memtest                             Run memtest86 instead of Linux
+expert    [options...]              Interactive setup for experts
+
+Important: if you notice any problems with one of the
+following options please report it to the grml-team ->
+  http://grml.org/bugs/
+
+grml lang=at|de|cn|da|es|fr|it      specify language/keyboard
+grml lang=nl|pl|ru|sk|tr|tw|us      specify language/keyboard
+grml gmt                            Use GMT-based time
+grml home=/dev/sda1/grml.img        Mount loopback file as /home/grml
+grml home=scan                      Automatic search for grml homedir
+grml floppyconfig                   Run "grml.sh" from a floppy
+grml tz=Europe/Vienna               Use this timezone for TZ
+grml screen=1280x1024               Use specified Screen resolution for X
+grml xvrefresh=60 (or vsync=60)     Use 60 Hz vertical refresh rate for X
+grml xhrefresh=80 (or hsync=80)     Use 80 kHz horizontal refresh rate for X
+grml xserver=XFree86|XF86_SVGA      Use specified X-Server
+grml xmodule=ati|fbdev|i810|mga     Use specified XFree4-Module (1)
+grml xmodule=nv|radeon|savage|s3    Use specified XFree4-Module (2)
+grml xmodule=radeon|svga|i810       Use specified XFree4-Module (3)
+grml no{acpi,agp,apm,cpu,dhcp}      Skip parts of HW-detection (1)
+grml no{disc,dma,fstab,hotplug}     Skip parts of HW-detection (2)
+grml no{hwsetup,modem,pcmcia}       Skip parts of HW-detection (3)
+grml no{scsi,swap,usb}              Skip parts of HW-detection (4)
+grml noagent={input,isapnp,net}     Disable specific hotplug agent
+grml noagent={pci,usb}              Disable specific hotplug agent
+grml black=modulename               Add module to blacklist of hotplug
+grml nogpm                          Disable GPM daemon
+grml nosyslog                       Do not start syslog-ng
+grml nosound                        Mute sound devices
+grml pnpbios=off                    No PnP Bios initialization
+grml acpi=off                       Disable ACPI Bios completely
+grml usb2                           Try to initialize USB 2.x controller(s)
+failsafe                            Boot with (almost) no HW-detection
+grml pci=irqmask=0x0e98             Try this, if PS/2 mouse doesn't work *)
+grml pci=bios                       Workaround for bad PCI controllers
+grml ide2=0x180 nopcmcia            Boot from PCMCIA-CD-ROM (some notebooks)
+grml mem=128M                       Specify Memory size in MByte
+grml dma                            Enable DMA accelleration for ALL IDE-Drives
+grml vga=normal                     No-framebuffer mode, but X
+grml blind                          Start Braille-Terminal (no X)
+grml brltty=type,port,table         Parameters for Braille device
+grml wheelmouse                     Enable IMPS/2 protocol for wheelmice
+grml nowheelmouse                   Force plain PS/2 protocol for PS/2-mouse
+fb1280x1024                         Use fixed framebuffer graphics (1)
+fb1024x768                          Use fixed framebuffer graphics (2)
+fb800x600                           Use fixed framebuffer graphics (3)
+grml keyboard=us xkeyboard=us       Use different keyboard (text/X)
+grml toram                          Copy CD to RAM and run from there
+grml tohd=/dev/hda1                 Copy CD to HD partition and run from there
+grml fromhd                         Skip checking for grml on CD-ROM
+grml fromhd=/dev/hda1               Boot from previously copied CD-Image
+grml bootfrom=/dev/hda1             Access Image then boot from previously 
+                                    copied CD-Image (enables booting from 
+                                    NTFS / ReiserFS) ***)
+grml bootfrom=/dev/hda1/GRML.iso    Access image, boot from ISO-Image. ***)
+grml grml_dir=GRML                  Directory to search for on the CD. 
+grml grml_name=GRML                 Cloop-File to search for on the CD.
+grml testcd                         Check CD data integrity and md5sums
+grml noeject                        Do NOT eject CD after halt
+grml noprompt                       Do NOT prompt to remove the CD
+grml myconfig=/dev/sda1             Run "grml.sh" from a partition:
+                                    /dev/fd0  for floppy disk
+				    /dev/sda1 for USB-stick/first SCSI-device
+
+The following option is probably broken:
+grml myconf=scan (or config=scan)   Try to find "grml.sh" automatically
+
+*) Try "grml pci=irqmask=0x0e98" if (you have a notebook and) your
+PS/2 mouse doesn't work. (Possibly caused by a BIOS-flaw on your board,
+BIOS updates can help.) Sometimes, switching to the text console with
+Control-Alt-F1 and back to the X-screen with Control-Alt-F7 solves the
+problem without rebooting, since the X server reinitializes the mouse
+driver during that procedure.
+
+*) Bootfrom needs access to a running grml-System with the same Kernel
+as the Bootkernel, before it is able to mount the partition / ISO-Image.
+This should allow a poor mans install from NTFS-Partitions and makes it
+also possible to boot an ISO-Image directly. You can also use wildcards
+in the ISO-Filename, but it must be unique. So: If you have just one
+GRML.iso on /dev/hda1 you can access it as: bootfrom=/dev/hda1/G*.iso,
+but if there are several, you need to make clear, which one you want.
+(Feature added by Fabian Franz.)
+
+If your GRML CD makes strange noises during boot, or you see frequent
+errors like "squashfs: read error", or programs are crashing randomly,
+then your CD image is probably defective or incomplete, or your CD-burner
+created a defective CD due to wrong writing speed or bad media. This is
+the most common error reported.  Please boot with "grml testcd" to check
+if the CD is OK, and/or even better, verify the MD5 checksums that are
+present on the mirrors before writing the CD. In some cases, defective
+IDE controllers cause this error if you have DMA enabled. Also, please
+read the GRML-FAQ.
+
+In case of a failing hardware autodetection, try booting with any of
+the "no-" options as shown in the table above, like in
+   grml nodiscover nohotplug noagp noapm noapic acpi=off nodma nopcmcia
+to skip some critical parts of the autodetection system.
+
+The "noswap" option is useful for a forensic analysis without touching
+existing swap partitions.
+
+Some Boards apparently don't pass the proper memory size to the 
+linux-kernel. It may cause the message "Panic: cannot mount root file 
+system" and the system hangs. Use "grml mem=128M" to solve that 
+problem if your system has 128MByte memory for example (caution:
+you MUST use a capital "M" here).
+
+The "expert" mode provides a very simple interface to loading additional
+Kernel modules from floppy disks (ext2 or vfat), plus interactive
+configuration of mouse/keyboard/soundcard/xserver. "expert" mode supports
+the same boot options as "grml".
+
+The "floppyconfig" or "(my)config=/dev/partition" options allow you to
+reconfigure the system after autoconfiguration by running a bourne shell
+script called "grml.sh" from the root directory on the given device (or
+floppy).  The shell script will also be executed at startup.
+
+If you wish to remaster the CD, please don't forget to specify
+	-no-emul-boot -boot-load-size 4 -boot-info-table \
+	-b boot/isolinux/isolinux.bin -c boot/isolinux/boot.cat
+as option to mkisofs. Otherwise your CD won't be bootable. The
+directory GRML, containig the compressed filesystem file "GRML",
+must be located in the top level directory of the CD.
+
+Caution: X-Screensaver: Don't start xlock or any screensaver that
+requires a password. There are no default passwords on GRML,
+i.e. all accounts are LOCKED unless you explicitly set a password.
+See also README_Security.txt about this issue.
+If you accidentially started a screensaver switch to one of the
+textconsoles by Control-Alt-F1 and kill the screensaver (or just set a
+password for the grml user).

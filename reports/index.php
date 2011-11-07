@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>grml.org - Report from Developer Meeting 2010</title>
+<meta name="Title" content="grml.org - Report from Developer Meeting 2010" />
+<meta name="Author" content="the grml team [www.grml.org/team/]" />
+<meta name="Keywords" content="grml.org, grml" />
+<meta name="Description" content="Report from Developer Meeting 2010 of grml.org" />
+<meta name="Abstract" content="grml, just another linux-distribution" />
+<meta name="fdse-index-as" content="http://www.grml.org/news/" />
+<meta name="Robots" content="index,follow" />
+<meta name="Language" content="english" />
+<meta name="identifier-url" content="http://www.grml.org/" />
+<meta name="MSSmartTagsPreventParsing" content="true" />
+<meta http-equiv="imagetoolbar" content="no" />
+<link rel="home" href="/" title="grml.org" />
+<link rel="help" href="/features/" title="About" />
+<link rel="author" href="/team/" title="Team" />
+<link rel="icon" href="/favicon.png" type="image/png" />
+<link rel="stylesheet" href="/style.css" type="text/css" />
+</head>
+
+<body>
+<?php include '../static.inc'; ?>
+
+      <div class="content">
+
+        <p><img style="float: right" src="/img/info.png" alt="*" /></p>
+
+         <h1>Grml Reports</h1>
+
+         <ul>
+             <li><a href="./devmeeting_2010/">Protocol of Grml Developer Meeting 2011</a>
+         </ul>
+
+
+      </div>
+
+<?php include '../static_bottom.inc'; ?>

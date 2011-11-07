@@ -1,0 +1,9 @@
+Releases grml 1.0, grml64 0.1 and grml-small 0.4 available.
+
+grml 1.0 - Codename Meilenschwein, grml64 - Codename LiveShell and grml-small 0.4 - Codename Springinkerl <a href="http://grml.org/download/">available</a>.
+
+The new grml release brings 109 new packages and many new features.  For details take a look at <a href="http://grml.org/files/README-grml-1.0.php">the release announcement</a>.
+
+The grml64 release provides grml for x86_64, take a look at <a href="http://grml.org/files/README-grml64-0.1.php">the release announcement</a> for more details.
+
+The new grml-small release brings 12 new packages and as well many new features.  For details take a look at <a href="http://grml.org/files/README-grml-small-0.4.php">the release announcement</a>.

@@ -1,0 +1,46 @@
+#!/bin/bash
+
+. /etc/grml/sh-lib
+SHARED_PROG_VARS_="/usr/share/grml-terminalserver/shared_prog_vars"
+isExistent $SHARED_PROG_VARS_ die
+. $SHARED_PROG_VARS_
+
+function actionPkg
+{ 
+    local pwd_="$(pwd)"
+    local tmp_="$(mktemp -td terminalserver_grub.XXXXXX)" || die "could not create tmpfile"
+
+    # version information:
+    local version_="$(cat /etc/grml_version)"
+    local version_number_="$(awk '{print $2}' /etc/grml_version)"
+    case $version_number_ in
+         [0-9]*) version_="${version_%% *}"_${version_number_} ;;
+         *)      version_="${version_%% *}" ;;
+    esac
+    
+    local path_="$tmp_/grml_netboot_package_$version_"
+    mkdir "$path_"
+
+    cp $NETBOOT_PACKAGE_CONF_FILE_ $CONF_FILE_
+    echo "executing grml-terminalserver-config initrd"
+    grml-terminalserver-config initrd
+
+    # tftpd config
+    grml-terminalserver config tftp
+    cp -r $TFTPD_DATA_DIR_ $path_
+
+    # grub
+    awk '/ on$/{print $1}' $GRUB_NIC_CONF_ >$path_/grub_enabled_nics
+    grml-terminalserver-config grubConf $path_/grub_enabled_nics
+    cp $PATH_/grub.img $path_
+
+    ( cd "$tmp_" && tar jcf "$pwd_"/grml_netboot_package_${version_}.tar.bz2 "grml_netboot_package_$version_" )
+
+    rm -rf "$tmp_"
+    echo "grml_netboot_package_${version_}.tar.bz2 has been created."
+}
+
+checkRoot die "You have to be root to use this program"
+disableSyslog
+
+actionPkg

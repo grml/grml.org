@@ -1,0 +1,25 @@
+title=grml2hd
+description=installation process demo
+order=
+date=
+ignore=
+iorder=
+FONT=fixed
+COLOR=white
+FONTSIZE=14
+CTAG=
+THUMBNAIL_QUALITY=75
+SLIDE_DELAY=5
+SLIDE_LOOP=false
+EXCLUDE_ORGINAL=false
+RECURSIVE=false
+COLUMNS=4
+AUDIODIR=
+IIMAGE_SPECIAL=false
+
+01-welcome-screen.png=
+02-partition.png=
+03-bootmanager-target.png=
+04-filesystem.png=
+05-are-you-sure.png=
+06-copy-process.png=

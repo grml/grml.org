@@ -1,0 +1,143 @@
+Latest change: Sam Feb 13 02:36:36 CET 2010 [mika]
+
+Grml Developer Meeting on IRC - 2010-01-07
+==========================================
+
+Present and active
+------------------
+
+Official start at 21:00 CET.
+
+* formorer [joined at 23:07, left at 00:13]
+* ft [left at 00:32]
+* gebi [left at 00:50]
+* jimmy [left at 23:40]
+* mika
+* mrud
+* Rhonda [left around 23:54]
+
+Official/final end at 01:09 CET.
+
+Topics
+------
+
+* Mirror infrastructure:
+  - which is our main mirror? [Rhonda / formorer]
+  - who can update it and how? [Rhonda / formorer]
+  - policies/guidelines/howto for 3rd party mirrors [Rhonda / mika]
+    - git repos grml-mirrors + grml-mirrors-private [mika: done]
+  - collect 3rd party mirror admin information? [Rhonda]
+  - geolocation?  -> download.grml.org [formorer]
+  - Use additional checksum like sha1/sha256? [mika - done]
+
+* Grml-Homepage:
+  - make it based on a .git repository for collaborative editing
+  - convert to ikiwiki [technical part: formorer, structural part: mika]
+    - git repos grml-homepage [mika: done]
+    - integrate wiki.grml.org in main grml.org structure
+    - integrate http://grml.org/online-docs/ in ikiwiki structure
+    - mrud will work on a css layout that matches the current layout of grml.org
+
+* Switch to Debian/testing as base?
+  - No, keep unstable as a base: as we still want to continue doing Q/A work with
+    daily builds and a switch to testing might lead to pinning-hell we decided to
+    continue as until now [team decision]
+
+* Q/A work:
+  - autotesting system based on KVM for daily ISOs [mrud + mika]
+    http://people.redhat.com/~dhowells/keyutils/rhts_environment.sh
+
+* Sources:
+  - continue providing sources.grml.org
+  - in the long term let's establish our own daily debian-mirror
+  - generate daily snapshots of grml's mirror ("reprepro gensnapshot grml-testing $(date ...)")
+  - fallback to snapshots.debian.org (currently: http://stabile.debian.org:5001/)
+
+* How could we improve the boot process? Making sure that an ISO tries to boot
+  exactly the same version and doesn’t boot another system from harddisk.
+
+  Concept:
+
+  - each ISO (*not* squashfs specific) provides a file named /boot/uuid.txt
+    * if this file isn't present just continue booting as until now
+
+  - bootloader provides uuid=$CONTENT_OF_uuid.txt to kernel's cmdline
+
+  - unless isofrom= or nfsroot= are specified on cmdline bootfrom=removable is used
+
+  - initramfs reads /proc/cmdline and check argument of uuid= bootoption
+
+  - initramfs scans devices for precense of /boot/uuid.txt and if it exists
+    validate against uuid=... of /proc/cmdline
+    * match: boot
+    * does not match: continue searching
+
+  Use cases:
+
+  - live ISO: grml-live provides according uuid.txt and bootloader config OOTB:
+    nothing to do
+
+  - copying ISO to harddisk: if using isofrom=... then the files on harddisk are
+    considered for use, otherwise the devices aren't scanned at all by default
+    because of bootfrom=removable
+
+  - grml2{usb,iso} grml.iso grml64.iso /dev/sdX: grml2{usb,iso} generates a
+    *new* /boot/uuid.txt on the device and adjusts bootloader configuration
+    accordingly
+
+  - PXE boot: works OOTB because nfsroot=... is present
+
+  TODOs:
+
+  - implement uuidgen > <install>/boot/uuid.txt in grml-live [mika]
+  - implement according toolchain for live-initramfs [mika]
+  - adjust grml2usb, grml2iso,... accordingly then [mrud]
+
+  => implemented
+
+* Grub1 and Grub2 shipping on one ISO
+  - jimmy will work on a grub1 Debian package
+    - contact upstream so efforts could be brought to Debian
+
+* Autobuild setup for Debian packages
+  - wanna-build like feature in reprepro with sbuild [formorer]
+
+* Grml's Roundup is spammed. How to resolve this?
+  - make sure removing users works again [mika/mrud/formorer]
+  - make sure removing messages works [mika/mrud/formorer]
+
+* Redmine as project management/bts/homepage/wiki/....?
+  - homepage: no (ikiwiki)
+  - wiki: no (-> ikiwiki)
+  - bts / project management: would be nice, yes [formorer will check out the
+    performance issue]
+
+* Workflow with Git and policy how we create and maintain Debian packages
+  - upstream sources in .git vs. debian/-only
+  - needs further discussion, gebi will have a look at workflow from
+    http://people.debian.org/~mika/forensics/maintainer.html
+
+* grml-policy:
+  - should be extended according to our recent development
+
+* Unify code as much as possible, discuss how we could create/provide a
+  grml-core package.
+  - grml-core: distinguish between grml-specific function, like
+    checkbootparam/islivecd and check4root...
+  - grml-lsb: provide /etc/grml/lsb-functions
+  - remove unecessary stuff from grml-etc-core (move to grml-lsb and grml-core)
+  - let grml-{scripts,shlib,autoconfig} use grml-core
+  - provide stuff that's shared/used within
+    grml-{setlang,lang,keyboard,autoconfig} through grml-core
+
+* get rid of release-stoppers
+  - run a BSP
+
+* Left for further discussions / needs further investigation:
+  - grml-API
+  - Switch to isolinux as boot loader for hybrid cds?
+  - Upgrade to aufs2?
+  - Kernel stuff
+  - Unify bootoptions stuff (grml-cheatcodes.txt documentation and definition)
+    - DSL for defining bootoptions (ssh, nofb,...) and further processing
+      for according bootloader(s) - long-term goal [mrud]

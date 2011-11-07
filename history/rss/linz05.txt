@@ -1,0 +1,11 @@
+grml developers at Linzer Linuxdays 2005
+
+On 14th of april Mika and Jimmy will arrive at Linzer Linuxdays 2005 [in
+Austria]: <a href="http://linz.linuxwochen.at/"> http://linz.linuxwochen.at/</a>.
+
+Andreas 'Jimmy' Gredler will give <a
+href="http://www.linuxwochen.at/cgi-bin/index?id=100000796">a talk about RAID-systems
+on Linux</a> on 14th of april. Mika will give <a
+href="http://www.linuxwochen.at/cgi-bin/index?id=100000799">a talk about grml on 15th
+of april</a>. A technology preview of grml 0.4 - including X.org, the new grml-x
+system and full unionfs-support - will be presented in the talk.

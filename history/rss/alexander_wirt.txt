@@ -1,0 +1,3 @@
+New team member.
+
+Alexander Wirt joined <a href="/team/">the grml-team</a>.

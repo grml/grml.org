@@ -1,0 +1,1127 @@
+Changelog for grml
+~~~~~~~~~~~~~~~~~~
+Latest change: Sam Sep 01 10:12:06 CEST 2007 [mika]
+
+20070518
+========
+
+Release 1.0 - codename Meilenschwein (20070518)
+===============================================
+
+Fixed several bugs and issues reported on
+http://wiki.grml.org/doku.php?id=grml_0.9
+
+New grml-scripts (some selected ones):
+
+  * alignmargins: adjust the margins and the position of the printed
+    contents on the paper
+  * dirvish-setup: a simple script for setting up a basic configuration
+    for the backup software dirvish
+  * grml2ram: copy compressed GRML image to RAM when running grml
+    already (based on contribution by Michael Schierl)
+  * grml-quickconfig: get fast access to some basic grml-scripts
+    (contributed by Michael Schierl)
+  * grml-setservices interface for basic configuration of system
+    startup/shutdown via /etc/runlevel.conf
+  * gsuggest.pl: google suggest - ask google for keyword suggestions
+  * iso-term: wrapper script to run x-terminal-emulator in iso885915 mode
+
+New bootparameters/cheatcodes:
+
+  * qemu: installs a default /etc/X11/xorg.conf (without
+    having to run hardware detection)
+  * debian2hd: install plain Debian via grml-debootstrap
+    in automatic mode
+
+grml2hd (install grml to harddisk):
+
+  * support for Grub (now there's a dialog for selection between
+    lilo and grub as bootloader)
+  * use of UUID and /dev/disk/by-uuid/ by default (provides stable
+    booting devices, very important for installation on external
+    usb/firewire devices for example)
+  * use initrd/initramfs by default now
+
+grml-terminalserver (boot grml via network):
+
+  * better module loading
+  * switch from tftpd-hpa to atftpd (resulting in big speedup)
+
+grml-debootstrap (install plain Debian fast and easy):
+
+  * support full automatic installation via debian2hd
+  * use aptitude instead of apt-get in chroot-script
+  * use of DEBIAN_FRONTEND='noninteractive' to avoid unnecessary
+    questions when installing
+  * support Debian release with codename 'lenny'
+  * support stages (improves cancel/resume of operations)
+  * support setting of some important variables via cmdline
+  * improved error handling
+
+Special new features:
+
+  * updated to X.org 7.2 / Xserver 1.3
+  * updated to libc6 2.5
+  * use of UTF-8 as default encoding
+  * LaTeX: switch from tetex to texlive
+  * grml-x: use of evdev (dropped options -nousb and -nops2,
+    added -ps2 and -usb instead), improved error handling and execution
+  * grml-autoconfig: dropped userspace/powernowd stuff in cpufrequeny
+    scaling in favour of the ondemand-governor
+  * integrated grml-quickconfig within zsh-login
+  * got rid of grml-sysvinit, using plain sysvinit from Debian
+    without any hacks now
+  * support basic rescanning in live-cd initrd
+  * the grml team manages all the Debian unique packages with mercurial
+    using grml-mercurial-utils
+
+Kernel:
+
+Based on vanilla kernel 2.6.20.11 including several patches (Speakup,
+Squashfs,...) and additional modules:
+
+  acerhk, aufs, cowloop, drbd8, et131x, exmap, ipw3945, iscsitarget, ivtv, kqemu,
+  madwifi, misdn, ndiswrapper, nozomi, openafs, pcan, qc-usb, r1000, realtime-lsm,
+  rt2400, rt2500, rt2570, rt2x00, sdricoh_cs, sl-modem, snd-bt-sco, spca5xx,
+  sysprof, tidev, tpm_emulator, truecrypt, unionfs
+
+Important Changes:
+
+  * UTF-8: grml uses UTF8 as default encoding. You can deactivate UTF-8
+    environment via booting with bootoption lang=$LANG-iso. Some software is not
+    yet UTF-8 aware (problem is located upstream, neither at Debian or grml
+    itself). More information about UTF-8 at grml can be found at the utf8
+    webpage in the grml-wiki.
+
+  * get_tw_cli / get_3ware: get_tw_cli has been renamed into get_3ware as we
+    support 3DM2 as well now.
+
+  * fluxbox: the keybindings have been restored to their original (fluxbox
+    upstream) behaviour. Now Alt+F# switches between the desktops, Alt+Shift+F#
+    sends an application to another desktop. If you want to get the old
+    behaviour back you can use the zsh function fluxkey-change.  Packages /
+    Software
+
+Updated all packages to Debian Unstable branch by 20070517.
+
+Removed 90 packages [please notice that some of them are available under
+different names/in different packages]:
+
+  *2.6.18-grml* lib*
+
+  aircrack aptconf bacula-client classpath classpath-common classpath-gtkpeer
+  convertfs cpp-3.3 ddd debpool debsig-verify doc-base emacspeak ethereal
+  ethereal-common fsh gcc-2.95 gcc-3.3 gcc-3.3-base glibc-doc grml-btnet
+  grml-kerneladdons-2.6.18 grml-sysvinit gs-gpl initrd-tools jamvm java-common
+  kdoc kenny kwtools-bin kwtools-common kwtools-graphic kwtools-net
+  kwtools-net-postfix kwtools-sys kwtools-sys-lvm kwtools-utils latex-ucs
+  linux-wlan-ng linux-wlan-ng-firmware lout lout-common lufs-utils lvm-common
+  lvm10 madwifi-doc misdn-utils mutt-ng muttprint nhfsstone nscd nxclient
+  olsrd-gui olsrd-plugin opie-server policycoreutils postgresql-client-8.1
+  prosper python-clamav python-jaxml python-selinux python2.3 raccess samdump
+  scapy securecgi simh synctree tclx8.3 tesseract-ocr tetex-base tetex-bin
+  tetex-extra tethereal tftp-hpa tftpd-hpa tk-brief transset ufsutils
+  unionfs-utils unzsplit valgrind vde wellenreiter wmi xcompmgr xen-tools
+  xen-utils-common xlibmesa-gl zsplit
+
+Added 109 new packages (exluding lib* and *2.6.20-grml*):
+
+  4g8 advchk apwal arp-scan array-info ascii ascii2binary atftpd aufs-tools
+  blktrace bluetooth-alsa cbm clive concalc cryopid csstidy ctioga cups-pdf
+  dbus-x11 dnsproxy docbook2odf dpkg-ruby dvb-utils edbrowse espeak espeak-data
+  fakechroot fatresize funionfs fusedav gaffitter gatling gcolor2 gems
+  genisoimage grml-desktop grml-kerneladdons-2.6.20 grml-pylib hal-info icedax
+  ii imsniff ion3-mod-xinerama keyutils kqemu-common kvm lckdo mcabber mtp-tools
+  mtpaint ncc ncdu newsbeuter odt2txt olsrd-plugins ophcrack oss-compat
+  pamusb-tools pdfcube perl-tk pnputils podget postgresql-client-8.2 powertop
+  python-gobject python-pexpect python-scapy python-urwid rcov recordmydesktop
+  samdump2 scalpel screenie scrot sigit smbnetfs speedometer sucrack
+  texlive-base texlive-base-bin texlive-common texlive-doc-base
+  texlive-fonts-recommended texlive-lang-german texlive-latex-base
+  texlive-latex-recommended thc-ipv6 treil tss tweak uncrustify urlscan vde2
+  vim-addon-manager vinetto xjed xserver-xorg-input-aiptek
+  xserver-xorg-input-elo2300 xserver-xorg-input-elographics
+  xserver-xorg-input-evtouch xserver-xorg-input-hyperpen
+  xserver-xorg-input-joystick xserver-xorg-input-penmount
+  xserver-xorg-input-void xserver-xorg-video-intel xsteg xwatchwin zfs-fuse zzuf
+
+If you find a problem with the release please check
+ http://wiki.grml.org/doku.php?id=grml_0.9
+and report problems using information on http://grml.org/bugs/
+
+20061206
+========
+
+Release 0.9 - Codename Dioptrienotto (20061206)
+================================================
+
+Fixed several bugs and issues reported on
+http://wiki.grml.org/doku.php?id=grml_0.8
+
+New grml-scripts (some selected ones):
+
+  * getsf: download project from sourceforge.net
+  * grml-ap: set up your box as access point
+  * grml-bridge: set up your box as bridge
+  * grml-debootstrap: wrapper around debootstrap for installing plain
+    Debian via grml
+  * grml-router: set up your box as NAT-router
+  * qma: fast manual access, speeds up access for reading manpages
+  * random-hostname: print random hostname to stdout
+  * reread_partition_table: re-read partition table of specific disk
+
+New bootparameters/cheatcodes (some selected ones):
+
+  * dos: boot into FreeDOS 1.0 from the Balder project
+  * noswraid: disable search for software RAID arrays
+  * lang=$LANG-utf: unicode support, usage example: lang=de-utf8
+
+grml2hd:
+
+  * support customization of grml2hd through /etc/grml2hd/customization
+  * allow installation of lilo into MBR of the first disk on the
+    system. (Feature based on patch contributed by Alexander Bernauer.)
+  * adjust /etc/default/rcS according to bootoption utc/gmt and
+    /etc/localtime according to bootoption tz
+  * integration of random-hostname
+
+Special new features:
+
+  * updated to X.org 7.1.1
+  * unicode support through bootoption lang=$LANG-utf8
+  * added FreeDOS 1.0 from the Balder project; boot into it using
+    the bootoption 'dos'
+  * new handling for added/removed devices: /etc/fstab is rebuild
+    automatically if new block devices are added or removed; mounting
+    usb devices is possible through /mnt/usb-sd*
+  * grml-rebuildfstab (that's a shell command now as well, just run
+    'grml-rebuildfstab' to rebuild /etc/fstab) supports fs-LABELs
+    and UUIDs; see 'man rebuildfstab' for details
+  * split package grml-etc into grml-etc + grml-etc-core (the latter
+    one provides the core configuration files for e.g. zsh, screen and vim)
+  * bootoption 'grub' boots into The All In One Boot Floppy (which provides
+    Grub), contributed by Michael Schierl
+
+Kernel:
+
+Based on vanilla kernel 2.6.18.3 including several patches (Speakup,
+Squashfs,...) and additional modules:
+
+  acerhk, acx100, adp94xx, arcmsr, bcm5700, cowloop, drbd8, et131x,
+  exmap, ipw3945, ivtv, kqemu, kvm, linux-wlan-ng, madwifi, misdn,
+  ndiswrapper, nozomi, openafs, pcan, qc-usb, r1000, realtime-lsm,
+  rt2400, rt2500, rt2570, rt2x00, sl-modem, snd-bt-sco, spca5xx,
+  sysprof, tidev, tpm_emulator, truecrypt, unionfs
+
+Important Changes:
+
+  * swap partitions: by default grml does not automatically use swap
+    partitions anymore. Run 'grml-swapon' when running grml or boot using
+    'grml swap' for enabling all detected and usable swap partitions.
+
+  * software raid: starting with grml 0.9 booting the system searches
+    for present software raid arrays. The configuration file
+    /etc/mdadm/mdadm.conf will be generated by default, to disable this
+    feature use the bootopion noswraid. The arrays are not autoassembled
+    by default. Either boot using the bootoption swraid or run 'Start
+    mdadm-raid' when running grml already to assemble present software
+    raid arrays.
+
+  * zsh global aliases: the global aliases setup has been changed; now
+    the global aliases (like: 'G' is same '|grep') are not enabled by
+    default any more, instead a new setup named 'powerful abbreviation
+    expansion' is available. Usage example: type 'N' and press ',.' to
+    expand the 'N' into '&>/dev/null'. Take a look at the grml zsh refcard
+    for more details.
+
+Removed 62 packages [please notice that some of them are available under
+different names/in different packages]:
+
+  *2.6.17-grml* lib*
+
+  apache2-common apt-index-watcher bluez-pin bookmarkbridge camgrab cdw
+  cdw-common cthumb divine dnotify drbd0.7-utils duplicity
+  euro-support-console euro-support-x firefox firefox-webdeveloper
+  flashplugin-nonfree gcj-4.1-base gconf2-common giflib-bin giflib3g
+  gnupg2 grml-kerneladdons grml-reportbug gtkrecover ipchains ipmasqadm
+  ipw3945-ucode jaxml lout-doc lpr mime-codecs mozilla-mplayer
+  mplayer-nogui mtop ndiswrapper-utils-1.7 ndiswrapper-utils-1.8
+  netkit-inetd open-iscsi pnpbios-tools ppmtofb python-gnupginterface
+  python2.3-pymad python2.3-pyopenssl python2.3-pyparsing
+  python2.3-twisted-bin python2.4-selinux python2.4-semanage scanerrlog
+  stunnel tex-refs thc-ipv6 thc-pptp-bruter truecrypt turkey update
+  x-window-system-core xfonts-100dpi-transcoded xfonts-75dpi-transcoded
+  xfonts-konsole xlibs xorg
+
+Added 113 new packages (exluding lib* and *2.6.18-grml*):
+
+  aamath ace-of-penguins afflib apache2.2-common apf-client apf-server
+  aria2 asused automake avahi-daemon ccontrol cdrskin classpath-gtkpeer
+  conntrack cupsys-bsd ddccontrol ddccontrol-db diakonos diction dov4l
+  drbd8-utils dsbltesters dwm-tools dynafont dynamic-disk emacs emelfm
+  firmware-ipw3945 firmware-qlogic glipper-nognome gpgv grml-debootstrap
+  grml-etc-core grml-kerneladdons-2.6.18 grml-network guessnet histring
+  hoz ht iceweasel ink inotail inotify-tools iwatch konwert
+  konwert-filters latex-ucs mathomatic medusa misdn-utils molly-guard
+  mpg123-alsa mplayer mplayer-skin-blue ndiswrapper-utils-1.9 ne
+  obexpushd openbsd-inetd pax-utils ptfinder pwman3 pxfw pydb
+  python-crypto python-jaxml python-pymad python-pysqlite2
+  python-selinux python-semanage python-twisted-bin python2.5
+  python2.5-minimal qtparted rake rdoc rdoc1.8 reniced reportbug
+  resolvconf retty ruby-prof sic smap ssdeep stealth stunnel4 synergy
+  sysvinit-utils tesseract-ocr toilet toilet-fonts update-inetd
+  upstreamdev videogen vim-python vim-ruby webcam-server wikipedia2text
+  wodim xen-utils-common xmlindent xmms2 xmms2-client-cli xmms2-core
+  xmms2-plugin-alsa xmms2-plugin-id3v2 xmms2-plugin-jack
+  xmms2-plugin-mad xmms2-plugin-vorbis xsel xserver-xorg-input-vmmouse
+  xserver-xorg-video-ivtv youtube-dl
+
+If you find a problem with the release please check
+ http://wiki.grml.org/doku.php?id=grml_0.9
+and report problems using information on http://grml.org/bugs/
+
+20060813
+========
+
+Release 0.8 - Codename Funkenzutzler (20060813)
+================================================
+
+Fixed several bugs and issues reported on
+http://wiki.grml.org/doku.php?id=grml_0.7
+
+New grml-scripts (some selected ones):
+
+  * blacklist: blacklist module via module-init-tools (/etc/modprobe.d/grml)
+  * unblacklist: remove blacklisted module from /etc/modprobe.d/grml
+  * install-packages-useful: a script which installs useful software on
+    your grml system. This script is similar to Ubuntu's EasyUbuntu and
+    EasyBreezy
+  * grml-policy-rc.d: a wrapper script for invoke-rc.d to avoid automatical
+    startup of init scripts via invoke-rc.d; take a look at 'man
+    grml-policy-rc.d' for more details
+  * osd_server.py: listen for incoming messages on a specific port and
+    print them via osd_cat; run 'grml-tips osd' for more details (thanks to
+    Ulrich Dangel, Alexander Bernauer and Rico Schickel)
+  * myip: return IP address of running system on stdout
+  * grml-tpm: set up a system for use with TPM
+  * grml-resolution: change X resolution via a simple menu frontend (script
+    based on work by Florian Keller)
+  * grml-hostname: set hostname of system
+
+New bootparameters/cheatcodes (some selected ones):
+
+  * splash: text based bootsplash (based on contribution by Florian Keller)
+  * noblank: disable console blanking
+
+grml2hd:
+
+  * partition selector (just invoke grml2hd without any further options)
+  * added support for setting hostname via grml-hostname
+  * grml-setlang: set language system-wide on grml system. Set $LANG,
+    $LC_ALL, $COUNTRY,... in /etc/default/locale (formerly known as
+    /etc/environment)
+  * grml-setkeyboard: set keyboard layout system-wide on grml system via
+    /etc/sysconfig/keyboard (Notice: Does not affect the currently used keyboard
+    layout, use grml-lang instead to temporarly change settings)
+  * reworked grml2hd-utils:
+    http://grml.supersized.org/archives/154-reworked-grml2hd-utils,-improved-grml2hd.html
+
+Special new features:
+
+  * updated to X.org 7.0
+  * using Lat15-Terminus16 as default console font (disable via bootoption
+    'nodefaultfont')
+  * text based bootsplash (see bootoption 'splash'), based on contribution
+    by Florian Keller
+  * switched from kaffe to jikes and jamvm
+  * added window managers fvwm-crystal and dwm
+  * added support for UMTS vodafone cards (austrian providers like A1,
+    T-Mobile and 3 work out-of-the-box) - see 'grml-tips umts'
+  * added /etc/rc{0..6}.d/ /etc/rcS.d directories with important_notice to
+    inform users about file-rc
+  * /etc/init.d/boolocal.{pre,middle,post}: add your own commands/stuff to
+    bootup sequence, see "man grml-autoconfig" for more details
+  * setup of files in /boot/grub/ to be able to install grub; provide
+    sample menu.lst for use with grml2hd - see 'grml-tips grub'</li>
+  * run 'zsh-help' for some hints regarding zsh
+
+Kernel:
+
+Based on vanilla kernel 2.6.17.7 including several patches (Reiser4,
+Speakup, Squashfs,...) and additional modules:
+
+  acerhk, acx100, adp94xx, bcm5700, cowloop, dazuko, drbd0.7, et131x, exmap, ipw3945,
+  ivtv0.7, kqemu, linux-wlan-ng, lufs, madwifi, ndiswrapper, nozomi, openafs, pcan,
+  pwc, qc-usb, realtime-lsm, rt2x00, rt2400, rt2500, rt2570, sl-modem, snd-bt-sco,
+  spca5xx, sysprof, thinkpad, tidev, truecrypt, vaiostat, zd1211
+
+Important Changes:
+
+  * The software RAID devices like /dev/md0 aren't created by default anymore.  See
+    /etc/udev/mdadm.rules and http://bugs.debian.org/381181 for the reason. If you need
+    /dev/md*-devices just run the following command (you will find this tip in
+    'grml-tips mdadm' as well):
+
+    # cd /dev && MAKEDEV md
+
+  * There might be problems running DRI with current X.org. Check whether DRI/3d-support
+    works for you via running:
+
+    % glxinfo | grep direct
+    direct rendering: Yes</pre>
+
+    If it does not return 'Yes' the following command might solve your problem:
+
+    # apt-get install libgl1-mesa-dri/experimental libgl1-mesa-glx/experimental
+
+Updates:
+
+  * Updated all packages to Debian Unstable branch by 20060811.
+  * Removed 114 packages.
+  * Added 117 new packages (exluding lib*, xserver-xorg-* and *2.6.17-grml*):
+
+  3ware-3dm2-binary 3ware-cli-binary acpi-support aircrack-ng ajaxterm btscanner cdck
+  cdpr cedet-common classpath classpath-common cmospwd cpp-4.1 cpuid cpulimit crywrap
+  cupsys-common curlftpfs debdelta debian-goodies dwm eieio emcast facter freeglut3
+  fusesmb fvwm fvwm-crystal-minimal g++-4.1 gcc-4.1 gconf2-common grep-dctrl
+  grml-policyrcd habak id3 ipmitool ipw-firmware ipw3945-ucode ipw3945d jamvm jikes
+  lame latexmk linuxlogo lspowertweak madwifi-doc magicrescue mesa-utils mktemp
+  modconf mp3val mrb mrxvt mrxvt-common mysql-client-5.0 ndisc6 ndiswrapper-common
+  ndiswrapper-utils-1.1 ndiswrapper-utils-1.7 ndiswrapper-utils-1.8 nethogs ntfs-3g
+  num-utils open-iscsi p3nfs pcopy pekwm pktstat policyrcd-script-zg2 powertweak-gtk
+  powertweakd prism54-firmware pymacs python-celementtree python-central
+  python-elementtree python-minimal python-mode python-support remind snmp sudoku
+  syrep tdb-dev tetrinet-client thc-ipv6 tinysnmp-tools tpm-tools trayer trousers
+  tshark twolame txt2pdbdoc tzdata unclutter unionfs-tools uswsusp vbindiff vobcopy
+  vsftpd weechat weechat-scripts wikipediafs wireshark wireshark-common wyrd xbitmaps
+  xclip xcursor-themes xfonts-biznet-100dpi xfonts-biznet-75dpi xfonts-biznet-base
+  xfonts-encodings xfonts-utils xkb-data xorg xutils-dev
+
+If you find a problem with the release please check
+ http://wiki.grml.org/doku.php?id=grml_0.8
+and report problems using information on http://grml.org/bugs/
+
+20060410
+========
+
+Release 0.7 - Codename Bootenschnitzl (20060410)
+================================================
+
+Fixed several bugs, including:
+
+  #19  grml-0.6: gkrellmd and battery status [wishlist]
+  #20  grml-0.6: GRMLCFG does not work with floppy disk
+  #21  hgrep:    hgrep returns always success
+
+and issues reported on http://wiki.grml.org/doku.php?id=grml_0.6
+
+Several improved, updated and extended configuration files.
+
+New grml-scripts (some selected ones):
+
+  * bt-audio        script to connect bluetooth headset to computer
+  * get_tw_cli      get 3ware RAID controller command line interface
+                    tool (tw_cli)
+  * event-viewer    program to see all fork/exec/exit/uid/gid events on
+                    a running system using the new netlink/fork connector
+                    interface from linux >=2.6.15
+
+New bootparameters/cheatcodes (some selected ones):
+
+  * vmware          disable usb/firewire detection during bootprocess,
+                    load some SCSI-modules instead
+
+Special new features:
+
+  * /bin/sh now points to /bin/bash; reason: Debian does not support zsh
+    as /bin/sh, zsh is used as interactive shell anyway of course
+  * reworked zsh completion (no error correction on rm and mv commands)
+  * grub can be called from bootmenu (in isolinux) through running
+    'grub' now; thanks a lot to Rafael Steiner!
+  * reworked 'swspeak' bootoption: sound output during startup, start
+    software synthesizer when booting finishe via running 'swspeak'
+  * rebuildfstab (generate /etc/fstab):
+    - partitions have new mount-options: 'noauto,nouser,dev,suid,exec'
+    - improved partition detection (e.g. reiser4 is detected now)
+
+Kernel:
+
+  * Based on vanilla kernel 2.6.16.1 including several patches
+    (Reiser4, Speakup, Squashfs,...) and additional modules:
+
+    acerhk, acx100, at76c503a, bcm5700, cowloop, dazuko, drbd0.7,
+    eagle-usb, et131x, exmap, ivtv, kqemu, linux-wlan-ng, lufs, madwifi,
+    madwifi-ng, ndiswrapper, nozomi, openafs, pcan, pwc, qc-usb,
+    realtime-lsm, rt2400, rt2500, sdhci, sl-modem, snd-bt-sco, spca5xx,
+    sysprof, thinkpad, tidev, truecrypt, vaiostat, zd1211
+
+    Notice: madwifi-ng is available in /usr/src as debian package
+    but not pre-installed because of conflicts with madwifi.
+    Some more modules (for example fglrx and nvidia) are not
+    pre-installed but available through the grml-repository.
+
+  See http://grml.org/kernel/ for more details regarding the grml-kernel.
+
+Updates:
+
+ * Updated all packages to Debian Unstable branch by 20060402 plus
+   some minor updates until 200604XX.
+ * Updated memtest to Memtest86+ V1.65.
+ * Updated putty-collection to latest version.
+ * grml2hd (install grml to harddisk):
+        - check for given mbr option and prompt for activating it if not set
+        - changed initrd/initramfs generator from yaird to initramfs:
+          now booting via firewire is also possible
+        - added resume, brltty, speakup_synth and swspeak to list of
+          grml2hd-bootparams so it's easier to use out of the box
+        - changed logic in grml2hd dialog for package removal: now select packages
+          which should be kept
+        -> See http://grml.org/grml2hd/ for more details.
+
+Removed 34 packages [please notice that some of them are available
+under different names/in different packages]:
+
+  *2.6.15-grml* lib*
+
+  bzrtools cryptsetup-luks fam fonts-ttf-decoratives gkrellm-common grml-fixes
+  ivtv0.4-utils jikes jikes-kaffe ldaptor-common mirror mozilla-firefox-adblock
+  multiseat munin mysql-server mysql-server-4.1 pdns-backend-mysql pgpool php5
+  php5-mysql php5-pgsql php5-sqlite pmx postfix-mysql postfix-pgsql postfix-policyd
+  postgresql-8.1 postgresql-contrib-8.1 preview-latex python2.3-subversion schroot
+  sqlrelay-mysql tpb wacom-tools
+
+Added 48 new packages (exluding lib* and *2.6.16-grml*):
+
+  3270-common apt-index-watcher array-util arrayprobe bar bcrelay brltty-flite btsco
+  bwm-ng c3270 cryptsetup cvsconnect cw cwcp dbconfig-common devio ecj-bootstrap
+  fontconfig-config gamin gcc-4.1-base gcj-4.1-base gcom gij-4.0 glimpse i855crt
+  ivtv-utils lanmap latex-mk linux-wlan-ng-firmware lomoco moreutils mpt-status
+  nbsmtp o3read openipmi p7zip pfqueue postgresql-client-common python-subversion
+  python2.4-selinux python2.4-semanage qpxtool rkhunter tcptraceroute tct truecrypt
+  unixcw user-setup
+
+If you find a problem with the release please check
+ http://wiki.grml.org/doku.php?id=grml_0.7
+and report problems using information on http://grml.org/bugs/
+
+20060122
+========
+
+Release 0.6 - Codename Winterschlapfn (20060122)
+================================================
+
+Fixed several bugs, including issues reported on
+http://wiki.grml.org/doku.php?id=grml_0.5
+
+Several improved, updated and extended configuration files.
+
+New grml-scripts (some selected ones):
+
+  * bt-hid          connect bluetooth mouse
+  * ip-screen       print ip address of configured network interfaces.
+                    Integrated into status line of GNU screen.
+  * XF86AudioLowerVolume, XF86AudioMute and XF86AudioRaiseVolume:
+                    scripts for handling audio volume
+  * wm-ng           wrapper script for use with grml-x - provides an easy
+                    to use desktop, runs fluxbox with gkrellm and idesk,
+                    use via 'grml-x wm-ng'
+                    Tip: press Ctrl-Alt-d to switch X resolution to 1024x768
+  * noprompt        wrapper script to avoid prompting when rebooting/
+                    halting system. Use e.g. via 'noprompt reboot'
+
+New bootparameters/cheatcodes (some selected ones):
+
+  * hostname=...   set hostname to specified value (default: grml)
+  * distcc=$NETWORK,$INTERFACE - activate distcc-daemon, usage example:
+                   distcc=192.168.0.1/24,eth0
+                   activates distccd listening on ip address of eth0 providing
+                   access for network 192.168.0.1/24
+  * 915resolution=${MODE},${XRESO},${YRESO}     start resolution modify
+                    tool for Intel graphic chipset, usage example:
+                    915resolution=4d,1400,1050
+  * swspeak         get software synthesizer support through speakup's
+                    sftsyn, speech-dispatcher and speechd-up
+  * debnet          search through local partitions for file /etc/network/interfaces,
+                    copy /etc/network to running system and restart networking then
+  * forensic        boot without any filesystem access to hard disks so
+                    forensic investigations can be made
+  * blacklist=module deactivate loading of a specific module. Configured via
+                    /etc/modprobe.d/grml. Usage example:
+                    blacklist=snd_ens1371
+
+Special new features:
+
+  * grml-tips: run 'grml-tips $KEYWORD' to get hints for $KEYWORD
+  * udev fully replaces hotplug-light and discover
+  * pcmcia­utils replace pcmcia-cs
+    Notice: some kernel drivers (like for example PCMCIA WLAN cards) are not
+    autoloaded by default. Run 'hwinfo --netcard' to figure out which module has
+    to be loaded.
+  * AFS-client support
+  * don't use /proc/bus/usb by default anymore
+  * improved synaptics touchpad recognition
+  * w3m not starting automatically (get it through running 'grml-info'),
+    tty1 is not reset on startup (see bootmessages instead)
+
+Kernel:
+
+  * Based on vanilla kernel 2.6.15 including several patches
+    (Reiser4, Speakup, Squashfs,...) and additional modules:
+
+    acerhk, acx100, at76c503a, bcm5700, drbd0.7, cowloop, dazuko,
+    eagle-usb, hostap, ieee80211, ipw2100, ipw2200, ivtv0.4,
+    kqemu, linux-wlan-ng, lufs, madwifi, ndiswrapper, openafs,
+    pcan, pwc, qc-usb, realtime-lsm, rt2400, rt2500, sl-modem,
+    snd-bt-sco, spca5xx, sysprof, thinkpad, tidev, vaiostat,
+    zd1211
+
+    Notice: madwifi-ng is available in /usr/src as debian package
+    but not pre-installed because of conflicts with madwifi.
+    Some more modules (for example fglrx and nvidia) are not
+    pre-installed but available through the grml-repository.
+
+  See http://grml.org/kernel/ for more details regarding the grml-kernel.
+
+Updates:
+
+ * Updated all packages to Debian Unstable branch by 20060115 plus
+   some minor updates until 20060121.
+ * Updated memtest to Memtest86+ V1.65.
+ * Updated putty-collection to latest version. (winscp has been removed)
+ * grml2hd:
+            - initrd support (installation onto SCSI/USB-devices supported)
+            - support for installation on software RAID1 (see 'man grml2hd')
+            - remote, automatic installation via network with grml-terminalserver
+           -> See http://grml.org/grml2hd/ for more details.
+
+Removed 112 packages [please notice that some of them are available
+under different names/in different packages]:
+
+  *2.6.13-grml* lib*
+  3270-common 855resolution aalib-bin aalib1 acovea alsaplayer apt-move arpd
+  base-config bash3 bluez-pcmcia-support cgvg checkmem chgrep cvsd db4.2-util dbus-1
+  dbus-glib-1 debsync diffmon esh fdisk-udeb fenris ffmpeg fprobe-ng ftape-util ftpd
+  gdk-imlib1 genliloconf grepmap ha-prosper hotplug-light ifp-line imlib-progs ion2
+  ion3-mod-ionflux ipautofw irda-common irda-tools isapnptools kwtools-net-firewall
+  kwtools-utils-pim ledit leo lsh lspowertweak lua50-doc madwifi mdnsresponder
+  mozilla-firefox-webdeveloper msort-gui mush nparted ntop ocaml-base-nox onak osh
+  p3nfs parted-bf pcmcia-cs pcopy pdfscreen pekwmdev plan pmp-common pmtools-acpi
+  polipo postgresql-8.0 postgresql-client-8.0 postgresql-contrib-8.0 powertweak
+  powertweak-extra powertweak-gtk powertweakd pppdcapiplugin print-utils-pfeifle
+  prozilla python2.3-ixplib raidtools2 rt2400-base rt2500-base sasl-bin satan sh-lib
+  shaper shfs-utils siege-ssl slang1 slang1a-utf8 slpim smbconf-pfeifle-nonfree
+  speedtouch srg statslog systraq sysutils tetex-doc tunnelv udev-klibc wavtools
+  x-window-system x3270 xdm xext xfonts-x3270-misc xkeyval xorg-driver-synaptics
+  xpdf-i xserver-common-v3 xviddetect zsh-beta zsh30
+
+Added 99 new packages (exluding lib* and *2.6.15-grml*):
+
+  9base acpidump athena-jot bbe bzrtools cdrbq cmus conspy cpuburn-in-binary cu
+  dares dares-qt db4.3-util dbus dd-rhelp debian-archive-keyring debsecan evilwm
+  evms-bootdebug fcrackzip fglrx-control firefox firefox-webdeveloper flac123
+  fluxconf fprobe ftpbackup gcj-4.0-base gddrescue git-core gkrellm-volume
+  gkrellshoot gmrun grml-btnet grml-mercurial-utils grml-shlib grml-tips idesk
+  ifenslave-2.6 ifplugd ihu irda-utils irssi krb5-config krb5-user
+  loop-aes-utils memtester migrationtools mklibs-copy mysql-server-4.1
+  netdiscover nvidia-xconfig obexftp openafs-client openafs-krb5 orange
+  os-prober parted pcmciautils pekwmsvn postgresql-8.1 postgresql-client-8.1
+  postgresql-contrib-8.1 preload procinfo proftpd proftpd-common python2.4
+  python2.4-celementtree python2.4-elementtree python2.4-minimal root-tail
+  rox-filer secure-delete securecgi sl-modem-daemon speech-dispatcher speechd-el
+  speechd-up ssmping sysprof tex-common tlswrap tofrodos transset ufsutils
+  unzsplit uruk vblade vim-gui-common vim-runtime webcheck weechat-plugins
+  xcompmgr xen-tools xfree86-driver-synaptics xtrace xwit zsplit
+
+If you find a problem with the release please check
+ http://wiki.grml.org/doku.php?id=grml_0.6
+and report problems using information on http://grml.org/bugs/
+
+20051024
+========
+
+Release 0.5 - Codename Tokolytika
+=================================
+
+Fixed several bugs, including:
+
+     #16  in "man grml-scripts" the program grml-init is mentioned twice
+     #17  grml-docs: Spelling error of "resources" on the grml startpage
+     #18  grml-0.4: booting with 'testcd' complains about 'files not found'
+
+New grml-scripts (some selected ones):
+
+  * save-config     save configuration in bzip2 compressed tar archive
+  * restore-config  restore configuration
+  * noeject         avoid ejecting of CD-ROM and prompting for it.
+                    Use it via 'noeject <cmd>' (where <cmd>
+                    is either reboot or halt)
+  * service         wrapper script for /etc/init.d/-scripts,
+                    use it e.g. via 'service postfix start'
+  * grml2usb        create bootable usb-stick (using a grml-iso
+                    like grml-small)
+
+New bootparameters/cheatcodes (some selected ones):
+
+  * serial     - activate serial console (tty1+ttyS0 and start mgetty)
+  * hd         - boot from (local) primary harddisk
+  * bootchart  - run performance analysis and visualization of bootprocess,
+                 see /var/log/bootchart.tgz and bootchart-view; take a look
+                 at http://www.bootchart.org/ for further information
+  * startx[=windowmanager] - start X window system instead of consoles,
+                 if no option is given then fluxbox will be taken as default,
+                 you can specify any other window manager available on grml
+                 as parameter. For example use 'startx=wmii' to start X window
+                 system with wmii (through running 'grml-x wmii')
+  * grml2hd    - automatic installation running grml2hd, requires additional
+                 bootparameters, see bootsplash F9 for more details, usage example:
+                 grml2hd partition=/dev/hda1 mbr=/dev/hda filesystem=ext3 user=mika
+                 -> this will install grml to present partition /dev/hda1 using
+                 ext3 filesystem, adding user mika and installing lilo to MBR of
+                 /dev/hda; passwords of user root and user are 'grml'
+  * netconfig=server.tld/config.tbz - download configuration archive and extract it
+                 This bootparameter is part of the new config framework:
+                 http://grml.org/config/
+
+Special new features:
+
+  * full automatic installation to harddisk via bootparameter grml2hd possible
+  * framework grml-autoconfig: configure hardware-detection
+    via configuration file /etc/grml/autoconfig or its interface
+    script namend 'grml-autoconfig' - especially useful on harddisk
+    installations
+  * configuration-framework: new bootparameters and scripts (save-config
+    and restore-config), see http://grml.org/config/ and 'man save-config'
+    for more details)
+  * integration of hotplug-light: speeds up booting
+  * got rid of all knoppix packages: this means you get a clean
+    Debian unstable system with some additional packages available
+    through the grml repository on http://grml.org/repos/
+    All packages which are responsible for the core of the grml system
+    and provided by the grml team are namend 'grml-*'.
+
+Kernel:
+
+  * Based on vanilla kernel 2.6.13.4 including several patches
+    (MPPC/MPPE, Reiser4, Speakup, Squashfs,...) and additional
+    modules:
+
+    acx100, at76c503a, bcm4400, bcm5700, drbd0.7, eagle-usb, fuse,
+    hostap, ieee80211, ipw2100, ipw2200, ivtv0.4, kqemu,
+    linux-wlan-ng, lufs, madwifi, ndiswrapper, openafs, pcan,
+    pwc, qc-usb, realtime-lsm, rt2400, rt2500, shfs, spca5xx,
+    thinkpad, tidev, vaiostat, zd1211
+
+    Some more modules (for example fglrx and nvidia) are not
+    pre-installed but available through the grml-repository.
+
+  * We decided to deactivate SMP-support because we noticed
+    troubles on some laptops (causing kerneloops, problems
+    with booting and ACPI).
+
+  * We decided to compile the kernel with gcc4 and with optimation
+    for 586 for improving performance.
+
+  * We are packaging udev on our own to provide perfect integration
+    with the kernel shipped with grml. We are syncing packages
+    with upstream and the debian version. Works together with
+    hotplug-light and upcoming versions of udev will deprecate
+    hotplug* completely.
+
+  See http://grml.org/kernel/ for more details regarding the grml-kernel.
+
+Updates:
+
+ * Updated all packages to Debian Unstable branch by 20051016 plus
+   important updates (priority >low) until 20051023.
+ * Updated memtest to Memtest86+ V1.55.
+ * Updated windows-binaries (putty-collection/winscp) to latest version.
+ * grml2hd:
+            - full automatic (non-interactive) installation
+            - support for reiser4 (still experimental, problems with lilo)
+            - support for new grml-autoconfig framework
+            - improved error handling
+           -> See http://grml.org/grml2hd/ for more details.
+
+Removed 231 packages [please notice that some of them are available
+under different names/in different packages]:
+
+  *2.6.11-grml* lib*
+
+  apt-proxy  aspell  aspell-bin  aspell-de  aspell-en  bashburn  bass  beecrypt2
+  binutils-dev    blt   busybox-cvs-static    clusterssh   comerr-dev    ctetris
+  ddcxinfo-knoppix    debian-goodies   devfsd    dhcp-client   dlocate    dosemu
+  dosemu-freedos    ettercap    foomatic-bin   foomatic-db    foomatic-db-engine
+  foomatic-db-hpijs  foomatic-filters freenx  g++-3.3  gksu gpsdrive  grep-dctrl
+  grml-kudzu   grml-xf86config    gtk-engines-qtpixmap   hotplug   hotplug-utils
+  html-format  hwsetup imlib1  ipw2100-nonfree isdn-config  jablicator kbdconfig
+  kwtools-sys-raid  latex2html  ldaptor-utils libapache-mod-php4  loop-aes-utils
+  lufs modconf  mouseconfig myspell-de-at myspell-de-de  myspell-en-us normalize
+  nxagent nxlibs nxproxy nxviewer ocaml-base pciutils-dev perl-tk pgmonitor php4
+  php4-common  php4-mysql  php4-pgsql php4-sqlite  postgresql  postgresql-client
+  postgresql-contrib    prism54    prism54-nonfree   python-bsddb3    python-dev
+  python-foomatic  python-ldaptor   python-psyco  python-pyparsing  python-pyrex
+  python-tk   python-twisted  python2.3-dev   python2.3-ldaptor  python2.3-psyco
+  python2.3-pyrex python2.3-tk python2.3-twisted qt3-dev-tools quagga render-dev
+  rubybook   s10sh  scanmodem   selinux-utils  sl-modem-daemon   slang1-utf8-dev
+  smbconf-pfeifle  spl  squashfs-tools  sysv-rc timidity  trans-de-en  translate
+  usbmount util-vserver vserver-debiantools wordtrans-data x-dev xlibmesa-gl-dev
+  xlibmesa-glu  xlibmesa-glu-dev xlibs-static-dev  xorg-common xprt  xprt-common
+  xserver-3dlabs    xserver-8514    xserver-agx   xserver-i128    xserver-mach32
+  xserver-mach64 xserver-mach8 xserver-p9000 xserver-s3 xserver-s3v xserver-svga
+  xserver-vga16 xserver-w32 zlib1g-dev zsh-beta-doc zsh30-doc zsh30-static
+
+Added 262 new packages (exluding lib* and *2.6.13-grml*):
+
+  3ware-3dm2-old-binary    915resolution    acovea   acpitool    acx100-firmware
+  alsa-oss   antlr   aptsh   asn1c   bandwidthd-pgsql   binfmt-support   binfmtc
+  bootchart   bsdiff  bsdtar   busybox  calcurse   cdecl  cdrecord-prodvd-binary
+  clex   codeville   connect-proxy   cowdancer  cpm   cpp-4.0   cracklib-runtime
+  crosshurd  csync2  ctapi-cyberjack  ctris  dconf  dcraw  dctrl-tools  ddclient
+  debsigs  debtags   dhcp3-client  di  dirvish  distcc   dnotify  docbook-to-man
+  doxygen  dput  drbd0.7-utils  drbdlinks duplicity  dupmerge  durep  dvdisaster
+  electric-fence  equivs  ettercap-gtk  exiv2   fail2ban  farpd  fastjar  fblogo
+  file-rc  fish   fl-cow  flawfinder   fnfx-client  fnfxd  fsh   ftpcopy  fxload
+  g++-4.0  gcc-4.0  gcc-4.0-base  gdk-imlib11 gifshuffle  gitweb  gjdoc  gkermit
+  grabc  graphviz   grml  grml-autoconfig  grml-crypt   grml-firefox  grml-fixes
+  grml-hwinfo   grml-kerneladdons    grml-laptop   grml-saveconfig   grml-splash
+  grml-terminalserver-data  grml-vpn  grml-x grml2hd-utils  grml2usb  gtkrecover
+  harden-remoteaudit  heirloom-sh  hotkey-setup  hotkeys  hotplug-light  httperf
+  i8kutils  icmp-mtu icmp-quench  icmp-reset im-switch  imapcopy imwheel  inadyn
+  input-utils  installation-report  ipkungfu  ipw2100-firmware  ipw2200-firmware
+  ivtv0.4-utils   java-common   jikes   jikes-kaffe   jwm   kaffe   kaffe-common
+  kaffe-pthreads ketchup kexec-tools  ksh kwtools-net-firewall kwtools-utils-pim
+  lcdtest  ldapscripts  leo  lft  libapache2-mod-php5  libsafe  linux-sound-base
+  lltag  localepurge  loco lsdvd  lua50  lua50-doc  luasocket lufs-utils  lwatch
+  madison-lite  mercurial  mgetty  minised  mkcue  mksh  mozilla-firefox-adblock
+  mozilla-firefox-webdeveloper  mozilla-imagezoom  msort  msort-gui  multi-aterm
+  munin  mwcollect   mysql-client-4.1  nat-traverse  ncp   normalize-audio  nufw
+  olsrd-gui    olsrd-plugin   openssh-client    openssh-server   orpheus    pads
+  pbzip2   pconf-detect    pcopy   php5   php5-common    php5-mysql   php5-pgsql
+  php5-sqlite  piuparts  pmtools-acpi   pnpbios-tools  podracer  postfix-policyd
+  postgresql-8.0 postgresql-client-8.0  postgresql-common postgresql-contrib-8.0
+  powertweak  powertweak-extra  powertweak-gtk  privoxy  proxsmtp  python-clamav
+  python-gnupginterface  python2.3-apt  python2.3-eyed3  python2.3-zopeinterface
+  qc-usb-utils  readline-common  readpst   rhapsody  rt2400-base  rt2400-utility
+  rt2500-base rt2500-utility  rtorrent sbm  scanlogd scavr schroot  scmxx sdparm
+  sendemail  shish  sjog  slsh  spicctrl  splint  squashfs  srcinst  ssh-askpass
+  svn-ssh-wrappers  tailor   tart  tcng  tcpxtract  thinkpad-base   tor  toshset
+  toshutils  tpb tpctl  ttf-dejavu tthsum  turkey unace  uni2ascii unionfs-utils
+  unison2.9.1  unrar-free   vde  vifm  vkeybd  vncommand   vncserver  vorbisgain
+  wcalc  webcpp weechat-common  weechat-curses windowlab  x11-common x11vnc  x2x
+  xautomation xcb xmon xprint xprint-common  xtla xtrlock xvkbd xvncviewer yaird
+  ysm zd1211-firmware
+
+
+20050515
+========
+
+Release 0.4 - Codename Eierspass.
+
+Fixed several bugs, including:
+
+     #13  starting hotplug fails without error message
+     #14  grml-0.3: pekwm will not start
+     #15  grml-0.3: wrong vermagic for quickcam.ko
+
+Improved hardware detection.
+Several improved, updated and extended configuration files.
+
+New grml-scripts (some selected ones):
+
+  * grml-network:     frontend for several network setup scripts
+  * grml-hwinfo:      collect hardware information
+  * grml-vpnc-tugraz: connect to WLAN of TU Graz
+  * xsay:             text-to-speech system (e.g. run 'grml-x wmi',
+                      select some text via mouse and press 'ctrl-alt-v'
+
+New bootparameters/cheatcodes:
+
+  * grml small - disable some consoles when booting (saves a
+                 little bit of RAM)
+  * nofb       - disable framebuffer
+  * floppy     - boot from floppy disk
+  * hd         - boot from (local) primary harddisk
+
+Special new features:
+
+  * X.org server including new grml-x system ('grml-x')
+  * unionfs-integration: full write support on CD; now it is possible
+    to run, configure and install software without any workarounds
+  * new init-system: switched from "colors" to lsb-function-style
+  * iptstate running on tty10
+  * vesafb-tng: advanced framebuffer technology.
+    Notice: use kerneloption video= instead of vga=!
+  * udev integration: just run 'mount /mnt/external1' to mount your
+    USB-Stick (assuming /dev/sda1 as corresponding partition)
+  * grml-terminalserver: boot grml via network (either via PXE or floppy
+    disk), see http://grml.org/terminalserver/ for more details.
+
+Kernel:
+
+  * Based on vanilla kernel 2.6.11.8 including several patches
+    (MPPC/MPPE, Reiser4, Speakup, Squashfs,...) and additional
+    modules:
+
+    acx100, at76c503a, bcm4400, bcm5700, eagle-usb, hostap,
+    ipw2100, ipw2200, loop-aes, loop-aes-ciphers, madwifi,
+    ndiswrapper, qc-usb-modules, realtime-lsm, shfs, sl-modem,
+    unionfs
+
+  * Instead of compiling Kernel for 386 we decided to compile for
+    systems running 468 or above.
+
+    See http://grml.org/kernel/ for more details.
+
+Updates:
+
+ * Updated all packages to Debian Unstable branch by 20050508.
+ * Updated memtest to Memtest86+ V1.55.
+ * Updated windows-binaries (putty-collection/winscp) to latest version.
+ * grml2hd: - added dialog-frontend
+            - select username for harddisk-installation
+            - choose filesystem (available: ext2/3, XFS, JFS, reiserfs)
+
+Removed 46 packages.
+Added 192 new packages (exluding lib[...]):
+
+   855resolution 9menu acct acx100-2.6.11-grml alsaplayer-jack aoetools apachetop
+   apcupsd-cgi apticron asciidoc asleap at76c503a-modules-2.6.11-grml attacker aub
+   backuppc bashburn bcm4400-module-2.6.11-grml bcm5700-module-2.6.11-grml beecrypt2
+   bfbtester bkhive bkp bmon bookmarkbridge bzr camgrab ccache ccdv cdbs cdebootstrap
+   chgrep cogito cpufrequtils cuetools davfs2 dds2tar debsync detox dh-kpatches
+   dietlibc dietlibc-dev disktype dumputils dupseek dvi2tty
+   eagle-usb-modules-2.6.11-grml elizatalk encfs enscribe ext3rminator fondu
+   fprobe-ng fprobe-ulog ftester gateguardian gnupg-agent gnupg2 gpgsm grepmap
+   grml-terminalserver gtkam hal hasciicam hgrep hostap-modules-2.6.11-grml
+   hotswap-text icecast2 ices2 icheck ifrename initramfs-tools ion3-mod-ionflux
+   ion3-scripts ipautofw ipmasqadm ipw2100-modules-2.6.11-grml
+   ipw2200-modules-2.6.11-grml ipython-common kernel-doc-2.6.11-grml
+   kernel-headers-2.6.11-grml kernel-image-2.6.11-grml klibc-utils laptop-detect
+   latex-beamer latex-xcolor lib[...] lkl loop-aes-2.6.11-grml
+   loop-aes-ciphers-2.6.11-grml lsb-base lshw-common lsscsi m17n-db
+   madwifi-module-2.6.11-grml madwifi-tools maildirsync mcelog mdetect mp3info
+   multipath-tools multiseat muscletools ncmpc ndiswrapper-modules-2.6.11-grml netwag
+   netwox nutcpc nxviewer olsrd ooo2dbk opensc opie-client opie-server osiris par2
+   pcscd pdfscreen pdns-recursor pdns-server pekwmdev pgf pinentry-curses procmeter3
+   prosilla pterm python2.3-elementtree python2.3-ipython python2.3-pymad
+   qc-usb-modules-2.6.11-grml qjackctl qprof radeontool
+   realtime-lsm-module-2.6.11-grml reprepro rootsh rubilicious rxvt-unicode s10sh
+   saidar samdump scsi-idle sdate selinux-utils sfind sformat sh-lib shadowfs
+   shfs-module-2.6.11-grml sip-tester sl-modem-modules-2.6.11-grml smake spl sqlite
+   srg sshfs starttls statgrab stress super synctree syslinux telak udev-klibc
+   unicode unionfs-modules-2.6.11-grml unrtf update-apt usbmount w9wm wacom-tools
+   wdiff wiggle wmaloader wwwconfig-common x-window-system x-window-system-core
+   xcardii xdebconfigurator xdesktopwaves xdm xkeyval xnee xorg-common
+   xorg-driver-synaptics xprt xprt-common xresprobe xrsh xserver-xorg xsltproc xvfb
+   yersinia zeroconf
+
+20050304
+========
+
+Release 0.3 - Codename Hustenstopper.
+
+New grml-scripts (some selected ones):
+
+  * grml-muttng:  shellscript for configuring mailclient muttng (fork
+                  of mutt) via dialog
+  * grml-lock:    shellscript for locking consoles
+  * grml-pptp-inode: connect via pptp to inode (www.inode.at)
+  * grml-pptp-xdsl-students: set up XDSL@students internet connection
+                             at provider INODE in austria
+
+New bootparameters/cheatcodes:
+
+  * wondershaper=  set up basic traffic shaping; use it via
+                   wondershaper=device,download,upload
+                   example: wondershaper=eth0,500,100
+  * services=      start service(s) which have an init-script
+                   in /etc/init.d/; example:
+                   services=postfix,mysql
+  * welcome        welcome message via soundoutput
+  * nocolor        disable colorized output while booting
+  * log            log error messages while booting to /tmp/grml.log.*
+                   and start bootlogd (tip: use in combination with nocolor)
+  * debug          get shell(s) during process of booting
+
+Special new features:
+
+  * use of udev (Linux configurable dynamic device naming support)
+  * multitail running on tty12
+  * grml-templates: this package includes several templates for use
+                    with LaTeX, C, C++, Qt, tpp, Makefile,...
+  * showing cpu-status ("$CUR / $MAX frequency") inside GNU screen
+
+Updates:
+
+ * Updated all packages to Debian Unstable branch by 20050303.
+ * Updated bootparameter 'memtest' to Memtest86+ V1.50.
+ * Updated windows-binaries (putty-collection/winscp) to latest version.
+ * grml2hd:  /GRML is now removed on the hd-install to satisfy FHS.
+             Several other improvements.
+
+Removed 95 packages.
+Added 191 new packages:
+
+  acx100-2.6.9-grml amap apache2-utils apel ash astyle autofs base64
+  bazaar bfa bluez-pcmcia-support cabber cadaver capiutils cgdb check
+  cplay cproto cryptsetup-luks ctetris ctrlproxy cvsdelta darcs
+  dbishell dbs ddrescue debpool deletemail dmraid dnstracer dstat
+  eagle-usb-data eagle-usb-modules-2.6.9-grml eagle-usb-utils
+  edictionary eflite elscreen emacspeak erc ffmpeg filetraq flite
+  fonty foremost fortunes-debian-hints fragroute freesweep getmail4
+  gkrellm-reminder gkrellmd gkrellmitime gkrellmwireless gkrellweather
+  grml-templates harden-tools hnb htcheck idn ifmetric ifp-line
+  initscripts ipac-ng iprelay ipython jablicator jhead jigl lacheck
+  ldaptor-common leave libacme-bleach-perl libacme-eyedrops-perl
+  libacme-smirch-perl libbio2jack0 libdb4.3 libdevmapper1.01 libesmtp5
+  libflac6 libflite1 libhal0 liblingua-en-inflect-perl
+  liblog-agent-perl libnfsidmap1 libpalm-perl libpam-mount
+  libparted1.6-12 libpth2 librsync1 libterm-readline-perl-perl
+  libwvstreams4.0-base libwvstreams4.0-extras libxml-parser-ruby1.8
+  libxml-writer-perl libxplc0.3.10 libzzip-0-12 lighttpd links2
+  lm-sensors lmbench lout lout-common lout-doc lpr lshw mdnsresponder
+  mime-codecs moc mount mozilla-mplayer mp3c mpc musepack-decoder
+  musepack-encoder musepack-replaygain mutt-ng nbtscan netmask nmapfe
+  nttcp packit pconsole pdfjam pekwm-dev pisg pmp-common polipo
+  portsentry proxycheck pscan ptunnel python-ldaptor python-profiler
+  python-pyparsing python-pyrex python2.3-crypto python2.3-ixplib
+  python2.3-profiler python2.3-pyopenssl python2.3-pyrex pytris quilt
+  ras rats rc rdiff rdiff-backup read-edid recoverjpeg replicator rpl
+  rsnapshot salvage-ntfs sc schedtool schedutils scons scrounge-ntfs
+  sensord sg3-utils shmux shunit slat sleepenh sn statslog sudosh
+  systraq sysv-rc tclx8.3 textdraw thc-pptp-bruter tiger tk-brief
+  torsmo trickle udev udpcast udptunnel units upgrade-oldest vbetool
+  vera vlock vrms wajig wakeonlan wamerican-small wmii xnest xprobe
+  xtermcontrol
+
+20050110
+========
+
+Release 0.2 - Codename Satura.
+
+Fixed bugs:
+  #10: Please remove CD, close cdrom drive...is missing on reboot/halt
+  #11: grml-0.1: starting xserver fails with '(EE) No core pointer device specified'
+  #12: grml-0.1: WLAN Problem: Linksys WPC11 doesn't work
+
+New grml-scripts:
+
+  * grml-mutt:    shellscript for configuring mailclient mutt via dialog
+  * grml-slrn:    shellscript for configuring newsreader slrn via dialog
+  * grml-postfix: shellscript for configuring postfix using TLS
+  * grml-nessus:  shellscript for preparing grml-system for use with nessus[d]
+
+New kernel:
+
+  * 2.6.9-grml:   vanilla kernel (from kernel.org) including several patches
+                  more information available on http://grml.org/kernel/
+
+New bootparameters/cheatcodes:
+
+  * ssh:      use via ssh=password (adjust password), this will set the
+              password for user grml and autostart a ssh-server.
+              Notice that the provided password can be read from
+              /proc/cmdline -> change the password as soon as possible!
+  * passwd:   use via passwd=password, this will set the password for
+              user grml so login via getty
+
+  * many other bootparameters related to hardware detection, see
+    file grml-cheatcodes for details.
+
+Special new features:
+
+  * CPU-detection on startup and start of cpudyn/powernowd depending
+    on CPU-type.
+  * htop running on tty11
+  * improved zsh configuration (prompt, completion,...).
+  * zsh-lovers (see 'man zsh-lovers') updated and available in
+    PDF-, PS- and HTML-format.
+  * grml2hd: install grml to harddisc.
+    Notice: First release, please use with caution.
+
+Updates:
+
+ * Updated all packages to Debian Unstable branch by 20050109.
+ * Updated bootparameter 'memtest' to Memtest86+ V1.40.
+ * Added new/updated tools to windows-directory (/GRML/windows):
+   pageant, plink, pscp, psftp, putty, puttygen and winscp371.
+
+Removed 149 packages.
+Added 455 new packages:
+
+  abcde acpid aesutil aewan aircrack alsa-base alsa-utils alsaplayer-alsa
+  apachetoolbox apcupsd apt-dpkg-ref ara argus-client arpd arping arptables
+  asr-manpages at76c503a-modules-2.6.9-grml athcool aumix autossh awesfx axp
+  backup2l bash3 bass bchunk bcm4400-module-2.6.9-grml bcm5700-module-2.6.9-grml
+  bcrypt biabam biew bitlbee bittornado blktool bluez-firmware bluez-hcidump
+  busybox-cvs-static calife camserv captive captive-lufs cbrowser ccrypt
+  cd-discid cdtool cdw cdw-common cfv clamav-daemon clamav-getfiles
+  clamav-testfiles cloop-src clvm cowsay cscope cvs-buildpackage cvsd dar
+  dbengine dcfldd debmake debmirror devtodo dir2ogg directvnc dired discover
+  discover-data distmp3 dmidecode dnsmasq docbook docbook-dsssl dpkg-sig
+  dpkg-www driftnet dropbear dtach dvdbackup dvdrtools dviutils dwww ebtables
+  eciadsl elmo elvis-common ex exuberant-ctags faad feh fenris festival
+  festlex-cmu festlex-poslex festvox-kallpc16k filepp firehol
+  flashplugin-nonfree fnord fprobe freenx freeradius freeradius-ldap ftp-upload
+  funny-manpages fuse-utils geresh getmail gfs-tools giblib1 giftcurs gmailfs
+  gnome-mime-data gnuhtml2latex gnutls-bin gpm gpsdrive grml-ddcxinfo grml-kudzu
+  grml-kudzu-dev grml-rebuildfstab grml-scanpartitions grml-sectools
+  grml-sndconfig grml-sysvinit grml-usleep grml2hd ha-prosper hfsutils hibernate
+  hostap-modules-2.6.9-grml hping3 httpf httping hwdata hydra id3v2
+  ifupdown-scripts-zg2 ike-scan imapfilter imediff2 indent info2www iozone3
+  iperf iptstate ipvsadm ipw2100-modules-2.6.9-grml ipw2200-modules-2.6.9-grml
+  isync jail jigit joystick juke keepalived kernel-headers-2.6.9-grml
+  kernel-image-2.6.9-grml kernel-source-2.6.9-grml knockd knocker
+  kwtools-net-postfix kwtools-sys-raid labrea laptop-mode-tools latextug
+  lbxproxy ldap-utils liba52-0.7.4 libapache-mod-chroot libarch-perl
+  libarchive-tar-perl libavcodeccvs libbonobo2-0 libbonobo2-common libcap2
+  libcapi20-2 libcarp-clan-perl libcflexplugin libcompfaceg1
+  libcompress-zlib-perl libconvert-asn1-perl libcrypt-smbhash-perl
+  libcrypt-ssleay-perl libdaemon0 libdar2 libdb3-util libdbd-pg-perl
+  libdigest-md4-perl libdiscover2 libdlm0 libdns16 libdv2 libestools1.2c102
+  libevms-2.5 libfaac0 libg2c0 libgcrypt11-dev libglade0 libgnomevfs2-0
+  libgnomevfs2-common libgnutls11-dev libgpgme11 libgpmg1 libgtk-perl libhowl0
+  libhtml-lint-perl libidn11-dev libio-socket-ssl-perl libio-string-perl
+  libio-zlib-perl libiodbc2 liblockfile-simple-perl
+  libmail-mbox-messageparser-perl libmailtools-perl libmcrypt4 libmhash2
+  libmp4-0 libnet-ldap-perl libopenct0 libopensc1 libosp4 libostyle1
+  libpam-chroot libpam-devperm libpam-dotfile libpam-krb5 libpam-ldap
+  libpam-musclecard libpam-mysql libpam-opensc libpam-pgsql libpam-pwgen
+  libpam-radius-auth libpam-smbpass libpam-ssh libpam-tmpdir libpcsclite1
+  libpg-perl libpq3 libqt3-mt-dev libreadline5 libreadline5-dev libruby
+  librudiments0c102 libsasl-modules-plain libsasl2-dev libsasl2-modules libsasl7
+  libscam1 libselinux1 libsensors3 libsepol1 libsnmp4.2 libsqlite3-0 libsvncpp0
+  libswig1.3.22 libwraster3 libxft-dev libxml1 libxosd2 libxslt1.1 libzvbi0
+  lintian linux-kernel-headers-grml listadmin lsh lufs m-tx macchanger mailcheck
+  manpages-posix manpages-posix-dev maradns markdown mbmon mboxcheck md5deep
+  mixmaster mod-chroot-common monit moosic mp3gain mp3splt mp3wrap mplayer-nogui
+  mtop mtr-tiny multitail multitee musixtex muttprofile myspell-en-us naim
+  ncftp2 ndiswrapper-modules-2.6.9-grml ndiswrapper-utils netdiag netperf
+  netstat-nat newsflash normalize nsd nstx ntop nullidentd numlockx nxlibs
+  ocaml-base offlineimap oinkmaster openjade osdsh p3nfs p3scan paketto par
+  patcher pax paxctl pbuilder pdmenu pdns-backend-ldap pdns-backend-mysql
+  pdns-backend-pgsql pdns-backend-pipe pdns-backend-sqlite pekwm pgmonitor
+  pgpool php4-pgsql php4-sqlite pia playmp3list plptools pmount pmx
+  policycoreutils pop3browser pork postfix-ldap postfix-mysql postfix-pcre
+  postfix-pgsql postgresql postgresql-client postgresql-contrib pperl pptpd
+  printconf proxychains proxymngr pspax pstack python-bsddb3 python-foomatic
+  python-fuse python-glade-1.2 python-gtk-1.2 python-libgmail python2.3-bsddb3
+  python2.3-fuse qc-usb-modules-2.6.9-grml quagga queue quota raccess
+  rainbowcrack randomize-lines realpath realtime-lsm
+  realtime-lsm-module-2.6.9-grml redir renameutils rinetd rman rng-tools
+  ruby1.8-examples sasl-bin scantv sdd secvpn sgmltools-lite
+  shfs-module-2.6.9-grml shorewall simh sl-modem-daemon
+  sl-modem-modules-2.6.9-grml slapd sloccount slpim slrnface smbc smbldap-tools
+  snarf snort snort-common snort-rules-default snowdrop socat sqlite3 sqlrelay
+  sqlrelay-mysql sqlrelay-postgresql sqlrelay-sqlite squashfs-tools star
+  stegdetect steghide swish++ tagtool tcc tcl8.3 tcpreen tcputils tex-refs
+  texify texpower tn5250 tpconfig translate tspc tth tunnelv vfu vim-latexsuite
+  vim-vimoutliner vnstat vrfy w3m-el waproamd webcam webcamd weblint-perl
+  wellenreiter weplab wmctrl wmi2 workbone wpasupplicant wput xautolock xawtv
+  xawtv-plugins xfaces xfonts-bolkhov-cp1251-75dpi xfonts-intl-european
+  xfree86-driver-synaptics xfwp xmlstarlet xmove xosd-bin yacpi yasr zsync
+
+20041022
+========
+
+Initial Release 0.1 - Codename OS04.

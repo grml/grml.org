@@ -1,0 +1,7 @@
+Releases grml 0.9 and grml-small 0.3 available.
+
+grml 0.9 - Codename Dioptrienotto and grml-small 0.3 - Codename Zwergenaufstand <a href="http://grml.org/download/">available</a>.
+
+The new grml release brings 113 new packages and many new features.  For details take a look at <a href="http://grml.org/files/README-0.9.php">the release announcement</a>.
+
+The new grml-small release brings 33 new packages and as well many new features.  For details take a look at <a href="http://grml.org/files/README-0.3-small.php">the release announcement</a>.

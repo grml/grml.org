@@ -1,0 +1,3 @@
+Grml at Linuxdays Graz 2010
+
+<p>Grml at Linuxdays Graz: Several Grml team members will be present at <a href="http://www.linuxtage.at/">Linuxdays in Graz</a> on Saturday, April 24th 2010. Thanks to data rescue specialist Attingo (<a href="http://www.attingo.com/">Attingo</a> <a href="http://www.attingo.com/at/">Datenrettung</a>) we can offer free Grml CDs to every visitor. We'll have Grml USB pens, posters, coffee cups and a talk about Grml. <a href="http://grml.supersized.org/archives/341-Event-Grml-at-Linuxdays-Graz-2010.html">Further details...</a>.</p>

@@ -1,0 +1,652 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+    "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="generator" content="AsciiDoc 8.2.2" />
+<style type="text/css">
+/* Debug borders */
+p, li, dt, dd, div, pre, h1, h2, h3, h4, h5, h6 {
+/*
+  border: 1px solid red;
+*/
+}
+
+body {
+  margin: 1em 5% 1em 5%;
+}
+
+a {
+  color: blue;
+  text-decoration: underline;
+}
+a:visited {
+  color: fuchsia;
+}
+
+em {
+  font-style: italic;
+}
+
+strong {
+  font-weight: bold;
+}
+
+tt {
+  color: navy;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #527bbd;
+  font-family: sans-serif;
+  margin-top: 1.2em;
+  margin-bottom: 0.5em;
+  line-height: 1.3;
+}
+
+h1 {
+  border-bottom: 2px solid silver;
+}
+h2 {
+  border-bottom: 2px solid silver;
+  padding-top: 0.5em;
+}
+
+div.sectionbody {
+  font-family: serif;
+  margin-left: 0;
+}
+
+hr {
+  border: 1px solid silver;
+}
+
+p {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+pre {
+  padding: 0;
+  margin: 0;
+}
+
+span#author {
+  color: #527bbd;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+span#email {
+}
+span#revision {
+  font-family: sans-serif;
+}
+
+div#footer {
+  font-family: sans-serif;
+  font-size: small;
+  border-top: 2px solid silver;
+  padding-top: 0.5em;
+  margin-top: 4.0em;
+}
+div#footer-text {
+  float: left;
+  padding-bottom: 0.5em;
+}
+div#footer-badges {
+  float: right;
+  padding-bottom: 0.5em;
+}
+
+div#preamble,
+div.tableblock, div.imageblock, div.exampleblock, div.verseblock,
+div.quoteblock, div.literalblock, div.listingblock, div.sidebarblock,
+div.admonitionblock {
+  margin-right: 10%;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+}
+div.admonitionblock {
+  margin-top: 2.5em;
+  margin-bottom: 2.5em;
+}
+
+div.content { /* Block element content. */
+  padding: 0;
+}
+
+/* Block element titles. */
+div.title, caption.title {
+  font-family: sans-serif;
+  font-weight: bold;
+  text-align: left;
+  margin-top: 1.0em;
+  margin-bottom: 0.5em;
+}
+div.title + * {
+  margin-top: 0;
+}
+
+td div.title:first-child {
+  margin-top: 0.0em;
+}
+div.content div.title:first-child {
+  margin-top: 0.0em;
+}
+div.content + div.title {
+  margin-top: 0.0em;
+}
+
+div.sidebarblock > div.content {
+  background: #ffffee;
+  border: 1px solid silver;
+  padding: 0.5em;
+}
+
+div.listingblock {
+  margin-right: 0%;
+}
+div.listingblock > div.content {
+  border: 1px solid silver;
+  background: #f4f4f4;
+  padding: 0.5em;
+}
+
+div.quoteblock > div.content {
+  padding-left: 2.0em;
+}
+
+div.attribution {
+  text-align: right;
+}
+div.verseblock + div.attribution {
+  text-align: left;
+}
+
+div.admonitionblock .icon {
+  vertical-align: top;
+  font-size: 1.1em;
+  font-weight: bold;
+  text-decoration: underline;
+  color: #527bbd;
+  padding-right: 0.5em;
+}
+div.admonitionblock td.content {
+  padding-left: 0.5em;
+  border-left: 2px solid silver;
+}
+
+div.exampleblock > div.content {
+  border-left: 2px solid silver;
+  padding: 0.5em;
+}
+
+div.verseblock div.content {
+  white-space: pre;
+}
+
+div.imageblock div.content { padding-left: 0; }
+div.imageblock img { border: 1px solid silver; }
+span.image img { border-style: none; }
+
+dl {
+  margin-top: 0.8em;
+  margin-bottom: 0.8em;
+}
+dt {
+  margin-top: 0.5em;
+  margin-bottom: 0;
+  font-style: italic;
+}
+dd > *:first-child {
+  margin-top: 0;
+}
+
+ul, ol {
+    list-style-position: outside;
+}
+ol.olist2 {
+  list-style-type: lower-alpha;
+}
+
+div.tableblock > table {
+  border: 3px solid #527bbd;
+}
+thead {
+  font-family: sans-serif;
+  font-weight: bold;
+}
+tfoot {
+  font-weight: bold;
+}
+
+div.hlist {
+  margin-top: 0.8em;
+  margin-bottom: 0.8em;
+}
+div.hlist td {
+  padding-bottom: 5px;
+}
+td.hlist1 {
+  vertical-align: top;
+  font-style: italic;
+  padding-right: 0.8em;
+}
+td.hlist2 {
+  vertical-align: top;
+}
+
+@media print {
+  div#footer-badges { display: none; }
+}
+
+div#toctitle {
+  color: #527bbd;
+  font-family: sans-serif;
+  font-size: 1.1em;
+  font-weight: bold;
+  margin-top: 1.0em;
+  margin-bottom: 0.1em;
+}
+
+div.toclevel1, div.toclevel2, div.toclevel3, div.toclevel4 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+div.toclevel2 {
+  margin-left: 2em;
+  font-size: 0.9em;
+}
+div.toclevel3 {
+  margin-left: 4em;
+  font-size: 0.9em;
+}
+div.toclevel4 {
+  margin-left: 6em;
+  font-size: 0.9em;
+}
+/* Workarounds for IE6's broken and incomplete CSS2. */
+
+div.sidebar-content {
+  background: #ffffee;
+  border: 1px solid silver;
+  padding: 0.5em;
+}
+div.sidebar-title, div.image-title {
+  font-family: sans-serif;
+  font-weight: bold;
+  margin-top: 0.0em;
+  margin-bottom: 0.5em;
+}
+
+div.listingblock div.content {
+  border: 1px solid silver;
+  background: #f4f4f4;
+  padding: 0.5em;
+}
+
+div.quoteblock-content {
+  padding-left: 2.0em;
+}
+
+div.exampleblock-content {
+  border-left: 2px solid silver;
+  padding-left: 0.5em;
+}
+
+/* IE6 sets dynamically generated links as visited. */
+div#toc a:visited { color: blue; }
+</style>
+<title></title>
+</head>
+<body>
+<div id="header">
+</div>
+<p>VERSION: 1.0.5</p>
+<p>Updated: Tuesday, May 29, 2001 by Xam of wi2600.org cru. yo.</p>
+<p>Check wi2600.org/mediawhore/nf0/wireless regularly</p>
+<p><strong><strong></strong></strong><strong><strong>./legal disclaimer
+The information contained within is, of course, for informational
+and diagnostic purposes only. Any use of this information to
+intentionaly or unintentionaly cause harm, casualty, loss of propery,
+life, or other forms of disstress is not endorsed. If in your locale,
+possesing information of this nature is illegal, then it is your
+responsibility to obey such regulations.
+</strong></strong><strong><strong></strong></strong>/end legal disclaimer</p>
+<div class="listingblock">
+<div class="content">
+<pre><tt>
+Early note:
+
+-Apple AIRPORT
+-Cabletron RoamAbout 2.4 GHz DS products (newer 11mbit)
+-Buffalo/Techworks Airstation 2.4 GHz DS (very new, Harris/Intersil Prism based)
+-Maxgate UGATE 802.11 bridge/natbox
+-newer "Orinoco" home access points
+-Teklogix - so far, they appear to do factory floor automation; with 802.11 ;)
+-Intel "anypoint" (proprietary HOME-RF crap..but worth keeping tabs on)
+
+I'm still working on investigating these...
+</tt></pre>
+</div></div>
+<p>TOC:</p>
+<p>Section 1:      The Info, somewhat alphabeticaly</p>
+<p>Section 2:      Will eventualy contain discussion of various things&#8230;</p>
+<p>Section 3:      Thanks and Credits</p>
+<p>$$<strong>NEW SECTION!</strong>$$</p>
+<p>Section 4:      Updatez &amp; News</p>
+<div class="listingblock">
+<div class="content">
+<pre><tt>
+SECTION 1:
+</tt></pre>
+</div></div>
+<p>Default SSID's for several common 802.11 Access Point and PCMCIA card Products</p>
+<div class="listingblock">
+<div class="content">
+<pre><tt>
+3com AirConnect 2.4 Ghz DS (newer 11mbit, Harris/Intersil Prism based)
+
+Default SSID:   comcomcom
+
+Notes: No known (yet) telnet/http/tftp/etc management passwords, or states of IP
+configuration.
+</tt></pre>
+</div></div>
+<p>Aironet 900Mhz/2.4GHz BR1000/e, BR5200/e and BR4800
+Allso known as Aironet 630/640 (for 900 MHz) and Aironet 340 for 2.4 GHz DSSS</p>
+<p>Default SSID:           2         (default for all 900 MHz gear, often reused)
+Default SSID:           tsunami   (seems to show up randomly)</p>
+<p>Console Port:           No Default Password
+Telnet password:        No Default Password
+HTTP management:        On by default, No Default Password</p>
+<p>NOTES: There is no IP address given to the bridge(s) by default, the user will
+need to have enabled/setup one. Howver, once you have the MAC of the bridge,
+rarp'ing the IP address out of it is trival, if it's been assigned one. Allso,
+if the bridge can be forceably restarted, default settings will allow the bridge
+to recieve an IP address via BOOTP and/or DCHP. Introducing a rouge server way
+allow the device to gain a more or less known IP in the case of rarp not
+working.</p>
+<div class="listingblock">
+<div class="content">
+<pre><tt>
+BayStack 650/660 802.11 DS AP
+
+Default SSID:           "Default SSID"
+Default admin pass:     &lt;none&gt;
+Default Channel:        1
+MAC addr:               00:20:d8:XX:XX:XX
+
+NOTES: default to the 10 net address, 2 mbit products.
+</tt></pre>
+</div></div>
+<p>Compaq WL-100 (reportedly allso the WL-200/300/400 devices as well)</p>
+<p>Default SSID:           Compaq</p>
+<p>More info once available.</p>
+<div class="listingblock">
+<div class="content">
+<pre><tt>
+Dlink DL-713 802.11 DS AP
+
+Default SSID:           WLAN
+Default Channel:        11
+Default IP address:     DHCP-administered
+
+Reliable info is scarce, hopefully soon we'll have more ;)
+</tt></pre>
+</div></div>
+<p>INETL Pro/Wireless 2011 802.11 DSSS Product Families:</p>
+<p>PC CARD:</p>
+<p>(seen using WLAN Monitor)</p>
+<p>Default SSID:           101
+Default Channel:        3</p>
+<p>(seen using WLAN Info program)</p>
+<p>Default SSID:           xlan
+Default Channel:        3</p>
+<p>(seen using Wireless LAN Profile Manager)</p>
+<p>Default SSID:           intel</p>
+<p>Access POINT/REPEATER/BRIDGE:</p>
+<p>Default SSID:           101, 195</p>
+<p>Default AP IP's seen:</p>
+<p>157.235.92.238
+157.235.92.200
+157.235.92.169
+157.235.92.104
+157.235.92.23</p>
+<p>NOTED MAC ADDRESSES:</p>
+<p>00:A0:F8:00:C2:34
+..:..:..:..:..:74
+..:..:..:..:..:A0</p>
+<p>It seems likely that 00:A0:F8:xx:xx:xx will be a common prefix for some
+bridges.</p>
+<p>NOTES: Documentation seems to indicate that they are SNMP, HTTP, and TELNET
+manageable. No defualt passwords are known; there probably are none.</p>
+<div class="listingblock">
+<div class="content">
+<pre><tt>
+LINKSYS Product Families:
+
+
+LINKSYS WAP-11 802.11 DS AP, reportedly supports repeater mode
+
+Default SSID:           linksys
+Default Channel:        6
+Default WEP key one:    10 11 12 13 14 15
+Default WEP key two:    20 21 22 23 24 25
+Default WEP key three:  30 31 32 33 34 35
+Default WEP key four:   40 41 42 43 44 45
+
+Extended WEP key pattern:       10 11 12 13 14 15 16 17 18 1a 1b 1c ...
+                                20 21 22 23 24 25 26 27 28 2a 2b 2c ...
+                                30 31 32 ... untill the input fields are full
+
+Default SNMP Write:     No Authentication
+
+NOTES: This bridge appears to have a default IP address upon first power on. It
+appears to get the default of 192.168.1.250 and is configured via two methods:
+local USB-connected software (from linksys), or via an SNMP-based (again, custom
+linksys software) program. There appears to be no amount of authentication in
+front of the bridges configuration, even after initial configuration. Fun!
+Intersil-based Chiset. Appears to support diversity antenna systems, features
+reverse-polarity TNC (RPTNC) RF connectors. Most likely not Eumitcom-derived.
+
+
+
+LINKSYS WPC-11 PCMCIA 802.11b DS 2.4 GHz cards
+
+Default Channel:        3        (win9x driver default)
+Default SSID:           Wireless or linksys (win9x driver default)
+
+Default Channel:        11 or 6  (winNt4/2k driver default)
+Default SSID:           Wireless or linksys (winNt4/2k driver default)
+
+NOTES: Card Defaults to "AdHoc" mode, not BSS or 802.11b AdHoc. Current data
+has only been tested in win98, nt4, and w2k. See data on Linksys WAP11 for WEP
+specifics.
+</tt></pre>
+</div></div>
+<p>MAXGATE Ugate 3200, 802.11 DS Access Point</p>
+<p>Suspected re-use of Eumitcom OEM radio, integrated antenna. No indication of
+diversity opperation.
+More info once available.</p>
+<div class="listingblock">
+<div class="content">
+<pre><tt>
+Netgear 802.11 DS products, ME102 and MA401
+
+Default SSID:           Wireless
+Default Channel:        6
+Default IP address:     192.168.0.5
+Default WEP:            Disabled
+Default WEP KEY1:       11 11 11 11 11
+Default WEP KEY2:       20 21 22 23 24
+Default WEP KEY3:       30 31 32 33 34
+Default WEP KEY4:       40 41 42 43 44
+Default MAC:            00:30:ab:xx:xx:xx
+
+
+NOTES: Harris Intersill/Prism based radio, AP supports antenna diversity,
+client cards most likely do as well. SNMP over IP is typical management style.
+No apparent administrativie authentication. No apparent limit on Broadcast-
+Associations. Have Fun!
+</tt></pre>
+</div></div>
+<p>SMC Access Point Family</p>
+<p>SMC2652W: Single Dipole, non-diversity (OEM radio)</p>
+<p>Default SSID:           WLAN
+Defualt Channel:        11
+Default HTTP:           user: default  pass: WLAN_AP
+Default MAC:            00:90:d1:00:b7:6b (00:90:d1:xx:xx:xx)
+Console Port:           No Password, AT command set</p>
+<p>NOTES: There is no IP address associated with this access point, by default&#8230;
+Scanning for the AP with the "AP Utility" will reveal the radio, and then also
+set the Ip address to something in the network range of the PC running the
+"AP Utility."</p>
+<p>This radio is OEM'ed from a third-party
+(http://www.eumitcom.com/) and as such has features similar to other devices in
+common use. Teletronics bridges are allso eumitcom OEM products
+(http://www.teletronics.com). It goes without saying that exploitation of one
+particular brand will probably be applicable to ALL products OEM'd from the same
+vendor.</p>
+<p>SMC2526W: Wireless Access Point Dual-Dipole, diversity, (non-oem)</p>
+<p>Default SSID:           WLAN
+Defualt IP:             192.168.0.254
+Default MAC:            00:90:d1:00:11:11 (00:90:d1:xx:xx:xx)
+Default AP Name:        MiniAP
+Default Channel:        11
+Default Admin Pass:     MiniAP</p>
+<p>Notes: Can be DHCP client (!) if the user setup the bridge as such, can allso
+send packets to specified Default Gateway. Mmm, free smurf toy! Uses a
+SNMP-Ish, IP-transported management application.</p>
+<p>SMC2682W EZ-Connect Wireless Bridge, Single Dipole, non-diversity</p>
+<p>Default SSID:           BRIDGE
+Defualt Channel:        11
+Default Admin pass:     WLAN_BRIDGE
+Default MAC:            00:90:d1:00:b8:9c (00:90:d1:xx:xx:xx)</p>
+<p>Notes: This baby supports network-to-network bridging, not only Access Point
+functions. When you see it, it may be linking some rather important stuff.
+Apparently, the side of the bridge link opperating as the "master" can allso
+associate wireless client cards just like a normal AP. However, the "slave"
+side can't. Defaults to "Bridge Master" ;) Maybe buying one of these would be
+a "good thing [TM]" ? Bridge seems to be DHCP-aware, if configured to pull an
+address via this method.</p>
+<div class="listingblock">
+<div class="content">
+<pre><tt>
+SOHOware NetBlaster II
+
+Default SSID:           same as MAC address (example: 0080c6fac430)
+Default MAC:            00:80:c6:xx:xx:xx
+Default Channel:        8
+
+Notes:  Way to go SOHOWARE! Yes! Use the MAC address as the defualt SSID! In
+fact, go one step further and print the MAC on the base of the AP itself!
+
+Anyway, when you see one of these, make sure you revisit the site. It has no
+hope of filtering broadcast associations, so you'll be able to scan for it with
+minimal effort. Gogogadget anonymous-internet-access!
+</tt></pre>
+</div></div>
+<p>Symbol AP41x1 and LA41x1 / LA41x3 802.11 DS Devices</p>
+<p>Default SSID:           101
+Default MAC:            00:a0:0f:xx:xx:xx
+Default WEP key one:    10 11 12 13 14 15
+Default WEP key two:    20 21 22 23 24 25
+Default WEP key three:  30 31 32 33 34 35
+Default WEP key four:   40 41 42 43 44 45</p>
+<p>Extended WEP key pattern:       10 11 12 13 14 15 16 17 18 1a 1b 1c &#8230;
+                                20 21 22 23 24 25 26 27 28 2a 2b 2c &#8230;
+                                30 31 32 &#8230; untill the input fields are full</p>
+<p>Default Admin Pass:     unknown as of yet</p>
+<p>Notes: Features HTTP and TELNET management, probably has weak/lame default
+password (if any). No notes on defualt IP address, although RARP is said to be
+supported by the bridge (i.e. associate &amp; yank the IP from the bridges MAC ;)</p>
+<div class="listingblock">
+<div class="content">
+<pre><tt>
+
+TELETRONICS WL-Access Points (1/2 Mbit, and 11 Mbit)
+
+Default SSID:           any
+Default Password:       1234
+Console port:           No password, AT command set
+
+NOTES: Funny how this bridge/access point has the same defaults as the ZCOMAX
+bridge. It's rather apparent that they both utilized the same OEM product from
+Eumitcom. Configuration Utility is required to modify settings if not using
+local serial port.
+</tt></pre>
+</div></div>
+<p>Wave Lan Family:</p>
+<p>Default SSID:           "WaveLAN Network"
+Default channel:        3</p>
+<p>NOTES: It seems that various incarnations of Wavelan-Based devices are cropping
+up all over. I've come accross several OEM's which use the Wavelan cards, and
+even go so far as to support COR/ROR modes of opperation (i.e. the proprietary
+metod point-to-multipoint and dedicated-links can optionaly opperate in when
+using Wavelan hardware).</p>
+<div class="listingblock">
+<div class="content">
+<pre><tt>
+ZCOMAX 1/2 Mbit DS 802.11 Station Bridges/Repeaters/Access point, modle XWL450
+
+Default SSID:           any, mello, or Test (all three are mentioned, "any"
+                                                seems to be a common default)
+Default password:       1234
+Console port:           No Password, AT command set
+
+NOTES: User must use the ZCOMAX Wireless Lan "software" utility (more raw, non
+IP ethernet configuration). No IP address is known to exist on the bridge.
+ZCOMAX is the new product name for MAXTECH's wireless products. (as of sometime
+in mid 2000)
+</tt></pre>
+</div></div>
+<p>ZYXEL Prestige 316 Gateway/Natbox/WirelessBridge (DS 802.11 capable)</p>
+<p>Default SSID:           Wireless
+Default Channel:        1 (2412 MHz)
+Default console pass:   1234
+Default telnet pass:    1234
+Console Port:           Same password for system, ansi/vt100 terminal</p>
+<div class="listingblock">
+<div class="content">
+<pre><tt>
+SECTION 2:
+
+Articles from a few people are planned to be here by next revision.
+</tt></pre>
+</div></div>
+<p>SECTION 3:</p>
+<p>well, wow.. here it is at the fourth revision, with more data. I feel like this
+is actualy going somewhere! Hope the <em>audience</em> is enjoying reading it!</p>
+<p>Thanks this time arround, again, to Foofus, Dover, and other #dc-stuff pals.</p>
+<div class="listingblock">
+<div class="content">
+<pre><tt>
+SECTION 4:
+
+Created in VI. What's EE? What's Pico? What's Emacs?
+
+
+version 1.0.5 - Added several new things, a few default wep keys, several extra
+                details regarding setup/configurations for SMC AP's.. Corrected
+                some linksys info.. Added new info for future bridges/ap's to be
+                investigated. Oh yes, added Section 4 ;) SHIT'S FINALY IN ALPHA-
+                BETIC ORDER!
+
+version 1.0.4 - Added new SMC gear, SOHOware, and additionial info for Symbol
+                gear. Began research of TEKLOGIX gear, and more specificaly,
+                why it seems to crop up all over the place... Added several
+                *verified* vendor MAC addresses to a few bridges/AP's...
+
+version 1.0.3 - I forget everything that got changed from the first SSID info
+                release. I think I just cleaned up some spelling errors. Yah ;)
+</tt></pre>
+</div></div>
+<div id="footer">
+<div id="footer-text">
+Last updated 01-Nov-2009 04:31:38 CEST
+</div>
+</div>
+</body>
+</html>

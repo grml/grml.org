@@ -1,0 +1,4 @@
+Planet Grml available
+
+<a href="http://planet.grml.org/">planet.grml.org</a> is a weblog aggregation
+containing blog articles written by the developers of the grml Live CD.

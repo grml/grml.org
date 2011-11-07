@@ -1,0 +1,5 @@
+Release 0.3 available.
+
+grml 0.3 - Codename Hustenstopper <a href="/download/">available</a>.
+
+The new release brings 191 new packages and many new features. For details take a look at <a href="http://grml.org/files/README-0.3.txt">the release announcement</a>.

@@ -1,0 +1,46 @@
+#!/bin/bash
+
+set -e
+
+#killall pump
+#dhclient eth0
+
+apt-get update ; apt-get install qemu-kvm cu uml-utilities
+
+if ! grep -q vnet /etc/network/interfaces ; then
+  cat >> /etc/network/interfaces << EOF
+iface vnet inet static
+      post-up tunctl -u grml -g grml -t tap1 ; brctl addif vnet tap1 ; ip link set up dev tap1
+      post-up brctl addif vnet eth1
+      pre-down ip link set down dev tap1 ; tunctl -d tap1
+      bridge_ports none
+      address 192.168.10.1
+      netmask 255.255.255.0
+EOF
+fi
+
+ifdown vnet ; ifup vnet
+echo 1 > /proc/sys/net/ipv4/ip_forward
+iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
+
+if ! [ -r /mnt/test/grml64_2010.04.iso ] ; then
+ mount /dev/sdc1 /mnt/test
+fi
+
+if ! [ -d /mnt/loop/GRML ] ; then
+  mkdir /mnt/loop
+  mount -o loop /mnt/test/grml64_2010.04.iso /mnt/loop
+fi
+
+# TODO -> really necessary?
+ifconfig eth1 up
+
+dpkg -i /mnt/test/kantan_0.0.2*deb
+
+if ! grep -q '^VLAN1_DEVICE' /etc/kantan/server.cfg ; then
+  echo "VLAN1_DEVICE='tap1'" >> /etc/kantan/server.cfg
+fi
+
+echo "TODO: kantan server /mnt/test/grmlserver.img /mnt/test/grml64_2010.04.iso /mnt/loop"
+
+# kvm -k en-us -m 1024 -serial pty -vnc :0 -net nic,macaddr=00:16:3e:7d:2d:da,vlan=0 -net user,vlan=0 -net nic,macaddr=00:16:3e:37:b7:89,vlan=1 -net tap,vlan=1,ifname=tap1 -hda /mnt/test/grmlserver.img

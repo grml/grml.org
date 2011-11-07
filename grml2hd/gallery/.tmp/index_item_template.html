@@ -1,0 +1,36 @@
+
+cat << EOF
+
+<td align="center" valign="bottom" width="200" height="220" >
+<br>
+<span class="small">
+   $DESCRIPTION
+</span>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+   <td width="170" height="170" bgcolor="#dddddd" align="center" valign="middle">
+   <a href="$THIS_HTML"><img alt="Thumbnail" src="$TN_IMAGE" $TN_IMAGE_SIZE ></a>
+   </td>
+</tr>
+<tr>
+   <td bgcolor="#dddddd" align="center" valign="middle">
+   $EXTRA_SMALL_ICON
+   <font size="-2" color="#bbbbbb">$THIS_IMAGE_DATE</font></td>
+</tr>
+<tr>
+   <td align="center" bgcolor="#F7F7F7" class="smallgray">
+   $THIS_IMAGE<br>
+   <a href="$THIS_HTML_INFO">($THIS_IMAGE_GEOMETRY $THIS_IMAGE_BYTE kb)</a>
+`
+if [ "$IIMAGE_SPECIAL" = "true" ] ; then
+   echo -e "<?  if (IIMAGE_WRAPPER==1) isort_wrapper_ref(\"$THIS_IMAGE\"); ?>"
+fi
+`
+   </td>
+</tr></table>
+
+
+</td>
+
+EOF
+

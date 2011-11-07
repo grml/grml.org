@@ -1,0 +1,3 @@
+New team member.
+
+Marcel Wichern joined <a href="htt://grml.org/team/">the grml-team</a>.

@@ -1,0 +1,5 @@
+Grml goes microblogging
+
+<p>Now, the Grml project has accounts on both Twitter (<a href="http://twitter.com/grmlproject">@grmlproject</a>) and identi.ca (<a href="http://identi.ca/grml">@grml</a>). They are used to publish Grml related announcements, news and links. Tips related to Zsh, console programs and Grml itself are part of the regular posts as well.</p>
+
+<p>Make sure to follow the Grml project <a href="http://twitter.com/grmlproject">on twitter</a> and/or <a href="http://identi.ca/grml">on identi.ca</a>!</p>

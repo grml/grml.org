@@ -1,0 +1,29 @@
+#!/bin/sh
+set -e
+
+caller=$(ps axww | mawk '/aptitude|apt-get/ {for (i=5; i<=NF ; i++) printf ("%s ",$i); printf ("\n") }' | head -1)
+
+hg addremove 1>/dev/null
+STATUS="$(hg st)"
+
+if [ -z "$STATUS" ] ; then
+   echo "hg-snapshot-script: nothing to be done"
+else
+   case "$1" in
+        pre)
+           echo "hg-snapshot-script: found changed files:"
+           hg st
+           hg ci -m "snapshot from $LOGNAME before: $caller"
+          ;;
+        post)
+           echo "hg-snapshot-script: found changed files:"
+           hg st
+           hg ci -m "snapshot from $LOGNAME after: $caller"
+          ;;
+	*)
+           echo "hg-snapshot-script: found changed files:"
+           hg st
+           hg ci -m "snapshot from $LOGNAME on $(date '+%Y-%m-%d - %H:%M:%S')"
+	  ;;
+   esac
+fi

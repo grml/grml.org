@@ -1,0 +1,13 @@
+User-agent: *
+Disallow: /CGI_BIN/
+Disallow: /cgi-bin/
+Disallow: /repos/
+
+User-agent: EmailCollector
+Disallow: /
+
+User-agent: GagaRobot
+Disallow: /
+
+User-agent: w3bfukk0r
+Disallow: /

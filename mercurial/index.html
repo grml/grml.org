@@ -1,0 +1,1274 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+    "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="generator" content="AsciiDoc 7.1.2" />
+<style type="text/css">
+/* Debug borders */
+p, li, dt, dd, div, pre, h1, h2, h3, h4, h5, h6 {
+/*
+  border: 1px solid red;
+*/
+}
+
+body {
+  margin: 1em 5% 1em 5%;
+}
+
+a {
+  color: blue;
+  text-decoration: underline;
+}
+a:visited {
+  color: fuchsia;
+}
+
+em {
+  font-style: italic;
+}
+
+strong {
+  font-weight: bold;
+}
+
+tt {
+  color: navy;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #527bbd;
+  font-family: sans-serif;
+  margin-top: 1.2em;
+  margin-bottom: 0.5em;
+  line-height: 1.3;
+}
+
+h1 {
+  border-bottom: 2px solid silver;
+}
+h2 {
+  border-bottom: 2px solid silver;
+  padding-top: 0.5em;
+}
+
+div.sectionbody {
+  font-family: serif;
+  margin-left: 0;
+}
+
+hr {
+  border: 1px solid silver;
+}
+
+p {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+pre {
+  padding: 0;
+  margin: 0;
+}
+
+span#author {
+  color: #527bbd;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+span#email {
+}
+span#revision {
+  font-family: sans-serif;
+}
+
+div#footer {
+  font-family: sans-serif;
+  font-size: small;
+  border-top: 2px solid silver;
+  padding-top: 0.5em;
+  margin-top: 4.0em;
+}
+div#footer-text {
+  float: left;
+  padding-bottom: 0.5em;
+}
+div#footer-badges {
+  float: right;
+  padding-bottom: 0.5em;
+}
+
+div#preamble,
+div.tableblock, div.imageblock, div.exampleblock, div.verseblock,
+div.quoteblock, div.literalblock, div.listingblock, div.sidebarblock,
+div.admonitionblock {
+  margin-right: 10%;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+}
+div.admonitionblock {
+  margin-top: 2.5em;
+  margin-bottom: 2.5em;
+}
+
+div.content { /* Block element content. */
+  padding: 0;
+}
+
+/* Block element titles. */
+div.title, caption.title {
+  font-family: sans-serif;
+  font-weight: bold;
+  text-align: left;
+  margin-top: 1.0em;
+  margin-bottom: 0.5em;
+}
+div.title + * {
+  margin-top: 0;
+}
+
+td div.title:first-child {
+  margin-top: 0.0em;
+}
+div.content div.title:first-child {
+  margin-top: 0.0em;
+}
+div.content + div.title {
+  margin-top: 0.0em;
+}
+
+div.sidebarblock > div.content {
+  background: #ffffee;
+  border: 1px solid silver;
+  padding: 0.5em;
+}
+
+div.listingblock > div.content {
+  border: 1px solid silver;
+  background: #f4f4f4;
+  padding: 0.5em;
+}
+
+div.quoteblock > div.content {
+  padding-left: 2.0em;
+}
+
+div.attribution {
+  text-align: right;
+}
+div.verseblock + div.attribution {
+  text-align: left;
+}
+
+div.admonitionblock .icon {
+  vertical-align: top;
+  font-size: 1.1em;
+  font-weight: bold;
+  text-decoration: underline;
+  color: #527bbd;
+  padding-right: 0.5em;
+}
+div.admonitionblock td.content {
+  padding-left: 0.5em;
+  border-left: 2px solid silver;
+}
+
+div.exampleblock > div.content {
+  border-left: 2px solid silver;
+  padding: 0.5em;
+}
+
+div.verseblock div.content {
+  white-space: pre;
+}
+
+div.imageblock div.content { padding-left: 0; }
+div.imageblock img { border: 1px solid silver; }
+span.image img { border-style: none; }
+
+dl {
+  margin-top: 0.8em;
+  margin-bottom: 0.8em;
+}
+dt {
+  margin-top: 0.5em;
+  margin-bottom: 0;
+  font-style: italic;
+}
+dd > *:first-child {
+  margin-top: 0;
+}
+
+ul, ol {
+    list-style-position: outside;
+}
+ol.olist2 {
+  list-style-type: lower-alpha;
+}
+
+div.tableblock > table {
+  border: 3px solid #527bbd;
+}
+thead {
+  font-family: sans-serif;
+  font-weight: bold;
+}
+tfoot {
+  font-weight: bold;
+}
+
+div.hlist {
+  margin-top: 0.8em;
+  margin-bottom: 0.8em;
+}
+td.hlist1 {
+  vertical-align: top;
+  font-style: italic;
+  padding-right: 0.8em;
+}
+td.hlist2 {
+  vertical-align: top;
+}
+
+@media print {
+  div#footer-badges { display: none; }
+}
+/* Workarounds for IE6's broken and incomplete CSS2. */
+
+div.sidebar-content {
+  background: #ffffee;
+  border: 1px solid silver;
+  padding: 0.5em;
+}
+div.sidebar-title, div.image-title {
+  font-family: sans-serif;
+  font-weight: bold;
+  margin-top: 0.0em;
+  margin-bottom: 0.5em;
+}
+
+div.listingblock div.content {
+  border: 1px solid silver;
+  background: #f4f4f4;
+  padding: 0.5em;
+}
+
+div.quoteblock-content {
+  padding-left: 2.0em;
+}
+
+div.exampleblock-content {
+  border-left: 2px solid silver;
+  padding-left: 0.5em;
+}
+</style>
+<title>Documentation of mercurial setup of grml</title>
+</head>
+<body>
+<div id="header">
+<h1>Documentation of mercurial setup of grml</h1>
+</div>
+<h2>1. Preface</h2>
+<div class="sectionbody">
+<p><a href="http://www.selenic.com/mercurial/wiki/index.cgi">Mercurial</a> is a
+fast, lightweight and distributed Source Control Management system
+designed for efficient handling of very large distributed projects.</p>
+<p>For grml we use a mixture between a
+<a href="http://www.selenic.com/mercurial/wiki/index.cgi/WorkingPractices">subversion-like</a>
+working practise and the
+<a href="http://www.selenic.com/mercurial/wiki/index.cgi/KernelPractice">kernel-like</a>
+working practise.</p>
+<p>We use /data/repos on the vserver as the directory containing the
+mercurial repositories. The mercurial setup/server is running inside a
+dedicated vserver. /data is a xfs partition made available through LVM
+and mounted into the vserver so we can use ACL features which vserver's
+ufs does not provide.</p>
+<p>If you are interested in the "<a href="#server">Server setup</a>" of grml read on, if you are
+not interested in the server setup skip the following section and start
+at section "<a href="#user">Working with mercurial</a>".</p>
+</div>
+<h2><a id="server"></a>2. Server setup</h2>
+<div class="sectionbody">
+<h3>2.1. Setup of hgweb</h3>
+<div class="literalblock">
+<div class="content">
+<pre><tt>% cp /usr/share/doc/mercurial/examples/hgwebdir.cgi /data/repos/</tt></pre>
+</div></div>
+<div class="literalblock">
+<div class="content">
+<pre><tt>% cat &gt; /data/repos/hgweb.config &lt;&lt; EOF
+[paths]
+grml-etc-core/ =  /data/repos/grml-etc-core/
+udev/ =  /data/repos/udev/
+hg-doc/ =  /data/repos/hg-doc/</tt></pre>
+</div></div>
+<div class="literalblock">
+<div class="content">
+<pre><tt>[web]
+style=gitweb
+allowbz2 = yes
+allowgz = yes
+allowzip = yes</tt></pre>
+</div></div>
+<div class="literalblock">
+<div class="content">
+<pre><tt>motd = (c) grml-team 2003++&lt;br /&gt;
+       Repositories maintained by &lt;a href="http://grml.org/team/#mika"&gt;Michael Prokop&lt;/a&gt;.&lt;br /&gt;
+       &lt;a href="http://grml.org/mercurial/"&gt;Documentation about the setup is available online.&lt;/a&gt;
+EOF</tt></pre>
+</div></div>
+<h3>2.2. Apache2 setup for hgweb</h3>
+<div class="literalblock">
+<div class="content">
+<pre><tt># cat /etc/apache2/sites-available/default
+NameVirtualHost *:80</tt></pre>
+</div></div>
+<div class="literalblock">
+<div class="content">
+<pre><tt>&lt;VirtualHost *:80&gt;
+        ServerAdmin repos@grml.org.invalid
+        ServerName repos.grml.org</tt></pre>
+</div></div>
+<div class="literalblock">
+<div class="content">
+<pre><tt>DocumentRoot /data/deb</tt></pre>
+</div></div>
+<div class="literalblock">
+<div class="content">
+<pre><tt>&lt;Directory /&gt;
+        Options FollowSymLinks
+        AllowOverride None
+&lt;/Directory&gt;</tt></pre>
+</div></div>
+<div class="literalblock">
+<div class="content">
+<pre><tt>&lt;Directory "/data"&gt;
+        AllowOverride None
+        Options Indexes FollowSymLinks MultiViews
+        Order allow,deny
+        allow from all
+        # RedirectMatch ^/$ /deb/
+&lt;/Directory&gt;</tt></pre>
+</div></div>
+<div class="literalblock">
+<div class="content">
+<pre><tt>&lt;Directory "/data/repos"&gt;
+        AllowOverride None
+        Options +ExecCGI -MultiViews +SymLinksIfOwnerMatch
+        AddHandler cgi-script .cgi
+        Order allow,deny
+        Allow from all
+&lt;/Directory&gt;</tt></pre>
+</div></div>
+<div class="literalblock">
+<div class="content">
+<pre><tt>RedirectMatch ^/web/$ /hgwebdir.cgi
+ScriptAlias   /hgwebdir.cgi   /data/repos/hgwebdir.cgi</tt></pre>
+</div></div>
+<div class="literalblock">
+<div class="content">
+<pre><tt>ErrorLog /var/log/apache2/error.log</tt></pre>
+</div></div>
+<div class="literalblock">
+<div class="content">
+<pre><tt>LogLevel warn</tt></pre>
+</div></div>
+<div class="literalblock">
+<div class="content">
+<pre><tt>        CustomLog /var/log/apache2/access.log combined
+        ServerSignature On
+&lt;/VirtualHost&gt;</tt></pre>
+</div></div>
+<div class="literalblock">
+<div class="content">
+<pre><tt>&lt;VirtualHost *:80&gt;
+        ServerName hg.grml.org
+        ServerAdmin repos@grml.org.invalid</tt></pre>
+</div></div>
+<div class="literalblock">
+<div class="content">
+<pre><tt>&lt;Directory "/"&gt;
+   Options ExecCGI
+   AddHandler cgi-script .cgi
+&lt;/Directory&gt;</tt></pre>
+</div></div>
+<div class="literalblock">
+<div class="content">
+<pre><tt>RewriteEngine on
+RewriteRule (.*) /data/repos/hgwebdir.cgi$1</tt></pre>
+</div></div>
+<div class="literalblock">
+<div class="content">
+<pre><tt>LogLevel warn</tt></pre>
+</div></div>
+<div class="literalblock">
+<div class="content">
+<pre><tt>        ErrorLog /var/log/apache2/error.log
+        CustomLog /var/log/apache2/access.log combined
+        ServerSignature On
+&lt;/VirtualHost&gt;</tt></pre>
+</div></div>
+<p>Now repositories can be accessed via
+<a href="http://hg.grml.org/">http://hg.grml.org/</a> - for example
+<a href="http://hg.grml.org/hg-doc">http://hg.grml.org/hg-doc</a>
+to access the repository named hg-doc.</p>
+<h3>2.3. Activate FastCGI with Apache2 setup for hgwebdir</h3>
+<p>If you have hg.grml.org allready running it's a one minute job:</p>
+<ul>
+<li>
+<p>
+Install libapache2-mod-fastcgi and python-flup
+</p>
+</li>
+<li>
+<p>
+Copy hgwebdir.cgi to hgwebdir.fcgi
+</p>
+</li>
+<li>
+<p>
+Change the line in hgwebdir.fcgi from
+</p>
+<div class="literalblock">
+<div class="content">
+<pre><tt>wsgicgi.launch(wsgiapplication(make_web_app))</tt></pre>
+</div></div>
+<div class="literalblock">
+<div class="content">
+<pre><tt>to</tt></pre>
+</div></div>
+<div class="literalblock">
+<div class="content">
+<pre><tt>from flup.server.fcgi import WSGIServer
+WSGIServer(wsgiapplication(make_web_app)).run()</tt></pre>
+</div></div>
+</li>
+<li>
+<p>
+This 2 lines uses the threaded fcgi version. You could also use the
+    fork fcgi version with
+</p>
+<div class="literalblock">
+<div class="content">
+<pre><tt>flup.server.fcgi_fork import WSGIServer</tt></pre>
+</div></div>
+</li>
+<li>
+<p>
+To make hg.grml.org using the fcgi version you should change your apache
+   config form something like this
+</p>
+<div class="literalblock">
+<div class="content">
+<pre><tt>RewriteRule (.*) /data/repos/hgwebdir.cgi$1</tt></pre>
+</div></div>
+<div class="literalblock">
+<div class="content">
+<pre><tt>to</tt></pre>
+</div></div>
+<div class="literalblock">
+<div class="content">
+<pre><tt>RewriteRule (.*) /data/repos/hgwebdir.fcgi$1</tt></pre>
+</div></div>
+</li>
+<li>
+<p>
+Thats it!
+</p>
+</li>
+</ul>
+<h3>2.4. User setup</h3>
+<h4>2.4.1. Accounts for core developers</h4>
+<p>grml core developers have a ssh account without any restrictions.</p>
+<h4>2.4.2. Accounts for contributors</h4>
+<p>Contributors are allowed to work on some selected packages (having write
+access therefore of course) but not on all repositories.</p>
+<div class="literalblock">
+<div class="content">
+<pre><tt># grep $USER /etc/passwd
+$USER:*:1002:1002:$DEMOUSER,,,:/home/$USER:/bin/zsh
+      ^
+Important: disable password so user can run hg-ssh but does not get a shell!</tt></pre>
+</div></div>
+<p>hg-ssh is a wrapper for ssh access to a limited set of mercurial repos, to
+be used in ~/.ssh/authorized_keys and can be found at
+/usr/share/doc/mercurial/examples/hg-ssh (so install hg-ssh in $PATH):</p>
+<div class="literalblock">
+<div class="content">
+<pre><tt># cat /home/$USER/.ssh/authorized_keys
+command="cd /data/repos/ &amp;&amp; hg-ssh hg-doc",no-port-forwarding,no-X11-forwarding,no-agent-forwarding ssh-rsa [key...]</tt></pre>
+</div></div>
+<h4><a id="acl"></a>2.4.3. Permission handling</h4>
+<p>Set up a dummy user, we don't really use UNIX permissions but POSIX ACLs
+instead:</p>
+<div class="literalblock">
+<div class="content">
+<pre><tt># cd /data/repos
+# adduser dummy --system
+# addgroup dummy --system
+# addgroup dummy dummy
+# chown -R dummy:dummy .</tt></pre>
+</div></div>
+<p>Make sure people from group repos have access anytime:</p>
+<div class="literalblock">
+<div class="content">
+<pre><tt># cat /data/repos/default_acl_schema
+# file: a
+# owner: mika
+# group: mika
+user::rwx
+user:www-data:r-x
+group::r-x
+group:www-data:r-x
+group:repos:rwx
+mask::rwx
+other::r-x
+default:user::rwx
+default:user:www-data:r-x
+default:group::r-x
+default:group:www-data:r-x
+default:group:repos:rwx
+default:mask::rwx
+default:other::r-x
+# setfacl -R --set-file /data/repos/default_acl_schema /data/repos</tt></pre>
+</div></div>
+<p>Team setup - user(s) of group repos-udev should have access to their
+package:</p>
+<div class="literalblock">
+<div class="content">
+<pre><tt># addgroup repos-udev
+# addgroup tklauser repos-udev
+# setfacl -R -m d:g:repos-udev:rwx,g:repos-udev:rwx udev</tt></pre>
+</div></div>
+<p>Example for setting up a private repository where other users should not
+have access to:</p>
+<div class="literalblock">
+<div class="content">
+<pre><tt># cd /data/repos
+# mkdir private
+# chmod 750 private
+# chown -R mika.mika private
+# setfacl -R --remove-all private</tt></pre>
+</div></div>
+<div class="sidebarblock">
+<div class="sidebar-content">
+<p>Important: to avoid conflicts with permissions do not work on the server
+via ssh in the repositories in /data/repos/ themselve but clone them to
+your $HOME directory instead or download them to your own box! (This seems
+to be a bug in the permission handling of mercurial. We are investigating
+on this issue&#8230;)</p>
+</div></div>
+</div>
+<h2><a id="user"></a>3. Working with mercurial</h2>
+<div class="sectionbody">
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<div class="title">Tip</div>
+</td>
+<td class="content">Keep your changesets small, sync and push often!</td>
+</tr></table>
+</div>
+<p>First of all read
+<a href="http://www.selenic.com/mercurial/wiki/index.cgi/QuickStart">the quick start howto</a>.</p>
+<h3>3.1. Mercurial and Debian packages</h3>
+<h4>3.1.1. Working with your own packages</h4>
+<p>In this case the <a href="http://hg.grml.org/">mercurial repository on grml.org</a>
+itself is interesting for you.  You push all your changes immediatly to the
+repository.</p>
+<h4>3.1.2. For changes in other packages</h4>
+<p>You create a local repository (hg clone &#8230;), make your changes and
+inform the (grml) maintainer who is responsible for this package about
+your changes.  Preferred is the mercurial nativ way to communicate
+changesets (push/pull/clone). Look at the different ways to communicate
+changes (see "<a href="#patch">How to create a patch</a>" for more details).</p>
+<h4>3.1.3. Building the debian package</h4>
+<p>We assume you know
+<em><a href="http://packages.debian.org/unstable/utils/dpkg-dev">dpkg-buildpackage</a>
+-rfakeroot</em> already.</p>
+<p>If you use mercurial you have a single directory named .hg in the root
+directory of your repository (unlike svn, which has .svn directories in
+every single directory of your repository). To avoid shipping the .hg
+directory we wrote hg-buildpackage. hg-buildpackage is a simple wrapper
+around dpkg-buildpackage. To use it make sure you have grml-mercurial-utils
+installed (it's available from <a href="http://deb.grml.org/">grml-repos</a>, if
+you are using grml you have it on your box already but please make sure you
+are using a recent version).</p>
+<h4>3.1.4. Working with non-native Debian package</h4>
+<p>Variante 1) only directory debian/ is under revision control</p>
+<div class="literalblock">
+<div class="content">
+<pre><tt>% mv package package-old
+% unp newupstream-package.tar.gz
+% cp -a package-old/.hg package/
+% cp -a package-old/debian package/
+% cd package
+&lt;adjust debian packaging..&gt;
+% hg ci -m "notice about changes"
+% hg push
+% hg-buildpackage -rfakeroot ...</tt></pre>
+</div></div>
+<p>Variante 2) directory debian/ <strong>including</strong> upstream sources are under revision control:</p>
+<div class="literalblock">
+<div class="content">
+<pre><tt>% mv package package-old
+% unp newupstream-package.tar.gz
+% cp -a package-old/.hg package/
+% cp -a package-old/debian package/
+% cd package
+% hg addremove
+% hg ci -m 'new upstream version'
+% hg tag &lt;upstream version'
+&lt;adjust debian packaging..&gt;
+% hg ci -m "notice about changes"
+% hg tag &lt;debian version&gt;
+% hg push
+% hg-buildpackage -rfakeroot ...</tt></pre>
+</div></div>
+<p>Variante 3) upstream tracking repository + versioned mercurial patch queue</p>
+<div class="literalblock">
+<div class="content">
+<pre><tt>% mv package package-old
+% unp newupstream-package.tar.gz
+% cp -a package-old/.hg package/
+% cd package
+% hg addremove
+% hg ci -m 'new upstream version'
+% hg tag &lt;upstream version&gt;
+% hg push
+% hg qpush debian.patch
+&lt;adjust debian packaging..&gt;
+% hg qci -m 'new upstream version'
+% hg-buildpackage -mqd -rfakeroot
+% cd .hg/patches
+% hg tag &lt;debian version&gt;
+% hg push</tt></pre>
+</div></div>
+<h4>3.1.5. Get notifications when pushing</h4>
+<p>If you want to be notified as soon as changesets are pushed to the
+repository activate the incoming hook in .hg/hgrc of the repository:</p>
+<div class="literalblock">
+<div class="content">
+<pre><tt>[hooks]
+incoming.notify = commithook</tt></pre>
+</div></div>
+<p>whereas commithook is a script inside $PATH:</p>
+<div class="literalblock">
+<div class="content">
+<pre><tt>% cat /usr/bin/commithook
+#!/bin/sh
+if ! [ -x /usr/bin/mail ] ; then
+   exit 0
+fi</tt></pre>
+</div></div>
+<div class="literalblock">
+<div class="content">
+<pre><tt>SUBJECT=`hg log -r $HG_NODE | grep "^summary:" | cut -b 14-`
+SUBJECT="$SUBJECT - http://hg.grml.org/$(basename `hg root`)/rev/$HG_NODE"
+RECIPIENT="$(hg debugconfig | grep web.author | sed 's/web.author=//'), repos@grml.org.invalid"</tt></pre>
+</div></div>
+<div class="literalblock">
+<div class="content">
+<pre><tt>if [ -n "$RECIPIENT" ] ; then
+   hg log -vr $HG_NODE | mail -s "commit: $SUBJECT" "$RECIPIENT"
+fi</tt></pre>
+</div></div>
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<div class="title">Tip</div>
+</td>
+<td class="content">Also take a look at
+<a href="http://www.selenic.com/mercurial/wiki/index.cgi/CommitHook">CommitHook
+in mercurial-wiki</a>.</td>
+</tr></table>
+</div>
+<h4>3.1.6. Get notification when commiting</h4>
+<p>If you want to be notified as soon as a commit happens use the commit hook
+via .hg/hgrc of the repository:</p>
+<div class="literalblock">
+<div class="content">
+<pre><tt>[hooks]
+commit = commithook</tt></pre>
+</div></div>
+<p>whereas commithook is a script inside $PATH:</p>
+<div class="literalblock">
+<div class="content">
+<pre><tt>#!/bin/sh
+SUBJECT=`hg log -r $HG_NODE | grep "^summary:" | cut -b 14-`
+hg log -vpr $HG_NODE | mail -s "commit: $SUBJECT" commit-list@grml.org.invalid</tt></pre>
+</div></div>
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<div class="title">Tip</div>
+</td>
+<td class="content">Also take a look at
+<a href="http://www.selenic.com/mercurial/wiki/index.cgi/CommitHook">CommitHook
+in mercurial-wiki</a>.</td>
+</tr></table>
+</div>
+<h3>3.2. Configuration of mercurial</h3>
+<p>Configure the global setup of mercurial via /etc/mercurial/hgrc, see
+<a href="http://www.selenic.com/mercurial/hgrc.5.html">man 5 hgrc</a> for details.</p>
+<p>Important: please adjust the default name for commits (could be any config
+file: ~/.hgrc or repository .hg/hgrc):</p>
+<div class="literalblock">
+<div class="content">
+<pre><tt>[ui]
+username = Michael Prokop &lt;mika@grml.org&gt;</tt></pre>
+</div></div>
+<p>Put all your personal configuration stuff into the file $HOME/.hgrc.
+Example configuration file from grml:</p>
+<div class="literalblock">
+<div class="content">
+<pre><tt># Filename:      $HOME/.hgrc
+# Purpose:       configuration file for mercurial
+# Authors:       grml-team (grml.org), (c) Michael Prokop &lt;mika@grml.org&gt;
+# Bug-Reports:   see http://grml.org/bugs/
+# License:       This file is licensed under the GPL v2.
+# Latest change: Mon Okt 23 00:06:34 CEST 2006 [mika]
+################################################################################</tt></pre>
+</div></div>
+<div class="literalblock">
+<div class="content">
+<pre><tt># See 'man 5 hgrc' and http://www.selenic.com/mercurial/hgrc.5.html
+# for more details about possibilities for configuration of mercurial.</tt></pre>
+</div></div>
+<div class="literalblock">
+<div class="content">
+<pre><tt>[ui]
+username = Michael Prokop &lt;mika@grml.org&gt;
+# debug = true
+# verbose = true
+# merge = hgmergevim</tt></pre>
+</div></div>
+<div class="literalblock">
+<div class="content">
+<pre><tt># useful for patchbomb extension (e.g.: 'hg email -t grml@localhost tip')
+[email]
+from = grml User &lt;grml@localhost&gt;
+method = /usr/sbin/sendmail</tt></pre>
+</div></div>
+<div class="literalblock">
+<div class="content">
+<pre><tt># Extension stuff, see /etc/mercurial/hgrc.d/hgext.rc
+# and http://www.selenic.com/mercurial/wiki/index.cgi/ExtensionHowto</tt></pre>
+</div></div>
+<div class="literalblock">
+<div class="content">
+<pre><tt>[extensions]</tt></pre>
+</div></div>
+<div class="literalblock">
+<div class="content">
+<pre><tt># Hooks to control commit access to parts of a tree.
+# acl=/usr/share/python-support/mercurial/hgext/acl.py</tt></pre>
+</div></div>
+<div class="literalblock">
+<div class="content">
+<pre><tt># Update Bugzilla bugs when changesets mention them (&gt; 0.9-1).
+# bugzilla = /home/grml/mercurial-snapshot/hgext/bugzilla.py</tt></pre>
+</div></div>
+<div class="literalblock">
+<div class="content">
+<pre><tt># Graph amount of code changed per author over time (&gt; 0.9-1).
+# churn = /home/grml/mercurial-snapshot/contrib/churn.py
+# churn =</tt></pre>
+</div></div>
+<div class="literalblock">
+<div class="content">
+<pre><tt># Extension for using an external program to diff repository (or
+# selected files). Available in 0.9.1.
+# extdiff=/usr/share/python-support/mercurial/hgext/extdiff.py
+hgext.extdiff=</tt></pre>
+</div></div>
+<div class="literalblock">
+<div class="content">
+<pre><tt># Convenience wrapper for pulling and merging.
+# fetch =</tt></pre>
+</div></div>
+<div class="literalblock">
+<div class="content">
+<pre><tt># Extension that provides commands to help working with trees
+# composed of many Mercurial repositories. See
+# http://www.terminus.org/hg/hgforest
+# forest =</tt></pre>
+</div></div>
+<div class="literalblock">
+<div class="content">
+<pre><tt># Extension for signing and checking signatures.
+# gpg=/usr/share/python-support/mercurial/hgext/gpg.py
+# gpg=</tt></pre>
+</div></div>
+<div class="literalblock">
+<div class="content">
+<pre><tt># Extension for binary searching in O(log2(n)) for the changeset
+# introducing a (mis)feature, see
+# http://www.selenic.com/mercurial/wiki/index.cgi/UsingBisect
+# hbisect=/usr/share/python-support/mercurial/hgext/hbisect.py</tt></pre>
+</div></div>
+<div class="literalblock">
+<div class="content">
+<pre><tt># Graphical gitk-like repository browser, invoked with hg view.
+# hgk=/usr/share/python-support/mercurial/hgext/hgk.py</tt></pre>
+</div></div>
+<div class="literalblock">
+<div class="content">
+<pre><tt># Mercurial Queue management extension - see
+# http://www.selenic.com/mercurial/wiki/index.cgi/MqExtension
+# mq=/usr/share/python-support/mercurial/hgext/mq.py</tt></pre>
+</div></div>
+<div class="literalblock">
+<div class="content">
+<pre><tt># Template-driven email notifications, see
+# http://www.selenic.com/mercurial/wiki/index.cgi/NotifyExtension
+# notify=/usr/share/python-support/mercurial/hgext/notify.py
+# hgext.notify =</tt></pre>
+</div></div>
+<div class="literalblock">
+<div class="content">
+<pre><tt># Extension providing the hg email command for sending a collection of
+# Mercurial changesets as a series of patch emails.
+# patchbomb=/usr/share/python-support/mercurial/hgext/patchbomb.py</tt></pre>
+</div></div>
+<div class="literalblock">
+<div class="content">
+<pre><tt># Cherry-picking, rebasing and changeset rewriting - see
+# http://www.selenic.com/mercurial/wiki/index.cgi/TransplantExtension
+# transplant =</tt></pre>
+</div></div>
+<div class="literalblock">
+<div class="content">
+<pre><tt># Extension for line ending conversion filters for the Windows platform.
+# win32text=/usr/share/python-support/mercurial/hgext/win32text.py</tt></pre>
+</div></div>
+<div class="literalblock">
+<div class="content">
+<pre><tt>[extdiff]
+# DirDiff script for Vim: http://www.vim.org/scripts/script.php?script_id=102
+# wget http://www.vim.org/scripts/download_script.php?src_id=5306 -O ~/.vim/plugin/DirDiff.vim
+# Notice: opts.* works only in Mercurial &gt;0.9.1, use hgvimdiff as wrapper therefore
+cmd.vimdiff=/usr/bin/hgvimdiff
+# cmd.vimdiff=/usr/bin/vim.basic
+# opts.vimdiff=-f '+next' '+execute "DirDiff" argv(0) argv(1)'</tt></pre>
+</div></div>
+<div class="literalblock">
+<div class="content">
+<pre><tt># vim: ft=config</tt></pre>
+</div></div>
+<h3>3.3. Set up a new repository</h3>
+<div class="literalblock">
+<div class="content">
+<pre><tt>% cd /data/repos/hg-doc
+% hg init .
+% cat &gt; .hg/hgrc &lt;&lt; EOF
+[paths]
+default = ssh://mika@repos.grml.org//data/repos/hg-doc</tt></pre>
+</div></div>
+<div class="literalblock">
+<div class="content">
+<pre><tt>[email]
+from = repos@grml.org.invalid</tt></pre>
+</div></div>
+<div class="literalblock">
+<div class="content">
+<pre><tt>[web]
+name = hg-docu
+description = documentation of hg
+author = Michael Prokop
+EOF</tt></pre>
+</div></div>
+<div class="literalblock">
+<div class="content">
+<pre><tt>% hg add
+% hg ci -m "* initial checkin"</tt></pre>
+</div></div>
+<h3>3.4. Checkout of a repository</h3>
+<p>For developers with account:</p>
+<div class="literalblock">
+<div class="content">
+<pre><tt>% hg clone ssh://repos.grml.org//data/repos/hg-doc</tt></pre>
+</div></div>
+<p>Anonymous (without account, password,&#8230;):</p>
+<div class="literalblock">
+<div class="content">
+<pre><tt>% hg clone http://hg.grml.org/hg-doc</tt></pre>
+</div></div>
+<h3><a id="patch"></a>3.5. How to create a patch</h3>
+<p>If you do not have the repository yet download it via:</p>
+<div class="literalblock">
+<div class="content">
+<pre><tt>% hg clone http://hg.grml.org/$PACKAGENAME</tt></pre>
+</div></div>
+<p>If you already have the repository please make sure you are using the
+current version:</p>
+<div class="literalblock">
+<div class="content">
+<pre><tt>% hg pull
+% hg update</tt></pre>
+</div></div>
+<p>Now apply your changes (with the editor of you choice).
+Then commit your changes local via running:</p>
+<div class="literalblock">
+<div class="content">
+<pre><tt>% hg commit -m "short information regarding your changes"</tt></pre>
+</div></div>
+<p>Finally export the patch:</p>
+<div class="literalblock">
+<div class="content">
+<pre><tt>% hg export tip &gt; hg-doc_newfeature.patch</tt></pre>
+</div></div>
+<p>and send the hg-doc_newfeature.patch via mail to the maintainer of
+$PACKAGENAME and make sure you send a copy (CC:) to &lt;repos@grml.org.invalid&gt;.</p>
+<p>Notice: using the patchbomb extension you can send the patch via mail even faster:</p>
+<div class="literalblock">
+<div class="content">
+<pre><tt>% hg email -t repos@grml.org.invalid tip</tt></pre>
+</div></div>
+<h3><a id="mq"></a>3.6. Working with mq</h3>
+<p>Example session:</p>
+<div class="literalblock">
+<div class="content">
+<pre><tt>% hg qinit -c
+% hq qimport /raid/Grml/kernel/patches.2.6.18/[1-5]*
+% hg qpush -a
+% hg qcommit -m "initial version for 2.6.18-grml"
+% hg qpop 4310_reiser4-for-2.6.18.patch
+% hg qdel 4310_reiser4-for-2.6.18.patch
+% hg qpush -a
+% hg qcommit -m "removed 4310_reiser4-for-2.6.18.patch"
+% hg qcommit -m "qrefresh for 5002_linux-2.6.17-commandline.patch"
+% hg qpop 5002_linux-2.6.17-commandline.patch
+% cd .hg/patches/
+% hg rename 5002_linux-2.6.17-commandline.patch 5002_linux-2.6.18-commandline.patch
+% cd ../..
+% hg qdel 5002_linux-2.6.17-commandline.patch
+% echo 5002_linux-2.6.18-commandline.patch &gt;&gt; .hg/patches/series
+% hg qpush 5002_linux-2.6.18-commandline.patch
+% hg qrefresh
+% hg qcommit -m "renamed 5002_linux-2.6.17-commandline.patch into 5002_linux-2.6.18-commandline.patch"
+% hg qapp</tt></pre>
+</div></div>
+<p>Create an all-in-one patch:</p>
+<div class="literalblock">
+<div class="content">
+<pre><tt>% hg -v qapp
+35b24375c791bd4a6ab3f6266ed4c86e7db1c116:1000_2.6.18.1.patch
+dbfdc94b23e11a79557e2380113783ab40e2ea58:2500_via-irq-quirk-revert.patch
+a73fe2a1ba6744119d7c46689fbd647d29284068:4005_sky2-v1.9.patch
+55ebc8d22f4bc98c5030f0630b3009fcbd4daaeb:4010_r8169-8168.patch
+d1dfcd3b8952db725b5ac920e1ef0741ba0a9873:4105_dm-bbr.patch
+771f8dfaca97ac92349e7949a438e5221a435afd:4110_promise-pdc2037x.patch
+152b0976f9d18424139612df4f996b6b34ab89ac:4150_iteraid.patch
+e0646b22c4e6accbf11e7e69f43826b101b73f0f:4300_squashfs-3.1.patch
+16d9f8a538ccbdbff23353cf88bf24a6e3329b85:4400_speakup-20060814.patch
+d7c39ee5a2b1b4367f5d9b2b88f1de2260202be9:5000_grml-version.patch
+a900842d6ffee405cad60f94c6b5e291f513e452:5001_grml_logo.patch
+6d96a8f6a4e73e9a0a1b41cc53c6708801ab882d:5002_linux-2.6.18-commandline.patch
+% hg -v qapp | head -1
+35b24375c791bd4a6ab3f6266ed4c86e7db1c116:1000_2.6.18.1.patch
+% hg diff -r 35b24375c791bd4a6ab3f6266ed4c86e7db1c116 &gt; all-in-one
+hg diff -r 35b24375c791bd4a6ab3f6266ed4c86e7db1c116 &gt; all-in-one  5,31s user 0,30s system 99% cpu 5,638 total</tt></pre>
+</div></div>
+</div>
+<h2>4. Tips and tricks for working</h2>
+<div class="sectionbody">
+<h3>4.1. Merging</h3>
+<p>If you want to use vimdiff for merging make sure you have
+grml-mercurial-utils installed (it's available from
+<a href="http://deb.grml.org/">grml-repos</a>, if you are using grml you have it
+on your box already) and put the following line into your ~/.hgrc:</p>
+<div class="literalblock">
+<div class="content">
+<pre><tt>[ui]
+merge = hgmergevim</tt></pre>
+</div></div>
+<p>You can also define your own command for merging. Very useful is
+<a href="http://www.vim.org/scripts/script.php?script_id=102">the DirDiff script
+for Vim</a>. Add the following lines to your ~/.hgrc:</p>
+<div class="literalblock">
+<div class="content">
+<pre><tt>[extdiff]
+# wget http://www.vim.org/scripts/download_script.php?src_id=5306 -O ~/.vim/plugin/DirDiff.vim
+# Notice: opts.* works only in Mercurial &gt;0.9.1, use hgvimdiff as wrapper therefore
+cmd.vimdiff=/usr/bin/hgvimdiff
+# cmd.vimdiff=/usr/bin/vim.basic
+# opts.vimdiff=-f '+next' '+execute "DirDiff" argv(0) argv(1)'</tt></pre>
+</div></div>
+<p>Now you can run for example <em>hg vimdiff -r2 -r4</em> for running Vim in DirDiff
+mode for displaying the changes between revision 2 and 4.</p>
+<h3>4.2. Repository stuff</h3>
+<p>If you do not want to type the target everytime you push to the central
+adjust the repository config (.hg/hgrc):</p>
+<div class="literalblock">
+<div class="content">
+<pre><tt>[paths]
+default-push = ssh://repos.grml.org//data/repos/package</tt></pre>
+</div></div>
+<p>If you dont want to write the source everytime you make a pull adjust
+the repository config (.hg/hgrc):</p>
+<div class="literalblock">
+<div class="content">
+<pre><tt>[paths]
+default = /home/grml/work/projects/package</tt></pre>
+</div></div>
+<p>If you want to be able to use <em>hg clone ssh://repos.grml.org/hg/hg-doc</em>
+for cloning the repository instead of <em>ssh://repos.grml.org//data/repos/hg-doc</em>
+just create a symlink on your box:</p>
+<div class="literalblock">
+<div class="content">
+<pre><tt>% ln -s /data/repos ~/hg</tt></pre>
+</div></div>
+<h3>4.3. Recursive mercurial commands</h3>
+<p>If you have multiple repositories inside a single directory you should be
+aware of hgr for running mercurial commands recursive.</p>
+<p>For example run:</p>
+<div class="literalblock">
+<div class="content">
+<pre><tt>% cd ~/grml/hg &amp;&amp; hgr status</tt></pre>
+</div></div>
+<p>to get the status of all the repositories inside ~/grml/hg.</p>
+<p>Run:</p>
+<div class="literalblock">
+<div class="content">
+<pre><tt>% cd ~/grml/hg &amp;&amp; hgr in</tt></pre>
+</div></div>
+<p>to show all new changesets found in source directories of all the
+repositories.</p>
+<div class="sidebarblock">
+<div class="sidebar-content">
+<p>Notice: hgr is part of the Debian package grml-mercurial-utils. Mare sure
+you have it installed (it's available from
+<a href="http://deb.grml.org/">grml-repos</a>, if you are using grml you have it
+on your box already but please make sure you are using a recent version).</p>
+</div></div>
+<h3>4.4. Set up zsh completion for mercurial</h3>
+<p>grml 0.9 will provide zsh completion for mercurial out-of-the-box. Read on to know
+what has been done to provide this feature.</p>
+<p>Create a directory /etc/zsh/site-functions, adjust $FPATH via
+/etc/zsh/zshrc and copy file to appropriate location:</p>
+<div class="literalblock">
+<div class="content">
+<pre><tt># mkdir /etc/zsh/site-functions
+# [ -d /etc/zsh/site-functions ] &amp;&amp; export FPATH=/etc/zsh/site-functions:$FPATH
+# zcat /usr/share/doc/mercurial/examples/zsh_completion.gz &gt; /etc/zsh/site-functions/_hg</tt></pre>
+</div></div>
+<h3>4.5. Install current mercurial snapshot in $HOME</h3>
+<p>Make sure you have python2.4-dev, gcc and libc6-dev on your system, then run:</p>
+<div class="literalblock">
+<div class="content">
+<pre><tt>% wget http://www.selenic.com/mercurial/mercurial-snapshot.tar.gz
+% unp mercurial-snapshot.tar.gz
+% cd mercurial-snapshot
+% make install-home-bin</tt></pre>
+</div></div>
+<p>and finally make sure you have the following PATH set:</p>
+<div class="literalblock">
+<div class="content">
+<pre><tt>% export PYTHONPATH=${HOME}/lib/python
+% export PATH=${HOME}/bin:$PATH</tt></pre>
+</div></div>
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<div class="title">Tip</div>
+</td>
+<td class="content">Take a look at the zsh functions gethgclone (get latest hg version via
+hg itself) and gethgsnap (get latest mercurial-snapshot.tar.gz) in
+/etc/skel/.zshrc (becoming $HOME/.zshrc) on grml.</td>
+</tr></table>
+</div>
+<h3>4.6. Install current mercurial version</h3>
+<p>Upgrading mercurial might be interesting for you if you are runing hgweb so
+you can use some brand new features. It is very simple and easy to keep it up2date.</p>
+<p>Make sure you have python2.4-dev, gcc and libc6-dev on your system, then run:</p>
+<div class="literalblock">
+<div class="content">
+<pre><tt>% cd /data
+% hg clone http://selenic.com/repo/hg mercurial
+% cd mercurial
+% make local</tt></pre>
+</div></div>
+<p>Then insert/adjust <em>sys.path.insert(0, "/data/mercurial")</em> in hgwebdir.cgi.
+That's it!</p>
+<h3>4.7. Import patches from mails</h3>
+<p>Just run <em>hg import -</em>. If you are using mutt[-ng] the following snippet
+might be interesting for your ~/.mutt[ng]rc:</p>
+<div class="literalblock">
+<div class="content">
+<pre><tt>macro pager ,i "|hg import --cwd hg/repos/hg-doc -" "hg import hg/repos/hg-doc"</tt></pre>
+</div></div>
+<h3>4.8. Static URLs for files via hgweb</h3>
+<p>Using mercurial version &gt;0.9.1 provides very handy, static URLs. Examples:</p>
+<ul>
+<li>
+<p>
+<a href="http://hg.grml.org/grml-autoconfig/file/tip/autoconfig">http://hg.grml.org/grml-autoconfig/file/tip/autoconfig</a>
+</p>
+</li>
+<li>
+<p>
+<a href="http://hg.grml.org/grml-autoconfig/raw-file/tip/autoconfig">http://hg.grml.org/grml-autoconfig/raw-file/tip/autoconfig</a>
+</p>
+</li>
+<li>
+<p>
+<a href="http://hg.grml.org/grml-autoconfig/rss-log/tip/autoconfig">http://hg.grml.org/grml-autoconfig/rss-log/tip/autoconfig</a>
+</p>
+</li>
+</ul>
+<h3>4.9. Serve your own repositories for LAN access</h3>
+<p>You want to share you local repositories temporary so other people (for
+example in your LAN) can access it as well?</p>
+<div class="literalblock">
+<div class="content">
+<pre><tt>% hg serve</tt></pre>
+</div></div>
+<p>That's it. You can even serve your repositories via hgweb, just run:</p>
+<div class="literalblock">
+<div class="content">
+<pre><tt>% cat &gt; hgwebconfig &lt;&lt; EOF
+[paths]
+demorepos = /tmp/demorepos</tt></pre>
+</div></div>
+<div class="literalblock">
+<div class="content">
+<pre><tt>[web]
+style=gitweb
+% hg serve -d --webdir-conf hgwebconfig</tt></pre>
+</div></div>
+<h3>4.10. Speed up ssh access to repository</h3>
+<p>Since OpenSSH 4.0 a feature called ControlMaster is available.
+Activate ControlMaster through your ssh config:</p>
+<div class="literalblock">
+<div class="content">
+<pre><tt>% cat &gt;&gt; ~/.ssh/config &lt;&lt; EOF
+Host *
+ControlMaster auto
+ControlPath ~/.ssh/master-%r@%h:%p
+EOF</tt></pre>
+</div></div>
+<p>Make sure you have an open connection to the server, then commands like <em>hg
+push</em> will happen much faster.</p>
+<h3>4.11. Avoid typing of ssh key passphrase</h3>
+<p>You can either use ssh-agent:</p>
+<div class="literalblock">
+<div class="content">
+<pre><tt>% eval $(ssh-agent) &amp;&amp; ssh-add</tt></pre>
+</div></div>
+<p>or use keychain instead:</p>
+<div class="literalblock">
+<div class="content">
+<pre><tt>% cat ~/.zlogin
+if [[ -x =keychain ]] ; then
+  eval $(keychain --nocolor --quiet --agents ssh --eval ~/.ssh/id_rsa)
+fi</tt></pre>
+</div></div>
+<h3>4.12. Tips for debugging mercurial</h3>
+<p>Problems with mercurial you can't explain at all, even though you read the
+docs? :-)</p>
+<p>Take a look at mercurial's global options:</p>
+<div class="literalblock">
+<div class="content">
+<pre><tt>-v --verbose         enable additional output
+   --debug           enable debugging output
+   --debugger        start debugger</tt></pre>
+</div></div>
+<p>Using strace might help as well, run something like:</p>
+<div class="literalblock">
+<div class="content">
+<pre><tt>% strace -f -eopen hg status</tt></pre>
+</div></div>
+<p>A hardcore variant is using pydb, an enhanced Python command-line
+debugger:</p>
+<div class="literalblock">
+<div class="content">
+<pre><tt>% pydb -X =hg status</tt></pre>
+</div></div>
+</div>
+<h2>5. Todo - Checkout</h2>
+<div class="sectionbody">
+<ul>
+<li>
+<p>
+find a way for <em>hg log &#8212;style=changelog</em> to provide release based verbose, full changelogs [based on tags?]
+</p>
+</li>
+<li>
+<p>
+extend hg-buildpackage
+</p>
+</li>
+<li>
+<p>
+/usr/share/python-support/mercurial/hgext/hbisect.py
+</p>
+</li>
+<li>
+<p>
+/usr/share/doc/mercurial/examples/vim/patchreview.vim.gz
+</p>
+</li>
+</ul>
+</div>
+<h2>6. Ressources</h2>
+<div class="sectionbody">
+<h3>6.1. English</h3>
+<ul>
+<li>
+<p>
+<a href="http://www.selenic.com/mercurial/wiki/index.cgi">Mercurial Homepage</a>
+</p>
+</li>
+<li>
+<p>
+<a href="http://www.red-bean.com/~bos/hgbook.pdf">Distributed revision control with Mercurial</a>
+</p>
+</li>
+<li>
+<p>
+<a href="http://www.selenic.com/mercurial/wiki/index.cgi/SharedSSH">SharedSSH</a>
+</p>
+</li>
+<li>
+<p>
+<a href="http://www.selenic.com/mercurial/wiki/index.cgi/MultipleCommitters">How To Handle Multiple Committers</a>
+</p>
+</li>
+<li>
+<p>
+<a href="http://www.selenic.com/mercurial/wiki/index.cgi/HgWebDirStepByStep">HgWebDirStepByStep</a>
+</p>
+</li>
+<li>
+<p>
+<a href="http://www.selenic.com/mercurial/wiki/index.cgi/PublishingRepositories">Publishing Repositories</a>
+</p>
+</li>
+<li>
+<p>
+<a href="http://www.ivy.fr/mercurial/ref/v1.0/">Mercurial Reference Card</a>
+</p>
+</li>
+</ul>
+<h3>6.2. German</h3>
+<ul>
+<li>
+<p>
+<a href="http://intevation.de/~thomas/mercurial-lt2006/">Mercurial Distributed SCM - Die verteilte Alternative zu CVS</a>
+</p>
+</li>
+</ul>
+</div>
+<h2>7. About this document</h2>
+<div class="sectionbody">
+<p>(c) Michael Prokop &lt;mika@grml.org&gt;; HTML version powered by <a href="http://www.methods.co.nz/asciidoc/">asciidoc</a>.</p>
+</div>
+<div id="footer">
+<div id="footer-text">
+Last updated 25-Nov-2007 20:10:21 CEST
+</div>
+</div>
+</body>
+</html>

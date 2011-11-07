@@ -1,0 +1,5 @@
+Release 0.1-small available.
+
+grml 0.1-small - Codename Zugschlus <a
+href="http://grml.org/download/">available</a>.  For details take a look at <a
+href="http://grml.org/files/README-0.1-small.txt">the release announcement</a>.

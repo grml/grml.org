@@ -1,0 +1,163 @@
+<html>
+<head>
+<title>raid</title>
+<link rel="stylesheet" href="http://michael-prokop.at/style.css" type="text/css" />
+</head>
+
+<body>
+
+<h1>RAID with Linux</h1>
+
+<h2>'Real' Hardware RAID</h2>
+
+<h3>3ware controller</h3>
+
+<p><a href="http://www.3ware.com/">3ware</a> controllers are supported in Vanilla
+kernel since 'ages'. A command line interface namend <a
+href="http://www.panduck.com/media/tw_cli.8.html">tw_cli</a> is available on <a
+href="http://www.3ware.com/support/download.asp">the download webpage at
+3ware.com</a>. A webinterface (providing remote access) is available through the
+debian-unofficial.org-project:
+
+<pre class="rahmen">
+deb     http://ftp.debian-unofficial.org/debian sarge main contrib non-free restricted
+deb-src http://ftp.debian-unofficial.org/debian sarge main contrib non-free restricted</pre>
+
+There are two packages available: 3ware-3dm2-new-binary (for 3ware 9550SX) and
+3ware-3dm2-old-binary (for 3ware 700x, 750x, 800x, 850x, 900xS, 950xS).
+3ware-3dm2-old-binary is included in <a href="http://grml.org/">grml</a>.
+
+<h3>ICP Vortex</h3>
+
+<p><a href="http://www.icp-vortex.com/">ICP Vortex</a> should work as well and
+provides <a
+href="http://www.vortex.de/german/download/rz_neu/linux/linux_d.htm">linux
+drivers</a> as well, but I've no experience in using them yet...</p>
+
+<h2>'Fake' Hardware RAID</h2>
+
+<p>That's stuff like Intel ICHx, VIA, Silicon, Adaptec and Promise RAID. Accessing
+such a RAID is possible with kernel 2.6 using <a
+href="http://sources.redhat.com/dm/">device mapper ('DM')</a> and <a
+href="http://people.redhat.com/~heinzm/sw/dmraid/">dmraid</a> (both provided by <a
+href="http://grml.org/">grml</a>) [kernel 2.4 requires ataraid].</p>
+
+<h2>Linux Software RAID</h2>
+
+<p>Important: there's a lot of documentation hanging around, describing how to use
+software raid with raidtools2. raidtools2 is not maintained by its upstream
+developers anymore and has been replaced by the package mdadm.  The last debian
+package version of raidtools2 shipping the binaries is 1.00.3-17 (available on <a
+href="http://grml.org/">grml</a>), afterwards it's just a dummy package with
+dependency on mdadm.</p>
+
+<p>Things to take care of:</p>
+
+<ul>
+  <li>don't take RAID as a backup</li>
+  <li>test the setup (remove disk, restore,...) before going productive</li>
+  <li>use every disk on its own bus if possible</li>
+</ul>
+
+<h3>Installing grml using grml2hd on a bootable SW-RAID ('/' on RAID)</h3>
+
+<pre class="rahmen">
+cfdisk /dev/hda                   # select type FD (Linux raid autodetect)
+cfdisk /dev/hdc                   # select type FD (Linux raid autodetect)
+mdadm --create --verbose /dev/md0 --level=raid1 --raid-devices=2 /dev/hda1 /dev/hdc1 # create raid
+mdadm --detail /dev/md0           # show details of raid system
+cat /proc/mdstat                  # now wait until raid sync has finished (otherwise performance sucks)
+SWRAID='mbr-only' grml2hd /dev/md0 --mbr /dev/md0   # install grml to raid
+cat /proc/mdstat                  # again wait until raid sync has finished
+</pre>
+
+<!--
+<p>To be able to boot your system now you have to make sure that lilo is installed on
+the first partition - in this case /dev/hda1.  Therefore stop /dev/md0 running 'mdadm
+--manage --stop /dev/md0' and run lilo with the following /etc/lilo.conf (just the
+relevant part of it):</p>
+
+<pre class="rahmen">
+boot=/dev/hda1 # maybe even with 'bios=0x80'? not yet sure if needed
+root=/dev/md0</pre>
+
+<p>Now reboot into your harddisk installation. Important: if the first partition (in
+this case /dev/hda) is removed lilo won't boot anymore. Therefore we have to rerun
+lilo setting the following options in /etc/lilo.conf:</p>
+
+<pre class="rahmen">
+boot=/dev/md0
+root=/dev/md0
+raid-extra-boot=/dev/hda,/dev/hdc</pre>
+
+<p>That's it.</p>
+-->
+
+<h3>Often needed commands</h3>
+
+<pre class="rahmen">
+mdadm --detail /dev/md0                        # show details of raid system
+cat /proc/mdstat                               # details of mdstat
+mdadm --fail /dev/md0 /dev/hdc1                # mark disk as faulty
+mdadm -r /dev/md0 /dev/hdc1                    # remove disk from array
+mdadm -a /dev/md0 /dev/hdc1                    # integrate disk into array
+mdadm --manage --stop /dev/md0                 # stop multidevice
+mdadm --assemble /dev/md0 /dev/sda1 /dev/sdb1  # start multidevice</pre>
+
+<h3>Links</h3>
+
+<h4>German</h4>
+<a href="http://glt05.linuxtage.at/slides/sw-raid.pdf">Jimmys slides from GLT05 talk: sw-raid.pdf</a><br />
+
+<h4>English</h4>
+<a href="http://www.linux-magazine.com/issue/33/Software_RAID.pdf">www.linux-magazine.com/issue/33/Software_RAID.pdf</a><br />
+<a href="http://www.gentoo.org/doc/en/gentoo-x86-tipsntricks.xml#software-raid">http://www.gentoo.org/doc/en/gentoo-x86-tipsntricks.xml#software-raid</a><br />
+<a href="http://tldp.org/HOWTO/Software-RAID-HOWTO.html">http://tldp.org/HOWTO/Software-RAID-HOWTO.html</a><br />
+<a href="http://www.devil-linux.org/documentation/1.0.x/ch01s05.html">http://www.devil-linux.org/documentation/1.0.x/ch01s05.html</a><br />
+<a href="http://lca2005.linux.org.au/Papers/Theodore%20Ts'o/Recovering%20from%20Hard%20Drive%20Disasters/slides.pdf">http://lca2005.linux.org.au/Papers/Theodore%20Ts'o/Recovering%20from%20Hard%20Drive%20Disasters/slides.pdf</a><br />
+<a href="http://www.midhgard.it/docs/lvm/Root-on-LVM-on-RAID-HOWTO.pdf">http://www.midhgard.it/docs/lvm/Root-on-LVM-on-RAID-HOWTO.pdf</a><br />
+<a href="http://www.fsugar.be/docu/fs-lvm-md.pdf">http://www.fsugar.be/docu/fs-lvm-md.pdf</a><br />
+<a href="http://oxygen.chem.nthu.edu.tw/~jsyu/linux/debk26.pdf">http://oxygen.chem.nthu.edu.tw/~jsyu/linux/debk26.pdf</a><br />
+<a href="http://datadisk.co.uk/doc/software_raid.pdf">http://datadisk.co.uk/doc/software_raid.pdf</a><br />
+<a href="http://www.ibiblio.org/pub/Linux/docs/HOWTO/other-formats/pdf/Software-RAID-HOWTO.pdf">http://www.ibiblio.org/pub/Linux/docs/HOWTO/other-formats/pdf/Software-RAID-HOWTO.pdf</a><br />
+
+<h2>Windows Software RAID</h2>
+
+<p>Notice: if you have any chance to boot Windows for accessing the SW-RAID this
+methode should be prefered. If you can't boot anymore try to boot with a Windows
+Live-CD (using <a href="http://www.nu2.nu/pebuilder/">BartPE</a>).  The command line
+tool <a href="http://support.microsoft.com/kb/300415/EN-US/">diskpart</a> is very
+useful (start using it via 'select disk $NUMBER', 'detail disk', 'list disk', 'list
+volume',...).</p>
+
+<h3>Links</h3>
+
+<h4>German</h4>
+<a href="http://support.microsoft.com/default.aspx?scid=kb;DE;q175761">Vergleich von
+dynamischem Speicher und Basisspeicher in Windows 2000 und Windows XP</a><br />
+
+<h4>English</h4>
+<a href="http://support.microsoft.com/kb/314343/EN-US/">Basic Storage Versus Dynamic
+Storage in Windows XP</a><br />
+<a
+href="http://www.microsoft.com/resources/documentation/windows/xp/all/proddocs/en-us/diskpart.mspx">DiskPart
+@ WinXP documentation</a><br />
+
+<h2>Terms</h2>
+
+<ul>
+  <li><a href="http://sources.redhat.com/dm/">device-mapper</a>: component of the
+  linux kernel that supports logical volume management (that's the main logical volume manager)
+  <li><a href="http://sources.redhat.com/dm/">dmsetup</a>: userspace configuration tool for device-mapper, (let's you) create(s) a device out of a partition, raid,...
+  <li><a href="http://people.redhat.com/~heinzm/sw/dmraid/">dmraid</a>: based upon device-mapper, searches for 'fake' raids
+  <li><a href="http://www.saout.de/misc/">dm-crypt and cryptsetup</a>: encryption target of device-mapper, doing block-level encryption using device-mapper
+  <li><a href="http://sources.redhat.com/lvm2/">lvm2</a>: logical volume management
+  (found in linux 2.6 kernels)
+  <li>lvm: old, original lvm (found in linux 2.4 kernels)
+  <li><a href="http://evms.sourceforge.net/">evms</a>: Enterprise Volume Management System, handling Software-RAID and logical
+  volume groups
+  <li><a href="http://christophe.varoqui.free.fr/wiki/wakka.php?wiki=Home">multipath-tools</a>:
+</ul>
+
+</body>
+</html>

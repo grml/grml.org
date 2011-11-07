@@ -1,0 +1,15 @@
+grml on linuxdays graz and vienna 2006
+
+<p>On 20th of may several grml developers attended <a href="http://linuxtage.at/">the
+grazer linuxdays</a>. Mika held <a href="http://linuxtage.at/63/">a lecture about
+grml</a>. Read <a
+href="http://grml.supersized.org/archives/160-grml-on-linuxdays-graz.html">the report
+in the grml develblog</a>.</p>
+
+<p>From 31st of may until 2nd june the <a href="http://www.linuxwochen.at/">linuxdays
+in vienna</a> took place.  Mika once more held <a
+href="http://linuxwochen.at/2006/Programm_Wien:_grml_-_Linux_Live-CD_f%C3%BCr_Sysadmins_und_Geeks">a
+talk about grml</a> including a short feature demo of the <a
+href="http://grml.org/zsh/">Zsh</a>.  Read <a
+href="http://grml.supersized.org/archives/162-grml-on-linuxdays-vienna-2006.html">the
+report in the grml develblog</a>.</p>

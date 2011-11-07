@@ -1,0 +1,6 @@
+Release 0.7 available.
+
+grml 0.7 - Codename Bootenschnitzl <a href="http://grml.org/download/">available</a>.
+
+The new release brings 48 new packages and many new features.
+For details take a look at <a href="http://grml.org/files/README-0.7.php">the release announcement</a>.

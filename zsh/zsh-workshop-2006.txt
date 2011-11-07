@@ -1,0 +1,37 @@
+% cat > zsh-workshop.txt << EOF
+
+Was:       Zsh-Workshop
+Wann:      Dienstag, 28. November 2006, 20 Uhr [OpenEnd]
+Wo:        Medienkunstlabor (Lendkai 1, 8020 Graz)
+Wer:       Michael Prokop [mika (at) grml.org]
+Eintritt:  Frei
+
+Details zum Workshop:
+
+Zsh? "Zsh is a shell designed for interactive use, although it is
+also a powerful scripting language."       -- http://www.zsh.org/
+
+Einführung in das Arbeiten mit der Zsh:
+
+- Warum eigentlich die Zsh und nicht $ANDERE_SHELL?
+- Was muss man kennen? [Poweruser!]
+- Wie legt man am Besten los?
+
+Das Arbeiten mit der Zsh wird anhand der Konfiguration von grml
+(Linux Live-CD für Sysadmins und Texttool-User - http://grml.org/)
+durchgeführt. Die Konfigurationsdateien (auch auf nicht-Debian-Systemen
+nutzbar) werden beim Workshop via Web zur Verfügung gestellt.
+grml-CDs werden beim Workshop ebenfalls zur Verfügung gestellt.
+
+Mitzubringen:
+
+- gute Laune, Motivation und ~3h Zeit
+- eigener Laptop ist definitiv von Vorteil
+- Schreibsachen für ev. Offline-Notizen schaden nicht
+
+Erwünschte Vorkenntnisse:
+
+- grundlegende Shellkenntnisse (cd, ls,...)
+- keinerlei Vorwissen bezüglich Zsh erforderlich
+
+EOF

@@ -1,0 +1,38 @@
+
+cat << EOF
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+   "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-15">
+      <link rel="stylesheet" type="text/css" href="$PREFIX/css_template.css">
+      <title>$TITLE</title>
+   </head>
+   
+<body bgcolor="$BGCOLOR">
+
+<div style="
+   border-left:1pt #ffffff solid;
+   border-top:1pt #ffffff solid;
+   border-bottom:1pt #000000 solid;
+   margin:0pt;
+   padding:0pt;
+   "><div style="
+      border-right:1pt #000000 solid;
+      border-bottom:1pt #8c8ea5 solid;
+      background: #d6d3de;
+      margin:0pt;
+      padding:0pt;
+      ">
+<table cellspacing="0" cellpadding="1" width="100%" border="0">
+   <tr valign="middle" bgcolor="#d6d3de">
+
+      <td align="left" width="10%"> 
+         <a href="http://www.ronsc.de/iimage/iimage">iimage</a> $VERSION
+      </td>
+      <td width="40%">
+         <b>$TITLE </b> $THIS_IMAGE
+      </td>
+      <td align=right>
+EOF
+

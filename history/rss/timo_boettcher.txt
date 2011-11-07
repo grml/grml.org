@@ -1,0 +1,3 @@
+New team member.
+
+Timo Boettcher joined <a href="/team/">the grml-team</a>.

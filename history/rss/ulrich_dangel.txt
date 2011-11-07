@@ -1,0 +1,3 @@
+New team member.
+
+Ulrich Dangel joined <a href="/team/">the grml-team</a>.

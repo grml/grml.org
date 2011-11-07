@@ -1,0 +1,4 @@
+grml2hd screenshot gallery
+
+<p>A <a href="http://grml.org/grml2hd/gallery/">screenshot gallery
+showing details of the grml2hd process is available online</a>.</p>

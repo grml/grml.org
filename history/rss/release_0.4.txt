@@ -1,0 +1,6 @@
+Release 0.4 available.
+
+grml 0.4 - Codename Eierspass <a href="http://grml.org/download/">available</a>.
+
+The new release brings 192 new packages and many new features.
+For details take a look at <a href="http://grml.org/files/README-0.4.txt">the release announcement</a>.

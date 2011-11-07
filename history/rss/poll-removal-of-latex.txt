@@ -1,0 +1,3 @@
+Poll: Removal of LaTeX on grml
+
+The grml team wants to collect feedback regarding the option to remove LaTeX from grml. Please <a href="http://doodle.com/3dnzvhv43tmhpcpn">participate in the poll</a>!

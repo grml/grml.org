@@ -1,0 +1,117 @@
+Setup of grml-live build system
+-------------------------------
+
+The build system is a Debian/etch system (inside VMware) installed via grml-debootstrap.
+
+Installation of software
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+Add grml and FAI repository to Debian package list:
+
+  cat >> /etc/apt/sources.list << EOF
+  deb http://deb.grml.org/ grml-stable  main
+  deb http://deb.grml.org/ grml-testing main
+
+  deb http://fai-project.org/download etch koeln
+  EOF
+
+Pin down grml repository so only the packages manually chosen for installation
+are taken from it:
+
+  cat >> /etc/apt/preferences << EOF
+  Package: *
+  Pin: origin deb.grml.org
+  Pin-Priority: 100
+  EOF
+
+Install working squashfs-tools:
+
+  apt-get update
+  apt-get install squashfs-lzma-tools
+
+[NOTE]
+Depending on which grml version your are remastering make sure to use the right
+squashfs tools, please make sure to check out
+link:http://grml.org/grml-live/#current_state[http://grml.org/grml-live/#current_state]!
+
+Install grml-live and additional software for comfortable console work:
+
+  apt-get install zsh grml-live mercurial gpm asciidoc
+
+  mkdir ~/bin && cd ~/bin
+  wget http://grml.org/scripts/grml-config.sh
+  chmod 775 grml-config.sh
+  cd && ~/bin/grml-config.sh
+
+Configuration of custom ISO
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Copy grml-live templates:
+
+  cp -a /usr/share/grml-live/templates ~/
+
+Now we can adjust configuration
+link:isolinux.cfg[templates/boot/isolinux/isolinux.cfg] according to our needs
+(like get "forensic" and "lang=de" bootoptions by default).
+
+Prepare local configuration (adjust it according to your personal needs):
+
+  cat > /etc/grml/grml-live.local << EOF
+  # Main output directory
+  OUTPUT="/grml/grml-live"
+  #ZERO_LOGFILE='1'
+  #ZERO_FAI_LOGFILE='1'
+
+  #GRML_LIVE_SOURCES="
+  #deb http://192.168.1.112/debian     lenny         main contrib non-free
+  #deb http://deb.grml.org/            grml-stable  main
+  #deb http://deb.grml.org/            grml-testing main
+  #deb http://ftp.de.debian.org/debian lenny         main contrib non-free
+  #"
+
+  # FAI_DEBOOTSTRAP="lenny http://ftp.de.debian.org/debian"
+  EOF
+
+Create FORENSIC grml-live/FAI class with package list:
+
+  cat >> /etc/grml/fai/config/package_config/FORENSIC << EOF
+  PACKAGES aptitude
+
+  afflib
+  autopsy
+  foremost
+  libewf
+  scalpel
+  sleuthkit
+  EOF
+
+Create FORENSIC script for grml-live/FAI:
+
+  mkdir /etc/grml/fai/config/scripts/FORENSIC
+
+  cat > /etc/grml/fai/config/scripts/FORENSIC/01-create-forensic-dir << EOF
+  #!/bin/sh
+  # Filename:      /etc/grml/fai/config/scripts/FORENSIC/01-create-forensic-dir
+  # Purpose:       create directory "/forensic" in chroot
+  # Authors:       grml-team (grml.org), (c) Michael Prokop <mika@grml.org>
+  # Bug-Reports:   see http://grml.org/bugs/
+  # License:       This file is licensed under the GPL v2 or any later version.
+  # Latest change: Sat Mar 22 00:27:58 CET 2008
+  ################################################################################
+
+  set -e
+
+  [ -d "$target"/forensic ] || mkdir "$target"/forensic
+
+  ## END OF FILE #################################################################
+  # vim:ft=sh expandtab ai tw=80 tabstop=4 shiftwidth=3
+  EOF
+
+  chmod 775 /etc/grml/fai/config/scripts/FORENSIC/01-create-forensic-dir
+
+Build ISO
+~~~~~~~~~
+
+Execute grml-live as root to build ISO in /grml/grml-live/grml_isos:
+
+  grml-live -s lenny -a i386 -c GRMLBASE,GRML_MEDIUM,FORENSIC,I386 -t ~/templates -V

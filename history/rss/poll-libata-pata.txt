@@ -1,0 +1,3 @@
+Poll: PATA vs. LIBAT
+
+The GRML Team wants to collect feedback regarding the recent switch from PATA to LIBATA. Please <a href="http://doodle.com/vr75tpe4a2p6mwvt">participate in the poll</a>!

@@ -1,0 +1,232 @@
+<!doctype linuxdoc system>
+<article>
+
+<!--
+docbook info - http://www.ibiblio.org/pub/Linux/docs/HOWTO/Howtos-with-LinuxDoc
+
+  <bf>boldface font</bf>   <em>emphasis font</em>     <sf>sans serif</sf>
+  <sl>slanted font</sl>    <tt>typewriter font</tt>   <it>italics font</it>
+  <sect> Links <label id="links_">
+  <sect1> Cross-References
+  <p> If you click on <ref id="links_" name="Links">
+  <tscreen><verb>
+  % sgml2txt -f example.sgml
+  </verb></tscreen>
+  <tscreen><code>
+  Put computer source code here
+  </code></tscreen>
+  <sect1> Newline
+  <p> To force a newline use <newline>
+  This sentence always starts at the left margin.
+  <itemize>
+  <item> This is the first item in a list.
+  <item> This is the second item
+         <itemize>
+         <item> Multiple levels (nesting) are supported.
+         <item> The second item in this sublist
+         </itemize>
+         <enum>
+         <item> Enumerated lists using <tt/enum/ also work.
+         <item> This is item number 2
+         </enum>
+  <item> The final item in the main list
+  </itemize>  
+  <sect> Chapter 1            Note: Put a <p> on the first line of
+  <sect1> Subsection 1.1      each section (or subsection, etc.)
+  <sect1> Subsection 1.2
+  <sect> Chapter 2            Choose title names to replace "Chapter"
+  <sect1> Subsection 2.1      "Subsection", etc.
+  <sect2> Sub-subsection 2.1.1
+  <sect2> Sub-subsection 2.1.2
+  <sect1> Subsection 2.2
+  ·  Use &amp; for the ampersand (&),
+  ·  Use &lt; for a left bracket (<),
+  ·  Use &gt; for a right bracket (>),
+  ·  Use &etago; for a left bracket with a slash (</)
+  ·  Use &dollar; for a dollar sign ($),
+  ·  Use &num; for a hash (#),
+  ·  Use &percnt; for a percent (%),
+  ·  Use &tilde; for a tilde (~),
+  ·  Use &dquot; for ".
+-->
+
+<title>grml - config-framework</title>
+<author><url url="http://grml.org/team/" name="grml team / Michael Prokop"></author>
+<date>
+Thu Jul 21 14:39:32 CEST 2005
+</date>
+
+<abstract>
+Documentation of
+<url url="http://grml.org/config/" name="the grml config-framework">.
+Created with Vim and sgml2html (debian package linuxdoc-tools).
+
+<!-- The "toc" = Table of Contents. -->
+<toc>
+
+<sect>Introduction
+<p>
+
+With the config-framework it is possible to save the configuration of a running
+grml system and restore it again. save-config is a script to create the
+configuration file(s) and store it on a specific place. It's possible to
+use save-config interactive (useful for beginners) and non-interactive
+(useful for experts and automatization). restore-config is a script to
+restore the configuration via using the stored configuration-file.
+Several bootoptions provide additional features. Whileas the framework
+might look complicate it's very powerful and as soon as you are used to
+the options you will find it very easy and comfortabel to use it. Just
+take a look at the available options and read through the section
+<ref id="usage_scenario" name="Usage Scenarios">.
+
+<sect>Scripts
+
+<sect1>save-config - save configuration
+<p>
+Calling the script 'save-config' without any further options will start
+the script in interactive mode. No further options can be set/are
+supported on the command line to avoid problems with environment.
+
+If any of the following options are provided on command line, save-config
+will run in non-interactive mode. The following options are supported
+for specifying which parts should be saved in the configuration file:
+
+<tscreen><code>
+ -etc               =>    save directory /etc
+ -home              =>    save hidden files in $HOME (that's: '.*')
+ -configdir         =>    save directory $HOME/config
+ -system            =>    save unionfs-snapshot (complete system state)
+ -all               =>    save /etc, $HOME/.*, $HOME/config and unionfs-snapshot
+</code></tscreen>
+
+The following options are supported for specifying destination of
+configuration file(s):
+
+<tscreen><code>
+ -local                                 =>    save directory /etc
+ -mail user@example.com                 =>    save hidden files in $HOME (that's: '.*')
+ -ssh [user@]remotehost:/path/to/file/  =>    ssh/scp configuration
+ -sda                                   =>    mount /dev/sda and store configuration there
+ -sda1                                  =>    mount /dev/sda1 and store configuration there
+ -floppy                                =>    mount /dev/fd0 and store configuration there
+ -manual /dev/ice                       =>    mount /device and store configuration there
+</code></tscreen>
+
+The name of the configuration files must start with
+grml_{etc|home|configdir|system|all}_ and end with .tbz so restoring is
+possible as (FEHLERFREI) as possible. By default the middlepart will be
+namend as the current date (for example '20050722') but you can define
+the middlepart manually by using the following option:
+
+<tscreen><code>
+ -filename foobar    =>    take foobar as identifier for filename
+</code></tscreen>
+
+Example: 'save-config -all -filename foobar' will create a configuration
+file named 'grml_all_foobar.tbz'.
+
+<sect1>restore-config - restore configuration
+<p>
+It is not only possible to restore a configuration via bootoptions but
+also via a script namend 'restore-config'. This script exists to restore
+a specific configuration saved via 'save-config'. By default
+restore-config will search for any files in current directory namend
+grml_{etc|home|configdir|system|all}_ and end with .tbz. If there are
+several files available you will be prompted to choose a specific one.
+The following options are available to fetch the configuration from a
+specific destination:
+
+<tscreen><code>
+ http://example.com/path/to/grml_all_foobar.tbz  =>    download file grml_all_foobar.tbz and use it for restoring configuration
+ ftp://example.com/path/to/grml_all_foobar.tbz   =>    download file grml_all_foobar.tbz and use it for restoring configuration
+ ssh://[user@]host:/path/to/grml_all_foobar.tbz  =>    get file via grml_all_foobar.tbz via ssh/scp and use it for restoring configuration
+</code></tscreen>
+
+Example: 'restore-config ssh://mika@grml.org/conf/grml_all_foobar.tbz'
+will download the file via scp/ssh and restore configuration saved in
+file grml_all_foobar.tbz. 'restore-config grml_all_foobar'tbz' will
+restore configuration via file grml_all_foobar.tbz located in current
+directory.
+
+<sect1>mkpersistenthome - use persistent home-directory
+<p>
+You have a local partition you would like to use as your home-directory?
+Just use the interactive script called 'mkpersistenthome'. It will
+create a file namend .grml_homedirectory on the specified partition so
+it is possible to scan through the partitions to identify the
+appropriate partition. To use the home-directory when booting grml
+specify the appropriate bootoption on bootprompt:
+
+<tscreen><code>
+ home=/dev/hda3    =>   use /dev/hda3 as the homepartition
+ home=scan         =>   scan through the available partitions and search
+                        for file .grml_homedirectory
+</code></tscreen>
+
+<sect>Boot-Options
+<p>
+The following bootoptions are supported. Use them at the bootprompt as
+documented here.
+
+<descrip>
+
+<!--
+<tag/lcfg/ If this option is set, ....
+<tscreen><code>
+ home=/dev/hda3    =>   use /dev/hda3 as the homepartition
+ home=scan         =>   scan through the available partitions and search
+                        for file .grml_homedirectory
+</code></tscreen>
+-->
+
+<tag/ocfg=grml.org&sol;config&sol;grml_all_foobar.tbz/ If this option is set,
+the file will be downloaded via wget from the specified destination.
+Tip: Use 'onlineconfig' as reminder for the option.
+
+<tag/cfg/ This option is for restoring configuration from a local file.
+
+<tscreen><code>
+ home=/dev/hda3    =>   use /dev/hda3 as the homepartition
+ home=scan         =>   scan through the available partitions and search
+                        for file .grml_homedirectory
+</code></tscreen>
+
+<tag/home/ If this option is set, ....
+
+<tscreen><code>
+ home=/dev/hda3    =>   use /dev/hda3 as the homepartition
+ home=scan         =>   scan through the available partitions and search
+                        for file .grml_homedirectory
+</code></tscreen>
+
+<tag/scripts/ If this option is set, ....
+
+<tscreen><code>
+ home=/dev/hda3    =>   use /dev/hda3 as the homepartition
+ home=scan         =>   scan through the available partitions and search
+                        for file .grml_homedirectory
+</code></tscreen>
+
+<tag/config/ If this option is set, ....
+
+<tscreen><code>
+ home=/dev/hda3    =>   use /dev/hda3 as the homepartition
+ home=scan         =>   scan through the available partitions and search
+                        for file .grml_homedirectory
+</code></tscreen>
+
+<tag/debs/ If this option is set, ....
+
+<tscreen><code>
+ home=/dev/hda3    =>   use /dev/hda3 as the homepartition
+ home=scan         =>   scan through the available partitions and search
+                        for file .grml_homedirectory
+</code></tscreen>
+
+</descrip>
+
+<sect>Usage Scenarios <label id="usage_scenario">
+<p>
+foo
+
+</article>

@@ -1,0 +1,6 @@
+grml zsh reference card
+
+Julius Plenz wrote a reference card for the zsh configuration of grml. 
+Download the <a href="http://grml.org/zsh/grml-zsh-refcard.pdf">PDF-file</a>, print
+it and improve your zsh-skills! More details available at <a
+href="http://grml.org/zsh/#grmlzshrefcard">grml.org/zsh/</a>.

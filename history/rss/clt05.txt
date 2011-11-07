@@ -1,0 +1,7 @@
+grml developers at Chemnitzer Linux-Tage 2005
+
+grml 0.3 will be released till the end of this week.  Today (friday) several grml developers are going to arrive at Chemnitzer Linux-Tage 2005 (CLT05) [in Germany]: <a href="http://chemnitzer.linux-tage.de/2005/info/"> http://chemnitzer.linux-tage.de/2005/info/</a>
+
+Of course we will have a developers-meeting there. :-)
+
+Mika will present grml 0.3 in <a href="http://chemnitzer.linux-tage.de/2005/vortraege/detail.html?idx=26"> his talk on sunday at CLT05</a>.

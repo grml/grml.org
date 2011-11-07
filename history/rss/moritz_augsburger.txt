@@ -1,0 +1,3 @@
+New team member.
+
+Moritz Augsburger joined <a href="/team/">the grml-team</a>.

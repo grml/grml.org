@@ -1,0 +1,18 @@
+INSTALL:
+
+Simply become root and download grml2hd. 
+"wget http://dynamic.g-tec.co.at/grml2hd/grml2hd-0.2.1/grml2hd
+
+Execute "chmod u+x grml2hd" to make the script executable. Now start
+grml2hd as usual, but don't forget to append the correct path, otherwise
+the old grml2hd script will be executed, e.g.
+./grml2hd /dev/sda11
+
+VERSION NUMBERS:
+
+grml-0.2 release includes grml-0.1 installer. We changed the versioning
+scheme, so that the first digits are now the same as the release number
+of the grml-CD. This means: grml2hd-0.2.x updates are only for grml-0.2
+CDs, grml2hd-0.3.x are for grml-0.3, and so on.
+
+Enjoy, Jimmy

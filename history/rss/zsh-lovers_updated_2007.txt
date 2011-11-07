@@ -1,0 +1,3 @@
+update of zsh-lovers - in asciidoc format
+
+Thanks to Christian '<a href="http://strcat.de/">strcat</a>' Schneider we have the zsh-lovers manpage in asciidoc format now. <a href="http://www.methods.co.nz/asciidoc/">asciidoc</a> provides very smooth output in different formats. Get the zsh-lovers manpage in manpage format, as HTML or PDF from <a href="http://grml.org/zsh/#zshlovers">grml.org/zsh/</a>, a Debian package is available via the <a href="http://deb.grml.org/">grml-testing pool</a> as well of course.

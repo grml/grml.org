@@ -1,0 +1,3 @@
+Grml - new stable releases available: grml/grml-medium/grml-small and grml64/grml64-medium/grml64-small version 2011.05
+
+<p>Grml 2011.05 with codename Just Mari, available in flavours grml, grml-medium and grml-small and all of them as 32bit and 64bit version has been released. The official release announcements providing all the relevant news are available at <a href="http://grml.org/changelogs/README-grml-2011.05/">grml.org/changelogs/README-grml-2011.05</a>. Issues regarding the releases can be found in <a href="http://wiki.grml.org/">the grml-wiki</a>. Grab the ISOs from the mirrors listed at <a href="http://grml.org/download/">grml.org/download/</a>.</p>

@@ -1,0 +1,5 @@
+grml in the german LinuxUser magazine 07/2007
+
+The <a href="http://www.linux-user.de/ausgabe/2007/07">media edition 07/2007 of the german LinuxUser magazine</a> contains a DVD and a CD providing grml 1.0, grml64 0.1 and grml-small 0.4! It's a great chance to get different versions of grml on one medium.
+
+You will also find <a href="http://www.linux-user.de/ausgabe/2007/07/902-dvd-grml/index.html">an article about grml</a> inside the magazine, so get your own copy!

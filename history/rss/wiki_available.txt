@@ -1,0 +1,3 @@
+Wiki available.
+
+See <a href="http://wiki.grml.org/">wiki.grml.org/</a> for details.

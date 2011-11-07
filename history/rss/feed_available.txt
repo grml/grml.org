@@ -1,0 +1,3 @@
+Welcome to the rss-feed of grml.
+
+Currently we are working on a first official release of grml.  Stay tuned. We expect a first release for end of september/begin of october 2004.

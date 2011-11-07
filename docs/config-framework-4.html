@@ -1,0 +1,105 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+ <META NAME="GENERATOR" CONTENT="LinuxDoc-Tools 0.9.21">
+ <TITLE>grml - config-framework: Scripts</TITLE>
+ <LINK HREF="config-framework-5.html" REL=next>
+ <LINK HREF="config-framework-3.html" REL=previous>
+ <LINK HREF="config-framework.html#toc4" REL=contents>
+</HEAD>
+<BODY>
+<A HREF="config-framework-5.html">Next</A>
+<A HREF="config-framework-3.html">Previous</A>
+<A HREF="config-framework.html#toc4">Contents</A>
+<HR>
+<H2><A NAME="s4">4.</A> <A HREF="config-framework.html#toc4">Scripts</A></H2>
+
+<H2><A NAME="ss4.1">4.1</A> <A HREF="config-framework.html#toc4.1">save-config - save configuration</A>
+</H2>
+
+
+<P>Calling the script 'save-config' without any further options will start
+the script in interactive mode. If any of the following options are
+provided on command line, save-config will run in non-interactive mode.
+The following options are supported for specifying which parts should be
+saved in the configuration file:</P>
+<P>
+<BLOCKQUOTE><CODE>
+<HR>
+<PRE>
+ -home              =>    save modified hidden files in $HOME (that's: '.*')
+ -etc               =>    save modified files from directory /etc
+ -configdir         =>    save complete directory $HOME/config
+ -all               =>    save /etc, $HOME/.*, $HOME/config and unionfs-snapshot
+</PRE>
+<HR>
+</CODE></BLOCKQUOTE>
+</P>
+<P>By default the configuration file will be generated and stored in the
+current directory. The following options are supported for specifying
+another destination of the configuration file:</P>
+<P>
+<BLOCKQUOTE><CODE>
+<HR>
+<PRE>
+ -file foo_bar_config.tbz               =>    save configuration in specified file
+ -mail user@example.com                 =>    send configuration via e-mail
+ -ssh [user@]remotehost:/path/to/file/  =>    ssh/scp configuration
+</PRE>
+<HR>
+</CODE></BLOCKQUOTE>
+</P>
+
+<H2><A NAME="ss4.2">4.2</A> <A HREF="config-framework.html#toc4.2">restore-config - restore configuration</A>
+</H2>
+
+
+<P>It is not only possible to restore a configuration 
+<A HREF="config-framework-5.html#bootoptions">via bootoptions</A> but also via a script namend 'restore-config'.
+This script exists to restore a specific configuration saved via
+'save-config'. Just specify the name of the archive which should be
+extracted as argument to restore-config.</P>
+<P>
+<BLOCKQUOTE><CODE>
+<HR>
+<PRE>
+ -home              =>    extract only /home
+ -etc               =>    extract only /etc
+ -configdir         =>    extract only $HOME/config
+</PRE>
+<HR>
+</CODE></BLOCKQUOTE>
+</P>
+<P>Usage examples: 'restore-config config.tbz' restores config.tbz.
+'restore-config -etc foobar.tbz' restores only /etc from configuration
+archive foobar.tbz.</P>
+
+<H2><A NAME="ss4.3">4.3</A> <A HREF="config-framework.html#toc4.3">mkpersistenthome - use persistent home-directory</A>
+</H2>
+
+
+<P>You have a local partition you would like to use as your home-directory?
+Just use the interactive script called 'mkpersistenthome'. It will
+either create a file namend grml.img on the specified partition or
+create a ext2-partition. grml.img is a loopback device, you can specify
+its size manually. it is possible to scan through the partitions to
+identify the appropriate partition. To use the home-directory when
+booting grml specify the appropriate bootoption on bootprompt:</P>
+<P>
+<BLOCKQUOTE><CODE>
+<HR>
+<PRE>
+ home=/dev/hda3    =>   use /dev/hda3 as the homepartition
+ home=scan         =>   scan through the available partitions and search
+                        for file grml.img
+</PRE>
+<HR>
+</CODE></BLOCKQUOTE>
+</P>
+
+<HR>
+<A HREF="config-framework-5.html">Next</A>
+<A HREF="config-framework-3.html">Previous</A>
+<A HREF="config-framework.html#toc4">Contents</A>
+</BODY>
+</HTML>

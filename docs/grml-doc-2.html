@@ -1,0 +1,72 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+ <META NAME="GENERATOR" CONTENT="LinuxDoc-Tools 0.9.21">
+ <TITLE>grml - Linux for system administrators and texttool users: grml tasks</TITLE>
+ <LINK HREF="grml-doc-3.html" REL=next>
+ <LINK HREF="grml-doc-1.html" REL=previous>
+ <LINK HREF="grml-doc.html#toc2" REL=contents>
+</HEAD>
+<BODY>
+<A HREF="grml-doc-3.html">Next</A>
+<A HREF="grml-doc-1.html">Previous</A>
+<A HREF="grml-doc.html#toc2">Contents</A>
+<HR>
+<H2><A NAME="s2">2.</A> <A HREF="grml-doc.html#toc2">grml tasks</A></H2>
+
+<H2><A NAME="ss2.1">2.1</A> <A HREF="grml-doc.html#toc2.1">grml and the X window system</A>
+</H2>
+
+<P>Use grml-x name_of_windowmanager to start X with your prefered
+windowmanager. For example:</P>
+<P>
+<BLOCKQUOTE><CODE>
+<HR>
+<PRE>
+grml-x wmi
+</PRE>
+<HR>
+</CODE></BLOCKQUOTE>
+</P>
+<P>will start up the Xserver using the windowmanager WMI.  Other
+windowmanagers provided by the grml-system can be listed via pressing the
+tab-key after entering 'grml-x' in the commandline (using the
+zsh-completition).</P>
+<P>
+<BLOCKQUOTE><CODE>
+<HR>
+<PRE>
+grml-x fluxbox -- :8
+</PRE>
+<HR>
+</CODE></BLOCKQUOTE>
+</P>
+<P>will start another Xserver using the windowmanager fluxbox on tty8.</P>
+
+<H2><A NAME="ss2.2">2.2</A> <A HREF="grml-doc.html#toc2.2">grml-utilities</A>
+</H2>
+
+<H2><A NAME="ss2.3">2.3</A> <A HREF="grml-doc.html#toc2.3">set up a swap file</A>
+</H2>
+
+<P>You might want to add a swapfile because you need more space in the
+ramdisk.</P>
+<P>
+<BLOCKQUOTE><CODE>
+<HR>
+<PRE>
+mount /mnt/hda1 # the partition you want to use as a swap file, adjust it!
+dd if=/dev/zero of=/mnt/hda1/swapfile bs=1024 count=524288 # for a 512MiB swap file
+mkswap /mnt/hda1/swapfile
+swapon -a
+</PRE>
+<HR>
+</CODE></BLOCKQUOTE>
+</P>
+
+<HR>
+<A HREF="grml-doc-3.html">Next</A>
+<A HREF="grml-doc-1.html">Previous</A>
+<A HREF="grml-doc.html#toc2">Contents</A>
+</BODY>
+</HTML>

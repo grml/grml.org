@@ -1,0 +1,3 @@
+Grml User Survey 2011
+
+As a result of our Grml developer meeting (see <a href="http://grml.org/reports/devmeeting_2010/">meeting minutes</a> for details) we created a user survey to get more information about our users and their needs. Please <a href="http://grml.org/survey2011">take part in our survey</a> and help us to improve and enhance Grml!

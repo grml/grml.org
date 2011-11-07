@@ -1,0 +1,7 @@
+RewriteEngine on
+RewriteRule grml_netboot_package_grml64_2011.05.tar.bz2$ http://mirror.netcologne.de/grml/netboot/grml_netboot_package_grml64_2011.05.tar.bz2
+RewriteRule grml_netboot_package_grml64_2011.05.tar.bz2.md5$ http://mirror.netcologne.de/grml/netboot/grml_netboot_package_grml64_2011.05.tar.bz2.md5
+RewriteRule grml_netboot_package_grml64_2011.05.tar.bz2.sha1.asc$ http://mirror.netcologne.de/grml/netboot/grml_netboot_package_grml64_2011.05.tar.bz2.sha1.asc
+RewriteRule grml_netboot_package_grml_2011.05.tar.bz2$ http://mirror.netcologne.de/grml/netboot/grml_netboot_package_grml_2011.05.tar.bz2
+RewriteRule grml_netboot_package_grml_2011.05.tar.bz2.md5$ http://mirror.netcologne.de/grml/netboot/grml_netboot_package_grml_2011.05.tar.bz2.md5
+RewriteRule grml_netboot_package_grml_2011.05.tar.bz2.sha1.asc$ http://mirror.netcologne.de/grml/netboot/grml_netboot_package_grml_2011.05.tar.bz2.sha1.asc

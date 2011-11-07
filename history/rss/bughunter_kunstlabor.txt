@@ -1,0 +1,3 @@
+Release 0.09
+
+Presentation of grml 0.09 Codename Bughunter at <a href="http://dufo.tugraz.at/~prokop/kunstlabor/">Kunstlabor in Graz</a>.

@@ -1,0 +1,686 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+    "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="generator" content="AsciiDoc 7.1.2" />
+<style type="text/css">
+/* Debug borders */
+p, li, dt, dd, div, pre, h1, h2, h3, h4, h5, h6 {
+/*
+  border: 1px solid red;
+*/
+}
+
+body {
+  margin: 1em 5% 1em 5%;
+}
+
+a {
+  color: blue;
+  text-decoration: underline;
+}
+a:visited {
+  color: fuchsia;
+}
+
+em {
+  font-style: italic;
+}
+
+strong {
+  font-weight: bold;
+}
+
+tt {
+  color: navy;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #527bbd;
+  font-family: sans-serif;
+  margin-top: 1.2em;
+  margin-bottom: 0.5em;
+  line-height: 1.3;
+}
+
+h1 {
+  border-bottom: 2px solid silver;
+}
+h2 {
+  border-bottom: 2px solid silver;
+  padding-top: 0.5em;
+}
+
+div.sectionbody {
+  font-family: serif;
+  margin-left: 0;
+}
+
+hr {
+  border: 1px solid silver;
+}
+
+p {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+pre {
+  padding: 0;
+  margin: 0;
+}
+
+span#author {
+  color: #527bbd;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+span#email {
+}
+span#revision {
+  font-family: sans-serif;
+}
+
+div#footer {
+  font-family: sans-serif;
+  font-size: small;
+  border-top: 2px solid silver;
+  padding-top: 0.5em;
+  margin-top: 4.0em;
+}
+div#footer-text {
+  float: left;
+  padding-bottom: 0.5em;
+}
+div#footer-badges {
+  float: right;
+  padding-bottom: 0.5em;
+}
+
+div#preamble,
+div.tableblock, div.imageblock, div.exampleblock, div.verseblock,
+div.quoteblock, div.literalblock, div.listingblock, div.sidebarblock,
+div.admonitionblock {
+  margin-right: 10%;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+}
+div.admonitionblock {
+  margin-top: 2.5em;
+  margin-bottom: 2.5em;
+}
+
+div.content { /* Block element content. */
+  padding: 0;
+}
+
+/* Block element titles. */
+div.title, caption.title {
+  font-family: sans-serif;
+  font-weight: bold;
+  text-align: left;
+  margin-top: 1.0em;
+  margin-bottom: 0.5em;
+}
+div.title + * {
+  margin-top: 0;
+}
+
+td div.title:first-child {
+  margin-top: 0.0em;
+}
+div.content div.title:first-child {
+  margin-top: 0.0em;
+}
+div.content + div.title {
+  margin-top: 0.0em;
+}
+
+div.sidebarblock > div.content {
+  background: #ffffee;
+  border: 1px solid silver;
+  padding: 0.5em;
+}
+
+div.listingblock > div.content {
+  border: 1px solid silver;
+  background: #f4f4f4;
+  padding: 0.5em;
+}
+
+div.quoteblock > div.content {
+  padding-left: 2.0em;
+}
+
+div.attribution {
+  text-align: right;
+}
+div.verseblock + div.attribution {
+  text-align: left;
+}
+
+div.admonitionblock .icon {
+  vertical-align: top;
+  font-size: 1.1em;
+  font-weight: bold;
+  text-decoration: underline;
+  color: #527bbd;
+  padding-right: 0.5em;
+}
+div.admonitionblock td.content {
+  padding-left: 0.5em;
+  border-left: 2px solid silver;
+}
+
+div.exampleblock > div.content {
+  border-left: 2px solid silver;
+  padding: 0.5em;
+}
+
+div.verseblock div.content {
+  white-space: pre;
+}
+
+div.imageblock div.content { padding-left: 0; }
+div.imageblock img { border: 1px solid silver; }
+span.image img { border-style: none; }
+
+dl {
+  margin-top: 0.8em;
+  margin-bottom: 0.8em;
+}
+dt {
+  margin-top: 0.5em;
+  margin-bottom: 0;
+  font-style: italic;
+}
+dd > *:first-child {
+  margin-top: 0;
+}
+
+ul, ol {
+    list-style-position: outside;
+}
+ol.olist2 {
+  list-style-type: lower-alpha;
+}
+
+div.tableblock > table {
+  border: 3px solid #527bbd;
+}
+thead {
+  font-family: sans-serif;
+  font-weight: bold;
+}
+tfoot {
+  font-weight: bold;
+}
+
+div.hlist {
+  margin-top: 0.8em;
+  margin-bottom: 0.8em;
+}
+td.hlist1 {
+  vertical-align: top;
+  font-style: italic;
+  padding-right: 0.8em;
+}
+td.hlist2 {
+  vertical-align: top;
+}
+
+@media print {
+  div#footer-badges { display: none; }
+}
+/* Workarounds for IE6's broken and incomplete CSS2. */
+
+div.sidebar-content {
+  background: #ffffee;
+  border: 1px solid silver;
+  padding: 0.5em;
+}
+div.sidebar-title, div.image-title {
+  font-family: sans-serif;
+  font-weight: bold;
+  margin-top: 0.0em;
+  margin-bottom: 0.5em;
+}
+
+div.listingblock div.content {
+  border: 1px solid silver;
+  background: #f4f4f4;
+  padding: 0.5em;
+}
+
+div.quoteblock-content {
+  padding-left: 2.0em;
+}
+
+div.exampleblock-content {
+  border-left: 2px solid silver;
+  padding-left: 0.5em;
+}
+</style>
+<title>grml-debootstrap(8)</title>
+</head>
+<body>
+<div id="header">
+<h1>grml-debootstrap(8)</h1>
+</div>
+<h2>Name</h2>
+<div class="sectionbody">
+<p>grml-debootstrap - wrapper around debootstrap for installing plain Debian via grml</p>
+</div>
+<h2>Synopsis</h2>
+<div class="sectionbody">
+<p>grml-debootstrap [ _options_ ]</p>
+<p><span class="image">
+<img src="images/screenshot.png" alt="Screenshot" title="Screenshot"/>
+</span></p>
+</div>
+<h2>Introduction</h2>
+<div class="sectionbody">
+<p>grml-debootstrap is a wrapper suite around debootstrap
+(and cdebootstrap if you want) for installing a plain Debian
+system via grml very fast and easy.</p>
+<p>All you have to do is adjust a few variables in configuration file
+/etc/debootstrap/config (or specify some variables via commandline) and invoke
+grml-debootstrap without any further options then.</p>
+<p>A plain and base Debian system will be installed on the given
+device (or directory) then. Customization of this process is
+possible as well.</p>
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<img src="./images/icons/caution.png" alt="Caution" />
+</td>
+<td class="content">The grml team does not take responsibility for loss of any data!</td>
+</tr></table>
+</div>
+</div>
+<h2>Options and environment variables</h2>
+<div class="sectionbody">
+<dl>
+<dt>
+<strong>-h</strong>, <strong>&#8212;help</strong>
+</dt>
+<dd>
+<p>
+    Show summary of options and exit.
+</p>
+</dd>
+<dt>
+<strong>-v</strong>, <strong>&#8212;version</strong>
+</dt>
+<dd>
+<p>
+    Show version of program and exit.
+</p>
+</dd>
+<dt>
+<strong>&#8212;grub</strong> &lt;_device_&gt;
+</dt>
+<dd>
+<p>
+    Where do you want to install grub to? Use grub syntax for specifying.
+    Do not forget to set groot as well. Leave empty to avoid installation of grub.
+</p>
+</dd>
+<dt>
+<strong>&#8212;groot</strong> &lt;_device_&gt;
+</dt>
+<dd>
+<p>
+    Specify root device for usage in grub (corresponds with $TARGET).
+    Again, use grub syntax for specifying.
+    Corresponding with configuration variable GROOT.
+</p>
+</dd>
+<dt>
+<strong>&#8212;boot_append</strong> &lt;_appendline for the kernel_&gt;
+</dt>
+<dd>
+<p>
+    Specify appendline for the kernel.
+    E.g. "_pci=nomsi_"
+</p>
+</dd>
+<dt>
+<strong>-m</strong>, <strong>&#8212;mirror</strong> &lt;_URL_&gt;
+</dt>
+<dd>
+<p>
+    Specify mirror which should be used for apt-get/aptitude. Notice that
+    specifying the mirror also sets the chrootmirror to the given value.
+    Corresponding with configuration variables MIRROR and CHROOTMIRROR.
+</p>
+</dd>
+<dt>
+<strong>-i</strong>, <strong>&#8212;iso</strong> &lt;_/mntpoint_&gt;
+</dt>
+<dd>
+<p>
+    Specify mountpoint where you have a Debian ISO mounted loopback.
+    Using this option instead of the mirror option gives you the possibility
+    to install the base-system without network access. Make sure you
+    mounted the according Debian-ISO to the given &lt;_/mntpoint_&gt;. See section
+    <em>Usage examples</em> for a demonstration.
+</p>
+</dd>
+<dt>
+<strong>-p</strong>, <strong>&#8212;mntpoint</strong> &lt;_/mntpoint_&gt;
+</dt>
+<dd>
+<p>
+    Specify mountpoint that should be used for mounting the target system.
+    Corresponding with configuration variable MNTPOINT.
+</p>
+</dd>
+<dt>
+<strong>&#8212;password</strong> &lt;_password_&gt;
+</dt>
+<dd>
+<p>
+    Use specified password as password for user root. Use with caution, as your
+    commandline might be visible in the process list and the shell history.
+    It's meant for automatic installation only.
+</p>
+</dd>
+<dt>
+<strong>-r</strong>, <strong>&#8212;release</strong> &lt;_releasename_&gt;
+</dt>
+<dd>
+<p>
+    Specify release of new Debian system. Supported releases: sarge, etch, lenny and sid.
+    Corresponding with configuration variable RELEASE.
+</p>
+</dd>
+<dt>
+<strong>-t</strong>, <strong>&#8212;target</strong> &lt;_target_&gt;
+</dt>
+<dd>
+<p>
+    Target partition (/dev/&#8230;) or directory (anything else without /dev at the
+    beginning).
+</p>
+</dd>
+</dl>
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<img src="./images/icons/warning.png" alt="Warning" />
+</td>
+<td class="content">the commandline parsing of grml-debootstrap does not validate the provided
+arguments for the commandline options. Please be careful and check docs and
+/etc/debootstrap/config for further information.</td>
+</tr></table>
+</div>
+</div>
+<h2>Usage examples</h2>
+<div class="sectionbody">
+<div class="literalblock">
+<div class="content">
+<pre><tt>grml-debootstrap --target /dev/hda1 --grub hd0 --groot hd0,0</tt></pre>
+</div></div>
+<p>Install default Debian release (stable/etch) on /dev/hda1 and install bootmanager
+Grub in MBR (master boot record) of /dev/hda and use /dev/hda1 as system partition.</p>
+<div class="literalblock">
+<div class="content">
+<pre><tt>grml-debootstrap --target /dev/hda6 --grub hd0 --groot hd0,5 --release sid</tt></pre>
+</div></div>
+<p>Install Debian unstable/sid on /dev/hda6, install bootmanager
+Grub in MBR (master boot record) of /dev/hda and use /dev/hda6 as system partition.</p>
+<div class="literalblock">
+<div class="content">
+<pre><tt>grml-debootstrap --target /data/chroot</tt></pre>
+</div></div>
+<p>Install default Debian release (stable/etch) in directory /data/chroot (without
+any bootloader).</p>
+<div class="literalblock">
+<div class="content">
+<pre><tt>grml-debootstrap --target /dev/sda3 --grub hd0 --groot hd0,2 --mirror ftp://ftp.tugraz.at/mirror/debian</tt></pre>
+</div></div>
+<p>Install default Debian release (stable/etch) on /dev/sda3 and install bootmanager
+Grub in MBR (master boot record) of /dev/sda and use /dev/sda3 as system partition.
+Use specified mirror instead of the default (ftp://ftp.debian.de/debian) one.</p>
+<div class="literalblock">
+<div class="content">
+<pre><tt>mount -o loop /mnt/hda6/debian-40r0-i386-CD-1.iso /mnt/iso
+grml-debootstrap --target /dev/hda1 --grub hd0 --groot hd0,0 --iso file:/mnt/iso/debian/</tt></pre>
+</div></div>
+<p>Install Debian stable/etch on /dev/hda1 using the loopback mounted Debian-ISO
+for the base-system and install bootmanager Grub in MBR (master boot record) of
+/dev/hda and use /dev/hda1 as system partition. Please notice, that the chroot
+system requires network access for all packages which are not part of the
+ISO.</p>
+</div>
+<h2>Files</h2>
+<div class="sectionbody">
+<div class="literalblock">
+<div class="content">
+<pre><tt>/etc/debootstrap/config</tt></pre>
+</div></div>
+<p>Main configuration file. You have to adjust it according to your needs
+before you are able to run grml-debootstrap.</p>
+<div class="literalblock">
+<div class="content">
+<pre><tt>/etc/debootstrap/chroot-script</tt></pre>
+</div></div>
+<p>The script executed within the new Debian system as soon as the main system
+has been installed via [c]debootstrap.</p>
+<div class="literalblock">
+<div class="content">
+<pre><tt>/etc/debootstrap/locale.gen</tt></pre>
+</div></div>
+<p>Defines the default locales used for generating locales via locale-gen.</p>
+<div class="literalblock">
+<div class="content">
+<pre><tt>/etc/debootstrap/packages</tt></pre>
+</div></div>
+<p>Defines the software packages which should be installed in the new
+Debian system by default.</p>
+<div class="literalblock">
+<div class="content">
+<pre><tt>/etc/debootstrap/extrapackages</tt></pre>
+</div></div>
+<p>Debian Packages dropped here will be installed into the new Debian system by
+default (Controlvariable: EXTRAPACKAGES)</p>
+<div class="literalblock">
+<div class="content">
+<pre><tt>/etc/debootstrap/stages/</tt></pre>
+</div></div>
+<p>The default directory for storing information about executed stages. Every
+single function of grml-debootstrap will write <em>done</em> to the stages directory
+into a file named as the function itself if it has been executed successfully.
+You can adjust the location of the directory via configuration variable STAGES
+via /etc/debootstrap/config.  Please notice that you have to remove the stages
+directory on your own if you want to re-execute grml-debootstrap after running it
+successfully once. This should avoid recurrent execution by error of
+grml-debootstrap (which might delete present data).</p>
+</div>
+<h2>Customization</h2>
+<div class="sectionbody">
+<p>You can control execution of grml-debootstrap via adjusting
+/etc/debootstrap/config for some main stuff or via setting some selected
+variables via commandline.  The packages which should be installed in the new
+Debian system can be defined via the file /etc/debootstrap/packages.  If you
+want to put existing files to the new Debian system you can place them into the
+(by default non-existing) directories boot, etc, share, usr and var in
+/etc/debootstrap/. Every existing directory will be copied to the new Debian
+system then. If you want to install additional packages that are not available
+via the grml or debian mirror drop them into /etc/debootstrap/extrapackages and
+take sure that EXTRAPACKAGES is set to "yes".</p>
+</div>
+<h2>Automatic installation</h2>
+<div class="sectionbody">
+<p>If environment variable AUTOINSTALL is set grml-debootstrap can be executed in a
+full automatic mode. While this mode isn't really useful for interactive
+execution (just configure /etc/debootstrap/configure or specify the relevant
+variables on the commandline instead) it is meant for use via bootoption
+debian2hd. The bootoption debian2hd (more precise: the kernelname on bootprompt)
+supports the following bootoptions (they correspond with the commandline options
+mentioned above):</p>
+<div class="literalblock">
+<div class="content">
+<pre><tt>target=...</tt></pre>
+</div></div>
+<p>The target partition/directory of the new Debian system. Usage example:
+target=/dev/hda1</p>
+<div class="literalblock">
+<div class="content">
+<pre><tt>grub=...</tt></pre>
+</div></div>
+<p>Where do you want to install grub to? Use grub syntax for specifying.
+Usage example: grub=hd0</p>
+<div class="literalblock">
+<div class="content">
+<pre><tt>groot=...</tt></pre>
+</div></div>
+<p>Specify root device for usage in grub (corresponds with $TARGET).
+Again, use grub syntax for specifying. Usage example: groot=hd0,0</p>
+<div class="literalblock">
+<div class="content">
+<pre><tt>release=...</tt></pre>
+</div></div>
+<p>Specify release of new Debian system. Defaults to Debian stable.
+Supported relases: sarge, etch, lenny and sid. Usage example: release=sid</p>
+<div class="literalblock">
+<div class="content">
+<pre><tt>mirror=...</tt></pre>
+</div></div>
+<p>Specify mirror which should be used for apt-get/aptitude instead
+of the default one (ftp://ftp.debian.de/debian).
+Usage example: mirror=ftp://ftp.tugraz.at/mirror/debian</p>
+<div class="literalblock">
+<div class="content">
+<pre><tt>password=...</tt></pre>
+</div></div>
+<p>Set password of user root without prompting for it but set it to the given
+argument. Usage example: password=AiTh5ahn</p>
+<h3>Usage example for automatic installation:</h3>
+<div class="literalblock">
+<div class="content">
+<pre><tt>debian2hd target=/dev/hda1 grub=hd0 groot=hd0,0 mirror=ftp://ftp.tugraz.at/mirror/debian password=foobar</tt></pre>
+</div></div>
+<p>You have to enter this commandline at the bootprompt of grml. Please make sure
+that /dev/hda1 is the partition where you really want to install your new Debian
+system.</p>
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<img src="./images/icons/note.png" alt="Note" />
+</td>
+<td class="content">Automatic installation within booting process is done in grml-autoconfig via
+setting environment variable AUTOINSTALL and creation of
+/usr/bin/grml-debootstrap_noninteractive with the available and relevant
+bootoptions for grml-debootstrap.</td>
+</tr></table>
+</div>
+</div>
+<h2>Supported Releases</h2>
+<div class="sectionbody">
+<div class="tableblock">
+<table rules="all"
+frame="hsides"
+cellspacing="0" cellpadding="4">
+<caption class="title">Table: Current status</caption>
+<col width="114" />
+<col width="205" />
+<col width="182" />
+<thead>
+  <tr>
+    <th align="right">
+    Release /
+    </th>
+    <th align="center">
+    Tool  debootstrap
+    </th>
+    <th align="center">
+    cdebootstrap
+    </th>
+  </tr>
+</thead>
+<tbody valign="top">
+  <tr>
+    <td align="right">
+    Sarge
+    </td>
+    <td align="center">
+    works[1]
+    </td>
+    <td align="center">
+    works[1]
+    </td>
+  </tr>
+  <tr>
+    <td align="right">
+    Etch
+    </td>
+    <td align="center">
+    works
+    </td>
+    <td align="center">
+    works
+    </td>
+  </tr>
+  <tr>
+    <td align="right">
+    Lenny
+    </td>
+    <td align="center">
+    works
+    </td>
+    <td align="center">
+    works
+    </td>
+  </tr>
+  <tr>
+    <td align="right">
+    Sid
+    </td>
+    <td align="center">
+    works
+    </td>
+    <td align="center">
+    works
+    </td>
+  </tr>
+</tbody>
+</table>
+</div>
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<img src="./images/icons/note.png" alt="Note" />
+</td>
+<td class="content">
+<div class="title">Sarge-Release</div>
+<p>[1] Please notice that Sarge is the current old-stable within Debian.
+grml-debootstrap can handle the release but you really should not
+use Sarge anymore unless you really know what you are doing. Choose
+Etch instead.</p>
+</td>
+</tr></table>
+</div>
+</div>
+<h2>Bugs</h2>
+<div class="sectionbody">
+<p>Probably. Please send bugreports to Michael Prokop &lt;mika@grml.org&gt;.</p>
+</div>
+<h2>See also</h2>
+<div class="sectionbody">
+<p>debootstrap (8), cdebootstrap (1).</p>
+</div>
+<h2>Author</h2>
+<div class="sectionbody">
+<p>Michael Prokop &lt;mika@grml.org&gt;</p>
+</div>
+<div id="footer">
+<div id="footer-text">
+Last updated 25-Oct-2007 04:31:34 CEST
+</div>
+</div>
+</body>
+</html>

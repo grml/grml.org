@@ -1,0 +1,5 @@
+Grml 0.8 - release candidate 1 available.
+
+grml 0.8 - <a
+href="http://grml.supersized.org/archives/173-grml-0.8-release-candidate-1-available.html">release
+candidate 1 available</a>.

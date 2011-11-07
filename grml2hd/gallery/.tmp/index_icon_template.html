@@ -1,0 +1,37 @@
+
+cat << EOF
+
+<td valign="bottom" align="center" width="200" height="220">
+
+<br>
+<span class="small">$DESCRIPTION</font>
+
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+   <td width="170" height="170" bgcolor="#dddddd" align="center" valign="middle">
+   <a href="$THIS_IMAGE"><img alt="Icon" src="$DATADIR/$ITEM_ICON" ></a>
+   </td>
+</tr>
+<tr>
+   <td bgcolor="#dddddd" align="center" valign="middle">
+   $EXTRA_SMALL_ICON
+   <font size="-2" color="#bbbbbb">$THIS_IMAGE_DATE</font></td>
+</tr>
+<tr>
+   <td align="center" bgcolor="#F7F7F7" class="smallgray">
+   $THIS_IMAGE<br>
+   ($THIS_IMAGE_BYTE kb)
+
+`
+if [ "$IIMAGE_SPECIAL" = "true" ] ; then
+   echo -e "<?  if (IIMAGE_WRAPPER==1) isort_wrapper_ref(\"$THIS_IMAGE\"); ?>"
+fi
+`
+
+   </td>
+</tr></table>
+
+</td>
+
+EOF
+

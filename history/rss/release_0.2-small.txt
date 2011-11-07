@@ -1,0 +1,5 @@
+Release 0.2-small available.
+
+grml 0.2-small - Codename Corry <a href="http://grml.org/download/">available</a>.
+For details take a look at <a href="http://grml.org/files/README-0.2-small.txt">the
+release announcement</a>.

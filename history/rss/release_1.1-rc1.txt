@@ -1,0 +1,5 @@
+Grml - several new release candidates available: grml 1.1-rc1, grml64 0.2-rc1, grml[64]-medium 0.1-rc1
+
+<p>We have new release candidates: the first release candidate of grml 1.1 is available. Take a look at the <a href="http://grml.org/changelogs/README-grml-1.1-rc1/">release announcement</a> for details about all the nifty new features. A <a href="http://grml.org/changelogs/README-grml64-0.2-rc1/">release candidate of grml64 0.2</a> is available as well. And finally we have a new flavour of grml as well: <a href="http://grml.org/changelogs/README-grml-medium-0.1-rc1/">grml-medium 0.1-rc1</a> and its 64bit version named <a href="http://grml.org/changelogs/README-grml64-medium-0.1-rc1/">grml64-medium 0.1-rc1</a>.</p>
+
+<p>Please test the ISOs and all the stuff you usually need so we can provide rocking stable releases soon. Download the ISOs from devel directories of the mirrors listed at <a href="http://grml.org/download/">grml.org/download/</a>, please consider using bittorrent if possible.</p>

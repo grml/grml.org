@@ -1,0 +1,6 @@
+Release 0.5 available.
+
+grml 0.5 - Codename Tokolytika <a href="http://grml.org/download/">available</a>.
+
+The new release brings 262 new packages and many new features.
+For details take a look at <a href="http://grml.org/files/README-0.5.txt">the release announcement</a>.

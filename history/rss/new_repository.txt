@@ -1,0 +1,14 @@
+New Debian repository for grml available
+
+Please notice that grml has new Debian package repositories as announced
+on <a href="http://lists.mur.at/mailman/listinfo/grml">the grml user
+mailinglist</a>. Please adjust the line containing grml.org/repos/ in
+your /etc/apt/sources.list to something like:
+
+# stable grml repository:
+  deb     http://deb.grml.org/ grml-stable  main
+  deb-src http://deb.grml.org/ grml-stable  main
+
+Take a look at <a
+href="http://lists.mur.at/pipermail/grml/2006-December/001159.html">the
+announce mail</a> for more details.

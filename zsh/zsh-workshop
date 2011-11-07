@@ -1,0 +1,138 @@
+zsh-workshop - 20061128
+=======================
+
+Preface
+-------
+
+The following documentation is *not* a full documentation of the zsh
+workshop, it just documents some general stuff which might be useful for
+workshop participants. Notice: some configuration/keybindings/... are not
+set up on default zsh but used in link:http://grml.org/[grml]'s
+configuration.
+
+Zsh?
+----
+
+''Zsh is a shell designed for interactive use, although it is also a
+powerful scripting language. Many of the useful features of bash, ksh, and
+tcsh were incorporated into zsh; many original features were added. ''
+
+  -- http://zsh.dotsrc.org/
+
+Merges the best from ksh, csh and bash! ('emulate sh + emulate ksh')
+
+More than 100 builtins, ~150 options + >300 keybindings
+
+Configuration files
+-------------------
+
+  wget -O ~/.zshrc http://hg.grml.org/grml-etc-core/raw-file/tip/etc/skel/.zshrc
+  wget -O ~/.zshrc.global http://hg.grml.org/grml-etc-core/raw-file/tip/etc/zsh/zshrc
+
+Useful modules and settings
+---------------------------
+
+  % setopt autocd && /tmp   # cd /tmp
+  % setopt append_history share_history histignorealldups
+
+  % autoload -U zmv        # zmv "programmable rename"
+  % zmv '* *' '$f:gs/ /_'  # Replace spaces in filenames with a underline
+
+  % autoload run-help      # esc-h
+  % autoload compinit && compinit
+  % autoload -U zed
+
+TIP: run 'setopt ksh_option_print && setopt' to get a listing of all
+current settings
+
+Globbing / Glob Qualifier
+-------------------------
+
+  % setopt extendedglob
+  % ls -d *.^c              # list all files excluding c-source files
+  % ls /etc/*(@)            # list symlinks only
+  % ls -l *.(png|jpg|gif)   # list pictures only
+  % ls *(*)                 # list executables only
+  % ls /etc/**/zsh          # which directories contain 'zsh'?
+  % ls **/*(-@)             # list dangling symlinks
+  % ls **/*(/^F)            # list empty directories
+
+TIP: run 'H-Glob' on your grml system for getting help regarding globbing
+
+Keybindings
+-----------
+
+Some very interesting ones (besides default 'bindkey'):
+
+  CTRL-d              complete / EOF
+  CTRL-l              clear-screen
+  CTRL-w              delete last word
+  CTRL-_              undo
+  TAB                 complete and take first result
+  ESC-.               insert last parameter of last typed command (similar to typing !$)
+  ESC-e               edit the current line in $EDITOR
+  ESC-h               call run-help for the 1st word on the commandline
+  ESC-m               insert last typed word
+  CTRL-E d            insert a timestamp on the commandline (yyyy-mm-dd)
+  CTRL-a              begin of line
+  CTRL-e              end of line
+  Alt-'               quote-line => ''
+  Alt-<number>-char   insert <number> of chars
+  Alt-?               which-command
+  CTRL-x+a            complete alias
+  CTRL-x+e            complete word
+  CTRL-k              kill line
+  CTRL-u              copy line
+  CTRL-w              copy last word
+  CTRL-y              yank (insert kill-ring)
+
+TIP: run "bindkey 'ctrl-v <keys>'" to find out which action is bount to a key
+
+History
+-------
+
+  % history
+  % !23       # Re-execute history command 23
+  % ^foo^bar  # edit previous command replace foo by bar
+
+Check your history for most frequently used commands and create
+aliases/functions for them!
+
+  % print -l -- ${(o)history%% *} | uniq -c | sort -nr | head -n 10
+
+"Unsorted Must Knows"
+---------------------
+
+  % rehash                  # important for bash-users
+  % ls /u/s/d/x/exa<TAB>    # try it :)
+  % dpkg -i ~deb/foo.deb    # hash for /var/cache/apt/archives
+  % ls ~doc                 # hash /usr/share/doc
+  % ls =vim                 # ls $(which vim)
+  % sort <f{oo,ubar}        # cat foo fubar | sort
+  % less <(gzip -cd foo.gz) # gzip -cd foo.gz && less foo
+  % ls >file1 >file2 >file3
+  % less <file1 <file2
+  % vared PATH
+  % cd -<tab>
+  % echo {23..42}
+  % alias -s txt=vim
+  % RPROMPT=%T
+  % precmd () { RPROMPT="%(?..:()%" }
+  % xpdf =(zcat /usr/share/doc/grml-docs/zsh/grml-zsh-refcard.pdf.gz)
+  % w3m http://www.bash2zsh.com/zsh_refcard/refcard.pdf
+  % man zsh-lovers
+
+Ressources
+----------
+
+TIP: run 'zsh-help' on your grml system to get some hints regarding zsh
+
+* link:http://grml.org/zsh/[grml's zsh webpage]
+* link:http://www.bash2zsh.com/[Book: From Bash to Z Shell: Conquering the Command Line]
+
+About this document
+-------------------
+
+(c) Michael Prokop <mika@grml.org>; HTML version powered by link:http://www.methods.co.nz/asciidoc/[asciidoc].
+
+// vim: ft=asciidoc autoindent textwidth=75 formatoptions=tcqn

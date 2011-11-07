@@ -1,0 +1,417 @@
+grml-config(1)
+==============
+
+NAME
+----
+save-config - save configuration ; restore-config - restore
+configuration; mkpersistenthome - create persistent home directory;
+more options available via bootoptions (see following documentation)
+
+SYNOPSIS
+--------
+save-config - please take a look at 'save-config -h' ; restore-config
+- please take a look at 'restore-config -h', mkpersistenthome (no
+options available)
+
+Introduction
+------------
+
+By using the config-framework it is possible to save the configuration
+of a running grml system and restore it later. save-config is a script
+to store your running configuration inside a bzip2 compressed tar
+archive (from now on known as the 'configuration file').
+restore-config is a script to restore a configuration using the stored
+configuration file.  Several bootoptions provide additional features.
+If you do not know where to start just take a look at the available
+options and read the section <<X7,usage scenarios>>.
+
+TIP: The generated configuration archives are plain bzip2 compressed tar
+archives. All the files are generated starting from the root-directory
+'/' so it is easy to handle. You can generate configuration archives
+manually as well, save-config is just a frontend which should make it
+easier to use.
+
+Autoconfiguration
+-----------------
+
+By default the booting process tries to mount a device labeled
+'GRMLCFG'. This provides the possibility to restore a configuration
+(named config.tbz) and execute a script (named grml.sh) without the
+need to specify any bootparams. If you want to disable this feature
+please take a look at the 'noautoconfig' bootparam.
+
+Boot options
+------------
+
+As you probably know you can adjust boot parameters on the bootprompt.
+You want to set some boot options permanently? That's possible via
+adding a directory named 'bootparams' to the grml-ISO which has to be
+located at /live/image/bootparams/ afterwards. Place a textfile inside the
+directory containing the bootoptions which should be appended to
+default ones (this corresponds to booting without any special
+options). If you want to be able to boot from your grml-CD you have to
+create a multisession CD. See the <<X7,usage scenarios>> for more
+details how to use it.
+
+Scripts
+-------
+
+save-config - save configuration
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+This script generates a plain bzip2 compressed tar archive containing
+the specified files. The following options are supported for
+specifying which parts should be saved in the configuration file:
+
+  -home                         store hidden files from $HOME ($HOME/.*)
+  -grmlhome                     store hidden files from \$HOME (\$HOME/.*) of user grml [use as user root]
+  -etc                          store modified files from /etc
+  -configdir                    store $HOME/config
+  -all                          store all configuration files (:= -home, -configdir and -etc)
+
+TIP: It is also possible to use environment variables for specifying which parts
+should be saved.  Just set the corresponding variable: $SAVE_HOME, $SAVE_ETC,
+$SAVE_CONFIGDIR and $SAVE_ALL
+
+The default filename of the generated configuration file is
+config.tbz.  The following options are supported for specifying
+another destination of the configuration file:
+
+  -ssh user@host:/path/to/file  copy configuration via ssh/scp to remote host
+  -mail <recipient>             send configuration via mail
+  -file foo_bar_config.tbz      save configuration in specified file
+
+Usage examples:
+
+  save-config -all                                  => store all configuration files in config.tbz in current dir
+  save-config -home -mail  devnull@grml.org         => store $HOME/.* in config.tbz and send it via mail
+  save-config -etc  -ssh   devnull@grml.org:/path/  => store /etc in config.tbz and scp it to specified host
+  save-config -all  -file  foo.tbz                  => store all configuration files in foo.tbz
+  SAVE_ALL=yes save-config -file /path/foo.tbz      => store all configuration files in /path/foo.tbz
+
+restore-config - restore configuration
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+You can restore a configuration using the bootoptions or by a script
+file named 'restore-config'.  Specify the filename of the
+configuration archive which should be used as a parameter. The
+following options are available to specify which parts of the archive
+should be extracted.
+
+  -home                         extract hidden files from $HOME ($HOME/.*)
+  -grmlhome                     store hidden files from \$HOME (\$HOME/.*) of user grml [use as user root]
+  -etc                          extract modified files from /etc
+  -configdir                    extract $HOME/config
+
+The default is to extract (restore) all files found in the archive.
+
+TIP: It is also possible to use environment variables for specifying
+which part should be restored. Just set the corresponding variable:
+$RESTORE_HOME, $RESTORE_ETC, $RESTORE_CONFIGDIR and $RESTORE_ALL
+
+Usage examples:
+
+  restore-config -home foo_bar_config.tbz  => restore configuration from file foo_bar_config.tbz
+  restore-config config.tbz                => restore configuration from file config.tbz
+
+mkpersistenthome - use persistent home-directory
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+You have a local partition you would like to use as your
+home-directory?  Just use the interactive script called
+'mkpersistenthome'. It will either create a file named grml.img on the
+specified partition or create a partition using the ext2 filesystem
+(you can specify the option in a dialog inside the program). grml.img
+is a loopback device which size you can specify manually.  It is
+possible to scan through the partitions to identify the appropriate
+partition. To use a home-directory located on your hard-drive use the
+appropriate bootoption on bootprompt:
+
+  home=/dev/hda3    =>   use /dev/hda3 as the homepartition
+  home=scan         =>   scan through the available partitions and search for file grml.img
+
+Boot-Options
+------------
+
+The following bootoptions are supported. Use them at the (isolinux)
+bootprompt as documented here.
+
+myconfig::
+    This option is for restoring configuration using the file config.tbz
+    on the specified device. Usage examples:
+
+  myconfig=/dev/sda1                        => use file config.tbz from usb-device
+  myconfig=/dev/fd0                         => use file config.tbz from floppy-disk
+  myconfig=/dev/sda1 file=config_foobar.tbz => use file config_foobar.tbz from usb-device
+
+home::
+    This option is for setting a specific partition as home directory.
+    Usage examples:
+
+  home=/dev/hda3    =>  use /dev/hda3 as the homepartition
+  home=scan         =>  scan through the available partitions and search
+                        for file grml.img
+
+partconf::
+
+    This option mounts the specified device in read-only mode and tries
+    to copy all files specified in /etc/grml/partconf to the grml
+    system. This provides the possibility to use the configuration of a
+    harddisk installation. For example using the network configuration
+    (which is specified in /etc/network) is possible using this
+    bootoption. Usage example:
+
+    partconf=/dev/hda2 => try to mount /dev/hda2 and copy files specified
+                          in /etc/grml/partconf to the booted grml system
+
+netconfig::
+    Use this option to restore configuration using wget to download
+    a configuration file from specified destination. Usage example:
+
+  netconfig=server.tld/path/to/config.tbz  =>   restore configuration using wget to download file config.tbz
+
+extract::
+
+    Extract specific directories from configuration archive. Notice:
+    This bootparam is useful only with bootparams which are able to
+    extract configuration archives.
+
+  extract=/home/grml         => extract only /home/grml from archive
+  extract=/etc               => extract only /etc from archive
+  extract=/home/grml/config  => extract only $HOME/config from archive
+
+scripts::
+    This option can start a script located in /live/image/scripts/.
+    Usage examples:
+
+  scripts               =>   run script /live/image/scripts/grml.sh
+  scripts=foobar.sh     =>   run script foobar.sh in /live/image/scripts/
+
+config::
+    Use this option to restore a configuration using directory
+    /live/image/config (located in root-directory on a usb-device). Usage
+    examples:
+
+  config                    =>   restore configuration using file config.tbz from directory /live/image/config/
+  config=config_foobar.tbz  =>   restore configuration using file config_foobar.tbz from directory /live/image/config/
+
+debs::
+
+    This options allows automatic installation of deb packages while
+    booting. The debian packages have to be located in directory
+    /live/image/debs/. Usage examples:
+
+  debs              =>   install all debian packages (suffix .deb) from directory /live/image/debs/
+  debs=01           =>   install all debian packages (suffix .deb) starting with 01 in the filename from directory /live/image/debs/
+
+
+noautoconfig::
+    Deactivate automounting. By default the command 'mount' tries to mount a
+    device with label 'GRMLCFG'. If you specify the noautoconfig bootparam
+    the automounting will be deactivated.
+
+  noautoconfig            => disables auto mounting of label 'GRMLCFG'
+
+
+[[X7]]
+Usage scenarios
+---------------
+
+Personal configuration files
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+You are a fan of the editor vim? Great. You probably have your own
+~/.vimrc and want to use it on the grml system. You also don't like
+the default zsh configuration and want to use your own ~/.zshrc?
+How to procede? Copy your .vimrc and .zshrc to $HOME of user 'grml'.
+Place additional files in $HOME/config. Now create a configuration for
+your files running:
+
+  save-config -home -configdir
+
+Now you should have a file named config.tbz containing your
+configuration files. You can copy the archive to a webserver
+and restore it via downloading during reboot using the following
+commandline on bootprompt:
+
+  grml netconfig=server.tld/path/to/config.tbz
+
+You don't have network access but own a floppy drive? Copy the file
+to a floppy disk and boot with:
+
+  grml myconfig=/dev/fd0
+
+Floppy is to small or to slow? Ok, let's use a usb device:
+
+  grml myconfig=/dev/sda1
+
+
+Network configuration
+~~~~~~~~~~~~~~~~~~~~~
+
+You need a specific network setup and want to use your own
+/etc/network/interfaces by default? Generate the configuration
+archive running the following command as user root:
+
+  save-config -etc
+
+Now you should have a file named config.tbz containing your
+configuration files. If you want to use it with a floppy disk copy the
+file to a floppy and boot via using the following command on
+bootprompt:
+
+  grml myconfig=/dev/fd0
+
+Floppy is to small or to slow? Ok, let's use a usb device:
+
+  grml myconfig=/dev/sda1
+
+You do have an existing harddisk installation and want to use its
+configuration? Let's say the debian system is located in /dev/hda2. You
+want to use the directory /etc/network. This directory is activated by
+default in /etc/grml/partconf so we don't have to do any further work.
+We just need to activate it via using the following commandline on
+bootprompt:
+
+  grml partconf=/dev/hda2
+
+Automatic installation of debian packages
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+You have a specified debian package named 'foobar.deb' and want to use
+it with (therefore: install it on) grml by default? Notice: this feature
+is useful especially for grml-small (a ~80 MB ISO). If you want to use it
+with the large version of grml you might have to overburn the ISO.
+
+Let's assume you have burned the grml iso to a CD-RW using a commandline like:
+
+  cdrecord dev=/dev/hdc -v -multi -tao grml_0.5.iso
+
+Now create a directory named debs and place foobar.deb in it:
+
+  mkdir debs/ && cp foobar.deb debs/
+
+Notice: This directory will be located in /live/image after burning the second session.
+
+Now create the second session containing this directory:
+
+  mkisofs -M grml_0.5.iso -C `cdrecord -msinfo dev=/dev/hdc` -R -o 2nd_session.iso debs
+
+Finally append the second session to the cd using:
+
+  cdrecord dev=/dev/hdc -v -multi -tao 2nd_session.iso
+
+TIP: the application k3b (not available on the live-CD but available
+through the Debian repositories) provides an easy to use interface for
+doing the multisession task.
+
+Now boot from your new personalized grml cd using the debs option:
+
+  grml debs
+
+Run your own commands
+~~~~~~~~~~~~~~~~~~~~~
+
+You know that booting with 'grml service=foobar' executes
+/etc/init.d/foobar when booting grml. But you want to setup a more
+complex network configuration, adjust some other stuff and so on on your
+own? Just write a script named grml.sh which does the job and use own
+of the mentioned bootparams. Let's say you have placed grml.sh on your
+usb device (usb stick) then use the following commandline on bootprompt:
+
+  grml myconfig=/dev/sda1
+
+Or even better: create a floppy disk with label GRMLCFG running:
+
+  fdformat /dev/fd0   # format the floppy disk if not done already
+  mkfs.ext2 -L GRMLCFG /dev/fd0   # now create ext2 filesystem with label GRMLCFG on it:
+
+TIP: several filesystems provide the possibility to provide a label.
+For example FAT provides this through: 'mkfs.vfat -n GRMLCFG
+/dev/sda1' (attention: this will destroy data on /dev/sda1 of
+course!). Take a look at the documentation/manpage of the filesystem
+you want to use.
+
+Now place your configuration archive (see save-config and the other
+usage scenarios) and the script grml.sh on the floppy disk. Now you can
+boot your system without specifying any bootparameters on bootprompt
+because devices labeled with GRMLCFG are mounted readonly and used by
+default. If you did not label your device you can use the device anyway
+using 'grml myconfig=/dev/ice' on the bootprompt.
+
+Debug remote systems
+~~~~~~~~~~~~~~~~~~~~
+
+You are responsible for a customer's system in her data center. The
+system has failed and you need to debug from remote, and the remote
+hands available in the data center do not have enough knowledge to get
+grml booted and configure the network without external help?
+
+If the hard disk of the system is still available, you hopefully have
+saved a configuration file with IP address, netmask and default
+gateway somewhere on that hard disk. grml can use the information
+found on a partition. Take a look at the 'partconf' boot parameter.
+Usage example: 'grml partconf=/dev/hda2' copies files defined in
+/etc/grml/partconf from /dev/hda2 to the grml system. As /etc/network
+is predefined in /etc/grml/partconf the configuration from /dev/hda2
+will be taken.
+
+Or you use a standard grml medium and have grml read IP address,
+netmask and default gateway from another medium like a floppy or an USB
+stick. Take a look at the script saveconfig and the boot parameter
+myconfig.
+
+Adjust boot parameters
+~~~~~~~~~~~~~~~~~~~~~~
+
+You want to set some boot options permanently? Just add a directory
+named 'bootparams' to the CD-ROM so it is located at
+/live/image/bootparams/ and contains a textfile with the bootparams you
+would like to use.
+
+  mkdir bootparams
+  echo lang=de > bootparams/my_bootparams
+
+Now burn a multisession CD where directory bootparams is located in the
+root directory of the CD.
+
+TIP: the application k3b (not available on the live-CD but available
+through the Debian repositories) provides an easy to use interface for
+doing the multisession task.
+
+Use persistent home directory
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+You want to use a persistent home directory which includes all the files
+located in $HOME. Use the script mkpersistenthome to create such a
+persistent home directory. You have the options to either use a
+specific partition as your home directory or add a loopback file
+named grml.img on the specified partition (the default).
+
+TIP: /dev/external in the partition selection of mkpersistenthome is
+an usb device without partitions. /dev/external1 corresponds to the
+first partition on an usb device (usually an usb stick).
+
+After running the script mkpersistenthome you can use the boot
+parameter home to activate the home directory. If you are using the
+option with the loopback file (grml.img) you can boot via:
+
+  grml home=scan
+
+which will scan through the partitions and if a file grml.img is found
+it will be mounted as your $HOME-directory. If you want to use a
+partition as your home directory specify the device as an option. If
+you want to use /dev/hda2 as your $HOME boot via:
+
+  grml home=/dev/hda2
+
+Notice: the files located in /etc/skel will be copied to the partition
+(but will not overwrite any files).
+
+Bugs
+~~~~
+Please report feedback, bugreports and wishes link:http://grml.org/contact/[to us]!
+
+Author
+~~~~~~
+(c) 2005++, Michael Prokop <mika@grml.org>

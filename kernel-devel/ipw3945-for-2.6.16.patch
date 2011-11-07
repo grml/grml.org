@@ -1,0 +1,64 @@
+diff -urN ipw3945-0.0.73/ipw3945.c ipw3945-0.0.73.patched/ipw3945.c
+--- ipw3945-0.0.73/ipw3945.c	2006-03-29 22:30:56.000000000 +0200
++++ ipw3945-0.0.73.patched/ipw3945.c	2006-03-30 00:47:44.000000000 +0200
+@@ -10713,9 +10713,10 @@
+ 		.len = le16_to_cpu(rx_hdr->len),
+ 		.freq = (rx_hdr->phy_flags & RX_RES_PHY_FLAGS_BAND_24_MSK) ?
+ 		    IEEE80211_24GHZ_BAND : IEEE80211_52GHZ_BAND,
+-		.tsf = rx_end->timestamp,
+-		.beacon_time = rx_end->beaconTimeStamp,
++//		.tsf = rx_end->timestamp,
++//		.beacon_time = rx_end->beaconTimeStamp,
+ 	};
++
+ 	u8 network_packet;
+ 	unsigned long flags;
+ 	u16 snr = 0;
+@@ -10795,8 +10796,8 @@
+ 		priv->last_rx_rssi = stats.rssi;
+ 
+ 		priv->last_rx_jiffies = jiffies;
+-		priv->last_beacon_time = stats.beacon_time;
+-		priv->last_tsf = stats.tsf;
++//		priv->last_beacon_time = stats.beacon_time;
++//		priv->last_tsf = stats.tsf;
+ 	}
+ 	spin_unlock_irqrestore(&priv->ieee->lock, flags);
+ 
+@@ -14187,8 +14188,7 @@
+ 
+ 	atomic_inc(&crypt->refcnt);
+ 	if (crypt->ops->build_iv)
+-		crypt->ops->build_iv(skb_frag, hdr_len,
+-				     tx_cmd->key, 16, crypt->priv);
++		crypt->ops->build_iv(skb_frag, hdr_len, crypt->priv);
+ 	atomic_dec(&crypt->refcnt);
+ 
+ 	switch (priv->ieee->sec.level) {
+diff -urN ipw3945-0.0.73/ipw3945.h ipw3945-0.0.73.patched/ipw3945.h
+--- ipw3945-0.0.73/ipw3945.h	2006-03-29 22:30:56.000000000 +0200
++++ ipw3945-0.0.73.patched/ipw3945.h	2006-03-30 00:47:44.000000000 +0200
+@@ -48,6 +48,14 @@
+ 
+ #include <net/ieee80211.h>
+ 
++#ifndef NETWORK_HAS_POWER_CONSTRAINT
++#define NETWORK_HAS_POWER_CONSTRAINT    (1<<5)
++#define NETWORK_HAS_CSA                 (1<<6)
++#define NETWORK_HAS_QUIET               (1<<7)
++#define NETWORK_HAS_IBSS_DFS            (1<<8)
++#define NETWORK_HAS_TPC_REPORT          (1<<9)
++#endif
++
+ #define DRV_NAME	"ipw3945"
+ 
+ #include "ipw3945_daemon.h"
+@@ -1972,7 +1980,7 @@
+ struct ipw_spectrum_list {
+ 	struct list_head list;
+ 	struct ieee80211_rx_stats stats;
+-	struct ieee80211_action action[0];
++	//struct ieee80211_action action[0];
+ };
+ 
+ #define IPW_IBSS_MAC_HASH_SIZE 31

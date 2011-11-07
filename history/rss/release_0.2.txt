@@ -1,0 +1,6 @@
+Release 0.2 available.
+
+grml 0.2 - Codename Satura <a href="/download/">available</a>.
+
+The new release brings 455 new packages and many new features.
+For details take a look at <a href="http://grml.org/files/README-0.2.txt">the release announcement</a>.

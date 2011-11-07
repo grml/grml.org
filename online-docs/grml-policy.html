@@ -1,0 +1,680 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+    "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="generator" content="AsciiDoc 8.2.2" />
+<style type="text/css">
+/* Debug borders */
+p, li, dt, dd, div, pre, h1, h2, h3, h4, h5, h6 {
+/*
+  border: 1px solid red;
+*/
+}
+
+body {
+  margin: 1em 5% 1em 5%;
+}
+
+a {
+  color: blue;
+  text-decoration: underline;
+}
+a:visited {
+  color: fuchsia;
+}
+
+em {
+  font-style: italic;
+}
+
+strong {
+  font-weight: bold;
+}
+
+tt {
+  color: navy;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #527bbd;
+  font-family: sans-serif;
+  margin-top: 1.2em;
+  margin-bottom: 0.5em;
+  line-height: 1.3;
+}
+
+h1 {
+  border-bottom: 2px solid silver;
+}
+h2 {
+  border-bottom: 2px solid silver;
+  padding-top: 0.5em;
+}
+
+div.sectionbody {
+  font-family: serif;
+  margin-left: 0;
+}
+
+hr {
+  border: 1px solid silver;
+}
+
+p {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+pre {
+  padding: 0;
+  margin: 0;
+}
+
+span#author {
+  color: #527bbd;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+span#email {
+}
+span#revision {
+  font-family: sans-serif;
+}
+
+div#footer {
+  font-family: sans-serif;
+  font-size: small;
+  border-top: 2px solid silver;
+  padding-top: 0.5em;
+  margin-top: 4.0em;
+}
+div#footer-text {
+  float: left;
+  padding-bottom: 0.5em;
+}
+div#footer-badges {
+  float: right;
+  padding-bottom: 0.5em;
+}
+
+div#preamble,
+div.tableblock, div.imageblock, div.exampleblock, div.verseblock,
+div.quoteblock, div.literalblock, div.listingblock, div.sidebarblock,
+div.admonitionblock {
+  margin-right: 10%;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+}
+div.admonitionblock {
+  margin-top: 2.5em;
+  margin-bottom: 2.5em;
+}
+
+div.content { /* Block element content. */
+  padding: 0;
+}
+
+/* Block element titles. */
+div.title, caption.title {
+  font-family: sans-serif;
+  font-weight: bold;
+  text-align: left;
+  margin-top: 1.0em;
+  margin-bottom: 0.5em;
+}
+div.title + * {
+  margin-top: 0;
+}
+
+td div.title:first-child {
+  margin-top: 0.0em;
+}
+div.content div.title:first-child {
+  margin-top: 0.0em;
+}
+div.content + div.title {
+  margin-top: 0.0em;
+}
+
+div.sidebarblock > div.content {
+  background: #ffffee;
+  border: 1px solid silver;
+  padding: 0.5em;
+}
+
+div.listingblock {
+  margin-right: 0%;
+}
+div.listingblock > div.content {
+  border: 1px solid silver;
+  background: #f4f4f4;
+  padding: 0.5em;
+}
+
+div.quoteblock > div.content {
+  padding-left: 2.0em;
+}
+
+div.attribution {
+  text-align: right;
+}
+div.verseblock + div.attribution {
+  text-align: left;
+}
+
+div.admonitionblock .icon {
+  vertical-align: top;
+  font-size: 1.1em;
+  font-weight: bold;
+  text-decoration: underline;
+  color: #527bbd;
+  padding-right: 0.5em;
+}
+div.admonitionblock td.content {
+  padding-left: 0.5em;
+  border-left: 2px solid silver;
+}
+
+div.exampleblock > div.content {
+  border-left: 2px solid silver;
+  padding: 0.5em;
+}
+
+div.verseblock div.content {
+  white-space: pre;
+}
+
+div.imageblock div.content { padding-left: 0; }
+div.imageblock img { border: 1px solid silver; }
+span.image img { border-style: none; }
+
+dl {
+  margin-top: 0.8em;
+  margin-bottom: 0.8em;
+}
+dt {
+  margin-top: 0.5em;
+  margin-bottom: 0;
+  font-style: italic;
+}
+dd > *:first-child {
+  margin-top: 0;
+}
+
+ul, ol {
+    list-style-position: outside;
+}
+ol.olist2 {
+  list-style-type: lower-alpha;
+}
+
+div.tableblock > table {
+  border: 3px solid #527bbd;
+}
+thead {
+  font-family: sans-serif;
+  font-weight: bold;
+}
+tfoot {
+  font-weight: bold;
+}
+
+div.hlist {
+  margin-top: 0.8em;
+  margin-bottom: 0.8em;
+}
+div.hlist td {
+  padding-bottom: 5px;
+}
+td.hlist1 {
+  vertical-align: top;
+  font-style: italic;
+  padding-right: 0.8em;
+}
+td.hlist2 {
+  vertical-align: top;
+}
+
+@media print {
+  div#footer-badges { display: none; }
+}
+
+div#toctitle {
+  color: #527bbd;
+  font-family: sans-serif;
+  font-size: 1.1em;
+  font-weight: bold;
+  margin-top: 1.0em;
+  margin-bottom: 0.1em;
+}
+
+div.toclevel1, div.toclevel2, div.toclevel3, div.toclevel4 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+div.toclevel2 {
+  margin-left: 2em;
+  font-size: 0.9em;
+}
+div.toclevel3 {
+  margin-left: 4em;
+  font-size: 0.9em;
+}
+div.toclevel4 {
+  margin-left: 6em;
+  font-size: 0.9em;
+}
+/* Workarounds for IE6's broken and incomplete CSS2. */
+
+div.sidebar-content {
+  background: #ffffee;
+  border: 1px solid silver;
+  padding: 0.5em;
+}
+div.sidebar-title, div.image-title {
+  font-family: sans-serif;
+  font-weight: bold;
+  margin-top: 0.0em;
+  margin-bottom: 0.5em;
+}
+
+div.listingblock div.content {
+  border: 1px solid silver;
+  background: #f4f4f4;
+  padding: 0.5em;
+}
+
+div.quoteblock-content {
+  padding-left: 2.0em;
+}
+
+div.exampleblock-content {
+  border-left: 2px solid silver;
+  padding-left: 0.5em;
+}
+
+/* IE6 sets dynamically generated links as visited. */
+div#toc a:visited { color: blue; }
+</style>
+<script type="text/javascript">
+/*<![CDATA[*/
+window.onload = function(){generateToc(2)}
+/* Author: Mihai Bazon, September 2002
+ * http://students.infoiasi.ro/~mishoo
+ *
+ * Table Of Content generator
+ * Version: 0.4
+ *
+ * Feel free to use this script under the terms of the GNU General Public
+ * License, as long as you do not remove or alter this notice.
+ */
+
+ /* modified by Troy D. Hanson, September 2006. License: GPL */
+ /* modified by Stuart Rackham, October 2006. License: GPL */
+
+function getText(el) {
+  var text = "";
+  for (var i = el.firstChild; i != null; i = i.nextSibling) {
+    if (i.nodeType == 3 /* Node.TEXT_NODE */) // IE doesn't speak constants.
+      text += i.data;
+    else if (i.firstChild != null)
+      text += getText(i);
+  }
+  return text;
+}
+
+function TocEntry(el, text, toclevel) {
+  this.element = el;
+  this.text = text;
+  this.toclevel = toclevel;
+}
+
+function tocEntries(el, toclevels) {
+  var result = new Array;
+  var re = new RegExp('[hH]([2-'+(toclevels+1)+'])');
+  // Function that scans the DOM tree for header elements (the DOM2
+  // nodeIterator API would be a better technique but not supported by all
+  // browsers).
+  var iterate = function (el) {
+    for (var i = el.firstChild; i != null; i = i.nextSibling) {
+      if (i.nodeType == 1 /* Node.ELEMENT_NODE */) {
+        var mo = re.exec(i.tagName)
+        if (mo)
+          result[result.length] = new TocEntry(i, getText(i), mo[1]-1);
+        iterate(i);
+      }
+    }
+  }
+  iterate(el);
+  return result;
+}
+
+// This function does the work. toclevels = 1..4.
+function generateToc(toclevels) {
+  var toc = document.getElementById("toc");
+  var entries = tocEntries(document.getElementsByTagName("body")[0], toclevels);
+  for (var i = 0; i < entries.length; ++i) {
+    var entry = entries[i];
+    if (entry.element.id == "")
+      entry.element.id = "toc" + i;
+    var a = document.createElement("a");
+    a.href = "#" + entry.element.id;
+    a.appendChild(document.createTextNode(entry.text));
+    var div = document.createElement("div");
+    div.appendChild(a);
+    div.className = "toclevel" + entry.toclevel;
+    toc.appendChild(div);
+  }
+}
+/*]]>*/
+</script>
+<title>grml policy</title>
+</head>
+<body>
+<div id="header">
+<h1>grml policy</h1>
+<div id="toc">
+  <div id="toctitle">Table of Contents</div>
+  <noscript><p><b>JavaScript must be enabled in your browser to display the table of contents.</b></p></noscript>
+</div>
+</div>
+<div id="preamble">
+<div class="sectionbody">
+<div class="sidebarblock">
+<div class="sidebar-content">
+<p>Important! This file is not yet official - work in progress.</p>
+</div></div>
+</div>
+</div>
+<h2>1. Preface</h2>
+<div class="sectionbody">
+<p>This is a short documentation describing different policies used at and for
+<a href="http://grml.org/">grml</a>.</p>
+</div>
+<h2>2. Packaging Software</h2>
+<div class="sectionbody">
+<p>If you are not yet familiar with <strong>creating</strong> Debian packaging useful
+resources are the <a href="http://www.debian.org/doc/maint-guide/">Debian New
+Maintainers' Guide</a> and
+<a href="http://www.debian.org/doc/manuals/developers-reference/index.en.html">The
+Debian Developer's Reference</a>.</p>
+<p>Software that should be <strong>added</strong> to the grml repository (and as a
+consequence being available for inclusion in grml) must be packaged
+according to the
+<a href="http://www.debian.org/doc/debian-policy/index.html">Debian policy</a>.
+The Debian packages should be
+<a href="http://lintian.debian.org/">lintian</a>-clean and have to provide manpages
+for the shipped executables. The package should be maintained inside a
+mercurial repository hosted at <a href="http://hg.grml.org/">hg.grml.org</a>.
+If the package is a grml specific package (so upstream is different from
+the grml-team) the Debian package has to start with the suffix <em>grml-</em> (so
+the grml specific packages can be identified easily).</p>
+<p>If you want to see software included in grml but won't be able to deal with
+the Debian package please <a href="http://grml.org/report/">send your feature
+request to the grml-team</a>.</p>
+<p>Uploading Debian packages to <a href="http://deb.grml.org/">the grml pool</a> is
+restricted to the ftp-masters (being Michael Prokop and Alexander Wirt at
+the time of writing this document).</p>
+<p>As a long term goal the Debian packages used at grml should be provided to
+the official Debian distribution using the official
+<a href="http://www.debian.org/devel/wnpp/">WNPP / ITP (Intend To Package)</a>
+procedure.</p>
+</div>
+<h2>3. Adding Software to grml</h2>
+<div class="sectionbody">
+<p>If you plan to write software for inclusion and distribution by grml you
+should be aware of the following requirements:</p>
+<ul>
+<li>
+<p>
+The software has to be licensed under an
+<a href="http://www.opensource.org/licenses">OSI approved license</a> and should
+follow the <a href="http://www.debian.org/social_contract#guidelines">The Debian
+Free Software Guidelines (DFSG)</a>. The grml-team prefers the
+<a href="http://www.gnu.org/copyleft/gpl.html">GNU General Public License
+(GPL)</a>. If you want to see your patch/script/software included in a core
+grml package it has to be licensed under the GPL as well.
+</p>
+</li>
+<li>
+<p>
+Your software has to provide documentation. The package must provide at
+least an up2date manpage. The grml-team prefers documentation written in
+<a href="http://www.methods.co.nz/asciidoc/">asciidoc</a>, see
+<a href="http://grml.org/docs/">grml.org/docs/</a> and
+<a href="http://hg.grml.org/grml-debootstrap/file/tip/grml-debootstrap.8.txt">grml-debootstrap.8.txt</a>
+for a real-life example.
+</p>
+</li>
+<li>
+<p>
+Your software should be as platform independent as possible and should
+work at least on x86, x86_64 (amd64) and ppc.
+</p>
+</li>
+</ul>
+</div>
+<h2>4. Contributing patches to grml</h2>
+<div class="sectionbody">
+<p>Software written by and maintained by the grml-team is available at
+<a href="http://hg.grml.org/">hg.grml.org</a>. If you plan to provide a patch to
+the grml-team you can checkout the according repository and create a patch
+using the <em>hg diff</em> command. Usage example:</p>
+<div class="listingblock">
+<div class="content"><!-- Generator: GNU source-highlight 2.4
+by Lorenzo Bettini
+http://www.lorenzobettini.it
+http://www.gnu.org/software/src-highlite -->
+<pre><tt>hg clone http<span style="color: #990000">:</span>//hg<span style="color: #990000">.</span>grml<span style="color: #990000">.</span>org/grml-policy
+cd grml-policy
+hg diff <span style="color: #990000">&gt;</span> update_for_grml-policy-mention_foobar<span style="color: #990000">.</span>diff
+</tt></pre></div></div>
+<p>And mail the resulting diff to the grml-team. The maintainer of the
+according repository is listed in the Contact-column on
+<a href="http://hg.grml.org/">hg.grml.org</a>. You are free to
+<a href="http://grml.org/contact/">contact the grml-team directly via mail</a> or
+the <a href="http://grml.org/mailinglist/">grml-mailinglist</a> as well.</p>
+<p>More details regarding use of mercurial at grml is available at
+<a href="http://grml.org/mercurial/">grml.org/mercurial/</a>.</p>
+</div>
+<h2>5. Common practices for writing code</h2>
+<div class="sectionbody">
+<h3>5.1. Header information</h3>
+<p>Every script should provide a header which should look like this:</p>
+<div class="literalblock">
+<div class="content">
+<pre><tt>#!/bin/sh
+# Filename:      grml2hd
+# Purpose:       install grml to harddisk
+# Authors:       grml-team (grml.org), (c) Andreas Gredler &lt;jimmy@grml.org&gt;, Michael Prokop &lt;mika@grml.org&gt;
+# Bug-Reports:   see http://grml.org/bugs/
+# License:       This file is licensed under the GPL v2.
+# Latest change: Thu Sep 13 23:00:56 CEST 2007 [mika]
+################################################################################</tt></pre>
+</div></div>
+<h3>5.2. Footer information</h3>
+<p>Most developers of the grml-team use Vim as their favourite editor.
+Therefor providing a modeline at the end of the sourcefile is commonly used
+to indicate the favourite editing mode/style. Usage example:</p>
+<div class="literalblock">
+<div class="content">
+<pre><tt># vim: ai filetype=sh expandtab shiftwidth=3</tt></pre>
+</div></div>
+<h3>5.3. grml shellscript library</h3>
+<p>The grml system provides several shellscript resources. The package
+grml-etc-core provides the files /etc/grml/lsb-functions and
+/etc/grml/script-functions, the package grml-shlib ships /etc/grml/sh-lib.</p>
+<h4>5.3.1. /etc/grml/lsb-functions</h4>
+<p>The file /etc/grml/lsb-functions is used within init-scripts and init-style
+scripts (like shellscripts handling with services) and is supposed to be
+POSIX-compatible. Usage example:</p>
+<div class="listingblock">
+<div class="content"><!-- Generator: GNU source-highlight 2.4
+by Lorenzo Bettini
+http://www.lorenzobettini.it
+http://www.gnu.org/software/src-highlite -->
+<pre><tt><span style="color: #990000">%</span> <span style="font-weight: bold"><span style="color: #0000FF">source</span></span> /etc/grml/lsb-functions
+<span style="color: #990000">%</span> einfo <span style="color: #FF0000">"Starting foobar."</span> <span style="color: #990000">;</span> /bin/true <span style="color: #990000">;</span> eend $<span style="color: #990000">?</span>
+ <span style="color: #990000">*</span> Starting foobar<span style="color: #990000">.</span>                                  <span style="color: #990000">[</span> ok <span style="color: #990000">]</span>
+<span style="color: #990000">%</span> einfo <span style="color: #FF0000">"Starting foobar."</span> <span style="color: #990000">;</span> /bin/false <span style="color: #990000">;</span> eend $<span style="color: #990000">?</span>
+ <span style="color: #990000">*</span> Starting foobar<span style="color: #990000">.</span>                                  <span style="color: #990000">[</span> <span style="color: #990000">!!</span> <span style="color: #990000">]</span>
+<span style="color: #990000">%</span>
+</tt></pre></div></div>
+<p>If you want to provide output on the plain console (without using an
+interface like <a href="http://invisible-island.net/dialog/">dialog</a> or
+<a href="http://www.clifford.at/stfl/">stfl</a>) you should consider the use of
+/etc/grml/lsb-functions so look and feel of grml-scripts is as consistent
+as possible.</p>
+<h4>5.3.2. /etc/grml/script-functions</h4>
+<p>The file /etc/grml/script-functions provides common functions used inside
+several scripts, like check4root (check for root-permissions), iszsh (check
+for running zsh). The file is supposed to be used in every POSIX-compatible
+shell (otherwise it's a bug).</p>
+<h4>5.3.3. /etc/grml/sh-lib</h4>
+<p>The file /etc/grml/sh-lib provides a smiliar functionality like
+/etc/grml/lsb-functions and /etc/grml/script-functions do. As a long term
+goal the functionality of this file should be merged with the one of
+lsb-functions and script-functions.</p>
+<h3>5.4. Good practices for shellscript</h3>
+<ul>
+<li>
+<p>
+<strong>shebang line:</strong> if you use <em>#!/bin/sh</em> as the shebang line of your
+shellscript you should make sure that the script runs under every
+POSIX-compatible shell. A good test is the use of /bin/dash for /bin/sh. If
+you use bash/zsh/ksh93/&#8230;  specific features please use the according
+shell in the shebang line of your script.
+</p>
+</li>
+<li>
+<p>
+<strong>check for appropriate permissions:</strong> if you need root permissions you
+should make sure that your script is running as user root (take a look at
+check4root function provided by /etc/grml/script-functions).
+</p>
+</li>
+<li>
+<p>
+<strong>clean up when being interrupted and on exit:</strong> your script should not leave
+any temporary files (unless intented for debugging purposes of course).
+Usage example:
+</p>
+<div class="listingblock">
+<div class="content"><!-- Generator: GNU source-highlight 2.4
+by Lorenzo Bettini
+http://www.lorenzobettini.it
+http://www.gnu.org/software/src-highlite -->
+<pre><tt><span style="color: #009900">TMPFILE</span><span style="color: #990000">=</span><span style="color: #009900">$(mktemp</span> <span style="color: #009900">${TMP}</span>/grml2hd<span style="color: #990000">.</span>XXXXXX<span style="color: #990000">)</span>
+<span style="font-weight: bold"><span style="color: #000000">bailout()</span></span> {
+  rm -f <span style="color: #FF0000">"$TMPFILE"</span>
+  <span style="color: #990000">[</span> -n <span style="color: #FF0000">"$1"</span> <span style="color: #990000">]</span> <span style="color: #990000">&amp;&amp;</span> <span style="color: #009900">EXIT</span><span style="color: #990000">=</span><span style="color: #FF0000">"$1"</span> <span style="color: #990000">||</span> <span style="color: #009900">EXIT</span><span style="color: #990000">=</span><span style="color: #FF0000">"1"</span>
+  <span style="font-weight: bold"><span style="color: #0000FF">exit</span></span> <span style="color: #FF0000">"$EXIT"</span>
+}
+<span style="font-weight: bold"><span style="color: #0000FF">trap</span></span> bailout <span style="color: #993399">1</span> <span style="color: #993399">2</span> <span style="color: #993399">3</span> <span style="color: #993399">15</span>
+<span style="color: #009900">$CODE</span>
+bailout <span style="color: #993399">0</span>
+</tt></pre></div></div>
+</li>
+<li>
+<p>
+<strong>use of subshells:</strong> please use <em>$(&#8230;)</em> instead of <em>`&#8230;`</em>.
+</p>
+<p>It allows nesting of commands in a more clearly and easier way.
+Therefore any shell code might appear within the parentheses, since
+the only time parentheses occur unquoted is in pairs.<br />
+With backquotes however any unquoted <em>`</em> within the form <em>`&#8230;`</em>
+would end the quotes immediately.</p>
+<p>Consider the following as an example on readability:</p>
+<div class="listingblock">
+<div class="content"><!-- Generator: GNU source-highlight 2.4
+by Lorenzo Bettini
+http://www.lorenzobettini.it
+http://www.gnu.org/software/src-highlite -->
+<pre><tt><span style="color: #990000">%</span> echo <span style="color: #FF0000">"Tomorrow's date: `expr </span><span style="color: #CC33CC">\`</span><span style="color: #FF0000">date +%d</span><span style="color: #CC33CC">\`</span><span style="color: #FF0000"> + 1`.`date +%m`."</span>
+<span style="color: #990000">%</span> echo <span style="color: #FF0000">"Tomorrow's date: $(expr $(date +%d) + 1).$(date +%m)."</span>
+</tt></pre></div></div>
+<p>Furthermore it can get quite tricky to get the right level of quotes
+when using backquotes.</p>
+<div class="listingblock">
+<div class="content"><!-- Generator: GNU source-highlight 2.4
+by Lorenzo Bettini
+http://www.lorenzobettini.it
+http://www.gnu.org/software/src-highlite -->
+<pre><tt><span style="color: #990000">%</span> print <span style="color: #FF0000">"`echo </span><span style="color: #CC33CC">\"</span><span style="color: #FF0000">hello</span><span style="color: #CC33CC">\"</span><span style="color: #FF0000">`"</span>
+hello
+<span style="color: #990000">%</span> print <span style="color: #FF0000">"$(echo </span><span style="color: #CC33CC">\"</span><span style="color: #FF0000">hello</span><span style="color: #CC33CC">\"</span><span style="color: #FF0000">)"</span>
+<span style="color: #FF0000">"hello"</span>
+</tt></pre></div></div>
+<p>For further reading have a look at
+<a href="http://zsh.dotsrc.org/Guide/zshguide05.html#l11">A User's Guide to the
+Z Shell</a>
+and <a href="http://zsh.sourceforge.net/Intro/intro_7.html#SEC7">Introduction to
+the Z Shell</a></p>
+</li>
+<li>
+<p>
+<strong>if &#8230; then &#8230; else &#8230;</strong>: you should make sure that the code is as
+easy understandable as possible. So instead of using:
+</p>
+<div class="listingblock">
+<div class="content"><!-- Generator: GNU source-highlight 2.4
+by Lorenzo Bettini
+http://www.lorenzobettini.it
+http://www.gnu.org/software/src-highlite -->
+<pre><tt><span style="font-weight: bold"><span style="color: #0000FF">if</span></span> <span style="color: #990000">[</span> -n <span style="color: #FF0000">"$FOO"</span> <span style="color: #990000">]</span> <span style="color: #990000">;</span> <span style="font-weight: bold"><span style="color: #0000FF">then</span></span>
+   foo
+   bar
+   bla
+<span style="font-weight: bold"><span style="color: #0000FF">else</span></span>
+   baz
+<span style="font-weight: bold"><span style="color: #0000FF">fi</span></span>
+
+you should consider use of<span style="color: #990000">:</span>
+
+<span style="font-weight: bold"><span style="color: #0000FF">if</span></span> <span style="color: #990000">[</span> -z <span style="color: #FF0000">"$FOO"</span> <span style="color: #990000">]</span> <span style="color: #990000">;</span> <span style="font-weight: bold"><span style="color: #0000FF">then</span></span>
+   baz
+<span style="font-weight: bold"><span style="color: #0000FF">else</span></span>
+   foo
+   bar
+   bla
+<span style="font-weight: bold"><span style="color: #0000FF">fi</span></span>
+</tt></pre></div></div>
+</li>
+<li>
+<p>
+<strong>indenting:</strong> make sure you indent your code and use blank lines where
+according. Commonly accepted textwidth is 80 chars. (TODO: provide some
+more information&#8230;)
+</p>
+</li>
+<li>
+<p>
+<strong>use of tabs:</strong> the grml-team prefers to <strong>not</strong> use any tabs inside
+their code. Please use 4 spaces instead of a tab instead (<em>tabstop=4</em> and
+<em>set expandtab</em> when using Vim editor). To replace tabs with spaces you can
+use <em>:set expandtab</em> and <em>:retab</em> using Vim editor.
+</p>
+</li>
+<li>
+<p>
+<strong>no trailing whitespaces:</strong> make sure your code does not contain any
+trailing whitespaces. Remove them inside Vim editor running <em>:%s/\s+$//</em>
+and make them visible using for example <em>:set
+listchars=eol:$,precedes:«,extends:»,tab:»·,trail:·</em>.
+</p>
+</li>
+</ul>
+</div>
+<h2>6. About this document</h2>
+<div class="sectionbody">
+<p>&#169; Michael Prokop &lt;mika@grml.org&gt;; HTML version powered by <a href="http://www.methods.co.nz/asciidoc/">asciidoc</a>.</p>
+</div>
+<div id="footer">
+<div id="footer-text">
+Last updated 17-Dec-2007 04:31:59 CEST
+</div>
+</div>
+</body>
+</html>

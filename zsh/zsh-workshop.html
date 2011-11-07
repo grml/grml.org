@@ -1,0 +1,458 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+    "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="generator" content="AsciiDoc 7.1.2" />
+<style type="text/css">
+/* Debug borders */
+p, li, dt, dd, div, pre, h1, h2, h3, h4, h5, h6 {
+/*
+  border: 1px solid red;
+*/
+}
+
+body {
+  margin: 1em 5% 1em 5%;
+}
+
+a {
+  color: blue;
+  text-decoration: underline;
+}
+a:visited {
+  color: fuchsia;
+}
+
+em {
+  font-style: italic;
+}
+
+strong {
+  font-weight: bold;
+}
+
+tt {
+  color: navy;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #527bbd;
+  font-family: sans-serif;
+  margin-top: 1.2em;
+  margin-bottom: 0.5em;
+  line-height: 1.3;
+}
+
+h1 {
+  border-bottom: 2px solid silver;
+}
+h2 {
+  border-bottom: 2px solid silver;
+  padding-top: 0.5em;
+}
+
+div.sectionbody {
+  font-family: serif;
+  margin-left: 0;
+}
+
+hr {
+  border: 1px solid silver;
+}
+
+p {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+pre {
+  padding: 0;
+  margin: 0;
+}
+
+span#author {
+  color: #527bbd;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+span#email {
+}
+span#revision {
+  font-family: sans-serif;
+}
+
+div#footer {
+  font-family: sans-serif;
+  font-size: small;
+  border-top: 2px solid silver;
+  padding-top: 0.5em;
+  margin-top: 4.0em;
+}
+div#footer-text {
+  float: left;
+  padding-bottom: 0.5em;
+}
+div#footer-badges {
+  float: right;
+  padding-bottom: 0.5em;
+}
+
+div#preamble,
+div.tableblock, div.imageblock, div.exampleblock, div.verseblock,
+div.quoteblock, div.literalblock, div.listingblock, div.sidebarblock,
+div.admonitionblock {
+  margin-right: 10%;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+}
+div.admonitionblock {
+  margin-top: 2.5em;
+  margin-bottom: 2.5em;
+}
+
+div.content { /* Block element content. */
+  padding: 0;
+}
+
+/* Block element titles. */
+div.title, caption.title {
+  font-family: sans-serif;
+  font-weight: bold;
+  text-align: left;
+  margin-top: 1.0em;
+  margin-bottom: 0.5em;
+}
+div.title + * {
+  margin-top: 0;
+}
+
+td div.title:first-child {
+  margin-top: 0.0em;
+}
+div.content div.title:first-child {
+  margin-top: 0.0em;
+}
+div.content + div.title {
+  margin-top: 0.0em;
+}
+
+div.sidebarblock > div.content {
+  background: #ffffee;
+  border: 1px solid silver;
+  padding: 0.5em;
+}
+
+div.listingblock > div.content {
+  border: 1px solid silver;
+  background: #f4f4f4;
+  padding: 0.5em;
+}
+
+div.quoteblock > div.content {
+  padding-left: 2.0em;
+}
+
+div.attribution {
+  text-align: right;
+}
+div.verseblock + div.attribution {
+  text-align: left;
+}
+
+div.admonitionblock .icon {
+  vertical-align: top;
+  font-size: 1.1em;
+  font-weight: bold;
+  text-decoration: underline;
+  color: #527bbd;
+  padding-right: 0.5em;
+}
+div.admonitionblock td.content {
+  padding-left: 0.5em;
+  border-left: 2px solid silver;
+}
+
+div.exampleblock > div.content {
+  border-left: 2px solid silver;
+  padding: 0.5em;
+}
+
+div.verseblock div.content {
+  white-space: pre;
+}
+
+div.imageblock div.content { padding-left: 0; }
+div.imageblock img { border: 1px solid silver; }
+span.image img { border-style: none; }
+
+dl {
+  margin-top: 0.8em;
+  margin-bottom: 0.8em;
+}
+dt {
+  margin-top: 0.5em;
+  margin-bottom: 0;
+  font-style: italic;
+}
+dd > *:first-child {
+  margin-top: 0;
+}
+
+ul, ol {
+    list-style-position: outside;
+}
+ol.olist2 {
+  list-style-type: lower-alpha;
+}
+
+div.tableblock > table {
+  border: 3px solid #527bbd;
+}
+thead {
+  font-family: sans-serif;
+  font-weight: bold;
+}
+tfoot {
+  font-weight: bold;
+}
+
+div.hlist {
+  margin-top: 0.8em;
+  margin-bottom: 0.8em;
+}
+td.hlist1 {
+  vertical-align: top;
+  font-style: italic;
+  padding-right: 0.8em;
+}
+td.hlist2 {
+  vertical-align: top;
+}
+
+@media print {
+  div#footer-badges { display: none; }
+}
+/* Workarounds for IE6's broken and incomplete CSS2. */
+
+div.sidebar-content {
+  background: #ffffee;
+  border: 1px solid silver;
+  padding: 0.5em;
+}
+div.sidebar-title, div.image-title {
+  font-family: sans-serif;
+  font-weight: bold;
+  margin-top: 0.0em;
+  margin-bottom: 0.5em;
+}
+
+div.listingblock div.content {
+  border: 1px solid silver;
+  background: #f4f4f4;
+  padding: 0.5em;
+}
+
+div.quoteblock-content {
+  padding-left: 2.0em;
+}
+
+div.exampleblock-content {
+  border-left: 2px solid silver;
+  padding-left: 0.5em;
+}
+</style>
+<title>zsh-workshop - 20061128</title>
+</head>
+<body>
+<div id="header">
+<h1>zsh-workshop - 20061128</h1>
+</div>
+<h2>Preface</h2>
+<div class="sectionbody">
+<p>The following documentation is <strong>not</strong> a full documentation of the zsh
+workshop, it just documents some general stuff which might be useful for
+workshop participants. Notice: some configuration/keybindings/&#8230; are not
+set up on default zsh but used in <a href="http://grml.org/">grml</a>'s
+configuration.</p>
+</div>
+<h2>Zsh?</h2>
+<div class="sectionbody">
+<p><em>'Zsh is a shell designed for interactive use, although it is also a
+powerful scripting language. Many of the useful features of bash, ksh, and
+tcsh were incorporated into zsh; many original features were added. </em>'</p>
+<div class="literalblock">
+<div class="content">
+<pre><tt>-- http://zsh.dotsrc.org/</tt></pre>
+</div></div>
+<p>Merges the best from ksh, csh and bash! (<em>emulate sh + emulate ksh</em>)</p>
+<p>More than 100 builtins, ~150 options + &gt;300 keybindings</p>
+</div>
+<h2>Configuration files</h2>
+<div class="sectionbody">
+<div class="literalblock">
+<div class="content">
+<pre><tt>wget -O ~/.zshrc http://hg.grml.org/grml-etc-core/raw-file/tip/etc/skel/.zshrc
+wget -O ~/.zshrc.global http://hg.grml.org/grml-etc-core/raw-file/tip/etc/zsh/zshrc</tt></pre>
+</div></div>
+</div>
+<h2>Useful modules and settings</h2>
+<div class="sectionbody">
+<div class="literalblock">
+<div class="content">
+<pre><tt>% setopt autocd &amp;&amp; /tmp   # cd /tmp
+% setopt append_history share_history histignorealldups</tt></pre>
+</div></div>
+<div class="literalblock">
+<div class="content">
+<pre><tt>% autoload -U zmv        # zmv "programmable rename"
+% zmv '* *' '$f:gs/ /_'  # Replace spaces in filenames with a underline</tt></pre>
+</div></div>
+<div class="literalblock">
+<div class="content">
+<pre><tt>% autoload run-help      # esc-h
+% autoload compinit &amp;&amp; compinit
+% autoload -U zed</tt></pre>
+</div></div>
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<div class="title">Tip</div>
+</td>
+<td class="content">run <em>setopt ksh_option_print &amp;&amp; setopt</em> to get a listing of all
+current settings</td>
+</tr></table>
+</div>
+</div>
+<h2>Globbing / Glob Qualifier</h2>
+<div class="sectionbody">
+<div class="literalblock">
+<div class="content">
+<pre><tt>% setopt extendedglob
+% ls -d *.^c              # list all files excluding c-source files
+% ls /etc/*(@)            # list symlinks only
+% ls -l *.(png|jpg|gif)   # list pictures only
+% ls *(*)                 # list executables only
+% ls /etc/**/zsh          # which directories contain 'zsh'?
+% ls **/*(-@)             # list dangling symlinks
+% ls **/*(/^F)            # list empty directories</tt></pre>
+</div></div>
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<div class="title">Tip</div>
+</td>
+<td class="content">run <em>H-Glob</em> on your grml system for getting help regarding globbing</td>
+</tr></table>
+</div>
+</div>
+<h2>Keybindings</h2>
+<div class="sectionbody">
+<p>Some very interesting ones (besides default <em>bindkey</em>):</p>
+<div class="literalblock">
+<div class="content">
+<pre><tt>CTRL-d              complete / EOF
+CTRL-l              clear-screen
+CTRL-w              delete last word
+CTRL-_              undo
+TAB                 complete and take first result
+ESC-.               insert last parameter of last typed command (similar to typing !$)
+ESC-e               edit the current line in $EDITOR
+ESC-h               call run-help for the 1st word on the commandline
+ESC-m               insert last typed word
+CTRL-E d            insert a timestamp on the commandline (yyyy-mm-dd)
+CTRL-a              begin of line
+CTRL-e              end of line
+Alt-'               quote-line =&gt; ''
+Alt-&lt;number&gt;-char   insert &lt;number&gt; of chars
+Alt-?               which-command
+CTRL-x+a            complete alias
+CTRL-x+e            complete word
+CTRL-k              kill line
+CTRL-u              copy line
+CTRL-w              copy last word
+CTRL-y              yank (insert kill-ring)</tt></pre>
+</div></div>
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<div class="title">Tip</div>
+</td>
+<td class="content">run "bindkey <em>ctrl-v &lt;keys&gt;</em>" to find out which action is bount to a key</td>
+</tr></table>
+</div>
+</div>
+<h2>History</h2>
+<div class="sectionbody">
+<div class="literalblock">
+<div class="content">
+<pre><tt>% history
+% !23       # Re-execute history command 23
+% ^foo^bar  # edit previous command replace foo by bar</tt></pre>
+</div></div>
+<p>Check your history for most frequently used commands and create
+aliases/functions for them!</p>
+<div class="literalblock">
+<div class="content">
+<pre><tt>% print -l -- ${(o)history%% *} | uniq -c | sort -nr | head -n 10</tt></pre>
+</div></div>
+</div>
+<h2>"Unsorted Must Knows"</h2>
+<div class="sectionbody">
+<div class="literalblock">
+<div class="content">
+<pre><tt>% rehash                  # important for bash-users
+% ls /u/s/d/x/exa&lt;TAB&gt;    # try it :)
+% dpkg -i ~deb/foo.deb    # hash for /var/cache/apt/archives
+% ls ~doc                 # hash /usr/share/doc
+% ls =vim                 # ls $(which vim)
+% sort &lt;f{oo,ubar}        # cat foo fubar | sort
+% less &lt;(gzip -cd foo.gz) # gzip -cd foo.gz &amp;&amp; less foo
+% ls &gt;file1 &gt;file2 &gt;file3
+% less &lt;file1 &lt;file2
+% vared PATH
+% cd -&lt;tab&gt;
+% echo {23..42}
+% alias -s txt=vim
+% RPROMPT=%T
+% precmd () { RPROMPT="%(?..:()%" }
+% xpdf =(zcat /usr/share/doc/grml-docs/zsh/grml-zsh-refcard.pdf.gz)
+% w3m http://www.bash2zsh.com/zsh_refcard/refcard.pdf
+% man zsh-lovers</tt></pre>
+</div></div>
+</div>
+<h2>Ressources</h2>
+<div class="sectionbody">
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<div class="title">Tip</div>
+</td>
+<td class="content">run <em>zsh-help</em> on your grml system to get some hints regarding zsh</td>
+</tr></table>
+</div>
+<ul>
+<li>
+<p>
+<a href="http://grml.org/zsh/">grml's zsh webpage</a>
+</p>
+</li>
+<li>
+<p>
+<a href="http://www.bash2zsh.com/">Book: From Bash to Z Shell: Conquering the Command Line</a>
+</p>
+</li>
+</ul>
+</div>
+<h2>About this document</h2>
+<div class="sectionbody">
+<p>(c) Michael Prokop &lt;mika@grml.org&gt;; HTML version powered by <a href="http://www.methods.co.nz/asciidoc/">asciidoc</a>.</p>
+</div>
+<div id="footer">
+<div id="footer-text">
+Last updated 28-Nov-2006 10:14:56 CEST
+</div>
+</div>
+</body>
+</html>

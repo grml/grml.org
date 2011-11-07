@@ -1,0 +1,3 @@
+Grml 0.9 - release candidate 1 available.
+
+The first release candidate of grml 0.9 is available. Take a look at the <a href="http://grml.org/files/README-0.9-rc1.php">release announcement</a> for details about all the nifty new features.  Please test the ISO and all the stuff you usually need so we can provide a rocking stable 0.9 release soon. Download the ISO from the devel directory of the mirrors listed at <a href="http://grml.org/download/">grml.org/download/</a>.

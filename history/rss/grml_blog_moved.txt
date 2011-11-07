@@ -1,0 +1,24 @@
+Grml development blog moved to new home - now available at blog.grml.org
+
+<p>We'd like to announce that the Grml development blog (formerly hosted at <a
+href="http://grml.supersized.org/">grml.supersized.org</a>) has switched to a
+new home: <a href="http://blog.grml.org/">blog.grml.org</a></p>
+
+<p>The full content has been migrated. While old URLs continue to work, content
+on the old site won't be updated and may cease to work at some point.</p>
+
+<p>If you have subscribed our Grml developer blog feed, please switch to these
+new feeds:</p>
+
+<ul>
+<li>RSS 2.0 Feed: <a href="http://blog.grml.org/feeds/index.rss2">http://blog.grml.org/feeds/index.rss2</a></li>
+<li>Atom Feed: <a href="http://blog.grml.org/feeds/atom10.xml">http://blog.grml.org/feeds/atom10.xml</a></li>
+<li>Comments Feeds: <a href="http://blog.grml.org/feeds/comments.rss2">http://blog.grml.org/feeds/comments.rss2</a></li>
+</ul>
+
+<p>Also consider subscribing to <a href="http://planet.grml.org/">Planet
+Grml</a>, an aggregator of all individual Grml developer blogs, which also
+includes the Grml development blog.</p>
+
+<p>Find further information at the new blog at <a
+href="http://blog.grml.org/">blog.grml.org</a> - see you there!</p>

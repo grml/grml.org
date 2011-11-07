@@ -1,0 +1,51 @@
+
+cat << EOF
+`generate_header start "" "$DATADIR"`
+<a href="../index.html">zur&uuml;ck</a>
+`generate_header end`
+
+<p>
+
+<center>
+<table width="80%" border="0"  cellspacing="20" ><tr>
+<td width="50%" valign="top" align="center">
+<h1>$TITLE</h1>
+
+`
+if [ "$IIMAGE_SPECIAL" = "true" ] ; then
+   echo -e "<? if (IIMAGE_WRAPPER==1) { iimage_description(\"$DIR\",\"$SUB_DST\",\"$SUB_TITLE\",2); } else { ?> $FOLDER_DESCRIPTION <? } ?>"
+else
+   echo -e "$FOLDER_DESCRIPTION "
+fi
+`
+
+
+</td>
+
+
+<td width="50%" valign="top">
+
+<table border="0" >
+<tr>
+<td align="center" valign="top">
+<img src="$DIR_ICON" alt="Directory icon">
+</td>
+<td  valign="top">
+<!-- index.html ist wichtig, da es sonst nicht ohne browser geht -->
+<b><a href="../index.html">..</a></b>
+</td>
+</tr>
+`search_subdirs`
+</table>
+
+
+</td></tr></table>
+</center>
+
+<p>
+
+<center>
+<table border="0"><tr>
+
+EOF
+

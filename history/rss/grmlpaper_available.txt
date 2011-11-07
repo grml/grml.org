@@ -1,0 +1,7 @@
+german grml-paper available.
+
+A german paper about grml is available online: <a
+href="http://grml.org/docs/grml-paper.de.pdf">grml-paper (170kB, PDF)</a> (also see
+<a href="http://grml.org/docs/">docs-section at grml.org</a>). That's 24 pages about
+technologies used at grml and some main information about grml itself.  Feedback
+welcome!

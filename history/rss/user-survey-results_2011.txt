@@ -1,0 +1,3 @@
+Results of Grml user survey 2011 available
+
+The <a href="http://grml.org/survey2011-results/">results of the Grml user survey are available</a>. Thanks to everyone taking part in our survey!

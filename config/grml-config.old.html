@@ -1,0 +1,872 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+    "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="generator" content="AsciiDoc 8.2.7" />
+<style type="text/css">
+/* Debug borders */
+p, li, dt, dd, div, pre, h1, h2, h3, h4, h5, h6 {
+/*
+  border: 1px solid red;
+*/
+}
+
+body {
+  margin: 1em 5% 1em 5%;
+}
+
+a {
+  color: blue;
+  text-decoration: underline;
+}
+a:visited {
+  color: fuchsia;
+}
+
+em {
+  font-style: italic;
+  color: navy;
+}
+
+strong {
+  font-weight: bold;
+  color: #083194;
+}
+
+tt {
+  color: navy;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #527bbd;
+  font-family: sans-serif;
+  margin-top: 1.2em;
+  margin-bottom: 0.5em;
+  line-height: 1.3;
+}
+
+h1, h2, h3 {
+  border-bottom: 2px solid silver;
+}
+h2 {
+  padding-top: 0.5em;
+}
+h3 {
+  float: left;
+}
+h3 + * {
+  clear: left;
+}
+
+div.sectionbody {
+  font-family: serif;
+  margin-left: 0;
+}
+
+hr {
+  border: 1px solid silver;
+}
+
+p {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+ul, ol, li > p {
+  margin-top: 0;
+}
+
+pre {
+  padding: 0;
+  margin: 0;
+}
+
+span#author {
+  color: #527bbd;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+span#email {
+}
+span#revision {
+  font-family: sans-serif;
+}
+
+div#footer {
+  font-family: sans-serif;
+  font-size: small;
+  border-top: 2px solid silver;
+  padding-top: 0.5em;
+  margin-top: 4.0em;
+}
+div#footer-text {
+  float: left;
+  padding-bottom: 0.5em;
+}
+div#footer-badges {
+  float: right;
+  padding-bottom: 0.5em;
+}
+
+div#preamble,
+div.tableblock, div.imageblock, div.exampleblock, div.verseblock,
+div.quoteblock, div.literalblock, div.listingblock, div.sidebarblock,
+div.admonitionblock {
+  margin-right: 10%;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+}
+div.admonitionblock {
+  margin-top: 2.5em;
+  margin-bottom: 2.5em;
+}
+
+div.content { /* Block element content. */
+  padding: 0;
+}
+
+/* Block element titles. */
+div.title, caption.title {
+  color: #527bbd;
+  font-family: sans-serif;
+  font-weight: bold;
+  text-align: left;
+  margin-top: 1.0em;
+  margin-bottom: 0.5em;
+}
+div.title + * {
+  margin-top: 0;
+}
+
+td div.title:first-child {
+  margin-top: 0.0em;
+}
+div.content div.title:first-child {
+  margin-top: 0.0em;
+}
+div.content + div.title {
+  margin-top: 0.0em;
+}
+
+div.sidebarblock > div.content {
+  background: #ffffee;
+  border: 1px solid silver;
+  padding: 0.5em;
+}
+
+div.listingblock {
+  margin-right: 0%;
+}
+div.listingblock > div.content {
+  border: 1px solid silver;
+  background: #f4f4f4;
+  padding: 0.5em;
+}
+
+div.quoteblock {
+  padding-left: 2.0em;
+}
+div.quoteblock > div.attribution {
+  padding-top: 0.5em;
+  text-align: right;
+}
+
+div.verseblock {
+  padding-left: 2.0em;
+}
+div.verseblock > div.content {
+  white-space: pre;
+}
+div.verseblock > div.attribution {
+  padding-top: 0.75em;
+  text-align: left;
+}
+/* DEPRECATED: Pre version 8.2.7 verse style literal block. */
+div.verseblock + div.attribution {
+  text-align: left;
+}
+
+div.admonitionblock .icon {
+  vertical-align: top;
+  font-size: 1.1em;
+  font-weight: bold;
+  text-decoration: underline;
+  color: #527bbd;
+  padding-right: 0.5em;
+}
+div.admonitionblock td.content {
+  padding-left: 0.5em;
+  border-left: 2px solid silver;
+}
+
+div.exampleblock > div.content {
+  border-left: 2px solid silver;
+  padding: 0.5em;
+}
+
+div.imageblock div.content { padding-left: 0; }
+div.imageblock img { border: 1px solid silver; }
+span.image img { border-style: none; }
+
+dl {
+  margin-top: 0.8em;
+  margin-bottom: 0.8em;
+}
+dt {
+  margin-top: 0.5em;
+  margin-bottom: 0;
+  font-style: normal;
+}
+dd > *:first-child {
+  margin-top: 0.1em;
+}
+
+ul, ol {
+    list-style-position: outside;
+}
+div.olist > ol {
+  list-style-type: decimal;
+}
+div.olist2 > ol {
+  list-style-type: lower-alpha;
+}
+
+div.tableblock > table {
+  border: 3px solid #527bbd;
+}
+thead {
+  font-family: sans-serif;
+  font-weight: bold;
+}
+tfoot {
+  font-weight: bold;
+}
+
+div.hlist {
+  margin-top: 0.8em;
+  margin-bottom: 0.8em;
+}
+div.hlist td {
+  padding-bottom: 15px;
+}
+td.hlist1 {
+  vertical-align: top;
+  font-style: normal;
+  padding-right: 0.8em;
+}
+td.hlist2 {
+  vertical-align: top;
+}
+
+@media print {
+  div#footer-badges { display: none; }
+}
+
+div#toctitle {
+  color: #527bbd;
+  font-family: sans-serif;
+  font-size: 1.1em;
+  font-weight: bold;
+  margin-top: 1.0em;
+  margin-bottom: 0.1em;
+}
+
+div.toclevel1, div.toclevel2, div.toclevel3, div.toclevel4 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+div.toclevel2 {
+  margin-left: 2em;
+  font-size: 0.9em;
+}
+div.toclevel3 {
+  margin-left: 4em;
+  font-size: 0.9em;
+}
+div.toclevel4 {
+  margin-left: 6em;
+  font-size: 0.9em;
+}
+/* Workarounds for IE6's broken and incomplete CSS2. */
+
+div.sidebar-content {
+  background: #ffffee;
+  border: 1px solid silver;
+  padding: 0.5em;
+}
+div.sidebar-title, div.image-title {
+  color: #527bbd;
+  font-family: sans-serif;
+  font-weight: bold;
+  margin-top: 0.0em;
+  margin-bottom: 0.5em;
+}
+
+div.listingblock div.content {
+  border: 1px solid silver;
+  background: #f4f4f4;
+  padding: 0.5em;
+}
+
+div.quoteblock-attribution {
+  padding-top: 0.5em;
+  text-align: right;
+}
+
+div.verseblock-content {
+  white-space: pre;
+}
+div.verseblock-attribution {
+  padding-top: 0.75em;
+  text-align: left;
+}
+
+div.exampleblock-content {
+  border-left: 2px solid silver;
+  padding-left: 0.5em;
+}
+
+/* IE6 sets dynamically generated links as visited. */
+div#toc a:visited { color: blue; }
+
+/* Because IE6 child selector is broken. */
+div.olist2 ol {
+  list-style-type: lower-alpha;
+}
+div.olist2 div.olist ol {
+  list-style-type: decimal;
+}
+</style>
+<title>grml-config(1)</title>
+</head>
+<body>
+<div id="header">
+<h1>grml-config(1)</h1>
+</div>
+<h2 id="_name">NAME</h2>
+<div class="sectionbody">
+<div class="para"><p>save-config - save configuration ; restore-config - restore
+configuration; mkpersistenthome - create persistent home directory;
+more options available via bootoptions (see following documentation)</p></div>
+</div>
+<h2 id="_synopsis">SYNOPSIS</h2>
+<div class="sectionbody">
+<div class="para"><p>save-config - please take a look at <em>save-config -h</em> ; restore-config
+- please take a look at <em>restore-config -h</em>, mkpersistenthome (no
+options available)</p></div>
+</div>
+<h2 id="_introduction">Introduction</h2>
+<div class="sectionbody">
+<div class="para"><p>By using the config-framework it is possible to save the configuration
+of a running grml system and restore it later. save-config is a script
+to store your running configuration inside a bzip2 compressed tar
+archive (from now on known as the <em>configuration file</em>).
+restore-config is a script to restore a configuration using the stored
+configuration file.  Several bootoptions provide additional features.
+If you do not know where to start just take a look at the available
+options and read the section <a href="#X7">usage scenarios</a>.</p></div>
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<div class="title">Tip</div>
+</td>
+<td class="content">The generated configuration archives are plain bzip2 compressed tar
+archives. All the files are generated starting from the root-directory
+<em>/</em> so it is easy to handle. You can generate configuration archives
+manually as well, save-config is just a frontend which should make it
+easier to use.</td>
+</tr></table>
+</div>
+</div>
+<h2 id="_autoconfiguration">Autoconfiguration</h2>
+<div class="sectionbody">
+<div class="para"><p>By default the booting process tries to mount a device labeled
+<em>GRMLCFG</em>. This provides the possibility to restore a configuration
+(named config.tbz) and execute a script (named grml.sh) without the
+need to specify any bootparams. If you want to disable this feature
+please take a look at the <em>noautoconfig</em> bootparam.</p></div>
+</div>
+<h2 id="_boot_options">Boot options</h2>
+<div class="sectionbody">
+<div class="para"><p>As you probably know you can adjust boot parameters on the bootprompt.  You want
+to set some boot options permanently? That's possible via adding a directory
+named <em>bootparams</em> to the grml-ISO which has to be located at the root-directory
+/bootparams/ (note: the directory is known as /live/image/bootparams/ on a
+<em>running</em> grml system then). Place a textfile inside the directory containing
+the bootoptions which should be appended to default ones (this corresponds to
+booting without any special options). If you want to be able to boot from your
+grml-CD you have to create a multisession CD. See the <a href="#X7">usage scenarios</a> for
+more details how to use it or consider booting from a USB device (checkout
+grml2usb).</p></div>
+</div>
+<h2 id="_scripts">Scripts</h2>
+<div class="sectionbody">
+<h3 id="_save_config_save_configuration">save-config - save configuration</h3><div style="clear:left"></div>
+<div class="para"><p>This script generates a plain bzip2 compressed tar archive containing
+the specified files. The following options are supported for
+specifying which parts should be saved in the configuration file:</p></div>
+<div class="literalblock">
+<div class="content">
+<pre><tt>-home                         store hidden files from $HOME ($HOME/.*)
+-grmlhome                     store hidden files from \$HOME (\$HOME/.*) of user grml [use as user root]
+-etc                          store modified files from /etc
+-configdir                    store $HOME/config
+-all                          store all configuration files (:= -home, -configdir and -etc)</tt></pre>
+</div></div>
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<div class="title">Tip</div>
+</td>
+<td class="content">It is also possible to use environment variables for specifying which parts
+should be saved.  Just set the corresponding variable: $SAVE_HOME, $SAVE_ETC,
+$SAVE_CONFIGDIR and $SAVE_ALL</td>
+</tr></table>
+</div>
+<div class="para"><p>The default filename of the generated configuration file is
+config.tbz.  The following options are supported for specifying
+another destination of the configuration file:</p></div>
+<div class="literalblock">
+<div class="content">
+<pre><tt>-ssh user@host:/path/to/file  copy configuration via ssh/scp to remote host
+-mail &lt;recipient&gt;             send configuration via mail
+-file foo_bar_config.tbz      save configuration in specified file</tt></pre>
+</div></div>
+<div class="para"><p>Usage examples:</p></div>
+<div class="literalblock">
+<div class="content">
+<pre><tt>save-config -all                                  =&gt; store all configuration files in config.tbz in current dir
+save-config -home -mail  devnull@grml.org         =&gt; store $HOME/.* in config.tbz and send it via mail
+save-config -etc  -ssh   devnull@grml.org:/path/  =&gt; store /etc in config.tbz and scp it to specified host
+save-config -all  -file  foo.tbz                  =&gt; store all configuration files in foo.tbz
+SAVE_ALL=yes save-config -file /path/foo.tbz      =&gt; store all configuration files in /path/foo.tbz</tt></pre>
+</div></div>
+<h3 id="_restore_config_restore_configuration">restore-config - restore configuration</h3><div style="clear:left"></div>
+<div class="para"><p>You can restore a configuration using the bootoptions or by a script
+file named <em>restore-config</em>.  Specify the filename of the
+configuration archive which should be used as a parameter. The
+following options are available to specify which parts of the archive
+should be extracted.</p></div>
+<div class="literalblock">
+<div class="content">
+<pre><tt>-home                         extract hidden files from $HOME ($HOME/.*)
+-grmlhome                     store hidden files from \$HOME (\$HOME/.*) of user grml [use as user root]
+-etc                          extract modified files from /etc
+-configdir                    extract $HOME/config</tt></pre>
+</div></div>
+<div class="para"><p>The default is to extract (restore) all files found in the archive.</p></div>
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<div class="title">Tip</div>
+</td>
+<td class="content">It is also possible to use environment variables for specifying
+which part should be restored. Just set the corresponding variable:
+$RESTORE_HOME, $RESTORE_ETC, $RESTORE_CONFIGDIR and $RESTORE_ALL</td>
+</tr></table>
+</div>
+<div class="para"><p>Usage examples:</p></div>
+<div class="literalblock">
+<div class="content">
+<pre><tt>restore-config -home foo_bar_config.tbz  =&gt; restore configuration from file foo_bar_config.tbz
+restore-config config.tbz                =&gt; restore configuration from file config.tbz</tt></pre>
+</div></div>
+<h3 id="_mkpersistenthome_use_persistent_home_directory">mkpersistenthome - use persistent home-directory</h3><div style="clear:left"></div>
+<div class="para"><p>You have a local partition you would like to use as your
+home-directory?  Just use the interactive script called
+<em>mkpersistenthome</em>. It will either create a file named grml.img on the
+specified partition or create a partition using the ext2 filesystem
+(you can specify the option in a dialog inside the program). grml.img
+is a loopback device which size you can specify manually.  It is
+possible to scan through the partitions to identify the appropriate
+partition. To use a home-directory located on your hard-drive use the
+appropriate bootoption on bootprompt:</p></div>
+<div class="literalblock">
+<div class="content">
+<pre><tt>home=/dev/sda3    =&gt;   use /dev/sda3 as the homepartition
+home=scan         =&gt;   scan through the available partitions and search for file grml.img</tt></pre>
+</div></div>
+</div>
+<h2 id="_boot_options_2">Boot-Options</h2>
+<div class="sectionbody">
+<div class="para"><p>The following bootoptions are supported. Use them at the (isolinux)
+bootprompt as documented here.</p></div>
+<div class="vlist"><dl>
+<dt>
+myconfig
+</dt>
+<dd>
+<p>
+   This option is for restoring configuration using the file config.tbz
+    on the specified device. Usage examples:
+</p>
+<div class="literalblock">
+<div class="content">
+<pre><tt>myconfig=/dev/sda1                        =&gt; use file config.tbz from usb-device
+myconfig=/dev/fd0                         =&gt; use file config.tbz from floppy-disk
+myconfig=/dev/sda1 file=config_foobar.tbz =&gt; use file config_foobar.tbz from usb-device</tt></pre>
+</div></div>
+</dd>
+<dt>
+home
+</dt>
+<dd>
+<p>
+    This option is for setting a specific partition as home directory.
+    Usage examples:
+</p>
+<div class="literalblock">
+<div class="content">
+<pre><tt>home=/dev/sda3    =&gt;  use /dev/sda3 as the homepartition
+home=scan         =&gt;  scan through the available partitions and search
+                      for file grml.img</tt></pre>
+</div></div>
+</dd>
+<dt>
+partconf
+</dt>
+<dd>
+<p>
+    This option mounts the specified device in read-only mode and tries
+    to copy all files specified in /etc/grml/partconf to the grml
+    system. This provides the possibility to use the configuration of a
+    harddisk installation. For example using the network configuration
+    (which is specified in /etc/network) is possible using this
+    bootoption. Usage example:
+</p>
+<div class="literalblock">
+<div class="content">
+<pre><tt>partconf=/dev/sda2 =&gt; try to mount /dev/sda2 and copy files specified
+                      in /etc/grml/partconf to the booted grml system</tt></pre>
+</div></div>
+</dd>
+<dt>
+netconfig
+</dt>
+<dd>
+<p>
+    Use this option to restore configuration using wget to download
+    a configuration file from specified destination. Usage example:
+</p>
+<div class="literalblock">
+<div class="content">
+<pre><tt>netconfig=server.tld/path/to/config.tbz  =&gt;   restore configuration using wget to download file config.tbz</tt></pre>
+</div></div>
+</dd>
+<dt>
+extract
+</dt>
+<dd>
+<p>
+    Extract specific directories from configuration archive. Notice:
+    This bootparam is useful only with bootparams which are able to
+    extract configuration archives.
+</p>
+<div class="literalblock">
+<div class="content">
+<pre><tt>extract=/home/grml         =&gt; extract only /home/grml from archive
+extract=/etc               =&gt; extract only /etc from archive
+extract=/home/grml/config  =&gt; extract only $HOME/config from archive</tt></pre>
+</div></div>
+</dd>
+<dt>
+scripts
+</dt>
+<dd>
+<p>
+    This option executes a script located in the root-directory /scripts/ on the
+    grml media/ISO (note: the directory is known as /live/image/scripts/ on a
+    <em>running</em> grml system then). Usage examples:
+</p>
+<div class="literalblock">
+<div class="content">
+<pre><tt>scripts               =&gt;   run script [/live/image]/scripts/grml.sh
+scripts=foobar.sh     =&gt;   run script foobar.sh in [/live/image]/scripts/</tt></pre>
+</div></div>
+</dd>
+<dt>
+config
+</dt>
+<dd>
+<p>
+    This option restores a configuration using root-directory /config/ on the
+    grml media/ISO (note: the directory is known as /live/image/config on a
+    <em>running</em> grml system then). Usage examples:
+</p>
+<div class="literalblock">
+<div class="content">
+<pre><tt>config                    =&gt;   restore configuration using file config.tbz from directory [/live/image]/config/
+config=config_foobar.tbz  =&gt;   restore configuration using file config_foobar.tbz from directory [/live/image]/config/</tt></pre>
+</div></div>
+</dd>
+<dt>
+debs
+</dt>
+<dd>
+<p>
+    This options allows automatic installation of deb packages while
+    booting. The debian packages have to be located in the root-directory /debs/
+    on the grml media/ISO (note: the directory is known as /live/image/debs/ on
+    a <em>running</em> grml system then). Usage examples:
+</p>
+<div class="literalblock">
+<div class="content">
+<pre><tt>debs              =&gt;   install all debian packages (suffix .deb) from directory [/live/image]/debs/
+debs=01           =&gt;   install all debian packages (suffix .deb) starting with 01 in the filename from directory [/live/image]/debs/</tt></pre>
+</div></div>
+</dd>
+<dt>
+noautoconfig
+</dt>
+<dd>
+<p>
+    Deactivate automounting. By default the command <em>mount</em> tries to mount a
+    device with label <em>GRMLCFG</em>. If you specify the noautoconfig bootparam
+    the automounting will be deactivated.
+</p>
+<div class="literalblock">
+<div class="content">
+<pre><tt>noautoconfig            =&gt; disables auto mounting of label 'GRMLCFG'</tt></pre>
+</div></div>
+</dd>
+</dl></div>
+</div>
+<h2 id="X7">Usage scenarios</h2>
+<div class="sectionbody">
+<h3 id="_personal_configuration_files">Personal configuration files</h3><div style="clear:left"></div>
+<div class="para"><p>You are a fan of the editor vim? Great. You probably have your own
+<sub>/.vimrc and want to use it on the grml system. You also don't like
+the default zsh configuration and want to use your own </sub>/.zshrc?
+How to procede? Copy your .vimrc and .zshrc to $HOME of user <em>grml</em>.
+Place additional files in $HOME/config. Now create a configuration for
+your files running:</p></div>
+<div class="literalblock">
+<div class="content">
+<pre><tt>save-config -home -configdir</tt></pre>
+</div></div>
+<div class="para"><p>Now you should have a file named config.tbz containing your
+configuration files. You can copy the archive to a webserver
+and restore it via downloading during reboot using the following
+commandline on bootprompt:</p></div>
+<div class="literalblock">
+<div class="content">
+<pre><tt>grml netconfig=server.tld/path/to/config.tbz</tt></pre>
+</div></div>
+<div class="para"><p>You don't have network access but own a floppy drive? Copy the file
+to a floppy disk and boot with:</p></div>
+<div class="literalblock">
+<div class="content">
+<pre><tt>grml myconfig=/dev/fd0</tt></pre>
+</div></div>
+<div class="para"><p>Floppy is to small or to slow? Ok, let's use a usb device:</p></div>
+<div class="literalblock">
+<div class="content">
+<pre><tt>grml myconfig=/dev/sda1</tt></pre>
+</div></div>
+<h3 id="_network_configuration">Network configuration</h3><div style="clear:left"></div>
+<div class="para"><p>You need a specific network setup and want to use your own
+/etc/network/interfaces by default? Generate the configuration
+archive running the following command as user root:</p></div>
+<div class="literalblock">
+<div class="content">
+<pre><tt>save-config -etc</tt></pre>
+</div></div>
+<div class="para"><p>Now you should have a file named config.tbz containing your
+configuration files. If you want to use it with a floppy disk copy the
+file to a floppy and boot via using the following command on
+bootprompt:</p></div>
+<div class="literalblock">
+<div class="content">
+<pre><tt>grml myconfig=/dev/fd0</tt></pre>
+</div></div>
+<div class="para"><p>Floppy is to small or to slow? Ok, let's use a usb device:</p></div>
+<div class="literalblock">
+<div class="content">
+<pre><tt>grml myconfig=/dev/sda1</tt></pre>
+</div></div>
+<div class="para"><p>You do have an existing harddisk installation and want to use its
+configuration? Let's say the debian system is located in /dev/sda2. You
+want to use the directory /etc/network. This directory is activated by
+default in /etc/grml/partconf so we don't have to do any further work.
+We just need to activate it via using the following commandline on
+bootprompt:</p></div>
+<div class="literalblock">
+<div class="content">
+<pre><tt>grml partconf=/dev/sda2</tt></pre>
+</div></div>
+<h3 id="_automatic_installation_of_debian_packages">Automatic installation of debian packages</h3><div style="clear:left"></div>
+<div class="para"><p>You have a specified debian package named <em>foobar.deb</em> and want to use
+it with (therefore: install it on) grml by default? Notice: this feature
+is useful especially for grml-small (a ~80 MB ISO). If you want to use it
+with the large version of grml you might have to overburn the ISO.</p></div>
+<div class="para"><p>Let's assume you have burned the grml iso to a CD-RW using a commandline like:</p></div>
+<div class="literalblock">
+<div class="content">
+<pre><tt>cdrecord dev=/dev/hdc -v -multi -tao grml_0.5.iso</tt></pre>
+</div></div>
+<div class="para"><p>Now create a directory named debs and place foobar.deb in it:</p></div>
+<div class="literalblock">
+<div class="content">
+<pre><tt>mkdir debs/ &amp;&amp; cp foobar.deb debs/</tt></pre>
+</div></div>
+<div class="para"><p>Notice: This directory will be located in /live/image after burning the second session.</p></div>
+<div class="para"><p>Now create the second session containing this directory:</p></div>
+<div class="literalblock">
+<div class="content">
+<pre><tt>mkisofs -M grml_0.5.iso -C `cdrecord -msinfo dev=/dev/hdc` -R -o 2nd_session.iso debs</tt></pre>
+</div></div>
+<div class="para"><p>Finally append the second session to the cd using:</p></div>
+<div class="literalblock">
+<div class="content">
+<pre><tt>cdrecord dev=/dev/hdc -v -multi -tao 2nd_session.iso</tt></pre>
+</div></div>
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<div class="title">Tip</div>
+</td>
+<td class="content">the application k3b (not available on the live-CD but available
+through the Debian repositories) provides an easy to use interface for
+doing the multisession task.</td>
+</tr></table>
+</div>
+<div class="para"><p>Now boot from your new personalized grml cd using the debs option:</p></div>
+<div class="literalblock">
+<div class="content">
+<pre><tt>grml debs</tt></pre>
+</div></div>
+<h3 id="_run_your_own_commands">Run your own commands</h3><div style="clear:left"></div>
+<div class="para"><p>You know that booting with <em>grml service=foobar</em> executes
+/etc/init.d/foobar when booting grml. But you want to setup a more
+complex network configuration, adjust some other stuff and so on on your
+own? Just write a script named grml.sh which does the job and use own
+of the mentioned bootparams. Let's say you have placed grml.sh on your
+usb device (usb stick) then use the following commandline on bootprompt:</p></div>
+<div class="literalblock">
+<div class="content">
+<pre><tt>grml myconfig=/dev/sda1</tt></pre>
+</div></div>
+<div class="para"><p>Or even better: create a floppy disk with label GRMLCFG running:</p></div>
+<div class="literalblock">
+<div class="content">
+<pre><tt>fdformat /dev/fd0   # format the floppy disk if not done already
+mkfs.ext2 -L GRMLCFG /dev/fd0   # now create ext2 filesystem with label GRMLCFG on it:</tt></pre>
+</div></div>
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<div class="title">Tip</div>
+</td>
+<td class="content">several filesystems provide the possibility to provide a label.
+For example FAT provides this through: <em>mkfs.vfat -n GRMLCFG
+/dev/sda1</em> (attention: this will destroy data on /dev/sda1 of
+course!). Take a look at the documentation/manpage of the filesystem
+you want to use.</td>
+</tr></table>
+</div>
+<div class="para"><p>Now place your configuration archive (see save-config and the other
+usage scenarios) and the script grml.sh on the floppy disk. Now you can
+boot your system without specifying any bootparameters on bootprompt
+because devices labeled with GRMLCFG are mounted readonly and used by
+default. If you did not label your device you can use the device anyway
+using <em>grml myconfig=/dev/ice</em> on the bootprompt.</p></div>
+<h3 id="_debug_remote_systems">Debug remote systems</h3><div style="clear:left"></div>
+<div class="para"><p>You are responsible for a customer's system in her data center. The
+system has failed and you need to debug from remote, and the remote
+hands available in the data center do not have enough knowledge to get
+grml booted and configure the network without external help?</p></div>
+<div class="para"><p>If the hard disk of the system is still available, you hopefully have
+saved a configuration file with IP address, netmask and default
+gateway somewhere on that hard disk. grml can use the information
+found on a partition. Take a look at the <em>partconf</em> boot parameter.
+Usage example: <em>grml partconf=/dev/sda2</em> copies files defined in
+/etc/grml/partconf from /dev/sda2 to the grml system. As /etc/network
+is predefined in /etc/grml/partconf the configuration from /dev/sda2
+will be taken.</p></div>
+<div class="para"><p>Or you use a standard grml medium and have grml read IP address,
+netmask and default gateway from another medium like a floppy or an USB
+stick. Take a look at the script saveconfig and the boot parameter
+myconfig.</p></div>
+<h3 id="_adjust_boot_parameters">Adjust boot parameters</h3><div style="clear:left"></div>
+<div class="para"><p>You want to set some boot options permanently? Just add a directory named
+<em>bootparams</em> to the CD-ROM (so it is located at the root directory /bootparams/,
+the directory is known as /live/image/bootparams/ on a <em>running</em> grml system
+then) and contains a textfile with the bootparams you would like to use.</p></div>
+<div class="literalblock">
+<div class="content">
+<pre><tt>mkdir bootparams
+echo lang=de &gt; bootparams/my_bootparams</tt></pre>
+</div></div>
+<div class="para"><p>Then burn a multisession CD where directory bootparams is located in the root
+directory of the CD.</p></div>
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">Not all bootoptions can be used via /bootparams/. This is a limitation of the
+way the kernel and userspace retrieve boot options. Bootoptions regarding the
+kernel definitely do <strong>NOT</strong> work. Bootoptions related to grml-autoconfig (the
+main part of the boot process in grml running in userspace, being all the stuff
+after startup of udev) are expected to work. Bootoptions related to
+initrd/initramfs (the part between <em>Searching for GRML file</em> and startup of
+udev) are <strong>NOT</strong> covered by /bootparams/ as well yet.</td>
+</tr></table>
+</div>
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<div class="title">Tip</div>
+</td>
+<td class="content">the application k3b (not available on the live-CD but available
+through the Debian repositories) provides an easy to use interface for
+doing the multisession task.</td>
+</tr></table>
+</div>
+<h3 id="_use_persistent_home_directory">Use persistent home directory</h3><div style="clear:left"></div>
+<div class="para"><p>You want to use a persistent home directory which includes all the files
+located in $HOME. Use the script mkpersistenthome to create such a
+persistent home directory. You have the options to either use a
+specific partition as your home directory or add a loopback file
+named grml.img on the specified partition (the default).</p></div>
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<div class="title">Tip</div>
+</td>
+<td class="content">/dev/external in the partition selection of mkpersistenthome is
+an usb device without partitions. /dev/external1 corresponds to the
+first partition on an usb device (usually an usb stick).</td>
+</tr></table>
+</div>
+<div class="para"><p>After running the script mkpersistenthome you can use the boot
+parameter home to activate the home directory. If you are using the
+option with the loopback file (grml.img) you can boot via:</p></div>
+<div class="literalblock">
+<div class="content">
+<pre><tt>grml home=scan</tt></pre>
+</div></div>
+<div class="para"><p>which will scan through the partitions and if a file grml.img is found
+it will be mounted as your $HOME-directory. If you want to use a
+partition as your home directory specify the device as an option. If
+you want to use /dev/sda2 as your $HOME boot via:</p></div>
+<div class="literalblock">
+<div class="content">
+<pre><tt>grml home=/dev/sda2</tt></pre>
+</div></div>
+<div class="para"><p>Notice: the files located in /etc/skel will be copied to the partition
+(but will not overwrite any files).</p></div>
+<h3 id="_bugs">Bugs</h3><div style="clear:left"></div>
+<div class="para"><p>Please report feedback, bugreports and wishes <a href="http://grml.org/contact/">to us</a>!</p></div>
+<h3 id="_author">Author</h3><div style="clear:left"></div>
+<div class="para"><p>(c) 2005++, Michael Prokop &lt;<a href="mailto:mika@grml.org">mika@grml.org</a>&gt;</p></div>
+</div>
+<div id="footer">
+<div id="footer-text">
+Last updated 2009-03-01 14:03:21 CEST
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,3 @@
+You like our work? Make a donation to support our work!
+
+See <a href="http://grml.org/donations/">grml.org/donations/</a> for details.

@@ -1,0 +1,70 @@
+System using kernel 2.6.23-grml and squashfs-tools 1:3.2r2-9exp1.
+
+Working
+
+ii  busybox                 1:1.1.3-5               Tiny utilities for small and embedded systems
+ii  initramfs-tools         0.91c                   tools for generating an initramfs
+ii  klibc-utils             1.5.7-4                 small statically-linked utilities built with klibc
+ii  live-initramfs          1.110.7-2~grml.03       Debian Live initramfs hook
+
+ii  busybox                 1:1.1.3-5               Tiny utilities for small and embedded systems
+ii  initramfs-tools         0.91c                   tools for generating an initramfs
+ii  klibc-utils             1.5.9-2                 small utilities built with klibc for early boot
+ii  live-initramfs          1.110.7-2~grml.03       Debian Live initramfs hook
+
+ii  busybox                 1:1.1.3-5               Tiny utilities for small and embedded systems
+ii  initramfs-tools         0.92                    tools for generating an initramfs
+ii  klibc-utils             1.5.9-2                 small utilities built with klibc for early boot
+ii  live-initramfs          1.110.7-2~grml.03       Debian Live initramfs hook
+
+Impossible combinations
+
+All (being 4) initramfs-tools 0.92 combinations with klibc-utils 1.5.7-4
+are not possible, because initramfs-tools depends on klibc-utils (>= 1.5.9-1).
+
+Broken
+
+ii  busybox                 1:1.1.3-5               Tiny utilities for small and embedded systems
+ii  initramfs-tools         0.92                    tools for generating an initramfs
+ii  klibc-utils             1.5.9-2                 small utilities built with klibc for early boot
+ii  live-initramfs          1.128.1-1               Debian Live initramfs hook
+
+ii  busybox                 1:1.1.3-5               Tiny utilities for small and embedded systems
+ii  initramfs-tools         0.91c                   tools for generating an initramfs
+ii  klibc-utils             1.5.9-2                 small utilities built with klibc for early boot
+ii  live-initramfs          1.128.1-1               Debian Live initramfs hook
+
+ii  busybox                 1:1.1.3-5               Tiny utilities for small and embedded systems
+ii  initramfs-tools         0.91c                   tools for generating an initramfs
+ii  klibc-utils             1.5.7-4                 small statically-linked utilities built with klibc
+ii  live-initramfs          1.128.1-1               Debian Live initramfs hook
+
+ii  busybox                 1:1.9.2-2               Tiny utilities for small and embedded systems
+ii  initramfs-tools         0.92                    tools for generating an initramfs
+ii  klibc-utils             1.5.9-2                 small utilities built with klibc for early boot
+ii  live-initramfs          1.110.7-2~grml.03       Debian Live initramfs hook
+
+ii  busybox                 1:1.9.2-2               Tiny utilities for small and embedded systems
+ii  initramfs-tools         0.92                    tools for generating an initramfs
+ii  klibc-utils             1.5.9-2                 small utilities built with klibc for early boot
+ii  live-initramfs          1.128.1-1               Debian Live initramfs hook
+
+ii  busybox                 1:1.9.2-2               Tiny utilities for small and embedded systems
+ii  initramfs-tools         0.91c                   tools for generating an initramfs
+ii  klibc-utils             1.5.7-4                 small statically-linked utilities built with klibc
+ii  live-initramfs          1.110.7-2~grml.03       Debian Live initramfs hook
+
+ii  busybox                 1:1.9.2-2               Tiny utilities for small and embedded systems
+ii  initramfs-tools         0.91c                   tools for generating an initramfs
+ii  klibc-utils             1.5.7-4                 small statically-linked utilities built with klibc
+ii  live-initramfs          1.128.1-1               Debian Live initramfs hook
+
+ii  busybox                 1:1.9.2-2               Tiny utilities for small and embedded systems
+ii  initramfs-tools         0.91c                   tools for generating an initramfs
+ii  klibc-utils             1.5.9-2                 small utilities built with klibc for early boot
+ii  live-initramfs          1.110.7-2~grml.03       Debian Live initramfs hook
+
+ii  busybox                 1:1.9.2-2               Tiny utilities for small and embedded systems
+ii  initramfs-tools         0.91c                   tools for generating an initramfs
+ii  klibc-utils             1.5.9-2                 small utilities built with klibc for early boot
+ii  live-initramfs          1.128.1-1               Debian Live initramfs hook

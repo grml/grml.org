@@ -1,0 +1,4 @@
+RewriteEngine on
+RewriteRule index.rss$ http://blog.grml.org/feeds/index.rss2
+RewriteRule news(/?)$ /
+AddDefaultCharset UTF-8

@@ -1,0 +1,166 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+ <META NAME="GENERATOR" CONTENT="LinuxDoc-Tools 0.9.21">
+ <TITLE>grml - config-framework: Boot-Options </TITLE>
+ <LINK HREF="config-framework-6.html" REL=next>
+ <LINK HREF="config-framework-4.html" REL=previous>
+ <LINK HREF="config-framework.html#toc5" REL=contents>
+</HEAD>
+<BODY>
+<A HREF="config-framework-6.html">Next</A>
+<A HREF="config-framework-4.html">Previous</A>
+<A HREF="config-framework.html#toc5">Contents</A>
+<HR>
+<H2><A NAME="bootoptions"></A> <A NAME="s5">5.</A> <A HREF="config-framework.html#toc5">Boot-Options </A></H2>
+
+<P>The following bootoptions are supported. Use them at the bootprompt as
+documented here.</P>
+<P>
+<DL>
+
+<DT><B>myconfig</B><DD><P>This option is for restoring configuration from a local file.</P>
+<P>
+<BLOCKQUOTE><CODE>
+<HR>
+<PRE>
+ myconfig=/dev/sda1                        => use file config.tbz from usb-device
+ myconfig=/dev/fd0                         => use file config.tbz from floppy-disk
+ myconfig=/dev/sda1 file=config_foobar.tbz => use file config_foobar.tbz from usb-device
+</PRE>
+<HR>
+</CODE></BLOCKQUOTE>
+</P>
+
+
+<DT><B>file</B><DD><P>Specify filename of archive which should be restored. If no bootparam
+file=... is provided the default 'config.tbz' is assumed. Notice: use this bootparam
+in combination with bootparam myconfig.</P>
+<P>
+<BLOCKQUOTE><CODE>
+<HR>
+<PRE>
+  file=foobar.tbz             => use foobar.tbz as configuration archive
+  file=/path/to/config.tbz    => use /path/to/config.tbz as configuration archive
+</PRE>
+<HR>
+</CODE></BLOCKQUOTE>
+</P>
+
+<DT><B>noautoconfig</B><DD><P>Deactivate automounting. By default the command 'mount'
+tries to mount a device with label 'GRMLCFG'. If you specify the
+noautoconfig bootparam this automounting will be deactivated.</P>
+<P>
+<BLOCKQUOTE><CODE>
+<HR>
+<PRE>
+  noautoconfig            => disables auto mounting of label 'GRMLCFG'
+</PRE>
+<HR>
+</CODE></BLOCKQUOTE>
+</P>
+<P>TODO: documentation how to use labeling</P>
+
+<DT><B>extract</B><DD><P>Extract specific directories from configuration archive.
+Notice: This bootparam is useful only with bootparams which are able
+to extract configuration archives.</P>
+<P>
+<BLOCKQUOTE><CODE>
+<HR>
+<PRE>
+  extract=home       => extract only /home from archive
+  extract=etc        => extract only /etc from archive
+  extract=configdir  => extract only $HOME/config from archive
+</PRE>
+<HR>
+</CODE></BLOCKQUOTE>
+</P>
+
+
+<DT><B>partconf</B><DD><P>Use files from specific partition of local system. This option
+reads filelist from /etc/grml/partconf and tries to copy all existing files
+from given partition over the grml system. This provides the possibility to
+use for example a predefined network setup via /etc/network/interfaces.</P>
+<P>
+<BLOCKQUOTE><CODE>
+<HR>
+<PRE>
+  partconf=/dev/hda2   => copy files specified in /etc/grml/partconf from /dev/hda2 to running grml-system
+</PRE>
+<HR>
+</CODE></BLOCKQUOTE>
+</P>
+
+<DT><B>home</B><DD><P>This option is for setting a specific partition as home directory.</P>
+<P>
+<BLOCKQUOTE><CODE>
+<HR>
+<PRE>
+ home=/dev/hda3    =>   use /dev/hda3 as the homepartition
+ home=scan         =>   scan through the available partitions and search
+                        for file .grml_homedirectory
+</PRE>
+<HR>
+</CODE></BLOCKQUOTE>
+</P>
+
+<DT><B>scripts</B><DD><P>This option supports running a script located in
+/cdrom/scripts/.</P>
+<P>
+<BLOCKQUOTE><CODE>
+<HR>
+<PRE>
+ scripts               =>   run script /cdrom/scripts/grml.sh
+ scripts=foobar.sh     =>   run script foobar.sh in /cdrom/scripts/
+</PRE>
+<HR>
+</CODE></BLOCKQUOTE>
+</P>
+
+<DT><B>config</B><DD><P>Use this option to restore configuration via using
+directory /cdrom/config (located in root-directory on a usb-device).</P>
+<P>
+<BLOCKQUOTE><CODE>
+<HR>
+<PRE>
+ config                    =>   restore configuration using file config.tbz from directory /cdrom/config/
+ config=config_foobar.tbz  =>   restore configuration using file config_foobar.tbz from directory /cdrom/config/
+</PRE>
+<HR>
+</CODE></BLOCKQUOTE>
+</P>
+
+<DT><B>netconfig</B><DD><P>Use this option to restore configuration via using
+wget to download a configuration file from specified destination.</P>
+<P>
+<BLOCKQUOTE><CODE>
+<HR>
+<PRE>
+ netconfig=protocol://1.2.3.4/path/to/config.tbz  =>   restore configuration using wget to download file config.tbz
+</PRE>
+<HR>
+</CODE></BLOCKQUOTE>
+</P>
+
+<DT><B>debs</B><DD><P>This options allows automatic installation of deb packages
+while booting.</P>
+<P>
+<BLOCKQUOTE><CODE>
+<HR>
+<PRE>
+ debs              =>   install all debian packages (suffix .deb) from directory /cdrom/debs/
+ debs=01           =>   install all debian packages (suffix .deb) starting with 01 in the filename from directory /cdrom/debs/
+</PRE>
+<HR>
+</CODE></BLOCKQUOTE>
+</P>
+
+</DL>
+</P>
+
+<HR>
+<A HREF="config-framework-6.html">Next</A>
+<A HREF="config-framework-4.html">Previous</A>
+<A HREF="config-framework.html#toc5">Contents</A>
+</BODY>
+</HTML>

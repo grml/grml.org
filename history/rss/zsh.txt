@@ -1,0 +1,5 @@
+zsh webpage online.
+
+Some information on the zsh can be found on the grml-website.
+The zsh-lovers-project is also part of the webpage.
+See <a href="http://grml.org/zsh/">grml.org/zsh/</a> for more details.

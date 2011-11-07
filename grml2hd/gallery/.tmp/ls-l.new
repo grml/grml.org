@@ -1,0 +1,21 @@
+total 136
+-rw-r--r-- 1 mika mika  7372 2007-02-26 15:46 01-welcome-screen.png
+-rw-r--r-- 1 mika mika  2578 2007-02-26 15:45 02-partition.png
+-rw-r--r-- 1 mika mika  3448 2007-02-26 15:45 03-bootmanager-target.png
+-rw-r--r-- 1 mika mika  4843 2007-02-26 15:44 04-filesystem.png
+-rw-r--r-- 1 mika mika  2519 2007-02-26 15:43 05-are-you-sure.png
+-rw-r--r-- 1 mika mika  3025 2007-02-26 15:46 06-copy-process.png
+-rw-r--r-- 1 mika mika 11970 2007-02-26 15:57 07-grml2hd-bootparams.png
+-rw-r--r-- 1 mika mika  3030 2007-02-26 15:56 08-grml-hostname.png
+-rw-r--r-- 1 mika mika  8131 2007-02-26 15:56 09-grml-setkeyboard.png
+-rw-r--r-- 1 mika mika 11434 2007-02-26 15:56 10-grml-setlang.png
+-rw-r--r-- 1 mika mika  1996 2007-02-26 15:55 11-root-password.png
+-rw-r--r-- 1 mika mika  3376 2007-02-26 15:55 12-username.png
+-rw-r--r-- 1 mika mika  2032 2007-02-26 15:55 13-realname.png
+-rw-r--r-- 1 mika mika  1998 2007-02-26 15:55 14-user-password.png
+-rw-r--r-- 1 mika mika  6878 2007-02-26 15:55 16-grml-autoconfig.png
+-rw-r--r-- 1 mika mika 16873 2007-02-26 15:54 17-remove-packages-server.png
+-rw-r--r-- 1 mika mika  2682 2007-02-26 15:57 18-choose-bootmanager.png
+-rw-r--r-- 1 mika mika  7913 2007-02-26 15:58 19-congrats.png
+-rw-rw-r-- 1 mika mika   383 2007-02-26 16:04 description
+-rw-rw-r-- 1 mika mika  6797 2007-02-26 16:04 index.html

@@ -1,0 +1,5 @@
+Development, Klagenfurter Linuxday 2005 and grml cd-cover
+
+From 7th till 9th of february the grml-develdays have taken place in Graz.  The result of these days is an unofficial prerelease of <a href="http://www.grml.org/roadmap/">the upcoming grml release 0.3</a> which will be presented on the <a href="http://linuxday2005.tk/">linuxday klagenfurt</a> (carinthia/austria) on 22nd of february. Michael Prokop will hold a workshop on grml at this event and the two other grml core developers will be there too.  A sponsor provides us 50 CDs for free, if you attend the workshop you can get one prerelease for free.
+
+Notice: The grml-team is searching for a grml cd-cover for the upcoming release 0.3. Please send your submission till 28th of february via mail to mika (at) grml.org The winner gets one official grml t-shirt for free.

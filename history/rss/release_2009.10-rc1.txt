@@ -1,0 +1,5 @@
+Grml release candidate 1 of version 2009.10
+
+<p>We have new release candidates: the first release candidate of version 2009.10 codename "Hello-Wien" is available. Take a look at the <a href="http://grml.org/changelogs/README-grml-2009.10/">release announcement</a> for details about all the nifty new features. As usual we have different flavours available: the 32bit versions grml, grml-medium and grml-small as well as the 64bit versions grml64, grml64-medium and grml64-small.</p>
+
+<p>Please test the ISOs and all the stuff you usually need so we can provide rocking stable releases soon. The stable release is scheduled for 31st of october. Download the ISOs from the 'devel' directoriy of the mirrors listed at <a href="http://grml.org/download/">grml.org/download/</a>.</p>

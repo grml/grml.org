@@ -1,0 +1,6 @@
+Public mercurial repositories @ hg.grml.org
+
+Public <strong>mercurial repositories</strong> are available at <a
+href="http://hg.grml.org/">hg.grml.org</a>. Some documentation regarding
+the setup and how to use and work with mercurial can be found at <a
+href="http://grml.org/mercurial/">grml.org/mercurial/</a>.

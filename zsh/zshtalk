@@ -1,0 +1,541 @@
+--- Log opened Sat Sep 10 14:31:07 2005
+16:03 @caphuso> ok...
+16:03 @caphuso> so, let's start with clarifying a few things
+16:04 @caphuso> zsh is a unix shell, hopefully known to anybody in here
+16:04 @caphuso> from the bourne shell family
+16:05 @caphuso> it has dozens of nifty features, making it an excellent shell
+      for both interactive use and scripting
+16:05 @caphuso> some of those features will be covered in this talk
+16:05 @caphuso> which is basically all it is about
+16:06 @caphuso> so... let's start with why you would want to use zsh
+16:06 @caphuso> there are a few catches... you probably don't want to use zsh
+      if all you do is really simple stuff in your shell, e.g. because you're a
+      gnome/kde/xfce user
+16:07 @caphuso> you also don't want to use zsh if you are afraid of complex
+      programs
+16:07 @caphuso> and zsh is _very_ complex
+16:07 @caphuso> and a third reason to not use zsh is that you're working in a
+      unicode environment, for which there is no support yet
+16:07 @caphuso> big drawback
+16:08 @caphuso> Nei: that's not using, that's pretending to use :)
+16:08 @caphuso> right now development is happening to add unicode support, but
+      the current state is that it's incomplete and very buggy, so you need to
+      wait a few months
+16:09 @caphuso> now the reasons why you would want to use zsh
+16:09 @caphuso> it offers almost anything you expect from a shell, but has tons
+      of improvements
+16:10 @caphuso> the first of those improvements that made me go "wow! wanna
+      have!" is that it has sane wordsplitting (by default)
+16:10 @caphuso> that means that a variable FOO="hello bar" will, when you use
+      it like $FOO not be split into two words
+16:11 @caphuso> in bash etc. you almost always need to use double quotes, zsh
+      makes that unnecessary
+16:11 @caphuso> next: prompts
+16:12 @caphuso> most shells have prompts, which are more or less customizable,
+      but zsh is better :)
+16:12 @caphuso> you have the regular $prompt (the one to the left), $rprompt
+      (at the right side of the command line)
+16:13 @caphuso> that's standard stuff though
+16:13 @caphuso> you might know PROMPT_COMMAND from bash
+16:13 @caphuso> zsh has two functions, precmd and preexec, which do basically
+      the same, but run before a prompt is displayed and between you hitting
+      enter and executing the command line
+16:14 @caphuso> the latter allows you e.g. to set the xterm title to the name
+      of the program you just started, very cool
+16:14 @caphuso> and you can do even scarier things:
+      http://apheriodic.net/phil/prompt/
+16:14 @caphuso> (it's lengthy, you probably want to read it later)
+16:15 @caphuso> another standard feature: aliases
+16:15 @caphuso> sorry, http://aperiodic.net/phil/prompt/
+16:16 @caphuso> i did say i didn't beta test this stuff :-)
+16:17 @caphuso> back to aliases... zsh has sh style aliases, so they are
+      limited. OTOH, you don't have to deal with the csh silliness of
+      undebuggable !!!!!!!
+16:17 @caphuso> but it has two major achievements over e.g. bash: alias -g and
+      alias -s
+16:18 @caphuso> alias -g is used to define global aliases, which means that
+      those aliases are expanded everywhere on the command line, not just at
+      the beginning
+16:18 @caphuso> example: alias -g L='| less'; grep -r foo . L
+16:19 @caphuso> the grep command will get expanded to "grep -r foo . | less",
+      which saves a lot of typing
+16:19 @caphuso> BUT global aliases are dangerous
+16:19 @caphuso> it can happen that something gets expanded that really
+      shouldn't
+16:19 @caphuso> so be careful, e.g. by sticking to only very few, or by using
+      "safe" names
+16:20 @caphuso> alias -s defines suffix aliases
+16:20 @caphuso> example: alias -s pdf=xpdf
+16:21 @caphuso> if you now "execute" a single file name ending in .pdf (e.g.
+      foo.pdf), the command line will get rewritten to xpdf foo.pdf
+16:22 @caphuso> one limitation: won't work for stuff like "alias -s tar.gz="tar
+      tzf"
+16:22 @caphuso> the dot in tar.gz confuses it :-(
+16:22 @caphuso> dp___: yes
+16:23 @caphuso> i've mentioned that csh style aliases aren't supported
+16:23 @caphuso> that's ok, because functions are a much nicer way of doing
+      their work
+16:23 @caphuso> functions in zsh work basically the same as in any other sh
+      like shell, with only few improvements
+16:24 @caphuso> one borrowed from ksh is that they can be made autoloadable
+16:24 @caphuso> to reduce memory usage
+16:24 @caphuso> you can define functions by simply putting their body into a
+      file named like the function
+16:25 @caphuso> that allows you to have a function work as a script
+16:25 @caphuso> functions are pretty boring, so we get to the next feature:
+      history
+16:26 @caphuso> that is, remembering what commands you ran for later reuse
+16:26 @caphuso> handling of that is horribly adjustable to your exact needs,
+      with various options
+16:27 @caphuso> zsh's history mechanism also allow you to use the csh style
+      bang history expansion (stuff like !-2:t and so)
+16:27 @caphuso> pretty cool if you can get used to it
+16:27 @caphuso> a unique feature of zsh is that you can have multiple histories
+16:28 @caphuso> fc -p/fc -a/fc -P dealwith the "history stack"
+16:29 @caphuso> "fc -p" will clear out the current history and start
+      remembering a new one, until you run fc -P, which will restore the old
+      history
+16:30 @caphuso> i use that to "bind" certain histories to specific directories
+16:30 @caphuso> e.g. my ~/.seti directory, in which everything seti@home
+      related is stored, has its own history, which gets automatically loaded
+      when i cd into it
+16:31 @caphuso> also useful for source trees in which you often do the same
+      commands like "cvs update", ...
+16:32 @caphuso> big topic: parameter expansion
+16:32 @caphuso> that's basically just $FOO or ${FOO%bar}
+16:33 @caphuso> florolf: fc -p fileinwhichthehistoryyouwanttouseisstoredin
+16:33 @caphuso> it's also the most frightening part of zsh
+16:34 @caphuso> and it makes people who think that perl looks like line noise
+      vomit
+16:35 @caphuso> i'll show a few examples later
+16:35 @caphuso> next big thing is pattern matching
+16:35 @caphuso> this includes globbing (*.txt etc.) and comparisions [[ $foo ==
+      * ]]
+16:35 @caphuso> extremely sophisticated in zsh
+16:36 @caphuso> again, some interesting examples later
+16:36 @caphuso> documentation is also a very good reason to use zsh
+16:36 @caphuso> it is by far the best documented shell around
+16:37 @caphuso> you have a huge reference manual (as man pages, texinfo, HTML,
+      pdf, ...)
+16:37 @caphuso> $ man zshall 2> /dev/null | wc 19882 132867 1035768
+16:37 @caphuso> oops, should be two lines
+16:37 @caphuso> Nei: i do!
+16:38 @caphuso> this reference manual is very complete and well written, but
+      terse
+16:38 @caphuso> so we also got the user-friendly user guide
+16:39 @caphuso> you can get it from zsh.sunsite.dk
+16:39 @caphuso> if you want to get the most out of zsh, then a printout of it
+      will be your best friend in the next few weeks
+16:39 @caphuso> it's slightly outdated, but not much, and misses a few things
+16:39 @caphuso> but still incredibly cool
+16:40 @caphuso> if you got money to spend, then you might buy "from bash to z
+      shell", which is a real book. i haven't read it myself, so i can't say
+      how good it is
+16:41 @caphuso> now completion
+16:41 @caphuso> this is where zsh excells at, because really absolutely nothing
+      comes even close
+16:41 @caphuso> if you ever thought that bash or tcsh would do a good job, be
+      surprised
+16:42 @caphuso> the zsh completion system is better in any respect
+16:42 @caphuso> Nei: huh?
+16:42 @caphuso> it's highly configurable without forcing you to rewrite
+      functions
+16:43 @caphuso> Nei: indeed, fish sucks. it's not really programmable
+      completion what it offers
+16:44 @caphuso> it's basically all built in
+16:44 @caphuso> i'll point out some impressive examples later
+16:44 @caphuso> next topic: zle
+16:44 @caphuso> zle is the line editor zsh uses (what readline is for bash)
+16:45 @caphuso> i.e. the thing that let's you have a way to delete words, move
+      around lines, copy, paste, ...
+16:46 @caphuso> it's good enough that you can play tetris with it!
+16:46 @caphuso> this obviously involves several features, including the ability
+      to use multiple lines for your command
+16:47 @caphuso> it's also extensible by simply writing shell functions
+16:47 @caphuso> so you can implement everything you need
+16:47 @caphuso> there will be some examples later on
+16:47 @caphuso> just one more feature: dynamically loadable modules
+16:47 @caphuso> (assuming your OS supports those)
+16:48 @caphuso> there are a couple of modules that extend zsh's features
+16:48 @caphuso> the line editor for example is such a module
+16:48 @caphuso> there are also modules for ftp or tcp networking
+16:49 @caphuso> a math module to do stuff like print $(( sin(5) ))
+16:49 @caphuso> oh, yes, zsh does floating point math!
+16:49 @caphuso> no more kludging with bc
+16:50 @caphuso> ok, this first quick overview is done, from now on i'll touch a
+      couple of features more detailed
+16:50 @caphuso> any questions so far?
+16:51 @caphuso> ok... i'll paste a small ~/.zshrc, that's just enough to get
+      you started
+16:51 @caphuso> zmodload zsh/complist
+16:51 @caphuso> autoload compinit && compinit
+16:51 @caphuso> HISTFILE=~/.zsh_history
+16:51 @caphuso> SAVEHIST=1000
+16:51 @caphuso> HISTSIZE=1000
+16:51 @caphuso> setopt APPEND_HISTORY
+16:51 @caphuso> setopt nobeep
+16:51 @caphuso> prompt="%# "
+16:51 @caphuso> rpompt=" %~"
+16:51 @caphuso> nothing fancy in there, just setting up of the history and
+      loading of the completion system
+16:52 @caphuso> cow: printf
+16:52 @caphuso> e1f`: thanks
+16:52 @caphuso> RPROMPT=" %~"
+16:53 @caphuso> ok, globbing
+16:53 @caphuso> zsh's globbing makes find(1) useless for most jobs
+16:54 @caphuso> e.g. you can do stuff like *(.) to match only regular files or
+      *(/) to match only directories
+16:55 @caphuso> Stara: one moment
+16:56 @caphuso> http://84.129.253.97/~caphuso/talk
+16:56 @caphuso> theclaw: because rprompt is wrong, needs to be upper case
+16:57 @caphuso> theclaw: hysterical reasons?
+16:57 @caphuso> dunno
+16:57 @caphuso> back on topic: it can also match files larger or smaller than a
+      certain size, older or newer than {a,m,c}time, files being block devices
+      etc.
+16:58 @caphuso> those can be combined with and, or and inverted
+16:58 @caphuso> there's a way to deal with symlinks (reference or not)
+16:58 @caphuso> permissions can also be matched
+16:58 @caphuso> *(f:a+x,o+w:)
+16:59 @caphuso> the most impressive thing is the e glob qualifier (this is what
+      those things are called)
+16:59 @caphuso> *(e:'file $REPLY | grep -q JPEG':)
+16:59 @caphuso> this one will match all files of which file says that they are
+      JPEGs
+17:00 @caphuso> i had to use that one to dig through a browser cache, where all
+      files were named 234346 or 456745234
+17:00 @caphuso> glob qualifiers aren't the only thing zsh adds
+17:01 @caphuso> it does all the regular stuff, like foo? or *bar*
+17:01 @caphuso> [a-z]
+17:01 @caphuso> but also things like (foo|bar|baz)
+17:02 @caphuso> or foo*~*bar* to match everything that starts with foo but
+      doesn't contain bar
+17:02 @caphuso> it can recurse down directory trees with **
+17:03 @caphuso> "print -l /**/*" will list _any_ file or directory on your
+      system
+17:03 @caphuso> be careful when using that one with external commands, you run
+      very quickly into ARG_MAX problems
+17:03 @caphuso> florolf: no, to any subdirectory
+17:04 @caphuso> no matter how deep into the tree they are
+17:04 @caphuso> well, compare "print /**" with "print /**/*"
+17:04 @caphuso> you'll see the difference in a few minutes >:-)
+17:05 @caphuso> globbing is just a special use of the more general pattern
+      matching
+17:05 @caphuso> the other use is in comparisons and replacements
+17:06 @caphuso> in those the glob qualifiers are obviously useless (a number
+      that's -eq'ed doesn't have permissions or a file size)
+17:07 @caphuso> but it has a need for other things, most of which are well
+      known from regular expressions
+17:07 @caphuso> theclaw: (e:'file $REPLY | grep -q JPEG':) is the glob
+      qualifier
+17:07 @caphuso> $REPLY is a special parameter that contains the name of the
+      file being matched
+17:08 @caphuso> back on topic: e.g. (#s) or (#e) for what ^ and $ are in
+      regexps
+17:09 @caphuso> beginning of line/end of line
+17:09 @caphuso> (#b) or (#m) to enable backreferences
+17:09 @caphuso> (#i) to match case insensitive
+17:10 @caphuso> and... *tadaa* (#a) to match approximately
+17:10 @caphuso> (the latter isn't typically available in regular expressions)
+17:11 @caphuso> approximate matching means that certain errors are ignored,
+      e.g. "(#a1)foo*" would still match the string "ofobar"
+17:12 @caphuso> there's quite a bit more on this topic, and explaining it in
+      detail would take a few hours
+17:12 @caphuso> (the topic == pattern matching)
+17:12 @caphuso> i suggest strongly that you read the appropriate chapter in the
+      user guide
+17:13 @caphuso> if you want to look at some real life example, look for the
+      compaudit function
+17:13 @caphuso> one example of mine:
+17:14 @caphuso> setopt functionargzero
+17:14 @caphuso> readme liesmich () { less -- (#ia3)${~0}*(OL[1,3]) }
+17:14 @caphuso> touch LiesMich README readme.txt Read_ME.doc lies-mich
+17:14 @caphuso> readme; liesmich
+17:14 @caphuso> first line sets the functionargzero option, which does nothing
+      but setting $0 inside a function to the name of the function
+17:14 @caphuso> normally it'd be /bin/zsh or something like that
+17:15 @caphuso> the next line defines _two_ functions (readme and liesmich),
+      that are the same
+17:15 @caphuso> (liesmich is german and means readme)
+17:16 @caphuso> the line noise after -- is a typical zsh glob
+17:16 @caphuso> it consists of three parts ${~0}, (#ia3) and (OL[1,3])
+17:17 @caphuso> the first is a simple parameter expansion of $0, but turned
+      into something eligable for pattern matching
+17:17 @caphuso> this means that the names of the two functions will be used to
+      match files
+17:17 @caphuso> the (#ia3) makes the whole thing 1) case insensitive and 2)
+      allows up to 3 mistakes
+17:18 @caphuso> the (OL[1,3]) at the end sorts the resulting list by size
+      (biggest first) and uses only the first three files
+17:18 @caphuso> the mere * in there does what it always does, it matches
+      anything
+17:19 @caphuso> the touch command creates 4 empty files
+17:19 @caphuso> and running the two functions in the last line results in less
+      displaying first README, Read_ME.doc and readme.txt, then LIESMICH and
+      lies-mich
+17:21 @caphuso> in lesser shells you'd need three times as much code, and
+      probably several external programs
+17:21 @caphuso> questions?
+17:22 @caphuso> now the real horror: parameter expansion
+17:22 @caphuso> things like this:
+17:22 @caphuso> for a in **/*(.);
+      mv $a ${a:h}/${${a:t}//(#m)((#s)?|(_| )?)/${(U)MATCH}}
+17:22 @caphuso> or this:
+17:22 @caphuso> function foo () {
+      print -l ${(q)${${(f)"$(<$1)"}:#(#s)[[:space:]]#\#*}%%[[:space:]]##\#*
+      }
+17:22 @caphuso> }
+17:22 @caphuso> parameter expansion in zsh can be nested
+17:23 @caphuso> if you want to remove foo at the beginning and bar at the end
+      of a parameter, you'd normally do tmp=${FOO%bar}; FOO=${tmp#foo}
+17:24 @caphuso> in zsh you can use ${${FOO%bar}#tmp}
+17:24 @caphuso> err, ${${FOO%bar}#foo}
+17:24 @caphuso> and those things can grow really big
+17:24 @caphuso> especially when you start using arrays or associative arrays
+      (hashes in perl lingo)
+17:26 @caphuso> _the_ killer example is _pids
+17:26 @caphuso> it's a function of the completion system that completes PIDs
+17:26 @caphuso> you need several hours with the reference manual, the user
+      guide and 2l coffee
+17:26 @caphuso> maybe even more
+17:27 @caphuso> the sad thing is, anything i'd try to teach you about parameter
+      expansion would be wasted
+17:27 @caphuso> so, for the beginning, stick to the standard stuff
+17:27 @caphuso> work your way up from there, while reading the user guide
+17:28 @caphuso> ZHOST=localhost
+17:28 @caphuso> ZPORT=1234
+17:28 @caphuso> ZHOME=/tmp
+17:28 @caphuso> ZDATA="this is a stupid example"
+17:28 @caphuso> : ${(AA)zopt:=${(z)${(ps:=:)${(f)$(<configfile)}}}}
+17:29 @caphuso> this is just one small example, showing that all this insanity
+      can be used for good reasons
+17:29 @caphuso> the first 4 lines are the content of a simple config file
+17:29 @caphuso> and the line starting with : reads that file in and creates an
+      associative array $zopt with the keys ZHOST, ZPORT, ZHOME and ZDATA
+17:30 @caphuso> the values of those keys are simply the things behind the =
+17:30 @caphuso> doing it the old fashioned way would be more cumbersome
+17:31 @caphuso> but here we simply read in the whole file with $(<configfile)
+17:31 @caphuso> split on newlines and create an array with ${(f)...}
+17:31 @caphuso> split on = with ${(ps:=:)...}
+17:32 @caphuso> so we have an array with the elements ZHOST, localhost, ZPORT,
+      1234, ZHOME, /tmp, ...
+17:32 @caphuso> and then we put that into an associative array with
+      ${(AA)zopt:=...}
+17:33 @caphuso> Nei: no, start reading from the inner to the outer, not from
+      the right to the left
+17:34 @caphuso> third big topic: ZLE
+17:34 @caphuso> micikas: #emacs on the 24th
+17:35 @caphuso> i already mentioned the multi line editing support
+17:35 @caphuso> this means you get a real multi line buffer, just like you'd do
+      in a text editor
+17:35 @caphuso> it's also saved and restored in multiple lines when using the
+      history
+17:36 @caphuso> this is quite convenient, because your throw away shell scripts
+      can grow
+17:36 @caphuso> (because of the increased legibility)
+17:37 @caphuso> tcsh users will know run-help
+17:38 @caphuso> hitting "ESC, h" (or meta-h) will fire up the man page of
+      whatever command you have on the command line, let you read it, then go
+      back and continue editing where you left of
+17:39 @caphuso> push-line is a more general solution for that kind of problem:
+      it simply pushes the current line on the stack, type in another command
+      line, execute that, then turb back to where you left of
+17:39 @caphuso> bound to ctrl-q by default
+17:40 @caphuso> so, but some basics first
+17:40 @caphuso> the two commands with which you deal with zle are bindkey and
+      zle
+17:40 @caphuso> bindkey is used to handle keymaps
+17:41 @caphuso> emacs users will know the concept of keymaps
+17:41 @caphuso> basically just tables containing key-function pairs
+17:41 @caphuso> one of those keymaps zsh uses is the emacs keymap, it contains
+      the standard emacs like stuff
+17:42 @caphuso> ctrl-a == beginning-of-line, "ESC, f" == forward-word
+17:42 @caphuso> viins is the keymap for the vi insert mode, vicmd the one for
+      the command mode
+17:42 @caphuso> you can switch between emacs and vi with bindkey -e and bindkey
+      -v
+17:43 @caphuso> you are free to bind any key to any function, in any table
+17:43 @caphuso> so you can add emacs bindings to vi, and run the vi functions
+      in emacs mode
+17:43 @caphuso> btw, what i named "functions" are called "editing widgets"
+17:44 @caphuso> Nei: oh, yes, i've changed that
+17:44  * caphuso lost track of default zsh settings years ago
+17:44 @caphuso> some of those widgets are built into zle
+17:45 @caphuso> some others are provided by those loadable modules mentioned
+      earlier
+17:45 @caphuso> the most interesting ones though are those written as shell
+      functions
+17:46 @caphuso> a simple example: run-with-sudo () { LBUFFER="sudo $LBUFFER" }
+17:46 @caphuso> zle -N run-with-sudo
+17:46 @caphuso> bindkey '^X^E' run-with-sudo
+17:47 @caphuso> $LBUFFER is one of the zle special parameters, it contains the
+      part of the command line left to the cursor
+17:47 @caphuso> it simply gets "sudo " prepended to it
+17:48 @caphuso> zle -N ... makes zle aware that run-with-sudo is from now on a
+      bindable widget
+17:48 @caphuso> and the bindkey command binds it to ctrl-x ctrl-e
+17:48 @caphuso> now you can type at any moment C-x C-e and you'll have your
+      current command line with sudo at the beginning
+17:48 @caphuso> if you like me forget that way too often, you'll love this
+17:49  * caphuso can't count how often he saw E: Could not open lock file
+      /var/lib/apt/lists/lock - open (13 Permission denied)
+17:49 @caphuso> of course, those shell functions can grow to any degree of
+      "complicatedness" you like
+17:50 @caphuso> there's a few interesting ones in the zsh distribution, look
+      for smart-insert-last-word or the *-word-match family
+17:50 @caphuso> also a whole chapter in the user guide
+17:51 @caphuso> ok... now the very last topic: completion
+17:51 @caphuso> probably the one most interesting to all of you, because it's
+      the one you can start using without actually knowing anything ;-)
+17:51 @caphuso> simply hitting your tab key in random places is sufficient
+17:52 @caphuso> the completion system is loaded with "autoload compinstall &&
+      compinstall"
+17:52 @caphuso> after that, you're ready to go
+17:53 @caphuso> until you find that some things don't behave like you want them
+      to
+17:53 @caphuso> that's why you get the chance of tweaking and customizing
+17:53 @caphuso> in order to be able to do that, we need to learn about context
+17:54 @caphuso>
+      :completion:FUNCTION:COMPLETER:COMMAND-OR-MAGIC-CONTEXT:ARGUMENT:TAG
+17:54 @caphuso> this is what a context looks like: 6 fields, seperated with :
+17:54 @caphuso> the first field is simply "completion"
+17:55 @caphuso> FUNCTION is of no interest, unless you get your hands really
+      dirty
+17:55 @caphuso> COMPLETER is the name of the shell function that creates
+      matches at the moment of the context lookup. i'll explain those later
+17:58 @caphuso> COMMAND-OR-MAGIC-CONTEXT is either the name of the command you
+      are trying to complete for (e.g. in case of "make cle<TAB>" it'd be make"
+      or a magic context like -redirect- (after > or <) or -math- (when you're
+      at a point of arithmetic expansion)
+17:58 @caphuso> ARGUMENT is also less useful, unless you already know enough to
+      be bored by me talking
+17:59 @caphuso> and TAGS are basically short yet descriptive names of what
+      exactly you are completion at the moment
+17:59 @caphuso> e.g. in "make <TAB>" the tag would be "targets", because you're
+      trying to complete Makefile targets
+18:00 @caphuso> "kill <TAB" has the tags "processes" and "jobs"
+18:00 @caphuso> you can look them up with "ctrl-x, h"
+18:01 @caphuso> so, some hands on examples: :completion:*:*:xpdf:*:*
+18:01 @caphuso> this specifies: whenever we're completing for xpdf
+18:01 @caphuso> :completion:*:approximate:rm:*:*
+18:01 @caphuso> whenever we're completion after rm and are using the
+      _approximate completer (description follows later)
+18:02 @caphuso> more specific settings win over the general ones
+18:02 @caphuso> :completion:*:*:*:*:processes
+18:02 @caphuso> :completion:*:*:kill:*:processes
+18:02 @caphuso> the first one says: whenever we complete the tag "processes"
+18:03 @caphuso> the second: whenever we complete processes after kill
+18:03 @caphuso> if i had two clashing settings for those two context, then
+      after kill only the second one would be used
+18:03 @caphuso> this is just common sense
+18:03 @caphuso> the system would be useless if it worked otherwise :)
+18:04 @caphuso> now how to use those contexts
+18:04 @caphuso> setting and lookup of that stuff is done with the builtin
+      zstyle
+18:04 @caphuso> you can use that outside of the completion system to store and
+      retrieve data too, some of the zle functions do that for example
+18:05 @caphuso> we'll only deal with setting, not with retrieving
+18:05 @caphuso> zstyle ':completion:*:*:(^rm):*:*' ignored-pattern '*.(o|~)'
+      '#*#(D)'
+18:06 @caphuso> he're we set the style 'ignored-pattern' (you can find a list
+      and descriptions of styles in the manual) to '*.(o|~)' '#*#(D)'
+18:06 @caphuso> when completing after anything except rm
+18:06 @caphuso> ^rm means "don't match rm"
+18:07 @caphuso> the two globs match *.o files (C programmers will know), *~
+      (backup files) and #*# files (emacs autosave files). the (D) qualifier
+      turns on globbing of .* files
+18:08 @caphuso> ignored-pattern means: when completion, then ignore everything
+      that matches the value of this style
+18:08 @caphuso> so, after any command that's not rm, we won't get those files
+      offered as completions
+18:09 @caphuso> this is just one simple example of how extensible the zsh
+      completion system is configurable
+18:09 @caphuso> there are a few dozen styles
+18:10 @caphuso> you'll need to read the manual, i really don't wanna talk till
+      tomorrow morning :-)
+18:11 @caphuso> now the completers i wanted to explain quickly
+18:11 @caphuso> a completer is simply a shell function that looks up the
+      current context and creates a list of possible completions, offering
+      those to the user
+18:11 @caphuso> of course, nothing is that simple in zsh
+18:11 @caphuso> the first completer available is "_complete"
+18:12 @caphuso> it does basically what bash does
+18:12 @caphuso> nothing fancy at all
+18:12 @caphuso> just looking up stuff, then straight completion mozi<tab> ->
+      mozilla
+18:13 @caphuso> _expand is the first exception, because it doesn't really
+      generate possible completions
+18:13 @caphuso> it expands certain things on the command line, e.g. $PARAMETERS
+      or $(print -c *)
+18:13 @caphuso> $PATH<TAB> would become
+      /home/caphuso/bin:/usr/local/bin:/usr/X11R6/bin:/usr/sbin:/sbin:/usr/game
+      s:/usr/lib/surfraw:/usr/bin:/bin:/usr/bin/X11 on the command line
+18:14 @caphuso> _correct does what the name implies: it corrects typos
+18:14 @caphuso> _approximate is _correct on crack
+18:14 @caphuso> it not only corrects typoes, it also generates completions
+18:15 @caphuso> given a directory ~/public_html, then _correct would do the
+      right thing for "cd ~/pbulic_html<TAB>", but not for "cd ~/pb<TAB>"
+18:16 @caphuso> there are a few more, but those are the most interesting ones
+18:17 @caphuso> using completers is a matter of setting the style "completer"
+      properly
+18:17 @caphuso> zstyle ':completion:*' completer _complete
+18:18 @caphuso> (bash emulation again ;-)
+18:18 @caphuso> zstyle ':completion:*' completer _complete _approximate
+18:18 @caphuso> this means: first try _complete, if it can't generate any
+      possible matches, then try _approximate
+18:19 @caphuso> zstyle ':completion:*' completer _complete _correct
+      _complete:-extended _complete:-substring
+18:19 @caphuso> this means: first _complete, if it fails _correct, then
+      _complete again, then _complete again
+18:20 @caphuso> the trick is that by appending :-foo the completer will look up
+      the context not under its regular name (_complete) but as (_complete-foo)
+18:21 @caphuso> this allows to do the same completion with different settings
+      because the context differ
+18:21 @caphuso> zstyle ':completion:*:complete-extended:*' matcher-list 'm:{a-z}={A-Z}' 'r:|[+._-]=*'
+18:21 @caphuso> zstyle ':completion:*:complete-substring:*' matcher-list 'm:{a-z}={A-Z} l:|=**'
+18:22 @caphuso> we do that here... as COMPLETER field we have now not complete
+      but complete-extended and complete-substring, and for both we set the
+      style matcher-list to yet another kind of line noise
+18:22 @caphuso> those matchers configure how zsh is doing comparison
+18:22 @caphuso> s
+18:22 @caphuso> the default way is to simply compare the string on the command
+      line with all possible completions
+18:23 @caphuso> foo<tab> with the possible completions of foobar, foobaz and
+      moo_foo will offer the first two as possible completions
+18:23 @caphuso> because only they match "foo*"
+18:24 @caphuso> matching control can change that, make it ignore certain things
+18:24 @caphuso> e.g. m:{a-z}={A-Z} tells it that lower case characters match
+      upper case characters
+18:24 @caphuso> echo $disp<TAB -> echo $DISPLAY
+18:27 @caphuso> r:|[+._-]=* makes the characters +, ., _ and - special, so that
+      "cd p_h<TAB> -> cd public_html" or "rm x.txt<TAB> -> rm xenomorph.txt"
+      works
+18:27 @caphuso> and the l:|=** does a simple substring match, so that
+      "foo<TAB>" will also match barfoobaz
+18:28 @caphuso> now the whole list of completers in this last example explained
+      slowly
+18:29 @caphuso> when the user hits TAB, the _complete is tried. if it fails
+      to generate any matches, the word on the command line is tried to be
+      corrected. if this doesn't help, case-insensitive matching with a few
+      special characters is tried, and if that fails too, substring matching
+18:29 @caphuso> and as soon as one completer succeeds with creating at least
+      one match, the whole thing stops
+18:30 @caphuso> now you might wonder why to do that so complicated
+18:30 @caphuso> easy: 1) the more possible matches you try to generate, the
+      slower the whole thing becomes
+18:31 @caphuso> _complete is noticably faster than _complete:-extended, and
+      i've seen _approximate run for several minutes, due to a large directory
+18:31 @caphuso> so you want to be careful
+18:31 @caphuso> 2) the more matches you create, the longer the list of possible
+      completion becomes
+18:32 @caphuso> when _complete might only show 5 matches, _approximate can go
+      up to 50
+18:32 @caphuso> or more
+18:33 @caphuso> this doesn't only take longer, it also makes it hard to handle
+18:33 @caphuso> so, that's the reasoning behind
+18:33 @caphuso> ok
+18:34 @caphuso> AFAICT, that's it
+18:34 @caphuso> i hope it's been interesting enough, and would glad to see a
+      few more enthusiastic zsh users in #zsh in the next few weeks
+18:34 @caphuso> any questions?
+--- Log closed Sat Sep 10 18:35:39 2005

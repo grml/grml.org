@@ -1,0 +1,34 @@
+Vorraussetzungen:
+=================
+
+- eine grml-CD oder ein -Image auf der Platte
+- SquashFS im Kernel oder als Modul auf dem System
+  wo man den Terminalserver starten will
+- wenn man Grub kompilieren bzw. nutzen will (also bei
+  Systemen ohne PXE) braucht man eine komplette
+  C-Entwicklungsumgebung!)
+
+Step-by-step Anleitung:
+=======================
+
+# grml-cd ins CD-ROM-Laufwerk legen
+# mount /dev/cdrom /cdrom (/cdrom is wichtig, da aktuell noch nicht konfigurierbar)
+# modprobe squashfs
+# mount /cdrom/GRML/GRML /mnt/tmp
+
+Und dann /etc/grml/terminalserver/config für obiges Setup anpassen:
+
+MODULES_PATH_="/mnt/tmp/lib/modules"
+MODULES_PATH_ROOT_DIFF_="/mnt/tmp"
+KERNEL_VERSION_="2.6.11-grml"
+
+Für alles andere ist der Default für das Setup in Ordnung.
+
+ACHTUNG:
+========
+/var/lib/tftpboot wird von grml-terminalserver überschrieben
+ohne nachzufragen.
+
+grml-terminalserver starten:
+============================
+# grml-terminalserver

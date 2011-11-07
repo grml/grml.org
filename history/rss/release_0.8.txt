@@ -1,0 +1,6 @@
+Release 0.8 available.
+
+grml 0.8 - Codename Funkenzutzler <a href="http://grml.org/download/">available</a>.
+
+The new release brings 117 new packages and many new features.
+For details take a look at <a href="http://grml.org/files/README-0.8.php">the release announcement</a>.

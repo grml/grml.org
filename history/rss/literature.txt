@@ -1,0 +1,3 @@
+Literature list available on grml-website.
+
+See <a href="http://grml.org/books/">grml.org/books/</a> for details.
