@@ -35,7 +35,7 @@ html{color:#000;background:#FFF}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre
   div.sub_links {margin-top:0.5em; text-align:center; color: #FFFFFF; font-size:55%; clear: both; background-color:#8B8D7B}
   h1 {color:navy; font-size:130%; font-weight:bold; padding-top: 1.5em; padding-bottom: 0.2em; }
   h2 {color:black; font-size:105%; font-weight:bold; padding-top: 0.5em; padding-bottom: 0.2em; }
-  h3 {color:black; font-size:90%; font-weight:bold; padding-bottom:0.3em; border-bottom-style:solid; border-bottom-width:1px; border-bottom-color:#CFB8B8;
+  h3 {color:black; font-size:90%; font-weight:bold; padding-top: 0.5em; padding-bottom:0.3em; border-bottom-style:solid; border-bottom-width:1px; border-bottom-color:#CFB8B8;
 	margin-bottom:0em}
   h4 {color:black; font-size:80%; font-weight:bold}
   p {text-align:justify; color:black; font-size: 70%; line-height: 1.5em; padding-bottom: 0.4em;}
