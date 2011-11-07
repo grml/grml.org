@@ -73,7 +73,6 @@
           <li><a href="#boot">grml does not boot on my computer!</a></li>
           <li><a href="#fbprobs">I don't see anything when booting grml?!</a></li>
           <li><a href="#utf8">I have problems with UTF-8 / Unicode</a></li>
-          <li><a href="#grml2hdhang">grml2hd seems to hang?!</a></li>
           <li><a href="#cifsshare">Booting grml-small via PXE using a CIFS share fails</a></li>
           <li><a href="#missingfiles">I noticed some files are missing on grml</a></li>
           <li><a href="#bugreport">Bugreport</a></li>
@@ -445,26 +444,6 @@ $ grep -ch grml .centericq/**/history | xargs echo | \
         href="http://wiki.grml.org/doku.php?id=utf8">UTF8-webpage in the
         grml-wiki</a>.</p>
 
-        <h3><a name="grml2hdhang"></a><a href="#toc">grml2hd seems to hang?!</a></h3>
-
-        <p>grml2hd seems to hang? Switch to tty12 and take a look at the syslog output.
-        If you see something like:</p>
-
-<pre class="rahmen">
-SQUASHFS error: zlib_fs returned unexpected result 0x........
-SQUASHFS error: Unable to read cache block [.....]
-SQUASHFS error: Unable to read inode [.....]</pre>
-
-        <p>your ISO/CD-ROM <em>very</em> probably is NOT ok. Verify it via
-        booting with grml testcd if that works, or even better check your CD
-        low-level via running:</p>
-
-<pre class="rahmen">
-# readcd -c2scan dev=/dev/cdrom</pre>
-
-        <p>If the medium really is ok and it still fails try to boot with
-        DMA deactivated via 'grml nodma ide=nodma libata.dma=0' at the bootprompt.</p>
-
         <h3><a name="cifsshare"></a><a href="#toc">Booting grml-small via PXE using a CIFS share fails</a></h3>
 
         <p>When trying to boot grml-small[64] via PXE (network boot) using a
@@ -550,29 +529,6 @@ grml keyboard=de xkeyboard=de lang=at # enter this at the bootprompt
 % grml-lang de    # enter this in the shell to switch keyboard layout
                   # and $LANG settings in a running grml-system
 </pre>
-
-        <p>If you are running grml from harddisk (using <a
-        href="#hdinstall">grml2hd</a>) you have several options how to set
-        language options:</p>
-
-        <ul>
-
-          <li>adjust /etc/default/locale to configure global language and
-          environment settings</li>
-
-          <li>set environment variables like $LC_ALL, $LANG, $LANGUAGE in your
-          personal configuration files (like ~/.zshrc.local, see <a
-          href="/zsh/">grml zsh reference card</a> for details)
-          if you do not want to use them system wide/global</li>
-
-          <li>adjust /etc/sysconfig/keyboard to configure keyboard layout
-          on console, or run 'loadkeys $KEYTABLE' manually</li>
-
-          <li>add &quot;setxkbmap $LANGUAGE&quot; to the keybindings section in
-          your ~/.xinitrc to configure keyboard setup for the X window system
-          (deactivate the xmodmap lines if necessary)</li>
-
-        </ul>
 
         <p>Note: run grml-setlang to get a dialog based frontend for
         /etc/default/locale. Run grml-setkeyboard to get a dialog based frontend
@@ -714,62 +670,6 @@ or use the shorter version:
               tz=Europe/Vienna
         </ul>
 
-        <h4>Configuration options relevant on harddisk installation:</h4>
-
-        <p>Run:
-
-<pre class="rahmen">
-# dpkg-reconfigure tzdata
-</pre>
-
-        <p>to adjust /etc/timezone and /etc/localtime according to the
-        provided information.</p>
-
-        <p><strong>/etc/default/rcS:</strong> set variable UTC according
-        to your needs, whether your system clock is set to UTC
-        (UTC='yes') or not (UTC='no')</p>
-
-        <p><strong>/etc/localtime:</strong> adjust zoneinfo according to
-        your needs:</p>
-
-<pre class="rahmen">
-# ln -sf /usr/share/zoneinfo/$WHATEVER_YOU_WANT /etc/localtime
-</pre>
-
-        <p>The zoneinfo directory contains the time zone files that were
-        compiled by zic. The files contain information such as rules
-        about DST. They allow the kernel to convert UTC UNIX time into
-        appropriate local dates and times. Use the zdump utility to
-        print current time and date (in the specified time zone).</p>
-
-        <p><strong>/etc/adjtime:</strong> This file is used e.g. by the
-        adjtimex function, which can smoothly adjust system time while
-        the system runs.</p>
-
-        <p>If you change the time (using 'date --set ...', ntpdate,...)
-        it is worth setting also the hardware clock to the correct
-        time:</p>
-
-<pre class="rahmen">
-# hwclock --systohc [--utc]
-</pre>
-
-        <p>Remember to add the --utc -option if the hardware clock is set to
-        UTC!</p>
-
-        <h4>Still problems?</h4>
-
-        <p>Check your current settings via:</p>
-
-<pre class="rahmen">
-cat /etc/timezone
-zdump /etc/localtime
-echo $TZ
-hwclock --show
-grep hwclock /etc/runlevel.conf
-grep '^UTC' /etc/default/rc
-</pre>
-
         <h4>Further information:</h4>
 
         <p>Manpages: hwclock(8) tzselect(1) tzconfig(8); <a
@@ -780,32 +680,14 @@ grep '^UTC' /etc/default/rc
 
         <h3><a name="hdinstall"></a><a href="#toc">Is it possible to install grml to harddisk?</a></h3>
 
-        <p>Yes. Grml provides a tool called <a href="/grml2hd/">grml2hd</a> (see
-        '<a href="/grml2hd/grml2hd.html">man grml2hd</a>').  grml is developed
-        on a box running the grml-system itself, and we - the grml-developers -
-        especially like grml2hd because it gives us a working Linux box within
-        10 to 30 minutes.  grml2hd is perfect for prototyping: test hardware
-        support of Linux, test a specific setup, ... You can even use grml2hd in
-        a fully automatic mode without any further interaction.</p>
+        <p>Short anwer: No.</p>
 
-        <p>But <strong>please note</strong>: grml2hd does <strong>NOT</strong>
-        provide a Linux distribution for newbies and should be installed to hard
-        disk only if really know what you are doing (or don't care about
-        maintainability, seriously). Please install grml using grml2hd only if
-        can answer all of the following questions with 'sure, YES':</p>
-
-        <ul>
-            <li>Are you used to work with Debian/unstable?
-            <li>Do you know how to report bugs to Debian?
-            <li>Are you aware of the differences between plain Debian and grml?
-        </ul>
-
-        <p><strong>Tip</strong>: If you want to get a plain Debian system take
+        <p><strong>ProTip</strong>: If you want to get a plain Debian system take
         a look at <a href="/grml-debootstrap/">grml-debootstrap</a>.</p>
 
-        <p><strong>Note:</strong> If you are using grml in a production
-        environment and/or use a grml2hd installation, we strongly recommend you
-        subscribe to <a href="/mailinglist/">the grml user mailinglist</a>!</p>
+	<p>Longer answer: you can get a copy of the live system installed to your
+	hard disk by running a tool called <a href="/grml2hd/">grml2hd</a>.
+	This is <strong>TOTALLY UNSUPPORTED</strong>.</p>
 
 	<h3><a name="aptgethangs"></a><a href="#toc">'apt-get install foo' seems to freeze after a while</a></h3>
 
