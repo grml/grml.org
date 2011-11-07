@@ -38,7 +38,7 @@ html{color:#000;background:#FFF}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre
   h3 {color:black; font-size:90%; font-weight:bold; padding-bottom:0.3em; border-bottom-style:solid; border-bottom-width:1px; border-bottom-color:#CFB8B8;
 	margin-bottom:0em}
   h4 {color:black; font-size:80%; font-weight:bold}
-  p {text-align:justify; color:black; font-size: 70%; line-height: 1.5em; padding-bottom: 0.3em;}
+  p {text-align:justify; color:black; font-size: 70%; line-height: 1.5em; padding-bottom: 0.4em;}
   ul {font-size:70%; padding-bottom: 0.3em; }
   li {list-style: circle; margin-left: 2em;}
   #texbox {}
@@ -56,7 +56,7 @@ html{color:#000;background:#FFF}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre
 
 @media screen {
   .active {background-color: #FFCC33}
-  .rahmen {background-color: #FEDB64; font-size: 90%; padding: 5px; border: 1px dotted black}
+  .rahmen {background-color: #FEDB64; font-size: 70%; padding: 5px; border: 1px dotted black}
   abbr[title], acronym[title] {border-bottom: 1px dotted #333; cursor: help}
   #survey-header a { color: white; }
   #survey-header { background-color:#AE0000; color:#FFFFFF; font-family:sans-serif; font-size:120%; font-weight:bold; left:0; padding:5px 0; margin-bottom: 15px; position:fixed; text-align:center; top:0; width:100%; z-index:101; }
