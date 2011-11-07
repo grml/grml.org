@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>grml.org - Changelogs</title>
-<meta name="Title" content="grml.org - Changelogs" />
+<title>grml.org - Release Notes</title>
+<meta name="Title" content="grml.org - Release Notes" />
 <meta name="Author" content="the grml team [www.grml.org/team/]" />
 <meta name="Keywords" content="grml.org, grml" />
 <meta name="Description" content="Changelogs of grml.org" />
@@ -27,12 +27,13 @@
 
         <p><img style="float: right" src="/img/changelog.jpg" alt="*" /></p>
 
-        <h1>Changelogs</h1>
+        <h1>Release Notes</h1>
 
-        <h2>Current releases</h2>
+        <h2>Current release</h2>
 
-        <p>The <strong>release announcement for Grml 2011.05</strong> is available online: <a
-          href="README-grml-2011.05/">README-grml-2011.05/</a>.</p>
+	<p>
+        <a href="README-grml-2011.05/">Release announcement for Grml 2011.05</a>
+	</p>
 
         <!--
         <h2>Current release candidate</h2>
@@ -41,7 +42,7 @@
         available online: <a href="README-grml-2011.05-rc1/">README-grml-2011.05-rc1/</a>.</p>
         -->
 
-        <h2>Older releases</h2>
+        <h2>Previous releases</h2>
         <p>Please note that starting with Grml 2010.12 we only provide one README for all different flavours.</p>
 
         <h3>grml</h3>
