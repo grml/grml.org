@@ -92,10 +92,11 @@
           <li><a href="#usbmount">How do I mount a USB device / USB stick?</a></li>
           <li><a href="#lvm">Where are my LVM devices?</a></li>
           <li><a href="#swraid">Where are my Software-RAID devices?</a></li>
-          <li><a href="libata">Why doesn't grml find my disks / doesn't boot?</a></li>
+          <li><a href="#libata">Why doesn't grml find my disks / doesn't boot?</a></li>
           <li><a href="#booting">Which ways exist to boot grml?</a></li>
           <li><a href="#timezone">How do I configure timezone on my grml system?</a></li>
           <li><a href="#hdinstall">Is it possible to install grml to harddisk?</a></li>
+          <li><a href="#aptgethangs">'apt-get install foo' seems to freeze after a while</a></li>
         </ol>
 
         <p class="toc"><a href="#kernel">Kernel</a>:</p>
@@ -805,6 +806,10 @@ grep '^UTC' /etc/default/rc
         <p><strong>Note:</strong> If you are using grml in a production
         environment and/or use a grml2hd installation, we strongly recommend you
         subscribe to <a href="/mailinglist/">the grml user mailinglist</a>!</p>
+
+	<h3><a name="aptgethangs"></a><a href="#toc">'apt-get install foo' seems to freeze after a while</a></h3>
+
+	<p>It seems you are running out of RAM - see 'free' while running 'apt-get…'. UnionFS and the debian packetmanagement require some more RAM for the ramdisk. Some tests showed that at least 164 MB RAM should be present for live-installation, otherwise you might run into a freeze.</p>
 
         <h2><a name="kernel"></a><a href="#toc">Kernel</a></h2>
 
