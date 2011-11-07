@@ -1,0 +1,145 @@
+#!/usr/bin/env python2.5
+"""
+Filename:      google_correct.py
+Purpose:       correct a keyword using google search
+Authors:       (c) Michael Prokop <mika@grml.org>
+Bug-Reports:   see http://grml.org/bugs/
+License:       This file is licensed under the GPL v2 or any later version.
+Latest change: Sun Mar 09 19:19:04 CET 2008 [mika]
+
+Notice:
+
+* requires xsel binary
+* requires python >= 2.4 (for urllib2), version 2.5 suggested :)
+* if python-notify is installed it's used as notification system
+
+History:
+
+* 2008-03-09: improve cmdline parsing logic [gregor herrmann]
+              include support for libnotify [mika]
+              usage information for -h/--help [mika]
+              provide output on stdout even when using xsel [mika]
+* 2008-02-11: initial version [mika]
+
+Whishlist:
+
+* support multiple keywords in one single invocation
+* use python-xlib instead of xsel,
+  like in http://kalvdans.no-ip.org/svn/saturnapps/selection.py ?
+* support something like a search gateway for anonymous search requests
+* support different backends (like fuzzy search in local dictionaries)
+* provide small selection menu for X, vim,...
+"""
+
+import os
+import re
+import urllib
+import urllib2
+import subprocess
+import sys
+
+_correction_re = re.compile(r'<font[^>]*>Did you mean: </font><a[^>]*>'
+                            r'<b><i>(.*?)</i></b></a>(?i)')
+
+def usage():
+    print """
+google_correct.py: correct a keyword using google's 'Did you mean' feature
+
+Usage:
+
+      Either run:
+
+        google_correct.py <keyword>
+
+      or select keyword in X and execute the script to set new X selection:
+
+        google_correct.py
+
+Send bug reports, feature requests and patches to Michael Prokop <mika@grml.org>
+"""
+
+def which(filename):
+    """Check whether a given program can be executed"""
+    for path in (os.environ.get('PATH') or os.defpath).split(os.pathsep):
+        myfile = os.path.join(path, filename)
+        if os.access(myfile, os.X_OK):
+            return myfile
+
+def correct_keyword(keyword):
+    """Correct spelling of a keyword using google's 'Did you mean' feature"""
+    req = urllib2.Request('http://www.google.com/search?%s' % urllib.urlencode({
+        'q':        keyword.encode('utf-8'),
+        'spell':    '1'
+    }))
+    req.add_header('User-Agent', 'Mikas-Keyword-Corrector/1.0 :-)')
+    resp = urllib2.urlopen(req)
+    match = _correction_re.search(resp.read())
+    return match and match.group(1) or keyword
+
+# would be nice to support multiple keywords at once,
+# needs work in _correction_re though:
+#def cmdline():
+#    for argument in sys.argv[1:]:
+#        return ' '.join(arg for arg in sys.argv[1:])
+#keyword = cmdline()
+
+def get_x_selection():
+    """Get X selection"""
+    proc = subprocess.Popen(['xsel', ], stdout=subprocess.PIPE)
+    x_selection = proc.stdout.read()
+    proc.stdout.close()
+    proc.wait()
+    return x_selection
+
+def set_x_selection(keyword):
+    """Set X selection to the given keyword"""
+    proc = subprocess.Popen(['xsel', '-i'], stdin=subprocess.PIPE)
+    proc.stdin.write(keyword)
+    proc.stdin.close()
+    proc.wait()
+
+def default_cb(n, action):
+    assert action == "default"
+    print "You clicked the default action"
+    n.close()
+    gtk.main_quit()
+
+def notify(new_keyword, old_keyword):
+    try:
+        import pynotify
+        if pynotify.init("google_correct"):
+            if new_keyword is not old_keyword:
+                n = pynotify.Notification("New keyword for \"%s\":" % old_keyword, new_keyword)
+            else:
+                n = pynotify.Notification("google_correct result:", "No new keyword for \"%s\" found" % old_keyword)
+
+            n.set_timeout(2000)
+            n.show()
+    except:
+        return 0 # don't print anything because someone might use the output :)
+
+if __name__ == '__main__':
+    if '--help' in sys.argv or '-h' in sys.argv:
+        usage()
+        sys.exit(1);
+
+    if sys.argv[1:]:
+        # print it to stdout:
+        old_keyword = sys.argv[1]
+        new_keyword = correct_keyword(old_keyword)
+        print new_keyword
+        notify(new_keyword, old_keyword)
+        # or if you prefer to put it directly to X selection:
+        #set_x_selection(correct_keyword(sys.argv[1]))
+    else:
+       if which('xsel'):
+           old_keyword = get_x_selection()
+           new_keyword = correct_keyword(old_keyword)
+           print new_keyword
+           set_x_selection(new_keyword)
+           notify(new_keyword, old_keyword)
+       else:
+           sys.exit("Sorry, xsel not found. Exiting.")
+
+## END OF FILE #################################################################
+# vim: ft=python tw=100 ai et
