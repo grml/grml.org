@@ -75,6 +75,7 @@
           <li><a href="#utf8">I have problems with UTF-8 / Unicode</a></li>
           <li><a href="#cifsshare">Booting grml-small via PXE using a CIFS share fails</a></li>
           <li><a href="#missingfiles">I noticed some files are missing on grml</a></li>
+          <li><a href="#aptgethangs">'apt-get install foo' seems to freeze after a while</a></li>
           <li><a href="#bugreport">Bugreport</a></li>
         </ol>
 
@@ -95,7 +96,6 @@
           <li><a href="#booting">Which ways exist to boot grml?</a></li>
           <li><a href="#timezone">How do I configure timezone on my grml system?</a></li>
           <li><a href="#hdinstall">Is it possible to install grml to harddisk?</a></li>
-          <li><a href="#aptgethangs">'apt-get install foo' seems to freeze after a while</a></li>
         </ol>
 
         <p class="toc"><a href="#kernel">Kernel</a>:</p>
@@ -462,6 +462,10 @@ $ grep -ch grml .centericq/**/history | xargs echo | \
         really care about, but as we don't hide anything we thought it might be
         worth mentioning.</p>
 
+	<h3><a name="aptgethangs"></a><a href="#toc">'apt-get install foo' seems to freeze after a while</a></h3>
+
+	<p>It seems you are running out of RAM - see 'free' while running 'apt-get…'. UnionFS and the debian packetmanagement require some more RAM for the ramdisk. Some tests showed that at least 164 MB RAM should be present for live-installation, otherwise you might run into a freeze.</p>
+
         <h3><a name="bugreport"></a><a href="#toc">Bugreport</a></h3>
 
         <p>Searching for a bug? Want to report a bug? Take a look at the <a
@@ -688,10 +692,6 @@ or use the shorter version:
 	<p>Longer answer: you can get a copy of the live system installed to your
 	hard disk by running a tool called <a href="/grml2hd/">grml2hd</a>.
 	This is <strong>TOTALLY UNSUPPORTED</strong>.</p>
-
-	<h3><a name="aptgethangs"></a><a href="#toc">'apt-get install foo' seems to freeze after a while</a></h3>
-
-	<p>It seems you are running out of RAM - see 'free' while running 'apt-get…'. UnionFS and the debian packetmanagement require some more RAM for the ramdisk. Some tests showed that at least 164 MB RAM should be present for live-installation, otherwise you might run into a freeze.</p>
 
         <h2><a name="kernel"></a><a href="#toc">Kernel</a></h2>
 
