@@ -52,6 +52,8 @@ html{color:#000;background:#FFF}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre
   .banner h2 { margin: 0; color: navy; font-size: 11pt; }
   .logo { padding-top: 1em; }
   #searchbox { width: 8em; border: 1px solid #aaa; }
+  b,strong { font-weight: bold; }
+  i,em { font-style: italic; }
 }
 
 @media screen {
