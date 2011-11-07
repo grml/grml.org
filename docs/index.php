@@ -29,7 +29,7 @@
 
             <h1>Documentation</h1>
 
-            <h2>General</h2>
+            <h2>FAQ &amp; zsh</h2>
 
             <p>Frequently asked questions and answers can be found in the section <a
             href="/faq/">FAQ</a>. If you are looking for information on <a
@@ -52,7 +52,7 @@
             <p>This document provides information about technologies used at grml and
             some main stuff about grml itself.</p>
 
-            <h2>Guides / HowTos</h2>
+            <h2>Guides</h2>
 
             <h3>grml-live</h3>
 
