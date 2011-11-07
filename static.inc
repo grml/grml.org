@@ -22,8 +22,8 @@
             <h3>Getting grml</h3>
               <p>
                 <a class="plain" href="/download/">Download</a><br/>
-                <a class="plain" href="/order/">Order</a><br/>
-                <a class="plain" href="/files/">Files</a><br/>
+                <a class="plain" href="/order/">Order a CD</a><br/>
+                <a class="plain" href="/files/">Packages &amp; Files</a><br/>
               </p>
             <h3>Documentation</h3>
               <p>
