@@ -36,6 +36,7 @@
             <h3>Development</h3>
               <p>
                 <a class="plain" href="/bugs/">Reporting Bugs</a><br/>
+                <a class="plain" href="/bugs/known/">Known Bugs</a><br/>
                 <a class="plain" href="/beta/">Beta Versions</a><br/>
               </p>
             <h3>Support</h3>

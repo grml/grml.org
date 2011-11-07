@@ -27,29 +27,19 @@
 
         <p><img style="float: right" src="/img/face-tongue.png" alt="*" /></p>
 
-        <h1>Bugs</h1>
+        <h1>Reporting Bugs</h1>
 
-        <h2>Known Bugs</h2>
-        <p>Issues regarding the current releases can be found in the <a
-          href="http://wiki.grml.org/">grml-wiki</a>:</p>
-
-        <ul>
-          <li>Known Bugs for <a href="http://wiki.grml.org/doku.php?id=grml_2011.05">Grml 2011.05</a></li>
-          <li>Known Bugs for <a href="http://wiki.grml.org/doku.php?id=grml_2010.12">Grml 2010.12</a></li>
-        </ul>
-
-        <ul>
-          <li><a href="http://bts.grml.org/grml/">Open Issues in the Bugtracker</a></li>
-        </ul>
-
-        <h2>Report a new bug</h2>
+	<p>
+	Please check for <a href="/bugs/known/">known bugs</a> first.</p>
 
         <ul>
           <li>Web: <a href="http://bts.grml.org/grml/user?@template=register">Register</a> and then <a href="http://bts.grml.org/grml/issue?@template=item">Create an issue</a></li>
           <li>Using E-Mail: Send mail to <code>bugs (at) grml.org</code></li>
         </ul>
 
-        <p>Please be as specific as possible.<br>
+        <p>Please be as specific as possible.</p>
+
+	<p>
         Include at least:
         <ul>
             <li>Steps to reproduce the problem</li>
