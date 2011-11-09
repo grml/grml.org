@@ -31,6 +31,7 @@
 
             <ul>
                 <li>Alexander Wirt (formorer)</li>
+                <li>Andreas Gredler (jimmy)</li>
                 <li>Christian Hofstaedtler (ch)</li>
                 <li>Frank Terbeck (ft)</li>
                 <li>Gerfried Fuchs (rhonda)</li>
@@ -41,7 +42,6 @@
             <h2>Grml Contributors</h2>
 
             <ul>
-                <li>Andreas Gredler</li>
                 <li>Axel Beckert</li>
                 <li>Bernhard Tittelbach</li>
                 <li>Michael Gebetsroither</li>
