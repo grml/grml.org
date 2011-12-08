@@ -77,7 +77,7 @@
 
 <div class="content">
 
-    <h1>Download Grml 2011.05-rc1</h1>
+    <h1>Download Grml 2011.12-rc1</h1>
 
     <p><strong>NOTE:</strong> There is no current pre-release.</p>
 
@@ -90,20 +90,18 @@
 
     <div class="download_group" id="download_group1">
     <form method="post" action="/cgi-bin/download.cgi">
-    <input type="hidden" name="version" value="2011.05-rc1"/> 
+    <input type="hidden" name="version" value="2011.12-rc1"/>
     <div class="download_panel" id="download_panel1"><div>
 
     <h2>Options</h2>
 
     <select name="flavour" id="download_flavour" style="width:100%;">
-    <option value="full" selected="selected">grml (700MB)</option>
-    <option value="medium">grml-medium (220MB)</option>
-    <option value="small">grml-small (110MB)</option>
+    <option value="full" selected="selected">grml (350MB)</option>
     </select>
     <br /><br />
     <select name="arch" id="download_arch" style="width:100%;">
-    <option value="i386" selected="selected">32-bit PC</option>
-    <option value="amd64">64-bit PC</option>
+    <option value="amd64" selected="selected">64-bit PC</option>
+    <option value="i386">32-bit PC</option>
     </select>
     <br />
     </div></div>
@@ -127,7 +125,7 @@
     </form>
     <script type="text/javascript">
     function update_links() {
-        var current_version = "2011.05";
+        var current_version = "2011.12";
         var product = 'grml';
         var arch = document.getElementById('download_arch').value;
         var flavour = document.getElementById('download_flavour').value;
@@ -143,10 +141,6 @@
     // hook update function
     document.getElementById('download_flavour').onchange = update_links;
     document.getElementById('download_arch').onchange = update_links;
-    var ua = window.navigator.userAgent;
-    if (ua.indexOf('WOW64') != -1 || ua.indexOf('Win64') != -1 || ua.indexOf('x64') != -1 || ua.indexOf('x86_64') != -1 || ua.indexOf('amd64') != -1) {
-        document.getElementById('download_arch').value = 'amd64';
-    }
     // force initial link href set
     update_links();
     // only show our link "buttons"
@@ -172,7 +166,7 @@
     <b>Boot from USB stick</b><br />
     <br />
     Just <tt>dd(1)</tt> the downloaded ISO to an <abbr title="Any existing data will be overriden by the dd command!">empty</abbr> USB stick!<br /><br />
-    <code>dd if=grml_2011.05-rc1.iso of=/dev/USB_STICK</code>
+    <code>dd if=grml_2011.12-rc1.iso of=/dev/USB_STICK</code>
     <br /><br />
 
     <b>Troubleshooting</b><br /><br />
