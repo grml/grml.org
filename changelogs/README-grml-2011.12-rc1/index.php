@@ -57,7 +57,7 @@
             can now directly build virtual machine images.</li>
 
           <li><a href="/grml-live/">grml-live</a>, our build tool, was enhanced with new features to
-            allow for <a href="http://jenkins-ci.org/">Jenkins</a> integration.
+            better integrate with <a href="http://jenkins-ci.org/">Jenkins</a>.
             This release, as well as the current <a href="/daily/">daily images</a>
             are built from within Jenkins!</li>
 
