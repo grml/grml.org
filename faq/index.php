@@ -28,7 +28,7 @@
 
         <h1 align="center">FAQ for grml</h1>
 
-        <p><strong>Up2date:</strong> 2011-12-09 - applies to Grml releases version 2011.12</p>
+        <p><strong>Up2date:</strong> applies to Grml releases version 2011.12</p>
 
         <p><a name="toc"></a><strong>Index:</strong></p>
 
@@ -65,7 +65,7 @@
         </ol>
         </ol>
 
-        <p class="toc"><a href="#stuff">Support / Unanswered stuff</a></p>
+        <p class="toc"><a href="#stuff">Support / Unanswered stuff:</a></p>
         <ol>
           <li><a href="#questions">Further questions?</a></li>
           <li><a href="#support">Commercial Support</a></li>
@@ -206,10 +206,6 @@ grml keyboard=de xkeyboard=de lang=at # enter this at the bootprompt
 
 <pre class="rahmen">
 # /etc/init.d/lvm2 start
-
-or use the shorter version:
-
-# Start lvm2
 </pre>
 
         <p>If you want to enable LVM by default just boot using the 'lvm'
@@ -223,10 +219,6 @@ or use the shorter version:
 
 <pre class="rahmen">
 # /etc/init.d/mdadm-raid start
-
-or use the shorter version:
-
-# Start mdadm-raid
 </pre>
 
         <p>If you want to enable SW-RAID by default just boot using
@@ -288,8 +280,8 @@ or use the shorter version:
 
         <p>Short anwer: No.</p>
 
-	<p><strong>ProTip</strong>: If you want to get a plain Debian
-	system take a look at <a href="/grml-debootstrap/">grml-debootstrap</a>.</p>
+	<p>If you want to get a plain Debian system take a look at <a
+	href="/grml-debootstrap/">grml-debootstrap</a>.</p>
 
 	<p>Long(er) answer: yes it's possible to install Grml. But it's not
 	supported and you'll be on your own. That's why we decided to make it
@@ -312,26 +304,10 @@ or use the shorter version:
 
         <p>Short answer: because <a href="/zsh/">Zsh rocks</a>, really!</p>
 
-        <p>Longer answer taken
-        from <a href="http://zsh.sourceforge.net/FAQ/zshfaq01.html#l3">ZSH
-        FAQ: 1.2: What is it?</a>:</p>
+	<p>Long(er) answer: If you don't know Zsh take a look the <a
+	href="/zsh/">Grml Zsh reference	card</a>.</p>
 
-        <cite> Zsh is a UNIX command interpreter (shell) which of the
-        standard shells most resembles the Korn shell (ksh); its
-        compatibility with the 1988 Korn shell has been gradually
-        increasing. It includes enhancements of many types, notably in
-        the command-line editor, options for customising its
-        behaviour, filename globbing, features to make C-shell (csh)
-        users feel more at home and extra features drawn from tcsh
-        (another `custom' shell).</cite>
-
-        <p>If you don't know Zsh take a look
-        at <a href="http://zsh.sourceforge.net/FAQ/zshfaq02.html#l9">ZSH
-        FAQ: How does zsh differ from ...?</a>, 'man zsh | less -p
-        COMPATIBILITY', the <a href="/zsh/">Grml Zsh reference
-        card</a> and '<a href="/zsh/">man zsh-lovers</a>'.</p>
-
-        <p>If you are a bash user and don't know Zsh yet, don't be
+        <p>If you are a Bash user and don't know Zsh yet, don't be
         afraid. Bash is largely a subset of Zsh and you don't have to
         throw away your knowledge about shell stuff.</p>
 
