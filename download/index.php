@@ -79,7 +79,7 @@
 
     <h1>Download Grml 2011.05</h1>
 
-    <!-- 
+    <!--
     <p>Get the current stable release here.<br />
     <a href="prerelease/">Looking for the current pre-release version instead?</a></p>
     -->
@@ -90,22 +90,22 @@
 
     <div class="download_group" id="download_group1_noscript">
     <div class="download_panel" id="download_panel1_noscript"><div>
-	<a href="http://grml.org/download/mirrors/">Download from a specific mirror</a><br/>
-	<br/>
-	Direct download links:<br/>
-	<a href="http://download.grml.org/grml64_2011.05.iso">Grml64 ISO</a> [<a href="http://download.grml.org/grml64_2011.05.iso.sha1.asc">Signature</a>]<br/>
-	<a href="http://download.grml.org/grml_2011.05.iso">Grml ISO</a> [<a href="http://download.grml.org/grml_2011.05.iso.sha1.asc">Signature</a>]<br/>
-	<a href="http://download.grml.org/grml64-medium_2011.05.iso">Grml64 Medium ISO</a> [<a href="http://download.grml.org/grml64-medium_2011.05.iso.sha1.asc">Signature</a>]<br/>
-	<a href="http://download.grml.org/grml-medium_2011.05.iso">Grml Medium ISO</a> [<a href="http://download.grml.org/grml-medium_2011.05.iso.sha1.asc">Signature</a>]<br/>
-	<a href="http://download.grml.org/grml64-small_2011.05.iso">Grml64 Small ISO</a> [<a href="http://download.grml.org/grml64-small_2011.05.iso.sha1.asc">Signature</a>]<br/>
-	<a href="http://download.grml.org/grml-small_2011.05.iso">Grml Small ISO</a> [<a href="http://download.grml.org/grml-small_2011.05.iso.sha1.asc">Signature</a>]<br/>
-	<br/>
-	</div></div>
+        <a href="http://grml.org/download/mirrors/">Download from a specific mirror</a><br/>
+        <br/>
+        Direct download links:<br/>
+        <a href="http://download.grml.org/grml64_2011.05.iso">Grml64 ISO</a> [<a href="http://download.grml.org/grml64_2011.05.iso.sha1.asc">Signature</a>]<br/>
+        <a href="http://download.grml.org/grml_2011.05.iso">Grml ISO</a> [<a href="http://download.grml.org/grml_2011.05.iso.sha1.asc">Signature</a>]<br/>
+        <a href="http://download.grml.org/grml64-medium_2011.05.iso">Grml64 Medium ISO</a> [<a href="http://download.grml.org/grml64-medium_2011.05.iso.sha1.asc">Signature</a>]<br/>
+        <a href="http://download.grml.org/grml-medium_2011.05.iso">Grml Medium ISO</a> [<a href="http://download.grml.org/grml-medium_2011.05.iso.sha1.asc">Signature</a>]<br/>
+        <a href="http://download.grml.org/grml64-small_2011.05.iso">Grml64 Small ISO</a> [<a href="http://download.grml.org/grml64-small_2011.05.iso.sha1.asc">Signature</a>]<br/>
+        <a href="http://download.grml.org/grml-small_2011.05.iso">Grml Small ISO</a> [<a href="http://download.grml.org/grml-small_2011.05.iso.sha1.asc">Signature</a>]<br/>
+        <br/>
+        </div></div>
     </div>
 
     <div class="download_group" id="download_group1" style="display:none;">
     <form method="post" action="/cgi-bin/download.cgi">
-    <input type="hidden" name="version" value="2011.05"/> 
+    <input type="hidden" name="version" value="2011.05"/>
     <div class="download_panel" id="download_panel1"><div>
 
     <h2>Options</h2>
@@ -201,6 +201,12 @@
     </div></div>
 
     </div>
+
+    <h2>Git repositories</h2>
+
+    <p>The Grml team uses <a href="http://git-scm.com/">git</a> for
+    managing software and packages. The repositories are available
+    online at <a href="https://github.com/grml/">Github</a>.</p>
 
     <div style="clear: both;"></div>
 
