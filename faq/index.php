@@ -270,7 +270,7 @@ or use the shorter version:
         <h3><a name="timezone"></a><a href="#toc">How do I configure
         timezone on my Grml system?</a></h3>
 
-        <h4>Available bootoptions relevant in live-cd mode:</h4>
+        <p>Available bootoptions relevant in live-cd mode:</p>
 
         <ul>
           <li>utc: set UTC, if your system clock is set to UTC (GMT)
@@ -279,9 +279,7 @@ or use the shorter version:
               tz=Europe/Vienna
         </ul>
 
-        <h4>Further information:</h4>
-
-        <p>Manpages: hwclock(8) tzselect(1) tzconfig(8); <a
+        <p>Further information: manpages hwclock(8), tzselect(1) and tzconfig(8); <a
         href="http://www.debian.org/doc/manuals/system-administrator/ch-sysadmin-time.html">Debian
         GNU/Linux System Administrator's Manual Chapter 16 - Time</a> and <a
         href="http://wiki.debian.org/TimeZoneChanges">TimeZoneChanges in the
@@ -291,9 +289,15 @@ or use the shorter version:
 
         <p>Short anwer: No.</p>
 
-        <p><strong>ProTip</strong>: If you want to get a plain Debian
-        system take a look
-        at <a href="/grml-debootstrap/">grml-debootstrap</a>.</p>
+	<p><strong>ProTip</strong>: If you want to get a plain Debian
+	system take a look at <a href="/grml-debootstrap/">grml-debootstrap</a>.</p>
+
+	<p>Long(er) answer: yes it's possible to install Grml. But it's not
+	supported and you'll be on your own. That's why we decided to make it
+	not-so-obvious. If you really know what you're doing you'll find out on
+	your own. Reminder: use <a
+	href="/grml-debootstrap/">grml-debootstrap</a> or <a
+	href="http://www.debian.org/">Debian Installer</a> instead.</p>
 
         <h2><a name="software"></a><a href="#toc">Software</a></h2>
 
