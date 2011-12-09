@@ -40,12 +40,12 @@
           <li><a href="#releasename">What about the release name?</a></li>
           <li><a href="#requirements">Requirements for running Grml</a></li>
           <li><a href="#bootoptions">Which bootoptions does Grml support?</a></li>
-          <li><a href="#usbboot">How do I boot Grml from a USB stick?</a></li>
-          <li><a href="#persistency">Is it possible to store my settings?</a></li>
         </ol>
 
-        <p class="toc"><a href="#problems">Problems</a>:</p>
+        <p class="toc"><a href="#features">Features</a>:</p>
         <ol>
+          <li><a href="#usbboot">How do I boot Grml from a USB stick?</a></li>
+          <li><a href="#persistency">Is it possible to store my settings?</a></li>
           <li><a href="#known_issues">Are there any known issues with this release? How about reporting bugs?</a></li>
           <li><a href="#password">What are the passwords of users on Grml?</a></li>
           <li><a href="#version">How do I find out the version of Grml</a></li>
@@ -60,10 +60,8 @@
 
         <p class="toc"><a href="#software">Software:</a></p>
         <ol>
-          <li><a href="#sw_general">General</a></li>
           <li><a href="#sw_version">Which package(s) and which version is available?</a></li>
-          <li><a href="#zsh">Why is zsh the default shell?</a></li>
-          <li><a href="#bash">Is a bash available?</a></li>
+          <li><a href="#zsh">Why is Zsh the default shell?</a></li>
         </ol>
         </ol>
 
@@ -297,7 +295,6 @@ or use the shorter version:
         system take a look
         at <a href="/grml-debootstrap/">grml-debootstrap</a>.</p>
 
-
         <h2><a name="software"></a><a href="#toc">Software</a></h2>
 
         <h3><a name="sw_version"></a><a href="#toc">Which package(s) and which
@@ -325,20 +322,15 @@ or use the shorter version:
         users feel more at home and extra features drawn from tcsh
         (another `custom' shell).</cite>
 
-        <p>If you don't know zsh take a look
+        <p>If you don't know Zsh take a look
         at <a href="http://zsh.sourceforge.net/FAQ/zshfaq02.html#l9">ZSH
         FAQ: How does zsh differ from ...?</a>, 'man zsh | less -p
-        COMPATIBILITY', the <a href="/zsh/">Grml zsh reference
+        COMPATIBILITY', the <a href="/zsh/">Grml Zsh reference
         card</a> and '<a href="/zsh/">man zsh-lovers</a>'.</p>
 
-        <p>If you are a bash user and don't know zsh yet, don't be
+        <p>If you are a bash user and don't know Zsh yet, don't be
         afraid. Bash is largely a subset of Zsh and you don't have to
         throw away your knowledge about shell stuff.</p>
-
-        <h3><a name="bash"></a><a href="#toc">Is a bash available?</a></h3>
-
-        <p>Grml uses <a href="#zsh">Zsh</a> as the default interactive shell
-        but a current version of Bash available on Grml as well.</p>
 
         <h2><a name="stuff"></a><a href="#toc">Support / Unanswered stuff</a></h2>
 
