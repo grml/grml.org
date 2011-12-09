@@ -105,6 +105,11 @@
     <option value="i386">32-bit PC</option>
     </select>
     <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <a href="/changelogs/README-2011.12-rc1/">Release Notes</a>
     </div></div>
 
     <div class="download_panel" id="download_panel2"><div>
@@ -117,16 +122,15 @@
     <!-- JS links -->
     <div id="linkbuttons" style="display:none;">
     <a id="download_link_mirror" class="largebutton">Download Now</a><br />
-    <a id="download_link_bt">Download using BitTorrent</a><br />
+    <a id="download_link_bt">BitTorrent Download</a><br />
     <a id="download_link_signature">Get Checksum/Signature</a><br />
-    <a href="/download/mirrors/">Download from a specific mirror</a><br />
     </div>
     </div></div>
 
     </form>
     <script type="text/javascript">
     function update_links() {
-        var current_version = "2011.12";
+        var current_version = "2011.12-rc1";
         var product = 'grml';
         var arch = document.getElementById('download_arch').value;
         var flavour = document.getElementById('download_flavour').value;
