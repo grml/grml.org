@@ -14,7 +14,7 @@ html{color:#000;background:#FFF}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre
 @media all {
   html {background-color: #FFDA62; height: 100%;}
   body {font-family: verdana, tahoma, helvetica, arial, sans-serif; font-size: 14pt; background-color:#FFDA62; margin: 0; padding: 0; height:100%}
-  div.container {width: 80%; text-align: left; background-color:#FFFFFF; margin: 0px auto 0px auto; border-width: 0 1px 0 1px; border-color: #E5E5E5; border-style: solid; min-height: 100%; height: auto;}
+  div.container {width: 80%; text-align: left; background-color:#FFFFFF; margin: 0px auto 0px auto; border-width: 0 1px 0 1px; border-color: #E5E5E5; border-style: solid; overflow: auto; height: 100%}
   a {color:#C70036; text-decoration: underline}
   a.current {color:#999999}
   a:hover {text-decoration: underline}
