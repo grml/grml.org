@@ -40,13 +40,13 @@
           <li><a href="#releasename">What about the release name?</a></li>
           <li><a href="#requirements">Requirements for running Grml</a></li>
           <li><a href="#bootoptions">Which bootoptions does Grml support?</a></li>
+          <li><a href="#known_issues">Are there any known issues with this release? How about reporting bugs?</a></li>
         </ol>
 
         <p class="toc"><a href="#features">Features</a>:</p>
         <ol>
           <li><a href="#usbboot">How do I boot Grml from a USB stick?</a></li>
           <li><a href="#persistency">Is it possible to store my settings?</a></li>
-          <li><a href="#known_issues">Are there any known issues with this release? How about reporting bugs?</a></li>
           <li><a href="#password">What are the passwords of users on Grml?</a></li>
           <li><a href="#version">How do I find out the version of Grml</a></li>
           <li><a href="#language">How do I change the language/keyboard settings?</a></li>
@@ -130,9 +130,16 @@
         href="http://www.kernel.org/doc/Documentation/kernel-parameters.txt">kernel-parameters.txt</a>
         of the Linux kernel applies to Grml as well.</p>
 
-        <h3><a name="usbboot"></a><a href="#toc">How do I boot Grml from a USB stick?</a></h3>
+        <a name="release"></a> <!-- old anchor -->
+        <a name="bugreport"></a> <!-- old anchor -->
+        <h3><a name="known_issues"></a><a href="#toc">Are there any known issues? How about reporting bugs?</a></h3>
+
+        <p>Please visit the <a href="/bugs/">bug webpage</a>.</p>
+
+        <h2><a name="features"></a><a href="#toc">Features</a></h2>
 
         <!-- TODO: needs to be improved! -->
+        <h3><a name="usbboot"></a><a href="#toc">How do I boot Grml from a USB stick?</a></h3>
 
         <p>Check
         out <a href="http://wiki.grml.org/doku.php?id=usb#grml2usb">grml2usb</a>
@@ -145,14 +152,6 @@
         <p>Yes, using the
         a <a href="http://wiki.grml.org/doku.php?id=persistency">persistency
         feature</a>.</p>
-
-        <h2><a name="problems"></a><a href="#toc">Problems</a></h2>
-
-        <a name="release"></a> <!-- old anchor -->
-        <a name="bugreport"></a> <!-- old anchor -->
-        <h3><a name="known_issues"></a><a href="#toc">Are there any known issues? How about reporting bugs?</a></h3>
-
-        <p>Please visit the <a href="/bugs/">bug webpage</a>.</p>
 
         <h3><a name="password"></a><a href="#toc">What are the passwords of users on Grml?</a></h3>
 
