@@ -30,7 +30,6 @@
                 <a class="plain" href="/docs/">Documentation</a><br/>
                 <a class="plain" href="/faq/"><abbr title="Frequently Asked Questions">FAQ</abbr></a><br/>
                 <a class="plain" href="http://wiki.grml.org/">Wiki</a><br/>
-                <a class="plain" href="/kernel/">Kernel</a><br/>
                 <a class="plain" href="/zsh/"><abbr title="The Z shell - the geek's shell">Zsh</abbr></a><br/>
               </p>
             <h3>Development</h3>
