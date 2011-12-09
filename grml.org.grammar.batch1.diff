@@ -1,0 +1,262 @@
+diff --git a/beta/index.php b/beta/index.php
+index 8653213..e3efa8d 100644
+--- a/beta/index.php
++++ b/beta/index.php
+@@ -41,14 +41,14 @@
+         <p>Our CI system builds a special version of the grml-medium amd64
+         flavour after every Grml git code change. This build is usually not
+         tested and includes experimental code that may not have been tested
+-        or may never be released.
++        either and that may never be released.
+         <a href="http://jenkins.grml.org/job/grml-medium-amd64/">See here.</a></p>
+ 
+ 
+         <h2>Release Candidates</h2>
+ 
+-        <p>Shortly before a release will happen, a release candidate will
+-        usually be announced on <a href="/irc/">IRC</a>.</p>
++        <p>Shortly before we publish a new release, a release candidate is
++        usually announced on <a href="/irc/">IRC</a>.</p>
+ 
+       </div>
+ 
+diff --git a/bugs/index.php b/bugs/index.php
+index f7a8c58..7acb37e 100644
+--- a/bugs/index.php
++++ b/bugs/index.php
+@@ -54,7 +54,7 @@
+ 
+         <p>Note: all bugs are made public.</p>
+ 
+-        <p><b>Thank you for helping us improving Grml!</b></p>
++        <p><b>Thank you for helping us improve Grml!</b></p>
+ </div>
+ 
+ <?php include '../static_bottom.inc'; ?>
+diff --git a/bugs/known/index.php b/bugs/known/index.php
+index caa564c..5403659 100644
+--- a/bugs/known/index.php
++++ b/bugs/known/index.php
+@@ -29,7 +29,7 @@
+ 
+         <p>Additional issues can be found in the Grml Bugtracker. <a href="http://bts.grml.org/grml/">List of Open Issues</a>.</p>
+ 
+-	<p>If you find additional bugs, please <a href="/bugs/">please report them</a>.</p>
++	<p>If you find additional bugs, please <a href="/bugs/">report them</a>.</p>
+ 
+ 	<h2>Known Bugs in Grml 2011.05</h2>
+ 	<ul>
+diff --git a/config/index.php b/config/index.php
+index 0532da3..0c2784b 100644
+--- a/config/index.php
++++ b/config/index.php
+@@ -29,20 +29,20 @@
+ 
+         <h1>Configuration</h1>
+ 
+-        <p>Starting with version 0.5 Grml provided a configuration system.  For
+-        more details take a look at <a href="grml-autoconfig.1.html">grml-autoconfig.1.html</a>.</p>
++        <p>Starting with version 0.5 Grml provides a configuration system.  Please
++        see <a href="grml-autoconfig.1.html">grml-autoconfig.1.html</a> for details.</p>
+ 
+-	<p>On Grml releases &lt;=2009.05 the documentation is available on the
+-	grml ISO via 'man save-config' and <a
++	<p>In Grml releases up to and including 2009.05 the documentation is available on the
++	grml ISO via 'man save-config' and as <a
+ 	  href="file:///usr/share/doc/grml-saveconfig/grml-config.html">/usr/share/doc/grml-saveconfig/grml-config.html</a>.</p>
+ 
+-	<p>On Grml releases &gt;2009.05 the documentation is available on the
+-	grml-ISO via 'man 1 grml-autoconfig' and <a
++	<p>In Grml releases after 2009.05 the documentation is available on the
++	grml-ISO via 'man 1 grml-autoconfig' and as <a
+ 	  href="file:///usr/share/doc/grml-autoconfig/grml-autoconfig.1.html">/usr/share/doc/grml-autoconfig/grml-autoconfig.1.html</a>.</p>
+ 
+ 	<p><strong>Tip:</strong> Make sure to also check out the new <a
+ 	  href="http://wiki.grml.org/doku.php?id=persistency">persistency
+-	  features</a> on Grml.</p>
++	  features</a> of Grml.</p>
+ 
+         <p>Any further wishes, feedback, bug reports? Please <a
+         href="/contact/">contact us</a>!</p>
+diff --git a/contact/index.php b/contact/index.php
+index 671d0e1..9b1dd70 100644
+--- a/contact/index.php
++++ b/contact/index.php
+@@ -31,51 +31,51 @@
+ 
+ 	<p>For general questions please join the Grml user mailinglist (see below).</p>
+ 
+-        <p>If you have found a bug please <a href="/bugs/">report that here</a>.</p>
++        <p>If you have found a bug please <a href="/bugs/">report it</a>.</p>
+ 
+-        <p>For commercial support and services please send us a mail
++        <p>For commercial support and services please send us mail
+         to business (at) grml.org.</p>
+ 
+         <a name="mailinglist"></a>
+         <h2>Mailing lists</h2>
+ 
+-        <p>If you want to be noticed when a <strong>new Grml
+-        release</strong> is available subscribe to the
++        <p>If you want to be notified when a <strong>new Grml
++        release</strong> is available, subscribe to the
+         read-only <a href="http://ml.grml.org/mailman/listinfo/grml-announce">Grml
+-        announce mailinglist</a>.</p>
++        announce mailing list</a>.</p>
+ 
+-        <p>If you want to participate on the <strong>mailinglist of
+-        Grml</strong> please subscribe to the <a
++        <p>If you want to participate in the <strong>mailing list of
++        Grml</strong>, please subscribe to the <a
+         href="http://ml.grml.org/mailman/listinfo/grml">Grml user
+-        mailinglist</a>.  Anyone can post to this mailinglist list, but if you
+-        are not already subscribed, your message will be moderated. In this way,
+-        we limit the amount of spam entering the message lists.  The Grml user
+-        mailinglist is available <a
++        mailing list</a>.  Anyone can post to this mailing list, but if you
++        are not already subscribed, your message will need moderator approval before being posted. This way
++        we limit the amount of spam that makes it to the list.  The Grml user
++        mailing list is available <a
+         href="http://dir.gmane.org/gmane.linux.distributions.grml.user">via
+         gmane</a> as well.</p>
+ 
+-        <p>If you are interested in following <strong>development of
++        <p>If you are interested in following the <strong>development of
+         Grml</strong> you might be interested in the <a
+         href="http://ml.grml.org/mailman/listinfo/grml-devel">Grml developer
+-        mailinglist</a>. The <a
++        mailing list</a>. The <a
+         href="http://ml.grml.org/mailman/listinfo/git-commits">Grml repository
+-        commits mailinglist</a> tracks all the pushed commits to <a
++        commits mailing list</a> tracks all the pushed commits to <a
+         href="http://git.grml.org/">Grml's git repositories</a>.  Changes in
+         Grml's Debian repository can be tracked via the <a
+         href="http://ml.grml.org/mailman/listinfo/grml-testing-changes">Grml
+-        Testing-changes mailinglist</a>. The <a
++        Testing-changes mailing list</a>. The <a
+         href="http://ml.grml.org/mailman/listinfo/bugs-changes">bug-changes</a>
+-        mailinglist tracks all messages sent to <a
++        mailing list tracks all messages sent to <a
+         href="http://bts.grml.org/">Grml's Bug Tracking System</a>.</p>
+ 
+-        <p><strong>Notice:</strong> All Grml mailinglists are <strong>english
++        <p><strong>Notice:</strong> All Grml mailing lists are <strong>English
+         only</strong>.</p>
+ 
+         <a name="irc"></a>
+         <h2>IRC</h2>
+ 
+-        <p>You can find us at <a href="irc://irc.freenode.net/grml">#grml on
+-        irc.freenode.org</a>. Channel language is english.</p>
++        <p>You can find us in <a href="irc://irc.freenode.net/grml">#grml on
++        irc.freenode.org</a>. Channel language is English.</p>
+ 
+ </div>
+ 
+diff --git a/copyright/index.php b/copyright/index.php
+index 6c81b4d..0454a10 100644
+--- a/copyright/index.php
++++ b/copyright/index.php
+@@ -34,17 +34,21 @@
+             href="http://www.gnu.org/copyleft/gpl.html">the GNU General
+             Public License</a>. Debian packages of the grml software are
+             available in the <a
+-            href="http://deb.grml.org/">grml-repository</a>, sources are
++            href="http://deb.grml.org/">grml repository</a>; sources are
+             available at <a
+-            href="http://sources.grml.org/">sources.grml.org</a>.</p>
++            href="http://sources.grml.org/">http://sources.grml.org/</a>.</p>
+ 
+-            <p>If not otherwise specified, the software on the ISO falls under
++            <p>If not otherwise specified, the software packaged as grml and published in the form of ISO images falls under
+             <a href="http://www.gnu.org/copyleft/gpl.html">the GNU General Public
+             License</a>. Take a look at /usr/share/doc/$PACKAGE/copyright for
+-            more details.</p>
++            the specific license terms of each shipped package.</p>
+ 
+             <p>You can copy, modify, redistribute and even resell the CD without
+-            restrictions, as long as the recipient receives the same license.</p>
++            restrictions, as long as you license it to your customers under the same license.
++            (Note: this is just a summary of the terms of the GPL; always read the
++            <a href="http://www.gnu.org/copyleft/gpl.html">full text</a> of the license
++            and preferably consult a lawyer if you have any doubt whether what you want to
++            do is permitted by the GPL.)</p>
+ 
+             <h2>Impressum</h2>
+ 
+diff --git a/daily/index.html b/daily/index.html
+index add3eb5..89b1aea 100644
+--- a/daily/index.html
++++ b/daily/index.html
+@@ -29,14 +29,14 @@
+ 
+ <h2>About</h2>
+ 
+-<p>This webpage provides <strong>automatically generated snapshots</strong> of
++<p>This page provides <strong>automatically generated snapshots</strong> of
+ the <a href="http://grml.org/">Grml Linux Live system</a> which were built
+ using <a href="http://grml.org/grml-live/">grml-live</a>. If you don't know
+-what's Grml please visit <a href="http://grml.org/faq/">the Grml FAQ</a>.</p>
++what Grml is, please see <a href="http://grml.org/faq/">the Grml FAQ</a>.</p>
+ 
+-<p>WARNING: Feel free to use the ISOs but please notice that they are not
+-official <a href="http://grml.org/download/">stable releases</a>. They provide
+-the latest changes, but they also might have known issues. In fact, they may not
++<p>WARNING: Feel free to use the ISOs but please note that they are not
++official <a href="http://grml.org/download/">stable releases</a>. They contain
++the latest code, but bugs are also likely. In fact, these snapshots may not
+ work at all. So: <strong>PLEASE USE THEM WITH CAUTION!</strong></p>
+ 
+ <p>Please <a href="http://grml.org/bugs/">report any bugs you notice</a>.</p>
+@@ -44,12 +44,13 @@ work at all. So: <strong>PLEASE USE THEM WITH CAUTION!</strong></p>
+ <h2>Download</h2>
+ 
+ <p>Note: the first link on each line points to the most recent available
+-snapshot of the corresponding Grml flavour. The 'sha1'-link points to the according
+-sha1 checksum file. The link named 'Older Versions' points to the directory of
+-the corresponding Grml flavour providing the current as well as older available
+-snapshots.</p>
++snapshot of the corresponding Grml flavour. The linked .sha1 files contain
++the sha1 checksum of the corresponding snapshot.
++The link named 'Older Versions' points to a directory that contains older available snapshots
++of the respective Grml flavour (as well as the latest snapshot).
++</p>
+ 
+-<h3>Debian/testing based Grml-ISOs</h3>
++<h3>Debian testing based Grml images</h3>
+ 
+ <ul>
+   <li>grml64_testing (64bit):
+@@ -66,7 +67,7 @@ snapshots.</p>
+   </li>
+ </ul>
+ 
+-<h3>Debian/unstable based Grml-ISOs</h3>
++<h3>Debian unstable based Grml images</h3>
+ 
+ <ul>
+   <li>grml64_sid (64bit):
+@@ -97,7 +98,7 @@ system within <a href="http://grml.org/grml-live/">grml-live</a>. Place these in
+ 
+ <p>Problems? Questions? <a href="http://grml.org/contact/">Contact us</a>.  But
+ please do not forget to provide all the relevant information (especially which
+-Grml flavour and version you are refering to).</p>
++Grml flavour and version you are referring to).</p>
+ 
+ </div>
+ </div>
+diff --git a/index.php b/index.php
+index 26bb25c..a75c79b 100644
+--- a/index.php
++++ b/index.php
+@@ -35,8 +35,8 @@
+             <p>Grml is a bootable live system (Live-CD) based on <a
+               href="http://www.debian.org/">Debian</a>. Grml includes a
+             collection of GNU/Linux software especially for system
+-            administrators. It is not necessary to install anything to a
+-            harddisk. It specializes on administrative tasks like installation,
++            administrators. Users don't have to install anything on fixed
++            storage. Grml is especially well suited for administrative tasks like installation,
+             deployment and system rescue. <a href="/features/">Read
+             more...</a></p>
+ 

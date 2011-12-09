@@ -54,7 +54,7 @@
 
         <p>Note: all bugs are made public.</p>
 
-        <p><b>Thank you for helping us improving Grml!</b></p>
+        <p><b>Thank you for helping us improve Grml!</b></p>
 </div>
 
 <?php include '../static_bottom.inc'; ?>

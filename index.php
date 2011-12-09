@@ -35,8 +35,8 @@
             <p>Grml is a bootable live system (Live-CD) based on <a
               href="http://www.debian.org/">Debian</a>. Grml includes a
             collection of GNU/Linux software especially for system
-            administrators. It is not necessary to install anything to a
-            harddisk. It specializes on administrative tasks like installation,
+            administrators. Users don't have to install anything on fixed
+            storage. Grml is especially well suited for administrative tasks like installation,
             deployment and system rescue. <a href="/features/">Read
             more...</a></p>
 

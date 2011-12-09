@@ -29,7 +29,7 @@
 
         <p>Additional issues can be found in the Grml Bugtracker. <a href="http://bts.grml.org/grml/">List of Open Issues</a>.</p>
 
-	<p>If you find additional bugs, please <a href="/bugs/">please report them</a>.</p>
+	<p>If you find additional bugs, please <a href="/bugs/">report them</a>.</p>
 
 	<h2>Known Bugs in Grml 2011.05</h2>
 	<ul>
