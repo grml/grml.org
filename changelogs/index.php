@@ -43,9 +43,6 @@
         -->
 
         <h2>Previous releases</h2>
-        <p>Please note that starting with Grml 2010.12 we only provide one README for all different flavours.</p>
-
-        <h3>grml</h3>
 
         <ul>
           <li><a href="README-grml-2010.12/">grml 2010.12</a> - codename Gebr&uuml;der Grml</li>
@@ -64,59 +61,6 @@
           <li><a href="README-0.3.txt">grml 0.3</a> - codename Hustenstopper</li>
           <li><a href="README-0.2.txt">grml 0.2</a> - codename Satura</li>
           <li>grml 0.1 - codename OS04</li>
-        </ul>
-
-        <h3>grml64</h3>
-
-        <ul>
-          <li><a href="README-grml64-2010.04/">grml64 2010.04</a> - codename Grmlmonster</li>
-          <li><a href="README-grml64-2009.10/">grml64 2009.10</a> - codename Hello-Wien</li>
-          <li><a href="README-grml64-2009.05/">grml64 2009.05</a> - codename Lackdose-Allergie</li>
-          <li><a href="README-grml64-2008.11/">grml64 2008.11</a> - codename Schluchtenscheisser</li>
-          <li><a href="README-grml64-0.2/">grml64 0.2</a> - codename Schwammerlklauber</li>
-          <li><a href="README-grml64-0.1.php">grml64 0.1</a> - codename Liveshell</li>
-        </ul>
-
-        <h3>grml-medium</h3>
-
-        <ul>
-          <li><a href="README-grml-medium-2009.10/">grml-medium 2010.04</a> - codename Grmlmonster</li>
-          <li><a href="README-grml-medium-2009.10/">grml-medium 2009.10</a> - codename Hello-Wien</li>
-          <li><a href="README-grml-medium-2009.05/">grml-medium 2009.05</a> - codename Lackdose-Allergie</li>
-          <li><a href="README-grml-medium-2008.11/">grml-medium 2008.11</a> - codename Schluchtenscheisser</li>
-          <li><a href="README-grml-medium-0.1/">grml-medium 0.1</a> - codename Pfuh</li>
-        </ul>
-
-        <h3>grml64-medium</h3>
-
-        <ul>
-          <li><a href="README-grml64-medium-2010.04/">grml64-medium 2010.04</a> - codename Grmlmonster</li>
-          <li><a href="README-grml64-medium-2009.10/">grml64-medium 2009.10</a> - codename Hello-Wien</li>
-          <li><a href="README-grml64-medium-2009.05/">grml64-medium 2009.05</a> - codename Lackdose-Allergie</li>
-          <li><a href="README-grml64-medium-2008.11/">grml64-medium 2008.11</a> - codename Schluchtenscheisser</li>
-          <li><a href="README-grml64-medium-0.1/">grml64-medium 0.1</a> - codename Pfuh</li>
-        </ul>
-
-        <h3>grml-small</h3>
-
-        <ul>
-          <li><a href="README-grml-small-2010.04/">grml-small 2010.04</a> - codename Grmlmonster</li>
-          <li><a href="README-grml-small-2009.10/">grml-small 2009.10</a> - codename Hello-Wien</li>
-          <li><a href="README-grml-small-2009.05/">grml-small 2009.05</a> - codename Lackdose-Allergie</li>
-          <li><a href="README-grml-small-2008.11/">grml-small 2008.11</a> - codename Schluchtenscheisser</li>
-          <li><a href="README-grml-small-0.4.php">grml-small 0.4</a> - codename Springinckerl</li>
-          <li><a href="README-0.3-small.php">grml-small 0.3</a> - codename Zwergenaufstand</li>
-          <li><a href="README-0.2-small.txt">grml-small 0.2</a> - codename Corry</li>
-          <li><a href="README-0.1-small.txt">grml-small 0.1</a> - codename Zugschlus</li>
-        </ul>
-
-        <h3>grml64-small</h3>
-
-        <ul>
-          <li><a href="README-grml64-small-2010.04/">grml64-small 2010.04</a> - codename Grmlmonster</li>
-          <li><a href="README-grml64-small-2009.10/">grml64-small 2009.10</a> - codename Hello-Wien</li>
-          <li><a href="README-grml64-small-2009.05/">grml64-small 2009.05</a> - codename Lackdose-Allergie</li>
-          <li><a href="README-grml64-small-2008.11/">grml64-small 2008.11</a> - codename Schluchtenscheisser</li>
         </ul>
 
       </div>
