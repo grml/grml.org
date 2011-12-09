@@ -94,7 +94,7 @@
           <li>VT consoles are driven by grml-runtty, our homegrown login and getty
             replacement for Live CDs.</li>
           <li>Netboot scenarios should no longer use the "nodhcp" boot option.</li>
-          <li>grml2hd is no longer in PATH to discourage it's use even further.
+          <li>grml2hd is no longer in PATH to discourage its use even further.
             The related boot options have been removed.</li>
           <li>grml2usb: compat for releases &lt; 2009.05, grub1 and lilo support
             have been removed.</li>
@@ -108,7 +108,7 @@
 
         <h3>Bugfixes</h3>
 
-        <p>Fixed several bugs and issues reported in the 
+        <p>Fixed several bugs and issues reported in the
 	<a href="http://bts.grml.org/grml/">bug tracking system</a>.</p>
 
         <h3>Packages / Software</h3>
@@ -165,7 +165,7 @@
         <p>Grml 2011.12-rc1 can be downloaded from
         <a href="http://grml.org/download/prerelease/">grml.org/download/prerelease/</a>.</p>
 
-        <!-- 
+        <!--
         <p>Grml 2011.12-rc1 can be downloaded from <a href="/download/">grml.org/download/</a>.</p>
         -->
 
@@ -186,7 +186,7 @@
         <a name="thanks"></a>
         <h3>Thanks</h3>
 
-        <p>Many thanks in this release go to (alphabetically) 
+        <p>Many thanks in this release go to (alphabetically)
 	  TBD,
 	  for their contributions.</p>
 
