@@ -109,7 +109,7 @@
     <br />
     <br />
     <br />
-    <a href="/changelogs/README-2011.12-rc1/">Release Notes</a>
+    <a href="/changelogs/README-grml-2011.12-rc1/">Release Notes</a>
     </div></div>
 
     <div class="download_panel" id="download_panel2"><div>
