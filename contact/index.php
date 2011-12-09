@@ -25,15 +25,15 @@
 
 <div class="content">
 
-	<p><img style="float: right; border: 0" src="/img/mail.png" alt="*" /></p>
+        <p><img style="float: right; border: 0" src="/img/mail.png" alt="*" /></p>
 
-	<h1>Contact us</h1>
+        <h1>Contact us</h1>
 
-    <p>For general questions please join the <a href="/mailinglist/">Grml user mailinglist</a>.</p>
+        <p>For general questions please join the <a href="/mailinglist/">Grml user mailinglist</a>.</p>
 
-    <p>If you have found a bug or want to request new packages, please <a href="/bugs/">report that here</a>.</p>
+        <p>If you have found a bug or want to request new packages, please <a href="/bugs/">report that here</a>.</p>
 
-    <p>For commercial support and services please visit <a href="http://grml-solutions.com/">Grml Solutions</a>.</p>
+        <p>For commercial support and services please send us a mail to business (at) grml.org.</p>
 
 </div>
 

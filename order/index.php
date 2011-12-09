@@ -60,11 +60,6 @@
               -->
             </ul>
 
-            <p>If you do need special amounts of grml CDs/USB pens (not free) don't
-            hesitate <a href="/contact/">to contact us</a>. If you want a specialized
-            Linux Live system take a look at <a
-            href="http://grml-solutions.com/en/">Grml Solutions</a>.</p>
-
       </div>
 
 <?php include '../static_bottom.inc'; ?>

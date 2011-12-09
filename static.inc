@@ -43,7 +43,6 @@
               <p>
                 <a class="plain" href="/mailinglist/">Mailing Lists</a><br/>
                 <a class="plain" href="/irc/">IRC</a><br/>
-                <a class="plain" href="http://grml-solutions.com/">Grml Solutions</a><br/>
                 <a class="plain" href="/contact/">Contact</a><br/>
               </p>
 
