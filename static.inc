@@ -38,18 +38,10 @@
                 <a class="plain" href="/bugs/known/">Known Bugs</a><br/>
                 <a class="plain" href="/beta/">Beta Versions</a><br/>
               </p>
-            <h3>Support</h3>
+            <h3>Get in touch</h3>
               <p>
-                <a class="plain" href="/mailinglist/">Mailing Lists</a><br/>
-                <a class="plain" href="/irc/">IRC</a><br/>
                 <a class="plain" href="/contact/">Contact</a><br/>
               </p>
-
-<!--
-	    <a href="/donations/"><img style="border: 0"
-	    src="https://www.paypal.com/en_US/i/btn/x-click-but04.gif" alt="donations" /></a>
--->
-
             <h3>Search</h3>
               <p>
 <!-- Google CSE Search Box Begins  -->

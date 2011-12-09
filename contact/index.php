@@ -27,13 +27,55 @@
 
         <p><img style="float: right; border: 0" src="/img/mail.png" alt="*" /></p>
 
-        <h1>Contact us</h1>
+        <h1>Contact</h1>
 
-        <p>For general questions please join the <a href="/mailinglist/">Grml user mailinglist</a>.</p>
+	<p>For general questions please join the Grml user mailinglist (see below).</p>
 
-        <p>If you have found a bug or want to request new packages, please <a href="/bugs/">report that here</a>.</p>
+        <p>If you have found a bug please <a href="/bugs/">report that here</a>.</p>
 
-        <p>For commercial support and services please send us a mail to business (at) grml.org.</p>
+        <p>For commercial support and services please send us a mail
+        to business (at) grml.org.</p>
+
+        <a name="mailinglist"></a>
+        <h2>Mailing lists</h2>
+
+        <p>If you want to be noticed when a <strong>new Grml
+        release</strong> is available subscribe to the
+        read-only <a href="http://ml.grml.org/mailman/listinfo/grml-announce">Grml
+        announce mailinglist</a>.</p>
+
+        <p>If you want to participate on the <strong>mailinglist of
+        Grml</strong> please subscribe to the <a
+        href="http://ml.grml.org/mailman/listinfo/grml">Grml user
+        mailinglist</a>.  Anyone can post to this mailinglist list, but if you
+        are not already subscribed, your message will be moderated. In this way,
+        we limit the amount of spam entering the message lists.  The Grml user
+        mailinglist is available <a
+        href="http://dir.gmane.org/gmane.linux.distributions.grml.user">via
+        gmane</a> as well.</p>
+
+        <p>If you are interested in following <strong>development of
+        Grml</strong> you might be interested in the <a
+        href="http://ml.grml.org/mailman/listinfo/grml-devel">Grml developer
+        mailinglist</a>. The <a
+        href="http://ml.grml.org/mailman/listinfo/git-commits">Grml repository
+        commits mailinglist</a> tracks all the pushed commits to <a
+        href="http://git.grml.org/">Grml's git repositories</a>.  Changes in
+        Grml's Debian repository can be tracked via the <a
+        href="http://ml.grml.org/mailman/listinfo/grml-testing-changes">Grml
+        Testing-changes mailinglist</a>. The <a
+        href="http://ml.grml.org/mailman/listinfo/bugs-changes">bug-changes</a>
+        mailinglist tracks all messages sent to <a
+        href="http://bts.grml.org/">Grml's Bug Tracking System</a>.</p>
+
+        <p><strong>Notice:</strong> All Grml mailinglists are <strong>english
+        only</strong>.</p>
+
+        <a name="irc"></a>
+        <h2>IRC</h2>
+
+        <p>You can find us at <a href="irc://irc.freenode.net/grml">#grml on
+        irc.freenode.org</a>. Channel language is english.</p>
 
 </div>
 
