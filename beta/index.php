@@ -50,6 +50,11 @@
         <p>Shortly before a release will happen, a release candidate will
         usually be announced on <a href="/irc/">IRC</a>.</p>
 
+        <!--
+        -->
+        <p>The CURRENT RELEASE CANDIDATE is available for
+        <a href="/download/prerelease/">download NOW</a>.</p>
+
       </div>
 
 <?php include '../static_bottom.inc'; ?>
