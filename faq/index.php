@@ -193,10 +193,8 @@ grml keyboard=de xkeyboard=de lang=at # enter this at the bootprompt
 
         <h3><a name="wms"></a><a href="#toc">Which window managers can I use?</a></h3>
 
-        <p>Starting with the 2011.12 release Grml provides just
-        the <a href="http://www.fluxbox.org/">Fluxbox</a> window
-        manager.</p>
-
+	<p>Starting with the 2011.12 release Grml provides <a
+	href="http://www.fluxbox.org/">Fluxbox</a> as window manager.</p>
 
         <h3><a name="lvm"></a><a href="#toc">Where are my LVM devices?</a></h3>
 
