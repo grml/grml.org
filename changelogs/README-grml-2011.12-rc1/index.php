@@ -43,7 +43,8 @@
 
           <li>New Linux kernel version based on <b>3.1.4</b></li>
           <li><b>EFI Boot</b> support from CD-ROM and USB keys (amd64 only)</li>
-          <li>mDNS support (try <tt>ping grml.local</tt> )</li>
+	  <li>mDNS support (try <tt>ping grml.local</tt> with libnss-mdns and avahi-daemon
+          or similar enabled on your host)</li>
           <li>NFS Client support and d-bus start automatically</li>
 
         </ul>
