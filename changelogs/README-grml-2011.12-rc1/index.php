@@ -30,6 +30,8 @@
         <h1>Release Notes for Grml 2011.12-rc1 - codename <a
         href="/faq/#releasename">Knecht Rootrecht</a></h1>
 
+        <p><a href="http://grml.org/download/prerelease/">Download Now</a></p>
+
         <h3>About</h3>
 
         <p>This release brings a downsizing and cleanup: one flavour, two architectures.
@@ -41,7 +43,6 @@
 
         <ul>
 
-          <li>New Linux kernel version based on <b>3.1.4</b></li>
           <li><b>EFI Boot</b> support from CD-ROM and USB keys (amd64 only)</li>
 	  <li>mDNS support (try <tt>ping grml.local</tt> with libnss-mdns and avahi-daemon
           or similar enabled on your host)</li>
@@ -100,20 +101,11 @@
           <li>grml2usb: compat for releases &lt; 2009.05, grub1 and lilo support
             have been removed.</li>
           <li>Release builds are now built from Debian's testing distribution, instead of unstable.</li>
+	  <li>Linux kernel is based on <b>3.1.4</b>. No additional modules are shipped.</li>
+	  <li>Fixed several bugs from the <a href="http://bts.grml.org/grml/">bug tracking system</a>.</li>
         </ul>
 
-        <h3>Kernel</h3>
-
-        <p>Based on vanilla kernel 3.1.4. No additional modules are
-          shipped.</p>
-
-
-        <h3>Bugfixes</h3>
-
-        <p>Fixed several bugs and issues reported in the
-	<a href="http://bts.grml.org/grml/">bug tracking system</a>.</p>
-
-        <h3>Packages / Software</h3>
+        <h3>Packages</h3>
 
         <p>Details about shipped packages and their versions on Grml are
 	available at the <a href="/files/#debian">Debian section</a>. Visit
@@ -126,27 +118,22 @@
 
         <h3>Updates</h3>
 
-        <p>Updated all packages to Debian Unstable branch by 8th of December
-        2011.</p>
+        <p>Packages are taken from Debian testing, 10th of December
+	2011. 1745 packages have been removed, and these new packages
+	have been added (plus dependencies):</p>
+<pre class="rahmen">
+  afflib-tools atftp bacula-sd efibootmgr grub-efi-amd64-bin
+  ia32-libs imvirt ipxe mcollective mtx multiarch-support
+  netcat-openbsd python2.7 sipcalc
+</pre>
 
-        <p>Removed these Grml packages:</p>
+        <p>These Grml packages have been removed/replaced:</p>
 
 <pre class="rahmen">
   grml-debugtools grml-docs grml-files grml-files64
   grml-firefox grml-laptop grml-pylib grml-rebuildfstab
   grml-rescueboot grml-sectools grml-templates grml-usleep
   grml-vpn grml grml64
-</pre>
-
-        <p>Removed 1745 packages, compared to the previous
-          GRML_FULL flavour.</p>
-
-        <p>Added these important new packages (plus dependencies):</p>
-
-<pre class="rahmen">
-  afflib-tools atftp bacula-sd efibootmgr grub-efi-amd64-bin
-  ia32-libs imvirt ipxe mcollective mtx multiarch-support
-  netcat-openbsd python2.7 sipcalc
 </pre>
 
         <h3>Known issues</h3>
@@ -157,10 +144,12 @@
           in binary form appears to be almost impossible with the new DKMS packaging.
           </p>
 
+	<!--
         <p>Take a look at <a
         href="/bugs/known/">the known bugs list</a>.
         Please report problems using information on <a
           href="/bugs/">grml.org/bugs/</a>.</p>
+	-->
 
         <h3>Download Grml 2011.12-rc1</h3>
 
@@ -201,13 +190,6 @@
         <p>To sign up for future Grml announcements, please subscribe to <a
           href="http://lists.mur.at/mailman/listinfo/grml-announce">Grml's
           announcement list</a>.</p>
-
-        <p>If you are interested in development releases grab the daily ISOs
-        from <a href="http://daily.grml.org/">daily.grml.org</a>.</p>
-
-        <h3>Further Questions?</h3>
-
-        <p>Please feel free to <a href="http://grml.org/contact/">contact us.</a></p>
 
 </div>
 
