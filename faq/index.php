@@ -117,9 +117,8 @@
 
         <h3><a name="accessibility"></a><a href="#toc">What does accessibility at Grml mean?</a></h3>
 
-        <p>The Grml kernel includes support for speakup and software
-        like brltty (using bootoption 'grml blind
-        brltty=type,port,tbl') and espeakup.</p>
+	<p>The Grml kernel includes support for speakup. For software,
+	brltty and espeakup are included.</p>
 
         <h3><a name="bootoptions"></a><a href="#toc">Which bootoptions does Grml support?</a></h3>
 
