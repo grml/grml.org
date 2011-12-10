@@ -99,6 +99,7 @@
             The related boot options have been removed.</li>
           <li>grml2usb: compat for releases &lt; 2009.05, grub1 and lilo support
             have been removed.</li>
+          <li>Release builds are now built from Debian's testing distribution, instead of unstable.</li>
         </ul>
 
         <h3>Kernel</h3>
