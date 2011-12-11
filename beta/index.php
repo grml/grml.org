@@ -42,7 +42,7 @@
         flavour after every Grml git code change. This build is usually not
         tested and includes experimental code that may not have been tested
         either and that may never be released.
-        <a href="http://jenkins.grml.org/job/grml-medium-amd64/">See here.</a></p>
+        <a href="http://jenkins.grml.org/job/grml-full-amd64/">See here.</a></p>
 
 
         <h2>Release Candidates</h2>
