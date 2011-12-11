@@ -118,7 +118,7 @@
 
         <h3>Updates</h3>
 
-        <p>Packages are taken from Debian testing, 10th of December
+        <p>Packages are taken from Debian testing, 11th of December
 	2011. 1745 packages have been removed, and these new packages
 	have been added (plus dependencies):</p>
 <pre class="rahmen">
