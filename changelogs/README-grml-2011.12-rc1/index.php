@@ -144,6 +144,10 @@
           in binary form appears to be almost impossible with the new DKMS packaging.
           </p>
 
+	<p>APT sources for Debian testing refer to an invalid URL on snapshot.debian.org. This is harmless.</p>
+
+	<p>On machines supporting CPU frequency scaling, grml-autoconfig will emit a warning that the ondemand governor could not be loaded. This should be harmless.</p>
+
 	<!--
         <p>Take a look at <a
         href="/bugs/known/">the known bugs list</a>.
