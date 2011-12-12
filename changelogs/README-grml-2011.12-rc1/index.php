@@ -99,10 +99,10 @@
 
         <p>Details about shipped packages and their versions on Grml are
         available at the <a href="/files/#debian">Debian section</a>. Visit
-        <!-- -->
+        <!--
         <a href="/files/release-2011.12-rc1/dpkg_get_selections">dpkg_get_selections</a>
         for a main package listing and
-        <!-- -->
+        -->
         <a href="/files/release-2011.12-rc1/dpkg_list">dpkg_list</a> for a
         detailed list of packages shipped with Grml 2011.12-rc1.</p>
 
