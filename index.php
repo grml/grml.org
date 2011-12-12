@@ -43,7 +43,14 @@
             <br />
 
             <p style="text-align: center;">
+            <b>The current release:</b><br/><br/>
             <a href="/download/" class="button" style="padding: 12px; font-weight: bold;"><span>Download Grml 2011.05</span></a>
+            </p>
+            <br />
+
+            <p style="text-align: center;">
+            <b>Pre-Release:</b><br/><br/>
+            <a href="/download/prerelease/" class="button" style="padding: 12px; font-weight: bold;"><span>Download Grml 2011.12-rc1</span></a>
             </p>
             <br />
 
