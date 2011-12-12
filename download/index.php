@@ -119,6 +119,12 @@
     <option value="amd64">64-bit PC</option>
     </select>
     <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <a href="/download/prerelease/" class="button" style="padding: 12px; font-weight: bold;"><span>Get 2011.12-rc1 instead!</span></a>
+    <br />
     </div></div>
 
     <div class="download_panel" id="download_panel2"><div>
