@@ -44,7 +44,7 @@
         <ul>
 
           <li>EFI Boot support from CD-ROM and USB keys (amd64 only)</li>
-	  <li>mDNS support (try <tt>ping grml.local</tt> with libnss-mdns and avahi-daemon
+          <li>mDNS support (try <tt>ping grml.local</tt> with libnss-mdns and avahi-daemon
           or similar enabled on your host)</li>
           <li>NFS Client support and d-bus start automatically</li>
           <li><a href="/grml-debootstrap/">grml-debootstrap</a>, the tool of choice to install Debian,
@@ -61,7 +61,7 @@
           <li>Z-Shell configuration has been cleaned up. Quite a few functions
             <a href="http://git.grml.org/?p=grml-etc-core.git;a=history;f=etc/zsh/zshrc">have been removed</a>
             from the default configuration.</li>
-	  <li>X11 environment has been downsized as well. The window manager is
+          <li>X11 environment has been downsized as well. The window manager is
             now fluxbox. idesk has been removed, all available software is now
             reachable from the fluxbox menu.</li>
           <li>The accessibility support now consists of shipping standard speakup
@@ -91,30 +91,31 @@
           <li>grml2usb: compat for releases &lt; 2009.05, grub1 and lilo support
             have been removed.</li>
           <li>Release builds are now built from Debian's testing distribution, instead of unstable.</li>
-	  <li>Linux kernel is based on <b>3.1.4</b>. No additional modules are shipped.</li>
-	  <li>Fixed several bugs from the <a href="http://bts.grml.org/grml/">bug tracking system</a>.</li>
+          <li>Linux kernel is based on <b>3.1.4</b>. No additional modules are shipped.</li>
+          <li>Fixed several bugs from the <a href="http://bts.grml.org/grml/">bug tracking system</a>.</li>
         </ul>
 
         <h3>Packages</h3>
 
         <p>Details about shipped packages and their versions on Grml are
-	available at the <a href="/files/#debian">Debian section</a>. Visit
-	<!-- -->
+        available at the <a href="/files/#debian">Debian section</a>. Visit
+        <!-- -->
         <a href="/files/release-2011.12-rc1/dpkg_get_selections">dpkg_get_selections</a>
-	for a main package listing and
-	<!-- -->
+        for a main package listing and
+        <!-- -->
         <a href="/files/release-2011.12-rc1/dpkg_list">dpkg_list</a> for a
         detailed list of packages shipped with Grml 2011.12-rc1.</p>
 
         <h3>Updates</h3>
 
         <p>Packages are taken from Debian testing, 11th of December
-	2011. 1745 packages have been removed, and these new packages
-	have been added (plus dependencies):</p>
+        2011. 1745 packages have been removed, and these new packages
+        have been added (plus dependencies):</p>
 <pre class="rahmen">
-  afflib-tools atftp bacula-sd efibootmgr grub-efi-amd64-bin
-  ia32-libs imvirt ipxe mcollective mtx multiarch-support
-  netcat-openbsd python2.7 sipcalc
+  afflib-tools aoetool atftp bacula-sd efibootmgr
+  grub-efi-amd64-bin ia32-libs imvirt ipxe mcollective
+  mtx multiarch-support netcat-openbsd python2.7 sipcalc
+  vblade
 </pre>
 
         <p>These Grml packages have been removed/replaced:</p>
@@ -132,17 +133,18 @@
           the user land tools for the new in-kernel iSCSI target are not yet
           in Debian unstable/testing and shipping the old iscsitarget modules
           in binary form appears to be almost impossible with the new DKMS packaging.
+          As a workaround you may consider using Ata Over Ethernet with vblade.
           </p>
 
         <p><b>dns bootoption</b> does not work as expected. See <a
         href="http://bts.grml.org/grml/issue1099">issue1099</a> for details.</p>
 
-	<!--
+        <!--
         <p>Take a look at <a
         href="/bugs/known/">the known bugs list</a>.
         Please report problems using information on <a
           href="/bugs/">grml.org/bugs/</a>.</p>
-	-->
+        -->
 
         <h3>Download Grml 2011.12-rc1</h3>
 
@@ -167,8 +169,8 @@
         <h3>Thanks</h3>
 
         <p>Many thanks in this release go to (alphabetically)
-	  TBD,
-	  for their contributions.</p>
+          TBD,
+          for their contributions.</p>
 -->
 
         <h3>More Information</h3>
