@@ -1,1 +1,0 @@
-grml2hd /dev/hda5 -mbr /dev/hda  2.72s user 79.23s system 18% cpu 7:11.88 total
