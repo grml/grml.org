@@ -144,6 +144,9 @@
           in binary form appears to be almost impossible with the new DKMS packaging.
           </p>
 
+        <p><b>dns bootoption</b> does not work as expected. See <a
+        href="http://bts.grml.org/grml/issue1099">issue1099</a> for details.</p>
+
 	<!--
         <p>Take a look at <a
         href="/bugs/known/">the known bugs list</a>.
