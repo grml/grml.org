@@ -160,7 +160,8 @@
     <b>Alternate downloads</b><br /><br />
     <a href="http://daily.grml.org/">Daily images</a><br />
     <a href="http://download.grml.org/">Older releases</a><br />
-    <a href="http://debian.netcologne.de/grml/release-chroots/">chroots for remastering</a><br />
+    <a href="http://download.grml.org/devel/">chroots for remastering</a> (prerelease)<br />
+    <a href="http://download.grml.org/devel/grml_sources-2011.12-rc1.tgz">Source code</a> (one tgz for both architectures)<br />
     <br />
     <a href="http://debian.netcologne.de/grml/gnupg-michael-prokop.txt">Signing Key</a><br />
     <br />
