@@ -183,7 +183,7 @@
 
         <h3>More Information</h3>
 
-        <p>You can find out more about grml on <a href="/">our website</a>, <a
+        <p>You can find out more about Grml on <a href="/">our website</a>, <a
           href="/contact/#irc">IRC channel</a>, and <a
           href="http://wiki.grml.org/">wiki</a>.
 
