@@ -35,7 +35,7 @@
         <h3>About</h3>
 
         <p>This release brings a downsizing and cleanup: one flavour, two architectures.
-          The new, smaller "FULL" flavour has a 350MB ISO size target, while still
+          The new, smaller flavour has a 350MB ISO size target, while still
           delivering over 1.1GB of open source software relevant for system
           administrators!</p>
 
