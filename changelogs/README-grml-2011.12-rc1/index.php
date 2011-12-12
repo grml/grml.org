@@ -172,22 +172,19 @@
           href="/bugs/">grml.org/bugs/</a>. Please send your feedback and
         feature requests <a href="/contact/">to the Grml team</a>!</p>
 
-        <ul>
-          <li><a href="/contact/">grml.org/contact/</a>
-          <li><a href="/irc/">#grml on irc.freenode.org</a>
-        </ul>
-
+<!--
         <a name="thanks"></a>
         <h3>Thanks</h3>
 
         <p>Many thanks in this release go to (alphabetically)
 	  TBD,
 	  for their contributions.</p>
+-->
 
         <h3>More Information</h3>
 
         <p>You can find out more about grml on <a href="/">our website</a>, <a
-          href="/irc/">IRC channel</a>, and <a
+          href="/contact/#irc">IRC channel</a>, and <a
           href="http://wiki.grml.org/">wiki</a>.
 
         <p>To sign up for future Grml announcements, please subscribe to <a
