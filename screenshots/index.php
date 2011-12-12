@@ -56,23 +56,12 @@
         <p>This screenshot shows GNU screen running on console using framebuffer
         device with zsh and the completion mechanism of zsh running cdrecord.</p>
 
-        <h2><a name="grml1105"></a>X Window System - fluxbox</h2>
+        <h2><a name="grml1112"></a>X Window System - fluxbox</h2>
 
-        <a href="grml_2011.05.png"><img style="border: 0" src="grml_2011.05.jpg" alt="Screenshot" /></a><br />
+        <a href="grml_2011.12-rc1.png"><img style="border: 0" src="grml_2011.12-rc1.jpg" alt="Screenshot" /></a><br />
 
-        <p>This screenshot shows grml 2011.05 running the X Window system with the <a
-        href="http://fluxbox.sourceforge.net/">fluxbox</a> window manager.  The
-        desktop icons are presented by idesk and on the right side gkrellm is
-        running. Get this desktop via running 'grml-x wm-ng'.</p>
-
-        <h2><a name="grml1012"></a>X Window System - fluxbox</h2>
-
-        <a href="grml_2010.12.png"><img style="border: 0" src="grml_2010.12.jpg" alt="Screenshot" /></a><br />
-
-        <p>This screenshot shows grml 2010.12 running the X Window system with the <a
-        href="http://fluxbox.sourceforge.net/">fluxbox</a> window manager.  The
-        desktop icons are presented by idesk and on the right side gkrellm is
-        running. Get this desktop via running 'grml-x wm-ng'.</p>
+        <p>This screenshot shows Grml 2011.12-rc1 running the X Window system with the <a
+        href="http://fluxbox.sourceforge.net/">fluxbox</a> window manager.</p>
 
       </div>
 
