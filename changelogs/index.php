@@ -35,12 +35,10 @@
         <a href="README-grml-2011.05/">Release announcement for Grml 2011.05</a>
 	</p>
 
-        <!--
         <h2>Current release candidate</h2>
 
-        <p>The <strong>release announcement for Grml 2011.05-rc1</strong>  is
-        available online: <a href="README-grml-2011.05-rc1/">README-grml-2011.05-rc1/</a>.</p>
-        -->
+        <p>The <strong>release announcement for Grml 2011.12-rc1</strong>  is
+        available online: <a href="README-grml-2011.12-rc1/">README-grml-2011.12-rc1/</a>.</p>
 
         <h2>Previous releases</h2>
 
