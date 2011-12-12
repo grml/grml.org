@@ -43,26 +43,16 @@
 
         <ul>
 
-          <li><b>EFI Boot</b> support from CD-ROM and USB keys (amd64 only)</li>
+          <li>EFI Boot support from CD-ROM and USB keys (amd64 only)</li>
 	  <li>mDNS support (try <tt>ping grml.local</tt> with libnss-mdns and avahi-daemon
           or similar enabled on your host)</li>
           <li>NFS Client support and d-bus start automatically</li>
-
-        </ul>
-
-        <h4>Special new features:</h4>
-
-        <ul>
-
           <li><a href="/grml-debootstrap/">grml-debootstrap</a>, the tool of choice to install Debian,
             can now directly build virtual machine images.</li>
-
           <li><a href="/grml-live/">grml-live</a>, our build tool, was enhanced with new features to
             better integrate with <a href="http://jenkins-ci.org/">Jenkins</a>.
             This release, as well as the current <a href="/daily/">daily images</a>
             are built from within Jenkins!</li>
-
-
         </ul>
 
         <h3>Important Changes</h3>
