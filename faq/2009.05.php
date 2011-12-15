@@ -179,9 +179,8 @@ $ grep -ch grml .centericq/**/history | xargs echo | \
 
         <p>Codename of grml 2009.05 is Lackdose-Allergie. Lackdose is a
         homophonous wordplay for the german words 'lackdose' (meaning a can of
-        paint) and 'allergie' (allergy). Check out the <a
-        href="http://grml.org/files/wallpaper/lackdoseallergie.jpg">Lackdose-Allergie
-        wallpaper</a> to get the idea.</p>
+        paint) and 'allergie' (allergy). Check out the release wallpaper
+        to get the idea.</p>
 
         <h3><a name="requirements"></a><a href="#toc">Requirements for running grml</a></h3>
 

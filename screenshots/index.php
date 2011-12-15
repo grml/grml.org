@@ -32,7 +32,6 @@
         <h2><a name="bootsplash"></a>Bootsplash</h2>
 
         <a href="vesamenu.png"><img style="border: 0" src="vesamenu.jpg" alt="Screenshot" /></a><br />
-        <!--<a href="bootscreen.png"><img style="border: 0" src="bootscreen.jpg" alt="Screenshot" /></a><br />-->
 
         <p>This screenshot shows the bootsplash.</p>
 
