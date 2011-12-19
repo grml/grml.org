@@ -33,27 +33,20 @@
 
         <p>The changelogs have moved to <a href="/changelogs/">their own webpage</a>.</p>
 
-        <h2><a name="grmlrepos"></a>grml-repository</h2>
+        <h2><a name="grmlrepos"></a>Package Repository</h2>
 
-        <p>Packages provided (exclusive) by the Grml system are
-        available online in the <a
+        <p>Packages provided by the Grml team are
+        available from the <a
         href="http://deb.grml.org/">Grml repository</a>.</p>
 
-        <p>If you want to use the grml-repository inside your debian installation add the following lines to
-        your /etc/apt/sources.list:</p>
+	<p>Note that using the Grml repository on standard Debian systems is <b>not recommended</b>. If you just want our console configuration, read <a href="http://grml.org/console/">"Make console work comfortable"</a>.</p>
 
-        <pre class="rahmen">
-# grml-repository - stable branch
-  deb     http://deb.grml.org/ grml-stable main
-  deb-src http://deb.grml.org/ grml-stable main
-
-# grml-repository - testing branch
+	<pre class="rahmen">
+# Signing key is available in grml-archive-keyring
+#  deb     http://deb.grml.org/ grml-stable main
+#  deb-src http://deb.grml.org/ grml-stable main
 #  deb     http://deb.grml.org/ grml-testing main
 #  deb-src http://deb.grml.org/ grml-testing main</pre>
-
-        <p>More details regarding the use of the Grml repository in the <a
-        href="http://wiki.grml.org/doku.php?id=debian">Debian webpage of the
-        grml-wiki</a>.</p>
 
         <h2><a name="wallpapers"></a>Wallpapers and other media files provided by Grml</h2>
 
