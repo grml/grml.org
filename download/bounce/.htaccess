@@ -6,6 +6,9 @@ RewriteRule ^.*$ grml64
 RewriteCond %{QUERY_STRING} arch=i386
 RewriteRule ^.*$ grml
 
+RewriteCond %{QUERY_STRING} arch=both
+RewriteRule ^.*$ grml96
+
 RewriteCond %{QUERY_STRING} flavour=(medium|small)
 RewriteRule ^(.*)$ $0-%1
 
