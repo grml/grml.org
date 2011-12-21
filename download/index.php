@@ -28,7 +28,7 @@
     width: 288px;
     margin-bottom: 2em;
     margin-top: 1em;
-    font-size: 11px;
+    font-size: 10pt;
 }
 .download_panel>div {
     margin-right: 20px;
@@ -77,54 +77,50 @@
 
 <div class="content">
 
-    <h1>Download Grml 2011.05</h1>
+    <h1>Download Grml 2011.12</h1>
 
     <p>Get the current stable release here.<br />
     <a href="prerelease/">Looking for the current pre-release version instead?</a></p>
 
-    <p>Download the Grml flavour you need, then write it to a CD-R or an empty USB stick.</p>
+    <p>Download Grml and then write it to a CD-R or an empty USB key.</p>
 
-    <p><a href="http://grml.org/changelogs/README-grml-2011.05">Release Notes</a></p>
+
+
+    <p><a href="http://grml.org/changelogs/README-grml-2011.12">Release Notes</a></p>
 
     <div class="download_group" id="download_group1_noscript">
     <div class="download_panel" id="download_panel1_noscript"><div>
         <a href="http://grml.org/download/mirrors/">Download from a specific mirror</a><br/>
         <br/>
         Direct download links:<br/>
-        <a href="http://download.grml.org/grml64_2011.05.iso">Grml64 ISO</a> [<a href="http://download.grml.org/grml64_2011.05.iso.sha1.asc">Signature</a>]<br/>
-        <a href="http://download.grml.org/grml_2011.05.iso">Grml ISO</a> [<a href="http://download.grml.org/grml_2011.05.iso.sha1.asc">Signature</a>]<br/>
-        <a href="http://download.grml.org/grml64-medium_2011.05.iso">Grml64 Medium ISO</a> [<a href="http://download.grml.org/grml64-medium_2011.05.iso.sha1.asc">Signature</a>]<br/>
-        <a href="http://download.grml.org/grml-medium_2011.05.iso">Grml Medium ISO</a> [<a href="http://download.grml.org/grml-medium_2011.05.iso.sha1.asc">Signature</a>]<br/>
-        <a href="http://download.grml.org/grml64-small_2011.05.iso">Grml64 Small ISO</a> [<a href="http://download.grml.org/grml64-small_2011.05.iso.sha1.asc">Signature</a>]<br/>
-        <a href="http://download.grml.org/grml-small_2011.05.iso">Grml Small ISO</a> [<a href="http://download.grml.org/grml-small_2011.05.iso.sha1.asc">Signature</a>]<br/>
+        <a href="http://download.grml.org/grml96_2011.12.iso">Grml96 ISO</a> [<a href="http://download.grml.org/grml64_2011.12.iso.sha1.asc">Signature</a>]<br/>
+        <a href="http://download.grml.org/grml64_2011.12.iso">Grml64 ISO</a> [<a href="http://download.grml.org/grml64_2011.12.iso.sha1.asc">Signature</a>]<br/>
+        <a href="http://download.grml.org/grml32_2011.12.iso">Grml32 ISO</a> [<a href="http://download.grml.org/grml_2011.12.iso.sha1.asc">Signature</a>]<br/>
         <br/>
         </div></div>
     </div>
 
     <div class="download_group" id="download_group1" style="display:none;">
     <form method="get" action="/download/bounce/">
-    <input type="hidden" name="version" value="2011.05"/>
+    <input type="hidden" name="version" value="2011.12"/>
     <div class="download_panel" id="download_panel1"><div>
 
-    <h2>Options</h2>
+    <h2>Architecture</h2>
 
-    <select name="flavour" id="download_flavour" style="width:100%;">
-    <option value="full" selected="selected">grml (700MB)</option>
-    <option value="medium">grml-medium (220MB)</option>
-    <option value="small">grml-small (110MB)</option>
-    </select>
-    <br /><br />
     <select name="arch" id="download_arch" style="width:100%;">
-    <option value="i386" selected="selected">32-bit PC</option>
-    <option value="amd64">64-bit PC</option>
+    <option value="amd64" selected="selected">64-bit PC (amd64)</option>
+    <option value="i386">32-bit PC (i586+)</option>
+    <option value="both">One for both (700MB)</option>
     </select>
     <br />
     <br />
     <br />
     <br />
     <br />
+    <!--
     <a href="/download/prerelease/" class="button" style="padding: 12px; font-weight: bold;"><span>Get 2011.12-rc1 instead!</span></a>
     <br />
+     -->
     </div></div>
 
     <div class="download_panel" id="download_panel2"><div>
@@ -137,21 +133,19 @@
     <!-- JS links -->
     <div id="linkbuttons" style="display:none;">
     <a id="download_link_mirror" class="largebutton">Download Now</a><br />
-    <a id="download_link_bt">Download using BitTorrent</a><br />
+    <a id="download_link_bt">BitTorrent Download</a><br />
     <a id="download_link_signature">Get Checksum/Signature</a><br />
     </div>
-    <a href="/download/mirrors/">Download from a specific mirror</a><br />
     </div></div>
 
     </form>
     <script type="text/javascript">
     function update_links() {
-        var current_version = "2011.05";
-        var product = 'grml';
+        var current_version = "2011.12";
+        var product = 'grml32';
         var arch = document.getElementById('download_arch').value;
-        var flavour = document.getElementById('download_flavour').value;
         if (arch == 'amd64') product = 'grml64';
-        if (flavour != 'full') product += '-' + flavour;
+        if (arch == 'both') product = 'grml96';
         var iso = product + '_' + current_version + '.iso';
         var mirror_url = "http://download.grml.org/";
         document.getElementById('download_link_mirror').href = mirror_url + iso;
@@ -160,12 +154,7 @@
         document.getElementById('download_link_signature').href = mirror_url + iso + '.sha1.asc';
     }
     // hook update function
-    document.getElementById('download_flavour').onchange = update_links;
     document.getElementById('download_arch').onchange = update_links;
-    var ua = window.navigator.userAgent;
-    if (ua.indexOf('WOW64') != -1 || ua.indexOf('Win64') != -1 || ua.indexOf('x64') != -1 || ua.indexOf('x86_64') != -1 || ua.indexOf('amd64') != -1) {
-        document.getElementById('download_arch').value = 'amd64';
-    }
     // force initial link href set
     update_links();
     // only show our link "buttons"
@@ -182,9 +171,9 @@
     <b>Alternate downloads</b><br /><br />
     <a href="http://daily.grml.org/">Daily images</a><br />
     <a href="http://download.grml.org/">Older releases</a><br />
-    <a href="http://debian.netcologne.de/grml/release-chroots/">Chroots for remastering</a><br />
-    <a href="http://sources.grml.org/">Sources</a><br />
-    <a href="http://wiki.grml.org/doku.php?id=terminalserver#grml_netboot_packages">Netboot Packages</a><br />
+    <a href="http://download.grml.org/devel/grml_sources-2011.12.tgz">Source code</a> (both archs)<br />
+    <a href="http://download.grml.org/devel/grml_netboot_package_grml64_2011.12.tar.bz2">Netboot Package 64-bit</a> 
+    <a href="http://download.grml.org/devel/grml_netboot_package_grml_2011.12.tar.bz2">(32-bit)</a> <br />
     <br />
     <a href="http://debian.netcologne.de/grml/gnupg-michael-prokop.txt">Signing Key</a><br />
     <br />
@@ -192,10 +181,10 @@
     </div></div>
 
     <div class="download_panel" id="download_panel4"><div>
-    <b>Boot from USB stick</b><br />
+    <b>Boot from USB key</b><br />
     <br />
-    Just <tt>dd(1)</tt> the downloaded ISO to an <abbr title="Any existing data will be overriden by the dd command!">empty</abbr> USB stick!<br /><br />
-    <code>dd if=grml_2011.05.iso of=/dev/USB_STICK</code>
+    Just <tt>dd(1)</tt> the downloaded ISO to an <abbr title="Any existing data will be overriden by the dd command!">empty</abbr> USB key!<br /><br />
+    <code>dd if=grml64_2011.12.iso of=/dev/USB_KEY</code>
     <br /><br />
 
     <b>Troubleshooting</b><br /><br />

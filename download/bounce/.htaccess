@@ -4,13 +4,10 @@ RewriteCond %{QUERY_STRING} arch=amd64
 RewriteRule ^.*$ grml64
 
 RewriteCond %{QUERY_STRING} arch=i386
-RewriteRule ^.*$ grml
+RewriteRule ^.*$ grml32
 
 RewriteCond %{QUERY_STRING} arch=both
 RewriteRule ^.*$ grml96
-
-RewriteCond %{QUERY_STRING} flavour=(medium|small)
-RewriteRule ^(.*)$ $0-%1
 
 RewriteCond %{QUERY_STRING} version=([0-9\-\.a-z]+)
 RewriteRule ^(.*)$ $0_%1
