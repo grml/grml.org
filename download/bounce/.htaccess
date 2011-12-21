@@ -1,7 +1,7 @@
 RewriteEngine on
 
 RewriteCond %{QUERY_STRING} arch=amd64
-RewriteRule ^.*$ grml65
+RewriteRule ^.*$ grml64
 
 RewriteCond %{QUERY_STRING} arch=i386
 RewriteRule ^.*$ grml
@@ -11,6 +11,9 @@ RewriteRule ^(.*)$ $0-%1
 
 RewriteCond %{QUERY_STRING} version=([0-9\-\.a-z]+)
 RewriteRule ^(.*)$ $0_%1
+
+RewriteCond %{QUERY_STRING} version=([0-9\-\.a-z]+)rc
+RewriteRule ^(.*)$ devel/$0
 
 RewriteRule ^(.*)$ $0.iso
 
