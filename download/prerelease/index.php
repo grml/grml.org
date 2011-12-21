@@ -90,7 +90,7 @@
     <p>Download the Grml flavour you need, then write it to a CD-R or an empty USB stick.</p>
 
     <div class="download_group" id="download_group1">
-    <form method="post" action="/download/bounce/">
+    <form method="get" action="/download/bounce/">
     <input type="hidden" name="version" value="2011.12-rc1"/>
     <div class="download_panel" id="download_panel1"><div>
 

@@ -102,7 +102,7 @@
     </div>
 
     <div class="download_group" id="download_group1" style="display:none;">
-    <form method="post" action="/download/bounce/">
+    <form method="get" action="/download/bounce/">
     <input type="hidden" name="version" value="2011.05"/>
     <div class="download_panel" id="download_panel1"><div>
 
