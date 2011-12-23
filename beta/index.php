@@ -36,24 +36,24 @@
         <p><a href="http://daily.grml.org/">Daily builds</a> mostly reflect
         development of the next Grml release. These builds are not tested.</p>
 
-        <h2>Continous Integration Build</h2>
+        <h2>Continuous Integration Build</h2>
 
-        <p>Our CI system builds a special version of the grml-medium amd64
+        <p>Our CI system builds a special version of the Grml amd64
         flavour after every Grml git code change. This build is usually not
         tested and includes experimental code that may not have been tested
         either and that may never be released.
         <a href="http://jenkins.grml.org/job/grml-full-amd64/">See here.</a></p>
 
-
         <h2>Release Candidates</h2>
 
-        <p>Shortly before we publish a new release, a release candidate is
-        usually announced on <a href="/irc/">IRC</a>.</p>
+	<p>Shortly before we publish a new release a release candidate version
+	is made available to the public. Currently there's no release candidate
+	version available.</p>
 
         <!--
-        -->
         <p>The CURRENT RELEASE CANDIDATE is available for
         <a href="/download/prerelease/">download NOW</a>.</p>
+        -->
 
       </div>
 
