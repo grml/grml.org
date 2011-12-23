@@ -36,6 +36,7 @@
             <h3>English</h3>
 
             <ul>
+              <li><a href="http://linux.softpedia.com/get/System/Operating-Systems/Linux-Distributions/grml-916.shtml">grml 2011.12 @ softpedia.com</a> [2011-12-23]</li>
               <li><a href="http://www.h-online.com/open/news/item/Grml-2011-05-includes-Ratpoison-1252764.html">Grml 2011.05 includes Ratpoison - h-online.com</a> [2011-05-31]</li>
               <li><a href="http://news.softpedia.com/news/Grml-2011-05-Adds-Linux-Kernel-2-6-38-7-203082.shtml">Grml 2011.05 Adds Linux Kernel 2.6.38.7 @ softpedia.com</a> [2011-05-30]</li>
               <li><a href="http://distrowatch.com/?newsid=06700">Distribution Release: Grml 2011.05 @ distrowatch.com</a> [2011-05-30]</li>
