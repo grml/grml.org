@@ -73,6 +73,7 @@
             <h3>German</h3>
 
             <ul>
+              <li><a href="http://www.pro-linux.de/news/1/17873/grml-201112-freigegeben.html">Das Grml-Projekt hat Version 2011.12 der Live-Distribution zur Systemrettung und Systemverwaltung veröffentlicht - pro-linux.de</a> [23.12.2011]</li>
               <li><a href="http://www.golem.de/1112/88653.html">Grml 2011.12 alias Knecht Rootrecht veröffentlicht - golem.de</a> [23.12.2011]</li>
               <li><a href="http://www.tecchannel.de/pc_mobile/news/2035742/">Für System-Administratoren: Grml 2011.05 steht bereit - tecchannel.de</a> [31.05.2011]</li>
               <li><a href="http://www.heise.de/open/meldung/Live-Linux-Grml-2011-05-wieder-mit-Ratpoison-1252714.html">Live-Linux Grml 2011.05 wieder mit Ratpoison - heise.de</a> [31.05.2011]</li>
