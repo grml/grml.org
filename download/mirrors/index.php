@@ -62,12 +62,14 @@
                <li><a href="ftp://gd.tuwien.ac.at/opsys/linux/grml/">ftp://gd.tuwien.ac.at/opsys/linux/grml/</a></li>
             </ul>
 
+<!--
             <p>mirror.lagis.at (Linz/Austria):</p>
 
             <ul>
                <li><a href="http://mirror.lagis.at/pub/grml/">http://mirror.lagis.at/pub/grml/</a></li>
                <li><a href="ftp://mirror.lagis.at/pub/grml/">ftp://mirror.lagis.at/pub/grml/</a></li>
             </ul>
+-->
 
             <p>netcologne.de (Germany):</p>
             <ul>
@@ -75,11 +77,13 @@
               <li><a href="ftp://debian.netcologne.de/grml/">ftp://debian.netcologne.de/grml/</a></li>
             </ul>
 
+<!--
             <p>uni-erlangen.de (Erlangen/Germany):</p>
             <ul>
               <li><a href="http://ftp.uni-erlangen.de/pub/mirrors/grml/">http://ftp.uni-erlangen.de/pub/mirrors/grml/</a></li>
               <li><a href="ftp://ftp.uni-erlangen.de/pub/mirrors/grml/">ftp://ftp.uni-erlangen.de/pub/mirrors/grml/</a></li>
             </ul>
+-->
 
             <p>GWDG.de (Germany):</p>
             <ul>
@@ -98,11 +102,13 @@
               <li><a href="http://modprobe.de/grml/">http://modprobe.de/grml/</a></li>
             </ul>
 
+<!--
             <p>hosteurope.de (Germany):</p>
             <ul>
               <li><a href="http://ftp.hosteurope.de/mirror/grml.org/">http://ftp.hosteurope.de/mirror/grml.org/</a></li>
               <li><a href="ftp://ftp.hosteurope.de/mirror/grml.org/">ftp://ftp.hosteurope.de/mirror/grml.org/</a></li>
             </ul>
+-->
 
             <p>de.leaseweb.net (Germany):</p>
             <ul>
