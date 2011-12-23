@@ -39,12 +39,12 @@
           src="/img/zsh_lover.png" alt="*" /></a> Grml - Linux for zsh
           lovers</p>
 
-          <p>Grml provides an excellent selection of software packages
-          for installation, deployment and system rescue, You'll
-          get <strong>sysadmin's favourite tools</strong>, security-
-          and network-related software, data recovery- and
-          forensic-tools. Choose between a x86 and an amd64 version
-          depending on your needs.</p>
+	  <p>Grml provides an excellent selection of software packages
+	  for installation, deployment and system rescue. You'll
+	  get <strong>sysadmin's favourite tools</strong>.
+	  Choose between a x86 and an amd64 version
+	  depending on your needs or just grab the multiboot ISO grml96,
+	  providing 64bit and 32bit ISOs in one single place.</p>
 
           <p>Grml provides several scripts and utils
           which <strong>make life easier</strong>. The default
