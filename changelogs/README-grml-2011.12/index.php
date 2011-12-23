@@ -107,14 +107,15 @@
 
         <h3>Updates</h3>
 
-        <p>Packages are taken from Debian testing, 23rd of December
-        2011. 1745 packages have been removed, and these new packages
-        have been added (plus dependencies):</p>
+	<p>Packages are taken from Debian testing, 23rd of December 2011. More
+	than 1700 packages have been removed, and these new packages have been
+	added (plus dependencies):</p>
+
 <pre class="rahmen">
-  afflib-tools aoetool atftp bacula-sd efibootmgr
-  grub-efi-amd64-bin ia32-libs imvirt ipxe mcollective
-  mtx multiarch-support netcat-openbsd python2.7 sipcalc
-  vblade
+  afflib-tools atftp bacula-sd boot-info-script efibootmgr
+  extundelete grub-efi-amd64-bin hsetroot ia32-libs imvirt
+  ipxe libnss-myhostname lio-utils mcollective mtx
+  multiarch-support netcat-openbsd python2.7 sipcalc targetcli
 </pre>
 
         <p>These Grml packages have been removed/replaced:</p>
