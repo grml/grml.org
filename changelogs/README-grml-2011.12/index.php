@@ -154,6 +154,7 @@
 
         <p>Many thanks in this release go to (alphabetically)
           Brad Cable,
+	  Christoph Biedl,
           Christoph Lupe,
           Charles A. Hewson,
           Hans BKK,
