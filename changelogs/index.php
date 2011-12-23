@@ -35,14 +35,10 @@
         <a href="README-grml-2011.05/">Release announcement for Grml 2011.05</a>
 	</p>
 
-        <h2>Current release candidate</h2>
-
-        <p>The <strong>release announcement for Grml 2011.12-rc1</strong>  is
-        available online: <a href="README-grml-2011.12-rc1/">README-grml-2011.12-rc1/</a>.</p>
-
         <h2>Previous releases</h2>
 
         <ul>
+          <li><a href="README-grml-2011.05/">grml 2011.05</a> - codaneme Just Mari</li>
           <li><a href="README-grml-2010.12/">grml 2010.12</a> - codename Gebr&uuml;der Grml</li>
           <li><a href="README-grml-2010.04/">grml 2010.04</a> - codename Grmlmonster</li>
           <li><a href="README-grml-2009.10/">grml 2009.10</a> - codename Hello-Wien</li>
