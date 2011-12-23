@@ -1,3 +1,8 @@
+<?php
+// while there is no prerelease, redirect to stable page
+header("Location: /download/");
+exit;
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -79,12 +84,9 @@
 
     <h1>Download Grml 2011.12-rc1</h1>
 
-    <!--
-    <p><strong>NOTE:</strong> There is no current pre-release.</p>
-    -->
-
     <p><strong>NOTE: This is a PRE-RELEASE, not a stable release yet.<br />
     You have been warned.</strong><br />
+
     <a href="../">Looking for the stable release version instead?</a></p>
 
     <p>Download the Grml flavour you need, then write it to a CD-R or an empty USB stick.</p>
