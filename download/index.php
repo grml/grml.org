@@ -171,7 +171,8 @@
     <b>Alternate downloads</b><br /><br />
     <a href="http://daily.grml.org/">Daily images</a><br />
     <a href="http://download.grml.org/">Older releases</a><br />
-    <a href="http://download.grml.org/grml_sources-2011.12.tgz">Source code</a> (both archs)<br />
+    <a href="http://download.grml.org/grml_sources-2011.12.tar.gz">Source code</a> (both archs)<br />
+    <br/>
     Netboot packages:<br/>
     <a href="http://download.grml.org/grml_netboot_package_grml64_2011.12.tar.bz2">64-bit</a>
     <a href="http://download.grml.org/grml_netboot_package_grml64_2011.12.tar.bz2.sha1.asc">(sig)</a>
