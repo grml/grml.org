@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>grml.org - Release Notes: Grml 2011.12-rc1 - Codename Knecht Rootrecht</title>
-<meta name="Title" content="grml.org - Release Notes: Grml 2011.12-rc1 Knecht Rootrecht" />
+<title>grml.org - Release Notes: Grml 2011.12 - Codename Knecht Rootrecht</title>
+<meta name="Title" content="grml.org - Release Notes: Grml 2011.12 Knecht Rootrecht" />
 <meta name="Author" content="the Grml team [grml.org/team/]" />
 <meta name="Keywords" content="grml.org, Grml" />
-<meta name="Description" content="Release Notes of Grml 2011.12-rc1" />
+<meta name="Description" content="Release Notes of Grml 2011.12" />
 <meta name="Abstract" content="Grml, the linux live-cd for sysadmins and texttool users" />
 <meta name="Robots" content="index,follow" />
 <meta name="Language" content="english" />
@@ -25,12 +25,12 @@
       <div class="content">
 
         <p><a href="/screenshots/"><img align="right" style="margin-left: 20px;
-        border: 0" src="/screenshots/grml_2011.12-rc1.jpg" alt="*" /></a></p>
+        border: 0" src="/screenshots/grml_2011.12.jpg" alt="*" /></a></p>
 
-        <h1>Release Notes for Grml 2011.12-rc1 - codename <a
+        <h1>Release Notes for Grml 2011.12 - codename <a
         href="/faq/#releasename">Knecht Rootrecht</a></h1>
 
-        <p><a href="http://grml.org/download/prerelease/">Download Now</a></p>
+        <p><a href="http://grml.org/download/">Download Now</a></p>
 
         <h3>About</h3>
 
@@ -66,8 +66,11 @@
             reachable from the fluxbox menu.</li>
           <li>The accessibility support now consists of shipping standard speakup
             and enabling sound during boot. A new beep sequence (4 tones) is sounded
-            just before the quickconfig menu starts. (The boot options have been
-            removed.)</li>
+	    just before the quickconfig menu starts. The isolinux menu will beep once,
+	    and the grub menu will beep three times. (The accessibility boot options
+            have been removed.)</li>
+          <li>iSCSI Target is now provided by <a href="http://linux-iscsi.org/index.php/LIO-Target">LIO</a>.
+            The configuration tool <tt>targetcli</tt> is included.</li>
           <li>xterm now uses the Terminus font, like the VT consoles.</li>
           <li>Virtual Machines automatically get the "noprompt" behaviour.</li>
           <li>Ancient config files and examples have been removed from grml-etc(-core).</li>
@@ -91,7 +94,7 @@
           <li>grml2usb: compat for releases &lt; 2009.05, grub1 and lilo support
             have been removed.</li>
           <li>Release builds are now built from Debian's testing distribution, instead of unstable.</li>
-          <li>Linux kernel is based on <b>3.1.4</b>. No additional modules are shipped.</li>
+          <li>Linux kernel is based on <b>3.1.6</b>. No additional modules are shipped.</li>
           <li>Fixed several bugs from the <a href="http://bts.grml.org/grml/">bug tracking system</a>.</li>
         </ul>
 
@@ -100,15 +103,15 @@
         <p>Details about shipped packages and their versions on Grml are
         available at the <a href="/files/#debian">Debian section</a>. Visit
         <!--
-        <a href="/files/release-2011.12-rc1/dpkg_get_selections">dpkg_get_selections</a>
+        <a href="/files/release-2011.12/dpkg_get_selections">dpkg_get_selections</a>
         for a main package listing and
         -->
-        <a href="/files/release-2011.12-rc1/dpkg_list">dpkg_list</a> for a
-        detailed list of packages shipped with Grml 2011.12-rc1.</p>
+        <a href="/files/release-2011.12/dpkg_list">dpkg_list</a> for a
+        detailed list of packages shipped with Grml 2011.12.</p>
 
         <h3>Updates</h3>
 
-        <p>Packages are taken from Debian testing, 11th of December
+        <p>Packages are taken from Debian testing, 23rd of December
         2011. 1745 packages have been removed, and these new packages
         have been added (plus dependencies):</p>
 <pre class="rahmen">
@@ -129,31 +132,17 @@
 
         <h3>Known issues</h3>
 
-        <p><b>iSCSI Target</b> support is currently in limbo, as
-          the user land tools for the new in-kernel iSCSI target are not yet
-          in Debian unstable/testing and shipping the old iscsitarget modules
-          in binary form appears to be almost impossible with the new DKMS packaging.
-          As a workaround you may consider using Ata Over Ethernet with vblade.
-          </p>
+	<p>None at the time of the release!</p>
 
-        <p><b>dns bootoption</b> does not work as expected. See <a
-        href="http://bts.grml.org/grml/issue1099">issue1099</a> for details.</p>
-
-        <!--
         <p>Take a look at <a
         href="/bugs/known/">the known bugs list</a>.
         Please report problems using information on <a
           href="/bugs/">grml.org/bugs/</a>.</p>
-        -->
 
-        <h3>Download Grml 2011.12-rc1</h3>
+        <h3>Download Grml 2011.12</h3>
 
-        <p>Grml 2011.12-rc1 can be downloaded from
-        <a href="http://grml.org/download/prerelease/">grml.org/download/prerelease/</a>.</p>
-
-        <!--
-        <p>Grml 2011.12-rc1 can be downloaded from <a href="/download/">grml.org/download/</a>.</p>
-        -->
+        <p>Grml 2011.12 can be downloaded from
+        <a href="http://grml.org/download/">grml.org/download/</a>.</p>
 
         <h3>Feedback</h3>
 
@@ -164,14 +153,27 @@
           href="/bugs/">grml.org/bugs/</a>. Please send your feedback and
         feature requests <a href="/contact/">to the Grml team</a>!</p>
 
-<!--
         <a name="thanks"></a>
         <h3>Thanks</h3>
 
         <p>Many thanks in this release go to (alphabetically)
-          TBD,
-          for their contributions.</p>
--->
+          Brad Cable,
+          Christoph Lupe,
+          Charles A. Hewson,
+          Hans BKK,
+          John G. Heim,
+          Jordan Uggla,
+          Julius Plenz
+          Malte Simon,
+          Marek Malevič,
+          Michael Gissing,
+          Pawel Sadkowski,
+          Ralf Moll,
+          Richard Hartmann,
+          Sedat Dilek,
+          Thomas Koehler,
+          Uli Martens
+          for their ideas and patches - as well as to our new <a href="/team/">contributors</a>.</p>
 
         <h3>More Information</h3>
 

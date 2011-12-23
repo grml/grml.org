@@ -57,9 +57,9 @@
 
         <h2><a name="grml1112"></a>X Window System - fluxbox</h2>
 
-        <a href="grml_2011.12-rc1.png"><img style="border: 0" src="grml_2011.12-rc1.jpg" alt="Screenshot" /></a><br />
+        <a href="grml_2011.12.png"><img style="border: 0" src="grml_2011.12.jpg" alt="Screenshot" /></a><br />
 
-        <p>This screenshot shows Grml 2011.12-rc1 running the X Window system with the <a
+        <p>This screenshot shows Grml 2011.12 running the X Window system with the <a
         href="http://fluxbox.sourceforge.net/">fluxbox</a> window manager.</p>
 
       </div>
