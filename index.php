@@ -44,23 +44,25 @@
 
             <p style="text-align: center;">
             <b>The current release:</b><br/><br/>
-            <a href="/download/" class="button" style="padding: 12px; font-weight: bold;"><span>Download Grml 2011.05</span></a>
+            <a href="/download/" class="button" style="padding: 12px; font-weight: bold;"><span>Download Grml 2011.12</span></a>
             </p>
             <br />
 
+	<!--
             <p style="text-align: center;">
             <b>Pre-Release:</b><br/><br/>
             <a href="/download/prerelease/" class="button" style="padding: 12px; font-weight: bold;"><span>Download Grml 2011.12-rc1</span></a>
             </p>
             <br />
-
+	-->
             <img style="float: right; margin-left: 20px" src="/img/grmltux_small.jpg" alt="*" />
             <br />
 
             <h2>News</h2>
             <div class="news">
-            <p>12 Dec 2011: New <a href="/changelogs/README-grml-2011.12-rc1/">release candidate 2011.12-rc1</a> is available <a href="/download/prerelease/">for download</a>.</p>
-            <p>29 May 2011: New <a href="/changelogs/README-grml-2011.05/">stable release version 2011.05</a> is available <a href="/download/">for download</a>.</p>
+            <p>21 Dec 2011: New <a href="/changelogs/README-grml-2011.12/">release candidate 2011.12</a> is available <a href="/download/">for download</a>.</p>
+            <p>12 Dec 2011: New release candidate 2011.12-rc1 is available.</p>
+            <p>29 May 2011: New <a href="/changelogs/README-grml-2011.05/">stable release version 2011.05</a> is available.</p>
             </div>
 
       </div>
