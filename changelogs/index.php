@@ -32,13 +32,13 @@
         <h2>Current release</h2>
 
 	<p>
-        <a href="README-grml-2011.05/">Release announcement for Grml 2011.05</a>
+        <a href="README-grml-2011.12/">Release announcement for Grml 2011.12 - codename Knecht Rootrecht</a>
 	</p>
 
         <h2>Previous releases</h2>
 
         <ul>
-          <li><a href="README-grml-2011.05/">grml 2011.05</a> - codaneme Just Mari</li>
+          <li><a href="README-grml-2011.05/">grml 2011.05</a> - codename Just Mari</li>
           <li><a href="README-grml-2010.12/">grml 2010.12</a> - codename Gebr&uuml;der Grml</li>
           <li><a href="README-grml-2010.04/">grml 2010.04</a> - codename Grmlmonster</li>
           <li><a href="README-grml-2009.10/">grml 2009.10</a> - codename Hello-Wien</li>
