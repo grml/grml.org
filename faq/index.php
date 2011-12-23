@@ -35,6 +35,7 @@
         <p class="toc"><a href="#general">General:</a></p>
         <ol>
           <li><a href="#whatis">What is Grml?</a></li>
+          <li><a href="#flavours">What are grml32 / grml64 and grml96?</a></li>
           <li><a href="#get">Where do I get Grml?</a></li>
           <li><a href="#whatmeans">What does Grml mean?</a></li>
           <li><a href="#releasename">What about the release name?</a></li>
@@ -81,6 +82,22 @@
         collection of GNU/Linux software especially for system
         administrators. It specializes on administrative tasks like
         installation, deployment and system rescue.</p>
+
+	<h3><a name="flavours"></a><a href="#doc">What are grml32 / grml64 and grml96?</a></h3>
+
+        <ul>
+          <li>grml32: 32bit version (kernel and userspace)</li>
+          <li>grml64: 64bit version (kernel and userspace)</li>
+          <li>grml96: multi boot version (featuring grml32 and grml64 on one ISO)</li>
+        </ul>
+
+	<p>Unless you've a good reason to really choose the 32bit flavour we
+	strongly encourage you to use either the grml64 or the grml96
+	flavour.</p>
+
+	<p>Please notice that this schema was introduced starting with Grml
+	release 2011.12. Until then grml96 didn't exist and grml32 was known as
+	just 'grml'.</p>
 
         <h3><a name="get"></a><a href="#toc">Where do I get Grml?</a></h3>
 
