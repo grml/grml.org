@@ -55,51 +55,19 @@
 
         <h2><a name="debian"></a>Package lists for the current release</h2>
 
-        <h3>grml 2011.05</h3>
+        <h3>grml32 2011.12</h3>
 
         <ul>
-          <li><a href="release-2011.05/dpkg_get_selections">dpkg_get_selections</a> - software package listing</li>
-          <li><a href="release-2011.05/dpkg_list">dpkg_list</a> - more detailed package list including version information</li>
+          <li><a href="grml32_2011.12/dpkg.selections">dpkg.selections</a> - software package listing</li>
+          <li><a href="grml32_2011.12/dpkg.list">dpkg.list</a> - more detailed package list including version information</li>
           <li><a href="http://git.grml.org/?p=grml-live.git;a=blob_plain;f=templates/GRML/grml-cheatcodes.txt;hb=HEAD">grml-cheatcodes.txt</a> - boot options</li>
         </ul>
 
-        <h3>grml64 2011.05</h3>
+        <h3>grml64 2011.12</h3>
 
         <ul>
-          <li><a href="release-2011.05-grml64/dpkg_get_selections">dpkg_get_selections</a> - software package listing</li>
-          <li><a href="release-2011.05-grml64/dpkg_list">dpkg_list</a> - more detailed package list including version information</li>
-          <li><a href="http://git.grml.org/?p=grml-live.git;a=blob_plain;f=templates/GRML/grml-cheatcodes.txt;hb=HEAD">grml-cheatcodes.txt</a> - boot options</li>
-        </ul>
-
-        <h3>grml-medium 2011.05</h3>
-
-        <ul>
-          <li><a href="release-2011.05-medium/dpkg_get_selections">dpkg_get_selections</a> - software package listing</li>
-          <li><a href="release-2011.05-medium/dpkg_list">dpkg_list</a> - more detailed package list including version information</li>
-          <li><a href="http://git.grml.org/?p=grml-live.git;a=blob_plain;f=templates/GRML/grml-cheatcodes.txt;hb=HEAD">grml-cheatcodes.txt</a> - boot options</li>
-        </ul>
-
-        <h3>grml64-medium 2011.05</h3>
-
-        <ul>
-          <li><a href="release-2011.05-grml64-medium/dpkg_get_selections">dpkg_get_selections</a> - software package listing</li>
-          <li><a href="release-2011.05-grml64-medium/dpkg_list">dpkg_list</a> - more detailed package list including version information</li>
-          <li><a href="http://git.grml.org/?p=grml-live.git;a=blob_plain;f=templates/GRML/grml-cheatcodes.txt;hb=HEAD">grml-cheatcodes.txt</a> - boot options</li>
-        </ul>
-
-        <h3>grml-small 2011.05</h3>
-
-        <ul>
-          <li><a href="release-2011.05-small/dpkg_get_selections">dpkg_get_selections</a> - software package listing</li>
-          <li><a href="release-2011.05-small/dpkg_list">dpkg_list</a> - more detailed package list including version information</li>
-          <li><a href="http://git.grml.org/?p=grml-live.git;a=blob_plain;f=templates/GRML/grml-cheatcodes.txt;hb=HEAD">grml-cheatcodes.txt</a> - boot options</li>
-        </ul>
-
-        <h3>grml64-small 2011.05</h3>
-
-        <ul>
-          <li><a href="release-2011.05-grml64-small/dpkg_get_selections">dpkg_get_selections</a> - software package listing</li>
-          <li><a href="release-2011.05-grml64-small/dpkg_list">dpkg_list</a> - more detailed package list including version information</li>
+          <li><a href="grml64_2011.12/dpkg.selections">dpkg.selections</a> - software package listing</li>
+          <li><a href="grml64_2011.12/dpkg.list">dpkg.list</a> - more detailed package list including version information</li>
           <li><a href="http://git.grml.org/?p=grml-live.git;a=blob_plain;f=templates/GRML/grml-cheatcodes.txt;hb=HEAD">grml-cheatcodes.txt</a> - boot options</li>
         </ul>
 

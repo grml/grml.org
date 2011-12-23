@@ -100,14 +100,10 @@
 
         <h3>Packages</h3>
 
-        <p>Details about shipped packages and their versions on Grml are
-        available at the <a href="/files/#debian">Debian section</a>. Visit
-        <!--
-        <a href="/files/release-2011.12/dpkg_get_selections">dpkg_get_selections</a>
-        for a main package listing and
-        -->
-        <a href="/files/release-2011.12/dpkg_list">dpkg_list</a> for a
-        detailed list of packages shipped with Grml 2011.12.</p>
+        <ul>
+          <li><a href="/files/grml32_2011.12/dpkg.list">32-bit package list</a></li>
+          <li><a href="/files/grml64_2011.12/dpkg.list">64-bit package list</a></li>
+        </ul>
 
         <h3>Updates</h3>
 
