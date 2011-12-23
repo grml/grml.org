@@ -171,9 +171,13 @@
     <b>Alternate downloads</b><br /><br />
     <a href="http://daily.grml.org/">Daily images</a><br />
     <a href="http://download.grml.org/">Older releases</a><br />
-    <a href="http://download.grml.org/devel/grml_sources-2011.12.tgz">Source code</a> (both archs)<br />
-    <a href="http://download.grml.org/devel/grml_netboot_package_grml64_2011.12.tar.bz2">Netboot Package 64-bit</a> 
-    <a href="http://download.grml.org/devel/grml_netboot_package_grml_2011.12.tar.bz2">(32-bit)</a> <br />
+    <a href="http://download.grml.org/grml_sources-2011.12.tgz">Source code</a> (both archs)<br />
+    Netboot packages:<br/>
+    <a href="http://download.grml.org/grml_netboot_package_grml64_2011.12.tar.bz2">64-bit</a>
+    <a href="http://download.grml.org/grml_netboot_package_grml64_2011.12.tar.bz2.sha1.asc">(sig)</a>
+    <a href="http://download.grml.org/grml_netboot_package_grml32_2011.12.tar.bz2">32-bit</a>
+    <a href="http://download.grml.org/grml_netboot_package_grml32_2011.12.tar.bz2.sha1.asc">(sig)</a>
+    <br />
     <br />
     <a href="http://debian.netcologne.de/grml/gnupg-michael-prokop.txt">Signing Key</a><br />
     <br />
