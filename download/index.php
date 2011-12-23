@@ -80,7 +80,7 @@
     <h1>Download Grml 2011.12</h1>
 
     <p>Get the current stable release here.<br />
-    <a href="prerelease/">Looking for the current pre-release version instead?</a></p>
+<!--    <a href="prerelease/">Looking for the current pre-release version instead?</a></p> -->
 
     <p>Download Grml and then write it to a CD-R or an empty USB key.</p>
 
