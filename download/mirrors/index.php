@@ -56,13 +56,11 @@
               <li><a href="ftp://mirror.inode.at/grml/">ftp://mirror.inode.at/grml/</a></li>
             </ul>
 
-            <!--
             <p>gd.tuwien.ac.at (Vienna/Austria):</p>
             <ul>
                <li><a href="http://gd.tuwien.ac.at/opsys/linux/grml/">http://gd.tuwien.ac.at/opsys/linux/grml/</a></li>
                <li><a href="ftp://gd.tuwien.ac.at/opsys/linux/grml/">ftp://gd.tuwien.ac.at/opsys/linux/grml/</a></li>
             </ul>
-            -->
 
             <p>mirror.lagis.at (Linz/Austria):</p>
 
@@ -100,11 +98,6 @@
               <li><a href="http://modprobe.de/grml/">http://modprobe.de/grml/</a></li>
             </ul>
 
-            <p>stoerimpuls.net (Germany):</p>
-            <ul>
-              <li><a href="http://storage.theta.stoerimpuls.net/grml/">http://storage.theta.stoerimpuls.net/grml/</a></li>
-            </ul>
-
             <p>hosteurope.de (Germany):</p>
             <ul>
               <li><a href="http://ftp.hosteurope.de/mirror/grml.org/">http://ftp.hosteurope.de/mirror/grml.org/</a></li>
@@ -130,15 +123,6 @@
             <p>rit.edu (New York/US):</p>
             <ul>
               <li><a href="http://mirror.rit.edu/grml/">http://mirror.rit.edu/grml/</a></li>
-            </ul>
-
-            <h3>Mirrors in Asia</h3>
-
-            <p>ftp.tw.debian.org (Taiwan):</p>
-
-            <ul>
-                <li><a href="http://ftp.tw.debian.org/pub/grml/">http://ftp.tw.debian.org/pub/grml/</a></li>
-                <li><a href="ftp://ftp.tw.debian.org/pub/grml/">ftp://ftp.tw.debian.org/pub/grml/</a></li>
             </ul>
 
             <h3>Mirrors in Brazil</h3>
