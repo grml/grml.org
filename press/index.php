@@ -185,6 +185,8 @@
             <h3>Other languages</h3>
 
             <ul>
+              <li><a href="http://dug.net.pl/news/342/">Grml 2011.12 wydany @ dug.net.pl</a></li>
+              <li><a href="http://www.opennet.ru/opennews/art.shtml?num=32656">Вышел релиз Live-дистрибутива Grml 2011.12 @ opennet.ru</a></li>
               <li><a href="http://www.opennet.ru/opennews/art.shtml?num=30712">Вышел релиз LiveCD дистрибутива Grml 2011.05 @ opennet.ru</a></li>
               <li><a href="http://thecamels.org/2011/05/30/grml-2011-05/">Grml 2011.05 @ thecamels.org</a></li>
               <li><a href="http://dug.net.pl/news/272/">Grml 2011.05 wydany @ dug.net.pl</a></li>
