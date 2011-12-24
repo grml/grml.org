@@ -112,7 +112,7 @@
 
         <h3><a name="releasename"></a><a href="#toc">What about the release name?</a></h3>
 
-        <p>Codename of Grml 2011.12 is "Knetch Rootrecht". It's a wordplay on
+        <p>Codename of Grml 2011.12 is "Knecht Rootrecht". It's a wordplay on
         <a href="http://en.wikipedia.org/wiki/Companions_of_Saint_Nicholas">Knecht
         Ruprecht</a>, which translates as Farmhand Ruprecht or Servant
         Ruprecht.</p>
