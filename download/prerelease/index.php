@@ -173,7 +173,7 @@ exit;
     <div class="download_panel" id="download_panel4"><div>
     <b>Boot from USB stick</b><br />
     <br />
-    Just <tt>dd(1)</tt> the downloaded ISO to an <abbr title="Any existing data will be overriden by the dd command!">empty</abbr> USB stick!<br /><br />
+    Just <tt>dd(1)</tt> the downloaded ISO to an <abbr title="Any existing data will be overwritten by the dd command!">empty</abbr> USB stick!<br /><br />
     <code>dd if=grml_2011.12-rc1.iso of=/dev/USB_STICK</code>
     <br /><br />
 
