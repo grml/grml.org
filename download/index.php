@@ -95,7 +95,7 @@
         Direct download links:<br/>
         <a href="http://download.grml.org/grml96_2011.12.iso">Grml96 ISO</a> [<a href="http://download.grml.org/grml96_2011.12.iso.sha1.asc">Signature</a>]<br/>
         <a href="http://download.grml.org/grml64_2011.12.iso">Grml64 ISO</a> [<a href="http://download.grml.org/grml64_2011.12.iso.sha1.asc">Signature</a>]<br/>
-        <a href="http://download.grml.org/grml32_2011.12.iso">Grml32 ISO</a> [<a href="http://download.grml.org/grml_2011.12.iso.sha1.asc">Signature</a>]<br/>
+        <a href="http://download.grml.org/grml32_2011.12.iso">Grml32 ISO</a> [<a href="http://download.grml.org/grml32_2011.12.iso.sha1.asc">Signature</a>]<br/>
         <br/>
         </div></div>
     </div>
