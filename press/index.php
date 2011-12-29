@@ -75,6 +75,7 @@
 
             <ul>
               <li><a href="http://www.linux-magazin.de/NEWS/Grml-2011.12-Knecht-Rootrecht">Grml 2011.12: Knecht Rootrecht - linux-magazin.de</a> [27.12.2011]</li>
+              <li><a href="http://www.computerwoche.de/software/software-infrastruktur/2502240/">Die Linux-Woche im Rückblick - computerwoche.de</a> [26.12.2011]</li>
               <li><a href="http://www.heise.de/open/meldung/Rettungs-Linux-Grml-2011-12-Knecht-Rootrecht-freigegeben-1401261.html">Rettungs-Linux Grml 2011.12 "Knecht Rootrecht" freigegeben - heise.de</a> [24.12.2011]</li>
               <li><a href="http://www.pro-linux.de/news/1/17873/grml-201112-freigegeben.html">Das Grml-Projekt hat Version 2011.12 der Live-Distribution zur Systemrettung und Systemverwaltung veröffentlicht - pro-linux.de</a> [23.12.2011]</li>
               <li><a href="http://www.golem.de/1112/88653.html">Grml 2011.12 alias Knecht Rootrecht veröffentlicht - golem.de</a> [23.12.2011]</li>
