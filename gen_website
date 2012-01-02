@@ -21,17 +21,24 @@ my @files = File::Find::Rule->file()
 
 my $template = Template->new;
 
+if (! -d $out_dir) {
+	make_path($out_dir) or die "Could not create outdir $out_dir: $!";
+}
+
 foreach my $file (@files) {
 	next if $file =~ /^$out_dir/;
 	next if $file =~ /$0$/;
 	if ($file =~ /\.tt2$/) {
 		my $output;
-		$template->process($file, undef, \$output);
+		$template->process($file, undef, \$output) 
+			|| die "Could not process file \"$file\": $!";
+
 		my ($name,$path,$suffix) = fileparse($file,qw (.tt2));
-		open (my $fh, '>', "$out_dir/$path/$name.html") or die "$!";
+		open (my $fh, '>', "$out_dir/$path/$name.html") 
+			or die "Could not write to $file: $!";
 		print $fh $output;
 		close($fh);
 	} else {
-		fcopy ($file, "$out_dir/$file");
+		fcopy ($file, "$out_dir/$file") or die "Could not copy $file to $out_dir/$file: $!";
 	}
 }
