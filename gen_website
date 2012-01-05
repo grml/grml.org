@@ -34,6 +34,7 @@ foreach my $file (@files) {
 			|| die "Could not process file \"$file\": $!";
 
 		my ($name,$path,$suffix) = fileparse($file,qw (.tt2));
+        make_path("$out_dir/$path") unless -d "$out_dir/$path";
 		open (my $fh, '>', "$out_dir/$path/$name")
 			or die "Could not write to $file: $!";
 		print $fh $output;
