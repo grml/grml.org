@@ -1,7 +1,7 @@
 #!/usr/bin/perl
 
-use strict; 
-use warnings; 
+use strict;
+use warnings;
 
 use Template;
 use File::Find::Rule;
@@ -30,11 +30,11 @@ foreach my $file (@files) {
 	next if $file =~ /$0$/;
 	if ($file =~ /\.tt2$/) {
 		my $output;
-		$template->process($file, undef, \$output) 
+		$template->process($file, undef, \$output)
 			|| die "Could not process file \"$file\": $!";
 
 		my ($name,$path,$suffix) = fileparse($file,qw (.tt2));
-		open (my $fh, '>', "$out_dir/$path/$name.html") 
+		open (my $fh, '>', "$out_dir/$path/$name")
 			or die "Could not write to $file: $!";
 		print $fh $output;
 		close($fh);
