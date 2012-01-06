@@ -8,14 +8,24 @@ use File::Find::Rule;
 use File::Path qw(make_path);
 use File::Basename qw (fileparse);
 use File::Copy::Recursive qw(fcopy);
+use File::Temp qw (tempdir);
 
 my $out_dir = "out/";
 
 #find all files
 
-my @files = File::Find::Rule->file()
-			    ->in('.');
+#rule to match git directorys
+my $git = File::Find::Rule->directory
+                          ->name(".git")
+                          ->prune
+                          ->discard;
 
+#matches all files
+my $file_rule = File::Find::Rule->file();
+
+#combine both
+my @files = File::Find::Rule->or( $git, $file_rule )
+                            ->in('.');
 
 #initialize template toolkit
 
