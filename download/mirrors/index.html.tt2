@@ -22,7 +22,8 @@
 </head>
 
 <body>
-<?php include '../../static.inc'; ?>
+[% INCLUDE static.inc %]
+
 
 <div class="content">
 
@@ -160,4 +161,4 @@
 
 </div>
 
-<?php include '../../static_bottom.inc'; ?>
+[% INCLUDE static_bottom.inc %]
