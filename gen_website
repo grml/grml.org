@@ -5,12 +5,12 @@ use warnings;
 
 use Template;
 use File::Find::Rule;
-use File::Path qw(make_path);
+use File::Path qw(make_path remove_tree);
 use File::Basename qw (fileparse dirname);
 use File::Copy::Recursive qw(fcopy dirmove);
 use File::Temp qw (tempdir);
 
-my $out_dir = "out/";
+my $out_dir = shift || "out/";
 
 #find all files
 
@@ -28,7 +28,7 @@ my @files = File::Find::Rule->or( $git, $file_rule )
                             ->in('.');
 
 #create a tempdir
-my $tempdir = tempdir( CLEANUP => 0 );
+my $tempdir = tempdir( CLEANUP => 1 );
 
 #initialize template toolkit
 
@@ -55,8 +55,14 @@ foreach my $file (@files) {
 
 $out_dir =~ s/\/$//;
 if (-d $out_dir) {
-    mv ($out_dir, dirname($out_dir) . ".bak")
+    dirmove ($out_dir, $out_dir . ".bak")
         or die "Could not move $out_dir to $out_dir.bak: $!";
 }
-dirmove ($tempdir, "$out_dir")
-    or die "Could not move $tempdir to $out_dir: $!";
+if (! dirmove ($tempdir, "$out_dir")) {
+	warn "Could not move $tempdir to $out_dir: $!";
+	warn "Rollback";
+	remove_tree($out_dir);
+	dirmove ($out_dir . ".bak", $out_dir);
+} else {
+	remove_tree($out_dir . ".bak");
+}
