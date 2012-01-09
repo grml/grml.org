@@ -1,4 +1,5 @@
-      <div class="sponsors">
+[% IF ! sponsors %]
+<div class="sponsors">
       <h3>Sponsors</h3>
       <p>
         Grml is sponsored by several companies. For more information about our sponors check out the <a href="/sponsors/">Sponsors webpage</a>. Our main sponsor is:
@@ -9,7 +10,7 @@
         </a>
       </div>
       </div>
-
+[% END %]
 <!-- Piwik -->
 <script type="text/javascript">
 var pkBaseURL = (("https:" == document.location.protocol) ? "https://stats.grml.org/piwik/" : "http://stats.grml.org/piwik/");

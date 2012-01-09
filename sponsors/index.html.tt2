@@ -61,4 +61,6 @@
     </div>
     </div>
 
-[% INCLUDE static_bottom.inc %]
+    [% INCLUDE static_bottom.inc 
+        sponsoring = '1'
+    %]
