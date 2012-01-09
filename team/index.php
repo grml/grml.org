@@ -34,7 +34,6 @@
                 <li>Andreas Gredler (jimmy)</li>
                 <li>Christian Hofstaedtler (ch)</li>
                 <li>Frank Terbeck (ft)</li>
-                <li>Gerfried Fuchs (rhonda)</li>
                 <li>Michael Prokop (mika)</li>
                 <li>Ulrich Dangel (mru)</li>
             </ul>
@@ -58,6 +57,7 @@
                 <li>Carsten Hey</li>
                 <li>Christoph Biedl</li>
                 <li>Eduard Bloch</li>
+                <li>Gerfried Fuchs</li>
                 <li>Gregor Perner</li>
                 <li>Jan-Pieter Jacobs</li>
                 <li>Jens Kubieziel</li>
