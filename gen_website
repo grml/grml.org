@@ -84,7 +84,7 @@ foreach my $file (@files) {
 	next if $file =~ /$0$/;
 	if ($file =~ /\.tt2$/) {
 		my $output;
-		$template->process($file, undef, \$output)
+		$template->process($file, { mirrors => $mirrors }, \$output)
 			|| die "Could not process file \"$file\": $!";
 
 		my ($name,$path,$suffix) = fileparse($file,qw (.tt2));
