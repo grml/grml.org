@@ -50,7 +50,10 @@
 		<p>[% mirror %] ([% mirrors.$region.$mirror.location %])</p>
 		[% FOREACH type IN [ 'grml-http' 'grml-rsync' 'grml-ftp' ] %]
 		<ul>
-			<li>[% type.substr(5) %]://[% mirror %][% mirrors.$region.$mirror.$type %]</li>
+            <li><a href="[% type.substr(5) %]://[% mirror %][ mirrors.$region.$mirror.$type %]">
+                [% type.substr(5) %]://[% mirror %][ mirrors.$region.$mirror.$type %]
+                </a>
+            </li>
 		</ul>
 		[% END %]
 		[% END %]
