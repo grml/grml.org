@@ -174,8 +174,10 @@
         <p>There are no default passwords - all accounts are locked by
         default for security reasons. Even local logins are not
         possible (unless you set a password or create new user
-        accounts as root).  You can create valid passwords using "sudo
-        passwd [username]" from the shell individually.</p>
+        accounts as root). You can create valid passwords using "sudo
+        passwd [username]" from the shell individually. To set a password
+        for the Grml user and enable SSH login you can use the 'ssh'
+        boot option, like 'ssh=yourpassword'.</p>
 
         <h3><a name="version"></a><a href="#toc">How do I find out the version of Grml</a></h3>
 
