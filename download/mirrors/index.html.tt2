@@ -43,116 +43,20 @@
             <ul>
               <li><a href="http://download.grml.org/">http://download.grml.org/</a></li>
             </ul>
+	    [% FOREACH region IN mirrors.keys.sort %]
+	    	<h3>Mirrors in [% region.substr(3) %] </h3>
 
-            <h3>Mirrors in Europe</h3>
-
-            <p>sil.at (Vienna/Austria):</p>
-            <ul>
-              <li><a href="http://grml.deb.at/">http://grml.deb.at/</a></li>
-            </ul>
-
-            <p>inode.at (Vienna/Austria):</p>
-            <ul>
-              <li><a href="http://mirror.inode.at/data/grml/">http://mirror.inode.at/data/grml/</a></li>
-              <li><a href="ftp://mirror.inode.at/grml/">ftp://mirror.inode.at/grml/</a></li>
-            </ul>
-
-            <p>gd.tuwien.ac.at (Vienna/Austria):</p>
-            <ul>
-               <li><a href="http://gd.tuwien.ac.at/opsys/linux/grml/">http://gd.tuwien.ac.at/opsys/linux/grml/</a></li>
-               <li><a href="ftp://gd.tuwien.ac.at/opsys/linux/grml/">ftp://gd.tuwien.ac.at/opsys/linux/grml/</a></li>
-            </ul>
-
-<!--
-            <p>mirror.lagis.at (Linz/Austria):</p>
-
-            <ul>
-               <li><a href="http://mirror.lagis.at/pub/grml/">http://mirror.lagis.at/pub/grml/</a></li>
-               <li><a href="ftp://mirror.lagis.at/pub/grml/">ftp://mirror.lagis.at/pub/grml/</a></li>
-            </ul>
--->
-
-            <p>netcologne.de (Germany):</p>
-            <ul>
-              <li><a href="http://debian.netcologne.de/grml/">http://debian.netcologne.de/grml/</a></li>
-              <li><a href="ftp://debian.netcologne.de/grml/">ftp://debian.netcologne.de/grml/</a></li>
-            </ul>
-
-<!--
-            <p>uni-erlangen.de (Erlangen/Germany):</p>
-            <ul>
-              <li><a href="http://ftp.uni-erlangen.de/pub/mirrors/grml/">http://ftp.uni-erlangen.de/pub/mirrors/grml/</a></li>
-              <li><a href="ftp://ftp.uni-erlangen.de/pub/mirrors/grml/">ftp://ftp.uni-erlangen.de/pub/mirrors/grml/</a></li>
-            </ul>
--->
-
-            <p>GWDG.de (Germany):</p>
-            <ul>
-              <li><a href="http://ftp.gwdg.de/pub/linux/grml/">http://ftp.gwdg.de/pub/linux/grml/</a></li>
-              <li><a href="ftp://ftp.gwdg.de/pub/linux/grml/">ftp://ftp.gwdg.de/pub/linux/grml/</a></li>
-            </ul>
-
-            <p>rwth-aachen.de (Germany):</p>
-            <ul>
-                <li><a href="http://ftp.halifax.rwth-aachen.de/grml/">http://ftp.halifax.rwth-aachen.de/grml/</a></li>
-                <li><a href="ftp://ftp.halifax.rwth-aachen.de/grml/">ftp://ftp.halifax.rwth-aachen.de/grml/</a></li>
-            </ul>
-
-            <p>modprobe.de (Germany):</p>
-            <ul>
-              <li><a href="http://modprobe.de/grml/">http://modprobe.de/grml/</a></li>
-            </ul>
-
-<!--
-            <p>hosteurope.de (Germany):</p>
-            <ul>
-              <li><a href="http://ftp.hosteurope.de/mirror/grml.org/">http://ftp.hosteurope.de/mirror/grml.org/</a></li>
-              <li><a href="ftp://ftp.hosteurope.de/mirror/grml.org/">ftp://ftp.hosteurope.de/mirror/grml.org/</a></li>
-            </ul>
--->
-
-            <p>de.leaseweb.net (Germany):</p>
-            <ul>
-              <li><a href="http://mirror.de.leaseweb.net/grml/">http://mirror.de.leaseweb.net/grml/</a></li>
-              <li><a href="ftp://mirror.de.leaseweb.net/grml/">ftp://mirror.de.leaseweb.net/grml/</a></li>
-	    </ul>
-
-            <p>nl.leaseweb.net (Haarlem/Netherlands):</p>
-            <ul>
-              <li><a href="http://mirror.nl.leaseweb.net/grml/">http://mirror.nl.leaseweb.net/grml/</a></li>
-              <li><a href="ftp://mirror.nl.leaseweb.net/grml/">ftp://mirror.nl.leaseweb.net/grml/</a></li>
-              <li><a href="rsync://mirror.nl.leaseweb.net/grml/">rsync://mirror.nl.leaseweb.net/grml/</a></li>
-            </ul>
+		[% FOREACH mirror IN mirrors.$region.keys.sort %]
+		<p>[% mirror %] ([% mirrors.$region.$mirror.location %])</p>
+		[% FOREACH type IN [ 'grml-http' 'grml-rsync' 'grml-ftp' ] %]
+		<ul>
+			<li>[% type.substr(5) %]://[% mirror %][% mirrors.$region.$mirror.$type %]</li>
+		</ul>
+		[% END %]
+		[% END %]
+	    [% END %]
 
 
-            <h3>Mirrors in America</h3>
-
-            <p>rit.edu (New York/US):</p>
-            <ul>
-              <li><a href="http://mirror.rit.edu/grml/">http://mirror.rit.edu/grml/</a></li>
-            </ul>
-
-            <h3>Mirrors in Brazil</h3>
-
-            <p>grml.c3sl.ufpr.br (Brazil):</p>
-
-            <ul>
-                <li><a href="http://grml.c3sl.ufpr.br">http://grml.c3sl.ufpr.br</a></li>
-                <li><a href="ftp://grml.c3sl.ufpr.br/grml">ftp://grml.c3sl.ufpr.br/grml</a></li>
-                <li><a href="rsync://grml.c3sl.ufpr.br/grml">rsync://grml.c3sl.ufpr.br/grml</a></li>
-            </ul>
-
-            <h2><a name="#rsync"></a>Download via rsync</h2>
-
-            <ul>
-              <li><a href="rsync://grml.deb.at/grml">rsync://grml.deb.at/grml</a></li>
-              <li><a href="rsync://ftp5.gwdg.de/pub/linux/grml/">rsync://ftp5.gwdg.de/pub/linux/grml/</a></li>
-              <li><a href="rsync://gd.tuwien.ac.at/opsys/linux/grml/">rsync://gd.tuwien.ac.at/opsys/linux/grml/</a></li>
-              <li><a href="rsync://ftp.halifax.rwth-aachen.de/grml/">rsync://ftp.halifax.rwth-aachen.de/grml/</a></li>
-              <li><a href="rsync://ftp.tw.debian.org/pub/grml/">rsync://ftp.tw.debian.org/pub/grml/</a></li>
-              <li><a href="rsync://mirror.de.leaseweb.net/grml/">rsync://mirror.de.leaseweb.net/grml/</a></li>
-              <li><a href="rsync://grml.c3sl.ufpr.br/grml">rsync://grml.c3sl.ufpr.br/grml</a></li>
-            </ul>
 
             <hr />
 
