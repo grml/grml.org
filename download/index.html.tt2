@@ -142,9 +142,9 @@
     <script type="text/javascript">
     function update_links() {
         var current_version = "2011.12";
-        var product = 'grml32';
+        var product = 'grml64';
         var arch = document.getElementById('download_arch').value;
-        if (arch == 'amd64') product = 'grml64';
+        if (arch == 'i386') product = 'grml32';
         if (arch == 'both') product = 'grml96';
         var iso = product + '_' + current_version + '.iso';
         var mirror_url = "http://download.grml.org/";
