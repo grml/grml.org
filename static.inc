@@ -1,4 +1,4 @@
-<a href="http://grml.github.com"><img style="position: absolute; top: 0; right: 0; border: 0;" src="img/forkme.png" alt="Fork me on GitHub"></a>
+<a href="http://grml.github.com"><img style="position: absolute; top: 0; right: 0; border: 0;" src="/img/forkme.png" alt="Fork me on GitHub"></a>
 
 <div class="container">
       <div class="menu">
