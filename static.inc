@@ -1,10 +1,4 @@
-<style>
-div.floating-menu { position: fixed; background: #993300; font-weight: bold; border: 1px solid #000; z-index: 100; top: 1ex; right: 1ex;}
-div.floating-menu a, div.floating-menu p { color: #fff; display: block; margin: 0 1em; }
-</style>
-<div class="floating-menu">
-<p>We need your help! <a href="http://grml.github.com/">Contribute!</a></p>
-</div>
+<a href="http://grml.github.com"><img style="position: absolute; top: 0; right: 0; border: 0;" src="img/forkme.png" alt="Fork me on GitHub"></a>
 
 <div class="container">
       <div class="menu">
