@@ -38,6 +38,7 @@
                 <a class="plain" href="/bugs/">Reporting Bugs</a><br/>
                 <a class="plain" href="/bugs/known/">Known Bugs</a><br/>
                 <a class="plain" href="/beta/">Beta Versions</a><br/>
+                <a class="plain" href="http://grml.github.com/">Contribute</a><br/>
               </p>
             <h3>Get in touch</h3>
               <p>
