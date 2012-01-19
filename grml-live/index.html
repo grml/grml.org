@@ -752,9 +752,10 @@ Linux Live system (CD/ISO)</p></div>
 <div class="sect1">
 <h2 id="_synopsis">2. Synopsis</h2>
 <div class="sectionbody">
-<div class="paragraph"><p>grml-live [-a &lt;architecture&gt;] [-c &lt;classe[s]&gt;] [-C &lt;configfile&gt;] [-g
-&lt;grml_name&gt;] [-i &lt;iso_name&gt; ] [-o &lt;output_directory&gt;] [-r &lt;release_name&gt;] [-s
-&lt;suite&gt;] [-t &lt;template_directory&gt;] [-v &lt;version_number&gt;] [-U &lt;username&gt;] [
+<div class="paragraph"><p>grml-live [-a &lt;architecture&gt;] [-c &lt;classe[s]&gt;] [-C &lt;configfile&gt;] [
+-e &lt;extract_iso_name&gt;] [-g &lt;grml_name&gt;] [-i &lt;iso_name&gt;] [
+-o &lt;output_directory&gt;] [-r &lt;release_name&gt;] [-s &lt;suite&gt;] [
+-t &lt;template_directory&gt;] [-v &lt;version_number&gt;] [-U &lt;username&gt;] [
 -AbBFnNqQuVz]</p></div>
 </div>
 </div>
@@ -808,8 +809,8 @@ base system again and again check out <a href="#create-a-base-tgz">the base tar.
 </dt>
 <dd>
 <p>
-Clean up output directories before attempting the build. Packs the chroot
-into a tar archive, and removes chroot and ISO build directories before exiting.
+Clean up all output directories before running the build process. After finishing,
+clean up the Chroot target and Build target directories.
 </p>
 </dd>
 <dt class="hdlist1">
@@ -917,6 +918,15 @@ you want to have different configuration scripts, package definitions, etc. with
 without messing with the global configuration under /etc/grml/fai provided by
 grml-live this option provides you the option to use your own configuration
 throughout this documentation.
+</p>
+</dd>
+<dt class="hdlist1">
+-e <strong>EXTRACT_ISO_NAME</strong>
+</dt>
+<dd>
+<p>
+The squashfs inside the specified ISO will be extracted and used as the chroot.
+This option is useful for remastering, in combination with -A and -b or -u.
 </p>
 </dd>
 <dt class="hdlist1">
@@ -1047,15 +1057,6 @@ Specify place of the templates used for building the ISO. By default
 </p>
 </dd>
 <dt class="hdlist1">
--T <strong>CHROOT_ARCHIVE</strong>
-</dt>
-<dd>
-<p>
-Unpack chroot tar archive before starting. Most useful in combination with
--A and -b or -u.
-</p>
-</dd>
-<dt class="hdlist1">
 -u
 </dt>
 <dd>
@@ -1120,12 +1121,10 @@ system:</p></div>
 <td class="icon">
 <img src="./images/icons/note.png" alt="Note" />
 </td>
-<td class="content">If you have enough free space inside /dev/shm (being a tmpfs, usually you should
-have &gt;=1GB of RAM) just run "mount -o remount,suid,dev,rw /dev/shm" and use
-/dev/shm as build and output directory - resulting in very fast build process.
-But please be aware of the fact that rebooting your system will result in an
-empty /dev/shm, so please use another directory for $CHROOT_OUTPUT,
-$BUILD_OUTPUT and $ISO_OUTPUT if you plan to create more persistent output. :)</td>
+<td class="content">If you have enough RAM, just run "mount -t tmpfs none /media/ramdisk" to get a
+tmpfs ("RAMDISK"), and use /media/ramdisk as build and output directory - this
+results in a very fast build process. Note that these files will be gone when
+rebooting.</td>
 </tr></table>
 </div>
 </div>
@@ -1449,7 +1448,8 @@ version 2.6.38-grml[64] or newer.</p></div>
 <div class="paragraph"><p>The easiest way to get a running grml-live setup is to just use Grml.
 Of course using grml-live on a plain, original Debian installation is supported
 as well. So there we go.</p></div>
-<div class="paragraph"><p>What we have: plain, original Debian squeeze (6.0).</p></div>
+<div class="paragraph"><p>What we have: plain, original Debian squeeze (6.0) with debian-backports
+enabled. (This is important for squashfs-tools.)</p></div>
 <div class="paragraph"><p>What we want: build a Grml ISO based on Debian/wheezy for the amd64 architecture
 using grml-live.</p></div>
 <div class="sect3">
@@ -1474,21 +1474,6 @@ EOF</tt></pre>
 </div></div>
 <div class="literalblock">
 <div class="content">
-<pre><tt># adjust apt-pinning (only prefer squashfs stuff from grml):
-cat &gt;&gt; /etc/apt/preferences &lt;&lt; EOF
-Package: *
-Pin: origin deb.grml.org
-Pin-Priority: 1</tt></pre>
-</div></div>
-<div class="literalblock">
-<div class="content">
-<pre><tt>Package: squashfs-tools
-Pin: origin deb.grml.org
-Pin-Priority: 996
-EOF</tt></pre>
-</div></div>
-<div class="literalblock">
-<div class="content">
 <pre><tt># get keyring for apt:
 apt-get update
 apt-get --allow-unauthenticated install grml-debian-keyring</tt></pre>
@@ -1498,14 +1483,14 @@ apt-get --allow-unauthenticated install grml-debian-keyring</tt></pre>
 <pre><tt># optionally(!) install basefile so we don't have to build basic
 # chroot from scratch, grab from http://daily.grml.org/
 # mkdir -p /etc/grml/fai/config/basefiles/
-# mv base.tgz /etc/grml/fai/config/basefiles/I386.tar.gz
-# mv base64.tgz /etc/grml/fai/config/basefiles/AMD64.tar.gz</tt></pre>
+# mv I386.tar.gz /etc/grml/fai/config/basefiles/
+# mv AMD64.tar.gz /etc/grml/fai/config/basefiles/</tt></pre>
 </div></div>
 <div class="literalblock">
 <div class="content">
 <pre><tt># install relevant tools
-# please check out http://grml.org/grml-live/#current_state when encountering problems!
-apt-get -o APT::Install-Recommends=false install grml-live squashfs-tools</tt></pre>
+apt-get install -t squeeze-backports squashfs-tools
+apt-get --no-install-recommends install grml-live</tt></pre>
 </div></div>
 <div class="literalblock">
 <div class="content">
@@ -1628,46 +1613,33 @@ dpkg -i --force-confnew --force-confmiss /path/to/grml-live_..._all.deb</tt></pr
 </div></div>
 </div>
 <div class="sect2">
-<h3 id="create-a-base-tgz">13.8. How do I create a base.tgz for use as NFSROOT?</h3>
-<div class="paragraph"><p>First of all build the chroot system:</p></div>
+<h3 id="create-a-base-tgz">13.8. How do I create a base.tgz?</h3>
+<div class="paragraph"><p>First of all create the chroot using debootstrap:</p></div>
 <div class="literalblock">
 <div class="content">
-<pre><tt>mkdir /tmp/nfsroot &amp;&amp; cd /tmp/nfsroot
-debootstrap squeeze /tmp/nfsroot/ http://cdn.debian.net/debian
-tar zcf base.tgz ./</tt></pre>
+<pre><tt>BASECHROOT='/tmp/basefile'
+debootstrap squeeze "$BASECHROOT" http://cdn.debian.net/debian
+tar -C "$BASECHROOT" --exclude='var/cache/apt/archives/*.deb' -zcf base.tar.gz ./</tt></pre>
 </div></div>
-<div class="paragraph"><p>Then check out where your NFSROOT is located:</p></div>
-<div class="literalblock">
-<div class="content">
-<pre><tt># grep '^NFSROOT' /etc/grml/fai/make-fai-nfsroot.conf
-NFSROOT=/grml/fai/nfsroot</tt></pre>
-</div></div>
-<div class="paragraph"><p>So as /grml/fai/nfsroot is your NFSROOT place the file under
-/grml/fai/nfsroot/live/filesystem.dir/var/tmp/:</p></div>
-<div class="literalblock">
-<div class="content">
-<pre><tt>mv base.tgz /grml/fai/nfsroot/live/filesystem.dir/var/tmp/base.tgz</tt></pre>
-</div></div>
-<div class="paragraph"><p>or even better use /etc/grml/fai/config/basefiles/$CLASSNAME.tar.gz instead.
-Use I386 as $CLASSNAME for i386 builds and AMD64 for amd64 builds.</p></div>
-<div class="paragraph"><p>Now running "grml-live &#8230;" will use this file as main system instead of
-executing debootstrap. Check out the output for the following lines if using
-NFSROOT:</p></div>
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<img src="./images/icons/tip.png" alt="Tip" />
+</td>
+<td class="content">By default debootstrap builds a chroot matching the architecture of the running
+host system. If you&#8217;re using an amd64 system and want to build an i386 base.tgz
+then invoke debootstrap using the <em>--arch i386</em> option. Disclaimer: building an
+AMD64 base.tgz won&#8217;t work if you are using a 32bit kernel system of course.</td>
+</tr></table>
+</div>
+<div class="paragraph"><p>Then move the base.tar.gz to /etc/grml/fai/config/basefiles/$CLASSNAME.tar.gz.
+Use e.g. I386 as $CLASSNAME for i386 chroots and AMD64 for amd64 chroots.</p></div>
+<div class="paragraph"><p>Now executing grml-live should use this file as base system instead of executing
+debootstrap. Check out the output for something like:</p></div>
 <div class="literalblock">
 <div class="content">
 <pre><tt>[...]
-Calling task_extrbase
-Unpacking Debian base archive
-Extracting /grml/fai/nfsroot/live/filesystem.dir/var/tmp/base.tgz
-Calling task_mirror
-[...]</tt></pre>
-</div></div>
-<div class="paragraph"><p>or if using /etc/grml/fai/config/basefiles/$CLASSNAME.tar.gz for:</p></div>
-<div class="literalblock">
-<div class="content">
-<pre><tt>[...]
-ftar: extracting /etc/grml/fai/config/basefiles///AMD64.tar.gz to
-/grml-live/grml-live_20071029.22138/grml_chroot//
+ftar: extracting //etc/grml/fai/config/basefiles///AMD64.tar.gz to /srv/grml64_testing/grml_chroot//
 [...]</tt></pre>
 </div></div>
 <div class="admonitionblock">
@@ -1725,53 +1697,6 @@ tar zcf ../"${ARCH}".tar.gz *</tt></pre>
 <div class="paragraph"><p>And finally place the generated tarball in /etc/grml/fai/config/basefiles/ (note
 that it needs to be uppercase letters matching the class names, so: AMD64.tar.gz
 for amd64 and I386.tar.gz for i386).</p></div>
-</div>
-<div class="sect2">
-<h3 id="autobuild">13.12. How do I set up an autobuild environment?</h3>
-<div class="paragraph"><p>If you want to set up a system like <a href="http://daily.grml.org/">daily.grml.org</a>
-the Debian package grml-live-buildd provides all you need to start. Start with
-figuring out the cron job script /usr/share/grml-live/buildd/cronjob.sh.</p></div>
-<div class="paragraph"><p>If you want to automatically update the grml-live Debian package on your build
-system based on the git tree of grml-live (so you get bleeding edge of
-development which might is interesting for services like daily.grml.org) the
-provided release_helper.sh script provides everything you need. Execute as root:</p></div>
-<div class="literalblock">
-<div class="content">
-<pre><tt>echo "deb file:/home/grml-live-git/grml-live.build-area/ ./" &gt;&gt; /etc/apt/sources.list.d/grml-live.list
-adduser --disabled-login --disabled-password grml-live-git</tt></pre>
-</div></div>
-<div class="paragraph"><p>Execute <em>visudo</em> to update sudo configuration and add the following line:</p></div>
-<div class="literalblock">
-<div class="content">
-<pre><tt>grml-live-git ALL=NOPASSWD: /usr/bin/apt-get</tt></pre>
-</div></div>
-<div class="paragraph"><p>Switch to user grml-live-git and configure the rest:</p></div>
-<div class="literalblock">
-<div class="content">
-<pre><tt>su - grml-live-git
-mkdir grml-live.build-area
-git clone git://git.grml.org/grml-live.git
-git config --global user.name "Grml-Live Git Autobuild"
-git config --global user.email "grml-live-git@$(hostname)"</tt></pre>
-</div></div>
-<div class="paragraph"><p>Finally install a cron job (as user grml-live-git) like:</p></div>
-<div class="literalblock">
-<div class="content">
-<pre><tt>30 00 * * * cd /home/grml-live-git/grml-live.git/ &amp;&amp; env AUTOBUILD=1 scripts/release_helper.sh &gt;/home/grml-live-git/grml-live-build.log</tt></pre>
-</div></div>
-<div class="paragraph"><p>Tip: To find out the build date of the installed grml-live package just execute:</p></div>
-<div class="literalblock">
-<div class="content">
-<pre><tt>% apt-cache policy grml-live | grep 'Installed.*autobuild'
- Installed: 0.13.1~autobuild1300450381</tt></pre>
-</div></div>
-<div class="paragraph"><p>and run "date -ud @$STRING" where $STRING is the number behind the "autobuild",
-like:</p></div>
-<div class="literalblock">
-<div class="content">
-<pre><tt>% date -ud @1300450081
-Fri Mar 18 12:08:01 UTC 2011</tt></pre>
-</div></div>
 </div>
 </div>
 </div>
@@ -1834,7 +1759,7 @@ in different formats:</p></div>
 <div id="footnotes"><hr /></div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2011-12-12 16:10:01 CET
+Last updated 2012-01-19 13:18:45 CET
 </div>
 </div>
 </body>
