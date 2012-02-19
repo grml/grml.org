@@ -55,7 +55,7 @@
 <!-- Google CSE Search Box Ends -->
               </p>
 
-            <div class="copyright">&copy; Copyright 2003-2011 Grml Live Linux</div>
+            <div class="copyright">&copy; Copyright 2003-2012 Grml Live Linux</div>
             <p>&nbsp;</p>
 
       </div>
