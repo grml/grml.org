@@ -60,10 +60,10 @@
 
             <h2>News</h2>
             <div class="news">
+	    <p>23 Feb 2012: Grml featured <a href="http://blog.grml.org/archives/373-Grml-featured-in-Linux-User-032012.html">in Linux User 03/2012</a></p>
             <p>17 Jan 2012: We want <a href="http://blog.grml.org/archives/372-We-want-you!.html">YOU!</a></p>
             <p>23 Dec 2011: New <a href="/changelogs/README-grml-2011.12/">stable release version 2011.12</a> is available <a href="/download/">for download</a>.</p>
             <p>12 Dec 2011: New release candidate 2011.12-rc1 is available.</p>
-            <p>29 May 2011: New <a href="/changelogs/README-grml-2011.05/">stable release version 2011.05</a> is available.</p>
             </div>
 
       </div>
