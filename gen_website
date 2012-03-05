@@ -10,7 +10,50 @@ use File::Basename qw (fileparse dirname);
 use File::Copy::Recursive qw(fcopy dirmove);
 use File::Temp qw (tempdir);
 
+use lib '/usr/share/perl5/';
+use Mirmon::Mirmon;
+
+my $m = Mirmon ->new('/etc/mirmon.conf');
+my $conf  = $m->conf  ; # a Mirmon::Conf object
+my $state = $m->state ; # the mirmon state
+
+
 my $out_dir = shift || "out/";
+my $masterlist = '/usr/local/src/grml-mirrors/Mirrors.masterlist';
+
+open (my $fh, '<', $masterlist) or die "Could not open $masterlist: $!";
+my $mirrors; 
+
+sub get_last_state ($) {
+	my $url = shift;
+	my $mirror_state = $state->{ $url } ; # a Mirmon::Mirror object
+	my ($time, $history) = split('-', $mirror_state->{state_history});
+	my $last_state = substr($history,-1,1);
+	return $last_state;
+}
+
+
+my $data;
+while (my $line = <$fh>) {
+    chomp $line;
+    if ($line =~ /([^:]+): (.*)/) {
+        my $key = lc($1);
+        my $value = $2;
+        $data->{$key} = $value;
+    } elsif ($line eq '') {
+	my $url = sprintf ("http://%s%s", $data->{'site'}, $data->{'grml-http'});
+       	next if get_last_state($url) eq 'f';
+	$mirrors->{ $data->{'country'} }->{ $data->{'site'} } = $data;
+        $data = undef;
+    } else {
+        print "Malformed line: $line\n";
+    }
+}
+
+if ($data) {
+	my $url = sprintf ("http://%s%s", $data->{'site'}, $data->{'grml-http'});
+	$mirrors->{ $data->{'country'} }->{ $data->{'site'} } = $data if get_last_state($url) eq 'f';
+}
 
 #find all files
 
@@ -41,7 +84,7 @@ foreach my $file (@files) {
 	next if $file =~ /$0$/;
 	if ($file =~ /\.tt2$/) {
 		my $output;
-		$template->process($file, undef, \$output)
+		$template->process($file, { mirrors => $mirrors }, \$output)
 			|| die "Could not process file \"$file\": $!";
 
 		my ($name,$path,$suffix) = fileparse($file,qw (.tt2));
