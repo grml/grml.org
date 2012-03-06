@@ -129,6 +129,7 @@
     <button name="filetype" value="iso" id="download_button_mirror" class="largebutton" style="width:100%;" type="submit">Download Now </button><br />
     <button name="filetype" value="bt" id="download_button_bt" type="submit">Download using BitTorrent</button><br />
     <button name="filetype" value="signature" id="download_button_signature" type="submit">Get Checksum/Signature</button><br />
+    <a href="http://grml.org/download/mirrors/">Download from a specific mirror</a><br/>
     </div>
     <!-- JS links -->
     <div id="linkbuttons" style="display:none;">
