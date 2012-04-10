@@ -2,15 +2,25 @@
     "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<meta name="generator" content="AsciiDoc 8.5.2" />
+<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
+<meta name="generator" content="AsciiDoc 8.6.6" />
 <title>grml-debootstrap(8)</title>
 <style type="text/css">
-/* Debug borders */
-p, li, dt, dd, div, pre, h1, h2, h3, h4, h5, h6 {
-/*
-  border: 1px solid red;
-*/
+/* Shared CSS for AsciiDoc xhtml11 and html5 backends */
+
+/* Default font. */
+body {
+  font-family: Georgia,serif;
+}
+
+/* Title font. */
+h1, h2, h3, h4, h5, h6,
+div.title, caption.title,
+thead, p.table.header,
+#toctitle,
+#author, #revnumber, #revdate, #revremark,
+#footer {
+  font-family: Arial,Helvetica,sans-serif;
 }
 
 body {
@@ -35,13 +45,8 @@ strong {
   color: #083194;
 }
 
-tt {
-  color: navy;
-}
-
 h1, h2, h3, h4, h5, h6 {
   color: #527bbd;
-  font-family: sans-serif;
   margin-top: 1.2em;
   margin-bottom: 0.5em;
   line-height: 1.3;
@@ -59,9 +64,11 @@ h3 {
 h3 + * {
   clear: left;
 }
+h5 {
+  font-size: 1.0em;
+}
 
 div.sectionbody {
-  font-family: serif;
   margin-left: 0;
 }
 
@@ -77,45 +84,44 @@ p {
 ul, ol, li > p {
   margin-top: 0;
 }
+ul > li     { color: #aaa; }
+ul > li > * { color: black; }
 
 pre {
   padding: 0;
   margin: 0;
 }
 
-span#author {
+#author {
   color: #527bbd;
-  font-family: sans-serif;
   font-weight: bold;
   font-size: 1.1em;
 }
-span#email {
+#email {
 }
-span#revnumber, span#revdate, span#revremark {
-  font-family: sans-serif;
+#revnumber, #revdate, #revremark {
 }
 
-div#footer {
-  font-family: sans-serif;
+#footer {
   font-size: small;
   border-top: 2px solid silver;
   padding-top: 0.5em;
   margin-top: 4.0em;
 }
-div#footer-text {
+#footer-text {
   float: left;
   padding-bottom: 0.5em;
 }
-div#footer-badges {
+#footer-badges {
   float: right;
   padding-bottom: 0.5em;
 }
 
-div#preamble {
+#preamble {
   margin-top: 1.5em;
   margin-bottom: 1.5em;
 }
-div.tableblock, div.imageblock, div.exampleblock, div.verseblock,
+div.imageblock, div.exampleblock, div.verseblock,
 div.quoteblock, div.literalblock, div.listingblock, div.sidebarblock,
 div.admonitionblock {
   margin-top: 1.0em;
@@ -135,7 +141,6 @@ div.content { /* Block element content. */
 /* Block element titles. */
 div.title, caption.title {
   color: #527bbd;
-  font-family: sans-serif;
   font-weight: bold;
   text-align: left;
   margin-top: 1.0em;
@@ -157,13 +162,15 @@ div.content + div.title {
 
 div.sidebarblock > div.content {
   background: #ffffee;
-  border: 1px solid silver;
+  border: 1px solid #dddddd;
+  border-left: 4px solid #f0f0f0;
   padding: 0.5em;
 }
 
 div.listingblock > div.content {
-  border: 1px solid silver;
-  background: #f4f4f4;
+  border: 1px solid #dddddd;
+  border-left: 5px solid #f0f0f0;
+  background: #f8f8f8;
   padding: 0.5em;
 }
 
@@ -171,8 +178,8 @@ div.quoteblock, div.verseblock {
   padding-left: 1.0em;
   margin-left: 1.0em;
   margin-right: 10%;
-  border-left: 5px solid #dddddd;
-  color: #777777;
+  border-left: 5px solid #f0f0f0;
+  color: #888;
 }
 
 div.quoteblock > div.attribution {
@@ -180,8 +187,9 @@ div.quoteblock > div.attribution {
   text-align: right;
 }
 
-div.verseblock > div.content {
-  white-space: pre;
+div.verseblock > pre.content {
+  font-family: inherit;
+  font-size: inherit;
 }
 div.verseblock > div.attribution {
   padding-top: 0.75em;
@@ -254,35 +262,12 @@ div.compact div, div.compact div {
   margin-bottom: 0.1em;
 }
 
-div.tableblock > table {
-  border: 3px solid #527bbd;
-}
-thead, p.table.header {
-  font-family: sans-serif;
-  font-weight: bold;
-}
 tfoot {
   font-weight: bold;
 }
 td > div.verse {
   white-space: pre;
 }
-p.table {
-  margin-top: 0;
-}
-/* Because the table frame attribute is overriden by CSS in most browsers. */
-div.tableblock > table[frame="void"] {
-  border-style: none;
-}
-div.tableblock > table[frame="hsides"] {
-  border-left-style: none;
-  border-right-style: none;
-}
-div.tableblock > table[frame="vsides"] {
-  border-top-style: none;
-  border-bottom-style: none;
-}
-
 
 div.hdlist {
   margin-top: 0.8em;
@@ -339,18 +324,25 @@ span.footnote, span.footnoteref {
   min-width: 100px;
 }
 
-
-@media print {
-  div#footer-badges { display: none; }
+div.colist td {
+  padding-right: 0.5em;
+  padding-bottom: 0.3em;
+  vertical-align: top;
+}
+div.colist td img {
+  margin-top: 0.3em;
 }
 
-div#toc {
+@media print {
+  #footer-badges { display: none; }
+}
+
+#toc {
   margin-bottom: 2.5em;
 }
 
-div#toctitle {
+#toctitle {
   color: #527bbd;
-  font-family: sans-serif;
   font-size: 1.1em;
   font-weight: bold;
   margin-top: 1.0em;
@@ -373,51 +365,181 @@ div.toclevel4 {
   margin-left: 6em;
   font-size: 0.9em;
 }
-/* Workarounds for IE6's broken and incomplete CSS2. */
 
-div.sidebar-content {
-  background: #ffffee;
-  border: 1px solid silver;
-  padding: 0.5em;
+span.aqua { color: aqua; }
+span.black { color: black; }
+span.blue { color: blue; }
+span.fuchsia { color: fuchsia; }
+span.gray { color: gray; }
+span.green { color: green; }
+span.lime { color: lime; }
+span.maroon { color: maroon; }
+span.navy { color: navy; }
+span.olive { color: olive; }
+span.purple { color: purple; }
+span.red { color: red; }
+span.silver { color: silver; }
+span.teal { color: teal; }
+span.white { color: white; }
+span.yellow { color: yellow; }
+
+span.aqua-background { background: aqua; }
+span.black-background { background: black; }
+span.blue-background { background: blue; }
+span.fuchsia-background { background: fuchsia; }
+span.gray-background { background: gray; }
+span.green-background { background: green; }
+span.lime-background { background: lime; }
+span.maroon-background { background: maroon; }
+span.navy-background { background: navy; }
+span.olive-background { background: olive; }
+span.purple-background { background: purple; }
+span.red-background { background: red; }
+span.silver-background { background: silver; }
+span.teal-background { background: teal; }
+span.white-background { background: white; }
+span.yellow-background { background: yellow; }
+
+span.big { font-size: 2em; }
+span.small { font-size: 0.6em; }
+
+span.underline { text-decoration: underline; }
+span.overline { text-decoration: overline; }
+span.line-through { text-decoration: line-through; }
+
+
+/*
+ * xhtml11 specific
+ *
+ * */
+
+tt {
+  font-family: monospace;
+  font-size: inherit;
+  color: navy;
 }
-div.sidebar-title, div.image-title {
-  color: #527bbd;
-  font-family: sans-serif;
+
+div.tableblock {
+  margin-top: 1.0em;
+  margin-bottom: 1.5em;
+}
+div.tableblock > table {
+  border: 3px solid #527bbd;
+}
+thead, p.table.header {
   font-weight: bold;
-  margin-top: 0.0em;
-  margin-bottom: 0.5em;
+  color: #527bbd;
+}
+p.table {
+  margin-top: 0;
+}
+/* Because the table frame attribute is overriden by CSS in most browsers. */
+div.tableblock > table[frame="void"] {
+  border-style: none;
+}
+div.tableblock > table[frame="hsides"] {
+  border-left-style: none;
+  border-right-style: none;
+}
+div.tableblock > table[frame="vsides"] {
+  border-top-style: none;
+  border-bottom-style: none;
 }
 
-div.listingblock div.content {
-  border: 1px solid silver;
-  background: #f4f4f4;
-  padding: 0.5em;
+
+/*
+ * html5 specific
+ *
+ * */
+
+.monospaced {
+  font-family: monospace;
+  font-size: inherit;
+  color: navy;
 }
 
-div.quoteblock-attribution {
-  padding-top: 0.5em;
+table.tableblock {
+  margin-top: 1.0em;
+  margin-bottom: 1.5em;
+}
+thead, p.tableblock.header {
+  font-weight: bold;
+  color: #527bbd;
+}
+p.tableblock {
+  margin-top: 0;
+}
+table.tableblock {
+  border-width: 3px;
+  border-spacing: 0px;
+  border-style: solid;
+  border-color: #527bbd;
+  border-collapse: collapse;
+}
+th.tableblock, td.tableblock {
+  border-width: 1px;
+  padding: 4px;
+  border-style: solid;
+  border-color: #527bbd;
+}
+
+table.tableblock.frame-topbot {
+  border-left-style: hidden;
+  border-right-style: hidden;
+}
+table.tableblock.frame-sides {
+  border-top-style: hidden;
+  border-bottom-style: hidden;
+}
+table.tableblock.frame-none {
+  border-style: hidden;
+}
+
+th.tableblock.halign-left, td.tableblock.halign-left {
+  text-align: left;
+}
+th.tableblock.halign-center, td.tableblock.halign-center {
+  text-align: center;
+}
+th.tableblock.halign-right, td.tableblock.halign-right {
   text-align: right;
 }
 
-div.verseblock-content {
-  white-space: pre;
+th.tableblock.valign-top, td.tableblock.valign-top {
+  vertical-align: top;
 }
-div.verseblock-attribution {
-  padding-top: 0.75em;
-  text-align: left;
+th.tableblock.valign-middle, td.tableblock.valign-middle {
+  vertical-align: middle;
 }
-
-div.exampleblock-content {
-  border-left: 3px solid #dddddd;
-  padding-left: 0.5em;
+th.tableblock.valign-bottom, td.tableblock.valign-bottom {
+  vertical-align: bottom;
 }
 
-/* IE6 sets dynamically generated links as visited. */
-div#toc a:visited { color: blue; }
+
+/*
+ * manpage specific
+ *
+ * */
+
+body.manpage h1 {
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  border-top: 2px solid silver;
+  border-bottom: 2px solid silver;
+}
+body.manpage h2 {
+  border-style: none;
+}
+body.manpage div.sectionbody {
+  margin-left: 3em;
+}
+
+@media print {
+  body.manpage div#toc { display: none; }
+}
 </style>
 <script type="text/javascript">
 /*<![CDATA[*/
-window.onload = function(){asciidoc.footnotes();}
 var asciidoc = {  // Namespace.
 
 /////////////////////////////////////////////////////////////////////
@@ -479,6 +601,25 @@ toc: function (toclevels) {
   }
 
   var toc = document.getElementById("toc");
+  if (!toc) {
+    return;
+  }
+
+  // Delete existing TOC entries in case we're reloading the TOC.
+  var tocEntriesToRemove = [];
+  var i;
+  for (i = 0; i < toc.childNodes.length; i++) {
+    var entry = toc.childNodes[i];
+    if (entry.nodeName == 'div'
+     && entry.getAttribute("class")
+     && entry.getAttribute("class").match(/^toclevel/))
+      tocEntriesToRemove.push(entry);
+  }
+  for (i = 0; i < tocEntriesToRemove.length; i++) {
+    toc.removeChild(tocEntriesToRemove[i]);
+  }
+
+  // Rebuild TOC entries.
   var entries = tocEntries(document.getElementById("content"), toclevels);
   for (var i = 0; i < entries.length; ++i) {
     var entry = entries[i];
@@ -506,24 +647,44 @@ toc: function (toclevels) {
  */
 
 footnotes: function () {
-  var cont = document.getElementById("content");
+  // Delete existing footnote entries in case we're reloading the footnodes.
+  var i;
   var noteholder = document.getElementById("footnotes");
+  if (!noteholder) {
+    return;
+  }
+  var entriesToRemove = [];
+  for (i = 0; i < noteholder.childNodes.length; i++) {
+    var entry = noteholder.childNodes[i];
+    if (entry.nodeName == 'div' && entry.getAttribute("class") == "footnote")
+      entriesToRemove.push(entry);
+  }
+  for (i = 0; i < entriesToRemove.length; i++) {
+    noteholder.removeChild(entriesToRemove[i]);
+  }
+
+  // Rebuild footnote entries.
+  var cont = document.getElementById("content");
   var spans = cont.getElementsByTagName("span");
   var refs = {};
   var n = 0;
   for (i=0; i<spans.length; i++) {
     if (spans[i].className == "footnote") {
       n++;
-      // Use [\s\S] in place of . so multi-line matches work.
-      // Because JavaScript has no s (dotall) regex flag.
-      note = spans[i].innerHTML.match(/\s*\[([\s\S]*)]\s*/)[1];
+      var note = spans[i].getAttribute("data-note");
+      if (!note) {
+        // Use [\s\S] in place of . so multi-line matches work.
+        // Because JavaScript has no s (dotall) regex flag.
+        note = spans[i].innerHTML.match(/\s*\[([\s\S]*)]\s*/)[1];
+        spans[i].innerHTML =
+          "[<a id='_footnoteref_" + n + "' href='#_footnote_" + n +
+          "' title='View footnote' class='footnote'>" + n + "</a>]";
+        spans[i].setAttribute("data-note", note);
+      }
       noteholder.innerHTML +=
         "<div class='footnote' id='_footnote_" + n + "'>" +
         "<a href='#_footnoteref_" + n + "' title='Return to text'>" +
         n + "</a>. " + note + "</div>";
-      spans[i].innerHTML =
-        "[<a id='_footnoteref_" + n + "' href='#_footnote_" + n +
-        "' title='View footnote' class='footnote'>" + n + "</a>]";
       var id =spans[i].getAttribute("id");
       if (id != null) refs["#"+id] = n;
     }
@@ -543,21 +704,47 @@ footnotes: function () {
       }
     }
   }
+},
+
+install: function(toclevels) {
+  var timerId;
+
+  function reinstall() {
+    asciidoc.footnotes();
+    if (toclevels) {
+      asciidoc.toc(toclevels);
+    }
+  }
+
+  function reinstallAndRemoveTimer() {
+    clearInterval(timerId);
+    reinstall();
+  }
+
+  timerId = setInterval(reinstall, 500);
+  if (document.addEventListener)
+    document.addEventListener("DOMContentLoaded", reinstallAndRemoveTimer, false);
+  else
+    window.onload = reinstallAndRemoveTimer;
 }
 
 }
+asciidoc.install();
 /*]]>*/
 </script>
 </head>
-<body>
+<body class="article">
 <div id="header">
 <h1>grml-debootstrap(8)</h1>
 </div>
 <div id="content">
+<div class="sect1">
 <h2 id="_name">Name</h2>
 <div class="sectionbody">
-<div class="paragraph"><p>grml-debootstrap - wrapper around debootstrap for installing plain Debian via grml</p></div>
+<div class="paragraph"><p>grml-debootstrap - wrapper around debootstrap for installing plain Debian</p></div>
 </div>
+</div>
+<div class="sect1">
 <h2 id="_synopsis">Synopsis</h2>
 <div class="sectionbody">
 <div class="paragraph"><p>grml-debootstrap [ <em>options</em> ]</p></div>
@@ -565,12 +752,14 @@ footnotes: function () {
 <img src="images/screenshot.png" alt="Screenshot" />
 </span></p></div>
 </div>
+</div>
+<div class="sect1">
 <h2 id="_introduction">Introduction</h2>
 <div class="sectionbody">
 <div class="paragraph"><p>grml-debootstrap is a wrapper suite around debootstrap (and cdebootstrap if you
-want) for installing a plain Debian system via grml very fast and easy.</p></div>
+want) for installing a plain Debian system (e.g. via Grml) very fast and easy.</p></div>
 <div class="paragraph"><p>All you have to do is adjust a few variables in configuration file
-/etc/debootstrap/config (or specify some variables via commandline) and invoke
+/etc/debootstrap/config (or specify some variables via command line) and invoke
 grml-debootstrap without any further options then.</p></div>
 <div class="paragraph"><p>A plain and base Debian system will be installed on the given device (or
 directory) then. Customization of this process is possible as well.</p></div>
@@ -579,26 +768,28 @@ directory) then. Customization of this process is possible as well.</p></div>
 <td class="icon">
 <img src="./images/icons/caution.png" alt="Caution" />
 </td>
-<td class="content">The grml team does not take responsibility for loss of any data!</td>
+<td class="content">The Grml team does not take responsibility for loss of any data!</td>
 </tr></table>
 </div>
 </div>
+</div>
+<div class="sect1">
 <h2 id="_options_and_environment_variables">Options and environment variables</h2>
 <div class="sectionbody">
 <div class="dlist"><dl>
 <dt class="hdlist1">
-<strong>--arch</strong> &lt;_architecture_&gt;
+<strong>--arch</strong> <em>architecture</em>
 </dt>
 <dd>
 <p>
-    Architecture you want to bootstrap. Currently only i386 is supported.
-    Defaults to the architecture that is currently running on your system. If
-    you&#8217;re running an amd64 system and want to deploy a i386 system use this option.
-    Note: deploying amd64 from a i386 system won&#8217;t work.
+    Set target architecture you want to install. Defaults to the architecture
+    you are currently running. If you&#8217;re running an amd64 kernel and want to
+    deploy an i386 system use this option. Note: deploying amd64 from an i386
+    kernel does <strong>not</strong> work. Example: "<em>--arch i386</em>"
 </p>
 </dd>
 <dt class="hdlist1">
-<strong>--bootappend</strong> &lt;_appendline for the kernel_&gt;
+<strong>--bootappend</strong> <em>appendline-for-the-kernel</em>
 </dt>
 <dd>
 <p>
@@ -607,7 +798,7 @@ directory) then. Customization of this process is possible as well.</p></div>
 </p>
 </dd>
 <dt class="hdlist1">
-<strong>-c</strong>, <strong>--config</strong> &lt;_file_&gt;
+<strong>-c</strong>, <strong>--config</strong> <em>file</em>
 </dt>
 <dd>
 <p>
@@ -615,7 +806,7 @@ directory) then. Customization of this process is possible as well.</p></div>
 </p>
 </dd>
 <dt class="hdlist1">
-<strong>--chroot-scripts</strong> &lt;_directory_&gt;
+<strong>--chroot-scripts</strong> <em>directory</em>
 </dt>
 <dd>
 <p>
@@ -626,7 +817,7 @@ directory) then. Customization of this process is possible as well.</p></div>
 </p>
 </dd>
 <dt class="hdlist1">
-<strong>-d</strong>, <strong>--confdir</strong> &lt;_path_&gt;
+<strong>-d</strong>, <strong>--confdir</strong> <em>path</em>
 </dt>
 <dd>
 <p>
@@ -634,7 +825,7 @@ directory) then. Customization of this process is possible as well.</p></div>
 </p>
 </dd>
 <dt class="hdlist1">
-<strong>--debconf</strong> &lt;_file_&gt;
+<strong>--debconf</strong> <em>file</em>
 </dt>
 <dd>
 <p>
@@ -643,7 +834,7 @@ directory) then. Customization of this process is possible as well.</p></div>
 </p>
 </dd>
 <dt class="hdlist1">
-<strong>--debopt</strong> &lt;_params_&gt;
+<strong>--debopt</strong> <em>params</em>
 </dt>
 <dd>
 <p>
@@ -651,7 +842,35 @@ directory) then. Customization of this process is possible as well.</p></div>
 </p>
 </dd>
 <dt class="hdlist1">
-<strong>--grub</strong> &lt;_device_&gt;
+<strong>--filesystem</strong> <em>filesystem</em>
+</dt>
+<dd>
+<p>
+    Filesystem that should be created when installing to a partition.
+    If unset defaults to ext3. Valid values are all filesystems that
+    can be created through mkfs.<em>filesystem</em>.
+</p>
+</dd>
+<dt class="hdlist1">
+<strong>--force</strong>
+</dt>
+<dd>
+<p>
+    Skip user acknowledgement and do not prompt for user input.
+</p>
+</dd>
+<dt class="hdlist1">
+<strong>--grmlrepos</strong>
+</dt>
+<dd>
+<p>
+    Enable Grml.org&#8217;s Debian repository (<a href="http://deb.grml.org/">http://deb.grml.org/</a>) via the
+    /etc/apt/sources.list.d/grml.list configuration file. This provides the
+    option to install Debian packages from Grml&#8217;s repository.
+</p>
+</dd>
+<dt class="hdlist1">
+<strong>--grub</strong> <em>device</em>
 </dt>
 <dd>
 <p>
@@ -672,7 +891,7 @@ directory) then. Customization of this process is possible as well.</p></div>
 </p>
 </dd>
 <dt class="hdlist1">
-<strong>--hostname</strong> &lt;_hostname_&gt;
+<strong>--hostname</strong> <em>hostname</em>
 </dt>
 <dd>
 <p>
@@ -680,15 +899,23 @@ directory) then. Customization of this process is possible as well.</p></div>
 </p>
 </dd>
 <dt class="hdlist1">
-<strong>-i</strong>, <strong>--iso</strong> &lt;_/mntpoint_&gt;
+<strong>-i</strong>, <strong>--iso</strong> <em>/mntpoint</em>
 </dt>
 <dd>
 <p>
-    Specify mountpoint where you have a Debian ISO mounted loopback.
+    Specify mount point where you have a Debian ISO mounted loopback.
     Using this option instead of the mirror option gives you the possibility
     to install the base-system without network access. Make sure you
-    mounted the according Debian-ISO to the given &lt;_/mntpoint_&gt;. See section
+    mounted the according Debian-ISO to the given <em>/mntpoint</em>. See section
     <em>Usage examples</em> for a demonstration.
+</p>
+</dd>
+<dt class="hdlist1">
+<strong>--insecure</strong>
+</dt>
+<dd>
+<p>
+    Do not download and check signatures for retrieved Release files.
 </p>
 </dd>
 <dt class="hdlist1">
@@ -700,7 +927,7 @@ directory) then. Customization of this process is possible as well.</p></div>
 </p>
 </dd>
 <dt class="hdlist1">
-<strong>-m</strong>, <strong>--mirror</strong> &lt;_URL_&gt;
+<strong>-m</strong>, <strong>--mirror</strong> <em>URL</em>
 </dt>
 <dd>
 <p>
@@ -725,26 +952,28 @@ directory) then. Customization of this process is possible as well.</p></div>
 </p>
 </dd>
 <dt class="hdlist1">
-<strong>--insecure</strong>
+<strong>--nopassword</strong>
 </dt>
 <dd>
 <p>
-    Do not download and check signatures for retrieved Release files.
+    Do not prompt for the root password. Note: Use the <em>--password</em> option if
+    you want to set the root password during an automatic installation but don&#8217;t
+    want to use the interactive dialog.
 </p>
 </dd>
 <dt class="hdlist1">
-<strong>-p</strong>, <strong>--mntpoint</strong> &lt;_/mntpoint_&gt;
+<strong>-p</strong>, <strong>--mntpoint</strong> <em>/mntpoint</em>
 </dt>
 <dd>
 <p>
-    Specify mountpoint that should be used for mounting the target system.
+    Specify mount point that should be used for mounting the target system.
     Corresponding with configuration variable MNTPOINT.
     Note: this option has no effect if option -t is given and represents a
     directory.
 </p>
 </dd>
 <dt class="hdlist1">
-<strong>--packages</strong> &lt;_file_&gt;
+<strong>--packages</strong> <em>file</em>
 </dt>
 <dd>
 <p>
@@ -753,27 +982,27 @@ directory) then. Customization of this process is possible as well.</p></div>
 </p>
 </dd>
 <dt class="hdlist1">
-<strong>--password</strong> &lt;_password_&gt;
+<strong>--password</strong> <em>password</em>
 </dt>
 <dd>
 <p>
     Use specified password as password for user root. Use with caution, as your
-    commandline might be visible in the process list and the shell history.
+    command line might be visible in the process list and the shell history.
     It&#8217;s meant for automatic installation only.
 </p>
 </dd>
 <dt class="hdlist1">
-<strong>-r</strong>, <strong>--release</strong> &lt;_releasename_&gt;
+<strong>-r</strong>, <strong>--release</strong> <em>releasename</em>
 </dt>
 <dd>
 <p>
     Specify release of new Debian system. Supported releases names: lenny,
-    squeeze (note: requires current version of debootstrap) and sid.
+    squeeze, wheezy (note: requires current version of debootstrap) and sid.
     Corresponding with configuration variable RELEASE.
 </p>
 </dd>
 <dt class="hdlist1">
-<strong>--pre-scripts</strong> &lt;_directory_&gt;
+<strong>--pre-scripts</strong> <em>directory</em>
 </dt>
 <dd>
 <p>
@@ -785,7 +1014,7 @@ directory) then. Customization of this process is possible as well.</p></div>
 </p>
 </dd>
 <dt class="hdlist1">
-<strong>--scripts</strong> &lt;_directory_&gt;
+<strong>--scripts</strong> <em>directory</em>
 </dt>
 <dd>
 <p>
@@ -796,7 +1025,7 @@ directory) then. Customization of this process is possible as well.</p></div>
 </p>
 </dd>
 <dt class="hdlist1">
-<strong>-t</strong>, <strong>--target</strong> &lt;_target_&gt;
+<strong>-t</strong>, <strong>--target</strong> <em>target</em>
 </dt>
 <dd>
 <p>
@@ -815,6 +1044,28 @@ directory) then. Customization of this process is possible as well.</p></div>
 </p>
 </dd>
 <dt class="hdlist1">
+<strong>--vmfile</strong>
+</dt>
+<dd>
+<p>
+    Set up a Virtual Machine instead of installing to a partition or directory.
+    This allows deployment of a Virtual Machine. The options needs to be
+    combined with the --target option.
+    Usage example: --vmfile --target /mnt/sda1/qemu.img
+</p>
+</dd>
+<dt class="hdlist1">
+<strong>--vmsize</strong> <em>size</em>
+</dt>
+<dd>
+<p>
+   Use specified size for size of Virtual Machine disk file. If not specified it
+   defaults to 2G (being 2GB). Syntax as supported by qemu-img (see manpage
+   qemu-img(1) for details.
+   Usage example: --vmsize 3G
+</p>
+</dd>
+<dt class="hdlist1">
 <strong>-V</strong>, <strong>--version</strong>
 </dt>
 <dd>
@@ -828,19 +1079,21 @@ directory) then. Customization of this process is possible as well.</p></div>
 <td class="icon">
 <img src="./images/icons/warning.png" alt="Warning" />
 </td>
-<td class="content">the commandline parsing of grml-debootstrap does not validate the provided
-arguments for the commandline options. Please be careful and check docs and
+<td class="content">the command line parsing of grml-debootstrap does not validate the provided
+arguments for the command line options. Please be careful and check docs and
 /etc/debootstrap/config for further information.</td>
 </tr></table>
 </div>
 </div>
+</div>
+<div class="sect1">
 <h2 id="_usage_examples">Usage examples</h2>
 <div class="sectionbody">
 <div class="literalblock">
 <div class="content">
 <pre><tt>grml-debootstrap --target /dev/sda1 --grub /dev/sda</tt></pre>
 </div></div>
-<div class="paragraph"><p>Install default Debian release (stable/lenny) on /dev/sda1 and install bootmanager
+<div class="paragraph"><p>Install default Debian release (stable/squeeze) on /dev/sda1 and install bootmanager
 Grub in MBR (master boot record) of /dev/sda and use /dev/sda1 as system partition.</p></div>
 <div class="literalblock">
 <div class="content">
@@ -853,13 +1106,20 @@ Grub in MBR (master boot record) of /dev/sda and use /dev/sda1 as system partiti
 <pre><tt>mount /dev/sda1 /data/chroot
 grml-debootstrap --target /data/chroot</tt></pre>
 </div></div>
-<div class="paragraph"><p>Install default Debian release (stable/lenny) in directory /data/chroot (without
+<div class="paragraph"><p>Install default Debian release (stable/squeeze) in directory /data/chroot (without
 any bootloader).</p></div>
 <div class="literalblock">
 <div class="content">
 <pre><tt>grml-debootstrap --target /dev/sda3 --grub /dev/sda  --mirror ftp://ftp.tugraz.at/mirror/debian</tt></pre>
 </div></div>
-<div class="paragraph"><p>Install default Debian release (stable/lenny) on /dev/sda3 and install bootmanager
+<div class="paragraph"><p>Install default debian release (stable/squeeze) in a Virtual Machine file with
+3GB disk size (including Grub as bootmanager in MBR of the virtual disk file):</p></div>
+<div class="literalblock">
+<div class="content">
+<pre><tt>mount /dev/sda1 /mnt/sda1
+grml-debootstrap --vmfile --vmsize 3G --target /mnt/sda1/qemu.img</tt></pre>
+</div></div>
+<div class="paragraph"><p>Install default Debian release (stable/squeeze) on /dev/sda3 and install bootmanager
 Grub in MBR (master boot record) of /dev/sda and use /dev/sda3 as system partition.
 Use specified mirror instead of the default (<a href="ftp://ftp.debian.de/debian">ftp://ftp.debian.de/debian</a>) one.</p></div>
 <div class="literalblock">
@@ -867,12 +1127,14 @@ Use specified mirror instead of the default (<a href="ftp://ftp.debian.de/debian
 <pre><tt>mount -o loop /mnt/sda6/debian-40r0-i386-CD-1.iso /mnt/iso
 grml-debootstrap --target /dev/sda1 --grub /dev/sda --iso file:/mnt/iso/debian/</tt></pre>
 </div></div>
-<div class="paragraph"><p>Install Debian stable/lenny on /dev/sda1 using the loopback mounted Debian-ISO
+<div class="paragraph"><p>Install Debian stable/squeeze on /dev/sda1 using the loopback mounted Debian-ISO
 for the base-system and install bootmanager Grub in MBR (master boot record) of
 /dev/sda and use /dev/sda1 as system partition. Please notice, that the chroot
 system requires network access for all packages which are not part of the
 ISO.</p></div>
 </div>
+</div>
+<div class="sect1">
 <h2 id="_files">Files</h2>
 <div class="sectionbody">
 <div class="literalblock">
@@ -901,10 +1163,10 @@ has been installed via [c]debootstrap.</p></div>
 Debian system by default.</p></div>
 <div class="literalblock">
 <div class="content">
-<pre><tt>/etc/debootstrap/extrapackages</tt></pre>
+<pre><tt>/etc/debootstrap/extrapackages/</tt></pre>
 </div></div>
-<div class="paragraph"><p>Debian Packages dropped here will be installed into the new Debian system by
-default (Controlvariable: EXTRAPACKAGES)</p></div>
+<div class="paragraph"><p>Debian Packages dropped in this directory will be installed into the new Debian
+system by default (Control variable: EXTRAPACKAGES)</p></div>
 <div class="literalblock">
 <div class="content">
 <pre><tt>/etc/debootstrap/stages/</tt></pre>
@@ -918,27 +1180,31 @@ directory on your own if you want to re-execute grml-debootstrap after running i
 successfully once. This should avoid recurrent execution by error of
 grml-debootstrap (which might delete present data).</p></div>
 </div>
+</div>
+<div class="sect1">
 <h2 id="_customization">Customization</h2>
 <div class="sectionbody">
 <div class="paragraph"><p>You can control execution of grml-debootstrap via adjusting
 /etc/debootstrap/config for some main stuff or via setting some selected
-variables via commandline.  The packages which should be installed in the new
+variables via command line.  The packages which should be installed in the new
 Debian system can be defined via the file /etc/debootstrap/packages.  If you
 want to put existing files to the new Debian system you can place them into the
 (by default non-existing) directories boot, etc, share, usr and var in
 /etc/debootstrap/. Every existing directory will be copied to the new Debian
 system then. If you want to install additional packages that are not available
-via the grml or debian mirror drop them into /etc/debootstrap/extrapackages and
+via the Grml or Debian mirror drop them into /etc/debootstrap/extrapackages and
 make sure that EXTRAPACKAGES is set to "yes".</p></div>
 </div>
+</div>
+<div class="sect1">
 <h2 id="_automatic_installation">Automatic installation</h2>
 <div class="sectionbody">
 <div class="paragraph"><p>If environment variable AUTOINSTALL is set grml-debootstrap can be executed in a
 full automatic mode. While this mode isn&#8217;t really useful for interactive
 execution (just configure /etc/debootstrap/configure or specify the relevant
-variables on the commandline instead) it is meant for use via bootoption
-debian2hd. The bootoption debian2hd (more precise: the kernelname on bootprompt)
-supports the following bootoptions (they correspond with the commandline options
+variables on the command line instead) it is meant for use via boot option
+debian2hd. The boot option debian2hd (more precise: the kernelname on bootprompt)
+supports the following boot options (they correspond with the command line options
 mentioned above):</p></div>
 <div class="literalblock">
 <div class="content">
@@ -955,8 +1221,8 @@ target=/dev/sda1</p></div>
 <div class="content">
 <pre><tt>release=...</tt></pre>
 </div></div>
-<div class="paragraph"><p>Specify release of new Debian system. Defaults to Debian stable.  Supported
-relases: lenny, squeeze and sid. Usage example: release=sid</p></div>
+<div class="paragraph"><p>Specify release of new Debian system. Defaults to Debian squeeze. Supported
+relases: lenny, squeeze, wheezy and sid. Usage example: release=sid</p></div>
 <div class="literalblock">
 <div class="content">
 <pre><tt>mirror=...</tt></pre>
@@ -970,14 +1236,15 @@ Usage example: mirror=ftp://ftp.tugraz.at/mirror/debian</p></div>
 </div></div>
 <div class="paragraph"><p>Set password of user root without prompting for it but set it to the given
 argument. Usage example: password=AiTh5ahn</p></div>
-<h3 id="_usage_example_for_automatic_installation">Usage example for automatic installation:</h3><div style="clear:left"></div>
+<div class="sect2">
+<h3 id="_usage_example_for_automatic_installation">Usage example for automatic installation:</h3>
 <div class="literalblock">
 <div class="content">
 <pre><tt>debian2hd target=/dev/sda1 grub=/dev/sda mirror=ftp://ftp.tugraz.at/mirror/debian password=foobar</tt></pre>
 </div></div>
-<div class="paragraph"><p>You have to enter this commandline at the bootprompt of grml. Please make sure
-that /dev/sda1 is the partition where you really want to install your new Debian
-system.</p></div>
+<div class="paragraph"><p>You have to enter this command line at the bootprompt of the Grml live system.
+Please make sure that /dev/sda1 is the partition where you really want to
+install your new Debian system.</p></div>
 <div class="admonitionblock">
 <table><tr>
 <td class="icon">
@@ -986,10 +1253,13 @@ system.</p></div>
 <td class="content">Automatic installation within booting process is done in grml-autoconfig via
 setting environment variable AUTOINSTALL and creation of
 /usr/bin/grml-debootstrap_noninteractive with the available and relevant
-bootoptions for grml-debootstrap.</td>
+boot options for grml-debootstrap.</td>
 </tr></table>
 </div>
 </div>
+</div>
+</div>
+<div class="sect1">
 <h2 id="_supported_releases">Supported Releases</h2>
 <div class="sectionbody">
 <div class="tableblock">
@@ -1019,10 +1289,10 @@ cellspacing="0" cellpadding="4">
     Lenny
     </td>
     <td align="center">
-    works
+    works [1]
     </td>
     <td align="center">
-    works
+    works [1]
     </td>
   </tr>
   <tr>
@@ -1038,13 +1308,24 @@ cellspacing="0" cellpadding="4">
   </tr>
   <tr>
     <td align="right">
+    Wheezy
+    </td>
+    <td align="center">
+    works
+    </td>
+    <td align="center">
+    works
+    </td>
+  </tr>
+  <tr>
+    <td align="right">
     Sid
     </td>
     <td align="center">
-    works
+    works [2]
     </td>
     <td align="center">
-    works
+    works [2]
     </td>
   </tr>
 </tbody>
@@ -1056,31 +1337,55 @@ cellspacing="0" cellpadding="4">
 <img src="./images/icons/note.png" alt="Note" />
 </td>
 <td class="content">
-<div class="title">Etch-Release</div>
-<div class="paragraph"><p>[1] Please notice that Etch is the current old-stable within Debian.
-grml-debootstrap can handle the release but you really should not use Etch
-anymore unless you really know what you are doing. Choose Lenny instead.</p></div>
+<div class="title">lenny release</div>
+<div class="paragraph"><p>[1] Please notice that lenny is the current old-stable release within Debian.
+grml-debootstrap can handle the release but you really should not use lenny
+anymore unless you really know what you are doing. Choose stable (squeeze)
+instead.</p></div>
+<div class="paragraph"><p>When installing lenny to a new mdraid, grml-debootstrap will use md metadata
+format version 0.90. This limits the device to a maximum size of 2TB, but has
+the advantage of grub-legacy actually being able to boot from it.</p></div>
+</td>
+</tr></table>
+</div>
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<img src="./images/icons/note.png" alt="Note" />
+</td>
+<td class="content">
+<div class="title">sid release</div>
+<div class="paragraph"><p>[2] Please notice that sid is Debian/unstable and due to its nature might not be
+always installable. What <em>might</em> work instead is deploying stable (squeeze) or
+testing (wheezy) and upgrade it after installation finished.</p></div>
 </td>
 </tr></table>
 </div>
 </div>
+</div>
+<div class="sect1">
 <h2 id="_bugs">Bugs</h2>
 <div class="sectionbody">
 <div class="paragraph"><p>Probably. Please send bugreports to Michael Prokop &lt;<a href="mailto:mika@grml.org">mika@grml.org</a>&gt;.</p></div>
 </div>
+</div>
+<div class="sect1">
 <h2 id="_see_also">See also</h2>
 <div class="sectionbody">
 <div class="paragraph"><p>debootstrap (8), cdebootstrap (1).</p></div>
 </div>
+</div>
+<div class="sect1">
 <h2 id="_author">Author</h2>
 <div class="sectionbody">
 <div class="paragraph"><p>Michael Prokop &lt;<a href="mailto:mika@grml.org">mika@grml.org</a>&gt;</p></div>
 </div>
 </div>
+</div>
 <div id="footnotes"><hr /></div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2010-02-23 00:21:26 CEST
+Last updated 2012-04-10 12:22:02 CEST
 </div>
 </div>
 </body>
