@@ -31,6 +31,8 @@ and mbr dialogs inside grml2hd using:
 # grml2hd /dev/hda1 -mbr /dev/hda
 
 See: man grml2hd + http://grml.org/grml2hd/
+
+Tags: grml2hd, installation
 </pre>
 <a name="1"></a><hr />
 <pre>
@@ -46,6 +48,8 @@ Finally install grml on it:
 # SWRAID='mbr-only' grml2hd /dev/md0 -mbr /dev/md0
 
 See: man grml2hd + http://grml.org/grml2hd/
+
+Tags: grml2hd, installation, mdadm, raid
 </pre>
 <a name="2"></a><hr />
 <pre>
@@ -65,12 +69,16 @@ or run:
 Use with care and only if you really know what you are doing!
 
 See: man grml2hd + http://grml.org/grml2hd/
+
+Tags: grml2hd, installation
 </pre>
 <a name="3"></a><hr />
 <pre>
 Configure network:
 
 # grml-network
+
+Tags: configuration, network
 </pre>
 <a name="4"></a><hr />
 <pre>
@@ -79,6 +87,8 @@ Deactivate error correction of zsh:
 % NOCOR=1 zsh
 
 Run zsh-help for more information regarding zsh.
+
+Tags: zsh, configuration
 </pre>
 <a name="5"></a><hr />
 <pre>
@@ -91,6 +101,8 @@ Set it manually e.g. via:
 % screen -X title foobar
 
 Run zsh-help for more information regarding zsh.
+
+Tags: zsh, configuration
 </pre>
 <a name="6"></a><hr />
 <pre>
@@ -99,6 +111,8 @@ Do not use menu completion in zsh:
 % NOMENU=1 zsh
 
 Run zsh-help for more information regarding zsh.
+
+Tags: zsh, configuration
 </pre>
 <a name="7"></a><hr />
 <pre>
@@ -109,24 +123,32 @@ Run GNU screen with grml-configuration:
 or
 
 % screen -c /etc/grml/screenrc
+
+Tags: screen, configuration
 </pre>
 <a name="8"></a><hr />
 <pre>
 Print out grml-version:
 
 % grml-version
+
+Tags: grml
 </pre>
 <a name="9"></a><hr />
 <pre>
 Configure mutt:
 
 % grml-mutt
+
+Tags: mutt
 </pre>
 <a name="10"></a><hr />
 <pre>
 Configure mutt-ng / muttng:
 
 % grml-muttng
+
+Tags: muttng
 </pre>
 <a name="11"></a><hr />
 <pre>
@@ -135,6 +157,8 @@ Set up Inode-PPTP connection:
 # grml-pptp-inode
 or
 # grml-pptp-xdsl-students
+
+Tags: pptp, inode, xdsl
 </pre>
 <a name="12"></a><hr />
 <pre>
@@ -150,12 +174,16 @@ Now run the main script:
 After running the script an init script is available:
 
 # /etc/init.d/vpnctug [start|stop]
+
+Tags: tug
 </pre>
 <a name="13"></a><hr />
 <pre>
 Set up PPTP connection at VCG (Virtual Campus Graz):
 
 # grml-pptp-vcgraz
+
+Tags: pptp, vcg
 </pre>
 <a name="14"></a><hr />
 <pre>
@@ -168,6 +196,8 @@ Usage example:
 # grml-vpn -k 2005 add 1000 192.168.20.1 192.168.20.2
 
 See: man grml-vpn
+
+Tags: grml, vpn, network
 </pre>
 <a name="15"></a><hr />
 <pre>
@@ -189,24 +219,32 @@ Use:
 # grml-crypt stop /mnt/test
 
 See: man grml-crypt
+
+Tags: crypto, grml-crypt, dmcrypt, luks
 </pre>
 <a name="16"></a><hr />
 <pre>
 Change resolution of X:
 
 % xrandr -s '1024x768'
+
+Tags: x11, xorg, resolution
 </pre>
 <a name="17"></a><hr />
 <pre>
 Change resolution of framebuffer:
 
 # fbset 800x600-60
+
+Tags: resolution
 </pre>
 <a name="18"></a><hr />
 <pre>
 Configure newsreader slrn:
 
 % grml-slrn
+
+Tags: slrn
 </pre>
 <a name="19"></a><hr />
 <pre>
@@ -218,6 +256,8 @@ Or directly run scripts:
 
 # grml-config-root
 % grml-config-user
+
+Tags: grml, configuration
 </pre>
 <a name="20"></a><hr />
 <pre>
@@ -226,12 +266,16 @@ Lock screen (X / console):
 % grml-lock
 
 Press ctrl-alt-x to lock a GNU screen session.
+
+Tags: grml, lock, grml-lock, screen
 </pre>
 <a name="21"></a><hr />
 <pre>
 Change wallpaper in X:
 
 % grml-wallpaper &lt;press-tab&gt;
+
+Tags: grml, wallpaper
 </pre>
 <a name="22"></a><hr />
 <pre>
@@ -244,6 +288,8 @@ Usage examples:
 % grml-x fluxbox
 % grml-x -mode '1024x768' wmii
 % grml-x -nosync wm-ng
+
+Tags: grml-x, x11, xorg, graphic
 </pre>
 <a name="23"></a><hr />
 <pre>
@@ -256,6 +302,8 @@ or run as root to collect some more information:
 # grml-hwinfo
 
 will generate a file named info.tar.bz2.
+
+Tags: grml, hardware, hwinfo, collect
 </pre>
 <a name="24"></a><hr />
 <pre>
@@ -266,6 +314,8 @@ Configure hardware detection features of harddisk installation:
 or manually edit /etc/grml/autoconfig[.small]
 
 See: man grml-autoconfig
+
+Tags: grml, installation, configuration
 </pre>
 <a name="25"></a><hr />
 <pre>
@@ -276,6 +326,8 @@ On the grml-ISO if not running grml:
 
 When running grml:
 % most /usr/share/doc/grml-docs/grml-cheatcodes.txt.gz
+
+Tags: grml, cheatcodes, boot, bootoptions, bootparam
 </pre>
 <a name="26"></a><hr />
 <pre>
@@ -289,6 +341,8 @@ See:
 
   http://grml.org/bugs/
   http://www.debian.org/Bugs/
+
+Tags: bug, reportbug, bts, debian
 </pre>
 <a name="27"></a><hr />
 <pre>
@@ -301,13 +355,16 @@ Online documentation:
   http://grml.org/faq/
   http://grml.org/docs/
   http://wiki.grml.org/doku.php
+
+Tags: info, grml, grml-info, documentation
 </pre>
 <a name="28"></a><hr />
 <pre>
-Mount ntfs partition (read-write):
+Mount NTFS partition (read-write):
 
-# modprobe fuse
-# ntfsmount /dev/hda1 /mnt/hda1
+# mount.ntfs-3g /dev/sda1 /mnt/sda1
+
+Tags: ntfs, mount
 </pre>
 <a name="29"></a><hr />
 <pre>
@@ -326,6 +383,8 @@ Usage example:
 ntfsresize -n -s 10G /dev/hda1 # testcase
 ntfsresize -s 10G /dev/hda1    # testing was successfull, now really resize partition
 cfdisk /dev/hda   # delete partition hda1, create new one with 10000MB and fs-type 07 (NTFS)
+
+Tags: ntfs, resize, ntfsresize
 </pre>
 <a name="31"></a><hr />
 <pre>
@@ -362,6 +421,8 @@ Secure delete file / directory / partition:
 See: man wipe
 
 Also take a look at shred(1), sfill(1) and http://dban.sourceforge.net/
+
+Tags: delete, secure, wipe, shred
 </pre>
 <a name="35"></a><hr />
 <pre>
@@ -376,37 +437,49 @@ See: http://www.michael-prokop.at/computer/samsung_x20.html
 Development information regarding grml:
 
   http://blog.grml.org/
+
+Tags: blog, grml, developmnet
 </pre>
 <a name="37"></a><hr />
 <pre>
-Contact grml team:
+Contact Grml team:
 
 #grml on irc.freenode.org - http://grml.org/irc/
 http://grml.org/contact/
+
+Tags: contact, irc, freenode, email
 </pre>
 <a name="38"></a><hr />
 <pre>
 Join the grml mailinglist:
 
 http://grml.org/mailinglist/
+
+Tags: grml, mailinglist
 </pre>
 <a name="39"></a><hr />
 <pre>
 Help us - donate!
 
 http://grml.org/donations/
+
+Tags: grml, donation
 </pre>
 <a name="40"></a><hr />
 <pre>
 Commercial support / system administration / adjusted live-cds:
 
 grml-solutions: http://grml.org/solutions/
+
+Tags: grml, commercial, customize
 </pre>
 <a name="41"></a><hr />
 <pre>
 Information regarding the kernel provided by grml:
 
   http://grml.org/kernel/
+
+Tags: documentation, grml, kernel
 </pre>
 <a name="42"></a><hr />
 <pre>
@@ -419,6 +492,8 @@ Usage example:
 % swaks -s $MAILSERVER -tlsc -a -au $ACCOUNT -ap $PASSWORD -f $MAILADRESSE -t $MAILADRESSE
 
 See: man swaks
+
+Tags: swak, smtp, test
 </pre>
 <a name="43"></a><hr />
 <pre>
@@ -427,6 +502,8 @@ NTFS related packages:
 scrounge-ntfs
 salvage-ntfs
 ntfsprogs
+
+Tags: utils, ntfs
 </pre>
 <a name="44"></a><hr />
 <pre>
@@ -438,6 +515,8 @@ Modify service through init script:
 # Reload postfix
 # service gpm start
 # /etc/init.d/lvm start
+
+Tags: init, script, start, stop
 </pre>
 <a name="45"></a><hr />
 <pre>
@@ -450,18 +529,24 @@ Test joystick:
 Play movie:
 
 % mplayer /path/to/movie
+
+Tags: movie, mplayer
 </pre>
 <a name="47"></a><hr />
 <pre>
 Use webcam with mplayer:
 
 % mplayer tv:// -tv driver=v4l:width=352:height=288:outfmt=yv12:device=/dev/video0
+
+Tags: webcam, mplayer
 </pre>
 <a name="48"></a><hr />
 <pre>
 Powerful network discovery tool:
 
 # scapy
+
+Tags: network, python, tool
 </pre>
 <a name="49"></a><hr />
 <pre>
@@ -469,6 +554,8 @@ Grab an entire CD and compress it to Ogg/Vorbis,
 MP3, FLAC, Ogg/Speex and/or MPP/MP+(Musepack) format:
 
 % abcde
+
+Tags: rip, abcde, mp3, transcode, audio
 </pre>
 <a name="50"></a><hr />
 <pre>
@@ -497,6 +584,8 @@ Local (send file):
 
 Remote (receive file):
 % npoll
+
+Tags: copy, file, network
 </pre>
 <a name="54"></a><hr />
 <pre>
@@ -559,6 +648,8 @@ Grep with highlighting:
 
 % grep --color=auto ...
 % hgrep ...
+
+Tags: grep, color, highlight
 </pre>
 <a name="63"></a><hr />
 <pre>
@@ -580,6 +671,8 @@ Output text as sound:
 Adjust a grml harddisk (grml2hd) installation:
 
 # grml2hd-utils
+
+Tags: grml2hd, configuration, installation
 </pre>
 <a name="66"></a><hr />
 <pre>
@@ -656,6 +749,8 @@ Hardware monitoring without kernel dependencies:
 Install grml-iso to usb-stick:
 
 % grml2usb grml.iso /mount/point
+
+Tags: usbpen, usbstick, installation, grml2usb
 </pre>
 <a name="76"></a><hr />
 <pre>
@@ -683,6 +778,8 @@ Or run one of the following commands:
 or
 # loadkeys i386/qwertz/de-latin1-nodeadkeys.kmap.gz # console
 % setxkbmap de                                      # X11
+
+Tags: language, keyboard, configuration
 </pre>
 <a name="79"></a><hr />
 <pre>
@@ -763,22 +860,30 @@ vim -c ":set ff=unix" -c ":wq" file      # convert using vim
 vim -c "se ff=dos|x" file                # ... and even shorter ;)
 recode ibmpc..lat1 file                  # convert using recode
 echo -e "s/r//g" &gt; dos2unix.sed; sed -f dos2unix.sed &lt; dosfile > unixfile
+
+Tags: windows, line, convert, recode, tr, line end,
 </pre>
 <a name="86"></a><hr />
 <pre>
 Save live audio stream to file:
 
-% mplayer -ao pcm:file=$FILE
+% mplayer -ao pcm:file=$FILE $URL
+</pre>
+<a name="87"></a><hr />
+<pre>
+Save live stream to file:
+
+% mplayer -dumpfile $FILE -dumpstream $STREAM
 
 or
 
-% mencoder mms://file.wmv -o $FILE -ovc copy -oac copy
+% mencoder mms://$URL -o $FILE -ovc copy -oac copy
 
 or
 
 % mimms mms://file.wmv
 </pre>
-<a name="87"></a><hr />
+<a name="88"></a><hr />
 <pre>
 Merge video files:
 
@@ -796,7 +901,7 @@ WMV:
 % mencoder file2.wmv -ovc lavc -oac lavc -ofps 25 -srate 48000 -mc 0 -noskip -forceidx -o file2.avi
 % avimerge -i file1.avi file2.avi -o blub.avi
 </pre>
-<a name="88"></a><hr />
+<a name="89"></a><hr />
 <pre>
 Display MS-Word file:
 
@@ -806,13 +911,13 @@ or
 
 % antiword file.doc
 </pre>
-<a name="89"></a><hr />
+<a name="90"></a><hr />
 <pre>
 Convert MS-Word file to postscript:
 
 % antiword -p a4 file.doc &gt; file.ps
 </pre>
-<a name="90"></a><hr />
+<a name="91"></a><hr />
 <pre>
 Convert manual to postscript:
 
@@ -820,43 +925,43 @@ Convert manual to postscript:
 or
 % man -t zsh &gt; zsh.ps
 </pre>
-<a name="91"></a><hr />
+<a name="92"></a><hr />
 <pre>
 Read BIOS:
 
 % dd if=/dev/mem bs=1k skip=768 count=256 2&gt;/dev/null | strings -n 8
 </pre>
-<a name="92"></a><hr />
+<a name="93"></a><hr />
 <pre>
 Read HTTP via netcat:
 
-echo "GET / HTTP/1.0rnrn" | netcat $DOMAIN 80
+echo -e "GET / HTTP/1.1rnHost: $DOMAINrnrn" | netcat $DOMAIN 80
 </pre>
-<a name="93"></a><hr />
+<a name="94"></a><hr />
 <pre>
 Get X ressources for specific program:
 
 % xrdb -q |grep -i xterm
 </pre>
-<a name="94"></a><hr />
+<a name="95"></a><hr />
 <pre>
 Get windowid of specific X-window:
 
 % xwininfo -int | grep "Window id:" | cut -d ' ' -f 4
 </pre>
-<a name="95"></a><hr />
+<a name="96"></a><hr />
 <pre>
 Get titel of specific X-window:
 
 % xprop WM_CLASS
 </pre>
-<a name="96"></a><hr />
+<a name="97"></a><hr />
 <pre>
 check locale - LC_MESSAGES:
 
 % locale -ck LC_MESSAGES
 </pre>
-<a name="97"></a><hr />
+<a name="98"></a><hr />
 <pre>
 Create random password:
 
@@ -864,7 +969,7 @@ Create random password:
 or
 % dd if=/dev/urandom bs=14 count=1 | hexdump | cut -c 9-
 </pre>
-<a name="98"></a><hr />
+<a name="99"></a><hr />
 <pre>
 Get tarballs of various Linux Kernel trees:
 
@@ -874,7 +979,7 @@ to get the current stable 2.6 release
 % ketchup -l
 to get a list of all supported trees
 </pre>
-<a name="99"></a><hr />
+<a name="100"></a><hr />
 <pre>
 Transfer your SSH public key to another host:
 
@@ -883,8 +988,10 @@ Transfer your SSH public key to another host:
 % ssh-copy-id -i ~/.ssh/id_rsa.pub user@remote-system
 or
 % cat $HOME/.ssh/id_rsa.pub  | ssh user@remote-system 'cat &gt;> .ssh/authorized_keys'
+
+Tags: ssh, ssh key, public key, ssh-copy-id, ssh-keygen
 </pre>
-<a name="100"></a><hr />
+<a name="101"></a><hr />
 <pre>
 Update /etc/fstab entries:
 
@@ -894,7 +1001,7 @@ See "man grml-rebuildfstab" for more details about
 generation of /etc/fstab (including stuff like
 fs LABELs / UUIDs,...).
 </pre>
-<a name="101"></a><hr />
+<a name="102"></a><hr />
 <pre>
 Fetch and potentially change SCSI device parameters:
 
@@ -902,29 +1009,31 @@ Fetch and potentially change SCSI device parameters:
 
 See: man sdparm
 </pre>
-<a name="102"></a><hr />
+<a name="103"></a><hr />
 <pre>
 reclaim disk space by linking identical files together:
 
 % dupmerge...
 </pre>
-<a name="103"></a><hr />
+<a name="104"></a><hr />
 <pre>
 Find and remove duplicate files:
 
 % dupseek ...
 </pre>
-<a name="104"></a><hr />
+<a name="105"></a><hr />
 <pre>
 Perform layer 2 attacks:
 
 # yersinia ...
+
+Tags: network, attack, security
 </pre>
-<a name="105"></a><hr />
+<a name="106"></a><hr />
 <pre>
 rootsh
 </pre>
-<a name="106"></a><hr />
+<a name="107"></a><hr />
 <pre>
 Guess PC-type hard disk partitions / partition table:
 
@@ -935,18 +1044,20 @@ Perform a standard scan:
 
 Write back the guessed table:
 # gpart -W /dev/ice /dev/ice
+
+Tags: partition, recovery, disk
 </pre>
-<a name="107"></a><hr />
+<a name="108"></a><hr />
 <pre>
 Develop, test and use exploit code with the Metasploit Framework:
 
 cd /tmp
-wget http://framework-mirrors.metasploit.com/msf/downloader/framework-3.0.tar.gz
-unp framework-3.0.tar.gz
-cd framework-3.0
+wget http://spool.metasploit.com/releases/framework-3.2.tar.gz
+unp framework-3.2.tar.gz
+cd framework-3.2
 ./msfcli
 </pre>
-<a name="108"></a><hr />
+<a name="109"></a><hr />
 <pre>
 Useful documentation:
 
@@ -965,21 +1076,25 @@ http://www.tldp.org/            The Linux Documentation Project
 Tips and tricks:
 
 % fortune debian-hints
+
+Tags: documentation
 </pre>
-<a name="109"></a><hr />
+<a name="110"></a><hr />
 <pre>
 Fun stuff:
 
 % fortune debian-hints
 % dpkg -L funny-manpages
 </pre>
-<a name="110"></a><hr />
+<a name="111"></a><hr />
 <pre>
 Backup master boot record (MBR):
 
 # dd if=/dev/ice of=/tmp/backup_of_mbr bs=512 count=1
+
+Tags: backup, mbr
 </pre>
-<a name="111"></a><hr />
+<a name="112"></a><hr />
 <pre>
 Backup partition table:
 
@@ -988,8 +1103,10 @@ Backup partition table:
 Restore partition table:
 
 # sfdisk /dev/hda &lt; hda.out
+
+Tags: backup, partition, sfdisk, recovery
 </pre>
-<a name="112"></a><hr />
+<a name="113"></a><hr />
 <pre>
 Clone disk via network using netcat:
 
@@ -1002,15 +1119,19 @@ Adjust blocksize (dd's option bs=...) and include 'gzip -c'
 to tune speed:
 
 # dd if=/dev/hda1 bs=32M | gzip -c | nc -vq 0 192.168.1.2 30000
+
+Tags: network, backup, dd, netcat
 </pre>
-<a name="113"></a><hr />
+<a name="114"></a><hr />
 <pre>
 Backup specific directories via cpio and ssh:
 
 # for f in directory_list; do find $f &gt;> backup.list done
 # cpio -v -o --format=newc &lt; backup.list | ssh user@host "cat &gt; backup_device"
+
+Tags: backup
 </pre>
-<a name="114"></a><hr />
+<a name="115"></a><hr />
 <pre>
 Clone disk via ssh:
 
@@ -1020,8 +1141,10 @@ This one uses CPU cycles on the remote server to compare the files:
 
 This one uses CPU cycles on the local server to compare the files:
 # ssh target_address cat &lt;localfile "|" diff - remotefile
+
+Tags: network, backup, ssh
 </pre>
-<a name="115"></a><hr />
+<a name="116"></a><hr />
 <pre>
 Useful tools for cloning / backups:
 
@@ -1037,8 +1160,10 @@ Useful tools for cloning / backups:
 * cpio: copy files to and from archives
 * pax: read and write file archives and copy directory hierarchies
 * netcat / ssh / tar / gzip / bzip2: additional helper tools
+
+Tags: network, backup, ssh, udp, rescue, recovery
 </pre>
-<a name="116"></a><hr />
+<a name="117"></a><hr />
 <pre>
 Use grml as a rescue system:
 
@@ -1081,32 +1206,34 @@ NTFS:
   * salvage-ntfs: free NTFS data recovery tools
   * scrounge-ntfs: data recovery program for NTFS file systems
   * ntfsresize: resize ntfs partitions
+
+Tags: ntfs, jfs, xfs, ext3, rescue, recovery, backup, filesystem, tools
 </pre>
-<a name="117"></a><hr />
+<a name="118"></a><hr />
 <pre>
 Get ASCII value of a character with zsh:
 
 % char=N ; print $((#char))
 </pre>
-<a name="118"></a><hr />
+<a name="119"></a><hr />
 <pre>
 Convert a collection of mp3 files to wave or cdr using zsh:
 
 % for i (./*.mp3){mpg321 --w - $i &gt; ${i:r}.wav}
 </pre>
-<a name="119"></a><hr />
+<a name="120"></a><hr />
 <pre>
 Convert images (foo.gif to foo.png) using zsh:
 
 % for i in **/*.gif; convert $i $i:r.png
 </pre>
-<a name="120"></a><hr />
+<a name="121"></a><hr />
 <pre>
 Remove all "non txt" files using zsh:
 
 % rm ./^*.txt
 </pre>
-<a name="121"></a><hr />
+<a name="122"></a><hr />
 <pre>
 Remote Shell Using SSH:
 
@@ -1115,8 +1242,10 @@ remote host:
 
 local host:
 % ssh user@localhost -p 3333
+
+Tags: port forwarding, ssh, remote port, network
 </pre>
-<a name="122"></a><hr />
+<a name="123"></a><hr />
 <pre>
 Reverse Shell with Netcat:
 
@@ -1125,8 +1254,10 @@ local host:
 
 remote host:
 % netcat 192.168.0.1 3333
+
+TagS: port forwarding, ssh, remote, network
 </pre>
-<a name="123"></a><hr />
+<a name="124"></a><hr />
 <pre>
 Reverse Shell via SSH:
 
@@ -1135,44 +1266,46 @@ local host (inside the network):
 
 remote host (outside the network):
 % ssh localhost -p 1234
+
+Tags: port forwarding, ssh, remote port, network
 </pre>
-<a name="124"></a><hr />
+<a name="125"></a><hr />
 <pre>
 Remove empty directories with zsh:
 
 % rmdir ./**/*(/od) 2&gt; /dev/null
 </pre>
-<a name="125"></a><hr />
+<a name="126"></a><hr />
 <pre>
 Find all the empty directories in a tree with zsh:
 
 % ls -ld *(/^F)
 </pre>
-<a name="126"></a><hr />
+<a name="127"></a><hr />
 <pre>
 Find all files without a valid owner and change ownership with zsh:
 
 % chmod user /**/*(D^u:${(j.:u:.)${(f)"$(&lt;/etc/passwd)"}%%:*}:)
 </pre>
-<a name="127"></a><hr />
+<a name="128"></a><hr />
 <pre>
 Display the 5-10 last modified files with zsh:
 
 % print -rl -- /path/to/dir/**/*(D.om[5,10])
 </pre>
-<a name="128"></a><hr />
+<a name="129"></a><hr />
 <pre>
 Find and list the ten newest files in directories and subdirs (recursive) with zsh:
 
 % print -rl -- **/*(Dom[1,10])
 </pre>
-<a name="129"></a><hr />
+<a name="130"></a><hr />
 <pre>
 Find most recent file in a directory with zsh:
 
 % setopt dotglob ; print directory/**/*(om[1])
 </pre>
-<a name="130"></a><hr />
+<a name="131"></a><hr />
 <pre>
 Tunnel all traffic through an external server:
 
@@ -1180,8 +1313,10 @@ Tunnel all traffic through an external server:
 
 Then set the SOCKS4/5 proxy to localhost:3333.
 Check whether it's working by surfing e.g. to checkip.dyndns.org
+
+Tags: ssh, network, proxy, socks, tunnel
 </pre>
-<a name="131"></a><hr />
+<a name="132"></a><hr />
 <pre>
 Tunnel everything through SSH via tsocks:
 
@@ -1205,8 +1340,10 @@ external host are prefixed with tsocks, e.g.:
 
 If you call tsocks without parameters it executes a shell witht the
 LD_PRELOAD environment variable already set and exported.
+
+Tags: ssh, network, proxy, socks, tunnel, tsocks
 </pre>
-<a name="132"></a><hr />
+<a name="133"></a><hr />
 <pre>
 smartctl - control and monitor utility for harddisks using Self-Monitoring,
 Analysis and Reporting Technology (SMART):
@@ -1228,8 +1365,10 @@ Display results of test:
 
 Query device information:
 # smartctl -i /dev/ice
+
+Tags: smart, s.m.a.r.t, info, test, hardware
 </pre>
-<a name="133"></a><hr />
+<a name="134"></a><hr />
 <pre>
 Mount a BSD / Solaris partition:
 
@@ -1242,14 +1381,16 @@ Use ufstype sunx86 for SunOS for Intel (Solarisx86) (read-write).
 
 See /usr/share/doc/linux-doc-$(uname -r)/Documentation/filesystems/ufs.txt.gz
 for more details.
+
+Tags: ufs, bsd, mount, solaris
 </pre>
-<a name="134"></a><hr />
+<a name="135"></a><hr />
 <pre>
 Read BIOS (and or BIOS) password:
 
 # dd if=/dev/mem bs=512 skip=2 count=1 | hexdump -C | head
 </pre>
-<a name="135"></a><hr />
+<a name="136"></a><hr />
 <pre>
 Clone one of the kernel trees via git:
 
@@ -1257,7 +1398,7 @@ Clone one of the kernel trees via git:
                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 This path defines the tree. See http://kernel.org/git/ for an overview.
 </pre>
-<a name="136"></a><hr />
+<a name="137"></a><hr />
 <pre>
 Mount filesystems over ssh protocol:
 
@@ -1268,14 +1409,16 @@ Unmount via:
 % fusermount -u /mnt/test
 
 (Notice: requires fuse kernel module)
+
+Tags: ssh, sshfs, network, mount, directory, remote, fuse
 </pre>
-<a name="137"></a><hr />
+<a name="138"></a><hr />
 <pre>
 Install Gentoo using grml:
 
 See http://www.gentoo.org/doc/en/altinstall.xml
 </pre>
-<a name="138"></a><hr />
+<a name="139"></a><hr />
 <pre>
 Install (plain) Debian (sarge release) via grml:
 
@@ -1301,8 +1444,10 @@ umount /mnt/test && reboot    # unmount partition and reboot...
 
 See also: http://www.debian.org/releases/stable/i386/apcs04.html.en
 Avoid all of the above steps - use grml-debootstrap(8) instead!
+
+Tags: manual, installation, debian, debootstrap
 </pre>
-<a name="139"></a><hr />
+<a name="140"></a><hr />
 <pre>
 Install (plain) Debian (etch release) via grml
 
@@ -1386,8 +1531,10 @@ EOF
 
 See also: http://www.debian.org/releases/stable/i386/apcs04.html.en
 Avoid all of the above steps - use grml-debootstrap(8) instead!
+
+Tags: manual, installation, debian, debootstrap, howto
 </pre>
-<a name="140"></a><hr />
+<a name="141"></a><hr />
 <pre>
 Convert files from Unicode / UTF-8 to ISO:
 
@@ -1396,50 +1543,45 @@ Convert files from Unicode / UTF-8 to ISO:
 and vice versa:
 
 % iconv -f iso-8859-15 -t utf8 &lt; isofile &gt; utffile
-</pre>
-<a name="141"></a><hr />
-<pre>
-Assign static setup for network cards (eth0 and eth1) via udev:
 
-First method - manual:
-~~~~~~~~~~~~~~~~~~~~~~
-Get information for SYSFS address:
-# udevinfo -a -p /sys/class/net/eth0/ | grep address
-
-Then create udev rules:
-# cat /etc/udev/network.rules
-# match eth* stuff:
-KERNEL=="eth*", SYSFS{address}=="00:00:00:00:00:01", NAME="wlan0"
-KERNEL=="eth*", SYSFS{address}=="00:00:00:00:00:02", NAME="lan0"
-# do not match eth* drivers but also e.g. firewire stuff:
-ACTION=="add", SUBSYSTEM=="net", SYSFS{address}=="00:00:00:00:00:03", NAME="1394"
-
-Now activate the rules:
-# cd /etc/udev/rules.d/ && ln -s ../network.rules z35_network.rules
-
-Unload the drivers, restart udev and load the drivers again to activate
-the settings.
-
-Second method - automatic:
-~~~~~~~~~~~~~~~~~~~~~~~~~~
-Run /lib/udev/write_net_rules shipped with recent udev versions:
-
-# INTERFACE=wlan1 /lib/udev/write_net_rules 00:00:00:00:00:04
-
-This command will create /etc/udev/rules.d/z25_persistent-net.rules containing:
-
-SUBSYSTEM=="net", DRIVER=="?*", SYSFS{address}=="00:00:00:00:00:04", NAME=wlan1
-
-See /usr/share/doc/udev/writing_udev_rules/index.html for more information.
+Tags: utf-8, iso, unicode, utf8
 </pre>
 <a name="142"></a><hr />
+<pre>
+Assign static setup for network cards (NICs) via udev:
+
+Retrieve information for address (corresponding to MAC address):
+
+  # udevadm info -a -p /sys/class/net/eth0/ | grep -i 'ATTR{address}'
+
+Execute /lib/udev/write_net_rules with according values (INTERFACE
+is old NIC name, INTERFACE_NAME is new NIC name and MATCHADDR
+is the MAC address retrieved with udevadm info command):
+
+  # INTERFACE=eth0 INTERFACE_NAME=lan0  MATCHADDR=00:00:00:00:00:01 /lib/udev/write_net_rules
+
+This will generate file /etc/udev/rules.d/70-persistent-net.rules with content:
+
+SUBSYSTEM=="net", ACTION=="add", DRIVERS=="?*", ATTR{address}=="00:00:00:00:00:01", KERNEL=="eth*", NAME="lan0"
+
+Finally take down the interface (ifdown/ifconfig) and execute:
+
+  # udevadm trigger --action=add --subsystem-match=net
+
+so the interface will be renamed. (Rebooting or
+unloading drivers/restart udev/loading drivers again
+works as well of course.)
+
+Tags: udev, configuration, name, eth0, howto
+</pre>
+<a name="143"></a><hr />
 <pre>
 Change the suffix from *.sh to *.pl using zsh:
 
 % autoload zmv
 % zmv -W '*.sh' '*.pl'
 </pre>
-<a name="143"></a><hr />
+<a name="144"></a><hr />
 <pre>
 Generate SSL certificate:
 
@@ -1497,8 +1639,10 @@ Also take a look at make-ssl-cert (debconf wrapper for openssl):
 # /usr/sbin/make-ssl-cert /usr/share/ssl-cert/ssleay.cnf /etc/apache2/apache.pem
 
 and mod-ssl-makecert (utility to create SSL certificates in /etc/apache/ssl.*/).
+
+Tags: openssl, howto
 </pre>
-<a name="144"></a><hr />
+<a name="145"></a><hr />
 <pre>
 Change Windows NT password(s):
 
@@ -1510,8 +1654,10 @@ Notice: if mounting the partition read-write did not work (check syslog!)
 try using mount.ntfs-3g instead: mount.ntfs-3g /dev/hda1 /mnt/hda1
 
 (Be careful with deactivating syskey!)
+
+Tags: password, windows, recovery, chntpw, howto
 </pre>
-<a name="145"></a><hr />
+<a name="146"></a><hr />
 <pre>
 glark - replacement for grep written in Ruby:
 
@@ -1527,7 +1673,7 @@ Usage examples:
 
 More information: man glark
 </pre>
-<a name="146"></a><hr />
+<a name="147"></a><hr />
 <pre>
 Find CD burning device(s):
 
@@ -1540,15 +1686,19 @@ Scan using ATA Packet specific SCSI transport:
 
 Get specific information for /dev/ice:
 # cdrecord dev=/dev/ice -scanbus
+
+Tags: hardware, info, cd burn
 </pre>
-<a name="147"></a><hr />
+<a name="148"></a><hr />
 <pre>
 Create devices in /dev on udev:
 
 For example create md devices (/dev/md0, /dev/md1,...):
 # cd /dev ; WRITE_ON_UDEV=1 ./MAKEDEV md
+
+Tags: raid, device
 </pre>
-<a name="148"></a><hr />
+<a name="149"></a><hr />
 <pre>
 Identify network device (NIC):
 
@@ -1565,8 +1715,10 @@ If your NIC shows some aging signs, you may want to be sure:
 Disable TCP/UDP checksums:
 
 # ethtool -K $DEVICE tx off
+
+Tags: configuration, network, device
 </pre>
-<a name="149"></a><hr />
+<a name="150"></a><hr />
 <pre>
 grml2hd seems to hang? Getting Squashfs errors? Problems while booting?
 
@@ -1583,34 +1735,49 @@ Check your CD low-level via running:
 
 If the medium really is ok and it still fails try to boot with deactivated DMA
 via using grml nodma at the bootprompt.
+
+Tags: grml2hd, installation, verify, squashfs, error
 </pre>
-<a name="150"></a><hr />
+<a name="151"></a><hr />
 <pre>
 Write a Microsoft compatible boot record (MBR) using ms-sys
 
-Write a Windows 2000/XP/2003 MBR to device:
+Write a Windows 2000/XP/2003 MBR to a device:
 
 # ms-sys -m /dev/ice
+
+Notice: grab ms-sys from http://ms-sys.sourceforge.net/ - demo:
+
+ wget http://surfnet.dl.sourceforge.net/sourceforge/ms-sys/ms-sys-2.1.3.tgz
+ unp ms-sys-2.1.3.tgz
+ cd ms-sys-2.1.3
+ make
+ ./bin/ms-sys ...
+
+Tags: mbr, windows, ms-sys, recovery
 </pre>
-<a name="151"></a><hr />
+<a name="152"></a><hr />
 <pre>
 Use a Vodafone 3G Datacard (UMTS) with Linux:
 
 Plug in your vodafone card and check in syslog whether the appropriate
 (probably /dev/ttyUSB0 or /dev/noz0) has been created. If so run:
 
-# gcom -d $DEVICE
+# comgt -d $DEVICE
 # wvdial --config /etc/wvdial.conf.umts $PROFILE
 
 Usage examples:
-# gcom -d /dev/ttyUSB0
+# comgt -d /dev/ttyUSB0
 # wvdial --config /etc/wvdial.conf.umts a1usb
 
-# gcom -d /dev/noz0
+# comgt -d /dev/noz0
 # wvdial --config /etc/wvdial.conf.umts tmnozomi
 
-# gcom -d /dev/noz0
+# comgt -d /dev/noz0
 # wvdial --config /etc/wvdial.conf.umts dreiusb
+
+# comgt -d /dev/ttyACM0
+# wvdial --config /etc/wvdial.conf.umts yesss
 
 If you receive invalid DNS nameservers when connecting, like:
 
@@ -1634,8 +1801,14 @@ product ID when loading the usbserial module. Usage example:
 Bus 004 Device 008: ID 1199:6813 Sierra Wireless, Inc.
 
 # modprobe usbserial vendor=0x1199 product=0x6813
+
+To get a list of available providers execute:
+
+# comgt -s -d /dev/ttyUSB0 /etc/comgt/operator
+
+Tags: umts, 3g, vodafone, sierra, wvdial, ppp, howto
 </pre>
-<a name="152"></a><hr />
+<a name="153"></a><hr />
 <pre>
 hdparm - get/set hard disk parameters
 
@@ -1648,8 +1821,10 @@ Request identification info directly from the drive:
 
 Perform timings of device + cache reads for benchmark and comparison purposes:
 # hdparm -tT /dev/ice
+
+Tags: hardware, performance, configuration, harddisk
 </pre>
-<a name="153"></a><hr />
+<a name="154"></a><hr />
 <pre>
 bonnie++ - program to test hard drive performance.
 
@@ -1657,15 +1832,17 @@ bonnie++ - program to test hard drive performance.
 # mount /dev/ice /mnt/benchmark
 # chmod go+w /mnt/benchmark
 # bonnie -u grml -d /mnt/benchmark -s 2000M
+
+Tags: benchmark, harddisk
 </pre>
-<a name="154"></a><hr />
+<a name="155"></a><hr />
 <pre>
 Use gizmo with a bluetooth headset:
 
 % DEVICE="/dev/dsp$(awk '/- BT Headset/ {print $1}' /proc/asound/cards)"
 % gizmo --mic $DEVICE --speaker $DEVICE
 </pre>
-<a name="155"></a><hr />
+<a name="156"></a><hr />
 <pre>
 Scan a v4l device for TV stations:
 
@@ -1675,31 +1852,33 @@ Then running xawtv should work:
 
 % xawtv
 </pre>
-<a name="156"></a><hr />
+<a name="157"></a><hr />
 <pre>
 Run apt-get with timeout of 3 seconds:
 
 # apt-get -o acquire::http::timeout=3  update
+
+Tags: apt-get
 </pre>
-<a name="157"></a><hr />
+<a name="158"></a><hr />
 <pre>
 Debian GNU/Linux device driver check page
 
 % $BROWSER http://kmuto.jp/debian/hcl/index.cgi
 </pre>
-<a name="158"></a><hr />
+<a name="159"></a><hr />
 <pre>
 Use dd with status line:
 
 # dd if=/dev/ice conv=noerror,notrunc,sync | buffer -S 100k | dd of=/tmp/file
 </pre>
-<a name="159"></a><hr />
+<a name="160"></a><hr />
 <pre>
 Generate a 512k file of random data with status bar:
 
 % dd if=/dev/random bs=1024 count=512 | bar -s 512k -of ./random
 </pre>
-<a name="160"></a><hr />
+<a name="161"></a><hr />
 <pre>
 Install Grub instead of lilo on grml installation (grml2hd):
 
@@ -1713,14 +1892,18 @@ now install grub (usage example for /dev/sda1):
 # grub install
 root (hd0,0)
 setup (hd0)
+
+Tags: grml2hd, grub
 </pre>
-<a name="161"></a><hr />
+<a name="162"></a><hr />
 <pre>
 Install Ubuntu using grml:
 
 See https://wiki.ubuntu.com/Installation/FromKnoppix
+
+Tags: ubuntu, installation
 </pre>
-<a name="162"></a><hr />
+<a name="163"></a><hr />
 <pre>
 Resize ext2 / ext3 partition:
 
@@ -1731,8 +1914,10 @@ Resize ext2 / ext3 partition:
 # fsck.ext2 -v -y -f /dev/iceX        # check filesystem again
 # resize2fs -p /dev/iceX              # resize it to maximum
 # tune2fs -j /dev/iceX                # re-enable journal
+
+Tags: resize, ext2, ext3, ext4, partition, howto
 </pre>
-<a name="163"></a><hr />
+<a name="164"></a><hr />
 <pre>
 Tune ext2 / ext3 filesystem:
 
@@ -1750,20 +1935,26 @@ Now run e2fsck with the -D option to have the directories optimized:
 
 Notice: since e2fsprogs (1.39-1) filesystems are created with
 directory indexing and on-line resizing enabled by default.
+
+Tags: configuration, ext2, ext3, ext4, partition
 </pre>
-<a name="164"></a><hr />
+<a name="165"></a><hr />
 <pre>
 Search for printers via network:
 
 # pconf_detect -m NETWORK -i 192.168.0.1/24
+
+Tags: printer, network, scan
 </pre>
-<a name="165"></a><hr />
+<a name="166"></a><hr />
 <pre>
 Mount a remote directory via webdav (e.g. Mediacenter of GMX):
 
 # mount -t davfs https://mediacenter.gmx.net/ /mnt/test
+
+Tags: webdav, mount, mediacenter, gmx
 </pre>
-<a name="166"></a><hr />
+<a name="167"></a><hr />
 <pre>
 System-Profiling using oprofile:
 
@@ -1784,8 +1975,10 @@ Then take a look at the reports using something like e.g.:
 # opreport -t 0.5 --exclude-dependent
 # opreport -t 0.5 /path/to/executable_to_check
 # opannotate -t 0.5 --source --assembly
+
+Tags: profile, profiling, opcontrol, howto
 </pre>
-<a name="167"></a><hr />
+<a name="168"></a><hr />
 <pre>
 Install ATI's fglrx driver for Xorg / X.org:
 
@@ -1796,8 +1989,10 @@ After installing adjust xorg.conf via running:
 # aticonfig --initial --input=/etc/X11/xorg.conf
 
 For more information take a look at http://wiki.grml.org/doku.php?id=ati
+
+Tags: xorg, x11, driver, ati
 </pre>
-<a name="168"></a><hr />
+<a name="169"></a><hr />
 <pre>
 Install nvidia driver for Xorg / X.org:
 
@@ -1807,15 +2002,19 @@ Usually there already exist drivers for the grml-system:
 Then switch from module nv to nvidia:
 
 # sed -i 's/Driver.*nv.*/Driver      "nvidia"/' /etc/X11/xorg.conf
+
+Tags: xorg, x11, driver, nvidia
 </pre>
-<a name="169"></a><hr />
+<a name="170"></a><hr />
 <pre>
 glxgears - a GLX demo that draws three rotating gears
 
 To print frames per second (fps) use:
 % glxgears -printfps
+
+Tags: xorg, x11, glx,
 </pre>
-<a name="170"></a><hr />
+<a name="171"></a><hr />
 <pre>
 You forgot to boot with 'grml noeject noprompt' to avoid
 ejecting and prompting for CD removal when rebooting/halting
@@ -1836,8 +2035,10 @@ If you want to avoid only the prompting part, run:
 or:
 
 # noprompt halt
+
+Tags: bootparam, fix, grml
 </pre>
-<a name="171"></a><hr />
+<a name="172"></a><hr />
 <pre>
 Mount wikipedia local via fuse:
 
@@ -1867,8 +2068,10 @@ Mount it (/wiki must exist of course):
 
 Unmount via:
 % fusermount -u /wiki
+
+Tags: fuse, wikipedia, mount
 </pre>
-<a name="172"></a><hr />
+<a name="173"></a><hr />
 <pre>
 Remote notification on X via osd (on screen display):
 
@@ -1922,8 +2125,10 @@ ForwardAgent yes
 Notice: if you get 'ABORT: Requested font not found' make sure the
 requested font is available, running 'LANG=C LC_ALL=C osd_server.py...'
 might help as well.
+
+Tags: osd, notification, ssh, network, port-forwarding
 </pre>
-<a name="173"></a><hr />
+<a name="174"></a><hr />
 <pre>
 Avoid automatical startup of init scripts via invoke-rc.d:
 
@@ -1945,8 +2150,10 @@ If you want to disable automatical startup of newly installed packages
 
 To restore the default behaviour set EXITSTATUS back to '0' in
 /etc/policy-rc.d.conf.
+
+Tags: policy, init, script, invode-rc.d
 </pre>
-<a name="174"></a><hr />
+<a name="175"></a><hr />
 <pre>
 Install VMware-Tools for grml:
 
@@ -1970,8 +2177,10 @@ modprobe vmxnet
 In an X terminal, launch the VMware Tools running:
 
 vmware-toolbox
+
+Tags: vmware, tool, vmware-toolbox, howto
 </pre>
-<a name="175"></a><hr />
+<a name="176"></a><hr />
 <pre>
 Some important Postfix stuff
 
@@ -2007,7 +2216,7 @@ For configuration of postfix take a look at
 /etc/postfix/main.cf    - man 5 postconf
 and http://www.postfix.org/documentation.html.
 </pre>
-<a name="176"></a><hr />
+<a name="177"></a><hr />
 <pre>
 File permissions
 
@@ -2029,8 +2238,10 @@ mode 1000 - sticky bit:
 
 - for files: not used
 - for directories: only the owner of a file can delete or rename the file
+
+Tags: postix, mailq, postsuper, queue, delete, smtp
 </pre>
-<a name="177"></a><hr />
+<a name="178"></a><hr />
 <pre>
 Create MySQL database
 
@@ -2047,8 +2258,10 @@ grant all on grml.* to mika;
 Give a user access to the database (with password):
 
 grant all on grml.* to enrico identified by "PASSWORD";
+
+Tags: mysql, database
 </pre>
-<a name="178"></a><hr />
+<a name="179"></a><hr />
 <pre>
 Setup an HTTPS website:
 
@@ -2075,8 +2288,10 @@ Listen 443
 and make sure the SSL module is used:
 
 # a2enmod ssl
+
+Tags: ssl, https, configuration, apache
 </pre>
-<a name="179"></a><hr />
+<a name="180"></a><hr />
 <pre>
 Useful Apache / Apache2 stuff
 
@@ -2091,34 +2306,44 @@ Enable a site:
 Enable a module
 
 # a2enmod modulename
+
+Tags: apache, configuration
 </pre>
-<a name="180"></a><hr />
+<a name="181"></a><hr />
 <pre>
 Create tar archive and store it on remote machine:
 
 % tar zcf - /sourcedir | ssh user@targethost "cat &gt;file.tgz"
+
+Tags: tar, backup, remote, network, ssh
 </pre>
-<a name="181"></a><hr />
+<a name="182"></a><hr />
 <pre>
 Pick out and displays images from network traffic:
 
 # driftnet
+
+Tags: remote, network, sniff, image
 </pre>
-<a name="182"></a><hr />
+<a name="183"></a><hr />
 <pre>
 Install Flash plugin:
 
 # dpkg-reconfigure flashplugin-nonfree
+
+Tags: flash, plugin
 </pre>
-<a name="183"></a><hr />
+<a name="184"></a><hr />
 <pre>
 To test a proxy, low level way:
 
 % telnet proxy 8080
 [...]
 GET http://www.google.com HTTP/1.0 [press enter twice]
+
+Tags: proxy
 </pre>
-<a name="184"></a><hr />
+<a name="185"></a><hr />
 <pre>
 Adjust system for use of qemu with kqemu:
 
@@ -2135,7 +2360,7 @@ chmod 666 /dev/net/tun
 Check kqemu support via starting qemu, press
 Ctrl-Alt-2 and entering 'info kqemu'.
 </pre>
-<a name="185"></a><hr />
+<a name="186"></a><hr />
 <pre>
 (High-Load) Debugging related tools:
 
@@ -2154,8 +2379,10 @@ Usage examples:
 # vmstat 1
 # atsar -t 60 10
 # dstat -af
+
+Tags: test, debug, information, hardware, statistic
 </pre>
-<a name="186"></a><hr />
+<a name="187"></a><hr />
 <pre>
 Using WPA for network setup manually:
 
@@ -2163,14 +2390,18 @@ Using WPA for network setup manually:
 
 Adjust the options and configuration file to your needs.
 Also take a look at 'grml-network'.
+
+Tags: wireless, wpa, network, configuration
 </pre>
-<a name="187"></a><hr />
+<a name="188"></a><hr />
 <pre>
 Start X and lock console via exiting:
 
 % startx 2&gt;~/.xsession-errors &| exit
+
+Tags: xorg, x11, startx, graphical
 </pre>
-<a name="188"></a><hr />
+<a name="189"></a><hr />
 <pre>
 Which process is writing to disk and/or causes the disk to spin up?
 
@@ -2193,14 +2424,18 @@ which handles block_dump on its own.
 See: $KERNEL-SOURCE/Documentation/laptop-mode.txt
 
 Also take a look at event-viewer(8) which is part of grml-debugtools.
+
+Tags: debug, device, block, partition
 </pre>
-<a name="189"></a><hr />
+<a name="190"></a><hr />
 <pre>
 Install initrd via initramfs-tools for currently running kernel:
 
 # update-initramfs -c -t -k $(uname -r)
+
+Tags: initrd
 </pre>
-<a name="190"></a><hr />
+<a name="191"></a><hr />
 <pre>
 Install initrd via yaird for currently running kernel:
 
@@ -2212,13 +2447,13 @@ Install initrd via yaird for specific kernel:
 # mount /sys
 # yaird -o /boot/initrd.img-2.6.15-1-686 2.6.15-1-686
 </pre>
-<a name="191"></a><hr />
+<a name="192"></a><hr />
 <pre>
 Reinstall package with its original configuration files:
 
 # apt-get install --reinstall -o DPkg::Options::=--force-confmiss -o   DPkg::Options::=--force-confnew package
 </pre>
-<a name="192"></a><hr />
+<a name="193"></a><hr />
 <pre>
 grml 0.8 funkenzutzler - rt2x00 drivers:
 
@@ -2229,7 +2464,7 @@ rt73usb please install the package manually running:
 
 # dpkg -i /usr/src/rt2x00-modules-*.deb
 </pre>
-<a name="193"></a><hr />
+<a name="194"></a><hr />
 <pre>
 Use Java with jikes and jamvm on grml:
 
@@ -2243,7 +2478,7 @@ Notice that grml exports $JIKESPATH (/usr/share/classpath/glibj.zip),
 so you do not have to manually run
 jikes --bootclasspath /usr/share/classpath/glibj.zip
 </pre>
-<a name="194"></a><hr />
+<a name="195"></a><hr />
 <pre>
 Online resizing of (Software-)RAID5:
 
@@ -2290,8 +2525,10 @@ mdadm --detail /dev/md0 | grep -e "Array Size" -e 'Device Size'
 
 # Last step - resize the filesystem (online again):
 resize2fs /dev/md0
+
+Tags: raid, resize, raid5, mdadm
 </pre>
-<a name="195"></a><hr />
+<a name="196"></a><hr />
 <pre>
 ext3 online resizing:
 
@@ -2330,8 +2567,10 @@ Notice: online resizing works as soon as the kernel can re-read the
 partition table. So it works for example with LVM and SW-RAID but not with
 a plain device (/dev/[sh]d*). The kernel does not re-read the partition
 table if the device is already mounted.
+
+Tags: resize, raid, lvm, ext2, ext3, ext4, raid1
 </pre>
-<a name="196"></a><hr />
+<a name="197"></a><hr />
 <pre>
 Use vim as an outline editor:
 
@@ -2339,7 +2578,7 @@ Use vim as an outline editor:
 % vim ~/foo.otl
 :he vo
 </pre>
-<a name="197"></a><hr />
+<a name="198"></a><hr />
 <pre>
 Monitor directories/files for changes using iwatch
 
@@ -2349,8 +2588,10 @@ Monitor /tmp for changes:
 Monitor files/directories specified in /etc/iwatch.xml
 and send mail on changes:
 % iwatch
+
+Tags: inotify, watch, file, directory
 </pre>
-<a name="198"></a><hr />
+<a name="199"></a><hr />
 <pre>
 Some often used mdadm commands:
 
@@ -2413,8 +2654,10 @@ Producing /etc/mdadm/mdadm.conf:
 
 See also: man mdadm | less -p "^EXAMPLES"
           http://www.tldp.org/HOWTO/Software-RAID-HOWTO.html
+
+Tags: raid, raid1, raid5, configuration, mdadm, howto
 </pre>
-<a name="199"></a><hr />
+<a name="200"></a><hr />
 <pre>
 A quick summary of the most commonly used RAID levels:
 
@@ -2432,8 +2675,10 @@ RAID 30: A stripe across dedicated parity RAID systems
 RAID 100: A stripe of a stripe of mirrors
 
   -- http://en.wikipedia.org/wiki/RAID
+
+Tags: raid, raid1, raid5, raid01, raid10, raid100
 </pre>
-<a name="200"></a><hr />
+<a name="201"></a><hr />
 <pre>
 Logical Volume Management (LVM) with Linux
 
@@ -2488,8 +2733,10 @@ Remove logical volume:
 
 See also: man lvm
           http://www.tldp.org/HOWTO/LVM-HOWTO/
+
+Tags: lvm, howto, pvcreate, lvcreate
 </pre>
-<a name="201"></a><hr />
+<a name="202"></a><hr />
 <pre>
 How to use APT locally
 
@@ -2503,49 +2750,55 @@ dpkg-scansources debs | gzip &gt; debs/Sources.gz
 echo "  deb-src file:/root debs/" &gt;> /etc/apt/sources.list
 
 See also: http://www.debian.org/doc/manuals/apt-howto/ch-basico.en.html
+
+Tags: mirror, local
 </pre>
-<a name="202"></a><hr />
+<a name="203"></a><hr />
 <pre>
 Check filesystem's LABEL:
 
 generic way:
-# vol_id -l /dev/sda1
+# blkid /dev/sda1
 
-ext2/3 without vol_id:
+ext2/3 without blkid:
 # dumpe2fs /dev/sda1 | grep "Filesystem volume name"
 
-xfs without vol_id:
+xfs without blkid:
 # xfs_admin -l /dev/sda1
 
-reiserfs without vol_id:
+reiserfs without blkid:
 # debugreiserfs /dev/sda1 | grep -i label
 
-jfs without vol_id:
+jfs without blkid:
 # jfs_tune -l /dev/sda1 | grep -i label
 
-reiser4 without vol_id:
+reiser4 without blkid:
 # debugfs.reiser4 /dev/sda1 | grep -i label
+
+Tags: filesystem, ext2, ext3, ext4, blkid, jfs, xfs, label
 </pre>
-<a name="203"></a><hr />
+<a name="204"></a><hr />
 <pre>
 Check filesystem's UUID:
 
 generic way:
-# vol_id -u /dev/sda1
+# blkid /dev/sda1
 
-ext2/3 without vol_id:
+ext2/3 without blkid:
 # dumpe2fs /dev/sda1 | grep -i UUID
 
-xfs without vol_id:
+xfs without blkid:
 # xfs_admin -u /dev/sda1
 
-reiserfs without vol_id:
+reiserfs without blkid:
 # debugreiserfs /dev/sda1 | grep -i UUID
 
-reiser4 without vol_id:
+reiser4 without blkid:
 # debugfs.reiser4 /dev/sda1 | grep -i UUID
+
+Tags: filesystem, ext2, ext3, ext4, blkid, jfs, xfs, uuid
 </pre>
-<a name="204"></a><hr />
+<a name="205"></a><hr />
 <pre>
 Change a filesystem's LABEL:
 
@@ -2571,8 +2824,10 @@ fat/vfat:
 
 ntfs:
 # ntfslabel $LABEL /dev/sda1
+
+Tags: filesystem, ext2, ext3, ext4, blkid, jfs, xfs
 </pre>
-<a name="205"></a><hr />
+<a name="206"></a><hr />
 <pre>
 Disable pdiffs feature of APT:
 
@@ -2582,7 +2837,7 @@ Permanent:
 Temporary:
 # apt-get update -o Acquire::Pdiffs=false
 </pre>
-<a name="206"></a><hr />
+<a name="207"></a><hr />
 <pre>
 Backup big devices or files and create compressed splitted
 image chunks of it using zsplit
@@ -2596,8 +2851,10 @@ Restore the backup using unzsplit:
 # unzsplit -D /dev/sda -d archiveofsda
 
 More usage examples: man zsplit + man unzsplit
+
+Tags: backup, reocvery, spllt, limit, howto
 </pre>
-<a name="207"></a><hr />
+<a name="208"></a><hr />
 <pre>
 Measure network performance using iperf:
 
@@ -2614,8 +2871,10 @@ Server with 128k TCP window size:
 
 Client with running for 60 seconds and bidirectional test:
 % iperf -c &lt;server_address&gt; -r -w128k -t60
+
+Tags: network, benchmark
 </pre>
-<a name="208"></a><hr />
+<a name="209"></a><hr />
 <pre>
 Framebuffer resolutions:
 
@@ -2658,14 +2917,16 @@ vga=0x... modes:
   Mode 0x0346: 1600x1200 (+3200), 16 bits
   Mode 0x034d: 1400x1050 (+2816), 16 bits
   Mode 0x035c: 1400x1050 (+5632), 24 bits
+
+Tags: framebuffer, resolution
 </pre>
-<a name="209"></a><hr />
+<a name="210"></a><hr />
 <pre>
 Portscan using netcat:
 
 # netcat -v -w2 &lt;host|ip-addr.&gt; 1-1024
 </pre>
-<a name="210"></a><hr />
+<a name="211"></a><hr />
 <pre>
 Run apt-get but disable apt-listchanges:
 
@@ -2675,7 +2936,7 @@ Upgrade system but disable apt-listbugs:
 
 APT_LISTBUGS_FRONTEND=none apt-get ...
 </pre>
-<a name="211"></a><hr />
+<a name="212"></a><hr />
 <pre>
 Set up a Transparent Debian Proxy
 
@@ -2701,8 +2962,10 @@ To use apt-cacher on the router itself, add the following
 line to your /etc/apt/apt.conf:
 
 Acquire::http::Proxy "http://localhost:3142/";
+
+Tags: proxy, debian, apt-get, howto
 </pre>
-<a name="212"></a><hr />
+<a name="213"></a><hr />
 <pre>
 Version control using Mercurial
 
@@ -2754,10 +3017,8 @@ host2% hg merge # merge changes into your working directory
 Set up a CGI server on your webserver:
 % cp hgwebdir.cgi ~/public_html/hg/index.cgi
 % $EDITOR ~/public_html/hg/index.cgi # adjust the defaults
-
-Mercurial repositories of grml can be found at http://hg.grml.org/
 </pre>
-<a name="213"></a><hr />
+<a name="214"></a><hr />
 <pre>
 Download binary codecs for mplayer:
 
@@ -2773,13 +3034,13 @@ To play encrypted DVDs and if you are living in a country where using
 libdvdcss code is not illegal can install Debian package libdvdread3
 and use the script /usr/share/doc/libdvdread3/install-css.sh.
 </pre>
-<a name="214"></a><hr />
+<a name="215"></a><hr />
 <pre>
 Read manpages of uninstalled packages with debman:
 
 % debman -p git-core git
 </pre>
-<a name="215"></a><hr />
+<a name="216"></a><hr />
 <pre>
 Test network performance using netperf:
 
@@ -2788,8 +3049,10 @@ Server:
 
 Client:
 # netperf -t TCP_STREAM -H 192.168.0.41
+
+Tags: benchmark, network
 </pre>
-<a name="216"></a><hr />
+<a name="217"></a><hr />
 <pre>
 Setup Xen within 20 minutes on Debian/grml
 
@@ -2852,8 +3115,10 @@ xm list
 xm shutdown 1
 
 This HowTo is also available online at http://grml.org/xen/
+
+Tags: howto, xen, grml
 </pre>
-<a name="217"></a><hr />
+<a name="218"></a><hr />
 <pre>
 Play tetris with zsh:
 
@@ -2863,7 +3128,7 @@ bindkey "^Xt" tetris
 
 Now press 'ctrl-x t'.
 </pre>
-<a name="218"></a><hr />
+<a name="219"></a><hr />
 <pre>
 Set up a router with grml
 
@@ -2884,8 +3149,10 @@ EOF
 
 Start dnsmasq finally:
 # Restart dnsmasq
+
+Tags: network, router, grml
 </pre>
-<a name="219"></a><hr />
+<a name="220"></a><hr />
 <pre>
 Display stats about memory allocations performed by a program:
 
@@ -2893,7 +3160,7 @@ Usage example for 'ls':
 
 % LD_PRELOAD=/lib/libmemusage.so ls &gt; /dev/null
 </pre>
-<a name="220"></a><hr />
+<a name="221"></a><hr />
 <pre>
 Use KVM (Kernel-based Virtual Machine for Linux):
 
@@ -2906,14 +3173,14 @@ Test it with a minimal system like ttylinux:
 # gzip -d bootcd-i386-5.3.iso.gz
 # kvm -cdrom bootcd-i386-5.3.iso
 </pre>
-<a name="221"></a><hr />
+<a name="222"></a><hr />
 <pre>
 EEPROM data decoding for SDRAM DIMM modules:
 
 # modprobe eeprom
 # /usr/share/doc/lm-sensors/examples/eeprom/decode-dimms.pl
 </pre>
-<a name="222"></a><hr />
+<a name="223"></a><hr />
 <pre>
 Set up and use DVB:
 
@@ -2939,7 +3206,7 @@ Tip: w_scan (see http://free.pages.at/wirbel4vdr/w_scan/index2.html)
 might be useful if you do not know the initial configuration
 details.
 </pre>
-<a name="223"></a><hr />
+<a name="224"></a><hr />
 <pre>
 Get the lastest mercurial snapshot:
 
@@ -2960,7 +3227,7 @@ the following commands:
 % hg pull -u http://hg.intevation.org/mercurial/crew
 % make local
 </pre>
-<a name="224"></a><hr />
+<a name="225"></a><hr />
 <pre>
 Configure timezone
 ==================
@@ -3030,19 +3297,21 @@ Further information:
   hwclock(8) tzselect(1) tzconfig(8)
   http://www.debian.org/doc/manuals/system-administrator/ch-sysadmin-time.html
   http://wiki.debian.org/TimeZoneChanges
+
+Tags: timezone, rtc, configuration
 </pre>
-<a name="225"></a><hr />
+<a name="226"></a><hr />
 <pre>
 Recorder shellscript session using script:
 
 % script -t 2&gt;~/upgrade.time -a ~/upgrade.script
 % scriptreplay ~/upgrade.time ~/upgrade.script
 </pre>
-<a name="226"></a><hr />
+<a name="227"></a><hr />
 <pre>
 Test UTF-8 capabilities of terminal:
 
-wget http://melkor.dnp.fmph.uniba.sk/~garabik/debian-utf8/download/UTF-8-demo.txt.gz
+wget http://www.linux-cjk.net/Console/garabik/UTF-8-demo.txt.gz
 zcat UTF-8-demo.txt.gz
 
 or:
@@ -3050,13 +3319,13 @@ or:
 wget http://www.cl.cam.ac.uk/~mgk25/ucs/examples/UTF-8-test.txt
 cat UTF-8-test.txt
 </pre>
-<a name="227"></a><hr />
+<a name="228"></a><hr />
 <pre>
 UTF-8 at grml / some general information regarding Unicde/UTF-8:
 
   http://wiki.grml.org/doku.php?id=utf8
 </pre>
-<a name="228"></a><hr />
+<a name="229"></a><hr />
 <pre>
 
 This allows one ssh connection attepmt per minute per source ip, with a initial
@@ -3073,7 +3342,7 @@ to achive the same average connection rate but with halve the block time.
 iptables -A inet_in -p tcp --syn --dport 22 -m hashlimit --hashlimit-name ssh          --hashlimit 1/minute  --hashlimit-burst 10 --hashlimit-mode srcip            --hashlimit-htable-expire 600000 -j ACCEPT
 iptables -A inet_in -p tcp --dport 22 -m state --state NEW -j REJECT
 </pre>
-<a name="229"></a><hr />
+<a name="230"></a><hr />
 <pre>
 Tunnel a specific connection via socat:
 
@@ -3085,7 +3354,7 @@ On the gateway:
 
 Using localhost:8003 on the client uses the tunnel now.
 </pre>
-<a name="230"></a><hr />
+<a name="231"></a><hr />
 <pre>
 Set date:
 
@@ -3109,7 +3378,7 @@ Don't forget to set hardware clock via:
 
 # hwlock -w
 </pre>
-<a name="231"></a><hr />
+<a name="232"></a><hr />
 <pre>
 Booting grml via network / PXE:
 
@@ -3122,54 +3391,67 @@ Then booting your client(s) via PXE should work without
 any further work.
 
 See: man grml-terminalserver + http://grml.org/terminalserver/
+
+Tags: howto, pxe, network, boot
 </pre>
-<a name="232"></a><hr />
+<a name="233"></a><hr />
 <pre>
 Debugging SSL communications:
 
-% openssl s_client -connect server.adress:993
+% openssl s_client -connect server.adress:993 &gt; output_file
+% openssl x509 -noout -text -in output_file
 
 or
 
 # ssldump -a -A -H -i eth0
 
 See http://prefetch.net/articles/debuggingssl.html for more details.
+
+Tags: debug, ssl, openssl
 </pre>
-<a name="233"></a><hr />
+<a name="234"></a><hr />
 <pre>
 Remove bootmanager from MBR:
 
 # lilo -M /dev/hda -s /dev/null
+
+Tags: mbr, lilo
 </pre>
-<a name="234"></a><hr />
+<a name="235"></a><hr />
 <pre>
 Rewrite grub to MBR:
 
 # mount /mnt/sda1
 # grub-install --recheck --no-floppy --root-directory=/mnt/sda1 /dev/sda
+
+Tags: mbr, grub
 </pre>
-<a name="235"></a><hr />
+<a name="236"></a><hr />
 <pre>
 Rewrite lilo to MBR:
 
 # mount /mnt/hda1
 # lilo -r /mnt/hda1
+
+Tags: mbr, lilo
 </pre>
-<a name="236"></a><hr />
+<a name="237"></a><hr />
 <pre>
 Create screenshot of plain/real console - tty1:
 
 # fbgrab -c 1 screeni.png
 </pre>
-<a name="237"></a><hr />
+<a name="238"></a><hr />
 <pre>
 Create screenshot when running X:
 
 % scrot
 
 Tip: use the gkrellshoot plugin when using gkrellm
+
+Tags: screenshot, xorg
 </pre>
-<a name="238"></a><hr />
+<a name="239"></a><hr />
 <pre>
 Redirect all connections to hostA:portA to hostB:portB, where hostA and hostB are
 different networks:
@@ -3181,8 +3463,10 @@ iptables -t nat -A PREROUTING -p tcp --dport portA -j DNAT --to hostB:portB
 iptables -A FORWARD -i eth0 -o eth0 -d hostB -p tcp --dport portB -j ACCEPT
 iptables -A FORWARD -i eth0 -o eth0 -s hostB -p tcp --sport portB -j ACCEPT
 iptables -t nat -A POSTROUTING -p tcp -d hostB --dport portB -j SNAT --to-source hostA
+
+Tags: howto, network, redirect, port
 </pre>
-<a name="239"></a><hr />
+<a name="240"></a><hr />
 <pre>
 Flash BIOS without DOS/Windows:
 
@@ -3200,33 +3484,35 @@ Flash the BIOS image:
 
 Also check out LinuxBIOS: http://linuxbios.org/
 </pre>
-<a name="240"></a><hr />
+<a name="241"></a><hr />
 <pre>
 Enable shadow passwords:
 
 # shadowconfig on
 </pre>
-<a name="241"></a><hr />
+<a name="242"></a><hr />
 <pre>
-Set up an IPv6 tunneln on grml:
+Set up an IPv6 tunnel on grml:
 
 # ipv6-tunnel start
 </pre>
-<a name="242"></a><hr />
+<a name="243"></a><hr />
 <pre>
 Set up console newsreader slrn for use with Usenet:
 
 % grml-slrn
 </pre>
-<a name="243"></a><hr />
+<a name="244"></a><hr />
 <pre>
 Calculate with IPv6 addresses:
 
 % ipv6calc
 
 For usage examples refer to manpage ipv6calc(8).
+
+Tags: ipv6
 </pre>
-<a name="244"></a><hr />
+<a name="245"></a><hr />
 <pre>
 Common network debugging tools for use with IPv6:
 
@@ -3236,8 +3522,10 @@ Common network debugging tools for use with IPv6:
 % tracert6
 % nc6
 % tcpspray6
+
+Tags: ipv6
 </pre>
-<a name="245"></a><hr />
+<a name="246"></a><hr />
 <pre>
 Set up NFS (Network File System):
 
@@ -3293,8 +3581,10 @@ Check what directories the server exports:
 On the client side you can use something like the following in /etc/fstab:
 
 192.168.1.101:/backups /mnt/nfs nfs defaults,users,wsize=8192,rsize=8192 0 0
+
+Tags: nfs, howto, network
 </pre>
-<a name="246"></a><hr />
+<a name="247"></a><hr />
 <pre>
 Mount a cloop file:
 
@@ -3304,14 +3594,14 @@ Mount a cloop file:
 # modprobe cloop file=/path/to/cloop/file
 # mount -r -t iso9660 /dev/cloop /mnt/test
 </pre>
-<a name="247"></a><hr />
+<a name="248"></a><hr />
 <pre>
 Create a PS/PDF of a plaintext file:
 
 % a2ps --medium A4dj -E -o output.ps input_file
 % ps2pdf output.ps
 </pre>
-<a name="248"></a><hr />
+<a name="249"></a><hr />
 <pre>
 Print two pages on one in a PDF file:
 
@@ -3320,7 +3610,7 @@ Print two pages on one in a PDF file:
 Concatenate, extract pages/parts, encrypt/decrypt,
 compress PDFs using 'pdftk'.
 </pre>
-<a name="249"></a><hr />
+<a name="250"></a><hr />
 <pre>
 Read a PS/PDF file on console:
 
@@ -3334,13 +3624,13 @@ or
 
 % fbgs file.pdf
 </pre>
-<a name="250"></a><hr />
+<a name="251"></a><hr />
 <pre>
 Bypass the password of a PDF file:
 
 % gs -q -dNOPAUSE -sDEVICE=pdfwrite -sOutputFile=output.pdf input.pdf -c quit
 </pre>
-<a name="251"></a><hr />
+<a name="252"></a><hr />
 <pre>
 Record sound:
 
@@ -3348,26 +3638,26 @@ Record sound:
 
 This will record a AIFF audio file.
 </pre>
-<a name="252"></a><hr />
+<a name="253"></a><hr />
 <pre>
 Change passphrase / password of an existing SSH key:
 
 % ssh-keygen -p
 </pre>
-<a name="253"></a><hr />
+<a name="254"></a><hr />
 <pre>
 Enable syntax highlighting in nano:
 
 Just uncomment the include directives for your respective
 language at the bottom of the file /etc/nanorc
 </pre>
-<a name="254"></a><hr />
+<a name="255"></a><hr />
 <pre>
 Create netboot package for grml-terminalserver:
 
-# sh /usr/share/doc/grml-terminalserver/examples/create-netboot
+# bash /usr/share/doc/grml-terminalserver/examples/create-netboot
 </pre>
-<a name="255"></a><hr />
+<a name="256"></a><hr />
 <pre>
 To boot grml via network (PXE) check out grml-terminalserver:
 
@@ -3375,7 +3665,7 @@ To boot grml via network (PXE) check out grml-terminalserver:
 
 See http://grml.org/terminalserver/ for more details.
 </pre>
-<a name="256"></a><hr />
+<a name="257"></a><hr />
 <pre>
 Rotate pictures:
 
@@ -3386,7 +3676,7 @@ the image so that it is upright:
 Manually rotate a picture:
 % convert -rotate 270 input.jpg output.jpg
 </pre>
-<a name="257"></a><hr />
+<a name="258"></a><hr />
 <pre>
 Rename files based on the information inside their exif header:
 
@@ -3399,7 +3689,7 @@ This will rename a file named img_2071.jpg to something like:
 if it was shot at 10:38 o'clock on 2007-08-17 (according to
 the information inside the exif header).
 </pre>
-<a name="258"></a><hr />
+<a name="259"></a><hr />
 <pre>
 Calculate network / netmask:
 
@@ -3407,7 +3697,7 @@ Usage examples:
 % ipcalc 10.0.0.28 255.255.255.0
 % ipcalc 10.0.0.0/24
 </pre>
-<a name="259"></a><hr />
+<a name="260"></a><hr />
 <pre>
 Blacklist a kernel module:
 
@@ -3425,13 +3715,13 @@ To remove the module from the blacklist again just invoke:
 
 or manually remove the entry from /etc/modprobe.d/grml.
 </pre>
-<a name="260"></a><hr />
+<a name="261"></a><hr />
 <pre>
 Create a Debian package of a perl module:
 
 % dh-make-perl --cpan Acme::Smirch --build
 </pre>
-<a name="261"></a><hr />
+<a name="262"></a><hr />
 <pre>
 The Magic SysRq Keys (SysReq or Sys Req, short for System Request):
 
@@ -3458,15 +3748,17 @@ To enable or disable SysRq calls:
 # echo 1 &gt; /proc/sys/kernel/sysrq
 
 See http://en.wikipedia.org/wiki/Magic_SysRq_key for more details.
+
+Tags: reboot, documentation, sysrq, magic
 </pre>
-<a name="262"></a><hr />
+<a name="263"></a><hr />
 <pre>
 Memtest / memcheck:
 
 Just boot your grml Live-CD with "memtest" to execute a memcheck/memtest
 with Memtest86+.
 </pre>
-<a name="263"></a><hr />
+<a name="264"></a><hr />
 <pre>
 Tunnel TCP-Traffic through DNS using dns2tcp:
 
@@ -3479,7 +3771,7 @@ host.example.com.       3600    IN      A       192.168.1.1
 
 2. Configure dns2tcpd on host.example.com.:
 # cat /etc/dns2tcpd.conf 
-listen = 192.168.1.1          #the ip dnstun should listen on
+listen = 192.168.1.1          #the ip dns2tcpd should listen on
 port = 53                     #" port " " " "
 user = nobody
 chroot = /tmp
@@ -3519,8 +3811,273 @@ user@host.example.com:~#
 
 Notice: using 'ssh -D 8080 ..' you will get a socks5-proxy listening on
 localhost:8080 which you can use to tunnel everything through your "dns-uplink".
+
+Tags: howto, network, tunnel
 </pre>
-<a name="264"></a><hr />
+<a name="265"></a><hr />
+<pre>
+Configure a MadWifi device for adhoc mode:
+
+Disable the autocreation of athX devices:
+# echo "options ath_pci autocreate=none" &gt; /etc/modprobe.d/madwifi
+
+Remove the autocreated device for now:
+# wlanconfig ath0 destroy
+
+Configuration in /etc/network/interfaces:
+
+iface ath0 inet static
+  madwifi-base wifi0
+  madwifi-mode adhoc
+  ...
+
+Hints:
+  - Do not use interface names without ending 0 (otherwise startup fails).
+  - Only chooss unique names for interfaces.
+</pre>
+<a name="266"></a><hr />
+<pre>
+Find dangling symlinks using zsh:
+
+% ls **/*(-@)
+</pre>
+<a name="267"></a><hr />
+<pre>
+Use approx with runit supervision
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Install the packages:
+# apt-get install approx runit
+
+Add user approxlog for the logging daemon:
+# adduser --system --home /nonexistent --no-create-home approxlog
+
+Create config directory:
+# mkdir /etc/sv/approx
+
+Use /var/run/sv.approx as supervise directory:
+# ln -s /var/run/sv.approx /etc/sv/approx/supervise
+
+# cat &gt; /etc/sv/approx/run &lt;< EOF
+#!/bin/sh
+echo 'approx starting'
+exec approx -f 2&gt;&1
+EOF
+
+You normally do not need a logging service for approx because it logs
+to syslog too. So just for completion:
+# mkdir -p /etc/sv/approx/log
+# ln -s /var/run/sv.approx.log /etc/sv/approx/log/supervise
+# cat &gt; /etc/sv/approx/log/run &lt;< EOF
+#!/bin/sh
+set -e
+LOG="/var/log/approx"
+test -d "$LOG" || mkdir -p -m2750 "$LOG" && chown approxlog:adm "$LOG"
+exec chpst -uapproxlog svlogd -tt -v "$LOG"
+EOF
+
+Now activate the new approx service (will be started within 5s):
+# ln -s /etc/sv/approx/ /var/service/
+
+Make approx managed via runit available via init-script interface:
+# dpkg-divert --local --rename /etc/init.d/approx
+# ln -s /usr/bin/sv /etc/init.d/approx
+</pre>
+<a name="268"></a><hr />
+<pre>
+Remote-reboot a grml system using SysRQ via /proc (execute as root):
+
+eject &&gt;/dev/null
+umount -l /cdrom
+eject /dev/cdrom
+echo b &gt; /proc/sysrq-trigger
+
+Tags: reboot, howto, grml, network
+</pre>
+<a name="269"></a><hr />
+<pre>
+Show what happens on /dev/sda0:
+
+# mount the debugfs to relay kernel info to userspace
+mount -t debugfs none /sys/kernel/debug
+
+# is a convenient wrapper arround blktrace and blkparse
+btrace /dev/sda0
+
+Tags: debug, block, partition, trace
+</pre>
+<a name="270"></a><hr />
+<pre>
+Convert Flash to Avi:
+
+% ffmpeg -i input.flv output.avi
+
+Extract MP3 from Flash file:
+
+% for i in *.flv; do ffmpeg -i $i -acodec copy ${i%.flv}.mp3 ; done
+</pre>
+<a name="271"></a><hr />
+<pre>
+Usage example for cryptsetup / -luks encrypted partition on LVM:
+
+volume group name:   x61
+logical volume name: home
+
+echo "grml-crypt_home /dev/mapper/x61-home none luks" &gt;> /etc/crypttab
+Start cryptdisks
+mount /dev/mapper/grml-crypt_home /mnt/test
+</pre>
+<a name="272"></a><hr />
+<pre>
+fdisk/parted/... complains with something like
+'unable to open /dev/sda - unrecognised disk label'?!
+
+See http://grml.org/faq/#fdisk =&gt;
+
+* use /sbin/fdisk.distrib from util-linux
+* switch to sfdisk, cfdisk,...
+* use parted's mklabel command (but please read the
+  parted manual before executing this command)
+</pre>
+<a name="273"></a><hr />
+<pre>
+dmraid - support for SW-RAID / FakeRAID controllers
+like Highpoint HPT and Promise FastTrack
+
+Activate all software RAID sets discovered:
+# dmraid -ay
+
+Deactivates all active software RAID sets:
+# dmraid  -an
+
+Discover all software RAID devices supported on the system:
+# dmraid -r
+</pre>
+<a name="274"></a><hr />
+<pre>
+Extract winmail.dat:
+
+List content:
+% ytnef winmail.dat
+
+Extract files to current directory:
+% ytnef -f . winmail.dat
+</pre>
+<a name="275"></a><hr />
+<pre>
+Approx - Debian package proxy/cacher howto
+
+% apt-get install approx
+% echo 'debian  http://ftp.de.debian.org/debian' &gt;>/etc/approx/approx.conf
+% Restart approx
+
+Add your new approx to sources.list
+
+eg.
+deb http://localhost:9999/debian  unstable  main contrib non-free
+
+use approx in grml-debootstrap like:
+% grml-debootstrap -r lenny -t /dev/sda1 -m http://127.0.0.1:9999/debian
+</pre>
+<a name="276"></a><hr />
+<pre>
+Simple webserver with python:
+
+% python -m SimpleHTTPServer
+</pre>
+<a name="277"></a><hr />
+<pre>
+Upgrade only packages from the grml-stable Debian repository:
+
+echo 'deb http://deb.grml.org/ grml-stable main' &gt; /etc/apt/grml-stable.list
+apt-get -o Dir::Etc::sourcelist=/etc/apt/grml-stable.list -o Dir::Etc::sourceparts=/doesnotexist update
+apt-get upgrade
+</pre>
+<a name="278"></a><hr />
+<pre>
+Install Centos into a directory:
+
+% febootstrap centos-5 directory http://mirror.centos.org/centos-5/5.3/os/i386/
+</pre>
+<a name="279"></a><hr />
+<pre>
+Install Fedora into a directory:
+
+% febootstrap fedora-11 target_directory
+</pre>
+<a name="280"></a><hr />
+<pre>
+Use Nessus / OpenVAS (remote network security auditor):
+
+Install software packages:
+# apt-get update
+# apt-get install openvas-client openvas-server openvas-plugins-base openvas-plugins-dfsg
+
+Add a user:
+# openvas-adduser
+
+Start openvas server (takes a while):
+# Start openvas-server
+
+Invoke client as user:
+% OpenVAS-Client
+</pre>
+<a name="281"></a><hr />
+<pre>
+Find packages not available from any active apt repository:
+
+% apt-show-versions | awk '/No available version in archive/{print $1}'
+</pre>
+<a name="282"></a><hr />
+<pre>
+Simple mailserver with python:
+
+% python -m smtpd -n -c DebuggingServer localhost:1025
+</pre>
+<a name="283"></a><hr />
+<pre>
+finger via netcat:
+
+echo $USER | nc $HOST 79
+</pre>
+<a name="284"></a><hr />
+<pre>
+Install Archlinux using Grml:
+
+https://wiki.archlinux.org/index.php/Install_from_Existing_Linux
+or
+wget http://tokland.googlecode.com/svn/trunk/archlinux/arch-bootstrap.sh
+</pre>
+<a name="285"></a><hr />
+<pre>
+Export blockdevices via AoE (ATA over Ethernet):
+
+% vblade -m 11:22:33:44:55:66 160 2 eth0 /dev/sdb1
+
+Allow the host with the mac address 11:22:33:44:55:66 to access /dev/sdb1
+via eth0, using the shelf and slot numbers 160 and 2. These numbers are
+arbitrary but should be unique within the network.
+
+A word of warning: AoE is prone to all kind of nasty ethernet attacks,
+especially arp spoofing. Do not use in hostile networks.
+
+Tags: aoe, blockdevice, export, server
+</pre>
+<a name="286"></a><hr />
+<pre>
+Access blockdevices via AoE (ATA over Ethernet):
+
+% sudo aoe-discover
+
+and the device should show up under /dev/etherd/. If your shelf and
+slot numbers re 160 and 2 the device will be /dev/etherd/e160.2
+
+A word of warning: AoE is prone to all kind of nasty ethernet attacks,
+especially arp spoofing. Do not use in hostile networks.
+
+Tags: aoe, blockdevice, export, client
+</pre>
+<a name="287"></a><hr />
 <pre>
 
 </body>
