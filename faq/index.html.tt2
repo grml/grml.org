@@ -123,7 +123,7 @@
 
           <li>Intel-compatible CPU (i586 or later, preferably Pentium class or higher)</li>
 
-          <li>&gt;=128MB of RAM (&gt;=256MB recommended)</p>
+          <li>&gt;=256MB of RAM (&gt;=512MB recommended)</p>
 
           <li>either a bootable CD-/DVD-ROM drive,
           a <a href="#usbboot">USB-boot capable system</a> or a
