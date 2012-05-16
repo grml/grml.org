@@ -48,22 +48,22 @@
             </p>
             <br />
 
-	<!--
+        <!--
             <p style="text-align: center;">
             <b>Pre-Release:</b><br/><br/>
             <a href="/download/prerelease/" class="button" style="padding: 12px; font-weight: bold;"><span>Download Grml 2011.12-rc1</span></a>
             </p>
             <br />
-	-->
+        -->
             <img style="float: right; margin-left: 20px" src="/img/grmltux_small.jpg" alt="*" />
             <br />
 
             <h2>News</h2>
             <div class="news">
-	    <p>23 Feb 2012: Grml featured <a href="http://blog.grml.org/archives/373-Grml-featured-in-Linux-User-032012.html">in Linux User 03/2012</a></p>
+            <p>16 May 2012: New Grml developer: Evgeni Golov</p>
+            <p>23 Feb 2012: Grml featured <a href="http://blog.grml.org/archives/373-Grml-featured-in-Linux-User-032012.html">in Linux User 03/2012</a></p>
             <p>17 Jan 2012: We want <a href="http://blog.grml.org/archives/372-We-want-you!.html">YOU!</a></p>
             <p>23 Dec 2011: New <a href="/changelogs/README-grml-2011.12/">stable release version 2011.12</a> is available <a href="/download/">for download</a>.</p>
-            <p>12 Dec 2011: New release candidate 2011.12-rc1 is available.</p>
             </div>
 
       </div>
