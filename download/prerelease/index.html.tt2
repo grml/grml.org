@@ -99,8 +99,8 @@ exit;
     <h2>Options</h2>
 
     <select name="flavour" id="download_flavour" style="width:100%;">
-    <option value="full" selected="selected">grml (350MB)</option>
-    <option value="small">grml-small (150MB)</option>
+    <option value="full" selected="selected">grml-full (~350MB)</option>
+    <option value="small">grml-small (~150MB)</option>
     </select>
     <br /><br />
     <select name="arch" id="download_arch" style="width:100%;">
