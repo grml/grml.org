@@ -138,6 +138,7 @@ exit;
         var arch = document.getElementById('download_arch').value;
         var flavour = document.getElementById('download_flavour').value;
         if (arch == 'amd64') product = 'grml64';
+        if (arch == 'i386') product = 'grml32';
         if (flavour != 'full') product += '-' + flavour;
         var iso = product + '_' + current_version + '.iso';
         var mirror_url = "http://download.grml.org/devel/";
