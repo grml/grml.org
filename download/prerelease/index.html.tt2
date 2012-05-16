@@ -133,6 +133,12 @@ exit;
 
     </form>
     <script type="text/javascript">
+    function update_arch() {
+        var flavour = document.getElementById('download_flavour').value;
+        if (flavour == 'small') document.getElementById('download_arch').innerHTML = '<option value="amd64">64-bit PC (amd64)</option><option value="i386">32-bit PC (i586+)</option><option value="96">One for both (300MB)</option>';
+        if (flavour == 'full') document.getElementById('download_arch').innerHTML = '<option value="amd64">64-bit PC (amd64)</option><option value="i386">32-bit PC (i586+)</option><option value="96">One for both (700MB)</option>';
+    }
+
     function update_links() {
         var current_version = "2012.05-rc1";
         var product = 'grml';
@@ -147,11 +153,10 @@ exit;
         document.getElementById('download_link_mirror').innerHTML = '<br />Download Now<div class="download_relinfo">' + product + '-' + flavour + ' ' + current_version + '</div>';
         document.getElementById('download_link_bt').href = mirror_url + iso + '.torrent';
         document.getElementById('download_link_signature').href = mirror_url + iso + '.sha1.asc';
-        if (flavour == 'small') document.getElementById('download_arch').innerHTML = '<option value="amd64">64-bit PC (amd64)</option><option value="i386">32-bit PC (i586+)</option><option value="96">One for both (300MB)</option>';
-        if (flavour == 'full') document.getElementById('download_arch').innerHTML = '<option value="amd64">64-bit PC (amd64)</option><option value="i386">32-bit PC (i586+)</option><option value="96">One for both (700MB)</option>';
     }
+
     // hook update function
-    document.getElementById('download_flavour').onchange = update_links;
+    document.getElementById('download_flavour').onchange = update_arch;
     document.getElementById('download_arch').onchange = update_links;
     // force initial link href set
     update_links();
