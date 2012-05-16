@@ -134,12 +134,12 @@ exit;
     <script type="text/javascript">
     function update_links() {
         var current_version = "2012.05-rc1";
-        var product = 'grml' + '-' + flavour;
+        var product = 'grml';
         var arch = document.getElementById('download_arch').value;
         var flavour = document.getElementById('download_flavour').value;
         if (arch == 'amd64') product = 'grml64';
         if (arch == 'i386') product = 'grml32';
-        var iso = product + '_' + current_version + '.iso';
+        var iso = product + '-' + flavour + '_' + current_version + '.iso';
         var mirror_url = "http://download.grml.org/devel/";
         document.getElementById('download_link_mirror').href = mirror_url + iso;
         document.getElementById('download_link_mirror').innerHTML = '<br />Download Now<div class="download_relinfo">' + product + ' ' + current_version + '</div>';
