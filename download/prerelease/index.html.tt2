@@ -104,8 +104,9 @@ exit;
     </select>
     <br /><br />
     <select name="arch" id="download_arch" style="width:100%;">
-    <option value="amd64" selected="selected">64-bit PC</option>
-    <option value="i386">32-bit PC</option>
+    <option value="amd64" selected="selected">64-bit PC (amd64)</option>
+    <option value="i386">32-bit PC (i586+)</option>
+    <option value="96">One for both (700MB)</option>
     </select>
     <br />
     <br />
@@ -139,6 +140,7 @@ exit;
         var flavour = document.getElementById('download_flavour').value;
         if (arch == 'amd64') product = 'grml64';
         if (arch == 'i386') product = 'grml32';
+        if (arch == '96') product = 'grml96';
         var iso = product + '-' + flavour + '_' + current_version + '.iso';
         var mirror_url = "http://download.grml.org/devel/";
         document.getElementById('download_link_mirror').href = mirror_url + iso;
