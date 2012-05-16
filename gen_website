@@ -66,8 +66,11 @@ my $git = File::Find::Rule->directory
 #matches all files
 my $file_rule = File::Find::Rule->file();
 
-#combine both
-my @files = File::Find::Rule->or( $git, $file_rule )
+#match symlinks
+my $symlink_rule =  File::Find::Rule->symlink();
+
+#combine all rules
+my @files = File::Find::Rule->or( $git, $file_rule, $symlink_rule )
                             ->in('.');
 
 #create a tempdir
