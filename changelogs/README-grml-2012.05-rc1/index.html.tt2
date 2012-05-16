@@ -98,9 +98,11 @@
 
         <h3>Known issues</h3>
 
+        <p>wallpaper: there's no wallpaper shipped with the ISO</p>
+
         <p>grml-small: the lang bootoption sets the LC_* environment variable
         to POSIX and therefore lacks support display of special characters like
-        german umlauts
+        german umlauts</p>
 
         <h3>Download Grml 2012.05-rc1</h3>
 
