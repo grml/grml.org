@@ -142,7 +142,7 @@ exit;
         var iso = product + '-' + flavour + '_' + current_version + '.iso';
         var mirror_url = "http://download.grml.org/devel/";
         document.getElementById('download_link_mirror').href = mirror_url + iso;
-        document.getElementById('download_link_mirror').innerHTML = '<br />Download Now<div class="download_relinfo">' + product + ' ' + current_version + '</div>';
+        document.getElementById('download_link_mirror').innerHTML = '<br />Download Now<div class="download_relinfo">' + product + '-' + flavour + ' ' + current_version + '</div>';
         document.getElementById('download_link_bt').href = mirror_url + iso + '.torrent';
         document.getElementById('download_link_signature').href = mirror_url + iso + '.sha1.asc';
     }
