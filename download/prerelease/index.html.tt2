@@ -128,7 +128,9 @@ exit;
     <!-- JS links -->
     <div id="linkbuttons" style="display:none;">
     <a id="download_link_mirror" class="largebutton">Download Now</a><br />
+<!--
     <a id="download_link_bt">BitTorrent Download</a><br />
+-->
     <a id="download_link_signature">Get Checksum/Signature</a><br />
     </div>
     </div></div>
@@ -154,7 +156,7 @@ exit;
         var mirror_url = "http://download.grml.org/devel/";
         document.getElementById('download_link_mirror').href = mirror_url + iso;
         document.getElementById('download_link_mirror').innerHTML = '<br />Download Now<div class="download_relinfo">' + product + '-' + flavour + ' ' + current_version + '</div>';
-        document.getElementById('download_link_bt').href = mirror_url + iso + '.torrent';
+        // document.getElementById('download_link_bt').href = mirror_url + iso + '.torrent';
         document.getElementById('download_link_signature').href = mirror_url + iso + '.sha1.asc';
     }
 
