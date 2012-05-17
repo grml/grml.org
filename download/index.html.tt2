@@ -80,7 +80,7 @@
     <h1>Download Grml 2011.12</h1>
 
     <p>Get the current stable release here.<br />
-<!--    <a href="prerelease/">Looking for the current pre-release version instead?</a></p> -->
+    <a href="prerelease/">Looking for the current pre-release version instead?</a></p>
 
     <p>Download Grml and then write it to a CD-R or an empty USB key.</p>
 
@@ -117,10 +117,10 @@
     <br />
     <br />
     <br />
-    <!--
-    <a href="/download/prerelease/" class="button" style="padding: 12px; font-weight: bold;"><span>Get 2011.12-rc1 instead!</span></a>
+
+    <a href="/download/prerelease/" class="button" style="padding: 12px; font-weight: bold;"><span>Get 2012.05-rc1 instead!</span></a>
     <br />
-     -->
+
     </div></div>
 
     <div class="download_panel" id="download_panel2"><div>
