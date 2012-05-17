@@ -24,8 +24,10 @@
 
       <div class="content">
 
+<!--
         <p><a href="/screenshots/"><img align="right" style="margin-left: 20px;
         border: 0" src="/screenshots/grml_2011.12-rc1.jpg" alt="*" /></a></p>
+-->
 
         <h1>Release Notes for Grml 2012.05-rc1 - codename <a
         href="/faq/#releasename">Ponyhof</a></h1>
