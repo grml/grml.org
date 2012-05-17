@@ -36,6 +36,7 @@
         <ol>
           <li><a href="#whatis">What is Grml?</a></li>
           <li><a href="#flavours">What are grml32 / grml64 and grml96?</a></li>
+          <li><a href="#grmlsmall">What is the difference between grml-full and grml-small?</a></li>
           <li><a href="#get">Where do I get Grml?</a></li>
           <li><a href="#whatmeans">What does Grml mean?</a></li>
           <li><a href="#releasename">What about the release name?</a></li>
@@ -76,28 +77,35 @@
 
         <h3><a name="whatis"></a><a href="#toc">What is Grml?</a></h3>
 
-        <p>Grml is a bootable CD (Live-CD) based
+        <p>Grml is a bootable live system (Live-CD) based
         on <a href="http://www.debian.org/">Debian</a>. It is not
         necessary to install anything to a harddisk. Grml includes a
         collection of GNU/Linux software especially for system
         administrators. It specializes on administrative tasks like
         installation, deployment and system rescue.</p>
 
-	<h3><a name="flavours"></a><a href="#doc">What are grml32 / grml64 and grml96?</a></h3>
+        <h3><a name="flavours"></a><a href="#toc">What are grml32 / grml64 and grml96?</a></h3>
 
         <ul>
-          <li>grml32: 32bit version (kernel and userspace), ~350MB</li>
-          <li>grml64: 64bit version (kernel and userspace), ~350MB</li>
-          <li>grml96: multi boot version (featuring the grml32 and grml64 ISOs combined on one ISO), ~700MB</li>
+          <li>grml32-full: 32bit version (kernel and userspace), ~350MB</li>
+          <li>grml64-full: 64bit version (kernel and userspace), ~350MB</li>
+          <li>grml96-full: multi boot version (featuring the grml32-full and grml64-full ISOs combined on one ISO), ~700MB</li>
         </ul>
 
-	<p>Unless you've a good reason to really choose the 32bit flavour we
-	strongly encourage you to use either the grml64 or the grml96
-	flavour.</p>
+        <p>Unless you've a good reason to really choose the 32bit flavour we
+        strongly encourage you to use either the grml64 or the grml96
+        flavour.</p>
 
-	<p>Please notice that this schema was introduced starting with the
-	downsized Grml release 2011.12. Until then grml96 didn't exist and
-	grml32 was known as just 'grml'.</p>
+        <p>Please notice that this schema was introduced starting with the
+        downsized Grml release 2011.12. Until then grml96 didn't exist and
+        grml32 was known as just 'grml'.</p>
+
+        <h3><a name="grmlsmall"></a><a href="#toc">What is the difference between grml-full and grml-small?</a></h3>
+
+        <p>grml-small provides a reduced set of available software compared to
+        grml-full.  It provides the same Linux kernel image as grml-full and is
+        fully binary compatible. Choose the grml-small flavour if size - for
+        whatever reason - really matters to you.</p>
 
         <h3><a name="get"></a><a href="#toc">Where do I get Grml?</a></h3>
 
@@ -117,6 +125,8 @@
         Ruprecht</a>, which translates as Farmhand Ruprecht or Servant
         Ruprecht.</p>
 
+        <p>Codename of Grml 2012.05 is "Ponyhof", AKA &quot;Life Ain't No Pony Farm&quot;.</p>
+
         <h3><a name="requirements"></a><a href="#toc">Requirements for running Grml</a></h3>
 
         <ul>
@@ -134,8 +144,8 @@
 
         <h3><a name="accessibility"></a><a href="#toc">What does accessibility at Grml mean?</a></h3>
 
-	<p>The Grml kernel includes support for speakup. For software,
-	brltty and espeakup are included.</p>
+        <p>The Grml kernel includes support for speakup. For software,
+        brltty and espeakup are included.</p>
 
         <h3><a name="bootoptions"></a><a href="#toc">Which bootoptions does Grml support?</a></h3>
 
@@ -211,8 +221,8 @@ grml keyboard=de xkeyboard=de lang=at # enter this at the bootprompt
 
         <h3><a name="wms"></a><a href="#toc">Which window managers can I use?</a></h3>
 
-	<p>Starting with the 2011.12 release Grml provides <a
-	href="http://www.fluxbox.org/">Fluxbox</a> as window manager.</p>
+        <p>Starting with the 2011.12 release Grml provides <a
+        href="http://www.fluxbox.org/">Fluxbox</a> as window manager.</p>
 
         <h3><a name="lvm"></a><a href="#toc">Where are my LVM devices?</a></h3>
 
@@ -296,15 +306,15 @@ grml keyboard=de xkeyboard=de lang=at # enter this at the bootprompt
 
         <p>Short anwer: No.</p>
 
-	<p>If you want to get a plain Debian system take a look at <a
-	href="/grml-debootstrap/">grml-debootstrap</a>.</p>
+        <p>If you want to get a plain Debian system take a look at <a
+        href="/grml-debootstrap/">grml-debootstrap</a>.</p>
 
-	<p>Long(er) answer: yes it's possible to install Grml. But it's not
-	supported and you'll be on your own. That's why we decided to make it
-	not-so-obvious. If you really know what you're doing you'll find out on
-	your own. Reminder: use <a
-	href="/grml-debootstrap/">grml-debootstrap</a> or <a
-	href="http://www.debian.org/">Debian Installer</a> instead.</p>
+        <p>Long(er) answer: yes it's possible to install Grml. But it's not
+        supported and you'll be on your own. That's why we decided to make it
+        not-so-obvious. If you really know what you're doing you'll find out on
+        your own. Reminder: use <a
+        href="/grml-debootstrap/">grml-debootstrap</a> or <a
+        href="http://www.debian.org/">Debian Installer</a> instead.</p>
 
         <h2><a name="software"></a><a href="#toc">Software</a></h2>
 
@@ -320,8 +330,8 @@ grml keyboard=de xkeyboard=de lang=at # enter this at the bootprompt
 
         <p>Short answer: because <a href="/zsh/">Zsh rocks</a>, really!</p>
 
-	<p>Long(er) answer: If you don't know Zsh take a look the <a
-	href="/zsh/">Grml Zsh reference	card</a>.</p>
+        <p>Long(er) answer: If you don't know Zsh take a look the <a
+        href="/zsh/">Grml Zsh reference card</a>.</p>
 
         <p>If you are a Bash user and don't know Zsh yet, don't be
         afraid. Bash is largely a subset of Zsh and you don't have to
