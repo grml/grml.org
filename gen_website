@@ -20,7 +20,7 @@ my $fh;
 my $m;
 my $conf;
 my $state;
-if (eval {use Mirmon::Mirmon; 1 } && -f $masterlist && -f $mirmonconf) {
+if (eval {require Mirmon::Mirmon; 1 } && -f $masterlist && -f $mirmonconf) {
 	$have_mirmon = 1;
 	open ($fh, '<', $masterlist) or die "Could not open $masterlist: $!";
 	$m = Mirmon ->new($mirmonconf);
