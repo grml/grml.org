@@ -11,17 +11,28 @@ use File::Copy::Recursive qw(fcopy dirmove);
 use File::Temp qw (tempdir);
 
 use lib '/usr/share/perl5/';
-use Mirmon::Mirmon;
 
-my $m = Mirmon ->new('/etc/mirmon.conf');
-my $conf  = $m->conf  ; # a Mirmon::Conf object
-my $state = $m->state ; # the mirmon state
+my $have_mirmon = 0;
+my $masterlist = '/usr/local/src/grml-mirrors/Mirrors.masterlist';
+my $mirmonconf = '/etc/mirmon.conf';
+
+my $fh;
+my $m;
+my $conf;
+my $state;
+if (eval {use Mirmon::Mirmon; 1 } && -f $masterlist && -f $mirmonconf) {
+	$have_mirmon = 1;
+	open ($fh, '<', $masterlist) or die "Could not open $masterlist: $!";
+	$m = Mirmon ->new($mirmonconf);
+	$conf  = $m->conf  ; # a Mirmon::Conf object
+	$state = $m->state ; # the mirmon state
+} else {
+	print "Skipping mirmon, it's either not installed or not configured.\n";
+}
 
 
 my $out_dir = shift || "out/";
-my $masterlist = '/usr/local/src/grml-mirrors/Mirrors.masterlist';
 
-open (my $fh, '<', $masterlist) or die "Could not open $masterlist: $!";
 my $mirrors; 
 
 sub get_last_state ($) {
@@ -34,7 +45,7 @@ sub get_last_state ($) {
 
 
 my $data;
-while (my $line = <$fh>) {
+while (($have_mirmon) && (my $line = <$fh>)) {
     chomp $line;
     if ($line =~ /([^:]+): (.*)/) {
         my $key = lc($1);
