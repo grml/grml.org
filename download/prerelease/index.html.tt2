@@ -91,7 +91,22 @@ exit;
 
     <p>Download the Grml flavour you need, then write it to a CD-R or an empty USB stick.</p>
 
-    <div class="download_group" id="download_group1">
+    <div class="download_group" id="download_group1_noscript">
+    <div class="download_panel" id="download_panel1_noscript"><div>
+        <a href="http://grml.org/download/mirrors/">Download from a specific mirror</a><br/>
+        <br/>
+        Direct download links:<br/>
+        <a href="http://download.grml.org/devel/grml96-full_2012.05-rc1.iso">Grml96 full ISO</a> [<a href="http://download.grml.org/devel/grml96-full_2012.05-rc1.iso.sha1.asc">Signature</a>]<br/>
+        <a href="http://download.grml.org/devel/grml64-full_2012.05-rc1.iso">Grml64 full ISO</a> [<a href="http://download.grml.org/devel/grml64-full_2012.05-rc1.iso.sha1.asc">Signature</a>]<br/>
+        <a href="http://download.grml.org/devel/grml32-full_2012.05-rc1.iso">Grml32 full ISO</a> [<a href="http://download.grml.org/devel/grml32-full_2012.05-rc1.iso.sha1.asc">Signature</a>]<br/>
+        <a href="http://download.grml.org/devel/grml96-small_2012.05-rc1.iso">Grml96 small ISO</a> [<a href="http://download.grml.org/devel/grml96-small_2012.05-rc1.iso.sha1.asc">Signature</a>]<br/>
+        <a href="http://download.grml.org/devel/grml64-small_2012.05-rc1.iso">Grml64 small ISO</a> [<a href="http://download.grml.org/devel/grml64-small_2012.05-rc1.iso.sha1.asc">Signature</a>]<br/>
+        <a href="http://download.grml.org/devel/grml32-small_2012.05-rc1.iso">Grml32 small ISO</a> [<a href="http://download.grml.org/devel/grml32-small_2012.05-rc1.iso.sha1.asc">Signature</a>]<br/>
+        <br/>
+        </div></div>
+    </div>
+
+    <div class="download_group" id="download_group1" style="display:none;">
     <form method="get" action="/download/bounce/">
     <input type="hidden" name="version" value="2012.05-rc1"/>
     <div class="download_panel" id="download_panel1"><div>
@@ -168,6 +183,8 @@ exit;
     // only show our link "buttons"
     document.getElementById('formbuttons').style.display = 'none';
     document.getElementById('linkbuttons').style.display = '';
+    document.getElementById('download_group1').style.display = '';
+    document.getElementById('download_group1_noscript').style.display = 'none';
     </script>
     </div>
 
