@@ -106,6 +106,10 @@
         to POSIX and therefore lacks support display of special characters like
         german umlauts</p>
 
+	<p>grml64: entries Grub2, iPXE and MirOS bsd4grml under "Further boot options -&gt; Addons" do not work</p>
+
+	<p>grml32: entry iPXE under "Further boot options -&gt; Addons" does not work</p>
+
         <h3>Download Grml 2012.05-rc1</h3>
 
         <p>Grml 2012.05-rc1 can be downloaded from
