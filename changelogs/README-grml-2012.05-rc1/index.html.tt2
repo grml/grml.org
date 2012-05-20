@@ -100,15 +100,19 @@
 
         <h3>Known issues</h3>
 
-        <p>wallpaper: there's no wallpaper shipped with the ISO</p>
+        <ul>
 
-        <p>grml-small: the lang bootoption sets the LC_* environment variable
-        to POSIX and therefore lacks support display of special characters like
-        german umlauts</p>
+          <li>wallpaper: there's no wallpaper shipped with the ISO</li>
 
-	<p>grml64: entries Grub2, iPXE and MirOS bsd4grml under "Further boot options -&gt; Addons" do not work</p>
+          <li>grml-small: the lang bootoption sets the LC_* environment variable
+          to POSIX and therefore lacks support display of special characters like
+          german umlauts</li>
 
-	<p>grml32: entry iPXE under "Further boot options -&gt; Addons" does not work</p>
+          <li>grml64: entries Grub2, iPXE and MirOS bsd4grml under "Further boot options -&gt; Addons" do not work</li>
+
+          <li>grml32: entry iPXE under "Further boot options -&gt; Addons" does not work</li>
+
+        </ul>
 
         <h3>Download Grml 2012.05-rc1</h3>
 
