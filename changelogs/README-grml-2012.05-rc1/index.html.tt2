@@ -65,6 +65,13 @@
           <li>Fixed several bugs from the <a href="http://bts.grml.org/grml/">bug tracking system</a>.</li>
         </ul>
 
+        <h3>Important Reminders</h3>
+
+        <ul>
+	  <li>Booting Grml from Harddisk? Do not forget to add the live-media-path... bootoption. Or even better: use
+grml-rescueboot. Full details at <a href="http://wiki.grml.org/doku.php?id=rescueboot">rescueboot in the Grml-Wiki</a>.</li>
+        </ul>
+
         <h3>Packages</h3>
 
         <p>Details about shipped packages and their versions on Grml are
