@@ -67,9 +67,23 @@
 
         <h3>Important Reminders</h3>
 
-        <ul>
-	  <li>Booting Grml from Harddisk? Do not forget to add the live-media-path... bootoption. Or even better: use
-grml-rescueboot. Full details at <a href="http://wiki.grml.org/doku.php?id=rescueboot">rescueboot in the Grml-Wiki</a>.</li>
+	<ul>
+
+	  <li>Booting Grml via PXE? Do not forget to add the live-media-path=...
+	  bootoption, otherwise booting will fail with 'No supported filesystem
+	  images found at /live'.  Usage instructions:
+	  live-media-path=/live/$FLAVOUR (where $FLAVOUR corresponds to
+	  grml64-full, grml32-full, grml64-small, grml32-small) - for further
+	  details visit <a
+	  href="http://wiki.grml.org/doku.php?id=terminalserver">terminalserver
+	  page in the Grml-Wiki</a>.</li>
+
+	  <li>Booting Grml from Harddisk? Do not forget to add the
+	  live-media-path=... bootoption. Or even better: use grml-rescueboot.
+	  Full details at <a
+	  href="http://wiki.grml.org/doku.php?id=rescueboot">rescueboot in the
+	  Grml-Wiki</a>.</li>
+
         </ul>
 
         <h3>Packages</h3>
