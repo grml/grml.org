@@ -135,6 +135,19 @@ grml-rescueboot. Full details at <a href="http://wiki.grml.org/doku.php?id=rescu
           href="/bugs/">grml.org/bugs/</a>. Please send your feedback and
         feature requests <a href="/contact/">to the Grml team</a>!</p>
 
+        <a name="thanks"></a>
+        <h3>Thanks</h3>
+
+	<p>Many thanks in this release go to (alphabetically) Axel Beckert,
+	Charles A. Hewson, ChiCuong HA, Christian Hofstaedtler, Christopher
+	Schramm, Conny Seidel , Csillag Tamas, Florian Apolloner, Frank
+	Prochnow, Heinz Ahrens, Holger Baust, John S.  Skogtvedt, Jordan Uggla,
+	Laurent CARON , Marco d'Itri, Markus Ulrich, Martin Koeppe, Matthias
+	Strubel, Michael Hanke, Michael Renner, Michael Schierl, Paul Menzel,
+	Pawel azhag Sadkowski, Thomas Arendsen Hein, Thorsten Glaser, Thorsten
+	Leemhuis, Timo Boettcher, Tom Oehser, Ulrich Dangel and Vincent McIntyre
+	for their contributions.</p>
+
         <h3>More Information</h3>
 
         <p>You can find out more about Grml on <a href="/">our website</a>, <a
