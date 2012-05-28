@@ -58,6 +58,14 @@
         <h3>Important Changes</h3>
 
         <ul>
+          <li>The live-media-path=... bootoption is mandatory now. If you're
+          booting Grml via PXE or from harddisk (e.g. using findiso) please make
+          sure to add live-media-path=/live/$FLAVOUR to the kernel commandline.
+          Further details are available at the <a
+          href="http://wiki.grml.org/doku.php?id=terminalserver">terminalserver
+          page</a> and the <a
+          href="http://wiki.grml.org/doku.php?id=rescueboot">rescueboot page</a>
+          in the Grml-Wiki</a>.</li>
           <li>Z-Shell configuration has been cleaned up. Quite a few functions
             <a href="http://git.grml.org/?p=grml-etc-core.git;a=history;f=etc/zsh/zshrc">have been removed</a>
             from the default configuration.</li>
@@ -66,8 +74,8 @@
             reachable from the fluxbox menu.</li>
           <li>The accessibility support now consists of shipping standard speakup
             and enabling sound during boot. A new beep sequence (4 tones) is sounded
-	    just before the quickconfig menu starts. The isolinux menu will beep once,
-	    and the grub menu will beep three times. (The accessibility boot options
+            just before the quickconfig menu starts. The isolinux menu will beep once,
+            and the grub menu will beep three times. (The accessibility boot options
             have been removed.)</li>
           <li>iSCSI Target is now provided by <a href="http://linux-iscsi.org/index.php/LIO-Target">LIO</a>.
             The configuration tool <tt>targetcli</tt> is included.</li>
@@ -107,9 +115,9 @@
 
         <h3>Updates</h3>
 
-	<p>Packages are taken from Debian testing, 23rd of December 2011. More
-	than 1700 packages have been removed, and these new packages have been
-	added (plus dependencies):</p>
+        <p>Packages are taken from Debian testing, 23rd of December 2011. More
+        than 1700 packages have been removed, and these new packages have been
+        added (plus dependencies):</p>
 
 <pre class="rahmen">
   afflib-tools atftp bacula-sd boot-info-script efibootmgr
@@ -129,7 +137,7 @@
 
         <h3>Known issues</h3>
 
-	<p>None at the time of the release!</p>
+        <p>None at the time of the release!</p>
 
         <p>Take a look at <a
         href="/bugs/known/">the known bugs list</a>.
@@ -155,7 +163,7 @@
 
         <p>Many thanks in this release go to (alphabetically)
           Brad Cable,
-	  Christoph Biedl,
+          Christoph Biedl,
           Christoph Lupe,
           Charles A. Hewson,
           Hans BKK,
