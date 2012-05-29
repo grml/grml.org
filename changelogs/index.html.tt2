@@ -32,29 +32,30 @@
         <h2>Current release</h2>
 
 	<p>
-        <a href="README-grml-2011.12/">Release announcement for Grml 2011.12 - codename Knecht Rootrecht</a>
+        <a href="README-grml-2012.05/">Release announcement for Grml 2012.05 - codename Ponyhof</a>
 	</p>
 
         <h2>Previous releases</h2>
 
         <ul>
-          <li><a href="README-grml-2011.05/">grml 2011.05</a> - codename Just Mari</li>
-          <li><a href="README-grml-2010.12/">grml 2010.12</a> - codename Gebr&uuml;der Grml</li>
-          <li><a href="README-grml-2010.04/">grml 2010.04</a> - codename Grmlmonster</li>
-          <li><a href="README-grml-2009.10/">grml 2009.10</a> - codename Hello-Wien</li>
-          <li><a href="README-grml-2009.05/">grml 2009.05</a> - codename Lackdose-Allergie</li>
-          <li><a href="README-grml-2008.11/">grml 2008.11</a> - codename Schluchtenscheisser</li>
-          <li><a href="README-grml-1.1/">grml 1.1</a> - codename Skunk</li>
-          <li><a href="README-grml-1.0.php">grml 1.0</a> - codename Meilenschwein</li>
-          <li><a href="README-0.9.php">grml 0.9</a> - codename Dioptrienotto</li>
-          <li><a href="README-0.8.php">grml 0.8</a> - codename Funkenzutzler</li>
-          <li><a href="README-0.7.txt">grml 0.7</a> - codename Bootenschnitzl</li>
-          <li><a href="README-0.6.txt">grml 0.6</a> - codename Winterschlapfn</li>
-          <li><a href="README-0.5.txt">grml 0.5</a> - codename Tokolytika</li>
-          <li><a href="README-0.4.txt">grml 0.4</a> - codename Eierspass</li>
-          <li><a href="README-0.3.txt">grml 0.3</a> - codename Hustenstopper</li>
-          <li><a href="README-0.2.txt">grml 0.2</a> - codename Satura</li>
-          <li>grml 0.1 - codename OS04</li>
+	  <li><a href="README-grml-2011.12/">Grml 2011.12</a> - codename Knecht Rootrecht</li>
+          <li><a href="README-grml-2011.05/">Grml 2011.05</a> - codename Just Mari</li>
+          <li><a href="README-grml-2010.12/">Grml 2010.12</a> - codename Gebr&uuml;der Grml</li>
+          <li><a href="README-grml-2010.04/">Grml 2010.04</a> - codename Grmlmonster</li>
+          <li><a href="README-grml-2009.10/">Grml 2009.10</a> - codename Hello-Wien</li>
+          <li><a href="README-grml-2009.05/">Grml 2009.05</a> - codename Lackdose-Allergie</li>
+          <li><a href="README-grml-2008.11/">Grml 2008.11</a> - codename Schluchtenscheisser</li>
+          <li><a href="README-grml-1.1/">Grml 1.1</a> - codename Skunk</li>
+          <li><a href="README-grml-1.0.php">Grml 1.0</a> - codename Meilenschwein</li>
+          <li><a href="README-0.9.php">Grml 0.9</a> - codename Dioptrienotto</li>
+          <li><a href="README-0.8.php">Grml 0.8</a> - codename Funkenzutzler</li>
+          <li><a href="README-0.7.txt">Grml 0.7</a> - codename Bootenschnitzl</li>
+          <li><a href="README-0.6.txt">Grml 0.6</a> - codename Winterschlapfn</li>
+          <li><a href="README-0.5.txt">Grml 0.5</a> - codename Tokolytika</li>
+          <li><a href="README-0.4.txt">Grml 0.4</a> - codename Eierspass</li>
+          <li><a href="README-0.3.txt">Grml 0.3</a> - codename Hustenstopper</li>
+          <li><a href="README-0.2.txt">Grml 0.2</a> - codename Satura</li>
+          <li>Grml 0.1 - codename OS04</li>
         </ul>
 
       </div>
