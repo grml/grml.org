@@ -124,14 +124,17 @@
     <br />
     <br />
 
-    <p><a href="http://grml.org/changelogs/README-grml-2012.05">Release Notes</a></p>
 
     <!--
     <a href="/download/prerelease/" class="button" style="padding: 12px; font-weight: bold;"><span>Get 2012.05-rc1 instead!</span></a>
     <br />
     -->
 
-    </div></div>
+    </div>
+
+    <p><a href="http://grml.org/changelogs/README-grml-2012.05">Release Notes</a></p>
+
+    </div>
 
     <div class="download_panel" id="download_panel2"><div>
     <!-- fallback cgi buttons -->
