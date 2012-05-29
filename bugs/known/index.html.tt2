@@ -32,27 +32,16 @@
 
         <p>If you find additional bugs, please <a href="/bugs/">report them</a>.</p>
 
+        <h2>Known Bugs in Grml 2012.05</h2>
+
+	<p>No bugs known yet.</p>
+
         <h2>Known Bugs in Grml 2011.12</h2>
+
         <ul>
           <li>Systems with nvidia graphic cards might not boot with Kernel Mode-Setting (KMS). Use the 'Disable Kernel Mode-Setting' boot option in the boot menu to disable KMS.</li>
           <li>testcd boot option fails to check md5sums. [<a href="http://bts.grml.org/grml/issue1114">Issue 1114</a>]</li>
           <li>grml-terminalserver includes reference to grml2hd (cosmetic bug). [<a href="http://bts.grml.org/grml/issue1117">Issue 1117</a>]</li>
-        </ul>
-
-        <h2>Known Bugs in Grml 2011.05</h2>
-        <ul>
-          <li>The menu shown on grml-small offers to start x11. Unfortunately grml-x is not included in grml-small and selecting a window manager will result in an error. (Fixed in git for upcoming release.)</li>
-          <li>iscsitarget does not work because the kernel modules are missing in the released ISOs.</li>
-        </ul>
-
-        <h2>Known Bugs in Grml 2010.12</h2>
-        <ul>
-          <li>UTF-8 support is broken on tty2 and tty3.</li>
-        </ul>
-
-        <h2>Known Bugs in Grml 2010.04</h2>
-        <ul>
-          <li>None.</li>
         </ul>
 
 </div>
