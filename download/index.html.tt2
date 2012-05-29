@@ -84,9 +84,6 @@
     <a href="prerelease/">Looking for the current pre-release version instead?</a></p>
     -->
 
-    <p>Download Grml and then write it to a CD-R or an empty USB key.</p>
-
-
     <p>Download the Grml flavour you need, then write it to a CD-R or an empty USB stick.</p>
 
     <div class="download_group" id="download_group1_noscript">
@@ -200,10 +197,11 @@
     <a href="http://download.grml.org/grml_sources-2012.05.tar.gz">Source code</a> (both archs)<br />
     <br/>
     Netboot packages:<br/>
-    <a href="http://download.grml.org/grml_netboot_package_grml64_2012.05.tar.bz2">64-bit</a>
-    <a href="http://download.grml.org/grml_netboot_package_grml64_2012.05.tar.bz2.sha1.asc">(sig)</a>
-    <a href="http://download.grml.org/grml_netboot_package_grml32_2012.05.tar.bz2">32-bit</a>
-    <a href="http://download.grml.org/grml_netboot_package_grml32_2012.05.tar.bz2.sha1.asc">(sig)</a>
+    <a href="http://download.grml.org/grml_netboot_package_grml64-full_2012.05.tar.bz2">64-bit</a>
+    <a href="http://download.grml.org/grml_netboot_package_grml64-full_2012.05.tar.bz2.sha1.asc">(sig)</a>
+    <a href="http://download.grml.org/grml_netboot_package_grml32-full_2012.05.tar.bz2">32-bit</a>
+    <a href="http://download.grml.org/grml_netboot_package_grml32-full_2012.05.tar.bz2.sha1.asc">(sig)</a>
+
     <br />
     <br />
     <a href="http://debian.netcologne.de/grml/gnupg-michael-prokop.txt">Signing Key</a><br />
