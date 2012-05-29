@@ -41,23 +41,22 @@
 
         <ul>
           <li>grml-hwinfo: Support numactl to retrieve NUMA information
-          <li>Re-add simplifed support for brltty
+          <li>Re-add simplified support for brltty
           <li>Support 9p-virtio filesystem for mounting the DCS-directory (Debs, Configuration and Scripts - see man grml-autoconfig)
         </ul>
 
         <h3>Important Changes</h3>
 
         <ul>
-          <li>The ssh bootoption sets the specified/generated ssh passwort for user 'grml' <i>and</i> (new) for root
+          <li>The ssh bootoption sets the specified/generated ssh password for user 'grml' <i>and</i> (new) for root
           <li>Using /media as default mount target
           <li>Dropped the grml-feedback tool
-          <li>Add a few kB of lines made of # charaters to the end of the main syslinux config file
         </ul>
 
         <h3>Bits &amp; bolts</h3>
 
         <ul>
-          <li>Linux kernel is based on <b>3.3.6</b>. No additional modules are shipped.</li>
+          <li>Linux kernel is based on <b>3.3.7</b>. No additional modules are shipped.</li>
           <li>Fixed several bugs from the <a href="http://bts.grml.org/grml/">bug tracking system</a>.</li>
         </ul>
 
@@ -74,7 +73,7 @@
           href="http://wiki.grml.org/doku.php?id=terminalserver">terminalserver
           page in the Grml-Wiki</a>.</li>
 
-          <li>Booting Grml from Harddisk? Do not forget to add the
+          <li>Booting Grml from hard disk? Do not forget to add the
           live-media-path=... bootoption. Or even better: use grml-rescueboot.
           Full details at <a
           href="http://wiki.grml.org/doku.php?id=rescueboot">rescueboot in the
