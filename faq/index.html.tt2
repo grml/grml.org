@@ -28,7 +28,7 @@
 
         <h1 align="center">FAQ for grml</h1>
 
-        <p><strong>Up2date:</strong> applies to Grml releases version 2011.12</p>
+        <p><strong>Up2date:</strong> applies to Grml releases version 2012.05</p>
 
         <p><a name="toc"></a><strong>Index:</strong></p>
 
@@ -119,11 +119,6 @@
         software (amongst other things).</p>
 
         <h3><a name="releasename"></a><a href="#toc">What about the release name?</a></h3>
-
-        <p>Codename of Grml 2011.12 is "Knecht Rootrecht". It's a wordplay on
-        <a href="http://en.wikipedia.org/wiki/Companions_of_Saint_Nicholas">Knecht
-        Ruprecht</a>, which translates as Farmhand Ruprecht or Servant
-        Ruprecht.</p>
 
         <p>Codename of Grml 2012.05 is "Ponyhof", AKA &quot;Life Ain't No Pony Farm&quot;.</p>
 
