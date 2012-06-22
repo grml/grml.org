@@ -37,6 +37,7 @@
         <ul>
           <li>DHCP/network actions during bootup are running in foreground, causing delays during booting [Details and workaround available in <a href="http://bts.grml.org/grml/issue1174">Issue 1174</a>]</li>
           <li>serial console doesn't work: details available in <a href="http://bts.grml.org/grml/issue1175">Issue 1175</a></li>
+          <li>32bit ISOs are not hybrid (AKA dd-able): details available in <a href="http://bts.grml.org/grml/issue1186">Issue 1186</a></li>
         </ul>
 
         <h2>Known Bugs in Grml 2011.12</h2>
