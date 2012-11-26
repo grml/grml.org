@@ -61,6 +61,7 @@
           <li><a href="grml32-full_2012.05/dpkg.selections">dpkg.selections</a> - software package listing</li>
           <li><a href="grml32-full_2012.05/dpkg.list">dpkg.list</a> - more detailed package list including version information</li>
           <li><a href="http://git.grml.org/?p=grml-live.git;a=blob_plain;f=templates/GRML/grml-cheatcodes.txt;hb=HEAD">grml-cheatcodes.txt</a> - boot options</li>
+          <li><a href="grml32-full_2012.05/nonfree-licenses.list">nonfree-licenses.list</a> - a list of used nonfree software and their licenses</li>
         </ul>
 
         <h3>grml64-full 2012.05</h3>
@@ -69,6 +70,7 @@
           <li><a href="grml64-full_2012.05/dpkg.selections">dpkg.selections</a> - software package listing</li>
           <li><a href="grml64-full_2012.05/dpkg.list">dpkg.list</a> - more detailed package list including version information</li>
           <li><a href="http://git.grml.org/?p=grml-live.git;a=blob_plain;f=templates/GRML/grml-cheatcodes.txt;hb=HEAD">grml-cheatcodes.txt</a> - boot options</li>
+          <li><a href="grml64-full_2012.05/nonfree-licenses.list">nonfree-licenses.list</a> - a list of used nonfree software and their licenses</li>
         </ul>
 
         <h3>grml32-small 2012.05</h3>
@@ -77,6 +79,7 @@
           <li><a href="grml32-small_2012.05/dpkg.selections">dpkg.selections</a> - software package listing</li>
           <li><a href="grml32-small_2012.05/dpkg.list">dpkg.list</a> - more detailed package list including version information</li>
           <li><a href="http://git.grml.org/?p=grml-live.git;a=blob_plain;f=templates/GRML/grml-cheatcodes.txt;hb=HEAD">grml-cheatcodes.txt</a> - boot options</li>
+          <li><a href="grml32-small_2012.05/nonfree-licenses.list">nonfree-licenses.list</a> - a list of used nonfree software and their licenses</li>
         </ul>
 
         <h3>grml64-small 2012.05</h3>
@@ -85,6 +88,7 @@
           <li><a href="grml64-small_2012.05/dpkg.selections">dpkg.selections</a> - software package listing</li>
           <li><a href="grml64-small_2012.05/dpkg.list">dpkg.list</a> - more detailed package list including version information</li>
           <li><a href="http://git.grml.org/?p=grml-live.git;a=blob_plain;f=templates/GRML/grml-cheatcodes.txt;hb=HEAD">grml-cheatcodes.txt</a> - boot options</li>
+          <li><a href="grml64-small_2012.05/nonfree-licenses.list">nonfree-licenses.list</a> - a list of used nonfree software and their licenses</li>
         </ul>
 
       </div>
