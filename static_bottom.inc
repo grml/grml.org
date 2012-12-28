@@ -6,10 +6,10 @@
       </p>
       <div>
         <a href="http://www.hostway.de/" target="_blank">
-        <img src="/sponsors/hostway.jpg" width="300" height="100"/>
+        <img src="/sponsors/hostway.jpg" width="300" height="100" alt="hostway logo"/>
         </a>
       </div>
-      </div>
+</div>
 [% END %]
 <!-- Piwik -->
 <script type="text/javascript">
@@ -23,6 +23,6 @@ try {
 } catch( err ) {}
 </script><noscript><p><img src="http://stats.grml.org/piwik/piwik.php?idsite=1" style="border:0" alt="" /></p></noscript>
 <!-- End Piwik Tracking Code -->
-
+</div>
 </body>
 </html>
