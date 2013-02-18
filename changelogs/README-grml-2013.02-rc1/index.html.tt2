@@ -79,6 +79,10 @@
 	  your own custom scripts please adopt your code to use /lib/live/mount/medium
           starting with Grml 2013.02-rc1.
 
+          <li>Debian's live-boot changed some persistency related settings.
+          Please visit <a href="http://wiki.grml.org/doku.php?id=persistency">
+          the persistency page in the Grml wiki</a> for further details.
+
         </ul>
 
         <h3>Bits &amp; bolts</h3>
