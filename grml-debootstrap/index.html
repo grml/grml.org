@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
 <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
-<meta name="generator" content="AsciiDoc 8.6.6" />
+<meta name="generator" content="AsciiDoc 8.6.7" />
 <title>grml-debootstrap(8)</title>
 <style type="text/css">
 /* Shared CSS for AsciiDoc xhtml11 and html5 backends */
@@ -349,7 +349,7 @@ div.colist td img {
   margin-bottom: 0.1em;
 }
 
-div.toclevel1, div.toclevel2, div.toclevel3, div.toclevel4 {
+div.toclevel0, div.toclevel1, div.toclevel2, div.toclevel3, div.toclevel4 {
   margin-top: 0;
   margin-bottom: 0;
 }
@@ -407,6 +407,8 @@ span.underline { text-decoration: underline; }
 span.overline { text-decoration: overline; }
 span.line-through { text-decoration: line-through; }
 
+div.unbreakable { page-break-inside: avoid; }
+
 
 /*
  * xhtml11 specific
@@ -414,7 +416,7 @@ span.line-through { text-decoration: line-through; }
  * */
 
 tt {
-  font-family: monospace;
+  font-family: "Courier New", Courier, monospace;
   font-size: inherit;
   color: navy;
 }
@@ -453,7 +455,7 @@ div.tableblock > table[frame="vsides"] {
  * */
 
 .monospaced {
-  font-family: monospace;
+  font-family: "Courier New", Courier, monospace;
   font-size: inherit;
   color: navy;
 }
@@ -581,7 +583,7 @@ toc: function (toclevels) {
 
   function tocEntries(el, toclevels) {
     var result = new Array;
-    var re = new RegExp('[hH]([2-'+(toclevels+1)+'])');
+    var re = new RegExp('[hH]([1-'+(toclevels+1)+'])');
     // Function that scans the DOM tree for header elements (the DOM2
     // nodeIterator API would be a better technique but not supported by all
     // browsers).
@@ -610,7 +612,7 @@ toc: function (toclevels) {
   var i;
   for (i = 0; i < toc.childNodes.length; i++) {
     var entry = toc.childNodes[i];
-    if (entry.nodeName == 'div'
+    if (entry.nodeName.toLowerCase() == 'div'
      && entry.getAttribute("class")
      && entry.getAttribute("class").match(/^toclevel/))
       tocEntriesToRemove.push(entry);
@@ -656,7 +658,7 @@ footnotes: function () {
   var entriesToRemove = [];
   for (i = 0; i < noteholder.childNodes.length; i++) {
     var entry = noteholder.childNodes[i];
-    if (entry.nodeName == 'div' && entry.getAttribute("class") == "footnote")
+    if (entry.nodeName.toLowerCase() == 'div' && entry.getAttribute("class") == "footnote")
       entriesToRemove.push(entry);
   }
   for (i = 0; i < entriesToRemove.length; i++) {
@@ -758,11 +760,13 @@ asciidoc.install();
 <div class="sectionbody">
 <div class="paragraph"><p>grml-debootstrap is a wrapper suite around debootstrap (and cdebootstrap if you
 want) for installing a plain Debian system (e.g. via Grml) very fast and easy.</p></div>
-<div class="paragraph"><p>All you have to do is adjust a few variables in configuration file
-/etc/debootstrap/config (or specify some variables via command line) and invoke
-grml-debootstrap without any further options then.</p></div>
-<div class="paragraph"><p>A plain and base Debian system will be installed on the given device (or
-directory) then. Customization of this process is possible as well.</p></div>
+<div class="paragraph"><p>All you have to do is adjust a few variables in the configuration file
+/etc/debootstrap/config or specify some command line options and invoke
+grml-debootstrap. If invoked without any configuration modifications or command
+line options a dialog based frontend will be available to control some basic
+configuration options.</p></div>
+<div class="paragraph"><p>A plain and base Debian system will be installed on the given device, directory
+or virtual image file then. Customization of this process is possible as well.</p></div>
 <div class="admonitionblock">
 <table><tr>
 <td class="icon">
@@ -908,14 +912,6 @@ directory) then. Customization of this process is possible as well.</p></div>
     to install the base-system without network access. Make sure you
     mounted the according Debian-ISO to the given <em>/mntpoint</em>. See section
     <em>Usage examples</em> for a demonstration.
-</p>
-</dd>
-<dt class="hdlist1">
-<strong>--insecure</strong>
-</dt>
-<dd>
-<p>
-    Do not download and check signatures for retrieved Release files.
 </p>
 </dd>
 <dt class="hdlist1">
@@ -1093,7 +1089,7 @@ arguments for the command line options. Please be careful and check docs and
 <div class="content">
 <pre><tt>grml-debootstrap --target /dev/sda1 --grub /dev/sda</tt></pre>
 </div></div>
-<div class="paragraph"><p>Install default Debian release (stable/squeeze) on /dev/sda1 and install bootmanager
+<div class="paragraph"><p>Install default Debian release (wheezy) on /dev/sda1 and install bootmanager
 Grub in MBR (master boot record) of /dev/sda and use /dev/sda1 as system partition.</p></div>
 <div class="literalblock">
 <div class="content">
@@ -1106,28 +1102,28 @@ Grub in MBR (master boot record) of /dev/sda and use /dev/sda1 as system partiti
 <pre><tt>mount /dev/sda1 /data/chroot
 grml-debootstrap --target /data/chroot</tt></pre>
 </div></div>
-<div class="paragraph"><p>Install default Debian release (stable/squeeze) in directory /data/chroot (without
+<div class="paragraph"><p>Install default Debian release (wheezy) in directory /data/chroot (without
 any bootloader).</p></div>
 <div class="literalblock">
 <div class="content">
 <pre><tt>grml-debootstrap --target /dev/sda3 --grub /dev/sda  --mirror ftp://ftp.tugraz.at/mirror/debian</tt></pre>
 </div></div>
-<div class="paragraph"><p>Install default debian release (stable/squeeze) in a Virtual Machine file with
+<div class="paragraph"><p>Install default debian release (wheezy) in a Virtual Machine file with
 3GB disk size (including Grub as bootmanager in MBR of the virtual disk file):</p></div>
 <div class="literalblock">
 <div class="content">
 <pre><tt>mount /dev/sda1 /mnt/sda1
 grml-debootstrap --vmfile --vmsize 3G --target /mnt/sda1/qemu.img</tt></pre>
 </div></div>
-<div class="paragraph"><p>Install default Debian release (stable/squeeze) on /dev/sda3 and install bootmanager
+<div class="paragraph"><p>Install default Debian release (wheezy) on /dev/sda3 and install bootmanager
 Grub in MBR (master boot record) of /dev/sda and use /dev/sda3 as system partition.
 Use specified mirror instead of the default (<a href="ftp://ftp.debian.de/debian">ftp://ftp.debian.de/debian</a>) one.</p></div>
 <div class="literalblock">
 <div class="content">
-<pre><tt>mount -o loop /mnt/sda6/debian-40r0-i386-CD-1.iso /mnt/iso
+<pre><tt>mount -o loop /mnt/sda6/debian-CD-1.iso /mnt/iso
 grml-debootstrap --target /dev/sda1 --grub /dev/sda --iso file:/mnt/iso/debian/</tt></pre>
 </div></div>
-<div class="paragraph"><p>Install Debian stable/squeeze on /dev/sda1 using the loopback mounted Debian-ISO
+<div class="paragraph"><p>Install Debian on /dev/sda1 using the loopback mounted Debian-ISO
 for the base-system and install bootmanager Grub in MBR (master boot record) of
 /dev/sda and use /dev/sda1 as system partition. Please notice, that the chroot
 system requires network access for all packages which are not part of the
@@ -1203,9 +1199,9 @@ make sure that EXTRAPACKAGES is set to "yes".</p></div>
 full automatic mode. While this mode isn&#8217;t really useful for interactive
 execution (just configure /etc/debootstrap/configure or specify the relevant
 variables on the command line instead) it is meant for use via boot option
-debian2hd. The boot option debian2hd (more precise: the kernelname on bootprompt)
-supports the following boot options (they correspond with the command line options
-mentioned above):</p></div>
+debian2hd on the Grml live system. The boot option debian2hd (more precise: the
+kernelname at the bootprompt) supports the following boot options (they
+correspond with the command line options mentioned above):</p></div>
 <div class="literalblock">
 <div class="content">
 <pre><tt>target=...</tt></pre>
@@ -1221,14 +1217,14 @@ target=/dev/sda1</p></div>
 <div class="content">
 <pre><tt>release=...</tt></pre>
 </div></div>
-<div class="paragraph"><p>Specify release of new Debian system. Defaults to Debian squeeze. Supported
+<div class="paragraph"><p>Specify release of new Debian system. Defaults to Debian wheezy. Supported
 relases: lenny, squeeze, wheezy and sid. Usage example: release=sid</p></div>
 <div class="literalblock">
 <div class="content">
 <pre><tt>mirror=...</tt></pre>
 </div></div>
 <div class="paragraph"><p>Specify mirror which should be used for apt-get/aptitude instead
-of the default one (<a href="ftp://ftp.debian.de/debian">ftp://ftp.debian.de/debian</a>).
+of the default one (<a href="http://http.debian.net/debian">http://http.debian.net/debian</a>).
 Usage example: mirror=ftp://ftp.tugraz.at/mirror/debian</p></div>
 <div class="literalblock">
 <div class="content">
@@ -1340,8 +1336,12 @@ cellspacing="0" cellpadding="4">
 <div class="title">lenny release</div>
 <div class="paragraph"><p>[1] Please notice that lenny is the current old-stable release within Debian.
 grml-debootstrap can handle the release but you really should not use lenny
-anymore unless you really know what you are doing. Choose stable (squeeze)
-instead.</p></div>
+anymore unless you really know what you are doing. Choose Debian 6.0 (squeeze)
+or Debian 7.0 (wheezy) instead.</p></div>
+<div class="paragraph"><p>Notice that you need to specify a mirror providing the lenny release, the
+default (<a href="http://http.debian.net/debian">http://http.debian.net/debian</a>) doesn&#8217;t provide it any longer nowadays.
+Set the mirror to e.g. <a href="http://archive.debian.org/debian/">http://archive.debian.org/debian/</a> if you don&#8217;t have
+your own lenny mirror.</p></div>
 <div class="paragraph"><p>When installing lenny to a new mdraid, grml-debootstrap will use md metadata
 format version 0.90. This limits the device to a maximum size of 2TB, but has
 the advantage of grub-legacy actually being able to boot from it.</p></div>
@@ -1356,8 +1356,8 @@ the advantage of grub-legacy actually being able to boot from it.</p></div>
 <td class="content">
 <div class="title">sid release</div>
 <div class="paragraph"><p>[2] Please notice that sid is Debian/unstable and due to its nature might not be
-always installable. What <em>might</em> work instead is deploying stable (squeeze) or
-testing (wheezy) and upgrade it after installation finished.</p></div>
+always installable. What <em>might</em> work instead is deploying a stable or testing
+release and upgrade it after installation finished.</p></div>
 </td>
 </tr></table>
 </div>
@@ -1385,7 +1385,7 @@ testing (wheezy) and upgrade it after installation finished.</p></div>
 <div id="footnotes"><hr /></div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2012-04-10 12:22:02 CEST
+Last updated 2013-02-19 00:04:27 CET
 </div>
 </div>
 </body>
