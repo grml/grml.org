@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
 <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
-<meta name="generator" content="AsciiDoc 8.6.6" />
+<meta name="generator" content="AsciiDoc 8.6.7" />
 <title>grml2usb(8)</title>
 <style type="text/css">
 /* Shared CSS for AsciiDoc xhtml11 and html5 backends */
@@ -349,7 +349,7 @@ div.colist td img {
   margin-bottom: 0.1em;
 }
 
-div.toclevel1, div.toclevel2, div.toclevel3, div.toclevel4 {
+div.toclevel0, div.toclevel1, div.toclevel2, div.toclevel3, div.toclevel4 {
   margin-top: 0;
   margin-bottom: 0;
 }
@@ -407,6 +407,8 @@ span.underline { text-decoration: underline; }
 span.overline { text-decoration: overline; }
 span.line-through { text-decoration: line-through; }
 
+div.unbreakable { page-break-inside: avoid; }
+
 
 /*
  * xhtml11 specific
@@ -414,7 +416,7 @@ span.line-through { text-decoration: line-through; }
  * */
 
 tt {
-  font-family: monospace;
+  font-family: "Courier New", Courier, monospace;
   font-size: inherit;
   color: navy;
 }
@@ -453,7 +455,7 @@ div.tableblock > table[frame="vsides"] {
  * */
 
 .monospaced {
-  font-family: monospace;
+  font-family: "Courier New", Courier, monospace;
   font-size: inherit;
   color: navy;
 }
@@ -581,7 +583,7 @@ toc: function (toclevels) {
 
   function tocEntries(el, toclevels) {
     var result = new Array;
-    var re = new RegExp('[hH]([2-'+(toclevels+1)+'])');
+    var re = new RegExp('[hH]([1-'+(toclevels+1)+'])');
     // Function that scans the DOM tree for header elements (the DOM2
     // nodeIterator API would be a better technique but not supported by all
     // browsers).
@@ -610,7 +612,7 @@ toc: function (toclevels) {
   var i;
   for (i = 0; i < toc.childNodes.length; i++) {
     var entry = toc.childNodes[i];
-    if (entry.nodeName == 'div'
+    if (entry.nodeName.toLowerCase() == 'div'
      && entry.getAttribute("class")
      && entry.getAttribute("class").match(/^toclevel/))
       tocEntriesToRemove.push(entry);
@@ -656,7 +658,7 @@ footnotes: function () {
   var entriesToRemove = [];
   for (i = 0; i < noteholder.childNodes.length; i++) {
     var entry = noteholder.childNodes[i];
-    if (entry.nodeName == 'div' && entry.getAttribute("class") == "footnote")
+    if (entry.nodeName.toLowerCase() == 'div' && entry.getAttribute("class") == "footnote")
       entriesToRemove.push(entry);
   }
   for (i = 0; i < entriesToRemove.length; i++) {
@@ -785,7 +787,7 @@ default MBR consider using <em>--syslinux-mbr</em> instead.</td>
 <h2 id="options">4. Options</h2>
 <div class="sectionbody">
 <div class="paragraph"><p>The ISO[s] should be the path to one or multiple grml-ISOs and/or the path to
-the currently running live-system (being /live/image).</p></div>
+the currently running live-system (being /lib/live/mount/medium).</p></div>
 <div class="paragraph"><p>The device either might be a device name like /dev/sdX1 or a directory. When
 specifying a device name the device is mounted automatically. When specifying a
 directory grml2usb is assuming that you did set up a bootloader on your own (or
@@ -1091,7 +1093,7 @@ setup, like:</p></div>
 <div class="literalblock">
 <div class="content">
 <pre><tt># mkfs.vfat /dev/loop1
-# grml2usb --bootloader-only /grml/isos/grml-small_2009.10.iso /dev/loop1</tt></pre>
+# grml2usb --bootloader-only /grml/isos/grml-small_2013.01.iso /dev/loop1</tt></pre>
 </div></div>
 </div>
 <div class="sect2">
@@ -1099,7 +1101,7 @@ setup, like:</p></div>
 <div class="literalblock">
 <div class="content">
 <pre><tt># blktrace -d /dev/sdX -o - | blkparse -i -
-# grml2usb grml_2009.10.iso /dev/sdX1</tt></pre>
+# grml2usb grml_2013.01.iso /dev/sdX1</tt></pre>
 </div></div>
 </div>
 </div>
@@ -1311,7 +1313,7 @@ using the dd approach.</td>
 system available) running:</p></div>
 <div class="literalblock">
 <div class="content">
-<pre><tt>% dd if=grml_2009.10.iso of=/dev/sdX</tt></pre>
+<pre><tt>% dd if=grml_2013.01.iso of=/dev/sdX</tt></pre>
 </div></div>
 <div class="paragraph"><p>where /dev/sdX is your USB device. Of course this doesn&#8217;t provide such a
 flexible system like with grml2usb (no multi-ISO setup, no additional default
@@ -1458,48 +1460,48 @@ of your grml2usb commandline (consider using the "--verbose" option).</p></div>
 <div class="sectionbody">
 <div class="literalblock">
 <div class="content">
-<pre><tt># grml2usb /home/grml/grml_2009.10.iso /dev/sdX1</tt></pre>
+<pre><tt># grml2usb /home/grml/grml_2013.01.iso /dev/sdX1</tt></pre>
 </div></div>
 <div class="paragraph"><p>Install specified ISO on device /dev/sdX1.</p></div>
 <div class="literalblock">
 <div class="content">
-<pre><tt># grml2usb /home/grml/grml_2009.10.iso /home/grml/grml_small_2009.10.iso /dev/sdX1</tt></pre>
+<pre><tt># grml2usb /home/grml/grml_2013.01.iso /home/grml/grml_small_2013.01.iso /dev/sdX1</tt></pre>
 </div></div>
 <div class="paragraph"><p>Install specified ISOs on device /dev/sdX1 for multibooting ISOs.</p></div>
 <div class="literalblock">
 <div class="content">
-<pre><tt># grml2usb /live/image /dev/sdX1</tt></pre>
+<pre><tt># grml2usb /lib/live/mount/medium /dev/sdX1</tt></pre>
 </div></div>
-<div class="paragraph"><p>Install currently running grml live system on device /dev/sdX1.</p></div>
+<div class="paragraph"><p>Install currently running Grml live system on device /dev/sdX1.</p></div>
 <div class="literalblock">
 <div class="content">
-<pre><tt># grml2usb /live/image /home/grml/grml_2009.10.iso /dev/sdX1</tt></pre>
+<pre><tt># grml2usb /lib/live/mount/medium /home/grml/grml_2013.01.iso /dev/sdX1</tt></pre>
 </div></div>
-<div class="paragraph"><p>Install currently running grml live system and the specified
+<div class="paragraph"><p>Install currently running Grml live system and the specified
 ISO on device /dev/sdX1 for multibooting.</p></div>
 <div class="literalblock">
 <div class="content">
-<pre><tt># grml2usb --fat16 /home/grml/grml_2009.10.iso /dev/sdX1</tt></pre>
+<pre><tt># grml2usb --fat16 /home/grml/grml_2013.01.iso /dev/sdX1</tt></pre>
 </div></div>
 <div class="paragraph"><p>Install specified ISO on device /dev/sdX1 and format partition /dev/sdX1 with
 FAT16 filesystem.</p></div>
 <div class="literalblock">
 <div class="content">
-<pre><tt># grml2usb --grub --grub-mbr /home/grml/grml_2009.10.iso /dev/sdX1</tt></pre>
+<pre><tt># grml2usb --grub --grub-mbr /home/grml/grml_2013.01.iso /dev/sdX1</tt></pre>
 </div></div>
 <div class="paragraph"><p>Install specified ISO on device /dev/sdX1 and use grub as bootloader (instead of
 syslinux being the default) and install a master boot record (MBR) to the MBR of
 /dev/sdX.</p></div>
 <div class="literalblock">
 <div class="content">
-<pre><tt># grml2usb --bootoptions="lang=de ssh=mysecret" grml_2009.10.iso /dev/sdX1
-# grml2usb --bootoptions="lang=de" --bootoptions="ssh=mysecret" grml_2009.10.iso /dev/sdX1</tt></pre>
+<pre><tt># grml2usb --bootoptions="lang=de ssh=mysecret" grml_2013.01.iso /dev/sdX1
+# grml2usb --bootoptions="lang=de" --bootoptions="ssh=mysecret" grml_2013.01.iso /dev/sdX1</tt></pre>
 </div></div>
 <div class="paragraph"><p>Install specified ISO on device /dev/sdX1 and use "lang=de ssh=mysecret" as
 default bootoptions.</p></div>
 <div class="literalblock">
 <div class="content">
-<pre><tt># grml2usb --remove-bootoption="vga=791" --remove-bootoption="nomce" grml_2009.10.iso /dev/sdX1</tt></pre>
+<pre><tt># grml2usb --remove-bootoption="vga=791" --remove-bootoption="nomce" grml_2013.01.iso /dev/sdX1</tt></pre>
 </div></div>
 <div class="paragraph"><p>Install specified ISO on device /dev/sdX1 remove vga=791 and nomce from existing bootoptions.</p></div>
 <div class="literalblock">
@@ -1534,7 +1536,7 @@ iso, e.g. grml64 and grml.</p></div>
 <div id="footnotes"><hr /></div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2011-12-25 18:20:03 CET
+Last updated 2013-01-10 13:55:49 CET
 </div>
 </div>
 </body>
