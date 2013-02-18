@@ -53,7 +53,7 @@
 <script type="text/javascript" src="//www.google.com/coop/cse/brand?form=searchbox_014818976460624594421%3Ar4x8-w4_mwu&amp;lang=en"></script>
 <!-- Google CSE Search Box Ends -->
 
-            <div class="copyright">&copy; Copyright 2003-2012 Grml Live Linux</div>
+            <div class="copyright">&copy; Copyright 2003-2013 Grml Live Linux</div>
             <p>&nbsp;</p>
 
       </div>
