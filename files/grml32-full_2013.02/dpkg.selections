@@ -147,6 +147,7 @@ gcc-4.7-base:i386				install
 gddrescue					install
 gdisk						install
 genext2fs					install
+genisoimage					install
 gettext-base					install
 git						install
 git-man						install
@@ -178,6 +179,7 @@ grml-terminalserver				install
 grml-tips					install
 grml-udev-config				install
 grml-x						install
+grml2hd						install
 grml2hd-utils					install
 grml2usb					install
 groff-base					install
@@ -262,7 +264,6 @@ libbluetooth3:i386				install
 libboost-iostreams1.49.0			install
 libbrlapi0.5:i386				install
 libbsd0:i386					install
-libburn4					install
 libbz2-1.0:i386					install
 libc-ares2:i386					install
 libc-bin					install
@@ -373,8 +374,6 @@ libisccc80					install
 libisccfg82					install
 libiscsi-bin					install
 libiscsi1:i386					install
-libisoburn1					install
-libisofs6					install
 libiw30:i386					install
 libjack-jackd2-0:i386				install
 libjasper1:i386					install
@@ -382,7 +381,6 @@ libjbig0:i386					install
 libjim0debian2:i386				install
 libjpeg8:i386					install
 libjson0:i386					install
-libjte1						install
 libk5crypto3:i386				install
 libkeyutils1:i386				install
 libklibc					install
@@ -816,7 +814,6 @@ xfsprogs					install
 xinit						install
 xkb-data					install
 xmount						install
-xorriso						install
 xserver-common					install
 xserver-xorg					install
 xserver-xorg-core				install

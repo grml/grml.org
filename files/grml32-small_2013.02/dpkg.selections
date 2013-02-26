@@ -97,6 +97,7 @@ grml-scripts-core				install
 grml-shlib					install
 grml-tips					install
 grml-udev-config				install
+grml2hd						install
 grml2hd-utils					install
 grml2usb					install
 groff-base					install
