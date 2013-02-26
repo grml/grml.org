@@ -74,6 +74,11 @@
 
 	<ul>
 
+	  <li>/etc/apt/sources.list.d/debian.list no longer uses cdn.debian.net
+	  for the Debian repository, instead uses snapshot.debian.org with the
+	  according release date. This should make installation of additional
+	  software with regards to additional dependencies easier for users.
+
           <li>Debian's live-boot changed the path from /live/image to
 	  /lib/live/mount/medium. If you're using /live/image anywhere inside
 	  your own custom scripts please adopt your code to use /lib/live/mount/medium
