@@ -61,11 +61,10 @@
 
             <h2>News</h2>
             <div class="news">
-            <p>27 Feb 2013: New <a href="/changelogs/README-grml-2013.02/">stable release version 2013.02</a> is availa
-ble <a href="/download/">for download</a>.</p>
+            <p>27 Feb 2013: New <a href="/changelogs/README-grml-2013.02/">stable release version 2013.02</a> is available <a href="/download/">for download</a></p>
             <p>18 Feb 2013: Release candidate version <a href="/changelogs/README-grml-2013.02-rc1/">2013.02-rc1</a> available</p>
             <p>06 Jun 2012: New Grml developer: Markus Rekkenbeil</p>
-            <p>29 May 2012: New <a href="/changelogs/README-grml-2012.05/">stable release version 2012.05</a> is available <a href="/download/">for download</a>.</p>
+            <p>29 May 2012: New <a href="/changelogs/README-grml-2012.05/">stable release version 2012.05</a> is available <a href="/download/">for download</a></p>
             <p>17 May 2012: Release candidate version <a href="/changelogs/README-grml-2012.05-rc1/">2012.05-rc1</a> available</p>
             </div>
 
