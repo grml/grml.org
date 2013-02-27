@@ -96,7 +96,7 @@
         <h3>Bits &amp; bolts</h3>
 
         <ul>
-          <li>Linux kernel is based on <b>3.7.6</b>. No additional modules are shipped.</li>
+          <li>Linux kernel is based on <b>3.7.9</b>. No additional modules are shipped.</li>
           <li>Fixed several bugs from the <a href="http://bts.grml.org/grml/">bug tracking system</a>.</li>
         </ul>
 
@@ -104,7 +104,7 @@
 
         <p>Details about shipped packages and their versions on Grml are
         available at the <a href="/files/#debian">Debian section</a>. Visit
-        <a href="/files/release-2013.02/dpkg_list">dpkg_list</a> for a
+        <a href="/files/grml64-full_2013.02/dpkg.list">dpkg.list</a> for a
         detailed list of packages shipped with Grml 2013.02.</p>
 
         <h3>Updates</h3>
