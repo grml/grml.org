@@ -28,7 +28,7 @@
 
         <h1 align="center">FAQ for grml</h1>
 
-        <p><strong>Up2date:</strong> applies to Grml releases version 2012.05</p>
+        <p><strong>Up2date:</strong> applies to Grml releases version 2013.02</p>
 
         <p><a name="toc"></a><strong>Index:</strong></p>
 
@@ -120,7 +120,7 @@
 
         <h3><a name="releasename"></a><a href="#toc">What about the release name?</a></h3>
 
-        <p>Codename of Grml 2012.05 is "Ponyhof", AKA &quot;Life Ain't No Pony Farm&quot;.</p>
+        <p>Codename of Grml 2013.02 is "Grumpy Grinch", well we're getting older.</p>
 
         <h3><a name="requirements"></a><a href="#toc">Requirements for running Grml</a></h3>
 
