@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>grml.org - Release Notes: Grml 2013.02-rc1 - Codename Grumpy Grinch</title>
-<meta name="Title" content="grml.org - Release Notes: Grml 2013.02-rc1 Grumpy Grinch" />
+<title>grml.org - Release Notes: Grml 2013.02 - Codename Grumpy Grinch</title>
+<meta name="Title" content="grml.org - Release Notes: Grml 2013.02 Grumpy Grinch" />
 <meta name="Author" content="the Grml team [grml.org/team/]" />
 <meta name="Keywords" content="grml.org, Grml" />
-<meta name="Description" content="Release Notes of Grml 2013.02-rc1" />
+<meta name="Description" content="Release Notes of Grml 2013.02" />
 <meta name="Abstract" content="Grml, the linux live-cd for sysadmins and texttool users" />
 <meta name="Robots" content="index,follow" />
 <meta name="Language" content="english" />
@@ -24,7 +24,10 @@
 
       <div class="content">
 
-        <h1>Release Notes for Grml 2013.02-rc1 - codename <a
+        <p><a href="/screenshots/"><img align="right" style="margin-left: 20px;
+        border: 0" src="/screenshots/grml_2013.02.jpg" alt="*" /></a></p>
+
+        <h1>Release Notes for Grml 2013.02 - codename <a
         href="/faq/#releasename">Grumpy Grinch</a></h1>
 
         <p><a href="http://grml.org/download/prerelease/">Download Now</a></p>
@@ -82,7 +85,7 @@
           <li>Debian's live-boot changed the path from /live/image to
 	  /lib/live/mount/medium. If you're using /live/image anywhere inside
 	  your own custom scripts please adopt your code to use /lib/live/mount/medium
-          starting with Grml 2013.02-rc1.
+          starting with Grml 2013.02.
 
           <li>Debian's live-boot changed some persistency related settings.
           Please visit <a href="http://wiki.grml.org/doku.php?id=persistency">
@@ -102,43 +105,43 @@
         <p>Details about shipped packages and their versions on Grml are
         available at the <a href="/files/#debian">Debian section</a>. Visit
         <a href="/files/release-2013.02/dpkg_list">dpkg_list</a> for a
-        detailed list of packages shipped with Grml 2013.02(-rc1).</p>
+        detailed list of packages shipped with Grml 2013.02.</p>
 
         <h3>Updates</h3>
 
-        <p>Packages are taken from Debian testing, 11th of February
-        2013. 12 packages have been removed, and these 21 new packages
+        <p>Packages are taken from Debian testing, 26th of February
+        2013. 13 packages have been removed, and these 22 new packages
         have been added (plus dependencies, excluding lib* and kernel image):</p>
 
 <pre class="rahmen">
   aptitude-common atmel-firmware bluez-firmware cpp-4.7 cryptsetup-bin epdfview
   firmware-atheros firmware-bnx2 firmware-bnx2x firmware-intelwimax
-  firmware-libertas firmware-linux ifenslave-2.6 insserv libertas-firmware
-  netsniff-ng ruby1.9.1 ssmping uuid-runtime virt-what zd1211-firmware
+  firmware-libertas firmware-linux genisoimage ifenslave-2.6 insserv
+  libertas-firmware netsniff-ng ruby1.9.1 ssmping uuid-runtime virt-what
+  zd1211-firmware
 </pre>
 
         <p>These Grml packages have been removed/replaced (excluding lib* and kernel image):</p>
 
 <pre class="rahmen">
   arrayprobe consolekit cpp-4.6 fuse-utils gcc-4.5-base gcc-4.6-base
-  grub info linux-sound-base smbfs tasksel tasksel-data
+  grub info linux-sound-base smbfs tasksel tasksel-data xorriso
 </pre>
 
         <h3>Known issues</h3>
 
-        <ul>
+        <p>None at the time of the release!</p>
 
-          <li>grml2hd isn't shipped
+        <p>Take a look at <a
+        href="/bugs/known/">the known bugs list</a>.
+        Please report problems using information on <a
+          href="/bugs/">grml.org/bugs/</a>.</p>
 
-	  <li>grml-live-remaster doesn't work out-of-the-box because neither
-	  mkisofs nor genisoimage are available
 
-        </ul>
+        <h3>Download Grml 2013.02</h3>
 
-        <h3>Download Grml 2013.02-rc1</h3>
-
-        <p>Grml 2013.02-rc1 can be downloaded from
-        <a href="http://grml.org/download/prerelease/">grml.org/download/prerelease/</a>.</p>
+        <p>Grml 2013.02 can be downloaded from
+        <a href="http://grml.org/download/">grml.org/download/prerelease/</a>.</p>
 
         <h3>Feedback</h3>
 
