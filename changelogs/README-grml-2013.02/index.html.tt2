@@ -30,13 +30,13 @@
         <h1>Release Notes for Grml 2013.02 - codename <a
         href="/faq/#releasename">Grumpy Grinch</a></h1>
 
-        <p><a href="http://grml.org/download/prerelease/">Download Now</a></p>
+        <p><a href="http://grml.org/download/">Download Now</a></p>
 
         <h3>About</h3>
 
-	<p>This release brings the Grml tools towards the upcoming Debian stable
-	release (AKA wheezy), provides up2date hardware support and fixes known
-	bugs from the previous Grml release.</p>
+        <p>This release brings the Grml tools towards the upcoming Debian stable
+        release (AKA wheezy), provides up2date hardware support and fixes known
+        bugs from the previous Grml release.</p>
 
         <h3>New features</h3>
 
@@ -44,24 +44,24 @@
 
           <li>ssh boot option: display SSH server key fingerprints
 
-	  <li>grml-hwinfo: added support for lsscsi, iscsiadm,
-	  proxmox/libvirt/openvz/vserver information retrieval, swapon, mdadm,
-	  LVM + dmsetup, now using 'lspci -nn' for lspci output
+          <li>grml-hwinfo: added support for lsscsi, iscsiadm,
+          proxmox/libvirt/openvz/vserver information retrieval, swapon, mdadm,
+          LVM + dmsetup, now using 'lspci -nn' for lspci output
 
-	  <li>grml-live: handling firmware related packages in GRMLBASE, added
-	  uuid-runtime to GRMLBASE
+          <li>grml-live: handling firmware related packages in GRMLBASE, added
+          uuid-runtime to GRMLBASE
 
-	  <li>grml-network: netcardconfig provides support to scan for available
-	  wireless networks
+          <li>grml-network: netcardconfig provides support to scan for available
+          wireless networks
 
-	  <li>grml-udev-config: Do not set mount options for NTFS partitions to
-	  "ro" any longer
+          <li>grml-udev-config: Do not set mount options for NTFS partitions to
+          "ro" any longer
 
           <li>grml2usb: verify that the bootflag is enabled
 
           <li>grml2iso: ISOs are dd-able by default
 
-	  <li>grml-debootstrap:
+          <li>grml-debootstrap:
 
           <ul>
 
@@ -69,22 +69,22 @@
             <li>Set wheezy as the new default release
             <li>Add acpi-support-base + firmware-linux-free to default package selection
 
-	  </ul>
+          </ul>
 
         </ul>
 
         <h3>Important Changes</h3>
 
-	<ul>
+        <ul>
 
-	  <li>/etc/apt/sources.list.d/debian.list no longer uses cdn.debian.net
-	  for the Debian repository, instead uses snapshot.debian.org with the
-	  according release date. This should make installation of additional
-	  software with regards to additional dependencies easier for users.
+          <li>/etc/apt/sources.list.d/debian.list no longer uses cdn.debian.net
+          for the Debian repository, instead uses snapshot.debian.org with the
+          according release date. This should make installation of additional
+          software with regards to additional dependencies easier for users.
 
           <li>Debian's live-boot changed the path from /live/image to
-	  /lib/live/mount/medium. If you're using /live/image anywhere inside
-	  your own custom scripts please adopt your code to use /lib/live/mount/medium
+          /lib/live/mount/medium. If you're using /live/image anywhere inside
+          your own custom scripts please adopt your code to use /lib/live/mount/medium
           starting with Grml 2013.02.
 
           <li>Debian's live-boot changed some persistency related settings.
@@ -141,7 +141,7 @@
         <h3>Download Grml 2013.02</h3>
 
         <p>Grml 2013.02 can be downloaded from
-        <a href="http://grml.org/download/">grml.org/download/prerelease/</a>.</p>
+        <a href="http://grml.org/download/">grml.org/download/</a>.</p>
 
         <h3>Feedback</h3>
 
@@ -155,29 +155,29 @@
         <a name="thanks"></a>
         <h3>Thanks</h3>
 
-	<p>Many thanks in this release go to (alphabetically)
-	Andras Korn,
-	Bernhard Tittelbach,
-	Charles A. Hewson,
-	Christian Hesse,
-	Christian Hofstaedtler,
-	Christoph Biedl,
-	Csillag Tamas,
-	Dominik Schips,
-	Evan Pitstick,
-	Florian Apolloner,
-	Florian Klien,
-	frenbu,
-	Gregor Herrmann,
-	Hendrik Jaeger,
-	Lukas Anzinger,
-	Pawel Sadkowski ,
-	Peter Palfrader,
-	Pierre Schmitz,
-	Raoul Raminder Andreas,
-	Thorsten Glaser and
-	Ulrich Dangel
-	for their contributions.</p>
+        <p>Many thanks in this release go to (alphabetically)
+        Andras Korn,
+        Bernhard Tittelbach,
+        Charles A. Hewson,
+        Christian Hesse,
+        Christian Hofstaedtler,
+        Christoph Biedl,
+        Csillag Tamas,
+        Dominik Schips,
+        Evan Pitstick,
+        Florian Apolloner,
+        Florian Klien,
+        frenbu,
+        Gregor Herrmann,
+        Hendrik Jaeger,
+        Lukas Anzinger,
+        Pawel Sadkowski ,
+        Peter Palfrader,
+        Pierre Schmitz,
+        Raoul Raminder Andreas,
+        Thorsten Glaser and
+        Ulrich Dangel
+        for their contributions.</p>
 
         <h3>More Information</h3>
 

@@ -44,26 +44,29 @@
 
             <p style="text-align: center;">
             <b>The current release:</b><br/><br/>
-            <a href="/download/" class="button" style="padding: 12px; font-weight: bold;"><span>Download Grml 2012.05</span></a>
+            <a href="/download/" class="button" style="padding: 12px; font-weight: bold;"><span>Download Grml 2013.02</span></a>
             </p>
             <br />
 
+	    <!--
             <p style="text-align: center;">
             <b>Pre-Release:</b><br/><br/>
             <a href="/download/prerelease/" class="button" style="padding: 12px; font-weight: bold;"><span>Download Grml 2013.02-rc1</span></a>
             </p>
             <br />
+	    -->
 
             <img style="float: right; margin-left: 20px" src="/img/grmltux_small.jpg" alt="*" />
             <br />
 
             <h2>News</h2>
             <div class="news">
+            <p>27 Feb 2013: New <a href="/changelogs/README-grml-2013.02/">stable release version 2013.02</a> is availa
+ble <a href="/download/">for download</a>.</p>
             <p>18 Feb 2013: Release candidate version <a href="/changelogs/README-grml-2013.02-rc1/">2013.02-rc1</a> available</p>
             <p>06 Jun 2012: New Grml developer: Markus Rekkenbeil</p>
             <p>29 May 2012: New <a href="/changelogs/README-grml-2012.05/">stable release version 2012.05</a> is available <a href="/download/">for download</a>.</p>
             <p>17 May 2012: Release candidate version <a href="/changelogs/README-grml-2012.05-rc1/">2012.05-rc1</a> available</p>
-            <p>16 May 2012: New Grml developer: Evgeni Golov</p>
             </div>
 
       </div>
