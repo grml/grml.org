@@ -4,18 +4,18 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <title>GRMLZSHRC</title>
-<meta name="generator" content="http://txt2tags.sf.net" />
+<meta name="generator" content="http://txt2tags.org" />
 <link rel="stylesheet" type="text/css" href="t2t-modern.css" />
 </head>
 <body>
 <div class="header" id="header">
 <h1>GRMLZSHRC</h1>
-<h3>June, 2010</h3>
+<h3>July, 2011</h3>
 </div>
 <div class="body" id="body">
 <h1>NAME</h1>
 <p>
-grmlzshrc - grml's zsh setup
+grmlzshrc - Grml's zsh setup
 </p>
 <h1>SYNOPSIS</h1>
 <p>
@@ -23,7 +23,7 @@ grmlzshrc - grml's zsh setup
 </p>
 <h1>DESCRIPTION</h1>
 <p>
-The grml project provides a fairly exhaustive interactive setup (referred to
+The Grml project provides a fairly exhaustive interactive setup (referred to
 as <i>grmlzshrc</i> throughout this document) for the amazing unix shell zsh
 (<a href="http://zsh.sourceforge.net">http://zsh.sourceforge.net</a>). This is the reference manual for that
 setup.
@@ -36,10 +36,21 @@ features are enabled in every version).
 <i>grmlzshrc</i> behaves differently depending on which user loads it. For the
 root user (<b>EUID</b> == 0) only a subset of features is loaded by default. This
 behaviour can be altered by setting the <b>GRML_ALWAYS_LOAD_ALL</b> STARTUP
-VARIABLE (see below). Also the umask(1) for the root user is set to 022,
-while for regular users it is set to 002. So read/write permissions
-for the regular user and her group are set for new files (keep that
-in mind on systems, where regular users share a common group).
+VARIABLE (see below).
+</p>
+<p>
+Users may want to keep an up-to-date version of the setup (possibly from the
+git-sources) in <i>~/.zshrc</i>. If that happens on a system where the global
+zshrc is also a <i>grmlzshrc</i> (but possibly an older one), you can inhibit
+loading the global version by doing:
+
+</p>
+<pre>
+echo setopt no_global_rcs &gt;&gt; ~/.zshenv
+</pre>
+<p>
+Note, that this will disable <i>ANY</i> global files, except for the global
+zshenv file.
 </p>
 <h1>STARTUP VARIABLES</h1>
 <p>
@@ -50,7 +61,6 @@ variables. These may be set temporarily when starting zsh like this:
 <pre>
 % BATTERY=1 zsh
 </pre>
-<p></p>
 <p>
 Or by setting them permanently in <b>zshrc.pre</b> (See AUXILIARY FILES below).
 </p>
@@ -63,10 +73,6 @@ put the battery status into the right hand side interactive prompt.
 <dt><b>COMMAND_NOT_FOUND</b></dt><dd>
 A non zero value activates a handler, which is called when a command can not
 be found. The handler is defined by GRML_ZSH_CNF_HANDLER (see below).
-<p></p>
-</dd>
-<dt><b>GRML_ALWAYS_LOAD_ALL</b></dt><dd>
-Enables the whole grml setup for root, if set to a non zero value.
 <p></p>
 </dd>
 <dt><b>GRML_ZSH_CNF_HANDLER</b></dt><dd>
@@ -84,7 +90,7 @@ Where zsh saves the history. Default: ${HOME}/.zsh_history.
 <p></p>
 </dd>
 <dt><b>HISTSIZE</b></dt><dd>
-Number of commands to be kept in the history. On a grml-CD this defaults to
+Number of commands to be kept in the history. On a Grml-CD this defaults to
 500, on a hard disk installation to 5000.
 <p></p>
 </dd>
@@ -113,7 +119,7 @@ than the defined number of seconds (default: 5).
 <p></p>
 </dd>
 <dt><b>SAVEHIST</b></dt><dd>
-Number of commands to be stored in ${HISTFILE}. Defaults to 1000 on a grml-CD
+Number of commands to be stored in ${HISTFILE}. Defaults to 1000 on a Grml-CD
 and to 10000 on an installation on hard disk.
 <p></p>
 </dd>
@@ -150,98 +156,127 @@ zshs inherit the dirstack of the zsh that most recently updated
 </p>
 <h2>DIRECTORY BASED PROFILES</h2>
 <p>
-If you want certain settings to be active in certain directories (and
-automatically switch back and forth between them), this is what you want.
+If you need to perform certain actions each time you enter certain
+directory-trees, this is the feature you are looking for.
+</p>
+<h3>Initialisation</h3>
+<p>
+To initialise the system, you need to call the function `chpwd_profiles' at
+some point in your `zshrc.local'; preferably <b>after</b> you configured the
+system. The configuration of the system is described further below.
+</p>
+<p>
+If you need to do initialisations the first time `chpwd_profiles' is called
+(which should be in your configuration file), you can do that in a function
+called "chpwd_profiles_init". That function needs to be defined <b>before</b>
+`chpwd_profiles' is called for this to work.
+</p>
+<p>
+During the <b>first</b> call of `chpwd_profiles' (and therefore all its profile
+functions) the parameter `$CHPWD_PROFILES_INIT' exists and is set to `1'. In
+all other cases, the parameter does not exist at all.
+</p>
+<h3>Styles and Profile-names</h3>
+<p>
+To store its configuration, the system uses <b>functions</b> and <b>styles</b>
+(zsh's context sensitive configuration system), such as this:
+</p>
+<p>
 
 </p>
 <pre>
 zstyle ':chpwd:profiles:/usr/src/grml(|/|/*)'   profile grml
 zstyle ':chpwd:profiles:/usr/src/debian(|/|/*)' profile debian
 </pre>
-<p></p>
 <p>
-When that's done and you enter a directory that matches the pattern
-in the third part of the context, a function called chpwd_profile_grml,
-for example, is called (if it exists).
+When that's done and you enter a directory that matches the pattern in the
+third part of the context, a function called chpwd_profile_grml, for example,
+is called (if it exists).
 </p>
 <p>
-If no pattern matches (read: no profile is detected) the profile is
-set to 'default', which means chpwd_profile_default is attempted to
-be called.
+If no pattern matches (read: no profile is detected) the profile is set to
+'default', which means chpwd_profile_default is attempted to be called.
 </p>
 <p>
-A word about the context (the ':chpwd:profiles:*' stuff in the zstyle
-command) which is used: The third part in the context is matched against
-<b>$PWD</b>. That's why using a pattern such as /foo/bar(|/|/*) makes sense.
-Because that way the profile is detected for all these values of <b>$PWD</b>:
+A word about the context (the ':chpwd:profiles:*' stuff in the zstyle command)
+which is used: The third part in the context is matched against ${PWD}. That's
+why using a pattern such as /foo/bar(|/|/*) makes sense. Because that way the
+profile is detected for all these values of ${PWD}:
 
 </p>
 <pre>
-/foo/bar
-/foo/bar/
-/foo/bar/baz
+  /foo/bar
+  /foo/bar/
+  /foo/bar/baz
 </pre>
-<p></p>
 <p>
-So, if you want to make double damn sure a profile works in /foo/bar
-and everywhere deeper in that tree, just use (|/|/*) and be happy.
+So, if you want to make double damn sure a profile works in /foo/bar and
+everywhere deeper in that tree, just use (|/|/*) and be happy.
 </p>
 <p>
 The name of the detected profile will be available in a variable called
-'profile' in your functions. You don't need to do anything, it'll just
-be there.
+'profile' in your functions. You don't need to do anything, it'll just be
+there.
 </p>
+<h3>Controlling Profile Execution</h3>
 <p>
-Then there is the parameter <b>$CHPWD_PROFILE</b> which is set to the profile,
-that was active up to now. That way you can avoid running code for a
-profile that is already active, by running code such as the following
-at the start of your function:
+During its initialisation run, the system creates a parameter $CHPWD_PROFILE,
+which is set to the profile that was is currently active (the default value is
+"default"). That way you can avoid running code for a profile that is already
+active, by running code such as the following at the start of your function:
 
 </p>
 <pre>
 function chpwd_profile_grml() {
     [[ ${profile} == ${CHPWD_PROFILE} ]] &amp;&amp; return 1
-    ...
+  ...
 }
 </pre>
-<p></p>
 <p>
-The initial value for <b>$CHPWD_PROFILE</b> is 'default'.
+If you know you are going to do that all the time for each and every
+directory-profile function you are ever going to write, you may also set the
+`re-execute' style to `false' (which only defaults to `true' for backwards
+compatibility), like this:
+
 </p>
+<pre>
+  zstyle ':chpwd:profiles:*' re-execute false
+</pre>
 <h3>Signaling availabily/profile changes</h3>
 <p>
-If you use this feature and need to know whether it is active in your
-current shell, there are several ways to do that. Here are two simple
-ways:
+If you use this feature and need to know whether it is active in your current
+shell, there are several ways to do that. Here are two simple ways:
 </p>
 <p>
-a) If knowing if the profiles feature is active when zsh starts is
-   good enough for you, you can put the following snippet into your
-   <i>.zshrc.local</i>:
-
+a) If knowing if the profiles feature is active when zsh starts is good
+enough for you, you can use the following snippet:
 </p>
-<pre>
-(( ${+functions[chpwd_profiles]} )) &amp;&amp;
-    print "directory profiles active"
-</pre>
-<p></p>
 <p>
-b) If that is not good enough, and you would prefer to be notified
-   whenever a profile changes, you can solve that by making sure you
-   start <b>every</b> profile function you create like this:
-
+(( ${+functions[chpwd_profiles]} )) &amp;&amp; print "directory profiles active"
 </p>
-<pre>
+<p>
+b) If that is not good enough, and you would prefer to be notified whenever a
+profile changes, you can solve that by making sure you start <b>every</b>
+profile function you create like this:
+</p>
+<p>
 function chpwd_profile_myprofilename() {
     [[ ${profile} == ${CHPWD_PROFILE} ]] &amp;&amp; return 1
     print "chpwd(): Switching to profile: $profile"
   ...
 }
-</pre>
-<p></p>
+</p>
 <p>
-That makes sure you only get notified if a profile is <b>changed</b>,
-not everytime you change directory.
+That makes sure you only get notified if a profile is <b>changed</b>, not
+everytime you change directory. (To avoid this, you may also set the newer
+`re-execute' style like described further above instead of the test on top of
+the function.
+</p>
+<h3>Leaving Profiles</h3>
+<p>
+When the system switches from one profile to another, it executes a function
+named "chpwd_leave_profile_&lt;PREVIOUS-PROFILE-NAME&gt;()" before calling the
+profile-function for the new profile.
 </p>
 <h3>Version requirement</h3>
 <p>
@@ -261,7 +296,6 @@ like:
 <pre>
 zstyle 'context' style value
 </pre>
-<p></p>
 <p>
 The context namespace, that we are using is 'acceptline'. That means, the actual
 context for your commands look like: <b>':acceptline:&lt;subcontext&gt;'</b>.
@@ -334,6 +368,58 @@ style. (The default is <b>true</b> in all contexts.)
 </dd>
 </dl>
 <h2>PROMPT</h2>
+<p>
+The <i>grmlzshrc</i> now supplies three prompt themes compatible with zsh's
+<b>promptinit</b> system. The three themes are called <b>grml</b>, <b>grml-large</b> and
+<b>grml-chroot</b>.
+</p>
+<p>
+By default, <b>grml</b> is used, unless <i>$GRMLPROMPT</i> is set to a value larger
+than zero, in which case <b>grml-large</b> is used. Lastly, if <i>$GRML_CHROOT</i> is
+non-empty, <b>grml-chroot</b> is used.
+</p>
+<p>
+As usual, with promtinit themes, the user may switch to a different theme using
+the <i>prompt</i> utility:
+
+</p>
+<pre>
+    prompt grml-large
+</pre>
+<p>
+That will use the <b>grml-large</b> prompt theme.
+</p>
+<p>
+The themes are highly customisable. The main source of documentation about
+customisation is the main <b>grml</b> theme's doc-string, that is available via
+the following command:
+
+</p>
+<pre>
+    prompt -h grml
+</pre>
+<p>
+The other themes also come with doc-strings, but the main theme's is the
+canonical reference about all of them.
+</p>
+<p>
+This feature requires version <i>4.3.7</i> of the shell. Older versions will use
+the classic grml prompt as a fallback.
+</p>
+<p>
+A note to people who like customisation: If you are <b>not</b> using a prompt
+theme for your customisation, but you're either statically setting $PS1 (or
+$PROMPT) or you're constructing one of those variables in zsh's \`precmd()'
+function, make sure you are turning the zsh's prompt theme system <b>off</b>
+before doing so. A correct example customisation could look like this:
+
+</p>
+<pre>
+    # Turn the prompt system off:
+    prompt off
+    # Customise the prompt yourself:
+    PS1='%~ %# '
+</pre>
 <h2>GNU/SCREEN STATUS SETTING</h2>
 <p>
 <i>grmlzshrc</i> sets screen's hardstatus lines to the currently running command
@@ -354,10 +440,6 @@ available via the usual history lookup widgets.
 behaviour of applications.
 </p>
 <dl>
-<dt><b>BROWSER</b></dt><dd>
-If X is running this is set to "firefox", otherwise to "w3m".
-<p></p>
-</dd>
 <dt><b>COLORTERM</b></dt><dd>
 Set to "yes". Some applications read this to learn about properties
 of the terminal they are running in.
@@ -380,11 +462,6 @@ already set otherwise.
 </dd>
 <dt><b>PAGER</b></dt><dd>
 Set less(1) as default pager, if not already set to something different.
-<p></p>
-</dd>
-<dt><b>QTDIR</b></dt><dd>
-Holds the path to shared files for the C++ application framework QT
-(version 3 or 4).
 <p></p>
 </dd>
 <dt><b>SHELL</b></dt><dd>
@@ -510,8 +587,19 @@ Deletes a word left of the cursor; seeing '/' as additional word separator.
 Jump right after the first word.
 <p></p>
 </dd>
+<dt><b>CTRL-x-M()</b></dt><dd>
+Create directory under cursor or the selected area.
+To select an area press ctrl-@ and use the cursor.
+Use case: you type "mv abc ~/testa/testb/testc/" and remember that the
+directory does not exist yet -&gt; press <b>CTRL-xM</b> and problem solved.
+<p></p>
+</dd>
 <dt><b>CTRL-x-p</b></dt><dd>
 Searches the last occurence of string before the cursor in the command history.
+<p></p>
+</dd>
+<dt><b>CTRL-x-z</b></dt><dd>
+Display help on keybindings and zsh line editor. Press consecutively to page through content.
 <p></p>
 </dd>
 <dt><b>CTRL-z</b></dt><dd>
@@ -524,11 +612,6 @@ Brings a job, which got suspended with CTRL-z back to foreground.
 user's life.
 </p>
 <dl>
-<dt><b>2html()</b></dt><dd>
-Converts plaintext files to HTML using vim. The output is written to
-&lt;filename&gt;.html.
-<p></p>
-</dd>
 <dt><b>855resolution()</b></dt><dd>
 If 915resolution is available, issues a warning to the user to run it instead
 to modify the resolution on intel graphics chipsets.
@@ -540,30 +623,12 @@ last N days. N is an integer to be passed as first and only argument.
 If no argument is specified N is set to 1.
 <p></p>
 </dd>
-<dt><b>agoogle()</b></dt><dd>
-Searches for USENET postings from authors using google groups.
-<p></p>
-</dd>
 <dt><b>allulimit()</b></dt><dd>
 Sets all ulimit values to "unlimited".
 <p></p>
 </dd>
-<dt><b>ansi-colors()</b></dt><dd>
-Prints a colored table of available ansi color codes (to be used in escape
-sequences) and the colors they represent.
-<p></p>
-</dd>
 <dt><b>any()</b></dt><dd>
 Lists processes matching given pattern.
-<p></p>
-</dd>
-<dt><b>aoeu(), asdf(), uiae()</b></dt><dd>
-Pressing the 'asdf' keys toggles between dvorak or neon and us keyboard
-layout.
-<p></p>
-</dd>
-<dt><b>apache2-ssl-certificate()</b></dt><dd>
-Advices the user how to create self signed certificates.
 <p></p>
 </dd>
 <dt><b>asc()</b></dt><dd>
@@ -573,42 +638,21 @@ else start a new screen.  This is especially useful for roadwarriors using GNU
 screen and ssh.
 <p></p>
 </dd>
-<dt><b>audioburn()</b></dt><dd>
-Burns the files in ~/ripps (see audiorip() below) to an audio CD.
-Then prompts the user if she wants to remove that directory. You might need
-to tell audioburn which cdrom device to use like:
-"DEVICE=/dev/cdrom audioburn"
-<p></p>
-</dd>
-<dt><b>audiorip()</b></dt><dd>
-Creates directory ~/ripps, if it does not exist. Then rips audio CD into
-it. Then prompts the user if she wants to burn a audio CD with audioburn()
-(see above). You might need to tell audiorip which cdrom device to use like:
-"DEVICE=/dev/cdrom audioburn"
-<p></p>
-</dd>
 <dt><b>bk()</b></dt><dd>
 Simple backup of a file or directory using cp(1). The target file name is the
 original name plus a time stamp attached. Symlinks and file attributes like mode,
 ownership and timestamps are preserved.
 <p></p>
 </dd>
-<dt><b>brltty()</b></dt><dd>
-The brltty(1) program provides a braille display, so a blind person can access
-the console screen. This wrapper function works around problems with some
-environments (f. e. utf8).
-<p></p>
-</dd>
-<dt><b>cdiff()</b></dt><dd>
-Runs a recursive diff(1) over two given directories trying to find the
-smallest set of changes. Three lines of context will be printed and binary
-files filtered out.
-<p></p>
-</dd>
 <dt><b>cdrecord()</b></dt><dd>
 If the original cdrecord is not installed, issues a warning to the user to
 use the wodim binary instead. Wodim is the debian fork of Joerg Schillings
 cdrecord.
+<p></p>
+</dd>
+<dt><b>cdt()</b></dt><dd>
+Creates a temporary directory using mktemp. Then changes current
+working directory to it.
 <p></p>
 </dd>
 <dt><b>changed()</b></dt><dd>
@@ -633,47 +677,12 @@ Changes current directory to the one supplied by argument and lists the files
 in it, including file names starting with ".".
 <p></p>
 </dd>
-<dt><b>cvsa()</b></dt><dd>
-Adds and commits the given files using cvs(1). The commit message will be
-'initial checkin'.
-<p></p>
-</dd>
-<dt><b>cvsd()</b></dt><dd>
-Shows a cvs diff of the arguments in $PAGER.
-<p></p>
-</dd>
-<dt><b>cvsl()</b></dt><dd>
-Shows the cvs log in $PAGER.
-<p></p>
-</dd>
-<dt><b>cvsq()</b></dt><dd>
-Runs a cvs update.
-<p></p>
-</dd>
-<dt><b>cvsr()</b></dt><dd>
-Generates a changelog using rcs2log and shows it in $PAGER.
-<p></p>
-</dd>
-<dt><b>cvss()</b></dt><dd>
-Shows cvs status of given files.
-<p></p>
-</dd>
-<dt><b>d()</b></dt><dd>
-Presents a numbered listing of the directory stack. Then changes current
-working directory to the one chosen by the user.
-<p></p>
-</dd>
 <dt><b>dchange()</b></dt><dd>
 Shows the changelog of given package in $PAGER.
 <p></p>
 </dd>
-<dt><b>debbug()</b></dt><dd>
-Searches the Debian bug tracking system (bugs.debian.org) for Bug numbers,
-email addresses of submitters or any string given on the command line.
-<p></p>
-</dd>
-<dt><b>debbugm()</b></dt><dd>
-Shows bug report for debian given by number in mailbox format.
+<dt><b>dcopyright()</b></dt><dd>
+Shows the copyright of given package in $PAGER.
 <p></p>
 </dd>
 <dt><b>debian2hd()</b></dt><dd>
@@ -687,32 +696,8 @@ back interactive responsiveness after suspend, when the system is swapping
 heavily.
 <p></p>
 </dd>
-<dt><b>dirspace()</b></dt><dd>
-Shows the disk usage of the directories given in human readable format;
-defaults to $path.
-<p></p>
-</dd>
-<dt><b>disassemble()</b></dt><dd>
-Translates C source code to assembly and ouputs both.
-<p></p>
-</dd>
-<dt><b>dmoz()</b></dt><dd>
-Searches for the first argument (optional) in the Open Directory Project
-(See <a href="http://www.dmoz.org/docs/en/about.html">http://www.dmoz.org/docs/en/about.html</a>).
-<p></p>
-</dd>
 <dt><b>dnews()</b></dt><dd>
 Shows the NEWS file for the given package in $PAGER.
-<p></p>
-</dd>
-<dt><b>doc()</b></dt><dd>
-Takes packagename as argument. Sets current working directory to
-/usr/share/doc/&lt;packagename&gt; and prints out a directory listing.
-<p></p>
-</dd>
-<dt><b>dwicti()</b></dt><dd>
-Looks up the first argument (optional) in the german Wiktionary
-which is an online dictionary (See: <a href="http://de.wiktionary.org/">http://de.wiktionary.org/</a>).
 <p></p>
 </dd>
 <dt><b>edalias()</b></dt><dd>
@@ -723,63 +708,8 @@ Edit given alias.
 Edit given shell function.
 <p></p>
 </dd>
-<dt><b>ewicti()</b></dt><dd>
-Looks up the first argument (optional in the english Wiktionary
-which is an online dictionary (See: <a href="http://en.wiktionary.org/">http://en.wiktionary.org/</a>).
-<p></p>
-</dd>
-<dt><b>exirename()</b></dt><dd>
-Renames image files based on date/time informations in their exif headers.
-<p></p>
-</dd>
-<dt><b>fir()</b></dt><dd>
-Opens given URL with Firefox (Iceweasel on Debian). If there is already an
-instance of firefox running, attaches to the first window found and opens the
-URL in a new tab (this even works across an ssh session).
-<p></p>
-</dd>
-<dt><b>fluxkey-change()</b></dt><dd>
-Switches the key combinations for changing current workspace under fluxbox(1)
-from Alt-[0-9] to Alt-F[0-9] and vice versa by rewriting $HOME/.fluxbox/keys.
-Requires the window manager to reread configuration to take effect.
-<p></p>
-</dd>
 <dt><b>freload()</b></dt><dd>
 Reloads an autoloadable shell function (See autoload in zshbuiltins(1)).
-<p></p>
-</dd>
-<dt><b>genthumbs()</b></dt><dd>
-A simple thumbnails generator. Resizes images (i. e. files that end in ".jpg",
-".jpeg", ".gif" or ".png") to 100x200. Output files are named "thumb-&lt;original
-filename&gt;". Creates an index.html with title "Images" showing the
-thumbnails as clickable links to the respective original file.
-<i>Warning:</i> On start genthumbs() silently removes a possibly existing "index.html"
-and all files and/or directories beginning with "thumb-" in current directory!
-<p></p>
-</dd>
-<dt><b>get_tw_cli()</b></dt><dd>
-Fetches 3ware RAID controller software using get_3ware(1).
-<p></p>
-</dd>
-<dt><b>gex()</b></dt><dd>
-Performs an exact (i. e. quoted) web search using Google.
-<p></p>
-</dd>
-<dt><b>ggogle()</b></dt><dd>
-Searches the arguments on Google Groups, a web to USENET gateway.
-<p></p>
-</dd>
-<dt><b>google()</b></dt><dd>
-Searches the search engine Google using arguments as search string.
-<p></p>
-</dd>
-<dt><b>greph()</b></dt><dd>
-Searches the zsh command history for a regular expression.
-<p></p>
-</dd>
-<dt><b>hex()</b></dt><dd>
-Prints the hexadecimal representation of the number supplied as argument
-(base ten only).
 <p></p>
 </dd>
 <dt><b>hgdi()</b></dt><dd>
@@ -793,21 +723,6 @@ argument means last revision).
 </dd>
 <dt><b>hidiff()</b></dt><dd>
 Outputs highlighted diff; needs highstring(1).
-<p></p>
-</dd>
-<dt><b>hl()</b></dt><dd>
-Shows source files in less(1) with syntax highlighting. Run "hl -h"
-for detailed usage information.
-<p></p>
-</dd>
-<dt><b>ic_get()</b></dt><dd>
-Queries IMAP server (first parameter) for its capabilities. Takes
-port number as optional second argument.
-<p></p>
-</dd>
-<dt><b>ipv6-tunnel()</b></dt><dd>
-Sets up an IPv6 tunnel on interface sit1. Needs one argument -
-either "start", "stop" or "status".
 <p></p>
 </dd>
 <dt><b>is4()</b></dt><dd>
@@ -859,92 +774,15 @@ environment variables to UTF-8.
 Returns true, if run within an utf environment, else false.
 <p></p>
 </dd>
-<dt><b>iwclient()</b></dt><dd>
-Searches a wireless interface and runs dhclient(8) on it.
-<p></p>
-</dd>
-<dt><b>lcheck()</b></dt><dd>
-Lists libraries that define the symbol containing the string given as
-parameter.
-<p></p>
-</dd>
-<dt><b>limg()</b></dt><dd>
-Lists images (i. e. files ending with ".jpg", ".gif" or ".png") in current
-directory.
-<p></p>
-</dd>
-<dt><b>linenr()</b></dt><dd>
-Prints specified range of (numbered) lines of a file.
-Usage: linenr &lt;start&gt;[,&lt;end&gt;] &lt;file&gt;
-<p></p>
-</dd>
-<dt><b>makereadable()</b></dt><dd>
-Creates a PostScript and a PDF file (basename as first argument) from
-source code files.
-<p></p>
-</dd>
-<dt><b>man2()</b></dt><dd>
-Displays manpage in a streched style.
-<p></p>
-</dd>
-<dt><b>manzsh()</b></dt><dd>
-Shows the zshall manpage and jumps to the first match of the regular
-expression optionally given as argument (Needs qma(1)).
-<p></p>
-</dd>
-<dt><b>mcd()</b></dt><dd>
+<dt><b>mkcd()</b></dt><dd>
 Creates directory including parent directories, if necessary. Then changes
 current working directory to it.
-<p></p>
-</dd>
-<dt><b>mdiff()</b></dt><dd>
-Diffs the two arguments recursively and writes the
-output (unified format) to a timestamped file.
-<p></p>
-</dd>
-<dt><b>memusage()</b></dt><dd>
-Prints the summarized memory usage in bytes.
-<p></p>
-</dd>
-<dt><b>mggogle()</b></dt><dd>
-Searches Google Groups for a USENET message-ID.
-<p></p>
-</dd>
-<dt><b>minimal-shell()</b></dt><dd>
-Spawns a minimally set up MirBSD Korn shell. It references no files in /usr,
-so that file system can be unmounted.
-<p></p>
-</dd>
-<dt><b>mkaudiocd()</b></dt><dd>
-Renames all mp3 files in ~/ripps (see audiorip above) to lowercase and
-replaces spaces in file names with underscores. Then mkaudiocd()
-normalizes the files and recodes them to WAV.
-<p></p>
-</dd>
-<dt><b>mkiso()</b></dt><dd>
-Creates an iso9660 filesystem image with Rockridge and Joliet extensions
-enabled using mkisofs(8). Prompts the user for volume name, filename and
-target directory.
-<p></p>
-</dd>
-<dt><b>mkmaildir()</b></dt><dd>
-Creates a directory with first parameter as name inside $MAILDIR_ROOT
-(defaults to $HOME/Mail) and subdirectories cur, new and tmp.
-<p></p>
-</dd>
-<dt><b>mmake()</b></dt><dd>
-Runs "make install" and logs the output under ~/.errorlogs/; useful for
-a clean deinstall later.
 <p></p>
 </dd>
 <dt><b>modified()</b></dt><dd>
 Lists files in current directory, which have been modified within the
 last N days. N is an integer to be passed as first and only argument.
 If no argument is specified N is set to 1.
-<p></p>
-</dd>
-<dt><b>netcraft()</b></dt><dd>
-Asks netcraft.com for informations about the site given as argument.
 <p></p>
 </dd>
 <dt><b>nt()</b></dt><dd>
@@ -960,47 +798,9 @@ Example usages:
 </pre>
 <p></p>
 </dd>
-<dt><b>ogg2mp3_192()</b></dt><dd>
-Recodes an ogg file to mp3 with a bitrate of 192.
-<p></p>
-</dd>
-<dt><b>oleo()</b></dt><dd>
-Translates the given word using the english - german online
-dictionary dict.leo.org.
-<p></p>
-</dd>
-<dt><b>peval()</b></dt><dd>
-Evaluates a perl expression; useful as command line
-calculator, therefore also available as "calc".
-<p></p>
-</dd>
-<dt><b>plap()</b></dt><dd>
-Lists all occurrences of the string given as argument in current $PATH.
-<p></p>
-</dd>
 <dt><b>profile()</b></dt><dd>
 Runs a command in $SHELL with profiling enabled (See startup variable
 ZSH_PROFILE_RC above).
-<p></p>
-</dd>
-<dt><b>purge()</b></dt><dd>
-Removes typical temporary files (i. e. files like "*~", ".*~", "#*#", "*.o",
-"a.out", "*.core", "*.cmo", "*.cmi" and ".*.swp") from current directory.
-Asks for confirmation.
-<p></p>
-</dd>
-<dt><b>readme()</b></dt><dd>
-Opens all README-like files in current working directory with the program
-defined in the $PAGER environment variable.
-<p></p>
-</dd>
-<dt><b>refunc()</b></dt><dd>
-Reloads functions given as parameters.
-<p></p>
-</dd>
-<dt><b>regcheck()</b></dt><dd>
-Checks whether a regular expression (first parameter) matches a string
-(second parameter) using perl.
 <p></p>
 </dd>
 <dt><b>salias()</b></dt><dd>
@@ -1008,59 +808,16 @@ Creates an alias whith sudo prepended, if $EUID is not zero. Run "salias -h"
 for details. See also xunfunction() below.
 <p></p>
 </dd>
-<dt><b>selhist()</b></dt><dd>
-Greps the history for the string provided as parameter and shows the numbered
-findings in default pager. On exit of the pager the user is prompted for a
-number. The shells readline buffer is then filled with the corresponding
-command line.
-<p></p>
-</dd>
-<dt><b>setenv()</b></dt><dd>
-Reimplementation of the csh(1) builtin setenv.
-<p></p>
-</dd>
-<dt><b>show-archive()</b></dt><dd>
-Lists the contents of a (compressed) archive with the appropriate programs.
-The choice is made along the filename extension.
-<p></p>
-</dd>
-<dt><b>shtar()</b></dt><dd>
-Lists the content of a gzipped tar archive in default pager.
-<p></p>
-</dd>
-<dt><b>shzip()</b></dt><dd>
-Shows the content of a zip archive in default pager.
-<p></p>
-</dd>
 <dt><b>simple-extract()</b></dt><dd>
-Tries to uncompress/unpack given file with the appropriate programs. The
-choice is made along the filename ending.
+Tries to uncompress/unpack given files with the appropriate programs. If an URI
+starting with https, http or ftp is provided simple-extract tries to download
+and then uncompress/unpack the file. The choice is made along the filename
+ending. simple-extract will not delete the original archive (even on .gz,.bz2 or
+.xz) unless you use the '-d' option.
 <p></p>
 </dd>
 <dt><b>sll()</b></dt><dd>
 Prints details of symlinks given as arguments.
-<p></p>
-</dd>
-<dt><b>slow_print()</b></dt><dd>
-Prints the arguments slowly by sleeping 0.08 seconds between each character.
-<p></p>
-</dd>
-<dt><b>smartcompress()</b></dt><dd>
-Compresses/archives the file given as first parameter. Takes an optional
-second argument, which denotes the compression/archive type as typical
-filename extension; defaults to "tar.gz".
-<p></p>
-</dd>
-<dt><b>smart-indent()</b></dt><dd>
-Indents C source code files given; uses Kernighan &amp; Ritchie style.
-<p></p>
-</dd>
-<dt><b>sshot()</b></dt><dd>
-Creates directory named shots in user's home directory, if it does not yet
-exist and changes current working directory to it. Then sleeps 5 seconds,
-so you have plenty of time to switch desktops/windows. Then makes a screenshot
-of the current desktop. The result is stored in ~/shots to a timestamped
-jpg file.
 <p></p>
 </dd>
 <dt><b>ssl-cert-fingerprints</b></dt><dd>
@@ -1092,19 +849,6 @@ Example usage:
 </pre>
 <p></p>
 </dd>
-<dt><b>status()</b></dt><dd>
-Shows some information about current system status.
-<p></p>
-</dd>
-<dt><b>swiki()</b></dt><dd>
-Searches articles in the german Wikipedia for the term given as argument.
-<p></p>
-</dd>
-<dt><b>swspeak()</b></dt><dd>
-Sets up software synthesizer by calling swspeak-setup(8). Kernel boot option
-swspeak must be set for this to work.
-<p></p>
-</dd>
 <dt><b>trans()</b></dt><dd>
 Translates a word from german to english (-D) or vice versa (-E).
 <p></p>
@@ -1113,33 +857,13 @@ Translates a word from german to english (-D) or vice versa (-E).
 Shows upstreams changelog of a given package in $PAGER.
 <p></p>
 </dd>
-<dt><b>udiff()</b></dt><dd>
-Makes a unified diff of the command line arguments trying hard to find a
-smaller set of changes. Descends recursively into subdirectories. Ignores
-hows some information about current status.
-<p></p>
-</dd>
-<dt><b>uopen()</b></dt><dd>
-Downloads and displays a file using a suitable program for its
-Content-Type.
-<p></p>
-</dd>
 <dt><b>uprint()</b></dt><dd>
 Works around the "print -l ${(u)foo}"-limitation on zsh older than 4.2.
-<p></p>
-</dd>
-<dt><b>urlencode()</b></dt><dd>
-Takes a string as its first argument and prints it RFC 2396 URL encoded to
-standard out.
 <p></p>
 </dd>
 <dt><b>utf2iso()</b></dt><dd>
 Changes every occurrence of the string UTF-8 or utf-8 in environment
 variables to iso885915.
-<p></p>
-</dd>
-<dt><b>viless()</b></dt><dd>
-Vim as pager.
 <p></p>
 </dd>
 <dt><b>vim()</b></dt><dd>
@@ -1148,35 +872,10 @@ variable VIM_OPTIONS on the command line. So the user may define command
 line options, she always wants, in her .zshrc.local.
 <p></p>
 </dd>
-<dt><b>vman()</b></dt><dd>
-Use vim(1) as manpage reader.
-<p></p>
-</dd>
 <dt><b>whatwhen()</b></dt><dd>
 Searches the history for a given pattern and lists the results by date.
 The first argument is the search pattern. The second and third ones are
 optional and denote a search range (default: -100).
-<p></p>
-</dd>
-<dt><b>weather()</b></dt><dd>
-Retrieves and prints weather information from "<a href="http://weather.noaa.gov">http://weather.noaa.gov</a>".
-The first and only argument is the ICAO code for the desired station.
-For a list of ICAO codes see
-"<a href="http://en.wikipedia.org/wiki/List_of_airports_by_ICAO_code">http://en.wikipedia.org/wiki/List_of_airports_by_ICAO_code</a>".
-<p></p>
-</dd>
-<dt><b>wikide()</b></dt><dd>
-Looks up the argument on Wikipedia (german).
-<p></p>
-</dd>
-<dt><b>wikien()</b></dt><dd>
-Looks up the argument on Wikipedia (english).
-<p></p>
-</dd>
-<dt><b>wodeb()</b></dt><dd>
-Searches the list of official debian packages for the term given as
-first argument. The optional second argument denotes the distribution
-(stable, testing or unstable) and defaults to unstable.
 <p></p>
 </dd>
 <dt><b>xcat()</b></dt><dd>
@@ -1197,13 +896,6 @@ arguments for details.
 </dd>
 <dt><b>xunfunction()</b></dt><dd>
 Removes the functions salias, xcat, xsource, xunfunction and zrcautoload.
-<p></p>
-</dd>
-<dt><b>zg()</b></dt><dd>
-Search for patterns in grml's zshrc using perl. zg takes no or exactly one
-option plus a non empty pattern. Run zg without any arguments for a listing
-of available command line switches. For a zshrc not in /etc/zsh, set the
-GRML_ZSHRC environment variable.
 <p></p>
 </dd>
 <dt><b>zrcautoload()</b></dt><dd>
@@ -1285,29 +977,6 @@ available packages are fetched from the location(s) specified in
 upgrade or dist-upgrade; run by sudo, if necessary.
 <p></p>
 </dd>
-<dt><b>calc</b> (<i>peval</i>)</dt><dd>
-Evaluates a perl expression (see peval() above); useful as a command line
-calculator.
-<p></p>
-</dd>
-<dt><b>CH</b> (<i>./configure --help</i>)</dt><dd>
-Lists available compilation options for building program from source.
-<p></p>
-</dd>
-<dt><b>cmplayer</b> (<i>mplayer -vo fbdev</i>)</dt><dd>
-Video player with framebuffer as video output device, so you can watch
-videos on a virtual tty. Hint: Using fbdev2 allows you to use the shell
-while watching a movie.
-<p></p>
-</dd>
-<dt><b>CO</b> (<i>./configure</i>)</dt><dd>
-Prepares compilation for building program from source.
-<p></p>
-</dd>
-<dt><b>cp</b> (<i>nocorrect cp</i>)</dt><dd>
-cp(1) without spelling correction.
-<p></p>
-</dd>
 <dt><b>da</b> (<i>du -sch</i>)</dt><dd>
 Prints the summarized disk usage of the arguments as well as a grand total
 in human readable format.
@@ -1321,28 +990,9 @@ Builds binary or source packages from sources (See: dpkg-buildpackage(1)).
 Prints installed Packages sorted by size (descending).
 <p></p>
 </dd>
-<dt><b>default</b> (<i>echo -en [ escape sequence ]</i>)</dt><dd>
-Sets font of xterm to "-misc-fixed-medium-r-normal-*-*-140-*-*-c-*-iso8859-15"
-using escape sequence.
-<p></p>
-</dd>
 <dt><b>dir</b> (<i>ls -lSrah</i>)</dt><dd>
 Lists files (including dot files) sorted by size (biggest last) in long and
 human readable output format.
-<p></p>
-</dd>
-<dt><b>fblinks</b> (<i>links2 -driver fb</i>)</dt><dd>
-A Web browser on the framebuffer device. So you can browse images and click
-links on the virtual tty.
-<p></p>
-</dd>
-<dt><b>fbmplayer</b> (<i>mplayer -vo fbdev -fs -zoom</i>)</dt><dd>
-Fullscreen Video player with the framebuffer as video output device. So you
-can watch videos on a virtual tty.
-<p></p>
-</dd>
-<dt><b>g</b> (<i>git</i>)</dt><dd>
-Revision control system by Linus Torvalds.
 <p></p>
 </dd>
 <dt><b>ge</b> (<i>grep-excuses</i>)</dt><dd>
@@ -1352,14 +1002,6 @@ grep-excuses(1)).
 </dd>
 <dt><b>grep</b> (<i>grep --color=auto</i>)</dt><dd>
 Shows grep output in nice colors, if available.
-<p></p>
-</dd>
-<dt><b>GREP</b> (<i>grep -i --color=auto</i>)</dt><dd>
-Case insensitive grep with colored output.
-<p></p>
-</dd>
-<dt><b>grml-rebuildfstab</b> (<i>rebuildfstab -v -r -config</i>)</dt><dd>
-Scans for new devices and updates /etc/fstab according to the findings.
 <p></p>
 </dd>
 <dt><b>grml-version</b> (<i>cat /etc/grml_version</i>)</dt><dd>
@@ -1390,19 +1032,6 @@ ssh with possible man-in-the-middle attack enabled
 Runs the function H-Glob() to expand or explain wildcards.
 <p></p>
 </dd>
-<dt><b>hide</b> (<i>echo -en [ escape sequence ]</i>)</dt><dd>
-Tries to hide xterm window using escape sequence.
-<p></p>
-</dd>
-<dt><b>hidiff</b> (<i>histring -fE '^Comparing files .*|^diff .*' | histring -c yellow -fE '^\-.*' | histring -c green -fE '^\+.*'</i>)</dt><dd>
-If histring(1) is installed, highlight important stuff in diff(1) output.
-<p></p>
-</dd>
-<dt><b>huge</b> (<i>echo -en [ escape sequence ]</i>)</dt><dd>
-Sets huge font in xterm ("-misc-fixed-medium-r-normal-*-*-210-*-*-c-*-iso8859-15")
-using escape sequence.
-<p></p>
-</dd>
 <dt><b>j</b> (<i>jobs -l</i>)</dt><dd>
 Prints status of jobs in the current shell session in long format.
 <p></p>
@@ -1419,11 +1048,6 @@ starting with ".".
 </dd>
 <dt><b>lad</b> (<i>ls -d .*(/)</i>)</dt><dd>
 Lists the dot directories (not their contents) in current directory.
-<p></p>
-</dd>
-<dt><b>large</b> (<i>echo -en [ escape sequence ]</i>)</dt><dd>
-Sets large font in xterm ("-misc-fixed-medium-r-normal-*-*-150-*-*-c-*-iso8859-15")
-using escape sequence.
 <p></p>
 </dd>
 <dt><b>lh</b> (<i>ls -hAl --color=auto</i>)</dt><dd>
@@ -1471,8 +1095,16 @@ Lists symbolic links in current directory.
 Displays the ten newest files (long output format).
 <p></p>
 </dd>
+<dt><b>lsnewdir</b> (<i>ls -rthdl *(/om[1,10]) .*(D/om[1,10])</i>)</dt><dd>
+Displays the ten newest directories and ten newest .directories.
+<p></p>
+</dd>
 <dt><b>lsold</b> (<i>ls -rtlh *(D.om[1,10])</i>)</dt><dd>
 Displays the ten oldest files (long output format).
+<p></p>
+</dd>
+<dt><b>lsolddir</b> (<i>ls -rthdl *(/Om[1,10]) .*(D/Om[1,10])</i>)</dt><dd>
+Displays the ten oldest directories and ten oldest .directories.
 <p></p>
 </dd>
 <dt><b>lss</b> (<i>ls -l *(s,S,t)</i>)</dt><dd>
@@ -1493,39 +1125,17 @@ world executable (long output format).
 Lists only executable files.
 <p></p>
 </dd>
-<dt><b>md</b> (<i>mkdir -p</i>)</dt><dd>
-Creates directory including parent directories, if necessary
-<p></p>
-</dd>
 <dt><b>mdstat</b> (<i>cat /proc/mdstat</i>)</dt><dd>
 Lists all active md (i.e. linux software raid) devices with some information
 about them.
-<p></p>
-</dd>
-<dt><b>medium</b> (<i>echo -en [ escape sequence ]</i>)</dt><dd>
-Sets medium sized font
-("-misc-fixed-medium-r-normal--13-120-75-75-c-80-iso8859-15") in xterm
-using escape sequence.
-<p></p>
-</dd>
-<dt><b>mkdir</b> (<i>nocorrect mkdir</i>)</dt><dd>
-mkdir(1) without spelling correction.
 <p></p>
 </dd>
 <dt><b>mq</b> (<i>hg -R $(readlink -f $(hg root)/.hg/patches)</i>)</dt><dd>
 Executes the commands on the versioned patch queue from current repository.
 <p></p>
 </dd>
-<dt><b>mv</b> (<i>nocorrect mv</i>)</dt><dd>
-mv(1) without spelling correction.
-<p></p>
-</dd>
-<dt><b>rd</b> (<i>rmdir</i>)</dt><dd>
-Short rmdir(1) (remove directory).
-<p></p>
-</dd>
-<dt><b>rm</b> (<i>nocorrect rm</i>)</dt><dd>
-rm(1) without spelling correction.
+<dt><b>rmcdir</b> (<i>'cd ..; rmdir $OLDPWD || cd $OLDPWD</i>)</dt><dd>
+rmdir current working directory
 <p></p>
 </dd>
 <dt><b>screen</b> (<i>/usr/bin/screen -c ${HOME}/.screenrc</i>)</dt><dd>
@@ -1533,48 +1143,6 @@ If invoking user is root, starts screen session with /etc/grml/screenrc
 as config file. If invoked by a regular user, start a screen session
 with users .screenrc config if it exists, else use /etc/grml/screenrc_grml
 as configuration.
-<p></p>
-</dd>
-<dt><b>rw-</b> (<i>chmod 600</i>)</dt><dd>
-Grants read and write permission of a file to the owner and nobody else.
-<p></p>
-</dd>
-<dt><b>rwx</b> (<i>chmod 700</i>)</dt><dd>
-Grants read, write and execute permission of a file to the owner and nobody
-else.
-<p></p>
-</dd>
-<dt><b>r--</b> (<i>chmod 644</i>)</dt><dd>
-Grants read and write permission of a file to the owner and read-only to
-anybody else.
-<p></p>
-</dd>
-<dt><b>r-x</b> (<i>chmod 755</i>)</dt><dd>
-Grants read, write and execute permission of a file to the owner and
-read-only plus execute permission to anybody else.
-<p></p>
-</dd>
-<dt><b>S</b> (<i>screen</i>)</dt><dd>
-Short for screen(1).
-<p></p>
-</dd>
-<dt><b>s</b> (<i>ssh</i>)</dt><dd>
-Short for ssh(1).
-<p></p>
-</dd>
-<dt><b>semifont</b> (<i>echo -en [ escape sequence ]</i>)</dt><dd>
-Sets font of xterm to
-"-misc-fixed-medium-r-semicondensed-*-*-120-*-*-*-*-iso8859-15" using
-escape sequence.
-<p></p>
-</dd>
-<dt><b>small</b> (<i>echo -en [ escape sequence ]</i>)</dt><dd>
-Sets small xterm font ("6x10") using escape sequence.
-<p></p>
-</dd>
-<dt><b>smartfont</b> (<i>echo -en [ escape sequence ]</i>)</dt><dd>
-Sets font of xterm to "-artwiz-smoothansi-*-*-*-*-*-*-*-*-*-*-*-*" using
-escape sequence.
 <p></p>
 </dd>
 <dt><b>su</b> (<i>sudo su</i>)</dt><dd>
@@ -1592,24 +1160,8 @@ Sets mode from ISO 2022 to UTF-8 (See:
 <a href="http://www.cl.cam.ac.uk/~mgk25/unicode.html#term">http://www.cl.cam.ac.uk/~mgk25/unicode.html#term</a>).
 <p></p>
 </dd>
-<dt><b>tiny</b> (<i>echo -en [ escape sequence ]</i>)</dt><dd>
-Sets tiny xterm font
-("-misc-fixed-medium-r-normal-*-*-80-*-*-c-*-iso8859-15") using escape
-sequence.
-<p></p>
-</dd>
 <dt><b>tlog</b> (<i>tail -f /var/log/syslog</i>)</dt><dd>
 Prints syslog continuously (See tail(1)).
-<p></p>
-</dd>
-<dt><b>top10</b> (<i>print -l ? ${(o)history%% *} | uniq -c | sort -nr | head -n 10</i>)</dt><dd>
-Prints the ten most used shell commands.
-<p></p>
-</dd>
-<dt><b>truec</b> (<i>truecrypt [ mount options ]</i>)</dt><dd>
-Mount a truecrypt volume with some reasonable mount options
-("rw,sync,dirsync,users,uid=1000,gid=users,umask=077" and "utf8", if
-available).
 <p></p>
 </dd>
 <dt><b>up</b> (<i>aptitude update ; aptitude safe-upgrade</i>)</dt><dd>
@@ -1622,23 +1174,12 @@ After calling, characters of URLs as typed get automatically escaped, if necessa
 protect them from the shell.
 <p></p>
 </dd>
-<dt><b>0</b> (<i>return 0</i>)</dt><dd>
-Gives a clean prompt (i.e. without $?).
-<p></p>
-</dd>
 <dt><b>$(uname -r)-reboot</b> (<i>kexec -l --initrd=/boot/initrd.img-"$(uname -r)" --command-line=\"$(cat /proc/cmdline)\" /boot/vmlinuz-"$(uname -r)"</i>)</dt><dd>
 Reboots using kexec(8) and thus reduces boot time by skipping hardware initialization of BIOS/firmware.
 <p></p>
 </dd>
 <dt><b>...</b> (<i>cd ../../</i>)</dt><dd>
 Changes current directory two levels higher.
-<p></p>
-</dd>
-<dt><b>?</b> (<i>qma zshall</i>)</dt><dd>
-Runs the grml script qma (quick manual access) to build the collected man
-pages for the z-shell. This compressed file is kept at
-~/man/zshall.txt.lzo Once it is built, the second use of the alias '?' is
-fast. See "man qma" for further information.
 </dd>
 </dl>
 <h1>AUXILIARY FILES</h1>
@@ -1686,7 +1227,6 @@ On non-debian systems, that is not an option, but all is not lost:
 <pre>
 % wget -O .zshrc http://git.grml.org/f/grml-etc-core/etc/zsh/zshrc
 </pre>
-<p></p>
 <p>
 If you would also like to get seperate function files (which you can put into
 your <b>$fpath</b>), you can browse and download them at:
@@ -1833,7 +1373,6 @@ repository from git.grml.org:
 <pre>
 % git clone git://git.grml.org/grml-etc-core.git
 </pre>
-<p></p>
 <p>
 Make your changes, commit them; use '<b>git format-patch</b>' to create a series
 of patches and send those to the following address via '<b>git send-email</b>':
@@ -1842,7 +1381,6 @@ of patches and send those to the following address via '<b>git send-email</b>':
 <pre>
 grml-etc-core@grml.org
 </pre>
-<p></p>
 <p>
 Doing so makes sure the right people get your patches for review and
 possibly inclusion.
@@ -1876,17 +1414,17 @@ Beckert &lt;<a href="mailto:abe@deuxchevaux.org">abe@deuxchevaux.org</a>&gt;.
 </p>
 <h1>COPYRIGHT</h1>
 <p>
-Copyright (c) 2009-2010 grml project &lt;<a href="http://grml.org">http://grml.org</a>&gt;
+Copyright (c) 2009-2013 Grml project &lt;<a href="http://grml.org">http://grml.org</a>&gt;
 </p>
 <p>
 This manpage is distributed under the terms of the GPL version 2.
 </p>
 <p>
 Most parts of grml's zshrc are distributed under the terms of GPL v2, too,
-except for <b>accept-line()</b> and <b>vcs_info()</b>, which are distributed under
-the same conditions as zsh itself (which is BSD-like).
+except for <b>accept-line()</b> which are distributed under the same conditions
+as zsh itself (which is BSD-like).
 </p>
 </div>
-<!-- xhtml code generated by txt2tags 2.5 (http://txt2tags.sf.net) -->
+<!-- xhtml code generated by txt2tags 2.6 (http://txt2tags.org) -->
 <!-- cmdline: txt2tags -\-target xhtml -\-css-sugar -\-style t2t-modern.css -o- grmlzshrc.t2t -->
 </body></html>
