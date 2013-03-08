@@ -34,7 +34,13 @@
 
         <h2>Known Bugs in Grml 2013.02</h2>
 
-        <p>None at the time of the release!</p>
+	<!--
+	<p>None at the time of the release!</p>
+	-->
+
+	<ul>
+	  <li>grml-debootstrap: installation of 32bit systems lack kernel package, details and solution available in <a href="http://bts.grml.org/grml/issue1238">Issue 1238</a></li>
+	</ul>
 
         <h2>Known Bugs in Grml 2012.05</h2>
 
