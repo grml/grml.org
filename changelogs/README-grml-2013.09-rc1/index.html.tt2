@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>grml.org - Release Notes: Grml 2013.07-rc1 - Codename Hefeknuddler</title>
-<meta name="Title" content="grml.org - Release Notes: Grml 2013.07-rc1 Hefeknuddler" />
+<title>grml.org - Release Notes: Grml 2013.09-rc1 - Codename Ponywagon</title>
+<meta name="Title" content="grml.org - Release Notes: Grml 2013.09-rc1 Ponywagon" />
 <meta name="Author" content="the Grml team [grml.org/team/]" />
 <meta name="Keywords" content="grml.org, Grml" />
-<meta name="Description" content="Release Notes of Grml 2013.07-rc1" />
+<meta name="Description" content="Release Notes of Grml 2013.09-rc1" />
 <meta name="Abstract" content="Grml, the linux live-cd for sysadmins and texttool users" />
 <meta name="Robots" content="index,follow" />
 <meta name="Language" content="english" />
@@ -24,8 +24,8 @@
 
       <div class="content">
 
-        <h1>Release Notes for Grml 2013.07-rc1 - codename <a
-        href="/faq/#releasename">Hefeknuddler</a></h1>
+        <h1>Release Notes for Grml 2013.09-rc1 - codename <a
+        href="/faq/#releasename">Ponywagon</a></h1>
 
         <p><a href="http://grml.org/download/prerelease/">Download Now</a></p>
 
@@ -72,8 +72,8 @@
 
         <p>Details about shipped packages and their versions on Grml are
         available at the <a href="/files/#debian">Debian section</a>. Visit
-        <a href="/files/grml64-full_2013.07/dpkg.list">dpkg_list</a> for a
-        detailed list of packages shipped with Grml 2013.07(-rc1).</p>
+        <a href="/files/grml64-full_2013.09/dpkg.list">dpkg_list</a> for a
+        detailed list of packages shipped with Grml 2013.09(-rc1).</p>
 
         <h3>Updates</h3>
 
@@ -99,9 +99,9 @@
 
         </ul>
 
-        <h3>Download Grml 2013.07-rc1</h3>
+        <h3>Download Grml 2013.09-rc1</h3>
 
-        <p>Grml 2013.07-rc1 can be downloaded from
+        <p>Grml 2013.09-rc1 can be downloaded from
         <a href="http://grml.org/download/prerelease/">grml.org/download/prerelease/</a>.</p>
 
         <h3>Feedback</h3>
@@ -117,7 +117,7 @@
         <h3>Thanks</h3>
 
         <p>Many thanks in this release go to (alphabetically)
-        TODO
+        Till Maas,
         for their contributions.</p>
 
         <h3>More Information</h3>
