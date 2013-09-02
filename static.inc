@@ -14,7 +14,6 @@
               <p>
                 <a class="plain" href="http://blog.grml.org/">Blog</a> &nbsp;
                 <a href="https://www.twitter.com/grmlproject"><img src="/img/twitter.png" alt="Follow grmlproject on Twitter" class="absmiddle" /></a>
-                <a href="https://identi.ca/grml"><img src="/img/identica.png" alt="Follow grml on identi.ca" class="absmiddle" /></a>
                 <br/>
 
                 <a class="plain" href="/changelogs/">Release Notes</a><br/>
