@@ -55,40 +55,40 @@
 
         <h2><a name="debian"></a>Package lists for the current release</h2>
 
-        <h3>grml32-full 2013.02[-rc1]</h3>
+        <h3>grml32-full 2013.09[-rc1]</h3>
 
         <ul>
-          <li><a href="grml32-full_2013.02/dpkg.selections">dpkg.selections</a> - software package listing</li>
-          <li><a href="grml32-full_2013.02/dpkg.list">dpkg.list</a> - more detailed package list including version information</li>
+          <li><a href="grml32-full_2013.09/dpkg.selections">dpkg.selections</a> - software package listing</li>
+          <li><a href="grml32-full_2013.09/dpkg.list">dpkg.list</a> - more detailed package list including version information</li>
           <li><a href="http://git.grml.org/?p=grml-live.git;a=blob_plain;f=templates/GRML/grml-cheatcodes.txt;hb=HEAD">grml-cheatcodes.txt</a> - boot options</li>
-          <li><a href="grml32-full_2013.02/nonfree-licenses.txt">nonfree-licenses.txt</a> - a list of used nonfree software and their licenses</li>
+          <li><a href="grml32-full_2013.09/nonfree-licenses.txt">nonfree-licenses.txt</a> - a list of used nonfree software and their licenses</li>
         </ul>
 
-        <h3>grml64-full 2013.02[-rc1]</h3>
+        <h3>grml64-full 2013.09[-rc1]</h3>
 
         <ul>
-          <li><a href="grml64-full_2013.02/dpkg.selections">dpkg.selections</a> - software package listing</li>
-          <li><a href="grml64-full_2013.02/dpkg.list">dpkg.list</a> - more detailed package list including version information</li>
+          <li><a href="grml64-full_2013.09/dpkg.selections">dpkg.selections</a> - software package listing</li>
+          <li><a href="grml64-full_2013.09/dpkg.list">dpkg.list</a> - more detailed package list including version information</li>
           <li><a href="http://git.grml.org/?p=grml-live.git;a=blob_plain;f=templates/GRML/grml-cheatcodes.txt;hb=HEAD">grml-cheatcodes.txt</a> - boot options</li>
-          <li><a href="grml64-full_2013.02/nonfree-licenses.txt">nonfree-licenses.txt</a> - a list of used nonfree software and their licenses</li>
+          <li><a href="grml64-full_2013.09/nonfree-licenses.txt">nonfree-licenses.txt</a> - a list of used nonfree software and their licenses</li>
         </ul>
 
-        <h3>grml32-small 2013.02[-rc1]</h3>
+        <h3>grml32-small 2013.09[-rc1]</h3>
 
         <ul>
-          <li><a href="grml32-small_2013.02/dpkg.selections">dpkg.selections</a> - software package listing</li>
-          <li><a href="grml32-small_2013.02/dpkg.list">dpkg.list</a> - more detailed package list including version information</li>
+          <li><a href="grml32-small_2013.09/dpkg.selections">dpkg.selections</a> - software package listing</li>
+          <li><a href="grml32-small_2013.09/dpkg.list">dpkg.list</a> - more detailed package list including version information</li>
           <li><a href="http://git.grml.org/?p=grml-live.git;a=blob_plain;f=templates/GRML/grml-cheatcodes.txt;hb=HEAD">grml-cheatcodes.txt</a> - boot options</li>
-          <li><a href="grml32-small_2013.02/nonfree-licenses.txt">nonfree-licenses.txt</a> - a list of used nonfree software and their licenses</li>
+          <li><a href="grml32-small_2013.09/nonfree-licenses.txt">nonfree-licenses.txt</a> - a list of used nonfree software and their licenses</li>
         </ul>
 
-        <h3>grml64-small 2013.02[-rc1]</h3>
+        <h3>grml64-small 2013.09[-rc1]</h3>
 
         <ul>
-          <li><a href="grml64-small_2013.02/dpkg.selections">dpkg.selections</a> - software package listing</li>
-          <li><a href="grml64-small_2013.02/dpkg.list">dpkg.list</a> - more detailed package list including version information</li>
+          <li><a href="grml64-small_2013.09/dpkg.selections">dpkg.selections</a> - software package listing</li>
+          <li><a href="grml64-small_2013.09/dpkg.list">dpkg.list</a> - more detailed package list including version information</li>
           <li><a href="http://git.grml.org/?p=grml-live.git;a=blob_plain;f=templates/GRML/grml-cheatcodes.txt;hb=HEAD">grml-cheatcodes.txt</a> - boot options</li>
-          <li><a href="grml64-small_2013.02/nonfree-licenses.txt">nonfree-licenses.txt</a> - a list of used nonfree software and their licenses</li>
+          <li><a href="grml64-small_2013.09/nonfree-licenses.txt">nonfree-licenses.txt</a> - a list of used nonfree software and their licenses</li>
         </ul>
 
       </div>
