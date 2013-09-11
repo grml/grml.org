@@ -44,9 +44,6 @@
           argument, setting password of users root and grml to the specified
           value
 
-          <li>grml-debootstrap: new option <em>--backportrepos</em> to enable the
-          backports.debian.org repository
-
           <li><em>grml-hwinfo</em> supports iproute's ip tool, sg_inq from
           sg3-utils and lscpu, lsblk, dmsetup ls --tree
 
