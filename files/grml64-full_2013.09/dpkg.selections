@@ -65,7 +65,7 @@ console-setup-linux				install
 coreutils					install
 cpio						install
 cpp						install
-cpp-4.7						install
+cpp-4.8						install
 cpufrequtils					install
 cpuid						install
 cron						install
@@ -294,7 +294,7 @@ libcap2:amd64					install
 libcap2-bin					install
 libclamav6					install
 libcli1.9:amd64					install
-libcloog-ppl1:amd64				install
+libcloog-isl4:amd64				install
 libcolord1:amd64				install
 libcomerr2:amd64				install
 libconfig-general-perl				install
@@ -363,7 +363,6 @@ libgif4						install
 libglib2.0-0:amd64				install
 libglibmm-2.4-1c2a:amd64			install
 libgmp10:amd64					install
-libgmpxx4ldbl:amd64				install
 libgnutls-openssl27:amd64			install
 libgnutls26:amd64				install
 libgpg-error0:amd64				install
@@ -404,6 +403,7 @@ libisccc80					install
 libisccfg82					install
 libiscsi-bin					install
 libiscsi1:amd64					install
+libisl10:amd64					install
 libiw30:amd64					install
 libjack-jackd2-0:amd64				install
 libjasper1:amd64				install
@@ -495,18 +495,16 @@ libpng12-0:amd64				install
 libpoppler19:amd64				install
 libpopt0:amd64					install
 libportaudio2:amd64				install
-libppl-c4:amd64					install
-libppl12:amd64					install
 libprocps0:amd64				install
 libprotobuf7					install
 libpulse0:amd64					install
 libpython-stdlib:amd64				install
-libpython2.7					install
-libpython2.7-minimal				install
-libpython2.7-stdlib				install
+libpython2.7:amd64				install
+libpython2.7-minimal:amd64			install
+libpython2.7-stdlib:amd64			install
 libpython3-stdlib:amd64				install
-libpython3.3-minimal				install
-libpython3.3-stdlib				install
+libpython3.3-minimal:amd64			install
+libpython3.3-stdlib:amd64			install
 libquadmath0:amd64				install
 librdmacm1					install
 libreadline5:amd64				install
@@ -570,7 +568,7 @@ libtirpc1:amd64					install
 libtommath0					install
 libts-0.0-0:amd64				install
 libtsk3-3					install
-libudev0:amd64					install
+libudev1:amd64					install
 libuniconf4.6					install
 liburcu1					install
 liburi-perl					install
@@ -718,6 +716,7 @@ pciutils					install
 perl						install
 perl-base					install
 perl-modules					install
+pigz						install
 pm-utils					install
 powermgmt-base					install
 ppp						install
@@ -767,6 +766,7 @@ rsync						install
 rsyslog						install
 ruby						install
 ruby-augeas					install
+ruby-hiera					install
 ruby-json					install
 ruby-safe-yaml					install
 ruby-shadow					install

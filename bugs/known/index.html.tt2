@@ -32,23 +32,26 @@
 
         <p>If you find additional bugs, please <a href="/bugs/">report them</a>.</p>
 
-        <h2>Known Bugs in Grml 2013.02</h2>
+        <h2>Known Bugs in Grml 2013.09</h2>
 
-	<!--
-	<p>None at the time of the release!</p>
-	-->
+        <ul>
+
+          <li><a href="http://bts.grml.org/grml/issue1248">issue1248</a>:
+          grml2usb: does not detect bootflag on second partition
+
+          <li><a href="http://bts.grml.org/grml/issue1270">issue1270</a>:
+          grml-rescueboot does not support md/raid devices
+
+          <li><a href="http://bts.grml.org/grml/issue1273">issue1273</a>:
+          booting via PXE with grml-terminalserver fails on grml96
+
+        </ul>
+
+        <h2>Known Bugs in Grml 2013.02</h2>
 
 	<ul>
 	  <li>grml-debootstrap: installation of 32bit systems lack kernel package, details and solution available in <a href="http://bts.grml.org/grml/issue1238">Issue 1238</a></li>
 	</ul>
-
-        <h2>Known Bugs in Grml 2012.05</h2>
-
-        <ul>
-          <li>DHCP/network actions during bootup are running in foreground, causing delays during booting [Details and workaround available in <a href="http://bts.grml.org/grml/issue1174">Issue 1174</a>]</li>
-          <li>serial console doesn't work: details available in <a href="http://bts.grml.org/grml/issue1175">Issue 1175</a></li>
-          <li>32bit ISOs are not hybrid (AKA dd-able): details available in <a href="http://bts.grml.org/grml/issue1186">Issue 1186</a></li>
-        </ul>
 
 </div>
 

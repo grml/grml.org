@@ -244,8 +244,8 @@ libpipeline1:i386				install
 libpopt0:i386					install
 libprocps0:i386					install
 libpython-stdlib:i386				install
-libpython2.7-minimal				install
-libpython2.7-stdlib				install
+libpython2.7-minimal:i386			install
+libpython2.7-stdlib:i386			install
 libreadline5:i386				install
 libreadline6:i386				install
 libsasl2-2:i386					install
@@ -270,7 +270,7 @@ libtext-wrapi18n-perl				install
 libtimedate-perl				install
 libtinfo5:i386					install
 libtirpc1:i386					install
-libudev0:i386					install
+libudev1:i386					install
 liburi-perl					install
 libusb-0.1-4:i386				install
 libusb-1.0-0:i386				install

@@ -65,7 +65,7 @@ console-setup-linux				install
 coreutils					install
 cpio						install
 cpp						install
-cpp-4.7						install
+cpp-4.8						install
 cpufrequtils					install
 cpuid						install
 cron						install
@@ -294,7 +294,7 @@ libcap2:i386					install
 libcap2-bin					install
 libclamav6					install
 libcli1.9:i386					install
-libcloog-ppl1:i386				install
+libcloog-isl4:i386				install
 libcolord1:i386					install
 libcomerr2:i386					install
 libconfig-general-perl				install
@@ -363,7 +363,6 @@ libgif4						install
 libglib2.0-0:i386				install
 libglibmm-2.4-1c2a:i386				install
 libgmp10:i386					install
-libgmpxx4ldbl:i386				install
 libgnutls-openssl27:i386			install
 libgnutls26:i386				install
 libgpg-error0:i386				install
@@ -404,6 +403,7 @@ libisccc80					install
 libisccfg82					install
 libiscsi-bin					install
 libiscsi1:i386					install
+libisl10:i386					install
 libiw30:i386					install
 libjack-jackd2-0:i386				install
 libjasper1:i386					install
@@ -495,18 +495,16 @@ libpng12-0:i386					install
 libpoppler19:i386				install
 libpopt0:i386					install
 libportaudio2:i386				install
-libppl-c4:i386					install
-libppl12:i386					install
 libprocps0:i386					install
 libprotobuf7					install
 libpulse0:i386					install
 libpython-stdlib:i386				install
-libpython2.7					install
-libpython2.7-minimal				install
-libpython2.7-stdlib				install
+libpython2.7:i386				install
+libpython2.7-minimal:i386			install
+libpython2.7-stdlib:i386			install
 libpython3-stdlib:i386				install
-libpython3.3-minimal				install
-libpython3.3-stdlib				install
+libpython3.3-minimal:i386			install
+libpython3.3-stdlib:i386			install
 libquadmath0:i386				install
 librdmacm1					install
 libreadline5:i386				install
@@ -570,7 +568,7 @@ libtirpc1:i386					install
 libtommath0					install
 libts-0.0-0:i386				install
 libtsk3-3					install
-libudev0:i386					install
+libudev1:i386					install
 libuniconf4.6					install
 liburcu1					install
 liburi-perl					install
@@ -718,6 +716,7 @@ pciutils					install
 perl						install
 perl-base					install
 perl-modules					install
+pigz						install
 pm-utils					install
 powermgmt-base					install
 ppp						install
@@ -767,6 +766,7 @@ rsync						install
 rsyslog						install
 ruby						install
 ruby-augeas					install
+ruby-hiera					install
 ruby-json					install
 ruby-safe-yaml					install
 ruby-shadow					install

@@ -244,8 +244,8 @@ libpipeline1:amd64				install
 libpopt0:amd64					install
 libprocps0:amd64				install
 libpython-stdlib:amd64				install
-libpython2.7-minimal				install
-libpython2.7-stdlib				install
+libpython2.7-minimal:amd64			install
+libpython2.7-stdlib:amd64			install
 libreadline5:amd64				install
 libreadline6:amd64				install
 libsasl2-2:amd64				install
@@ -270,7 +270,7 @@ libtext-wrapi18n-perl				install
 libtimedate-perl				install
 libtinfo5:amd64					install
 libtirpc1:amd64					install
-libudev0:amd64					install
+libudev1:amd64					install
 liburi-perl					install
 libusb-0.1-4:amd64				install
 libusb-1.0-0:amd64				install
