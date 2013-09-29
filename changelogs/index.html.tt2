@@ -32,12 +32,13 @@
         <h2>Current release</h2>
 
 	<p>
-        <a href="README-grml-2013.02/">Release announcement for Grml 2013.02 - codename Grumpy Grinch</a>
+        <a href="README-grml-2013.09/">Release announcement for Grml 2013.09 - codename Hefeknuddler</a>
 	</p>
 
         <h2>Previous releases</h2>
 
         <ul>
+	  <li><a href="README-grml-2013.02/">Grml 2013.02</a> - codename Grumpy Grinch</li>
 	  <li><a href="README-grml-2012.05/">Grml 2012.05</a> - codename Ponyhof</li>
 	  <li><a href="README-grml-2011.12/">Grml 2011.12</a> - codename Knecht Rootrecht</li>
           <li><a href="README-grml-2011.05/">Grml 2011.05</a> - codename Just Mari</li>
