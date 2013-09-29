@@ -44,26 +44,27 @@
 
             <p style="text-align: center;">
             <b>The current release:</b><br/><br/>
-            <a href="/download/" class="button" style="padding: 12px; font-weight: bold;"><span>Download Grml 2013.02</span></a>
+            <a href="/download/" class="button" style="padding: 12px; font-weight: bold;"><span>Download Grml 2013.09</span></a>
             </p>
             <br />
 
+            <!--
             <p style="text-align: center;">
             <b>Pre-Release:</b><br/><br/>
             <a href="/download/prerelease/" class="button" style="padding: 12px; font-weight: bold;"><span>Download Grml 2013.09-rc1</span></a>
             </p>
             <br />
+            -->
 
             <img style="float: right; margin-left: 20px" src="/img/grmltux_small.jpg" alt="*" />
             <br />
 
             <h2>News</h2>
             <div class="news">
+            <p>29 Sep 2013: New <a href="/changelogs/README-grml-2013.09/">stable release version 2013.09</a> is available <a href="/download/">for download</a></p>
             <p>11 Sep 2013: Release candidate version <a href="/changelogs/README-grml-2013.09-rc1/">2013.09-rc1</a> available</p>
             <p>02 Apr 2013: <a href="http://blog.grml.org/archives/381-grml-zshrc-new-prompt-feature.html">grml-zshrc: new prompt feature</a></p>
-            <p>28 Feb 2013: <a href="http://blog.grml.org/archives/380-Warning-broken-grml96-full_2013.02.iso-download.html">Warning: broken grml96-full_2013.02.iso download</a></p>
             <p>27 Feb 2013: New <a href="/changelogs/README-grml-2013.02/">stable release version 2013.02</a> is available <a href="/download/">for download</a></p>
-            <p>18 Feb 2013: Release candidate version <a href="/changelogs/README-grml-2013.02-rc1/">2013.02-rc1</a> available</p>
             </div>
 
       </div>
