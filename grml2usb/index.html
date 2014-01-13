@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
 <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
-<meta name="generator" content="AsciiDoc 8.6.7" />
+<meta name="generator" content="AsciiDoc 8.6.9" />
 <title>grml2usb(8)</title>
 <style type="text/css">
 /* Shared CSS for AsciiDoc xhtml11 and html5 backends */
@@ -87,9 +87,15 @@ ul, ol, li > p {
 ul > li     { color: #aaa; }
 ul > li > * { color: black; }
 
-pre {
+.monospaced, code, pre {
+  font-family: "Courier New", Courier, monospace;
+  font-size: inherit;
+  color: navy;
   padding: 0;
   margin: 0;
+}
+pre {
+  white-space: pre-wrap;
 }
 
 #author {
@@ -219,7 +225,7 @@ div.exampleblock > div.content {
 }
 
 div.imageblock div.content { padding-left: 0; }
-span.image img { border-style: none; }
+span.image img { border-style: none; vertical-align: text-bottom; }
 a.image:visited { color: white; }
 
 dl {
@@ -415,12 +421,6 @@ div.unbreakable { page-break-inside: avoid; }
  *
  * */
 
-tt {
-  font-family: "Courier New", Courier, monospace;
-  font-size: inherit;
-  color: navy;
-}
-
 div.tableblock {
   margin-top: 1.0em;
   margin-bottom: 1.5em;
@@ -453,12 +453,6 @@ div.tableblock > table[frame="vsides"] {
  * html5 specific
  *
  * */
-
-.monospaced {
-  font-family: "Courier New", Courier, monospace;
-  font-size: inherit;
-  color: navy;
-}
 
 table.tableblock {
   margin-top: 1.0em;
@@ -539,6 +533,8 @@ body.manpage div.sectionbody {
 @media print {
   body.manpage div#toc { display: none; }
 }
+
+
 </style>
 <script type="text/javascript">
 /*<![CDATA[*/
@@ -994,7 +990,7 @@ Enable verbose mode.
 <h3 id="directory-layout">5.1. Directory layout on usb device</h3>
 <div class="literalblock">
 <div class="content">
-<pre><tt>boot/ -&gt;
+<pre><code>boot/ -&gt;
   |-- addons/
   |   |-- allinone.img     [grub - all in one image]
   |   |-- bsd4grml/        [MirBSD]
@@ -1028,11 +1024,11 @@ Enable verbose mode.
   `-- syslinux/
       |-- grml.png         [graphical bootsplash background image for syslinux]
       |-- syslinux.cfg     [main configuration file for syslinux]
-      `-- [....]           [several further config files for syslinux]</tt></pre>
+      `-- [....]           [several further config files for syslinux]</code></pre>
 </div></div>
 <div class="literalblock">
 <div class="content">
-<pre><tt>grml/
+<pre><code>grml/
   |-- grml2usb.txt         [not yet implemented]
   |-- grml-cheatcodes.txt  [list of bootoptions for grml]
   |-- grml-version.txt     [file containing information about grml-version]
@@ -1046,11 +1042,11 @@ Enable verbose mode.
           |-- button.png
           |-- favicon.png
           |-- linux.jpg
-          `-- logo.png</tt></pre>
+          `-- logo.png</code></pre>
 </div></div>
 <div class="literalblock">
 <div class="content">
-<pre><tt>live/
+<pre><code>live/
   |-- grml/
   |   |-- filesystem.module    [module specifying which squashfs should be used for grml]
   |   `-- grml.squashfs        [squashfs file for grml]
@@ -1060,14 +1056,14 @@ Enable verbose mode.
   |-- grml-small/
   |   |-- filesystem.module    [module specifying which squashfs should be used for grml-medium]
   |   `-- grml-small.squashfs  [squashfs file for grml-small]
-  `-- ...</tt></pre>
+  `-- ...</code></pre>
 </div></div>
 </div>
 <div class="sect2">
 <h3 id="source">5.2. Grabbing the source</h3>
 <div class="literalblock">
 <div class="content">
-<pre><tt>% git clone git://git.grml.org/grml2usb.git</tt></pre>
+<pre><code>% git clone git://git.grml.org/grml2usb.git</code></pre>
 </div></div>
 </div>
 <div class="sect2">
@@ -1076,32 +1072,32 @@ Enable verbose mode.
 setup, like:</p></div>
 <div class="literalblock">
 <div class="content">
-<pre><tt># dd if=/dev/zero of=~/loopback bs=1M count=100 # adjust size to your needs
-# losetup /dev/loop1 ~/loopback</tt></pre>
+<pre><code># dd if=/dev/zero of=~/loopback bs=1M count=100 # adjust size to your needs
+# losetup /dev/loop1 ~/loopback</code></pre>
 </div></div>
 <div class="paragraph"><p>Then create according partitions either running for example:</p></div>
 <div class="literalblock">
 <div class="content">
-<pre><tt># echo -en "n\np\n1\n\n\nt\n6\na\n1\n w\n" | fdisk /dev/loop1</tt></pre>
+<pre><code># echo -en "n\np\n1\n\n\nt\n6\na\n1\n w\n" | fdisk /dev/loop1</code></pre>
 </div></div>
 <div class="paragraph"><p>or:</p></div>
 <div class="literalblock">
 <div class="content">
-<pre><tt># parted /dev/loop1 -s "mkpart primary fat16 0 -1s mkfs 1 fat16"</tt></pre>
+<pre><code># parted /dev/loop1 -s "mkpart primary fat16 0 -1s mkfs 1 fat16"</code></pre>
 </div></div>
 <div class="paragraph"><p>Finally create a filesystem and execute grml2usb as needed:</p></div>
 <div class="literalblock">
 <div class="content">
-<pre><tt># mkfs.vfat /dev/loop1
-# grml2usb --bootloader-only /grml/isos/grml-small_2013.01.iso /dev/loop1</tt></pre>
+<pre><code># mkfs.vfat /dev/loop1
+# grml2usb --bootloader-only /grml/isos/grml-small_2013.01.iso /dev/loop1</code></pre>
 </div></div>
 </div>
 <div class="sect2">
 <h3 id="performance-tracing">5.4. Performance tracing</h3>
 <div class="literalblock">
 <div class="content">
-<pre><tt># blktrace -d /dev/sdX -o - | blkparse -i -
-# grml2usb grml_2013.01.iso /dev/sdX1</tt></pre>
+<pre><code># blktrace -d /dev/sdX -o - | blkparse -i -
+# grml2usb grml_2013.01.iso /dev/sdX1</code></pre>
 </div></div>
 </div>
 </div>
@@ -1276,10 +1272,10 @@ grml-testing Debian repository</a>.</p></div>
 use the grml2usb git tree running:</p></div>
 <div class="literalblock">
 <div class="content">
-<pre><tt>git clone git://git.grml.org/grml2usb.git
+<pre><code>git clone git://git.grml.org/grml2usb.git
 cd grml2usb
 make -C mbr
-sudo ./grml2usb ...</tt></pre>
+sudo ./grml2usb ...</code></pre>
 </div></div>
 <div class="paragraph"><p>or download the provided
 <a href="http://grml.org/grml2usb/grml2usb.tgz">http://grml.org/grml2usb/grml2usb.tgz</a>
@@ -1313,7 +1309,7 @@ using the dd approach.</td>
 system available) running:</p></div>
 <div class="literalblock">
 <div class="content">
-<pre><tt>% dd if=grml_2013.01.iso of=/dev/sdX</tt></pre>
+<pre><code>% dd if=grml_2013.01.iso of=/dev/sdX</code></pre>
 </div></div>
 <div class="paragraph"><p>where /dev/sdX is your USB device. Of course this doesn&#8217;t provide such a
 flexible system like with grml2usb (no multi-ISO setup, no additional default
@@ -1351,8 +1347,8 @@ instead use the correct partition type (<em>83</em> - Linux) then.</p></div>
 <div class="paragraph"><p>The following message:</p></div>
 <div class="literalblock">
 <div class="content">
-<pre><tt>You shouldn't call /sbin/grub-install. Please call /usr/sbin/grub-install instead!
-xfs_freeze: specified file ["/tmp/tmpqaBK6z/boot/grub"] is not on an XFS filesystem</tt></pre>
+<pre><code>You shouldn't call /sbin/grub-install. Please call /usr/sbin/grub-install instead!
+xfs_freeze: specified file ["/tmp/tmpqaBK6z/boot/grub"] is not on an XFS filesystem</code></pre>
 </div></div>
 <div class="paragraph"><p>This is "normal". grub-install sends those messages to stderr. To avoid hiding any
 possible real error messages grml2usb doesn&#8217;t ignore those messages.</p></div>
@@ -1362,7 +1358,7 @@ possible real error messages grml2usb doesn&#8217;t ignore those messages.</p></
 <div class="paragraph"><p>The following message:</p></div>
 <div class="literalblock">
 <div class="content">
-<pre><tt>grub-probe: error: Cannot open `/boot/grub/device.map'</tt></pre>
+<pre><code>grub-probe: error: Cannot open `/boot/grub/device.map'</code></pre>
 </div></div>
 <div class="paragraph"><p>This is "normal" (at least with grub1). This isn&#8217;t a problem, because the
 device.map file will be generated on the target device anyway.</p></div>
@@ -1372,7 +1368,7 @@ device.map file will be generated on the target device anyway.</p></div>
 <div class="paragraph"><p>The following message:</p></div>
 <div class="literalblock">
 <div class="content">
-<pre><tt>'/usr/sbin/grub-install: line 374: [: =: unary operator expected'</tt></pre>
+<pre><code>'/usr/sbin/grub-install: line 374: [: =: unary operator expected'</code></pre>
 </div></div>
 <div class="paragraph"><p>This is "normal". Just ignore it. (It usually doesn&#8217;t appear
 on the second invocation on the same device.)</p></div>
@@ -1382,9 +1378,9 @@ on the second invocation on the same device.)</p></div>
 <div class="paragraph"><p>The following message:</p></div>
 <div class="literalblock">
 <div class="content">
-<pre><tt>grub-probe: error: unknown filesystem
+<pre><code>grub-probe: error: unknown filesystem
 Auto-detection of a filesystem module failed.
-Please specify the module with the option `--modules' explicitly.</tt></pre>
+Please specify the module with the option `--modules' explicitly.</code></pre>
 </div></div>
 <div class="paragraph"><p>usually means that the device partition table says something else than the
 filesystem on the device. For example using FAT16 as filesystem type and
@@ -1397,9 +1393,9 @@ device partition table and filesystem use the same filesystem type.</p></div>
 <div class="paragraph"><p>The following message:</p></div>
 <div class="literalblock">
 <div class="content">
-<pre><tt>grub-setup: warn: Attempting to install GRUB to a partition instead of the MBR.  This is a BAD idea.
+<pre><code>grub-setup: warn: Attempting to install GRUB to a partition instead of the MBR.  This is a BAD idea.
 grub-setup: warn: Embedding is not possible.  GRUB can only be installed in this setup by using blocklists.  However, blocklists are UNRELIABLE and its use is discouraged.
-grub-setup: error: Cannot read `/grub/core.img' correctly</tt></pre>
+grub-setup: error: Cannot read `/grub/core.img' correctly</code></pre>
 </div></div>
 <div class="paragraph"><p>appears when using grub2 versions older than 1.98 as those version introduced a
 regression which avoids that grub is being installed into a partition (PBR,
@@ -1460,53 +1456,53 @@ of your grml2usb commandline (consider using the "--verbose" option).</p></div>
 <div class="sectionbody">
 <div class="literalblock">
 <div class="content">
-<pre><tt># grml2usb /home/grml/grml_2013.01.iso /dev/sdX1</tt></pre>
+<pre><code># grml2usb /home/grml/grml_2013.01.iso /dev/sdX1</code></pre>
 </div></div>
 <div class="paragraph"><p>Install specified ISO on device /dev/sdX1.</p></div>
 <div class="literalblock">
 <div class="content">
-<pre><tt># grml2usb /home/grml/grml_2013.01.iso /home/grml/grml_small_2013.01.iso /dev/sdX1</tt></pre>
+<pre><code># grml2usb /home/grml/grml_2013.01.iso /home/grml/grml_small_2013.01.iso /dev/sdX1</code></pre>
 </div></div>
 <div class="paragraph"><p>Install specified ISOs on device /dev/sdX1 for multibooting ISOs.</p></div>
 <div class="literalblock">
 <div class="content">
-<pre><tt># grml2usb /lib/live/mount/medium /dev/sdX1</tt></pre>
+<pre><code># grml2usb /lib/live/mount/medium /dev/sdX1</code></pre>
 </div></div>
 <div class="paragraph"><p>Install currently running Grml live system on device /dev/sdX1.</p></div>
 <div class="literalblock">
 <div class="content">
-<pre><tt># grml2usb /lib/live/mount/medium /home/grml/grml_2013.01.iso /dev/sdX1</tt></pre>
+<pre><code># grml2usb /lib/live/mount/medium /home/grml/grml_2013.01.iso /dev/sdX1</code></pre>
 </div></div>
 <div class="paragraph"><p>Install currently running Grml live system and the specified
 ISO on device /dev/sdX1 for multibooting.</p></div>
 <div class="literalblock">
 <div class="content">
-<pre><tt># grml2usb --fat16 /home/grml/grml_2013.01.iso /dev/sdX1</tt></pre>
+<pre><code># grml2usb --fat16 /home/grml/grml_2013.01.iso /dev/sdX1</code></pre>
 </div></div>
 <div class="paragraph"><p>Install specified ISO on device /dev/sdX1 and format partition /dev/sdX1 with
 FAT16 filesystem.</p></div>
 <div class="literalblock">
 <div class="content">
-<pre><tt># grml2usb --grub --grub-mbr /home/grml/grml_2013.01.iso /dev/sdX1</tt></pre>
+<pre><code># grml2usb --grub --grub-mbr /home/grml/grml_2013.01.iso /dev/sdX1</code></pre>
 </div></div>
 <div class="paragraph"><p>Install specified ISO on device /dev/sdX1 and use grub as bootloader (instead of
 syslinux being the default) and install a master boot record (MBR) to the MBR of
 /dev/sdX.</p></div>
 <div class="literalblock">
 <div class="content">
-<pre><tt># grml2usb --bootoptions="lang=de ssh=mysecret" grml_2013.01.iso /dev/sdX1
-# grml2usb --bootoptions="lang=de" --bootoptions="ssh=mysecret" grml_2013.01.iso /dev/sdX1</tt></pre>
+<pre><code># grml2usb --bootoptions="lang=de ssh=mysecret" grml_2013.01.iso /dev/sdX1
+# grml2usb --bootoptions="lang=de" --bootoptions="ssh=mysecret" grml_2013.01.iso /dev/sdX1</code></pre>
 </div></div>
 <div class="paragraph"><p>Install specified ISO on device /dev/sdX1 and use "lang=de ssh=mysecret" as
 default bootoptions.</p></div>
 <div class="literalblock">
 <div class="content">
-<pre><tt># grml2usb --remove-bootoption="vga=791" --remove-bootoption="nomce" grml_2013.01.iso /dev/sdX1</tt></pre>
+<pre><code># grml2usb --remove-bootoption="vga=791" --remove-bootoption="nomce" grml_2013.01.iso /dev/sdX1</code></pre>
 </div></div>
 <div class="paragraph"><p>Install specified ISO on device /dev/sdX1 remove vga=791 and nomce from existing bootoptions.</p></div>
 <div class="literalblock">
 <div class="content">
-<pre><tt># grml2usb --bootoptions="persistent-path=%flavour_name" grml64_2010.04.iso grml_2010.04.iso /dev/sdX1</tt></pre>
+<pre><code># grml2usb --bootoptions="persistent-path=%flavour_name" grml64_2010.04.iso grml_2010.04.iso /dev/sdX1</code></pre>
 </div></div>
 <div class="paragraph"><p>Install specified Isos on device /dev/sdx and add parameter persisten-path
 to every menu entry. %flavour_name will be expanded to the flavour of the specific

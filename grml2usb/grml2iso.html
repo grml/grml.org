@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
 <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
-<meta name="generator" content="AsciiDoc 8.6.7" />
+<meta name="generator" content="AsciiDoc 8.6.9" />
 <title>grml2iso(8)</title>
 <style type="text/css">
 /* Shared CSS for AsciiDoc xhtml11 and html5 backends */
@@ -87,9 +87,15 @@ ul, ol, li > p {
 ul > li     { color: #aaa; }
 ul > li > * { color: black; }
 
-pre {
+.monospaced, code, pre {
+  font-family: "Courier New", Courier, monospace;
+  font-size: inherit;
+  color: navy;
   padding: 0;
   margin: 0;
+}
+pre {
+  white-space: pre-wrap;
 }
 
 #author {
@@ -219,7 +225,7 @@ div.exampleblock > div.content {
 }
 
 div.imageblock div.content { padding-left: 0; }
-span.image img { border-style: none; }
+span.image img { border-style: none; vertical-align: text-bottom; }
 a.image:visited { color: white; }
 
 dl {
@@ -415,12 +421,6 @@ div.unbreakable { page-break-inside: avoid; }
  *
  * */
 
-tt {
-  font-family: "Courier New", Courier, monospace;
-  font-size: inherit;
-  color: navy;
-}
-
 div.tableblock {
   margin-top: 1.0em;
   margin-bottom: 1.5em;
@@ -453,12 +453,6 @@ div.tableblock > table[frame="vsides"] {
  * html5 specific
  *
  * */
-
-.monospaced {
-  font-family: "Courier New", Courier, monospace;
-  font-size: inherit;
-  color: navy;
-}
 
 table.tableblock {
   margin-top: 1.0em;
@@ -539,6 +533,8 @@ body.manpage div.sectionbody {
 @media print {
   body.manpage div#toc { display: none; }
 }
+
+
 </style>
 <script type="text/javascript">
 /*<![CDATA[*/
@@ -845,34 +841,34 @@ Generate a small iso file which downloads the squashfs file from the specified U
 <div class="sectionbody">
 <div class="literalblock">
 <div class="content">
-<pre><tt># grml2iso -o /tmp/grml.iso grml_2009.05.iso grml64_2009.05.iso</tt></pre>
+<pre><code># grml2iso -o /tmp/grml.iso grml_2009.05.iso grml64_2009.05.iso</code></pre>
 </div></div>
 <div class="paragraph"><p>Create multiboot ISO /tmp/grml.iso with grml_2009.05.iso and grml64_2009.05.iso.</p></div>
 <div class="literalblock">
 <div class="content">
-<pre><tt># grml2iso -b 'lang=de ssh=passwd' -c /tmp/grml-content -o /srv/grml.iso /srv/grml/grml_2009.10.iso</tt></pre>
+<pre><code># grml2iso -b 'lang=de ssh=passwd' -c /tmp/grml-content -o /srv/grml.iso /srv/grml/grml_2009.10.iso</code></pre>
 </div></div>
 <div class="paragraph"><p>Create a new iso with additional boot parameters and copy the content from /tmp/grml-content to the generated iso image.</p></div>
 <div class="literalblock">
 <div class="content">
-<pre><tt># grml2iso -r quiet -r vga=791 -o /srv/grml.iso /srv/grml-small_2009.10.iso</tt></pre>
+<pre><code># grml2iso -r quiet -r vga=791 -o /srv/grml.iso /srv/grml-small_2009.10.iso</code></pre>
 </div></div>
 <div class="paragraph"><p>Create a new iso and remove existing boot parameters quiet and vga=791.</p></div>
 <div class="literalblock">
 <div class="content">
-<pre><tt># GRML2USB=/srv/git/grml2usb grml2iso -o /srv/grml.iso /srv/grml/grml_2009.05.iso /srv/grml/grml64-medium_2009.05.iso</tt></pre>
+<pre><code># GRML2USB=/srv/git/grml2usb grml2iso -o /srv/grml.iso /srv/grml/grml_2009.05.iso /srv/grml/grml64-medium_2009.05.iso</code></pre>
 </div></div>
 <div class="paragraph"><p>Create multiboot ISO /srv/grml.iso with grml_2009.05.iso and
 grml64-medium_2009.05.iso using /srv/git/grml2usb as grml2usb script.</p></div>
 <div class="literalblock">
 <div class="content">
-<pre><tt># WRKDIR=/mnt/test/grml-tmp grml2iso -o /mnt/test/grml.iso grml_2009.05.iso grml64_2009.05.iso</tt></pre>
+<pre><code># WRKDIR=/mnt/test/grml-tmp grml2iso -o /mnt/test/grml.iso grml_2009.05.iso grml64_2009.05.iso</code></pre>
 </div></div>
 <div class="paragraph"><p>Use /mnt/test/grml-tmp as working directory for creating the multiboot ISO
 /mnt/test/grml.iso with grml_2009.05.iso and grml64_2009.05.iso.</p></div>
 <div class="literalblock">
 <div class="content">
-<pre><tt># grml2iso -p --skip-addons -o /srv/grml.iso /srv/grml-small_2009.10.iso /srv/grml64-small_2009.10.iso</tt></pre>
+<pre><code># grml2iso -p --skip-addons -o /srv/grml.iso /srv/grml-small_2009.10.iso /srv/grml64-small_2009.10.iso</code></pre>
 </div></div>
 <div class="paragraph"><p>Don&#8217;t copy the addons from the specified iso images</p></div>
 </div>
