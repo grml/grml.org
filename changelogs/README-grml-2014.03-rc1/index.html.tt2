@@ -46,13 +46,15 @@
           by <a href="http://www.sipwise.com/">Sipwise
             GmbH</a>)</li>
 
-          <li>grml-debootstrap:</li>
+          <li>grml-debootstrap:
 
-          <ul>
-            <li>Support FIXED_DISK_IDENTIFIERS option, useful for reproducible builds</li>
-            <li>install bridge-utils, cryptsetup, ifenslave and vlan packages by default</li>
-            <li>Support overriding configuration via environment variables</li>
-          </ul>
+            <ul>
+              <li>Support FIXED_DISK_IDENTIFIERS option, useful for reproducible builds</li>
+              <li>install bridge-utils, cryptsetup, ifenslave and vlan packages by default</li>
+              <li>Support overriding configuration via environment variables</li>
+            </ul>
+
+          </li>
 
         </ul>
 
@@ -98,7 +100,6 @@
         <p>These Debian packages have been removed/replaced (excluding lib* and kernel image):</p>
 
 <pre class="rahmen">
-
   ifenslave-2.6 recover ruby1.8 rubygems ttf-dejavu-core ufsutils
   vgabios xserver-xorg-video-apm xserver-xorg-video-ark
   xserver-xorg-video-chips xserver-xorg-video-i128
