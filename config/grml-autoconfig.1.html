@@ -3,27 +3,24 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
 <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
-<meta name="generator" content="AsciiDoc 8.6.4" />
+<meta name="generator" content="AsciiDoc 8.6.9" />
 <title>grml-autoconfig(1)</title>
 <style type="text/css">
-/* Sans-serif font. */
+/* Shared CSS for AsciiDoc xhtml11 and html5 backends */
+
+/* Default font. */
+body {
+  font-family: Georgia,serif;
+}
+
+/* Title font. */
 h1, h2, h3, h4, h5, h6,
 div.title, caption.title,
 thead, p.table.header,
-div#toctitle,
-span#author, span#revnumber, span#revdate, span#revremark,
-div#footer {
+#toctitle,
+#author, #revnumber, #revdate, #revremark,
+#footer {
   font-family: Arial,Helvetica,sans-serif;
-}
-
-/* Serif font. */
-div.sectionbody {
-  font-family: Georgia,"Times New Roman",Times,serif;
-}
-
-/* Monospace font. */
-tt {
-  font-size: inherit;
 }
 
 body {
@@ -48,11 +45,6 @@ strong {
   color: #083194;
 }
 
-tt {
-  font-size: inherit;
-  color: navy;
-}
-
 h1, h2, h3, h4, h5, h6 {
   color: #527bbd;
   margin-top: 1.2em;
@@ -71,6 +63,9 @@ h3 {
 }
 h3 + * {
   clear: left;
+}
+h5 {
+  font-size: 1.0em;
 }
 
 div.sectionbody {
@@ -92,41 +87,47 @@ ul, ol, li > p {
 ul > li     { color: #aaa; }
 ul > li > * { color: black; }
 
-pre {
+.monospaced, code, pre {
+  font-family: "Courier New", Courier, monospace;
+  font-size: inherit;
+  color: navy;
   padding: 0;
   margin: 0;
 }
+pre {
+  white-space: pre-wrap;
+}
 
-span#author {
+#author {
   color: #527bbd;
   font-weight: bold;
   font-size: 1.1em;
 }
-span#email {
+#email {
 }
-span#revnumber, span#revdate, span#revremark {
+#revnumber, #revdate, #revremark {
 }
 
-div#footer {
+#footer {
   font-size: small;
   border-top: 2px solid silver;
   padding-top: 0.5em;
   margin-top: 4.0em;
 }
-div#footer-text {
+#footer-text {
   float: left;
   padding-bottom: 0.5em;
 }
-div#footer-badges {
+#footer-badges {
   float: right;
   padding-bottom: 0.5em;
 }
 
-div#preamble {
+#preamble {
   margin-top: 1.5em;
   margin-bottom: 1.5em;
 }
-div.tableblock, div.imageblock, div.exampleblock, div.verseblock,
+div.imageblock, div.exampleblock, div.verseblock,
 div.quoteblock, div.literalblock, div.listingblock, div.sidebarblock,
 div.admonitionblock {
   margin-top: 1.0em;
@@ -184,7 +185,7 @@ div.quoteblock, div.verseblock {
   margin-left: 1.0em;
   margin-right: 10%;
   border-left: 5px solid #f0f0f0;
-  color: #777777;
+  color: #888;
 }
 
 div.quoteblock > div.attribution {
@@ -224,7 +225,7 @@ div.exampleblock > div.content {
 }
 
 div.imageblock div.content { padding-left: 0; }
-span.image img { border-style: none; }
+span.image img { border-style: none; vertical-align: text-bottom; }
 a.image:visited { color: white; }
 
 dl {
@@ -267,35 +268,12 @@ div.compact div, div.compact div {
   margin-bottom: 0.1em;
 }
 
-div.tableblock > table {
-  border: 3px solid #527bbd;
-}
-thead, p.table.header {
-  font-weight: bold;
-  color: #527bbd;
-}
 tfoot {
   font-weight: bold;
 }
 td > div.verse {
   white-space: pre;
 }
-p.table {
-  margin-top: 0;
-}
-/* Because the table frame attribute is overriden by CSS in most browsers. */
-div.tableblock > table[frame="void"] {
-  border-style: none;
-}
-div.tableblock > table[frame="hsides"] {
-  border-left-style: none;
-  border-right-style: none;
-}
-div.tableblock > table[frame="vsides"] {
-  border-top-style: none;
-  border-bottom-style: none;
-}
-
 
 div.hdlist {
   margin-top: 0.8em;
@@ -362,14 +340,14 @@ div.colist td img {
 }
 
 @media print {
-  div#footer-badges { display: none; }
+  #footer-badges { display: none; }
 }
 
-div#toc {
+#toc {
   margin-bottom: 2.5em;
 }
 
-div#toctitle {
+#toctitle {
   color: #527bbd;
   font-size: 1.1em;
   font-weight: bold;
@@ -377,7 +355,7 @@ div#toctitle {
   margin-bottom: 0.1em;
 }
 
-div.toclevel1, div.toclevel2, div.toclevel3, div.toclevel4 {
+div.toclevel0, div.toclevel1, div.toclevel2, div.toclevel3, div.toclevel4 {
   margin-top: 0;
   margin-bottom: 0;
 }
@@ -430,10 +408,136 @@ span.yellow-background { background: yellow; }
 
 span.big { font-size: 2em; }
 span.small { font-size: 0.6em; }
+
+span.underline { text-decoration: underline; }
+span.overline { text-decoration: overline; }
+span.line-through { text-decoration: line-through; }
+
+div.unbreakable { page-break-inside: avoid; }
+
+
+/*
+ * xhtml11 specific
+ *
+ * */
+
+div.tableblock {
+  margin-top: 1.0em;
+  margin-bottom: 1.5em;
+}
+div.tableblock > table {
+  border: 3px solid #527bbd;
+}
+thead, p.table.header {
+  font-weight: bold;
+  color: #527bbd;
+}
+p.table {
+  margin-top: 0;
+}
+/* Because the table frame attribute is overriden by CSS in most browsers. */
+div.tableblock > table[frame="void"] {
+  border-style: none;
+}
+div.tableblock > table[frame="hsides"] {
+  border-left-style: none;
+  border-right-style: none;
+}
+div.tableblock > table[frame="vsides"] {
+  border-top-style: none;
+  border-bottom-style: none;
+}
+
+
+/*
+ * html5 specific
+ *
+ * */
+
+table.tableblock {
+  margin-top: 1.0em;
+  margin-bottom: 1.5em;
+}
+thead, p.tableblock.header {
+  font-weight: bold;
+  color: #527bbd;
+}
+p.tableblock {
+  margin-top: 0;
+}
+table.tableblock {
+  border-width: 3px;
+  border-spacing: 0px;
+  border-style: solid;
+  border-color: #527bbd;
+  border-collapse: collapse;
+}
+th.tableblock, td.tableblock {
+  border-width: 1px;
+  padding: 4px;
+  border-style: solid;
+  border-color: #527bbd;
+}
+
+table.tableblock.frame-topbot {
+  border-left-style: hidden;
+  border-right-style: hidden;
+}
+table.tableblock.frame-sides {
+  border-top-style: hidden;
+  border-bottom-style: hidden;
+}
+table.tableblock.frame-none {
+  border-style: hidden;
+}
+
+th.tableblock.halign-left, td.tableblock.halign-left {
+  text-align: left;
+}
+th.tableblock.halign-center, td.tableblock.halign-center {
+  text-align: center;
+}
+th.tableblock.halign-right, td.tableblock.halign-right {
+  text-align: right;
+}
+
+th.tableblock.valign-top, td.tableblock.valign-top {
+  vertical-align: top;
+}
+th.tableblock.valign-middle, td.tableblock.valign-middle {
+  vertical-align: middle;
+}
+th.tableblock.valign-bottom, td.tableblock.valign-bottom {
+  vertical-align: bottom;
+}
+
+
+/*
+ * manpage specific
+ *
+ * */
+
+body.manpage h1 {
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  border-top: 2px solid silver;
+  border-bottom: 2px solid silver;
+}
+body.manpage h2 {
+  border-style: none;
+}
+body.manpage div.sectionbody {
+  margin-left: 3em;
+}
+
+@media print {
+  body.manpage div#toc { display: none; }
+}
+
+
 </style>
 <script type="text/javascript">
 /*<![CDATA[*/
-window.onload = function(){asciidoc.footnotes();}
 var asciidoc = {  // Namespace.
 
 /////////////////////////////////////////////////////////////////////
@@ -475,7 +579,7 @@ toc: function (toclevels) {
 
   function tocEntries(el, toclevels) {
     var result = new Array;
-    var re = new RegExp('[hH]([2-'+(toclevels+1)+'])');
+    var re = new RegExp('[hH]([1-'+(toclevels+1)+'])');
     // Function that scans the DOM tree for header elements (the DOM2
     // nodeIterator API would be a better technique but not supported by all
     // browsers).
@@ -495,6 +599,25 @@ toc: function (toclevels) {
   }
 
   var toc = document.getElementById("toc");
+  if (!toc) {
+    return;
+  }
+
+  // Delete existing TOC entries in case we're reloading the TOC.
+  var tocEntriesToRemove = [];
+  var i;
+  for (i = 0; i < toc.childNodes.length; i++) {
+    var entry = toc.childNodes[i];
+    if (entry.nodeName.toLowerCase() == 'div'
+     && entry.getAttribute("class")
+     && entry.getAttribute("class").match(/^toclevel/))
+      tocEntriesToRemove.push(entry);
+  }
+  for (i = 0; i < tocEntriesToRemove.length; i++) {
+    toc.removeChild(tocEntriesToRemove[i]);
+  }
+
+  // Rebuild TOC entries.
   var entries = tocEntries(document.getElementById("content"), toclevels);
   for (var i = 0; i < entries.length; ++i) {
     var entry = entries[i];
@@ -522,24 +645,44 @@ toc: function (toclevels) {
  */
 
 footnotes: function () {
-  var cont = document.getElementById("content");
+  // Delete existing footnote entries in case we're reloading the footnodes.
+  var i;
   var noteholder = document.getElementById("footnotes");
+  if (!noteholder) {
+    return;
+  }
+  var entriesToRemove = [];
+  for (i = 0; i < noteholder.childNodes.length; i++) {
+    var entry = noteholder.childNodes[i];
+    if (entry.nodeName.toLowerCase() == 'div' && entry.getAttribute("class") == "footnote")
+      entriesToRemove.push(entry);
+  }
+  for (i = 0; i < entriesToRemove.length; i++) {
+    noteholder.removeChild(entriesToRemove[i]);
+  }
+
+  // Rebuild footnote entries.
+  var cont = document.getElementById("content");
   var spans = cont.getElementsByTagName("span");
   var refs = {};
   var n = 0;
   for (i=0; i<spans.length; i++) {
     if (spans[i].className == "footnote") {
       n++;
-      // Use [\s\S] in place of . so multi-line matches work.
-      // Because JavaScript has no s (dotall) regex flag.
-      note = spans[i].innerHTML.match(/\s*\[([\s\S]*)]\s*/)[1];
+      var note = spans[i].getAttribute("data-note");
+      if (!note) {
+        // Use [\s\S] in place of . so multi-line matches work.
+        // Because JavaScript has no s (dotall) regex flag.
+        note = spans[i].innerHTML.match(/\s*\[([\s\S]*)]\s*/)[1];
+        spans[i].innerHTML =
+          "[<a id='_footnoteref_" + n + "' href='#_footnote_" + n +
+          "' title='View footnote' class='footnote'>" + n + "</a>]";
+        spans[i].setAttribute("data-note", note);
+      }
       noteholder.innerHTML +=
         "<div class='footnote' id='_footnote_" + n + "'>" +
         "<a href='#_footnoteref_" + n + "' title='Return to text'>" +
         n + "</a>. " + note + "</div>";
-      spans[i].innerHTML =
-        "[<a id='_footnoteref_" + n + "' href='#_footnote_" + n +
-        "' title='View footnote' class='footnote'>" + n + "</a>]";
       var id =spans[i].getAttribute("id");
       if (id != null) refs["#"+id] = n;
     }
@@ -559,9 +702,32 @@ footnotes: function () {
       }
     }
   }
+},
+
+install: function(toclevels) {
+  var timerId;
+
+  function reinstall() {
+    asciidoc.footnotes();
+    if (toclevels) {
+      asciidoc.toc(toclevels);
+    }
+  }
+
+  function reinstallAndRemoveTimer() {
+    clearInterval(timerId);
+    reinstall();
+  }
+
+  timerId = setInterval(reinstall, 500);
+  if (document.addEventListener)
+    document.addEventListener("DOMContentLoaded", reinstallAndRemoveTimer, false);
+  else
+    window.onload = reinstallAndRemoveTimer;
 }
 
 }
+asciidoc.install();
 /*]]>*/
 </script>
 </head>
@@ -641,20 +807,21 @@ to deal with this config framework. Visit
 <div class="sect1">
 <h2 id="current-versions">Behavior in current Grml versions</h2>
 <div class="sectionbody">
-<div class="paragraph"><p>This section applies to all Grml versions newer than release 2009.05.</p></div>
+<div class="paragraph"><p>This section applies to all Grml versions newer than release 2013.02.</p></div>
 <div class="paragraph"><p>The central concept of grml-autoconfig is the DCS directory which holds debs,
 configuration and scripts which are used during system startup.</p></div>
 <div class="sect2">
 <h3 id="_determination_of_dcs_directory">Determination of DCS directory</h3>
-<div class="paragraph"><p>The DCS directory defaults to the root directory of the GRML live image. If a
-file system labeled GRMLCFG is found, the DCS directory is the root directory of
-that file system. Alternatively, the myconfig boot parameter can be used to
-directly specify a device which is then taken as DCS directory
-(myconfig=/dev/sda1, for example). If your device is labeled different to
-GRMLCFG the proper label can be set via the autoconfig boot parameter
-(autoconfig=SOMELABEL, for example).</p></div>
+<div class="paragraph"><p>The DCS directory defaults to the root directory of the GRML live image
+(Note: the directory is known as /lib/live/mount/medium/ on a <em>running</em>
+Grml system then!). If a file system labeled GRMLCFG is found, the DCS
+directory is the root directory of that file system. Alternatively, the
+myconfig boot parameter can be used to directly specify a device which
+is then taken as DCS directory (myconfig=/dev/sda1, for example). If
+your device is labeled different to GRMLCFG the proper label can be set
+via the autoconfig boot parameter (autoconfig=SOMELABEL, for example).</p></div>
 <div class="paragraph"><p>Without any additional boot parameters, the GCA at DCSDIR/config.tbz is
-automatically unpacked and DCSDIR/scrips/grml.sh is automatically executed on
+automatically unpacked and DCSDIR/scripts/grml.sh is automatically executed on
 system startup. The <em>noautoconfig</em> boot parameter disables this automatic
 behavior.</p></div>
 </div>
@@ -673,8 +840,7 @@ myconfig
 </p>
 <div class="literalblock">
 <div class="content">
-<pre><tt>myconfig=/dev/sda1                        =&gt; read DCS from usb-device
-myconfig=/dev/fd0                         =&gt; read DCS from floppy-disk</tt></pre>
+<pre><code>myconfig=/dev/sda1                        =&gt; read DCS from usb-device</code></pre>
 </div></div>
 </dd>
 <dt class="hdlist1">
@@ -687,8 +853,8 @@ autoconfig
 </p>
 <div class="literalblock">
 <div class="content">
-<pre><tt>autoconfig=SOMELABEL      =&gt; search for device labeled SOMELABEL to use as
-                             DCS device.</tt></pre>
+<pre><code>autoconfig=SOMELABEL      =&gt; search for device labeled SOMELABEL to use as
+                             DCS device.</code></pre>
 </div></div>
 </dd>
 <dt class="hdlist1">
@@ -701,9 +867,9 @@ home
 </p>
 <div class="literalblock">
 <div class="content">
-<pre><tt>home=/dev/sda3    =&gt;  use /dev/sda3 as the homepartition
+<pre><code>home=/dev/sda3    =&gt;  use /dev/sda3 as the homepartition
 home=scan         =&gt;  scan through the available partitions and search
-                      for file grml.img</tt></pre>
+                      for file grml.img</code></pre>
 </div></div>
 </dd>
 <dt class="hdlist1">
@@ -720,8 +886,8 @@ partconf
 </p>
 <div class="literalblock">
 <div class="content">
-<pre><tt>partconf=/dev/sda2 =&gt; try to mount /dev/sda2 and copy files specified
-                      in /etc/grml/partconf to the booted Grml system</tt></pre>
+<pre><code>partconf=/dev/sda2 =&gt; try to mount /dev/sda2 and copy files specified
+                      in /etc/grml/partconf to the booted Grml system</code></pre>
 </div></div>
 </dd>
 <dt class="hdlist1">
@@ -736,8 +902,8 @@ netconfig
 </p>
 <div class="literalblock">
 <div class="content">
-<pre><tt>netconfig=server.tld/path/to/config.tbz  =&gt;   restore configuration using wget to download file config.tbz
-netconfig=server.tld/config-$ARCH.tbz    =&gt;   download config for specified architecture</tt></pre>
+<pre><code>netconfig=server.tld/path/to/config.tbz  =&gt;   restore configuration using wget to download file config.tbz
+netconfig=server.tld/config-$ARCH.tbz    =&gt;   download config for specified architecture</code></pre>
 </div></div>
 </dd>
 <dt class="hdlist1">
@@ -754,8 +920,8 @@ netscript
 </p>
 <div class="literalblock">
 <div class="content">
-<pre><tt>netcript=server.tld/path/to/script       =&gt;   download and run script/executable from server
-netscript=server.tld/script-$HOSTNAME    =&gt;   download and run script/executable for specific host</tt></pre>
+<pre><code>netscript=server.tld/path/to/script      =&gt;   download and run script/executable from server
+netscript=server.tld/script-$HOSTNAME    =&gt;   download and run script/executable for specific host</code></pre>
 </div></div>
 </dd>
 <dt class="hdlist1">
@@ -768,9 +934,9 @@ extract
 </p>
 <div class="literalblock">
 <div class="content">
-<pre><tt>extract=/home/grml         =&gt; extract only /home/grml from archive
+<pre><code>extract=/home/grml         =&gt; extract only /home/grml from archive
 extract=/etc               =&gt; extract only /etc from archive
-extract=/home/grml/config  =&gt; extract only $HOME/config from archive</tt></pre>
+extract=/home/grml/config  =&gt; extract only $HOME/config from archive</code></pre>
 </div></div>
 </dd>
 <dt class="hdlist1">
@@ -782,15 +948,13 @@ scripts
     relative to DCSDIR. If the path points to a file, this single file is
     executed. If no path is given, it defaults to scripts/grml.sh.
     If the given name points to a directory, all scripts inside it are
-    executed, but the run-parts name restrictions apply: script names must
-    consist entirely of upper and lower case letters, digits, underscores,
-    and hyphens. Usage examples:
+    executed. Usage examples:
 </p>
 <div class="literalblock">
 <div class="content">
-<pre><tt>scripts               =&gt;   run script DCSDIR/scripts/grml.sh
+<pre><code>scripts               =&gt;   run script DCSDIR/scripts/grml.sh
 scripts=foobar.sh     =&gt;   run script foobar.sh in DCSDIR
-scripts=foobar        =&gt;   run all scripts inside DCSDIR/foobar directory</tt></pre>
+scripts=foobar        =&gt;   run all scripts inside DCSDIR/foobar directory</code></pre>
 </div></div>
 </dd>
 <dt class="hdlist1">
@@ -804,8 +968,8 @@ config
 </p>
 <div class="literalblock">
 <div class="content">
-<pre><tt>config                    =&gt;   restore configuration using file DCSDIR/config.tbz
-config=config_foobar.tbz  =&gt;   restore configuration using file DCSDIR/config_foobar.tbz</tt></pre>
+<pre><code>config                    =&gt;   restore configuration using file DCSDIR/config.tbz
+config=config_foobar.tbz  =&gt;   restore configuration using file DCSDIR/config_foobar.tbz</code></pre>
 </div></div>
 </dd>
 <dt class="hdlist1">
@@ -821,12 +985,12 @@ debs
 </p>
 <div class="literalblock">
 <div class="content">
-<pre><tt>Usage examples:</tt></pre>
+<pre><code>Usage examples:</code></pre>
 </div></div>
 <div class="literalblock">
 <div class="content">
-<pre><tt>debs=*.deb        =&gt;   install all debian packages (suffix .deb) from directory DCSDIR/debs/
-debs=foo/01*.deb  =&gt;   install all debian packages (suffix .deb) starting with 01 in the filename from directory DCSDIR/foo</tt></pre>
+<pre><code>debs=*.deb        =&gt;   install all debian packages (suffix .deb) from directory DCSDIR/debs/
+debs=foo/01*.deb  =&gt;   install all debian packages (suffix .deb) starting with 01 in the filename from directory DCSDIR/foo</code></pre>
 </div></div>
 </dd>
 <dt class="hdlist1">
@@ -844,70 +1008,30 @@ noautoconfig
 <dd>
 <p>
     Deactivate automounting. By default the scripts try to mount a device with
-    label <em>GRMLCFG</em>. If you specify the noautoconfig bootparam this automounting
-    will be deactivated.
+    label <em>GRMLCFG</em>. If you specify the noautoconfig boot parameter this
+    automounting will be deactivated.
 </p>
 <div class="literalblock">
 <div class="content">
-<pre><tt>noautoconfig            =&gt; disables auto mounting of label 'GRMLCFG'</tt></pre>
+<pre><code>noautoconfig            =&gt; disables auto mounting of label 'GRMLCFG'</code></pre>
 </div></div>
 </dd>
 </dl></div>
 </div>
 <div class="sect2">
 <h3 id="_permanently_adjust_boot_parameters">Permanently adjust boot parameters</h3>
-<div class="paragraph"><p>As you probably know you can adjust boot parameters on the bootprompt.  You want
-to set some boot parameters permanently? That&#8217;s possible via adding a directory
-named <em>bootparams</em> to the Grml ISO which has to be located at the root-directory
-/bootparams/ (note: the directory is known as /live/image/bootparams/ on a
-<em>running</em> Grml system then). Place a textfile inside the directory containing
-the boot parameters which should be appended to default ones (this corresponds
-to booting without any special parameters).</p></div>
+<div class="paragraph"><p>As you probably know you can adjust boot parameters on the bootprompt.
+You want to set some boot parameters permanently? That&#8217;s possible via
+adding a directory named <em>bootparams</em> to the Grml ISO which has to be
+located at the root-directory /bootparams/ (Note: the directory is known
+as /lib/live/mount/medium/bootparams/ on a <em>running</em> Grml system then!).
+Place a textfile inside the directory containing the boot parameters
+which should be appended to default ones (this corresponds to booting
+without any special parameters).</p></div>
 <div class="literalblock">
 <div class="content">
-<pre><tt>mkdir bootparams
-echo lang=de &gt; bootparams/my_bootparams</tt></pre>
-</div></div>
-<div class="paragraph"><p>Then burn a multisession CD where directory bootparams is located in the root
-directory of the CD.</p></div>
-<div class="admonitionblock">
-<table><tr>
-<td class="icon">
-<div class="title">Note</div>
-</td>
-<td class="content">Not all boot parameters can be used via /bootparams/. This is a limitation of
-the way the kernel and userspace retrieve boot parameters. Boot parameter
-regarding the kernel definitely do <strong>NOT</strong> work. Boot parameter related to
-grml-autoconfig (the main part of the boot process in Grml running in userspace,
-being all the stuff after startup of udev) are expected to work. Boot parameter
-related to initrd/initramfs (the part between <em>Searching for GRML file</em> and
-startup of udev) are <strong>NOT</strong> covered by /bootparams/ as well yet.</td>
-</tr></table>
-</div>
-<div class="admonitionblock">
-<table><tr>
-<td class="icon">
-<div class="title">Tip</div>
-</td>
-<td class="content">the application k3b (not available on the live-CD but available through the
-Debian repositories) provides an easy to use interface for doing the
-multisession task.</td>
-</tr></table>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_permanently_adjust_boot_parameters_2">Permanently adjust boot parameters</h3>
-<div class="paragraph"><p>As you probably know you can adjust boot parameters on the bootprompt.  You want
-to set some boot parameters permanently? That&#8217;s possible via adding a directory
-named <em>bootparams</em> to the Grml ISO which has to be located at the root-directory
-/bootparams/ (note: the directory is known as /live/image/bootparams/ on a
-<em>running</em> Grml system then). Place a textfile inside the directory containing
-the boot parameters which should be appended to default ones (this corresponds
-to booting without any special parameters).</p></div>
-<div class="literalblock">
-<div class="content">
-<pre><tt>mkdir bootparams
-echo lang=de &gt; bootparams/my_bootparams</tt></pre>
+<pre><code>mkdir bootparams
+echo lang=de &gt; bootparams/my_bootparams</code></pre>
 </div></div>
 <div class="paragraph"><p>Then burn a multisession CD where directory bootparams is located in the root
 directory of the CD.</p></div>
@@ -945,30 +1069,25 @@ multisession task.</td>
 <h3 id="_personal_configuration_files">Personal configuration files</h3>
 <div class="paragraph"><p>You are a fan of the editor vim? Great. You probably have your own <sub>/.vimrc and
 want to use it on the Grml system. You also don&#8217;t like the default zsh
-configuration and want to use your own </sub>/.zshrc?  How to procede? Copy your
+configuration and want to use your own </sub>/.zshrc?  How to proceed? Copy your
 .vimrc and .zshrc to $HOME of user <em>grml</em>.  Place additional files in
 $HOME/config. Now create a configuration for your files running:</p></div>
 <div class="literalblock">
 <div class="content">
-<pre><tt>save-config -home -configdir</tt></pre>
+<pre><code>save-config -home -configdir</code></pre>
 </div></div>
 <div class="paragraph"><p>Now you should have a file named config.tbz containing your configuration files.
 You can copy the archive to a webserver and restore it via downloading during
 reboot using the following commandline on bootprompt:</p></div>
 <div class="literalblock">
 <div class="content">
-<pre><tt>grml netconfig=server.tld/path/to/config.tbz</tt></pre>
+<pre><code>grml netconfig=server.tld/path/to/config.tbz</code></pre>
 </div></div>
-<div class="paragraph"><p>You don&#8217;t have network access but own a floppy drive? Copy the file to a floppy
-disk and boot with:</p></div>
+<div class="paragraph"><p>You don&#8217;t have network access but own a USB device? Copy the file to a USB
+device and boot with something like:</p></div>
 <div class="literalblock">
 <div class="content">
-<pre><tt>grml myconfig=/dev/fd0</tt></pre>
-</div></div>
-<div class="paragraph"><p>Floppy is to small or to slow? Ok, let&#8217;s use a usb device:</p></div>
-<div class="literalblock">
-<div class="content">
-<pre><tt>grml myconfig=/dev/sda1</tt></pre>
+<pre><code>grml myconfig=/dev/sda1</code></pre>
 </div></div>
 </div>
 <div class="sect2">
@@ -978,28 +1097,23 @@ disk and boot with:</p></div>
 the following command as user root:</p></div>
 <div class="literalblock">
 <div class="content">
-<pre><tt>save-config -etc</tt></pre>
+<pre><code>save-config -etc</code></pre>
 </div></div>
 <div class="paragraph"><p>Now you should have a file named config.tbz containing your configuration files.
-If you want to use it with a floppy disk copy the file to a floppy and boot via
-using the following command on bootprompt:</p></div>
+If you want to use it with a USB device copy the file to it and boot via
+using the following command on boot prompt:</p></div>
 <div class="literalblock">
 <div class="content">
-<pre><tt>grml myconfig=/dev/fd0</tt></pre>
-</div></div>
-<div class="paragraph"><p>Floppy is to small or to slow? Ok, let&#8217;s use a usb device:</p></div>
-<div class="literalblock">
-<div class="content">
-<pre><tt>grml myconfig=/dev/sda1</tt></pre>
+<pre><code>grml myconfig=/dev/sda1</code></pre>
 </div></div>
 <div class="paragraph"><p>You do have an existing harddisk installation and want to use its configuration?
-Let&#8217;s say the debian system is located in /dev/sda2. You want to use the
+Let&#8217;s say the Debian system is located in /dev/sda2. You want to use the
 directory /etc/network. This directory is activated by default in
 /etc/grml/partconf so we don&#8217;t have to do any further work.  We just need to
 activate it via using the following commandline on bootprompt:</p></div>
 <div class="literalblock">
 <div class="content">
-<pre><tt>grml partconf=/dev/sda2</tt></pre>
+<pre><code>grml partconf=/dev/sda2</code></pre>
 </div></div>
 </div>
 <div class="sect2">
@@ -1011,24 +1125,24 @@ version of Grml you might have to overburn the ISO.</p></div>
 <div class="paragraph"><p>Let&#8217;s assume you have burned the Grml iso to a CD-RW using a commandline like:</p></div>
 <div class="literalblock">
 <div class="content">
-<pre><tt>cdrecord dev=/dev/hdc -v -multi -tao grml_0.5.iso</tt></pre>
+<pre><code>cdrecord dev=/dev/hdc -v -multi -tao grml_0.5.iso</code></pre>
 </div></div>
 <div class="paragraph"><p>Now create a directory named debs and place foobar.deb in it:</p></div>
 <div class="literalblock">
 <div class="content">
-<pre><tt>mkdir debs/ &amp;&amp; cp foobar.deb debs/</tt></pre>
+<pre><code>mkdir debs/ &amp;&amp; cp foobar.deb debs/</code></pre>
 </div></div>
-<div class="paragraph"><p>Notice: This directory will be located in /live/image after burning the second
+<div class="paragraph"><p>Notice: This directory will be located in /lib/live/mount/medium after burning the second
 session.</p></div>
 <div class="paragraph"><p>Now create the second session containing this directory:</p></div>
 <div class="literalblock">
 <div class="content">
-<pre><tt>mkisofs -M grml_0.5.iso -C `cdrecord -msinfo dev=/dev/hdc` -R -o 2nd_session.iso debs</tt></pre>
+<pre><code>mkisofs -M grml_0.5.iso -C `cdrecord -msinfo dev=/dev/hdc` -R -o 2nd_session.iso debs</code></pre>
 </div></div>
 <div class="paragraph"><p>Finally append the second session to the cd using:</p></div>
 <div class="literalblock">
 <div class="content">
-<pre><tt>cdrecord dev=/dev/hdc -v -multi -tao 2nd_session.iso</tt></pre>
+<pre><code>cdrecord dev=/dev/hdc -v -multi -tao 2nd_session.iso</code></pre>
 </div></div>
 <div class="admonitionblock">
 <table><tr>
@@ -1043,26 +1157,27 @@ multisession task.</td>
 <div class="paragraph"><p>Now boot from your new personalized Grml CD using the debs parameter:</p></div>
 <div class="literalblock">
 <div class="content">
-<pre><tt>grml debs</tt></pre>
+<pre><code>grml debs</code></pre>
 </div></div>
 </div>
 <div class="sect2">
 <h3 id="_run_your_own_commands_on_startup">Run your own commands on startup</h3>
-<div class="paragraph"><p>You know that booting with <em>grml service=foobar</em> executes /etc/init.d/foobar
-when booting Grml. But you want to setup a more complex network configuration,
-adjust some other stuff and so on on your own? Just write a script named grml.sh
-which does the job and use own of the mentioned bootparams. Let&#8217;s say you have
-placed grml.sh on your usb device (usb stick) then use the following commandline
-on bootprompt:</p></div>
+<div class="paragraph"><p>You know that booting with <em>grml services=foobar</em> executes
+/etc/init.d/foobar when booting Grml. But you want to setup a more
+complex network configuration, adjust some other stuff and so on, on
+your own? Just write a script named grml.sh which does the job and use
+one of the mentioned boot parameters. Let&#8217;s say you have placed grml.sh
+on your usb device (usb stick) then use the following commandline on
+bootprompt:</p></div>
 <div class="literalblock">
 <div class="content">
-<pre><tt>grml myconfig=/dev/sda1</tt></pre>
+<pre><code>grml myconfig=/dev/sda1</code></pre>
 </div></div>
-<div class="paragraph"><p>Or even better: create a floppy disk with label GRMLCFG running:</p></div>
+<div class="paragraph"><p>Or even better: create a device with label GRMLCFG running (adjust /dev/sdX1
+according to your needs):</p></div>
 <div class="literalblock">
 <div class="content">
-<pre><tt>fdformat /dev/fd0   # format the floppy disk if not done already
-mkfs.ext2 -L GRMLCFG /dev/fd0   # now create ext2 filesystem with label GRMLCFG on it:</tt></pre>
+<pre><code>mkfs.ext3 -L GRMLCFG /dev/sdX1  # warning: this destroys all data on /dev/sdX1</code></pre>
 </div></div>
 <div class="admonitionblock">
 <table><tr>
@@ -1075,12 +1190,12 @@ this will destroy data on /dev/sda1 of course!). Take a look at the
 documentation/manpage of the filesystem you want to use.</td>
 </tr></table>
 </div>
-<div class="paragraph"><p>Now place your configuration archive (see save-config and the other usage
-scenarios) and the script grml.sh on the floppy disk. Now you can boot your
-system without specifying any bootparameters on bootprompt because devices
-labeled with GRMLCFG are mounted readonly and used by default. If you did not
-label your device you can use the device anyway using <em>grml myconfig=/dev/ice</em>
-on the bootprompt.</p></div>
+<div class="paragraph"><p>Now place your configuration archive (see save-config and the other
+usage scenarios) and the script grml.sh on the device. Now you can boot
+your system without specifying any boot parameters on bootprompt because
+devices labeled with GRMLCFG are mounted readonly and used by default.
+If you did not label your device you can use the device anyway using
+<em>grml myconfig=/dev/sdX</em> (adjust /dev/sdX) on the bootprompt.</p></div>
 </div>
 <div class="sect2">
 <h3 id="_debug_remote_systems">Debug remote systems</h3>
@@ -1096,11 +1211,11 @@ copies files defined in /etc/grml/partconf from /dev/sda2 to the Grml system. As
 /etc/network is predefined in /etc/grml/partconf the configuration from
 /dev/sda2 will be taken.</p></div>
 <div class="paragraph"><p>Or you use a standard Grml medium and have grml read IP address, netmask and
-default gateway from another medium like a floppy or an USB stick. Take a look
-at the script saveconfig and the boot parameter myconfig.</p></div>
+default gateway from another medium like a USB stick. Take a look at the script
+saveconfig and the boot parameter myconfig.</p></div>
 <div class="paragraph"><p>Or you put a grml.iso file on your hard disk (maybe in /boot/grml) or on an USB
 stick, use grub to boot from there and place debs, configuration scripts or Grml
-configuraton archives alongside the .iso.</p></div>
+configuration archives alongside the .iso.</p></div>
 </div>
 </div>
 </div>
@@ -1127,7 +1242,7 @@ about how to report bugs.</p></div>
 <div id="footnotes"><hr /></div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2011-05-22 13:13:56 CEST
+Last updated 2014-03-20 16:07:25 CET
 </div>
 </div>
 </body>
