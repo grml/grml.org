@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
 <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
-<meta name="generator" content="AsciiDoc 8.6.7" />
+<meta name="generator" content="AsciiDoc 8.6.9" />
 <title>grml-live(8)</title>
 <style type="text/css">
 /* Shared CSS for AsciiDoc xhtml11 and html5 backends */
@@ -87,9 +87,15 @@ ul, ol, li > p {
 ul > li     { color: #aaa; }
 ul > li > * { color: black; }
 
-pre {
+.monospaced, code, pre {
+  font-family: "Courier New", Courier, monospace;
+  font-size: inherit;
+  color: navy;
   padding: 0;
   margin: 0;
+}
+pre {
+  white-space: pre-wrap;
 }
 
 #author {
@@ -219,7 +225,7 @@ div.exampleblock > div.content {
 }
 
 div.imageblock div.content { padding-left: 0; }
-span.image img { border-style: none; }
+span.image img { border-style: none; vertical-align: text-bottom; }
 a.image:visited { color: white; }
 
 dl {
@@ -415,12 +421,6 @@ div.unbreakable { page-break-inside: avoid; }
  *
  * */
 
-tt {
-  font-family: "Courier New", Courier, monospace;
-  font-size: inherit;
-  color: navy;
-}
-
 div.tableblock {
   margin-top: 1.0em;
   margin-bottom: 1.5em;
@@ -453,12 +453,6 @@ div.tableblock > table[frame="vsides"] {
  * html5 specific
  *
  * */
-
-.monospaced {
-  font-family: "Courier New", Courier, monospace;
-  font-size: inherit;
-  color: navy;
-}
 
 table.tableblock {
   margin-top: 1.0em;
@@ -539,6 +533,8 @@ body.manpage div.sectionbody {
 @media print {
   body.manpage div#toc { display: none; }
 }
+
+
 </style>
 <script type="text/javascript">
 /*<![CDATA[*/
@@ -1043,10 +1039,11 @@ Specify name of the release.
 </dt>
 <dd>
 <p>
-Specify the Debian suite you want to use for your live-system.  Defaults to
-"squeeze" (being current Debian/stable). Supported values are: etch, lenny,
-squeeze, wheezy, sid. Please be aware that recent Debian suites might require a
-recent version of debootstrap.
+Specify the Debian suite you want to use for your live-system. If unset defaults
+to "testing". Supported values are: stable, testing, unstable (or their
+corresponding release names like "wheezy"). Please be aware that recent Debian
+suites might require a recent base.tgz
+debootstrap.
 </p>
 </dd>
 <dt class="hdlist1">
@@ -1109,14 +1106,14 @@ Use ZLIB instead of LZMA/XZ compression in mksquashfs part of the build process.
 as build and output directory just run:</p></div>
 <div class="literalblock">
 <div class="content">
-<pre><tt># grml-live</tt></pre>
+<pre><code># grml-live</code></pre>
 </div></div>
 <div class="paragraph"><p>To get a 64bit Debian-testing and grml-small based Live-CD using /srv/grml-live
 as build and output directory use the following command line on your amd64
 system:</p></div>
 <div class="literalblock">
 <div class="content">
-<pre><tt># grml-live -s testing -c GRMLBASE,GRML_SMALL,AMD64 -o /srv/grml-live</tt></pre>
+<pre><code># grml-live -s testing -c GRMLBASE,GRML_SMALL,AMD64 -o /srv/grml-live</code></pre>
 </div></div>
 <div class="admonitionblock">
 <table><tr>
@@ -1178,11 +1175,11 @@ GRML_SMALL, GRML_MEDIUM or GRML_FULL). The following files and directories are
 relevant for class GRMLBASE by default:</p></div>
 <div class="literalblock">
 <div class="content">
-<pre><tt>${GRML_FAI_CONFIG}/config/scripts/GRMLBASE/
+<pre><code>${GRML_FAI_CONFIG}/config/scripts/GRMLBASE/
 ${GRML_FAI_CONFIG}/config/debconf/GRMLBASE
 ${GRML_FAI_CONFIG}/config/class/GRMLBASE.var
 ${GRML_FAI_CONFIG}/config/hooks/instsoft.GRMLBASE
-${GRML_FAI_CONFIG}/config/package_config/GRMLBASE</tt></pre>
+${GRML_FAI_CONFIG}/config/package_config/GRMLBASE</code></pre>
 </div></div>
 <div class="paragraph"><p>Take a look at the next section for information about the concept of those
 files/directories.</p></div>
@@ -1205,6 +1202,13 @@ selected. The following classes are predefined:</p></div>
 <li>
 <p>
 DEBORPHAN: get rid of all packages listed in output of deborphan
+</p>
+</li>
+<li>
+<p>
+FRESHCLAM: execute freshclam (if it&#8217;s present) to update clamav definitions
+(increases resulting ISO size ~70MB). By default it&#8217;s skipped to avoid bigger
+ISO size.
 </p>
 </li>
 <li>
@@ -1303,19 +1307,19 @@ fai-doc). Furthermore /usr/share/doc/fai-doc/fai-guide.html/ch-config.html
 provides documentation regarding configuration possibilities.</p></div>
 <div class="literalblock">
 <div class="content">
-<pre><tt>/usr/sbin/grml-live</tt></pre>
+<pre><code>/usr/sbin/grml-live</code></pre>
 </div></div>
 <div class="paragraph"><p>Script for the main build process. Requires root permissions for execution.</p></div>
 <div class="literalblock">
 <div class="content">
-<pre><tt>/etc/grml/grml-live.conf</tt></pre>
+<pre><code>/etc/grml/grml-live.conf</code></pre>
 </div></div>
 <div class="paragraph"><p>Main configuration file for grml-live which should be considered as a reference
 configuration file only. Please use /etc/grml/grml-live.local for local
 configuration instead.</p></div>
 <div class="literalblock">
 <div class="content">
-<pre><tt>/etc/grml/grml-live.local</tt></pre>
+<pre><code>/etc/grml/grml-live.local</code></pre>
 </div></div>
 <div class="paragraph"><p>All the local configuration should go to this file. This file overrides any
 defaults of grml-live. Configurations via /etc/grml/grml-live.local are preferred
@@ -1324,7 +1328,7 @@ from /etc/grml/grml-live.local as well you have to specify them on the grml-live
 commandline.</p></div>
 <div class="literalblock">
 <div class="content">
-<pre><tt>${GRML_FAI_CONFIG}/fai.conf</tt></pre>
+<pre><code>${GRML_FAI_CONFIG}/fai.conf</code></pre>
 </div></div>
 <div class="paragraph"><p>Main configuration file for FAI which specifies where all the configuration
 files and scripts for FAI/grml-live can be found. By default the configuration
@@ -1334,31 +1338,31 @@ grml-live out-of-the-box so you shouldn&#8217;t have to configure anything in th
 file.</p></div>
 <div class="literalblock">
 <div class="content">
-<pre><tt>${GRML_FAI_CONFIG}/config/</tt></pre>
+<pre><code>${GRML_FAI_CONFIG}/config/</code></pre>
 </div></div>
 <div class="paragraph"><p>The main directory for configuration of FAI/grml-live. More details below.</p></div>
 <div class="literalblock">
 <div class="content">
-<pre><tt>${GRML_FAI_CONFIG}/config/class/</tt></pre>
+<pre><code>${GRML_FAI_CONFIG}/config/class/</code></pre>
 </div></div>
 <div class="paragraph"><p>This directory contains files which specify main configuration variables for the
 FAI classes.</p></div>
 <div class="literalblock">
 <div class="content">
-<pre><tt>${GRML_FAI_CONFIG}/config/debconf/</tt></pre>
+<pre><code>${GRML_FAI_CONFIG}/config/debconf/</code></pre>
 </div></div>
 <div class="paragraph"><p>This directory provides the files for preseeding/configuration of debconf
 through files.</p></div>
 <div class="literalblock">
 <div class="content">
-<pre><tt>${GRML_FAI_CONFIG}/config/hooks/</tt></pre>
+<pre><code>${GRML_FAI_CONFIG}/config/hooks/</code></pre>
 </div></div>
 <div class="paragraph"><p>This directory provides files for customising the build process through hooks.
 Hooks are user defined programs or scripts, which are called during the
 installation process.</p></div>
 <div class="literalblock">
 <div class="content">
-<pre><tt>${GRML_FAI_CONFIG}/config/package_config/</tt></pre>
+<pre><code>${GRML_FAI_CONFIG}/config/package_config/</code></pre>
 </div></div>
 <div class="paragraph"><p>Directory with lists of software packages to be installed or removed.  The
 different classes describe what should find its way to your ISO.  When running
@@ -1371,12 +1375,12 @@ directory GRMLBASE contains a package list defining a minimum but still
 reasonable package configuration.</p></div>
 <div class="literalblock">
 <div class="content">
-<pre><tt>${GRML_FAI_CONFIG}/config/scripts/</tt></pre>
+<pre><code>${GRML_FAI_CONFIG}/config/scripts/</code></pre>
 </div></div>
 <div class="paragraph"><p>Scripts for customising the ISO within the build process.</p></div>
 <div class="literalblock">
 <div class="content">
-<pre><tt>${GRML_FAI_CONFIG}/live-initramfs/</tt></pre>
+<pre><code>${GRML_FAI_CONFIG}/live-initramfs/</code></pre>
 </div></div>
 <div class="paragraph"><p>This directory provides the files used for building the initramfs/initrd via
 live-initramfs(8).</p></div>
@@ -1425,8 +1429,8 @@ chroot (check out "local mirror" to workaround this problem as far as possible)
 <h2 id="current_state">12. Current state of grml-live with squashfs-tools and kernel</h2>
 <div class="sectionbody">
 <div class="paragraph"><p>Use squashfs-tools &gt;=4.2-1 (available from Grml repositories as well as from
-Debian/testing and Debian/unstable) to build Grml (based) ISOs featuring kernel
-version 2.6.38-grml[64] or newer.</p></div>
+Debian) to build Grml (based) ISOs featuring kernel version 2.6.38-grml[64] or
+newer.</p></div>
 </div>
 </div>
 <div class="sect1">
@@ -1437,53 +1441,51 @@ version 2.6.38-grml[64] or newer.</p></div>
 <div class="paragraph"><p>The easiest way to get a running grml-live setup is to just use Grml.
 Of course using grml-live on a plain, original Debian installation is supported
 as well. So there we go.</p></div>
-<div class="paragraph"><p>What we have: plain, original Debian squeeze (6.0) with debian-backports
-enabled. (This is important for squashfs-tools.)</p></div>
+<div class="paragraph"><p>What we have: plain, original Debian wheezy (7.x).</p></div>
 <div class="paragraph"><p>What we want: build a Grml ISO based on Debian/wheezy for the amd64 architecture
 using grml-live.</p></div>
 <div class="sect3">
 <h4 id="_instructions">13.1.1. Instructions</h4>
 <div class="literalblock">
 <div class="content">
-<pre><tt># adjust sources.list:
-cat &gt;&gt; /etc/apt/sources.list &lt;&lt; EOF</tt></pre>
+<pre><code># adjust sources.list:
+cat &gt;&gt; /etc/apt/sources.list &lt;&lt; EOF</code></pre>
 </div></div>
 <div class="literalblock">
 <div class="content">
-<pre><tt># grml stable repository:
+<pre><code># grml stable repository:
   deb     http://deb.grml.org/ grml-stable  main
-# deb-src http://deb.grml.org/ grml-stable  main</tt></pre>
+# deb-src http://deb.grml.org/ grml-stable  main</code></pre>
 </div></div>
 <div class="literalblock">
 <div class="content">
-<pre><tt># grml testing/development repository:
+<pre><code># grml testing/development repository:
   deb     http://deb.grml.org/ grml-testing main
 # deb-src http://deb.grml.org/ grml-testing main
-EOF</tt></pre>
+EOF</code></pre>
 </div></div>
 <div class="literalblock">
 <div class="content">
-<pre><tt># get keyring for apt:
+<pre><code># get keyring for apt:
 apt-get update
-apt-get --allow-unauthenticated install grml-debian-keyring</tt></pre>
+apt-get --allow-unauthenticated install grml-debian-keyring</code></pre>
 </div></div>
 <div class="literalblock">
 <div class="content">
-<pre><tt># optionally(!) install basefile so we don't have to build basic
+<pre><code># optionally(!) install basefile so we don't have to build basic
 # chroot from scratch, grab from http://daily.grml.org/
 # mkdir -p /etc/grml/fai/config/basefiles/
 # mv I386.tar.gz /etc/grml/fai/config/basefiles/
-# mv AMD64.tar.gz /etc/grml/fai/config/basefiles/</tt></pre>
+# mv AMD64.tar.gz /etc/grml/fai/config/basefiles/</code></pre>
 </div></div>
 <div class="literalblock">
 <div class="content">
-<pre><tt># install relevant tools
-apt-get install -t squeeze-backports squashfs-tools
-apt-get --no-install-recommends install grml-live</tt></pre>
+<pre><code># install relevant tools
+apt-get --no-install-recommends install grml-live</code></pre>
 </div></div>
 <div class="literalblock">
 <div class="content">
-<pre><tt># adjust grml-live configuration for our needs:
+<pre><code># adjust grml-live configuration for our needs:
 cat &gt; /etc/grml/grml-live.local &lt;&lt; EOF
 ## want a faster build process and don't need smaller ISOs?
 ## if so use zlib compression
@@ -1494,31 +1496,31 @@ cat &gt; /etc/grml/grml-live.local &lt;&lt; EOF
 # CHROOT_INSTALL="/etc/grml/fai/chroot_install"
 ## adjust if necessary (defaults to /grml/grml-live):
 ## OUTPUT="/srv/grml-live"
-FAI_DEBOOTSTRAP="wheezy http://cdn.debian.net/debian/"
+FAI_DEBOOTSTRAP="wheezy http://http.debian.net/debian/"
 # ARCH="amd64"
 CLASSES="GRMLBASE,GRML_FULL,AMD64"
-EOF</tt></pre>
+EOF</code></pre>
 </div></div>
 <div class="literalblock">
 <div class="content">
-<pre><tt># just optional(!) - upgrade FAI to latest available version:
-cat &gt;&gt; /etc/apt/sources.list &lt;&lt; EOF
-# fai:
-  deb http://fai-project.org/download squeeze koeln
-EOF</tt></pre>
+<pre><code># just optional(!) - upgrade FAI to latest available version:
+cat &gt;&gt; /etc/apt/sources.list.d/fai.list &lt;&lt; EOF
+deb     http://jenkins.grml.org/debian fai main
+deb-src http://jenkins.grml.org/debian fai main
+EOF</code></pre>
 </div></div>
 <div class="literalblock">
 <div class="content">
-<pre><tt># get gpg key of FAI repos and install current FAI version:
-gpg -a --recv-keys AB9B66FD; gpg -a --export AB9B66FD | apt-key add -
+<pre><code># get gpg key of FAI repos and install current FAI version:
+wget -O - http://jenkins.grml.org/debian/C525F56752D4A654.asc | sudo apt-key add -
 apt-get update
-apt-get install fai-client fai-server fai-doc</tt></pre>
+apt-get install fai-client fai-server fai-doc</code></pre>
 </div></div>
 <div class="paragraph"><p>That&#8217;s it. Now invoking <em>grml-live -V</em> should build the ISO.  If everything
 worked as expected the last line of the shell output should look like:</p></div>
 <div class="literalblock">
 <div class="content">
-<pre><tt>[*] Successfully finished execution of grml-live [running 687 seconds]</tt></pre>
+<pre><code>[*] Successfully finished execution of grml-live [running 687 seconds]</code></pre>
 </div></div>
 <div class="paragraph"><p>and the ISO can be found inside /grml-live/grml-live/grml_isos/ then.</p></div>
 </div>
@@ -1549,11 +1551,11 @@ under <em>/</em> in the chroot - so you have to create the rootfs structure on y
 own. Usage example:</p></div>
 <div class="literalblock">
 <div class="content">
-<pre><tt>echo "CHROOT_INSTALL=\$GRML_FAI_CONFIG/chroot_install" &gt;&gt; /etc/grml/grml-live.local
+<pre><code>echo "CHROOT_INSTALL=\$GRML_FAI_CONFIG/chroot_install" &gt;&gt; /etc/grml/grml-live.local
 mkdir -p /etc/grml/fai/chroot_install/usr/src/
 wget example.org/foo.tar.gz
 mv foo.tar.gz /etc/grml/fai/chroot_install/usr/src/
-grml-live ...</tt></pre>
+grml-live ...</code></pre>
 </div></div>
 </div>
 <div class="sect2">
@@ -1567,7 +1569,7 @@ adjust MIRROR_DIRECTORY in /etc/grml/grml-live.conf[.local] as well.</p></div>
 <div class="paragraph"><p>If you want to use a HTTP Proxy (like apt-cacher-ng), set APT_PROXY. Example:</p></div>
 <div class="literalblock">
 <div class="content">
-<pre><tt>APT_PROXY="http://localhost:3142/"</tt></pre>
+<pre><code>APT_PROXY="http://localhost:3142/"</code></pre>
 </div></div>
 </div>
 <div class="sect2">
@@ -1575,20 +1577,20 @@ adjust MIRROR_DIRECTORY in /etc/grml/grml-live.conf[.local] as well.</p></div>
 <div class="paragraph"><p>Just create a new class (using the package_config directory):</p></div>
 <div class="literalblock">
 <div class="content">
-<pre><tt># cat &gt; /etc/grml/fai/config/package_config/MIKA &lt;&lt; EOF
-PACKAGES aptitude</tt></pre>
+<pre><code># cat &gt; /etc/grml/fai/config/package_config/MIKA &lt;&lt; EOF
+PACKAGES aptitude</code></pre>
 </div></div>
 <div class="literalblock">
 <div class="content">
-<pre><tt>vim
+<pre><code>vim
 another_name_of_a_debian_package
 and_another_one
-EOF</tt></pre>
+EOF</code></pre>
 </div></div>
 <div class="paragraph"><p>and specify it when invoking grml-live then:</p></div>
 <div class="literalblock">
 <div class="content">
-<pre><tt># grml-live -c GRMLBASE,GRML_SMALL,AMD64,MIKA</tt></pre>
+<pre><code># grml-live -c GRMLBASE,GRML_SMALL,AMD64,MIKA</code></pre>
 </div></div>
 </div>
 <div class="sect2">
@@ -1597,8 +1599,8 @@ EOF</tt></pre>
 what you are searching for just run:</p></div>
 <div class="literalblock">
 <div class="content">
-<pre><tt>rm -rf /etc/grml/fai /etc/grml/grml-live.conf
-dpkg -i --force-confnew --force-confmiss /path/to/grml-live_..._all.deb</tt></pre>
+<pre><code>rm -rf /etc/grml/fai /etc/grml/grml-live.conf
+dpkg -i --force-confnew --force-confmiss /path/to/grml-live_..._all.deb</code></pre>
 </div></div>
 </div>
 <div class="sect2">
@@ -1606,9 +1608,9 @@ dpkg -i --force-confnew --force-confmiss /path/to/grml-live_..._all.deb</tt></pr
 <div class="paragraph"><p>First of all create the chroot using debootstrap:</p></div>
 <div class="literalblock">
 <div class="content">
-<pre><tt>BASECHROOT='/tmp/basefile'
-debootstrap squeeze "$BASECHROOT" http://cdn.debian.net/debian
-tar -C "$BASECHROOT" --exclude='var/cache/apt/archives/*.deb' -zcf base.tar.gz ./</tt></pre>
+<pre><code>BASECHROOT='/tmp/basefile'
+debootstrap wheezy "$BASECHROOT" http://http.debian.net/debian
+tar -C "$BASECHROOT" --exclude='var/cache/apt/archives/*.deb' -zcf base.tar.gz ./</code></pre>
 </div></div>
 <div class="admonitionblock">
 <table><tr>
@@ -1627,9 +1629,9 @@ Use e.g. I386 as $CLASSNAME for i386 chroots and AMD64 for amd64 chroots.</p></d
 debootstrap. Check out the output for something like:</p></div>
 <div class="literalblock">
 <div class="content">
-<pre><tt>[...]
+<pre><code>[...]
 ftar: extracting //etc/grml/fai/config/basefiles///AMD64.tar.gz to /srv/grml64_testing/grml_chroot//
-[...]</tt></pre>
+[...]</code></pre>
 </div></div>
 <div class="admonitionblock">
 <table><tr>
@@ -1646,11 +1648,11 @@ ftar: extracting //etc/grml/fai/config/basefiles///AMD64.tar.gz to /srv/grml64_t
 FAI_DEBOOTSTRAP:</p></div>
 <div class="literalblock">
 <div class="content">
-<pre><tt># cat /etc/grml/grml-live.local
+<pre><code># cat /etc/grml/grml-live.local
 [...]
 APT_PROXY="http://localhost:3142/"
 [...]
-FAI_DEBOOTSTRAP="squeeze http://localhost:3142/cdn.debian.net/debian squeeze main contrib non-free"</tt></pre>
+FAI_DEBOOTSTRAP="wheezy http://localhost:3142/http.debian.net/debian wheezy main contrib non-free"</code></pre>
 </div></div>
 <div class="paragraph"><p>Make sure apt-cacher-ng is running (<em>/etc/init.d/apt-cacher-ng restart</em>).
 That&#8217;s it.  All downloaded files will be cached in /var/cache/apt-cacher-ng then.</p></div>
@@ -1662,13 +1664,13 @@ ISO for CD boot and USB boot. If you notice any problems when booting just
 revert the manifold feature running:</p></div>
 <div class="literalblock">
 <div class="content">
-<pre><tt>% dd if=/dev/zero of=grml.iso bs=512 count=1 conv=notrunc</tt></pre>
+<pre><code>% dd if=/dev/zero of=grml.iso bs=512 count=1 conv=notrunc</code></pre>
 </div></div>
 <div class="paragraph"><p>To switch from manifold to isohybrid mode (an alternative approach provided by
 syslinux) then just execute:</p></div>
 <div class="literalblock">
 <div class="content">
-<pre><tt>% isohybrid grml.iso</tt></pre>
+<pre><code>% isohybrid grml.iso</code></pre>
 </div></div>
 </div>
 <div class="sect2">
@@ -1676,12 +1678,12 @@ syslinux) then just execute:</p></div>
 <div class="paragraph"><p>Execute the following commands (requires root):</p></div>
 <div class="literalblock">
 <div class="content">
-<pre><tt>ARCH='amd64' # replace with i386 if necessary
-SUITE='squeeze' # using the current stable release should always work
+<pre><code>ARCH='amd64' # replace with i386 if necessary
+SUITE='wheezy' # using the current stable release should always work
 debootstrap --arch "$ARCH" --exclude=info,tasksel,tasksel-data "$SUITE" "$ARCH" http://debian.netcologne.de/debian
 cd "$ARCH"
 rm var/cache/apt/archives/*.deb
-tar zcf ../"${ARCH}".tar.gz *</tt></pre>
+tar zcf ../"${ARCH}".tar.gz *</code></pre>
 </div></div>
 <div class="paragraph"><p>And finally place the generated tarball in /etc/grml/fai/config/basefiles/ (note
 that it needs to be uppercase letters matching the class names, so: AMD64.tar.gz
@@ -1698,9 +1700,9 @@ build a Debian package on your own (using for example a specific version or the
 current development tree), just execute:</p></div>
 <div class="literalblock">
 <div class="content">
-<pre><tt>git clone git://git.grml.org/grml-live
+<pre><code>git clone git://git.grml.org/grml-live
 cd grml-live
-debuild -us -uc</tt></pre>
+debuild -us -uc</code></pre>
 </div></div>
 </div>
 </div>
@@ -1748,7 +1750,7 @@ in different formats:</p></div>
 <div id="footnotes"><hr /></div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2012-09-26 19:37:35 CEST
+Last updated 2013-12-11 11:53:34 CET
 </div>
 </div>
 </body>
