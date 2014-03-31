@@ -110,13 +110,13 @@
 
     <select name="flavour" id="download_flavour" style="width:100%;">
     <option value="full" selected="selected">grml-full (~415MB)</option>
-    <option value="small">grml-small (~817MB)</option>
+    <option value="small">grml-small (~195MB)</option>
     </select>
     <br /><br />
     <select name="arch" id="download_arch" style="width:100%;">
     <option value="amd64" selected="selected">64-bit PC (amd64)</option>
     <option value="i386">32-bit PC (i586+)</option>
-    <option value="96">One for both (700MB)</option>
+    <option value="96">One for both (~800MB)</option>
     </select>
     <br />
     <br />
@@ -158,8 +158,8 @@
     <script type="text/javascript">
     function update_arch() {
         var flavour = document.getElementById('download_flavour').value;
-        if (flavour == 'small') document.getElementById('download_arch').innerHTML = '<option value="amd64">64-bit PC (amd64)</option><option value="i386">32-bit PC (i586+)</option><option value="96">One for both (300MB)</option>';
-        if (flavour == 'full') document.getElementById('download_arch').innerHTML = '<option value="amd64">64-bit PC (amd64)</option><option value="i386">32-bit PC (i586+)</option><option value="96">One for both (700MB)</option>';
+        if (flavour == 'small') document.getElementById('download_arch').innerHTML = '<option value="amd64">64-bit PC (amd64)</option><option value="i386">32-bit PC (i586+)</option><option value="96">One for both (~380MB)</option>';
+        if (flavour == 'full') document.getElementById('download_arch').innerHTML = '<option value="amd64">64-bit PC (amd64)</option><option value="i386">32-bit PC (i586+)</option><option value="96">One for both (~800MB)</option>';
         update_links();
     }
 
