@@ -167,7 +167,6 @@ libee0						install
 libemail-date-format-perl			install
 libencode-locale-perl				install
 libept1.4.12:amd64				install
-libertas-firmware				install
 libestr0					install
 libevent-2.0-5:amd64				install
 libexpat1:amd64					install
@@ -229,6 +228,7 @@ libncursesw5:amd64				install
 libnet-http-perl				install
 libnet-smtp-ssl-perl				install
 libnet-ssleay-perl				install
+libnetfilter-acct1:amd64			install
 libnetfilter-conntrack3:amd64			install
 libnettle4:amd64				install
 libnewt0.52:amd64				install
@@ -251,7 +251,6 @@ libperl4-corelibs-perl				install
 libpipeline1:amd64				install
 libpng12-0:amd64				install
 libpopt0:amd64					install
-libprocps0:amd64				install
 libprocps3:amd64				install
 libpython-stdlib:amd64				install
 libpython2.7-minimal:amd64			install
@@ -326,6 +325,7 @@ net-tools					install
 netbase						install
 netcat-openbsd					install
 netcat-traditional				install
+nfacct						install
 nfs-common					install
 ntpdate						install
 nwipe						install

@@ -77,7 +77,7 @@
 
 <div class="content">
 
-    <h1>Download Grml 2013.09</h1>
+    <h1>Download Grml 2014.03</h1>
 
     <p>Get the current stable release here.<br />
     <!--
@@ -91,26 +91,26 @@
         <a href="http://grml.org/download/mirrors/">Download from a specific mirror</a><br/>
         <br/>
         Direct download links:<br/>
-        <a href="http://download.grml.org/grml96-full_2013.09.iso">Grml96 full ISO</a> [<a href="http://download.grml.org/grml96-full_2013.09.iso.sha1.asc">Signature</a>]<br/>
-        <a href="http://download.grml.org/grml64-full_2013.09.iso">Grml64 full ISO</a> [<a href="http://download.grml.org/grml64-full_2013.09.iso.sha1.asc">Signature</a>]<br/>
-        <a href="http://download.grml.org/grml32-full_2013.09.iso">Grml32 full ISO</a> [<a href="http://download.grml.org/grml32-full_2013.09.iso.sha1.asc">Signature</a>]<br/>
-        <a href="http://download.grml.org/grml96-small_2013.09.iso">Grml96 small ISO</a> [<a href="http://download.grml.org/grml96-small_2013.09.iso.sha1.asc">Signature</a>]<br/>
-        <a href="http://download.grml.org/grml64-small_2013.09.iso">Grml64 small ISO</a> [<a href="http://download.grml.org/grml64-small_2013.09.iso.sha1.asc">Signature</a>]<br/>
-        <a href="http://download.grml.org/grml32-small_2013.09.iso">Grml32 small ISO</a> [<a href="http://download.grml.org/grml32-small_2013.09.iso.sha1.asc">Signature</a>]<br/>
+        <a href="http://download.grml.org/grml96-full_2014.03.iso">Grml96 full ISO</a> [<a href="http://download.grml.org/grml96-full_2014.03.iso.sha1.asc">Signature</a>]<br/>
+        <a href="http://download.grml.org/grml64-full_2014.03.iso">Grml64 full ISO</a> [<a href="http://download.grml.org/grml64-full_2014.03.iso.sha1.asc">Signature</a>]<br/>
+        <a href="http://download.grml.org/grml32-full_2014.03.iso">Grml32 full ISO</a> [<a href="http://download.grml.org/grml32-full_2014.03.iso.sha1.asc">Signature</a>]<br/>
+        <a href="http://download.grml.org/grml96-small_2014.03.iso">Grml96 small ISO</a> [<a href="http://download.grml.org/grml96-small_2014.03.iso.sha1.asc">Signature</a>]<br/>
+        <a href="http://download.grml.org/grml64-small_2014.03.iso">Grml64 small ISO</a> [<a href="http://download.grml.org/grml64-small_2014.03.iso.sha1.asc">Signature</a>]<br/>
+        <a href="http://download.grml.org/grml32-small_2014.03.iso">Grml32 small ISO</a> [<a href="http://download.grml.org/grml32-small_2014.03.iso.sha1.asc">Signature</a>]<br/>
         <br/>
         </div></div>
     </div>
 
     <div class="download_group" id="download_group1" style="display:none;">
     <form method="get" action="/download/bounce/">
-    <input type="hidden" name="version" value="2013.09"/>
+    <input type="hidden" name="version" value="2014.03"/>
     <div class="download_panel" id="download_panel1"><div>
 
     <h2>Options</h2>
 
     <select name="flavour" id="download_flavour" style="width:100%;">
-    <option value="full" selected="selected">grml-full (~350MB)</option>
-    <option value="small">grml-small (~150MB)</option>
+    <option value="full" selected="selected">grml-full (~415MB)</option>
+    <option value="small">grml-small (~817MB)</option>
     </select>
     <br /><br />
     <select name="arch" id="download_arch" style="width:100%;">
@@ -125,12 +125,12 @@
     <br />
 
     <!--
-    <a href="/download/prerelease/" class="button" style="padding: 12px; font-weight: bold;"><span>Get 2013.09-rc1 instead!</span></a>
+    <a href="/download/prerelease/" class="button" style="padding: 12px; font-weight: bold;"><span>Get 2014.03-rc1 instead!</span></a>
     <br />
     -->
 
     <div style="font-size: 14pt;">
-    <p><a href="http://grml.org/changelogs/README-grml-2013.09">Release Notes</a></p>
+    <p><a href="http://grml.org/changelogs/README-grml-2014.03">Release Notes</a></p>
 
     </div>
     </div>
@@ -164,7 +164,7 @@
     }
 
     function update_links() {
-        var current_version = "2013.09";
+        var current_version = "2014.03";
         var product = 'grml';
         var arch = document.getElementById('download_arch').value;
         var flavour = document.getElementById('download_flavour').value;
@@ -198,13 +198,13 @@
     <b>Alternate downloads</b><br /><br />
     <a href="http://daily.grml.org/">Daily images</a><br />
     <a href="http://download.grml.org/">Older releases</a><br />
-    <a href="http://download.grml.org/grml_sources-2013.09.tar.gz">Source code</a> (both archs)<br />
+    <a href="http://download.grml.org/grml_sources-2014.03.tar.gz">Source code</a> (both archs)<br />
     <br/>
     Netboot packages:<br/>
-    <a href="http://download.grml.org/grml_netboot_package_grml64-full_2013.09.tar.bz2">64-bit</a>
-    <a href="http://download.grml.org/grml_netboot_package_grml64-full_2013.09.tar.bz2.sha1.asc">(sig)</a>
-    <a href="http://download.grml.org/grml_netboot_package_grml32-full_2013.09.tar.bz2">32-bit</a>
-    <a href="http://download.grml.org/grml_netboot_package_grml32-full_2013.09.tar.bz2.sha1.asc">(sig)</a>
+    <a href="http://download.grml.org/grml_netboot_package_grml64-full_2014.03.tar.bz2">64-bit</a>
+    <a href="http://download.grml.org/grml_netboot_package_grml64-full_2014.03.tar.bz2.sha1.asc">(sig)</a>
+    <a href="http://download.grml.org/grml_netboot_package_grml32-full_2014.03.tar.bz2">32-bit</a>
+    <a href="http://download.grml.org/grml_netboot_package_grml32-full_2014.03.tar.bz2.sha1.asc">(sig)</a>
 
     <br />
     <br />
@@ -217,7 +217,7 @@
     <b>Boot from USB key</b><br />
     <br />
     Just <tt>dd(1)</tt> the downloaded ISO to an <abbr title="Any existing data will be overwritten by the dd command!">empty</abbr> USB key!<br /><br />
-    <code>dd if=grml64_2013.09.iso of=/dev/USB_KEY</code>
+    <code>dd if=grml64_2014.03.iso of=/dev/USB_KEY</code>
     <br /><br />
 
     <b>Troubleshooting</b><br /><br />

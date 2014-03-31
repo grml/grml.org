@@ -214,7 +214,6 @@ iftop						install
 ifupdown					install
 imvirt						install
 imvirt-helper					install
-info						install
 init-system-helpers				install
 initramfs-tools					install
 initscripts					install
@@ -336,7 +335,6 @@ libemail-date-format-perl			install
 libencode-locale-perl				install
 libept1.4.12:i386				install
 liberror-perl					install
-libertas-firmware				install
 libespeak1:i386					install
 libestr0					install
 libevent-2.0-5:i386				install
@@ -441,6 +439,7 @@ libldb1:i386					install
 liblinear1					install
 liblinux-lvm-perl				install
 libllvm3.3:i386					install
+libllvm3.4:i386					install
 liblocale-gettext-perl				install
 liblockfile-bin					install
 liblockfile1:i386				install
@@ -470,6 +469,7 @@ libnet-http-perl				install
 libnet-smtp-ssl-perl				install
 libnet-ssleay-perl				install
 libnet1:i386					install
+libnetfilter-acct1:i386				install
 libnetfilter-conntrack3:i386			install
 libnettle4:i386					install
 libnewt0.52:i386				install
@@ -485,7 +485,7 @@ libnss3:i386					install
 libntdb1:i386					install
 libnuma1:i386					install
 libogg0:i386					install
-libopenjpeg2:i386				install
+libopenjpeg5:i386				install
 libopts25:i386					install
 libopus0:i386					install
 libp11-kit0:i386				install
@@ -516,7 +516,6 @@ libpng12-0:i386					install
 libpoppler37:i386				install
 libpopt0:i386					install
 libportaudio2:i386				install
-libprocps0:i386					install
 libprocps3:i386					install
 libprotobuf8:i386				install
 libpulse0:i386					install
@@ -628,10 +627,13 @@ libxatracker1:i386				install
 libxau6:i386					install
 libxaw7:i386					install
 libxcb-dri2-0:i386				install
+libxcb-dri3-0:i386				install
 libxcb-glx0:i386				install
+libxcb-present0:i386				install
 libxcb-render0:i386				install
 libxcb-shape0:i386				install
 libxcb-shm0:i386				install
+libxcb-sync1:i386				install
 libxcb-util0:i386				install
 libxcb-xfixes0:i386				install
 libxcb1:i386					install
@@ -687,7 +689,6 @@ lsof						install
 lsscsi						install
 ltrace						install
 lvm2						install
-lynx						install
 lynx-cur					install
 lzop						install
 make						install
@@ -728,6 +729,7 @@ netbase						install
 netcat-openbsd					install
 netcat-traditional				install
 netsniff-ng					install
+nfacct						install
 nfs-common					install
 nfs-kernel-server				install
 nmap						install
@@ -859,8 +861,6 @@ sysvinit-core					install
 sysvinit-utils					install
 tar						install
 targetcli					install
-tasksel						install
-tasksel-data					install
 tcpdump						install
 tcplay						install
 tcptraceroute					install

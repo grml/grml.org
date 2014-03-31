@@ -117,7 +117,6 @@ ifenslave					install
 ifupdown					install
 imvirt						install
 imvirt-helper					install
-info						install
 init-system-helpers				install
 initramfs-tools					install
 initscripts					install
@@ -167,7 +166,6 @@ libee0						install
 libemail-date-format-perl			install
 libencode-locale-perl				install
 libept1.4.12:i386				install
-libertas-firmware				install
 libestr0					install
 libevent-2.0-5:i386				install
 libexpat1:i386					install
@@ -229,6 +227,7 @@ libncursesw5:i386				install
 libnet-http-perl				install
 libnet-smtp-ssl-perl				install
 libnet-ssleay-perl				install
+libnetfilter-acct1:i386				install
 libnetfilter-conntrack3:i386			install
 libnettle4:i386					install
 libnewt0.52:i386				install
@@ -251,7 +250,6 @@ libperl4-corelibs-perl				install
 libpipeline1:i386				install
 libpng12-0:i386					install
 libpopt0:i386					install
-libprocps0:i386					install
 libprocps3:i386					install
 libpython-stdlib:i386				install
 libpython2.7-minimal:i386			install
@@ -326,6 +324,7 @@ net-tools					install
 netbase						install
 netcat-openbsd					install
 netcat-traditional				install
+nfacct						install
 nfs-common					install
 ntpdate						install
 nwipe						install
@@ -373,8 +372,6 @@ sysvinit					install
 sysvinit-core					install
 sysvinit-utils					install
 tar						install
-tasksel						install
-tasksel-data					install
 tcpd						install
 tcpdump						install
 telnet						install

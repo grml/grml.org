@@ -336,7 +336,6 @@ libemail-date-format-perl			install
 libencode-locale-perl				install
 libept1.4.12:amd64				install
 liberror-perl					install
-libertas-firmware				install
 libespeak1:amd64				install
 libestr0					install
 libevent-2.0-5:amd64				install
@@ -441,6 +440,7 @@ libldb1:amd64					install
 liblinear1					install
 liblinux-lvm-perl				install
 libllvm3.3:amd64				install
+libllvm3.4:amd64				install
 liblocale-gettext-perl				install
 liblockfile-bin					install
 liblockfile1:amd64				install
@@ -470,6 +470,7 @@ libnet-http-perl				install
 libnet-smtp-ssl-perl				install
 libnet-ssleay-perl				install
 libnet1:amd64					install
+libnetfilter-acct1:amd64			install
 libnetfilter-conntrack3:amd64			install
 libnettle4:amd64				install
 libnewt0.52:amd64				install
@@ -485,7 +486,7 @@ libnss3:amd64					install
 libntdb1:amd64					install
 libnuma1:amd64					install
 libogg0:amd64					install
-libopenjpeg2:amd64				install
+libopenjpeg5:amd64				install
 libopts25:amd64					install
 libopus0:amd64					install
 libp11-kit0:amd64				install
@@ -516,7 +517,6 @@ libpng12-0:amd64				install
 libpoppler37:amd64				install
 libpopt0:amd64					install
 libportaudio2:amd64				install
-libprocps0:amd64				install
 libprocps3:amd64				install
 libprotobuf8:amd64				install
 libpulse0:amd64					install
@@ -628,10 +628,13 @@ libxatracker1:amd64				install
 libxau6:amd64					install
 libxaw7:amd64					install
 libxcb-dri2-0:amd64				install
+libxcb-dri3-0:amd64				install
 libxcb-glx0:amd64				install
+libxcb-present0:amd64				install
 libxcb-render0:amd64				install
 libxcb-shape0:amd64				install
 libxcb-shm0:amd64				install
+libxcb-sync1:amd64				install
 libxcb-util0:amd64				install
 libxcb-xfixes0:amd64				install
 libxcb1:amd64					install
@@ -687,7 +690,6 @@ lsof						install
 lsscsi						install
 ltrace						install
 lvm2						install
-lynx						install
 lynx-cur					install
 lzop						install
 make						install
@@ -728,6 +730,7 @@ netbase						install
 netcat-openbsd					install
 netcat-traditional				install
 netsniff-ng					install
+nfacct						install
 nfs-common					install
 nfs-kernel-server				install
 nmap						install

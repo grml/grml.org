@@ -32,6 +32,10 @@
 
         <p>If you find additional bugs, please <a href="/bugs/">report them</a>.</p>
 
+        <h2>Known Bugs in Grml 2014.03</h2>
+
+        <p>No issues known so far.</p>
+
         <h2>Known Bugs in Grml 2013.09</h2>
 
         <ul>
@@ -46,12 +50,6 @@
           booting via PXE with grml-terminalserver fails on grml96
 
         </ul>
-
-        <h2>Known Bugs in Grml 2013.02</h2>
-
-	<ul>
-	  <li>grml-debootstrap: installation of 32bit systems lack kernel package, details and solution available in <a href="http://bts.grml.org/grml/issue1238">Issue 1238</a></li>
-	</ul>
 
 </div>
 
