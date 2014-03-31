@@ -31,8 +31,7 @@
 
           <ul>
               <li>distribution for sysadmins and users of text tools</li>
-              <li>Debian based distribution [use existing infrastructure]</li>
-              <li>usability by the visually impaired right out of the box</li>
+              <li>Debian based distribution (reusing existing infrastructure)</li>
             </ul>
 
           <p><a href="/zsh/"><img style="border: 0"
