@@ -2,15 +2,25 @@
     "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<meta name="generator" content="AsciiDoc 8.5.2" />
+<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
+<meta name="generator" content="AsciiDoc 8.6.9" />
 <title>ZSH-LOVERS(1)</title>
 <style type="text/css">
-/* Debug borders */
-p, li, dt, dd, div, pre, h1, h2, h3, h4, h5, h6 {
-/*
-  border: 1px solid red;
-*/
+/* Shared CSS for AsciiDoc xhtml11 and html5 backends */
+
+/* Default font. */
+body {
+  font-family: Georgia,serif;
+}
+
+/* Title font. */
+h1, h2, h3, h4, h5, h6,
+div.title, caption.title,
+thead, p.table.header,
+#toctitle,
+#author, #revnumber, #revdate, #revremark,
+#footer {
+  font-family: Arial,Helvetica,sans-serif;
 }
 
 body {
@@ -35,13 +45,8 @@ strong {
   color: #083194;
 }
 
-tt {
-  color: navy;
-}
-
 h1, h2, h3, h4, h5, h6 {
   color: #527bbd;
-  font-family: sans-serif;
   margin-top: 1.2em;
   margin-bottom: 0.5em;
   line-height: 1.3;
@@ -59,9 +64,11 @@ h3 {
 h3 + * {
   clear: left;
 }
+h5 {
+  font-size: 1.0em;
+}
 
 div.sectionbody {
-  font-family: serif;
   margin-left: 0;
 }
 
@@ -77,45 +84,50 @@ p {
 ul, ol, li > p {
   margin-top: 0;
 }
+ul > li     { color: #aaa; }
+ul > li > * { color: black; }
 
-pre {
+.monospaced, code, pre {
+  font-family: "Courier New", Courier, monospace;
+  font-size: inherit;
+  color: navy;
   padding: 0;
   margin: 0;
 }
+pre {
+  white-space: pre-wrap;
+}
 
-span#author {
+#author {
   color: #527bbd;
-  font-family: sans-serif;
   font-weight: bold;
   font-size: 1.1em;
 }
-span#email {
+#email {
 }
-span#revnumber, span#revdate, span#revremark {
-  font-family: sans-serif;
+#revnumber, #revdate, #revremark {
 }
 
-div#footer {
-  font-family: sans-serif;
+#footer {
   font-size: small;
   border-top: 2px solid silver;
   padding-top: 0.5em;
   margin-top: 4.0em;
 }
-div#footer-text {
+#footer-text {
   float: left;
   padding-bottom: 0.5em;
 }
-div#footer-badges {
+#footer-badges {
   float: right;
   padding-bottom: 0.5em;
 }
 
-div#preamble {
+#preamble {
   margin-top: 1.5em;
   margin-bottom: 1.5em;
 }
-div.tableblock, div.imageblock, div.exampleblock, div.verseblock,
+div.imageblock, div.exampleblock, div.verseblock,
 div.quoteblock, div.literalblock, div.listingblock, div.sidebarblock,
 div.admonitionblock {
   margin-top: 1.0em;
@@ -135,7 +147,6 @@ div.content { /* Block element content. */
 /* Block element titles. */
 div.title, caption.title {
   color: #527bbd;
-  font-family: sans-serif;
   font-weight: bold;
   text-align: left;
   margin-top: 1.0em;
@@ -157,13 +168,15 @@ div.content + div.title {
 
 div.sidebarblock > div.content {
   background: #ffffee;
-  border: 1px solid silver;
+  border: 1px solid #dddddd;
+  border-left: 4px solid #f0f0f0;
   padding: 0.5em;
 }
 
 div.listingblock > div.content {
-  border: 1px solid silver;
-  background: #f4f4f4;
+  border: 1px solid #dddddd;
+  border-left: 5px solid #f0f0f0;
+  background: #f8f8f8;
   padding: 0.5em;
 }
 
@@ -171,8 +184,8 @@ div.quoteblock, div.verseblock {
   padding-left: 1.0em;
   margin-left: 1.0em;
   margin-right: 10%;
-  border-left: 5px solid #dddddd;
-  color: #777777;
+  border-left: 5px solid #f0f0f0;
+  color: #888;
 }
 
 div.quoteblock > div.attribution {
@@ -180,8 +193,9 @@ div.quoteblock > div.attribution {
   text-align: right;
 }
 
-div.verseblock > div.content {
-  white-space: pre;
+div.verseblock > pre.content {
+  font-family: inherit;
+  font-size: inherit;
 }
 div.verseblock > div.attribution {
   padding-top: 0.75em;
@@ -211,7 +225,7 @@ div.exampleblock > div.content {
 }
 
 div.imageblock div.content { padding-left: 0; }
-span.image img { border-style: none; }
+span.image img { border-style: none; vertical-align: text-bottom; }
 a.image:visited { color: white; }
 
 dl {
@@ -254,35 +268,12 @@ div.compact div, div.compact div {
   margin-bottom: 0.1em;
 }
 
-div.tableblock > table {
-  border: 3px solid #527bbd;
-}
-thead, p.table.header {
-  font-family: sans-serif;
-  font-weight: bold;
-}
 tfoot {
   font-weight: bold;
 }
 td > div.verse {
   white-space: pre;
 }
-p.table {
-  margin-top: 0;
-}
-/* Because the table frame attribute is overriden by CSS in most browsers. */
-div.tableblock > table[frame="void"] {
-  border-style: none;
-}
-div.tableblock > table[frame="hsides"] {
-  border-left-style: none;
-  border-right-style: none;
-}
-div.tableblock > table[frame="vsides"] {
-  border-top-style: none;
-  border-bottom-style: none;
-}
-
 
 div.hdlist {
   margin-top: 0.8em;
@@ -339,25 +330,32 @@ span.footnote, span.footnoteref {
   min-width: 100px;
 }
 
-
-@media print {
-  div#footer-badges { display: none; }
+div.colist td {
+  padding-right: 0.5em;
+  padding-bottom: 0.3em;
+  vertical-align: top;
+}
+div.colist td img {
+  margin-top: 0.3em;
 }
 
-div#toc {
+@media print {
+  #footer-badges { display: none; }
+}
+
+#toc {
   margin-bottom: 2.5em;
 }
 
-div#toctitle {
+#toctitle {
   color: #527bbd;
-  font-family: sans-serif;
   font-size: 1.1em;
   font-weight: bold;
   margin-top: 1.0em;
   margin-bottom: 0.1em;
 }
 
-div.toclevel1, div.toclevel2, div.toclevel3, div.toclevel4 {
+div.toclevel0, div.toclevel1, div.toclevel2, div.toclevel3, div.toclevel4 {
   margin-top: 0;
   margin-bottom: 0;
 }
@@ -373,51 +371,173 @@ div.toclevel4 {
   margin-left: 6em;
   font-size: 0.9em;
 }
-/* Workarounds for IE6's broken and incomplete CSS2. */
 
-div.sidebar-content {
-  background: #ffffee;
-  border: 1px solid silver;
-  padding: 0.5em;
+span.aqua { color: aqua; }
+span.black { color: black; }
+span.blue { color: blue; }
+span.fuchsia { color: fuchsia; }
+span.gray { color: gray; }
+span.green { color: green; }
+span.lime { color: lime; }
+span.maroon { color: maroon; }
+span.navy { color: navy; }
+span.olive { color: olive; }
+span.purple { color: purple; }
+span.red { color: red; }
+span.silver { color: silver; }
+span.teal { color: teal; }
+span.white { color: white; }
+span.yellow { color: yellow; }
+
+span.aqua-background { background: aqua; }
+span.black-background { background: black; }
+span.blue-background { background: blue; }
+span.fuchsia-background { background: fuchsia; }
+span.gray-background { background: gray; }
+span.green-background { background: green; }
+span.lime-background { background: lime; }
+span.maroon-background { background: maroon; }
+span.navy-background { background: navy; }
+span.olive-background { background: olive; }
+span.purple-background { background: purple; }
+span.red-background { background: red; }
+span.silver-background { background: silver; }
+span.teal-background { background: teal; }
+span.white-background { background: white; }
+span.yellow-background { background: yellow; }
+
+span.big { font-size: 2em; }
+span.small { font-size: 0.6em; }
+
+span.underline { text-decoration: underline; }
+span.overline { text-decoration: overline; }
+span.line-through { text-decoration: line-through; }
+
+div.unbreakable { page-break-inside: avoid; }
+
+
+/*
+ * xhtml11 specific
+ *
+ * */
+
+div.tableblock {
+  margin-top: 1.0em;
+  margin-bottom: 1.5em;
 }
-div.sidebar-title, div.image-title {
-  color: #527bbd;
-  font-family: sans-serif;
+div.tableblock > table {
+  border: 3px solid #527bbd;
+}
+thead, p.table.header {
   font-weight: bold;
-  margin-top: 0.0em;
-  margin-bottom: 0.5em;
+  color: #527bbd;
+}
+p.table {
+  margin-top: 0;
+}
+/* Because the table frame attribute is overriden by CSS in most browsers. */
+div.tableblock > table[frame="void"] {
+  border-style: none;
+}
+div.tableblock > table[frame="hsides"] {
+  border-left-style: none;
+  border-right-style: none;
+}
+div.tableblock > table[frame="vsides"] {
+  border-top-style: none;
+  border-bottom-style: none;
 }
 
-div.listingblock div.content {
-  border: 1px solid silver;
-  background: #f4f4f4;
-  padding: 0.5em;
+
+/*
+ * html5 specific
+ *
+ * */
+
+table.tableblock {
+  margin-top: 1.0em;
+  margin-bottom: 1.5em;
+}
+thead, p.tableblock.header {
+  font-weight: bold;
+  color: #527bbd;
+}
+p.tableblock {
+  margin-top: 0;
+}
+table.tableblock {
+  border-width: 3px;
+  border-spacing: 0px;
+  border-style: solid;
+  border-color: #527bbd;
+  border-collapse: collapse;
+}
+th.tableblock, td.tableblock {
+  border-width: 1px;
+  padding: 4px;
+  border-style: solid;
+  border-color: #527bbd;
 }
 
-div.quoteblock-attribution {
-  padding-top: 0.5em;
+table.tableblock.frame-topbot {
+  border-left-style: hidden;
+  border-right-style: hidden;
+}
+table.tableblock.frame-sides {
+  border-top-style: hidden;
+  border-bottom-style: hidden;
+}
+table.tableblock.frame-none {
+  border-style: hidden;
+}
+
+th.tableblock.halign-left, td.tableblock.halign-left {
+  text-align: left;
+}
+th.tableblock.halign-center, td.tableblock.halign-center {
+  text-align: center;
+}
+th.tableblock.halign-right, td.tableblock.halign-right {
   text-align: right;
 }
 
-div.verseblock-content {
-  white-space: pre;
+th.tableblock.valign-top, td.tableblock.valign-top {
+  vertical-align: top;
 }
-div.verseblock-attribution {
-  padding-top: 0.75em;
-  text-align: left;
+th.tableblock.valign-middle, td.tableblock.valign-middle {
+  vertical-align: middle;
 }
-
-div.exampleblock-content {
-  border-left: 3px solid #dddddd;
-  padding-left: 0.5em;
+th.tableblock.valign-bottom, td.tableblock.valign-bottom {
+  vertical-align: bottom;
 }
 
-/* IE6 sets dynamically generated links as visited. */
-div#toc a:visited { color: blue; }
+
+/*
+ * manpage specific
+ *
+ * */
+
+body.manpage h1 {
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  border-top: 2px solid silver;
+  border-bottom: 2px solid silver;
+}
+body.manpage h2 {
+  border-style: none;
+}
+body.manpage div.sectionbody {
+  margin-left: 3em;
+}
+
+@media print {
+  body.manpage div#toc { display: none; }
+}
+
+
 </style>
 <script type="text/javascript">
 /*<![CDATA[*/
-window.onload = function(){asciidoc.footnotes();}
 var asciidoc = {  // Namespace.
 
 /////////////////////////////////////////////////////////////////////
@@ -459,7 +579,7 @@ toc: function (toclevels) {
 
   function tocEntries(el, toclevels) {
     var result = new Array;
-    var re = new RegExp('[hH]([2-'+(toclevels+1)+'])');
+    var re = new RegExp('[hH]([1-'+(toclevels+1)+'])');
     // Function that scans the DOM tree for header elements (the DOM2
     // nodeIterator API would be a better technique but not supported by all
     // browsers).
@@ -479,6 +599,25 @@ toc: function (toclevels) {
   }
 
   var toc = document.getElementById("toc");
+  if (!toc) {
+    return;
+  }
+
+  // Delete existing TOC entries in case we're reloading the TOC.
+  var tocEntriesToRemove = [];
+  var i;
+  for (i = 0; i < toc.childNodes.length; i++) {
+    var entry = toc.childNodes[i];
+    if (entry.nodeName.toLowerCase() == 'div'
+     && entry.getAttribute("class")
+     && entry.getAttribute("class").match(/^toclevel/))
+      tocEntriesToRemove.push(entry);
+  }
+  for (i = 0; i < tocEntriesToRemove.length; i++) {
+    toc.removeChild(tocEntriesToRemove[i]);
+  }
+
+  // Rebuild TOC entries.
   var entries = tocEntries(document.getElementById("content"), toclevels);
   for (var i = 0; i < entries.length; ++i) {
     var entry = entries[i];
@@ -506,24 +645,44 @@ toc: function (toclevels) {
  */
 
 footnotes: function () {
-  var cont = document.getElementById("content");
+  // Delete existing footnote entries in case we're reloading the footnodes.
+  var i;
   var noteholder = document.getElementById("footnotes");
+  if (!noteholder) {
+    return;
+  }
+  var entriesToRemove = [];
+  for (i = 0; i < noteholder.childNodes.length; i++) {
+    var entry = noteholder.childNodes[i];
+    if (entry.nodeName.toLowerCase() == 'div' && entry.getAttribute("class") == "footnote")
+      entriesToRemove.push(entry);
+  }
+  for (i = 0; i < entriesToRemove.length; i++) {
+    noteholder.removeChild(entriesToRemove[i]);
+  }
+
+  // Rebuild footnote entries.
+  var cont = document.getElementById("content");
   var spans = cont.getElementsByTagName("span");
   var refs = {};
   var n = 0;
   for (i=0; i<spans.length; i++) {
     if (spans[i].className == "footnote") {
       n++;
-      // Use [\s\S] in place of . so multi-line matches work.
-      // Because JavaScript has no s (dotall) regex flag.
-      note = spans[i].innerHTML.match(/\s*\[([\s\S]*)]\s*/)[1];
+      var note = spans[i].getAttribute("data-note");
+      if (!note) {
+        // Use [\s\S] in place of . so multi-line matches work.
+        // Because JavaScript has no s (dotall) regex flag.
+        note = spans[i].innerHTML.match(/\s*\[([\s\S]*)]\s*/)[1];
+        spans[i].innerHTML =
+          "[<a id='_footnoteref_" + n + "' href='#_footnote_" + n +
+          "' title='View footnote' class='footnote'>" + n + "</a>]";
+        spans[i].setAttribute("data-note", note);
+      }
       noteholder.innerHTML +=
         "<div class='footnote' id='_footnote_" + n + "'>" +
         "<a href='#_footnoteref_" + n + "' title='Return to text'>" +
         n + "</a>. " + note + "</div>";
-      spans[i].innerHTML =
-        "[<a id='_footnoteref_" + n + "' href='#_footnote_" + n +
-        "' title='View footnote' class='footnote'>" + n + "</a>]";
       var id =spans[i].getAttribute("id");
       if (id != null) refs["#"+id] = n;
     }
@@ -543,25 +702,53 @@ footnotes: function () {
       }
     }
   }
+},
+
+install: function(toclevels) {
+  var timerId;
+
+  function reinstall() {
+    asciidoc.footnotes();
+    if (toclevels) {
+      asciidoc.toc(toclevels);
+    }
+  }
+
+  function reinstallAndRemoveTimer() {
+    clearInterval(timerId);
+    reinstall();
+  }
+
+  timerId = setInterval(reinstall, 500);
+  if (document.addEventListener)
+    document.addEventListener("DOMContentLoaded", reinstallAndRemoveTimer, false);
+  else
+    window.onload = reinstallAndRemoveTimer;
 }
 
 }
+asciidoc.install();
 /*]]>*/
 </script>
 </head>
-<body>
+<body class="article">
 <div id="header">
 <h1>ZSH-LOVERS(1)</h1>
 </div>
 <div id="content">
+<div class="sect1">
 <h2 id="_name">NAME</h2>
 <div class="sectionbody">
 <div class="paragraph"><p>zsh-lovers - tips, tricks and examples for the Z shell</p></div>
 </div>
+</div>
+<div class="sect1">
 <h2 id="_synopsis">SYNOPSIS</h2>
 <div class="sectionbody">
 <div class="paragraph"><p>Just read it. ;-)</p></div>
 </div>
+</div>
+<div class="sect1">
 <h2 id="_overview">OVERVIEW</h2>
 <div class="sectionbody">
 <div class="paragraph"><p>Whenever we look at the zsh manual we wonder why there are no examples or those
@@ -575,6 +762,8 @@ details.</p></div>
 just a just for fun - manpage ;)<br />
 For comments, bugreports and feedback take a quick look at the section <strong>BUGS</strong>.</p></div>
 </div>
+</div>
+<div class="sect1">
 <h2 id="_shell_scripting">SHELL-SCRIPTING</h2>
 <div class="sectionbody">
 <div class="paragraph"><p>This section provides some examples for often needed shellscript-stuff. Notice
@@ -583,7 +772,7 @@ Parse options in shellscripts. Example taken from ZWS by Adam Chodorowski
 (<a href="http://www.chodorowski.com/projects/zws/">http://www.chodorowski.com/projects/zws/</a>):</p></div>
 <div class="listingblock">
 <div class="content">
-<pre><tt>parse_options()
+<pre><code>parse_options()
 {
     o_port=(-p 9999)
     o_root=(-r WWW)
@@ -602,21 +791,24 @@ Parse options in shellscripts. Example taken from ZWS by Adam Chodorowski
     if [[ $root[1] != '/' ]]; then root="$PWD/$root"; fi
 }
 # now use the function:
-parse_options $*</tt></pre>
+parse_options $*</code></pre>
 </div></div>
 </div>
+</div>
+<div class="sect1">
 <h2 id="_examples">EXAMPLES</h2>
 <div class="sectionbody">
 <div class="paragraph"><p>Available subsections are <strong>Aliases</strong>, <strong>Completion</strong>, <strong>Unsorted/Misc examples</strong>,
 <strong>(Recursive) Globbing - Examples</strong>, <strong>Modifiers usage</strong>, <strong>Redirection-Examples</strong>,
 <strong>ZMV-Examples</strong> and <strong>Module-Examples</strong>.</p></div>
-<h3 id="_aliases">ALIASES</h3><div style="clear:left"></div>
+<div class="sect2">
+<h3 id="_aliases">ALIASES</h3>
 <div class="paragraph"><p>Suffix aliases are supported in zsh since version 4.2.0. Some examples:</p></div>
 <div class="listingblock">
 <div class="content">
-<pre><tt>alias -s tex=vim
+<pre><code>alias -s tex=vim
 alias -s html=w3m
-alias -s org=w3m</tt></pre>
+alias -s org=w3m</code></pre>
 </div></div>
 <div class="paragraph"><p>Now pressing return-key after entering <em>foobar.tex</em> starts vim with
 foobar.tex. Calling a html-file runs browser w3m. <em>www.zsh.org</em> and pressing
@@ -624,15 +816,15 @@ enter starts w3m with argument www.zsh.org.<br />
 Global aliases can be used anywhere in the command line. Example:</p></div>
 <div class="listingblock">
 <div class="content">
-<pre><tt>$ alias -g C='| wc -l'
+<pre><code>$ alias -g C='| wc -l'
 $ grep alias ~/.zsh/* C
-443</tt></pre>
+443</code></pre>
 </div></div>
 <div class="paragraph"><p>Some more or less useful global aliases (choose whether they are useful  or not
 for you on your own):</p></div>
 <div class="listingblock">
 <div class="content">
-<pre><tt>alias -g ...='../..'
+<pre><code>alias -g ...='../..'
 alias -g ....='../../..'
 alias -g .....='../../../..'
 alias -g CA="2&gt;&amp;1 | cat -A"
@@ -670,9 +862,11 @@ alias -g VM=/var/log/messages
 alias -g X0G='| xargs -0 egrep'
 alias -g X0='| xargs -0'
 alias -g XG='| xargs egrep'
-alias -g X='| xargs'</tt></pre>
+alias -g X='| xargs'</code></pre>
 </div></div>
-<h3 id="_completion">COMPLETION</h3><div style="clear:left"></div>
+</div>
+<div class="sect2">
+<h3 id="_completion">COMPLETION</h3>
 <div class="paragraph"><p>See also man 1 zshcompctl zshcompsys zshcompwid. zshcompctl is the old
 style of zsh programmable completion, zshcompsys is the new completion
 system, zshcompwid are the zsh completion widgets.</p></div>
@@ -681,69 +875,69 @@ in order to proxy the list of  results  (like  the  list  of  available
 debian packages) Use a cache:</p></div>
 <div class="listingblock">
 <div class="content">
-<pre><tt>zstyle ':completion:*' use-cache on
-zstyle ':completion:*' cache-path ~/.zsh/cache</tt></pre>
+<pre><code>zstyle ':completion:*' use-cache on
+zstyle ':completion:*' cache-path ~/.zsh/cache</code></pre>
 </div></div>
 <div class="paragraph"><p>Prevent CVS files/directories from being completed:</p></div>
 <div class="listingblock">
 <div class="content">
-<pre><tt>zstyle ':completion:*:(all-|)files' ignored-patterns '(|*/)CVS'
-zstyle ':completion:*:cd:*' ignored-patterns '(*/)#CVS'</tt></pre>
+<pre><code>zstyle ':completion:*:(all-|)files' ignored-patterns '(|*/)CVS'
+zstyle ':completion:*:cd:*' ignored-patterns '(*/)#CVS'</code></pre>
 </div></div>
 <div class="paragraph"><p>Fuzzy matching of completions for when you mistype them:</p></div>
 <div class="listingblock">
 <div class="content">
-<pre><tt>zstyle ':completion:*' completer _complete _match _approximate
+<pre><code>zstyle ':completion:*' completer _complete _match _approximate
 zstyle ':completion:*:match:*' original only
-zstyle ':completion:*:approximate:*' max-errors 1 numeric</tt></pre>
+zstyle ':completion:*:approximate:*' max-errors 1 numeric</code></pre>
 </div></div>
 <div class="paragraph"><p>And  if  you  want  the  number  of  errors  allowed by _approximate to
 increase with the length of what you have typed so far:</p></div>
 <div class="listingblock">
 <div class="content">
-<pre><tt>zstyle -e ':completion:*:approximate:*' \
-        max-errors 'reply=($((($#PREFIX+$#SUFFIX)/3))numeric)'</tt></pre>
+<pre><code>zstyle -e ':completion:*:approximate:*' \
+        max-errors 'reply=($((($#PREFIX+$#SUFFIX)/3))numeric)'</code></pre>
 </div></div>
 <div class="paragraph"><p>Ignore completion functions for commands you don&#8217;t have:</p></div>
 <div class="listingblock">
 <div class="content">
-<pre><tt>zstyle ':completion:*:functions' ignored-patterns '_*'</tt></pre>
+<pre><code>zstyle ':completion:*:functions' ignored-patterns '_*'</code></pre>
 </div></div>
 <div class="paragraph"><p>With helper functions like:</p></div>
 <div class="listingblock">
 <div class="content">
-<pre><tt>xdvi() { command xdvi ${*:-*.dvi(om[1])} }</tt></pre>
+<pre><code>xdvi() { command xdvi ${*:-*.dvi(om[1])} }</code></pre>
 </div></div>
 <div class="paragraph"><p>you can avoid having to complete at all in many cases, but if  you  do,
 you  might want to fall into menu selection immediately and to have the
 words sorted by time:</p></div>
 <div class="listingblock">
 <div class="content">
-<pre><tt>zstyle ':completion:*:*:xdvi:*' menu yes select
-zstyle ':completion:*:*:xdvi:*' file-sort time</tt></pre>
+<pre><code>zstyle ':completion:*:*:xdvi:*' menu yes select
+zstyle ':completion:*:*:xdvi:*' file-sort time</code></pre>
 </div></div>
 <div class="paragraph"><p>Completing process IDs with menu selection:</p></div>
 <div class="listingblock">
 <div class="content">
-<pre><tt>zstyle ':completion:*:*:kill:*' menu yes select
-zstyle ':completion:*:kill:*'   force-list always</tt></pre>
+<pre><code>zstyle ':completion:*:*:kill:*' menu yes select
+zstyle ':completion:*:kill:*'   force-list always</code></pre>
 </div></div>
 <div class="paragraph"><p>If you end up using a directory  as  argument,  this  will  remove  the
 trailing slash (usefull in ln)</p></div>
 <div class="listingblock">
 <div class="content">
-<pre><tt>zstyle ':completion:*' squeeze-slashes true</tt></pre>
+<pre><code>zstyle ':completion:*' squeeze-slashes true</code></pre>
 </div></div>
 <div class="paragraph"><p>cd will never select the parent directory (e.g.: cd ../&lt;TAB&gt;):</p></div>
 <div class="listingblock">
 <div class="content">
-<pre><tt>zstyle ':completion:*:cd:*' ignore-parents parent pwd</tt></pre>
+<pre><code>zstyle ':completion:*:cd:*' ignore-parents parent pwd</code></pre>
 </div></div>
 <div class="paragraph"><p>Another method for <em>quick change directories</em>. Add this to your ~/.zshrc, then just enter
 &#8220;cd &#8230;./dir&#8221;</p></div>
 <div class="listingblock">
 <div class="content">
-<pre><tt>rationalise-dot() {
+<pre><code>rationalise-dot() {
   if [[ $LBUFFER = *.. ]]; then
     LBUFFER+=/..
   else
@@ -751,14 +945,16 @@ trailing slash (usefull in ln)</p></div>
   fi
 }
 zle -N rationalise-dot
-bindkey . rationalise-dot</tt></pre>
+bindkey . rationalise-dot</code></pre>
 </div></div>
-<h3 id="_unsorted_misc_examples">UNSORTED/MISC examples</h3><div style="clear:left"></div>
+</div>
+<div class="sect2">
+<h3 id="_unsorted_misc_examples">UNSORTED/MISC examples</h3>
 <div class="paragraph"><p>Hint: A list of valid glob Qualifiers can be found in zshexpn(1).
 See &#8220;man 1 zshexpn | less -p&#8221; Qualifiers for details.</p></div>
 <div class="listingblock">
 <div class="content">
-<pre><tt># Get the names of all files that *don't* match a pattern *anywhere* on the
+<pre><code># Get the names of all files that *don't* match a pattern *anywhere* on the
 # file (and without ``-L'' because its GNUish)
   $ print -rl -- *(.^e{'grep -q pattern $REPLY'})
   # or
@@ -1080,21 +1276,23 @@ See &#8220;man 1 zshexpn | less -p&#8221; Qualifiers for details.</p></div>
   &gt;    echo "Penguin on board."
   &gt; else
   &gt;    echo "Not a Linux."
-  &gt; fi</tt></pre>
+  &gt; fi</code></pre>
 </div></div>
-<h3 id="_recursive_globbing_examples">(Recursive) Globbing - Examples</h3><div style="clear:left"></div>
+</div>
+<div class="sect2">
+<h3 id="_recursive_globbing_examples">(Recursive) Globbing - Examples</h3>
 <div class="paragraph"><p>A list of valid glob Qualifiers can be found in zshexpn(1). <strong>Note:</strong>
 **/ is equivalent to (*/)#! For example:</p></div>
 <div class="listingblock">
 <div class="content">
-<pre><tt>$ print (*/)#zsh_us.ps
+<pre><code>$ print (*/)#zsh_us.ps
 zsh-4.2.3/Doc/zsh_us.ps
 $ print **/zsh_us.ps
-zsh-4.2.3/Doc/zsh_us.ps</tt></pre>
+zsh-4.2.3/Doc/zsh_us.ps</code></pre>
 </div></div>
 <div class="listingblock">
 <div class="content">
-<pre><tt># Search for `README' in all Subdirectories
+<pre><code># Search for `README' in all Subdirectories
   $ ls -l **/README
 
 # find directories that contain both "index.php" and "index.html", or in
@@ -1240,15 +1438,17 @@ zsh-4.2.3/Doc/zsh_us.ps</tt></pre>
   $ rmdir ./**/*(/od) 2&gt; /dev/null
 
 # Show only files which are owned by group `users'.
-  $ ls -l *(G[users])</tt></pre>
+  $ ls -l *(G[users])</code></pre>
 </div></div>
-<h3 id="_modifiers_usage">Modifiers usage</h3><div style="clear:left"></div>
+</div>
+<div class="sect2">
+<h3 id="_modifiers_usage">Modifiers usage</h3>
 <div class="paragraph"><p>Modifiers are a powerful mechanism that let you modify the results
 returned by parameter, filename and history expansion. See zshexpn(1)
 for details.</p></div>
 <div class="listingblock">
 <div class="content">
-<pre><tt># NOTE: Zsh 4.3.4 needed!
+<pre><code># NOTE: Zsh 4.3.4 needed!
   $ autoload -U age
 # files modified today
   $ print *(e:age today now:)
@@ -1328,13 +1528,15 @@ for details.</p></div>
 # convert 1st char of a word to uppercase
   $ foo="one two three four"
   $ print -r -- "${(C)foo}"
-  One Two Three Four</tt></pre>
+  One Two Three Four</code></pre>
 </div></div>
-<h3 id="_redirection_examples">Redirection-Examples</h3><div style="clear:left"></div>
+</div>
+<div class="sect2">
+<h3 id="_redirection_examples">Redirection-Examples</h3>
 <div class="paragraph"><p>See zshmisc(1) for more informations (or less ${^fpath}/zmv(N))</p></div>
 <div class="listingblock">
 <div class="content">
-<pre><tt># Append `exit 1' at the end of all *.sh - files
+<pre><code># Append `exit 1' at the end of all *.sh - files
   $ echo "exit 1" &gt;&gt; *.sh
 
 # adding files to foobar.tar.gz
@@ -1380,13 +1582,15 @@ for details.</p></div>
 
 # More fun with STDERR ;)
   $ ./my-script.sh 2&gt; &gt;(grep -v moron &gt;error.log)|process-output &gt;output.log
-  $  echo "Thats STDOUT" &gt;&gt;(sed 's/stdout/another example/' &gt; foobar)</tt></pre>
+  $  echo "Thats STDOUT" &gt;&gt;(sed 's/stdout/another example/' &gt; foobar)</code></pre>
 </div></div>
-<h3 id="_zmv_examples_require_autoload_zmv">ZMV-Examples (require autoload zmv)</h3><div style="clear:left"></div>
+</div>
+<div class="sect2">
+<h3 id="_zmv_examples_require_autoload_zmv">ZMV-Examples (require autoload zmv)</h3>
 <div class="paragraph"><p><strong>Note:</strong> <em>-n</em> means no execution (just print what would happen). At</p></div>
 <div class="listingblock">
 <div class="content">
-<pre><tt># Remove illegal characters in a fat32 file system. Illegal characters are
+<pre><code># Remove illegal characters in a fat32 file system. Illegal characters are
 #   / :  ;  *  ?  "  &lt;  &gt;  |
 # NOTE: ``-Q'' and (D) is to include hidden files.
   $ unwanted='[:;*?\"&lt;&gt;|]'
@@ -1543,32 +1747,39 @@ for details.</p></div>
 # Rename pic1.jpg, pic2.jpg, .. to pic0001.jpg, pic0002.jpg, ..
   $ autoload zmv
   $ zmv 'pic(*).jpg' 'pic${(l:4::0:)1}.jpg'
-  $ zmv '(**/)pic(*).jpg' '$1/pic${(l:4::0:)2}.jpg' # recursively</tt></pre>
+  $ zmv '(**/)pic(*).jpg' '$1/pic${(l:4::0:)2}.jpg' # recursively</code></pre>
 </div></div>
-<h3 id="_module_examples">Module-Examples</h3><div style="clear:left"></div>
+</div>
+<div class="sect2">
+<h3 id="_module_examples">Module-Examples</h3>
 <div class="paragraph"><p>Please read zshmodules(1) first!</p></div>
+<div class="sect3">
 <h4 id="_zsh_pcre_require_zmodload_zsh_pcre">zsh/pcre (require zmodload zsh/pcre)</h4>
 <div class="listingblock">
 <div class="content">
-<pre><tt># Copy files of a certain period (date indicated in the filenames)
+<pre><code># Copy files of a certain period (date indicated in the filenames)
   $ zmodload zsh/pcre
   $ ls -d -- *(e:'[[ $REPLY -pcre-match pcre-regexp ]]':)
   # or
   $ m() { [[ $1 -pcre-match pcre-regexp ]] }
-  $ ls -d -- *(+m)</tt></pre>
+  $ ls -d -- *(+m)</code></pre>
 </div></div>
+</div>
+<div class="sect3">
 <h4 id="_zsh_clone_require_zmodload_zsh_clone">zsh/clone (require zmodload zsh/clone)</h4>
 <div class="listingblock">
 <div class="content">
-<pre><tt># Creates a forked instance of the current shell ($! is set to zero) and
+<pre><code># Creates a forked instance of the current shell ($! is set to zero) and
 # execute ``command'' on /dev/tty8 (for this example).
   $ zmodload zsh/clone
-  $ clone /dev/tty8 &amp;&amp; (($! == 0)) &amp;&amp; exec command</tt></pre>
+  $ clone /dev/tty8 &amp;&amp; (($! == 0)) &amp;&amp; exec command</code></pre>
 </div></div>
+</div>
+<div class="sect3">
 <h4 id="_zsh_datetime_require_zmodload_zsh_datetime">zsh/datetime (require zmodload zsh/datetime)</h4>
 <div class="listingblock">
 <div class="content">
-<pre><tt>  $ zmodload zsh/datetime
+<pre><code>  $ zmodload zsh/datetime
   $ alias datereplacement='strftime "%Y-%m-%d" $EPOCHSECONDS'
   $ export DATE=`datereplacement`
   $ echo $DATE
@@ -1590,12 +1801,14 @@ for details.</p></div>
   $ strftime -s file "abc_de_%m%d%Y.dat" $((EPOCHSECONDS - 24 * 60 * 60 ))
   $ files=(**/$file(N.L0))
   $ (( $#files &gt; 0 )) &amp;&amp; print -rl -- $files | \
-    mailx -s "empty files"  foo@bar.tdl</tt></pre>
+    mailx -s "empty files"  foo@bar.tdl</code></pre>
 </div></div>
+</div>
+<div class="sect3">
 <h4 id="_zsh_stat_require_zmodload_zsh_stat">zsh/stat (require zmodload zsh/stat)</h4>
 <div class="listingblock">
 <div class="content">
-<pre><tt># test if a symbolic link links to a certain file
+<pre><code># test if a symbolic link links to a certain file
   $ zmodload -i zsh/stat
   $ ! stat -LH s foo.ln || [[ $s[link] != "foo.exe" ]] || ln -sf foo.exe foo.ln
 
@@ -1667,21 +1880,25 @@ for details.</p></div>
   $ stat -F '%d %m %Y' +mtime ~/.zshrc
   30 06 2004
   $ stat -F '%D' +mtime ~/.zshrc
-  06/30/04</tt></pre>
+  06/30/04</code></pre>
 </div></div>
+</div>
+<div class="sect3">
 <h4 id="_zsh_files_require_zmodload_zsh_files">zsh/files (require zmodload zsh/files)</h4>
 <div class="listingblock">
 <div class="content">
-<pre><tt># search a directory for files containing a certain string then copy those
+<pre><code># search a directory for files containing a certain string then copy those
 # files to another directory.
   $ zmodload zsh/files
   $ IFS=$'\0'
-  $ cp $(grep -lZr foobar .) otherdirectory</tt></pre>
+  $ cp $(grep -lZr foobar .) otherdirectory</code></pre>
 </div></div>
+</div>
+<div class="sect3">
 <h4 id="_zsh_mapfile_require_zmodload_zsh_mapfile">zsh/mapfile (require zmodload zsh/mapfile)</h4>
 <div class="listingblock">
 <div class="content">
-<pre><tt># grepping for two patterns
+<pre><code># grepping for two patterns
   $ zmodload zsh/mapfile
   $ pattern1="foo"
   $ pattern2="bar foo"
@@ -1721,12 +1938,14 @@ for details.</p></div>
 # end of the filename
   $ autoload -U zmv
   $ zmodload zsh/mapfile
-  $ zmv '(*).ps' '$1-${${${mapfile[$f]##*%%Title: }%% *}//[^a-zA-Z0-9_]/}.ps'</tt></pre>
+  $ zmv '(*).ps' '$1-${${${mapfile[$f]##*%%Title: }%% *}//[^a-zA-Z0-9_]/}.ps'</code></pre>
 </div></div>
+</div>
+<div class="sect3">
 <h4 id="_zsh_mathfunc_require_zmodload_zsh_mathfunc">zsh/mathfunc (require zmodload zsh/mathfunc)</h4>
 <div class="listingblock">
 <div class="content">
-<pre><tt>$ zmodload zsh/mathfunc
+<pre><code>$ zmodload zsh/mathfunc
 $ echo $(( sin(1/4.0)**2 + cos(1/4.0)**2 - 1 ))
   -1.1102230246251565e-16
 $ echo $(( pi = 4.0 * atan(1.0) ))
@@ -1736,22 +1955,26 @@ $ echo $(( f = sin(0.3) ))
 $ print $((1e12 * rand48()))
   847909677310.23413
 $ print $(( rand48(seed) ))
-  0.01043488334700271</tt></pre>
+  0.01043488334700271</code></pre>
 </div></div>
+</div>
+<div class="sect3">
 <h4 id="_zsh_termcap_require_zmodload_zsh_termcap">zsh/termcap (require zmodload zsh/termcap)</h4>
 <div class="listingblock">
 <div class="content">
-<pre><tt> $ zmodload -ab zsh/termcap echotc
+<pre><code> $ zmodload -ab zsh/termcap echotc
  $ GREEN=`echotc AF 2`
  $ YELLOW=`echotc AF 3`
  $ RED=`echotc AF 1`
  $ BRIGHTRED=`echotc md ; echotc AF 1`
- $ print -l ${GREEN}green ${YELLOW}yellow ${RED}red ${BRIGHTRED}brightred</tt></pre>
+ $ print -l ${GREEN}green ${YELLOW}yellow ${RED}red ${BRIGHTRED}brightred</code></pre>
 </div></div>
+</div>
+<div class="sect3">
 <h4 id="_zsh_zpty_require_zmodload_zsh_zpty">zsh/zpty (require zmodload zsh/zpty)</h4>
 <div class="listingblock">
 <div class="content">
-<pre><tt>  $ zmodload zsh/zpty
+<pre><code>  $ zmodload zsh/zpty
   $ zpty PW passwd $1
   $ zpty PW passwd $1
 # ``-r'': read the output of the command name.
@@ -1765,12 +1988,14 @@ $ print $(( rand48(seed) ))
 # previously started, by supplying a list of their names. If no names
 # are given, all commands are deleted. Deleting a command causes the HUP
 # signal to be sent to the corresponding process.
-  $ zpty -d PW</tt></pre>
+  $ zpty -d PW</code></pre>
 </div></div>
+</div>
+<div class="sect3">
 <h4 id="_zsh_net_socket_require_zmodload_zsh_net_socket">zsh/net/socket (require zmodload zsh/net/socket)</h4>
 <div class="listingblock">
 <div class="content">
-<pre><tt># ``-l'': open a socket listening on filename
+<pre><code># ``-l'': open a socket listening on filename
 # ``-d'': argument will be taken as the target file descriptor for the
 #         connection
 # ``3'' : file descriptor. See ``A User's Guide to the Z-Shell''
@@ -1782,12 +2007,14 @@ $ print $(( rand48(seed) ))
   $ zsocket -a -d 5 3 # accept a connection
   $ echo foobar &gt;&amp;4
   $ echo barfoo &gt;&amp;5
-  $ 4&gt;&amp;- 5&gt;&amp;- 3&gt;&amp;</tt></pre>
+  $ 4&gt;&amp;- 5&gt;&amp;- 3&gt;&amp;</code></pre>
 </div></div>
+</div>
+<div class="sect3">
 <h4 id="_zsh_zftp_require_zmodload_zsh_zftp">zsh/zftp (require zmodload zsh/zftp)</h4>
 <div class="listingblock">
 <div class="content">
-<pre><tt> $ autoload -U zfinit
+<pre><code> $ autoload -U zfinit
  $ zfinit
  $ zfparams www.example.invalid myuserid mypassword
  $ zfopen
@@ -1833,12 +2060,14 @@ $ print $(( rand48(seed) ))
 # If the list.txt is located on the remote host, change to
 # zfget ${(f)"$(zftp get /path/to/remote/list.txt)"}
   $ zfget ${(f)"$(cat list.txt)"}
-  $ zfclose</tt></pre>
+  $ zfclose</code></pre>
 </div></div>
+</div>
+<div class="sect3">
 <h4 id="_zsh_zselect_require_zmodload_zsh_zselect">zsh/zselect (require zmodload zsh/zselect)</h4>
 <div class="listingblock">
 <div class="content">
-<pre><tt># It's similar to
+<pre><code># It's similar to
  ,----
  | $ sg=$(stty -g)
  | $ stty -icanon min 0 time 50
@@ -1854,55 +2083,71 @@ $ if zselect -t 500 -r 0 &amp;&amp; read yesno &amp;&amp; [ yes = "$yesno" ]; th
 &gt;    command1
 &gt; else
 &gt;    command1
-&gt; fi</tt></pre>
+&gt; fi</code></pre>
 </div></div>
 </div>
+</div>
+</div>
+</div>
+<div class="sect1">
 <h2 id="_options">OPTIONS</h2>
 <div class="sectionbody">
-<h3 id="_navigation_options">Navigation options</h3><div style="clear:left"></div>
+<div class="sect2">
+<h3 id="_navigation_options">Navigation options</h3>
 <div class="paragraph"><p><strong>auto_cd</strong> (allow one to change to a directory by entering it as a
 command). <strong>auto_pushd</strong> (automatically append dirs to the push/pop list)
 pushd_ignore_dups (and don&#8217;t duplicate them).</p></div>
-<h3 id="_misc">Misc</h3><div style="clear:left"></div>
+</div>
+<div class="sect2">
+<h3 id="_misc">Misc</h3>
 <div class="paragraph"><p><strong>no_hup</strong> (don&#8217;t send  HUP signal to background jobs when exiting ZSH).
 <strong>print_exit_value</strong> (show a message with the exit code when a command
 returns with a non-zero exit code)</p></div>
+<div class="sect3">
 <h4 id="_history_options">History options</h4>
 <div class="paragraph"><p><strong>hist_verify</strong> (let the user edit the command line after history
 expansion (e.g. !ls) instead of immediately running it)<br />
 Use the same history file for all sessions :<br />
 <strong>setopt SHARE_HISTORY</strong></p></div>
+</div>
+<div class="sect3">
 <h4 id="_privacy_security">Privacy / Security</h4>
 <div class="paragraph"><p><strong>no_clobber</strong>  (or set -C; prevent <em>&gt;</em> redirection from truncating
 the given file if it already exists)</p></div>
+</div>
+<div class="sect3">
 <h4 id="_spelling_correction">Spelling correction</h4>
 <div class="paragraph"><p><strong>correct</strong> (automatically correct the spelling of commands).
 <strong>correct_all</strong> (automatically correct the spelling of each word on the
 command line) <strong>dvorak</strong> (dvorak layout)</p></div>
 </div>
+</div>
+</div>
+</div>
+<div class="sect1">
 <h2 id="_unsorted_misc">UNSORTED/MISC</h2>
 <div class="sectionbody">
 <div class="paragraph"><p>Mailpath: simple multiple mailpath:</p></div>
 <div class="listingblock">
 <div class="content">
-<pre><tt>mailpath=($HOME/Mail/mbox'?new mail in mbox'
+<pre><code>mailpath=($HOME/Mail/mbox'?new mail in mbox'
           $HOME/Mail/tux.u-strasbg'?new mail in tux'
           $HOME/Mail/lilo'?new mail in lilo'
-          $HOME/Mail/ldap-fr'?new mail in ldap-fr')</tt></pre>
+          $HOME/Mail/ldap-fr'?new mail in ldap-fr')</code></pre>
 </div></div>
 <div class="paragraph"><p>Mailpath: dynamic mailpath:</p></div>
 <div class="listingblock">
 <div class="content">
-<pre><tt>typeset -a mailpath
+<pre><code>typeset -a mailpath
 for i in ~/Mail/Lists/*(.); do
    mailpath[$#mailpath+1]="${i}?You have new mail in ${i:t}."
-done</tt></pre>
+done</code></pre>
 </div></div>
 <div class="paragraph"><p>Avoid globbing on special commands:</p></div>
 <div class="listingblock">
 <div class="content">
-<pre><tt>for com in alias expr find mattrib mcopy mdir mdel which;
-alias $com="noglob $com"</tt></pre>
+<pre><code>for com in alias expr find mattrib mcopy mdir mdel which;
+alias $com="noglob $com"</code></pre>
 </div></div>
 <div class="paragraph"><p>For migrating your bashprompt to zsh use the script bash2zshprompt located in
 the zsh source distribution under <em>Misc</em>.</p></div>
@@ -1917,7 +2162,7 @@ displayed, and to the command name and rest of the command line, respectively,
 when a command is executed:</p></div>
 <div class="listingblock">
 <div class="content">
-<pre><tt>function title {
+<pre><code>function title {
       if [[ $TERM == "screen" ]]; then
         # Use these two for GNU Screen:
         print -nR $' 33k'$1$' 33'\
@@ -1932,20 +2177,22 @@ function preexec {
     emulate -L zsh
     local -a cmd; cmd=(${(z)1})
     title $cmd[1]:t "$cmd[2,-1]"
-}</tt></pre>
+}</code></pre>
 </div></div>
 <div class="paragraph"><p>Put the following line into your ~/.screenrc to see this fancy hardstatus:</p></div>
 <div class="listingblock">
 <div class="content">
-<pre><tt>caption always "%3n %t%? (%u)%?%?: %h%?"</tt></pre>
+<pre><code>caption always "%3n %t%? (%u)%?%?: %h%?"</code></pre>
 </div></div>
 <div class="paragraph"><p>Special variables which are assigned:</p></div>
 <div class="listingblock">
 <div class="content">
-<pre><tt>$LINENO $RANDOM $SECONDS $COLUMNS $HISTCHARS $UID
-$EUID $GID $EGID $USERNAME $fignore $mailpath $cdpath</tt></pre>
+<pre><code>$LINENO $RANDOM $SECONDS $COLUMNS $HISTCHARS $UID
+$EUID $GID $EGID $USERNAME $fignore $mailpath $cdpath</code></pre>
 </div></div>
 </div>
+</div>
+<div class="sect1">
 <h2 id="_links">LINKS</h2>
 <div class="sectionbody">
 <div class="dlist"><dl>
@@ -2127,6 +2374,8 @@ The Z shell reference-card (included in the zsh-lovers debian-package)
 </dd>
 </dl></div>
 </div>
+</div>
+<div class="sect1">
 <h2 id="_authors">AUTHORS</h2>
 <div class="sectionbody">
 <div class="paragraph"><p>This manpage was written by Michael Prokop, Christian <em>strcat</em>
@@ -2137,7 +2386,7 @@ Thanks for your cool and incredible tips. We learned much from you!</p></div>
 <div class="paragraph"><p>In alphabetic order:</p></div>
 <div class="listingblock">
 <div class="content">
-<pre><tt>Andrew 'zefram' Main  - http://www.fysh.org/~zefram/
+<pre><code>Andrew 'zefram' Main  - http://www.fysh.org/~zefram/
 Barton E. Schaefer    - http://www.well.com/user/barts/
 Matthias Kopfermann   - http://www.infodrom.north.de/~matthi/
 Oliver Kiddle         - http://people.freenet.de/opk/
@@ -2146,15 +2395,17 @@ Peter Stephenson      - http://homepage.ntlworld.com/p.w.stephenson/
 Richard Coleman
 Stephane Chazelas     - http://stephane.chazelas.free.fr/
 Sven Guckes           - http://www.guckes.net/
-Sven Wischnowsky      - http://w9y.de/zsh/zshrc</tt></pre>
+Sven Wischnowsky      - http://w9y.de/zsh/zshrc</code></pre>
 </div></div>
 </div>
+</div>
+<div class="sect1">
 <h2 id="_see_also">SEE ALSO</h2>
 <div class="sectionbody">
 <div class="paragraph"><p>Manpages of zsh:</p></div>
 <div class="listingblock">
 <div class="content">
-<pre><tt>       zsh          Zsh overview
+<pre><code>       zsh          Zsh overview
        zshall       Tthe Z shell meta-man page
        zshbuiltins  Zsh built-in commands
        zshcalsys    zsh calendar system
@@ -2171,29 +2422,34 @@ Sven Wischnowsky      - http://w9y.de/zsh/zshrc</tt></pre>
        zshtcpsys    Zsh tcp system
        zshzle       Zsh command line editing
        zshzftpsys   Zsh built-in FTP client
-       zshall       Meta-man page containing all of the above</tt></pre>
+       zshall       Meta-man page containing all of the above</code></pre>
 </div></div>
 <div class="paragraph"><p>Note: especially <em>man zshcontrib</em> covers very useful topics!<br />
 Book: <strong>From Bash to Z Shell</strong> by Oliver Kiddle, Jerry Peck and Peter
 Stephenson. <strong>ISBN: 1590593766</strong>. - <strong><a href="http://www.bash2zsh.com/">bash2zsh.com</a></strong><br />
 Also take a look at the section <strong>LINKS</strong> in this manpage.</p></div>
 </div>
+</div>
+<div class="sect1">
 <h2 id="_bugs">BUGS</h2>
 <div class="sectionbody">
 <div class="paragraph"><p>Probably. This manpage might be never complete. So please report bugs,
 feedback and suggestions to &lt;<a href="mailto:zsh-lovers@michael-prokop.at">zsh-lovers@michael-prokop.at</a>&gt;. Thank
 you!</p></div>
 </div>
+</div>
+<div class="sect1">
 <h2 id="_copyright">COPYRIGHT</h2>
 <div class="sectionbody">
 <div class="paragraph"><p>Copyright  (C) Michael Prokop, Christian Schneider and Matthias
 Kopfermann.</p></div>
 </div>
 </div>
+</div>
 <div id="footnotes"><hr /></div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2010-07-28 17:55:37 EDT
+Last updated 2010-07-28 21:55:37 UTC
 </div>
 </div>
 </body>
