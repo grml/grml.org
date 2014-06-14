@@ -135,6 +135,10 @@ Import "/etc/default/locale", if set to zero (default).
 <dt><b>ZSH_PROFILE_RC</b></dt><dd>
 A non zero value causes shell functions to be profiled. The results can be
 obtained with the zprof builtin command (see zshmodules(1) for details).
+<p></p>
+</dd>
+<dt><b>COMPDUMPFILE</b></dt><dd>
+Specifies the location of the completion dump file. Default: $HOME/.zcompdump.
 </dd>
 </dl>
 <h1>FEATURE DESCRIPTION</h1>
@@ -420,6 +424,11 @@ before doing so. A correct example customisation could look like this:
     # Customise the prompt yourself:
     PS1='%~ %# '
 </pre>
+<p>
+You also add your own tokens by using the \`grml_theme_add_token()' function.
+Call the function without arguments for detailed documentation about that
+procedure.
+</p>
 <h2>GNU/SCREEN STATUS SETTING</h2>
 <p>
 <i>grmlzshrc</i> sets screen's hardstatus lines to the currently running command
@@ -606,6 +615,25 @@ Display help on keybindings and zsh line editor. Press consecutively to page thr
 Brings a job, which got suspended with CTRL-z back to foreground.
 </dd>
 </dl>
+<h3>Customisation</h3>
+<p>
+To customise keybindings, you can just use zsh's bindkey utility. However, if
+you plan to to use the `<i>zle-line-init</i>' or `<i>zle-line-finish</i>' hooks
+yourself, make sure you call the following functions in the respective hook:
+</p>
+<ul>
+<li><b>zle-line-init</b>: <i>zle-smkx</i>
+</li>
+<li><b>zle-line-finish</b>: <i>zle-rmkx</i>
+</li>
+</ul>
+<p>
+This is <b>required</b> so the keybindings set up by <i>grmlzshrc</i> work. The
+reason for this is to turn the terminal into the right mode while zsh's line
+editor (zle) is running. This enables us to query <i>terminfo</i> about escape
+sequences for special keys and thus simplify and generalise our keybinding
+section.
+</p>
 <h2>SHELL FUNCTIONS</h2>
 <p>
 <i>grmlzshrc</i> comes with a wide array of defined shell functions to ease the
@@ -1064,11 +1092,10 @@ Lists files in long colored output format.
 Opens syslog in pager.
 <p></p>
 </dd>
-<dt><b>ls</b> (<i>ls -b -CF --color=auto</i>)</dt><dd>
-Lists directory printing octal escapes for nongraphic characters.
-Entries are listed by columns and an indicator for file type is appended
-to each file name. Additionally the output is colored, if the terminal
-supports it.
+<dt><b>ls</b> (<i>ls -CF --color=auto</i>)</dt><dd>
+Lists directory, entries are listed by columns and an indicator for
+file type is appended to each file name. Additionally the output is
+colored, if the terminal supports it.
 <p></p>
 </dd>
 <dt><b>lsa</b> (<i>ls -a .*(.)</i>)</dt><dd>
