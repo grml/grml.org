@@ -64,7 +64,7 @@
           <li><a href="grml32-full_2014.03/nonfree-licenses.txt">nonfree-licenses.txt</a> - a list of used nonfree software and their licenses</li>
         </ul>
 
-        <h3>grml64-full_2014.03</h3>
+        <h3>grml64-full 2014.03</h3>
 
         <ul>
           <li><a href="grml64-full_2014.03/dpkg.selections">dpkg.selections</a> - software package listing</li>
