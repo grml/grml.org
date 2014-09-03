@@ -208,7 +208,8 @@
 
     <br />
     <br />
-    <a href="http://debian.netcologne.de/grml/gnupg-michael-prokop.txt">Signing Key</a><br />
+    <a href="./gnupg-michael-prokop.txt">Signing Key</a>
+    (<a href="http://debian.netcologne.de/grml/gnupg-michael-prokop.txt">Alternate location</a>)<br />
     <br />
     Please verify all downloads using GnuPG!
     </div></div>
