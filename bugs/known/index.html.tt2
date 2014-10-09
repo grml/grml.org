@@ -32,24 +32,9 @@
 
         <p>If you find additional bugs, please <a href="/bugs/">report them</a>.</p>
 
-        <h2>Known Bugs in Grml 2014.03</h2>
+        <h2>Known Bugs in Grml 2014.10(-rc1)</h2>
 
         <p>No issues known so far.</p>
-
-        <h2>Known Bugs in Grml 2013.09</h2>
-
-        <ul>
-
-          <li><a href="http://bts.grml.org/grml/issue1248">issue1248</a>:
-          grml2usb: does not detect bootflag on second partition
-
-          <li><a href="http://bts.grml.org/grml/issue1270">issue1270</a>:
-          grml-rescueboot does not support md/raid devices
-
-          <li><a href="http://bts.grml.org/grml/issue1273">issue1273</a>:
-          booting via PXE with grml-terminalserver fails on grml96
-
-        </ul>
 
 </div>
 
