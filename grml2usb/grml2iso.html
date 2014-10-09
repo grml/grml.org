@@ -743,7 +743,7 @@ asciidoc.install(2);
 <div class="sect1">
 <h2 id="_name">1. Name</h2>
 <div class="sectionbody">
-<div class="paragraph"><p>grml2iso - create a multiboot grml ISO using grml2usb</p></div>
+<div class="paragraph"><p>grml2iso - create a multiboot Grml ISO using grml2usb</p></div>
 </div>
 </div>
 <div class="sect1">
@@ -759,8 +759,8 @@ asciidoc.install(2);
 <div class="sect1">
 <h2 id="_introduction">3. Introduction</h2>
 <div class="sectionbody">
-<div class="paragraph"><p>grml2iso allows you to create a multiboot grml ISO. You can specify
-two or more grml ISOs and will get one single multiboot ISO as a result.
+<div class="paragraph"><p>grml2iso allows you to create a multiboot Grml ISO. You can specify
+two or more Grml ISOs and will get one single multiboot ISO as a result.
 grml2iso requires and uses grml2usb for this task and installs grub2
 as bootmanager on the multiboot ISO.</p></div>
 </div>
@@ -779,7 +779,7 @@ of all specified ISOs.</p></div>
 </dt>
 <dd>
 <p>
-This option is mandatory and specifies where the resulting multiboot grml ISO
+This option is mandatory and specifies where the resulting multiboot Grml ISO
 should be placed. Note that (to avoid any possible data loss) grml2iso will exit
 if the specified target.iso exists already.
 </p>
@@ -790,7 +790,7 @@ if the specified target.iso exists already.
 <dd>
 <p>
 The content of the specified directory will be copied to the resulting
-multiboot grml ISO.
+multiboot Grml ISO.
 </p>
 </dd>
 <dt class="hdlist1">
@@ -806,7 +806,7 @@ Use specified default bootoptions as default.
 </dt>
 <dd>
 <p>
-Force the program to run and overwrite an existing iso image.
+Force the program to run and overwrite an existing ISO image.
 </p>
 </dd>
 <dt class="hdlist1">
@@ -830,7 +830,12 @@ Execute grml2usb with the specified parameters. For a list of valid parameters h
 </dt>
 <dd>
 <p>
-Generate a small iso file which downloads the squashfs file from the specified URI. Due  to current limitations in busyboxs wget and DNS resolution, an URL can not contain a hostname but an IP only. This is useful if you want to boot systems which support booting iso image from your local system. Besides the iso image this command also copies the squashfs file to the output directory.
+Generate a small ISO file which downloads the squashfs file from the
+specified URI. Due  to current limitations in busyboxs wget and DNS
+resolution, an URL can not contain a hostname but an IP only. This is
+useful if you want to boot systems which support booting ISO image from
+your local system. Besides the iso image this command also copies the
+squashfs file to the output directory.
 </p>
 </dd>
 </dl></div>
@@ -848,12 +853,13 @@ Generate a small iso file which downloads the squashfs file from the specified U
 <div class="content">
 <pre><code># grml2iso -b 'lang=de ssh=passwd' -c /tmp/grml-content -o /srv/grml.iso /srv/grml/grml_2009.10.iso</code></pre>
 </div></div>
-<div class="paragraph"><p>Create a new iso with additional boot parameters and copy the content from /tmp/grml-content to the generated iso image.</p></div>
+<div class="paragraph"><p>Create a new ISO with additional boot parameters and copy the content
+from /tmp/grml-content to the generated ISO image.</p></div>
 <div class="literalblock">
 <div class="content">
 <pre><code># grml2iso -r quiet -r vga=791 -o /srv/grml.iso /srv/grml-small_2009.10.iso</code></pre>
 </div></div>
-<div class="paragraph"><p>Create a new iso and remove existing boot parameters quiet and vga=791.</p></div>
+<div class="paragraph"><p>Create a new ISO and remove existing boot parameters quiet and vga=791.</p></div>
 <div class="literalblock">
 <div class="content">
 <pre><code># GRML2USB=/srv/git/grml2usb grml2iso -o /srv/grml.iso /srv/grml/grml_2009.05.iso /srv/grml/grml64-medium_2009.05.iso</code></pre>
@@ -870,7 +876,7 @@ grml64-medium_2009.05.iso using /srv/git/grml2usb as grml2usb script.</p></div>
 <div class="content">
 <pre><code># grml2iso -p --skip-addons -o /srv/grml.iso /srv/grml-small_2009.10.iso /srv/grml64-small_2009.10.iso</code></pre>
 </div></div>
-<div class="paragraph"><p>Don&#8217;t copy the addons from the specified iso images</p></div>
+<div class="paragraph"><p>Don&#8217;t copy the addons from the specified ISO images</p></div>
 </div>
 </div>
 <div class="sect1">
@@ -896,7 +902,8 @@ grml64-medium_2009.05.iso using /srv/git/grml2usb as grml2usb script.</p></div>
 <div id="footnotes"><hr /></div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2012-04-25 17:00:16 CEST
+Last updated
+ 2014-09-05 01:15:27 CEST
 </div>
 </div>
 </body>

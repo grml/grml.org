@@ -743,7 +743,7 @@ asciidoc.install(2);
 <div class="sect1">
 <h2 id="_name">1. Name</h2>
 <div class="sectionbody">
-<div class="paragraph"><p>grml2usb - install grml ISO(s) on usb device for booting</p></div>
+<div class="paragraph"><p>grml2usb - install Grml ISO(s) on usb device for booting</p></div>
 </div>
 </div>
 <div class="sect1">
@@ -752,19 +752,20 @@ asciidoc.install(2);
 <div class="paragraph"><p>grml2usb [ options ] &lt;ISO[s]&gt; &lt;device&gt;</p></div>
 <div class="sidebarblock">
 <div class="content">
-<div class="paragraph"><p>Important! The grml team does not take responsibility for loss of any data!</p></div>
+<div class="paragraph"><p>Important! The Grml team does not take responsibility for loss of any data!</p></div>
 </div></div>
 </div>
 </div>
 <div class="sect1">
 <h2 id="introduction">3. Introduction</h2>
 <div class="sectionbody">
-<div class="paragraph"><p>grml2usb installs grml on a given partition of your usb device and makes it
-bootable. It provides multi-iso support, meaning you can specify several grml
-ISOs on the command line at once and select the grml flavour you would like to
-boot on the bootprompt then. Note that the <strong>first</strong> ISO specified on the grml2usb
-command line will become the default one (that&#8217;s the one that will boot when
-just pressing enter on the bootprompt or wait until the boot timeout matches).</p></div>
+<div class="paragraph"><p>grml2usb installs Grml on a given partition of your usb device and makes
+it bootable. It provides multiboot ISO support, meaning you can specify
+several Grml ISOs on the command line at once and select the Grml
+flavour you would like to boot on the bootprompt then. Note that the
+<strong>first</strong> ISO specified on the grml2usb command line will become the
+default one (that&#8217;s the one that will boot when just pressing enter on
+the bootprompt or wait until the boot timeout matches).</p></div>
 <div class="admonitionblock">
 <table><tr>
 <td class="icon">
@@ -782,7 +783,7 @@ default MBR consider using <em>--syslinux-mbr</em> instead.</td>
 <div class="sect1">
 <h2 id="options">4. Options</h2>
 <div class="sectionbody">
-<div class="paragraph"><p>The ISO[s] should be the path to one or multiple grml-ISOs and/or the path to
+<div class="paragraph"><p>ISO[s] should be the path to one or multiple grml-ISOs and/or the path to
 the currently running live-system (being /lib/live/mount/medium).</p></div>
 <div class="paragraph"><p>The device either might be a device name like /dev/sdX1 or a directory. When
 specifying a device name the device is mounted automatically. When specifying a
@@ -825,7 +826,7 @@ Copy files only but do <strong>not</strong> install a bootloader.
 <p>
 Avoid executing commands, instead show what would be executed.
 Warning: please notice that the ISO has to be mounted anyway, otherwise
-identifying the grml flavour would not be possible.
+identifying the Grml flavour would not be possible.
 </p>
 </dd>
 <dt class="hdlist1">
@@ -909,6 +910,14 @@ Do not install /boot/addons/ files (like dos, grub, memdisk,&#8230;).
 <p>
 Remove specified bootoption (could be a regex) from existing boot options. Use
 multiple entries for removing different bootoptions at once.
+</p>
+</dd>
+<dt class="hdlist1">
+<strong>--skip-bootflag</strong>
+</dt>
+<dd>
+<p>
+Do not check for presence of bootflag on target device.
 </p>
 </dd>
 <dt class="hdlist1">
@@ -1030,7 +1039,7 @@ Enable verbose mode.
 <div class="content">
 <pre><code>grml/
   |-- grml2usb.txt         [not yet implemented]
-  |-- grml-cheatcodes.txt  [list of bootoptions for grml]
+  |-- grml-cheatcodes.txt  [list of bootoptions for Grml]
   |-- grml-version.txt     [file containing information about grml-version]
   |-- LICENSE.txt          [license information]
   |-- md5sums              [md5sums of original ISO]
@@ -1294,7 +1303,7 @@ grml2usb.tgz.</td>
 </div>
 <div class="sect2">
 <h3 id="dd">7.2. Why can&#8217;t I just dd the ISO to a USB device?</h3>
-<div class="paragraph"><p>Well, you can. :) Starting with grml 2009.10 the ISOs are dd-able straight out-of-the-box.</p></div>
+<div class="paragraph"><p>Well, you can. :) Starting with Grml 2009.10 the ISOs are dd-able straight out-of-the-box.</p></div>
 <div class="admonitionblock">
 <table><tr>
 <td class="icon">
@@ -1504,7 +1513,7 @@ default bootoptions.</p></div>
 <div class="content">
 <pre><code># grml2usb --bootoptions="persistent-path=%flavour_name" grml64_2010.04.iso grml_2010.04.iso /dev/sdX1</code></pre>
 </div></div>
-<div class="paragraph"><p>Install specified Isos on device /dev/sdx and add parameter persisten-path
+<div class="paragraph"><p>Install specified ISOs on device /dev/sdx and add parameter persistent-path
 to every menu entry. %flavour_name will be expanded to the flavour of the specific
 iso, e.g. grml64 and grml.</p></div>
 </div>
@@ -1532,7 +1541,8 @@ iso, e.g. grml64 and grml.</p></div>
 <div id="footnotes"><hr /></div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2013-01-10 13:55:49 CET
+Last updated
+ 2014-10-09 09:57:14 CEST
 </div>
 </div>
 </body>
