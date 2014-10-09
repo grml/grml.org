@@ -125,6 +125,8 @@
 
     <a href="/download/prerelease/" class="button" style="padding: 12px; font-weight: bold;"><span>Get 2014.10-rc1 instead!</span></a>
     <br />
+    <br />
+    <br />
 
     <div style="font-size: 14pt;">
     <p><a href="http://grml.org/changelogs/README-grml-2014.03">Release Notes</a></p>
