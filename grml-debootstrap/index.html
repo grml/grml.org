@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
 <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
-<meta name="generator" content="AsciiDoc 8.6.7" />
+<meta name="generator" content="AsciiDoc 8.6.9" />
 <title>grml-debootstrap(8)</title>
 <style type="text/css">
 /* Shared CSS for AsciiDoc xhtml11 and html5 backends */
@@ -87,9 +87,15 @@ ul, ol, li > p {
 ul > li     { color: #aaa; }
 ul > li > * { color: black; }
 
-pre {
+.monospaced, code, pre {
+  font-family: "Courier New", Courier, monospace;
+  font-size: inherit;
+  color: navy;
   padding: 0;
   margin: 0;
+}
+pre {
+  white-space: pre-wrap;
 }
 
 #author {
@@ -219,7 +225,7 @@ div.exampleblock > div.content {
 }
 
 div.imageblock div.content { padding-left: 0; }
-span.image img { border-style: none; }
+span.image img { border-style: none; vertical-align: text-bottom; }
 a.image:visited { color: white; }
 
 dl {
@@ -415,12 +421,6 @@ div.unbreakable { page-break-inside: avoid; }
  *
  * */
 
-tt {
-  font-family: "Courier New", Courier, monospace;
-  font-size: inherit;
-  color: navy;
-}
-
 div.tableblock {
   margin-top: 1.0em;
   margin-bottom: 1.5em;
@@ -453,12 +453,6 @@ div.tableblock > table[frame="vsides"] {
  * html5 specific
  *
  * */
-
-.monospaced {
-  font-family: "Courier New", Courier, monospace;
-  font-size: inherit;
-  color: navy;
-}
 
 table.tableblock {
   margin-top: 1.0em;
@@ -539,6 +533,8 @@ body.manpage div.sectionbody {
 @media print {
   body.manpage div#toc { display: none; }
 }
+
+
 </style>
 <script type="text/javascript">
 /*<![CDATA[*/
@@ -759,7 +755,7 @@ asciidoc.install();
 <h2 id="_introduction">Introduction</h2>
 <div class="sectionbody">
 <div class="paragraph"><p>grml-debootstrap is a wrapper suite around debootstrap (and cdebootstrap if you
-want) for installing a plain Debian system (e.g. via Grml) very fast and easy.</p></div>
+want) for installing a plain Debian system very fast and easy.</p></div>
 <div class="paragraph"><p>All you have to do is adjust a few variables in the configuration file
 /etc/debootstrap/config or specify some command line options and invoke
 grml-debootstrap. If invoked without any configuration modifications or command
@@ -790,6 +786,16 @@ or virtual image file then. Customization of this process is possible as well.</
     you are currently running. If you&#8217;re running an amd64 kernel and want to
     deploy an i386 system use this option. Note: deploying amd64 from an i386
     kernel does <strong>not</strong> work. Example: "<em>--arch i386</em>"
+</p>
+</dd>
+<dt class="hdlist1">
+<strong>--backportrepos</strong>
+</dt>
+<dd>
+<p>
+    Enable Debian&#8217;s Backports repository (<a href="http://backports.debian.org/">http://backports.debian.org/</a>) via the
+    /etc/apt/sources.list.d/backports.list configuration file. This provides the
+    option to install Debian packages from Debian&#8217;s backports repository.
 </p>
 </dd>
 <dt class="hdlist1">
@@ -846,12 +852,21 @@ or virtual image file then. Customization of this process is possible as well.</
 </p>
 </dd>
 <dt class="hdlist1">
+<strong>--debug</strong>
+</dt>
+<dd>
+<p>
+   Execute in very verbose way. Useful for debugging possible problems
+   with grml-debootstrap or identify what&#8217;s actually executed.
+</p>
+</dd>
+<dt class="hdlist1">
 <strong>--filesystem</strong> <em>filesystem</em>
 </dt>
 <dd>
 <p>
     Filesystem that should be created when installing to a partition.
-    If unset defaults to ext3. Valid values are all filesystems that
+    If unset defaults to ext4. Valid values are all filesystems that
     can be created through mkfs.<em>filesystem</em>.
 </p>
 </dd>
@@ -899,7 +914,7 @@ or virtual image file then. Customization of this process is possible as well.</
 </dt>
 <dd>
 <p>
-    Use specified hostname instead of the default (being <em>grml</em>).
+    Use specified hostname instead of the default (being $HOSTNAME or if unset <em>grml</em>).
 </p>
 </dd>
 <dt class="hdlist1">
@@ -937,6 +952,26 @@ or virtual image file then. Customization of this process is possible as well.</
 <dd>
 <p>
     Skip debootstrap, only do configuration to the target.
+</p>
+</dd>
+<dt class="hdlist1">
+<strong>--nointerfaces</strong>
+</dt>
+<dd>
+<p>
+    Do not copy /etc/network/interfaces from host system to the target.
+    This option is automatically enabled when using --vm or --vmfile.
+</p>
+</dd>
+<dt class="hdlist1">
+<strong>--nokernel</strong>
+</dt>
+<dd>
+<p>
+    Skip installation of default kernel images. This option might be
+    interesting for you if you want a Debian system which doesn&#8217;t
+    need to provide regular boot, e.g. a system which provides
+    ISOs for booting via GRUB using grml-rescueboot.
 </p>
 </dd>
 <dt class="hdlist1">
@@ -1026,9 +1061,7 @@ or virtual image file then. Customization of this process is possible as well.</
 <dd>
 <p>
     Target partition (/dev/&#8230;) or directory (anything else without /dev at the
-    beginning). To install grub using <strong>--grub</strong> make sure to use a <em>device</em>
-    instead of a directory as <em>target</em> (installation of grub as bootloader when
-    using directories is NOT supported).
+    beginning).
 </p>
 </dd>
 <dt class="hdlist1">
@@ -1037,6 +1070,18 @@ or virtual image file then. Customization of this process is possible as well.</
 <dd>
 <p>
     Increase verbosity.
+</p>
+</dd>
+<dt class="hdlist1">
+<strong>--vm</strong>
+</dt>
+<dd>
+<p>
+    Set up a Virtual Machine on an existing block device, which will be
+    partitioned.
+    This allows deployment of a Virtual Machine. The options needs to be
+    combined with the --target option.
+    Usage example: --vm --target /dev/mapper/your-vm-disk
 </p>
 </dd>
 <dt class="hdlist1">
@@ -1075,9 +1120,9 @@ or virtual image file then. Customization of this process is possible as well.</
 <td class="icon">
 <img src="./images/icons/warning.png" alt="Warning" />
 </td>
-<td class="content">the command line parsing of grml-debootstrap does not validate the provided
-arguments for the command line options. Please be careful and check docs and
-/etc/debootstrap/config for further information.</td>
+<td class="content">the command line parsing of grml-debootstrap usually does not validate
+the provided arguments for the command line options. Please be careful and check
+docs and /etc/debootstrap/config for further information.</td>
 </tr></table>
 </div>
 </div>
@@ -1087,41 +1132,41 @@ arguments for the command line options. Please be careful and check docs and
 <div class="sectionbody">
 <div class="literalblock">
 <div class="content">
-<pre><tt>grml-debootstrap --target /dev/sda1 --grub /dev/sda</tt></pre>
+<pre><code>grml-debootstrap --target /dev/sda1 --grub /dev/sda</code></pre>
 </div></div>
 <div class="paragraph"><p>Install default Debian release (wheezy) on /dev/sda1 and install bootmanager
 Grub in MBR (master boot record) of /dev/sda and use /dev/sda1 as system partition.</p></div>
 <div class="literalblock">
 <div class="content">
-<pre><tt>grml-debootstrap --target /dev/sda6 --grub /dev/sda --release sid</tt></pre>
+<pre><code>grml-debootstrap --target /dev/sda6 --grub /dev/sda --release sid</code></pre>
 </div></div>
 <div class="paragraph"><p>Install Debian unstable/sid on /dev/sda6, install bootmanager Grub in MBR
 (master boot record) of /dev/sda and use /dev/sda6 as system partition.</p></div>
 <div class="literalblock">
 <div class="content">
-<pre><tt>mount /dev/sda1 /data/chroot
-grml-debootstrap --target /data/chroot</tt></pre>
+<pre><code>mount /dev/sda1 /data/chroot
+grml-debootstrap --target /data/chroot</code></pre>
 </div></div>
 <div class="paragraph"><p>Install default Debian release (wheezy) in directory /data/chroot (without
 any bootloader).</p></div>
 <div class="literalblock">
 <div class="content">
-<pre><tt>grml-debootstrap --target /dev/sda3 --grub /dev/sda  --mirror ftp://ftp.tugraz.at/mirror/debian</tt></pre>
+<pre><code>grml-debootstrap --target /dev/sda3 --grub /dev/sda  --mirror ftp://ftp.tugraz.at/mirror/debian</code></pre>
 </div></div>
 <div class="paragraph"><p>Install default debian release (wheezy) in a Virtual Machine file with
 3GB disk size (including Grub as bootmanager in MBR of the virtual disk file):</p></div>
 <div class="literalblock">
 <div class="content">
-<pre><tt>mount /dev/sda1 /mnt/sda1
-grml-debootstrap --vmfile --vmsize 3G --target /mnt/sda1/qemu.img</tt></pre>
+<pre><code>mount /dev/sda1 /mnt/sda1
+grml-debootstrap --vmfile --vmsize 3G --target /mnt/sda1/qemu.img</code></pre>
 </div></div>
 <div class="paragraph"><p>Install default Debian release (wheezy) on /dev/sda3 and install bootmanager
 Grub in MBR (master boot record) of /dev/sda and use /dev/sda3 as system partition.
 Use specified mirror instead of the default (<a href="ftp://ftp.debian.de/debian">ftp://ftp.debian.de/debian</a>) one.</p></div>
 <div class="literalblock">
 <div class="content">
-<pre><tt>mount -o loop /mnt/sda6/debian-CD-1.iso /mnt/iso
-grml-debootstrap --target /dev/sda1 --grub /dev/sda --iso file:/mnt/iso/debian/</tt></pre>
+<pre><code>mount -o loop /mnt/sda6/debian-CD-1.iso /mnt/iso
+grml-debootstrap --target /dev/sda1 --grub /dev/sda --iso file:/mnt/iso/debian/</code></pre>
 </div></div>
 <div class="paragraph"><p>Install Debian on /dev/sda1 using the loopback mounted Debian-ISO
 for the base-system and install bootmanager Grub in MBR (master boot record) of
@@ -1135,46 +1180,34 @@ ISO.</p></div>
 <div class="sectionbody">
 <div class="literalblock">
 <div class="content">
-<pre><tt>/etc/debootstrap/config</tt></pre>
+<pre><code>/etc/debootstrap/config</code></pre>
 </div></div>
-<div class="paragraph"><p>Main configuration file. You have to adjust it according to your needs
-if you want to execute grml-debootstrap in the non-interactive mode without
-any special command line arguments.</p></div>
+<div class="paragraph"><p>Main configuration file. Adjust it according to your needs if you want to
+execute grml-debootstrap in the non-interactive mode without any special command
+line arguments.</p></div>
 <div class="literalblock">
 <div class="content">
-<pre><tt>/etc/debootstrap/chroot-script</tt></pre>
+<pre><code>/etc/debootstrap/chroot-script</code></pre>
 </div></div>
 <div class="paragraph"><p>The script executed within the new Debian system as soon as the main system
 has been installed via [c]debootstrap.</p></div>
 <div class="literalblock">
 <div class="content">
-<pre><tt>/etc/debootstrap/locale.gen</tt></pre>
+<pre><code>/etc/debootstrap/locale.gen</code></pre>
 </div></div>
 <div class="paragraph"><p>Defines the default locales used for generating locales via locale-gen.</p></div>
 <div class="literalblock">
 <div class="content">
-<pre><tt>/etc/debootstrap/packages</tt></pre>
+<pre><code>/etc/debootstrap/packages</code></pre>
 </div></div>
 <div class="paragraph"><p>Defines the software packages which should be installed in the new
 Debian system by default.</p></div>
 <div class="literalblock">
 <div class="content">
-<pre><tt>/etc/debootstrap/extrapackages/</tt></pre>
+<pre><code>/etc/debootstrap/extrapackages/</code></pre>
 </div></div>
 <div class="paragraph"><p>Debian Packages dropped in this directory will be installed into the new Debian
 system by default (Control variable: EXTRAPACKAGES)</p></div>
-<div class="literalblock">
-<div class="content">
-<pre><tt>/etc/debootstrap/stages/</tt></pre>
-</div></div>
-<div class="paragraph"><p>The default directory for storing information about executed stages. Every
-single function of grml-debootstrap will write <em>done</em> to the stages directory
-into a file named as the function itself if it has been executed successfully.
-You can adjust the location of the directory via configuration variable STAGES
-via /etc/debootstrap/config.  Please notice that you have to remove the stages
-directory on your own if you want to re-execute grml-debootstrap after running it
-successfully once. This should avoid recurrent execution by error of
-grml-debootstrap (which might delete present data).</p></div>
 </div>
 </div>
 <div class="sect1">
@@ -1204,39 +1237,39 @@ kernelname at the bootprompt) supports the following boot options (they
 correspond with the command line options mentioned above):</p></div>
 <div class="literalblock">
 <div class="content">
-<pre><tt>target=...</tt></pre>
+<pre><code>target=...</code></pre>
 </div></div>
 <div class="paragraph"><p>The target partition/directory of the new Debian system. Usage example:
 target=/dev/sda1</p></div>
 <div class="literalblock">
 <div class="content">
-<pre><tt>grub=...</tt></pre>
+<pre><code>grub=...</code></pre>
 </div></div>
 <div class="paragraph"><p>Where do you want to install grub to? Usage example: grub=/dev/sda</p></div>
 <div class="literalblock">
 <div class="content">
-<pre><tt>release=...</tt></pre>
+<pre><code>release=...</code></pre>
 </div></div>
 <div class="paragraph"><p>Specify release of new Debian system. Defaults to Debian wheezy. Supported
 relases: lenny, squeeze, wheezy and sid. Usage example: release=sid</p></div>
 <div class="literalblock">
 <div class="content">
-<pre><tt>mirror=...</tt></pre>
+<pre><code>mirror=...</code></pre>
 </div></div>
 <div class="paragraph"><p>Specify mirror which should be used for apt-get/aptitude instead
 of the default one (<a href="http://http.debian.net/debian">http://http.debian.net/debian</a>).
 Usage example: mirror=ftp://ftp.tugraz.at/mirror/debian</p></div>
 <div class="literalblock">
 <div class="content">
-<pre><tt>password=...</tt></pre>
+<pre><code>password=...</code></pre>
 </div></div>
 <div class="paragraph"><p>Set password of user root without prompting for it but set it to the given
 argument. Usage example: password=AiTh5ahn</p></div>
 <div class="sect2">
-<h3 id="_usage_example_for_automatic_installation">Usage example for automatic installation:</h3>
+<h3 id="_usage_example_for_automatic_installation">Usage example for automatic installation</h3>
 <div class="literalblock">
 <div class="content">
-<pre><tt>debian2hd target=/dev/sda1 grub=/dev/sda mirror=ftp://ftp.tugraz.at/mirror/debian password=foobar</tt></pre>
+<pre><code>debian2hd target=/dev/sda1 grub=/dev/sda mirror=ftp://ftp.tugraz.at/mirror/debian password=foobar</code></pre>
 </div></div>
 <div class="paragraph"><p>You have to enter this command line at the bootprompt of the Grml live system.
 Please make sure that /dev/sda1 is the partition where you really want to
@@ -1334,7 +1367,7 @@ cellspacing="0" cellpadding="4">
 </td>
 <td class="content">
 <div class="title">lenny release</div>
-<div class="paragraph"><p>[1] Please notice that lenny is the current old-stable release within Debian.
+<div class="paragraph"><p>[1] Please notice that lenny is an unsupported release within Debian nowadays.
 grml-debootstrap can handle the release but you really should not use lenny
 anymore unless you really know what you are doing. Choose Debian 6.0 (squeeze)
 or Debian 7.0 (wheezy) instead.</p></div>
@@ -1354,10 +1387,10 @@ the advantage of grub-legacy actually being able to boot from it.</p></div>
 <img src="./images/icons/note.png" alt="Note" />
 </td>
 <td class="content">
-<div class="title">sid release</div>
-<div class="paragraph"><p>[2] Please notice that sid is Debian/unstable and due to its nature might not be
-always installable. What <em>might</em> work instead is deploying a stable or testing
-release and upgrade it after installation finished.</p></div>
+<div class="title">unstable and testing releases</div>
+<div class="paragraph"><p>[2] Please notice that jessie (Debian/testing) and sid (Debian/unstable) might
+not be always installable due to their nature. What <em>might</em> work instead is
+deploying a stable release and upgrade it after installation finished.</p></div>
 </td>
 </tr></table>
 </div>
@@ -1385,7 +1418,8 @@ release and upgrade it after installation finished.</p></div>
 <div id="footnotes"><hr /></div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2013-02-19 00:04:27 CET
+Last updated
+ 2014-10-09 09:55:39 CEST
 </div>
 </div>
 </body>
