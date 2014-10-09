@@ -28,7 +28,7 @@
 
         <h1 align="center">FAQ for grml</h1>
 
-        <p><strong>Up2date:</strong> applies to Grml version 2014.03</p>
+        <p><strong>Up2date:</strong> applies to Grml version 2014.10</p>
 
         <p><a name="toc"></a><strong>Index:</strong></p>
 
@@ -120,8 +120,7 @@
 
         <h3><a name="releasename"></a><a href="#toc">What about the release name?</a></h3>
 
-        <p>Codename of Grml 2014.03 is "Ponywagon", which might be understood if a
-        carinthian talks about "Bahnübergang" (german for railroad crossing).</p>
+        <p>Codename of Grml 2014.10 is "Gschistigschasti", which is colloquial for 'fuss' in Austria.</p>
 
         <h3><a name="requirements"></a><a href="#toc">Requirements for running Grml</a></h3>
 

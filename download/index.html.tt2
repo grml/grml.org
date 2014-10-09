@@ -80,9 +80,8 @@
     <h1>Download Grml 2014.03</h1>
 
     <p>Get the current stable release here.<br />
-    <!--
+
     <a href="prerelease/">Looking for the current pre-release version instead?</a></p>
-    -->
 
     <p>Download the Grml flavour you need, then write it to a CD-R or an empty USB stick.</p>
 
@@ -124,10 +123,8 @@
     <br />
     <br />
 
-    <!--
-    <a href="/download/prerelease/" class="button" style="padding: 12px; font-weight: bold;"><span>Get 2014.03-rc1 instead!</span></a>
+    <a href="/download/prerelease/" class="button" style="padding: 12px; font-weight: bold;"><span>Get 2014.10-rc1 instead!</span></a>
     <br />
-    -->
 
     <div style="font-size: 14pt;">
     <p><a href="http://grml.org/changelogs/README-grml-2014.03">Release Notes</a></p>
