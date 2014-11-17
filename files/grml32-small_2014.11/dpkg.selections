@@ -75,7 +75,6 @@ firmware-ralink					install
 firmware-realtek				install
 firmware-zd1211					install
 gawk						install
-gcc-4.7-base:i386				install
 gcc-4.8-base:i386				install
 gcc-4.9-base:i386				install
 gddrescue					install
@@ -121,13 +120,11 @@ ifenslave					install
 ifupdown					install
 imvirt						install
 imvirt-helper					install
-info						install
 init						install
 init-system-helpers				install
 initramfs-tools					install
 initscripts					install
 insserv						install
-install-info					install
 iproute						install
 iproute2					install
 iptables					install
@@ -170,6 +167,7 @@ libdebconfclient0:i386				install
 libdevmapper-event1.02.1:i386			install
 libdevmapper1.02.1:i386				install
 libdmraid1.0.0.rc16				install
+libdns-export100				install
 libedit2:i386					install
 libefivar0:i386					install
 libemail-date-format-perl			install
@@ -184,13 +182,11 @@ libfile-which-perl				install
 libfreetype6:i386				install
 libfuse2:i386					install
 libgcc1:i386					install
-libgcrypt11:i386				install
 libgcrypt20:i386				install
 libgdbm3:i386					install
 libgmp10:i386					install
 libgnutls-deb0-28:i386				install
 libgnutls-openssl27:i386			install
-libgnutls26:i386				install
 libgpg-error0:i386				install
 libgpm2:i386					install
 libgssapi-krb5-2:i386				install
@@ -203,10 +199,14 @@ libhttp-cookies-perl				install
 libhttp-date-perl				install
 libhttp-message-perl				install
 libhttp-negotiate-perl				install
+libicu52:i386					install
 libidn11:i386					install
 libimvirt-perl					install
 libio-html-perl					install
 libio-socket-ssl-perl				install
+libirs-export91					install
+libisc-export95					install
+libisccfg-export90				install
 libiw30:i386					install
 libjson-c2:i386					install
 libk5crypto3:i386				install
@@ -230,7 +230,7 @@ libmailtools-perl				install
 libmime-lite-perl				install
 libmnl0:i386					install
 libmodule-find-perl				install
-libmount1					install
+libmount1:i386					install
 libmpfr4:i386					install
 libncurses5:i386				install
 libncursesw5:i386				install
@@ -261,6 +261,7 @@ libpipeline1:i386				install
 libpng12-0:i386					install
 libpopt0:i386					install
 libprocps3:i386					install
+libpsl0:i386					install
 libpython-stdlib:i386				install
 libpython2.7-minimal:i386			install
 libpython2.7-stdlib:i386			install
@@ -275,11 +276,13 @@ libsepol1:i386					install
 libsigc++-2.0-0c2a:i386				install
 libsigsegv2:i386				install
 libslang2:i386					install
+libsmartcols1:i386				install
 libsqlite3-0:i386				install
 libss2:i386					install
 libssl1.0.0:i386				install
 libstdc++6:i386					install
 libsysfs2:i386					install
+libsystemd0:i386				install
 libtasn1-6:i386					install
 libterm-readkey-perl				install
 libtext-charwidth-perl				install
@@ -304,7 +307,7 @@ libxtables10					install
 lilo						install
 links						install
 linux-base					install
-linux-image-3.16-1-grml-486			install
+linux-image-3.16.0-1-grml-586			install
 linux-image-i386-grml				install
 live-boot-grml					install
 live-boot-grml-doc				install
@@ -381,6 +384,7 @@ strace						install
 sudo						install
 sysfsutils					install
 syslinux					install
+syslinux-common					install
 sysvinit					install
 sysvinit-core					install
 sysvinit-utils					install

@@ -4,6 +4,7 @@ acpi-support					install
 acpi-support-base				install
 acpid						install
 adduser						install
+adwaita-icon-theme				install
 afflib-tools					install
 alsa-base					install
 alsa-utils					install
@@ -154,7 +155,6 @@ fonts-dejavu-core				install
 fsarchiver					install
 fuse						install
 gawk						install
-gcc-4.7-base:amd64				install
 gcc-4.8-base:amd64				install
 gcc-4.9-base:amd64				install
 gddrescue					install
@@ -210,6 +210,7 @@ hdparm						install
 hexedit						install
 hfsprogs					install
 hfsutils					install
+hicolor-icon-theme				install
 hiera						install
 hostapd						install
 hostname					install
@@ -222,13 +223,11 @@ iftop						install
 ifupdown					install
 imvirt						install
 imvirt-helper					install
-info						install
 init						install
 init-system-helpers				install
 initramfs-tools					install
 initscripts					install
 insserv						install
-install-info					install
 iotop						install
 ipcalc						install
 iperf						install
@@ -335,6 +334,7 @@ libdevmapper-event1.02.1:amd64			install
 libdevmapper1.02.1:amd64			install
 libdirectfb-1.2-9:amd64				install
 libdmraid1.0.0.rc16				install
+libdns-export100				install
 libdns100					install
 libdpkg-perl					install
 libdrm-intel1:amd64				install
@@ -373,7 +373,6 @@ libfuse2:amd64					install
 libgbm1:amd64					install
 libgc1c2:amd64					install
 libgcc1:amd64					install
-libgcrypt11:amd64				install
 libgcrypt20:amd64				install
 libgdbm3:amd64					install
 libgdk-pixbuf2.0-0:amd64			install
@@ -388,13 +387,13 @@ libglibmm-2.4-1c2a:amd64			install
 libgmp10:amd64					install
 libgnutls-deb0-28:amd64				install
 libgnutls-openssl27:amd64			install
-libgnutls26:amd64				install
 libgpg-error0:amd64				install
 libgpm2:amd64					install
 libgraphite2-3:amd64				install
 libgssapi-krb5-2:amd64				install
 libgssapi3-heimdal:amd64			install
 libgtk-3-0:amd64				install
+libgtk-3-bin					install
 libgtk-3-common					install
 libgtk2.0-0:amd64				install
 libgtk2.0-bin					install
@@ -427,8 +426,11 @@ libio-html-perl					install
 libio-pty-perl					install
 libio-socket-ssl-perl				install
 libipc-run-perl					install
+libirs-export91					install
+libisc-export95					install
 libisc95					install
 libisccc90					install
+libisccfg-export90				install
 libisccfg90					install
 libiscsi-bin					install
 libiscsi2:amd64					install
@@ -438,8 +440,8 @@ libjack-jackd2-0:amd64				install
 libjasper1:amd64				install
 libjbig0:amd64					install
 libjim0.75:amd64				install
-libjpeg62:amd64					install
-libjpeg8:amd64					install
+libjpeg62-turbo:amd64				install
+libjs-excanvas					install
 libjson-c2:amd64				install
 libjson-glib-1.0-0:amd64			install
 libjson-glib-1.0-common				install
@@ -456,7 +458,7 @@ libldap-2.4-2:amd64				install
 libldb1:amd64					install
 liblinear1:amd64				install
 liblinux-lvm-perl				install
-libllvm3.4:amd64				install
+libllvm3.5:amd64				install
 liblocale-gettext-perl				install
 liblockfile-bin					install
 liblockfile1:amd64				install
@@ -476,10 +478,11 @@ libmime-lite-perl				install
 libmnl0:amd64					install
 libmodule-find-perl				install
 libmotif-common					install
-libmount1					install
+libmount1:amd64					install
 libmpc3:amd64					install
 libmpdec2:amd64					install
 libmpfr4:amd64					install
+libmspack0:amd64				install
 libmtdev1:amd64					install
 libncurses5:amd64				install
 libncursesw5:amd64				install
@@ -538,6 +541,7 @@ libportaudio2:amd64				install
 libprocps3:amd64				install
 libprotobuf9:amd64				install
 libproxy1:amd64					install
+libpsl0:amd64					install
 libpulse0:amd64					install
 libpython-stdlib:amd64				install
 libpython2.7:amd64				install
@@ -559,6 +563,7 @@ librpmbuild3					install
 librpmio3					install
 librpmsign1					install
 librsvg2-2:amd64				install
+librsvg2-common:amd64				install
 librsync1:amd64					install
 librtmp1:amd64					install
 libruby2.1:amd64				install
@@ -578,6 +583,7 @@ libsigc++-2.0-0c2a:amd64			install
 libsigsegv2:amd64				install
 libslang2:amd64					install
 libsm6:amd64					install
+libsmartcols1:amd64				install
 libsmi2ldbl:amd64				install
 libsndfile1:amd64				install
 libsnmp-base					install
@@ -613,7 +619,6 @@ libtime-period-perl				install
 libtimedate-perl				install
 libtinfo5:amd64					install
 libtirpc1:amd64					install
-libts-0.0-0:amd64				install
 libtsk10					install
 libudev1:amd64					install
 libuniconf4.6					install
@@ -697,7 +702,7 @@ libyaml-0-2:amd64				install
 lilo						install
 links2						install
 linux-base					install
-linux-image-3.16-1-grml-amd64			install
+linux-image-3.16.0-1-grml-amd64			install
 linux-image-amd64-grml				install
 live-boot-grml					install
 live-boot-grml-doc				install
@@ -806,6 +811,8 @@ python-minimal					install
 python-netifaces				install
 python-ntdb					install
 python-parted					install
+python-prettytable				install
+python-pyparsing				install
 python-rtslib					install
 python-samba					install
 python-simpleparse				install
@@ -901,7 +908,6 @@ testdisk					install
 tgt						install
 tmux						install
 traceroute					install
-tsconf						install
 tshark						install
 tsocks						install
 tzdata						install

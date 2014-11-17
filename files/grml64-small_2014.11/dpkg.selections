@@ -75,7 +75,6 @@ firmware-ralink					install
 firmware-realtek				install
 firmware-zd1211					install
 gawk						install
-gcc-4.7-base:amd64				install
 gcc-4.8-base:amd64				install
 gcc-4.9-base:amd64				install
 gddrescue					install
@@ -121,13 +120,11 @@ ifenslave					install
 ifupdown					install
 imvirt						install
 imvirt-helper					install
-info						install
 init						install
 init-system-helpers				install
 initramfs-tools					install
 initscripts					install
 insserv						install
-install-info					install
 iproute						install
 iproute2					install
 iptables					install
@@ -170,6 +167,7 @@ libdebconfclient0:amd64				install
 libdevmapper-event1.02.1:amd64			install
 libdevmapper1.02.1:amd64			install
 libdmraid1.0.0.rc16				install
+libdns-export100				install
 libedit2:amd64					install
 libefivar0:amd64				install
 libemail-date-format-perl			install
@@ -184,13 +182,11 @@ libfile-which-perl				install
 libfreetype6:amd64				install
 libfuse2:amd64					install
 libgcc1:amd64					install
-libgcrypt11:amd64				install
 libgcrypt20:amd64				install
 libgdbm3:amd64					install
 libgmp10:amd64					install
 libgnutls-deb0-28:amd64				install
 libgnutls-openssl27:amd64			install
-libgnutls26:amd64				install
 libgpg-error0:amd64				install
 libgpm2:amd64					install
 libgssapi-krb5-2:amd64				install
@@ -203,10 +199,14 @@ libhttp-cookies-perl				install
 libhttp-date-perl				install
 libhttp-message-perl				install
 libhttp-negotiate-perl				install
+libicu52:amd64					install
 libidn11:amd64					install
 libimvirt-perl					install
 libio-html-perl					install
 libio-socket-ssl-perl				install
+libirs-export91					install
+libisc-export95					install
+libisccfg-export90				install
 libiw30:amd64					install
 libjson-c2:amd64				install
 libk5crypto3:amd64				install
@@ -230,7 +230,7 @@ libmailtools-perl				install
 libmime-lite-perl				install
 libmnl0:amd64					install
 libmodule-find-perl				install
-libmount1					install
+libmount1:amd64					install
 libmpfr4:amd64					install
 libncurses5:amd64				install
 libncursesw5:amd64				install
@@ -261,6 +261,7 @@ libpipeline1:amd64				install
 libpng12-0:amd64				install
 libpopt0:amd64					install
 libprocps3:amd64				install
+libpsl0:amd64					install
 libpython-stdlib:amd64				install
 libpython2.7-minimal:amd64			install
 libpython2.7-stdlib:amd64			install
@@ -275,11 +276,13 @@ libsepol1:amd64					install
 libsigc++-2.0-0c2a:amd64			install
 libsigsegv2:amd64				install
 libslang2:amd64					install
+libsmartcols1:amd64				install
 libsqlite3-0:amd64				install
 libss2:amd64					install
 libssl1.0.0:amd64				install
 libstdc++6:amd64				install
 libsysfs2:amd64					install
+libsystemd0:amd64				install
 libtasn1-6:amd64				install
 libterm-readkey-perl				install
 libtext-charwidth-perl				install
@@ -304,7 +307,7 @@ libxtables10					install
 lilo						install
 links						install
 linux-base					install
-linux-image-3.16-1-grml-amd64			install
+linux-image-3.16.0-1-grml-amd64			install
 linux-image-amd64-grml				install
 live-boot-grml					install
 live-boot-grml-doc				install
@@ -381,6 +384,7 @@ strace						install
 sudo						install
 sysfsutils					install
 syslinux					install
+syslinux-common					install
 sysvinit					install
 sysvinit-core					install
 sysvinit-utils					install

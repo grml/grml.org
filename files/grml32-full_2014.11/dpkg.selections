@@ -4,6 +4,7 @@ acpi-support					install
 acpi-support-base				install
 acpid						install
 adduser						install
+adwaita-icon-theme				install
 afflib-tools					install
 alsa-base					install
 alsa-utils					install
@@ -154,7 +155,6 @@ fonts-dejavu-core				install
 fsarchiver					install
 fuse						install
 gawk						install
-gcc-4.7-base:i386				install
 gcc-4.8-base:i386				install
 gcc-4.9-base:i386				install
 gddrescue					install
@@ -210,6 +210,7 @@ hdparm						install
 hexedit						install
 hfsprogs					install
 hfsutils					install
+hicolor-icon-theme				install
 hiera						install
 hostapd						install
 hostname					install
@@ -222,13 +223,11 @@ iftop						install
 ifupdown					install
 imvirt						install
 imvirt-helper					install
-info						install
 init						install
 init-system-helpers				install
 initramfs-tools					install
 initscripts					install
 insserv						install
-install-info					install
 iotop						install
 ipcalc						install
 iperf						install
@@ -335,6 +334,7 @@ libdevmapper-event1.02.1:i386			install
 libdevmapper1.02.1:i386				install
 libdirectfb-1.2-9:i386				install
 libdmraid1.0.0.rc16				install
+libdns-export100				install
 libdns100					install
 libdpkg-perl					install
 libdrm-intel1:i386				install
@@ -373,7 +373,6 @@ libfuse2:i386					install
 libgbm1:i386					install
 libgc1c2:i386					install
 libgcc1:i386					install
-libgcrypt11:i386				install
 libgcrypt20:i386				install
 libgdbm3:i386					install
 libgdk-pixbuf2.0-0:i386				install
@@ -388,13 +387,13 @@ libglibmm-2.4-1c2a:i386				install
 libgmp10:i386					install
 libgnutls-deb0-28:i386				install
 libgnutls-openssl27:i386			install
-libgnutls26:i386				install
 libgpg-error0:i386				install
 libgpm2:i386					install
 libgraphite2-3:i386				install
 libgssapi-krb5-2:i386				install
 libgssapi3-heimdal:i386				install
 libgtk-3-0:i386					install
+libgtk-3-bin					install
 libgtk-3-common					install
 libgtk2.0-0:i386				install
 libgtk2.0-bin					install
@@ -427,8 +426,11 @@ libio-html-perl					install
 libio-pty-perl					install
 libio-socket-ssl-perl				install
 libipc-run-perl					install
+libirs-export91					install
+libisc-export95					install
 libisc95					install
 libisccc90					install
+libisccfg-export90				install
 libisccfg90					install
 libiscsi-bin					install
 libiscsi2:i386					install
@@ -438,8 +440,8 @@ libjack-jackd2-0:i386				install
 libjasper1:i386					install
 libjbig0:i386					install
 libjim0.75:i386					install
-libjpeg62:i386					install
-libjpeg8:i386					install
+libjpeg62-turbo:i386				install
+libjs-excanvas					install
 libjson-c2:i386					install
 libjson-glib-1.0-0:i386				install
 libjson-glib-1.0-common				install
@@ -456,7 +458,7 @@ libldap-2.4-2:i386				install
 libldb1:i386					install
 liblinear1:i386					install
 liblinux-lvm-perl				install
-libllvm3.4:i386					install
+libllvm3.5:i386					install
 liblocale-gettext-perl				install
 liblockfile-bin					install
 liblockfile1:i386				install
@@ -476,10 +478,11 @@ libmime-lite-perl				install
 libmnl0:i386					install
 libmodule-find-perl				install
 libmotif-common					install
-libmount1					install
+libmount1:i386					install
 libmpc3:i386					install
 libmpdec2:i386					install
 libmpfr4:i386					install
+libmspack0:i386					install
 libmtdev1:i386					install
 libncurses5:i386				install
 libncursesw5:i386				install
@@ -538,6 +541,7 @@ libportaudio2:i386				install
 libprocps3:i386					install
 libprotobuf9:i386				install
 libproxy1:i386					install
+libpsl0:i386					install
 libpulse0:i386					install
 libpython-stdlib:i386				install
 libpython2.7:i386				install
@@ -559,6 +563,7 @@ librpmbuild3					install
 librpmio3					install
 librpmsign1					install
 librsvg2-2:i386					install
+librsvg2-common:i386				install
 librsync1:i386					install
 librtmp1:i386					install
 libruby2.1:i386					install
@@ -578,6 +583,7 @@ libsigc++-2.0-0c2a:i386				install
 libsigsegv2:i386				install
 libslang2:i386					install
 libsm6:i386					install
+libsmartcols1:i386				install
 libsmi2ldbl:i386				install
 libsndfile1:i386				install
 libsnmp-base					install
@@ -613,7 +619,6 @@ libtime-period-perl				install
 libtimedate-perl				install
 libtinfo5:i386					install
 libtirpc1:i386					install
-libts-0.0-0:i386				install
 libtsk10					install
 libudev1:i386					install
 libuniconf4.6					install
@@ -697,7 +702,7 @@ libyaml-0-2:i386				install
 lilo						install
 links2						install
 linux-base					install
-linux-image-3.16-1-grml-486			install
+linux-image-3.16.0-1-grml-586			install
 linux-image-i386-grml				install
 live-boot-grml					install
 live-boot-grml-doc				install
@@ -806,6 +811,8 @@ python-minimal					install
 python-netifaces				install
 python-ntdb					install
 python-parted					install
+python-prettytable				install
+python-pyparsing				install
 python-rtslib					install
 python-samba					install
 python-simpleparse				install
@@ -901,7 +908,6 @@ testdisk					install
 tgt						install
 tmux						install
 traceroute					install
-tsconf						install
 tshark						install
 tsocks						install
 tzdata						install
