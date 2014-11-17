@@ -44,24 +44,26 @@
 
             <p style="text-align: center;">
             <b>The current release:</b><br/><br/>
-            <a href="/download/" class="button" style="padding: 12px; font-weight: bold;"><span>Download Grml 2014.03</span></a>
+            <a href="/download/" class="button" style="padding: 12px; font-weight: bold;"><span>Download Grml 2014.11</span></a>
             </p>
             <br />
 
+            <!--
             <p style="text-align: center;">
             <b>Pre-Release:</b><br/><br/>
             <a href="/download/prerelease/" class="button" style="padding: 12px; font-weight: bold;"><span>Download Grml 2014.10-rc1</span></a>
             </p>
             <br />
+            -->
 
             <img style="float: right; margin-left: 20px" src="/img/grmltux_small.jpg" alt="*" />
             <br />
 
             <h2>News</h2>
             <div class="news">
+            <p>17 Nov 2014: New <a href="/changelogs/README-grml-2014.11/">stable release version 2014.11</a> available</p>
             <p>09 Oct 2014: Release candidate version <a href="/changelogs/README-grml-2014.10-rc1/">2014.10-rc1</a> available</p>
             <p>31 Mar 2014: New <a href="/changelogs/README-grml-2014.03/">stable release version 2014.03</a> available</p>
-            <p>24 Mar 2014: Release candidate version <a href="/changelogs/README-grml-2014.03-rc1/">2014.03-rc1</a> available</p>
             </div>
 
       </div>
