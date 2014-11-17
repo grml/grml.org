@@ -43,14 +43,6 @@
               <p>
                 <a class="plain" href="/contact/">Contact</a><br/>
               </p>
-            <h3>Search</h3>
-<!-- Google CSE Search Box Begins  -->
-<form action="http://www.google.com/cse" id="searchbox_014818976460624594421:r4x8-w4_mwu">
-  <input type="hidden" name="cx" value="014818976460624594421:r4x8-w4_mwu" />
-  <input type="text" name="q" id="searchbox" />
-</form>
-<script type="text/javascript" src="//www.google.com/coop/cse/brand?form=searchbox_014818976460624594421%3Ar4x8-w4_mwu&amp;lang=en"></script>
-<!-- Google CSE Search Box Ends -->
 
             <div class="copyright">&copy; Copyright 2003-2014 Grml Live Linux</div>
             <p>&nbsp;</p>
