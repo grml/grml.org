@@ -159,8 +159,8 @@
     <script type="text/javascript">
     function update_arch() {
         var flavour = document.getElementById('download_flavour').value;
-        if (flavour == 'small') document.getElementById('download_arch').innerHTML = '<option value="amd64">64-bit PC (amd64)</option><option value="i386">32-bit PC (i586+)</option><option value="96">One for both (~380MB)</option>';
-        if (flavour == 'full') document.getElementById('download_arch').innerHTML = '<option value="amd64">64-bit PC (amd64)</option><option value="i386">32-bit PC (i586+)</option><option value="96">One for both (~800MB)</option>';
+        if (flavour == 'small') document.getElementById('download_arch').innerHTML = '<option value="amd64">64-bit PC (amd64)</option><option value="i386">32-bit PC (i586+)</option><option value="96">One for both (~444MB)</option>';
+        if (flavour == 'full') document.getElementById('download_arch').innerHTML = '<option value="amd64">64-bit PC (amd64)</option><option value="i386">32-bit PC (i586+)</option><option value="96">One for both (~913MB)</option>';
         update_links();
     }
 
