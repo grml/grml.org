@@ -34,7 +34,9 @@
 
         <h2>Known Bugs in Grml 2014.11</h2>
 
-        <p>No issues known so far.</p>
+        <ul>
+          <li>System boot freezes during udev startup on some systems (e.g. on Supermicro boards and recent IBM server models). Workaround: use boot option <em>mgag200.modeset=0</em>. Tracked as <a href="http://bts.grml.org/grml/issue1334">Issue1334</a>.</li>
+        </ul>
 
 </div>
 
