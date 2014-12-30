@@ -1028,8 +1028,8 @@ or virtual image file then. Customization of this process is possible as well.</
 <dd>
 <p>
     Specify release of new Debian system. Supported releases names: lenny,
-    squeeze, wheezy (note: requires current version of debootstrap) and sid.
-    Corresponding with configuration variable RELEASE.
+    squeeze, wheezy, jessie (note: requires a recent version of debootstrap)
+    and sid. Corresponding with configuration variable RELEASE.
 </p>
 </dd>
 <dt class="hdlist1">
@@ -1134,7 +1134,7 @@ docs and /etc/debootstrap/config for further information.</td>
 <div class="content">
 <pre><code>grml-debootstrap --target /dev/sda1 --grub /dev/sda</code></pre>
 </div></div>
-<div class="paragraph"><p>Install default Debian release (wheezy) on /dev/sda1 and install bootmanager
+<div class="paragraph"><p>Install default Debian release (jessie) on /dev/sda1 and install bootmanager
 Grub in MBR (master boot record) of /dev/sda and use /dev/sda1 as system partition.</p></div>
 <div class="literalblock">
 <div class="content">
@@ -1147,22 +1147,22 @@ Grub in MBR (master boot record) of /dev/sda and use /dev/sda1 as system partiti
 <pre><code>mount /dev/sda1 /data/chroot
 grml-debootstrap --target /data/chroot</code></pre>
 </div></div>
-<div class="paragraph"><p>Install default Debian release (wheezy) in directory /data/chroot (without
+<div class="paragraph"><p>Install default Debian release (jessie) in directory /data/chroot (without
 any bootloader).</p></div>
 <div class="literalblock">
 <div class="content">
 <pre><code>grml-debootstrap --target /dev/sda3 --grub /dev/sda  --mirror ftp://ftp.tugraz.at/mirror/debian</code></pre>
 </div></div>
-<div class="paragraph"><p>Install default debian release (wheezy) in a Virtual Machine file with
-3GB disk size (including Grub as bootmanager in MBR of the virtual disk file):</p></div>
+<div class="paragraph"><p>Install default Debian release (jessie) on /dev/sda3 and install bootmanager
+Grub in MBR (master boot record) of /dev/sda and use /dev/sda3 as system partition.
+Use specified mirror instead of the default (<a href="http://http.debian.net/debian">http://http.debian.net/debian</a>) one.</p></div>
 <div class="literalblock">
 <div class="content">
 <pre><code>mount /dev/sda1 /mnt/sda1
 grml-debootstrap --vmfile --vmsize 3G --target /mnt/sda1/qemu.img</code></pre>
 </div></div>
-<div class="paragraph"><p>Install default Debian release (wheezy) on /dev/sda3 and install bootmanager
-Grub in MBR (master boot record) of /dev/sda and use /dev/sda3 as system partition.
-Use specified mirror instead of the default (<a href="ftp://ftp.debian.de/debian">ftp://ftp.debian.de/debian</a>) one.</p></div>
+<div class="paragraph"><p>Install default debian release (jessie) in a Virtual Machine file with
+3GB disk size (including Grub as bootmanager in MBR of the virtual disk file):</p></div>
 <div class="literalblock">
 <div class="content">
 <pre><code>mount -o loop /mnt/sda6/debian-CD-1.iso /mnt/iso
@@ -1250,8 +1250,8 @@ target=/dev/sda1</p></div>
 <div class="content">
 <pre><code>release=...</code></pre>
 </div></div>
-<div class="paragraph"><p>Specify release of new Debian system. Defaults to Debian wheezy. Supported
-relases: lenny, squeeze, wheezy and sid. Usage example: release=sid</p></div>
+<div class="paragraph"><p>Specify release of new Debian system. Defaults to Debian jessie. Supported
+relases: lenny, squeeze, wheezy, jessie and sid. Usage example: release=sid</p></div>
 <div class="literalblock">
 <div class="content">
 <pre><code>mirror=...</code></pre>
@@ -1293,70 +1293,39 @@ boot options for grml-debootstrap.</td>
 <div class="sectionbody">
 <div class="tableblock">
 <table rules="all"
+width="40%"
 frame="hsides"
 cellspacing="0" cellpadding="4">
-<caption class="title">TableCurrent status</caption>
-<col width="114" />
-<col width="205" />
-<col width="182" />
+<caption class="title">Table 1. Current status</caption>
+<col width="50%" />
+<col width="50%" />
 <thead>
-  <tr>
-    <th align="right">
-    Release /
-    </th>
-    <th align="center">
-    Tool  debootstrap
-    </th>
-    <th align="center">
-    cdebootstrap
-    </th>
-  </tr>
+<tr>
+<th align="left" valign="top">Release  </th>
+<th align="left" valign="top">Status</th>
+</tr>
 </thead>
-<tbody valign="top">
-  <tr>
-    <td align="right">
-    Lenny
-    </td>
-    <td align="center">
-    works [1]
-    </td>
-    <td align="center">
-    works [1]
-    </td>
-  </tr>
-  <tr>
-    <td align="right">
-    Squeeze
-    </td>
-    <td align="center">
-    works
-    </td>
-    <td align="center">
-    works
-    </td>
-  </tr>
-  <tr>
-    <td align="right">
-    Wheezy
-    </td>
-    <td align="center">
-    works
-    </td>
-    <td align="center">
-    works
-    </td>
-  </tr>
-  <tr>
-    <td align="right">
-    Sid
-    </td>
-    <td align="center">
-    works [2]
-    </td>
-    <td align="center">
-    works [2]
-    </td>
-  </tr>
+<tbody>
+<tr>
+<td align="left" valign="top"><p class="table">lenny</p></td>
+<td align="left" valign="top"><p class="table">works[1]</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table">squeeze</p></td>
+<td align="left" valign="top"><p class="table">works</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table">wheezy</p></td>
+<td align="left" valign="top"><p class="table">works</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table">jessie</p></td>
+<td align="left" valign="top"><p class="table">works</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table">sid</p></td>
+<td align="left" valign="top"><p class="table">works[2]</p></td>
+</tr>
 </tbody>
 </table>
 </div>
@@ -1369,12 +1338,24 @@ cellspacing="0" cellpadding="4">
 <div class="title">lenny release</div>
 <div class="paragraph"><p>[1] Please notice that lenny is an unsupported release within Debian nowadays.
 grml-debootstrap can handle the release but you really should not use lenny
-anymore unless you really know what you are doing. Choose Debian 6.0 (squeeze)
-or Debian 7.0 (wheezy) instead.</p></div>
+anymore unless you really know what you are doing. Choose Debian 7.0 (wheezy) or
+something newer instead.</p></div>
 <div class="paragraph"><p>Notice that you need to specify a mirror providing the lenny release, the
 default (<a href="http://http.debian.net/debian">http://http.debian.net/debian</a>) doesn&#8217;t provide it any longer nowadays.
 Set the mirror to e.g. <a href="http://archive.debian.org/debian/">http://archive.debian.org/debian/</a> if you don&#8217;t have
 your own lenny mirror.</p></div>
+<div class="paragraph"><p>Also when debootstrapping lenny on a live system with a kernel version
+like "3.16-1-grml-amd64" lenny&#8217;s libc will fail to install with:</p></div>
+<div class="literalblock">
+<div class="content">
+<pre><code>[...]
+/var/lib/dpkg/tmp.ci/preinst: line 265: [: 3.16-1-grml-amd64: integery expression expected
+/var/lib/dpkg/tmp.ci/preinst: line 231: 3.16-1-grml-amd64: syntax error: invalid arithemtic operator (error token is ".16-1-grml-amd64")
+dpkg: error processing /var/cache/apt/archives/libc6_2.7-18lenny7_amd64.deb (--install):
+[....]</code></pre>
+</div></div>
+<div class="paragraph"><p>To workaround this either debootstrap from a system with an according
+kernel version or use the "fake uname" workaround (just google for it).</p></div>
 <div class="paragraph"><p>When installing lenny to a new mdraid, grml-debootstrap will use md metadata
 format version 0.90. This limits the device to a maximum size of 2TB, but has
 the advantage of grub-legacy actually being able to boot from it.</p></div>
@@ -1388,7 +1369,7 @@ the advantage of grub-legacy actually being able to boot from it.</p></div>
 </td>
 <td class="content">
 <div class="title">unstable and testing releases</div>
-<div class="paragraph"><p>[2] Please notice that jessie (Debian/testing) and sid (Debian/unstable) might
+<div class="paragraph"><p>[2] Please notice that Debian/testing and Debian/unstable (sid) might
 not be always installable due to their nature. What <em>might</em> work instead is
 deploying a stable release and upgrade it after installation finished.</p></div>
 </td>
@@ -1419,7 +1400,7 @@ deploying a stable release and upgrade it after installation finished.</p></div>
 <div id="footer">
 <div id="footer-text">
 Last updated
- 2014-10-09 09:55:39 CEST
+ 2014-12-30 10:50:18 CET
 </div>
 </div>
 </body>
