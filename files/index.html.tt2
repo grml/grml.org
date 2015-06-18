@@ -38,7 +38,7 @@
 	<p>Note that using the Grml repository on standard Debian systems is <b>not recommended</b>. If you just want our console configuration, read <a href="http://grml.org/console/">"Make console work comfortable"</a>.</p>
 
 	<pre class="rahmen">
-# Signing key is available in grml-archive-keyring
+# Signing key is available in grml-debian-keyring
 #  deb     http://deb.grml.org/ grml-stable main
 #  deb-src http://deb.grml.org/ grml-stable main
 #  deb     http://deb.grml.org/ grml-testing main
