@@ -10,7 +10,7 @@
 <body>
 <div class="header" id="header">
 <h1>GRMLZSHRC</h1>
-<h3>July, 2011</h3>
+<h3>September, 2014</h3>
 </div>
 <div class="body" id="body">
 <h1>NAME</h1>
@@ -59,20 +59,25 @@ variables. These may be set temporarily when starting zsh like this:
 
 </p>
 <pre>
-% BATTERY=1 zsh
+% GRML_DISPLAY_BATTERY=1 zsh
 </pre>
 <p>
 Or by setting them permanently in <b>zshrc.pre</b> (See AUXILIARY FILES below).
 </p>
 <dl>
 <dt><b>BATTERY</b></dt><dd>
-If set to a value greater than zero and <i>acpi</i> installed, <i>grmlzshrc</i> will
-put the battery status into the right hand side interactive prompt.
+Deprecated. Use <b>GRML_DISPLAY_BATTERY</b> instead.
 <p></p>
 </dd>
 <dt><b>COMMAND_NOT_FOUND</b></dt><dd>
 A non zero value activates a handler, which is called when a command can not
 be found. The handler is defined by GRML_ZSH_CNF_HANDLER (see below).
+<p></p>
+</dd>
+<dt><b>GRML_DISPLAY_BATTERY</b></dt><dd>
+If set to a value greater than zero, <i>grmlzshrc</i> will put the battery status
+into the right hand side interactive prompt. Supported OSes are <i>GNU/Linux</i>,
+<i>FreeBSD</i>, <i>OpenBSD</i> and <i>Darwin</i>.
 <p></p>
 </dd>
 <dt><b>GRML_ZSH_CNF_HANDLER</b></dt><dd>
@@ -471,11 +476,6 @@ already set otherwise.
 </dd>
 <dt><b>PAGER</b></dt><dd>
 Set less(1) as default pager, if not already set to something different.
-<p></p>
-</dd>
-<dt><b>SHELL</b></dt><dd>
-Set explicitly to /bin/zsh, to prevent certain terminal emulators to
-default to /bin/sh or /bin/bash.
 </dd>
 </dl>
 <h2>OPTIONS</h2>
@@ -667,9 +667,9 @@ screen and ssh.
 <p></p>
 </dd>
 <dt><b>bk()</b></dt><dd>
-Simple backup of a file or directory using cp(1). The target file name is the
-original name plus a time stamp attached. Symlinks and file attributes like mode,
-ownership and timestamps are preserved.
+Simple backup management of a file or directory using standard unix programs.
+The target file name is the original name plus a time stamp attached. Symlinks
+and file attributes like mode, ownership and timestamps are preserved.
 <p></p>
 </dd>
 <dt><b>cdrecord()</b></dt><dd>
@@ -696,8 +696,8 @@ if command is a program.
 <p></p>
 </dd>
 <dt><b>checkhome()</b></dt><dd>
-Changes directory to $HOME on first invocation of zsh. This is neccessary on
-grml systems with autologin.
+Changes directory to $HOME on first invocation of zsh. This is necessary on
+Grml systems with autologin.
 <p></p>
 </dd>
 <dt><b>cl()</b></dt><dd>
@@ -738,6 +738,16 @@ Edit given shell function.
 </dd>
 <dt><b>freload()</b></dt><dd>
 Reloads an autoloadable shell function (See autoload in zshbuiltins(1)).
+<p></p>
+</dd>
+<dt><b>grml_vcs_info_toggle_colour()</b></dt><dd>
+Toggles between coloured and uncoloured formats in vcs_info configuration.
+This is useful with prompts that break if colour codes are in vcs_info
+format expansions (like the `clint' prompt and every other prompt that
+uses %v to expand the contents of `$vcs_into_msg_0_'). If you are using
+customised vcs_info formats, you shouldn't be using this function, since
+it will set all formats to grml's default values (either coloured or plain)
+again.
 <p></p>
 </dd>
 <dt><b>hgdi()</b></dt><dd>
@@ -781,6 +791,10 @@ Returns true, if zsh version is equal or greater than 4.3.3, else false.
 Returns true, if running on darwin, else false.
 <p></p>
 </dd>
+<dt><b>isfreebsd()</b></dt><dd>
+Returns true, if running on FreeBSD, else false.
+<p></p>
+</dd>
 <dt><b>isgrml()</b></dt><dd>
 Returns true, if running on a grml system, else false.
 <p></p>
@@ -793,9 +807,17 @@ Returns true, if running on a grml system from a live cd, else false.
 Returns true, if run on grml-small, else false.
 <p></p>
 </dd>
+<dt><b>islinux()</b></dt><dd>
+Returns true, if running on Linux, else false.
+<p></p>
+</dd>
 <dt><b>iso2utf()</b></dt><dd>
 Changes every occurrence of the string iso885915 or ISO885915 in
 environment variables to UTF-8.
+<p></p>
+</dd>
+<dt><b>isopenbsd()</b></dt><dd>
+Returns true, if running on OpenBSD, else false.
 <p></p>
 </dd>
 <dt><b>isutfenv()</b></dt><dd>
@@ -827,7 +849,7 @@ Example usages:
 <p></p>
 </dd>
 <dt><b>profile()</b></dt><dd>
-Runs a command in $SHELL with profiling enabled (See startup variable
+Runs a command in zsh with profiling enabled (See startup variable
 ZSH_PROFILE_RC above).
 <p></p>
 </dd>
@@ -1064,7 +1086,7 @@ Runs the function H-Glob() to expand or explain wildcards.
 Prints status of jobs in the current shell session in long format.
 <p></p>
 </dd>
-<dt><b>l</b> (<i>ls -lF --color=auto</i>)</dt><dd>
+<dt><b>l</b> (<i>ls -l --color=auto</i>)</dt><dd>
 Lists files in long output format with indicator for filetype appended
 to filename. If the terminal supports it, with colored output.
 <p></p>
@@ -1092,7 +1114,7 @@ Lists files in long colored output format.
 Opens syslog in pager.
 <p></p>
 </dd>
-<dt><b>ls</b> (<i>ls -CF --color=auto</i>)</dt><dd>
+<dt><b>ls</b> (<i>ls -C --color=auto</i>)</dt><dd>
 Lists directory, entries are listed by columns and an indicator for
 file type is appended to each file name. Additionally the output is
 colored, if the terminal supports it.
@@ -1173,7 +1195,7 @@ as configuration.
 <p></p>
 </dd>
 <dt><b>su</b> (<i>sudo su</i>)</dt><dd>
-If user is running a grml live-CD, dont ask for any password, if she
+If user is running a Grml live system, don't ask for any password, if she
 wants a root shell.
 <p></p>
 </dd>
@@ -1221,7 +1243,7 @@ be used to permantenly change <i>grmlzshrc</i>'s STARTUP VARIABLES (see above):
 
 <pre>
 # show battery status in RPROMPT
-BATTERY=1
+GRML_DISPLAY_BATTERY=1
 # always load the complete setup, even for root
 GRML_ALWAYS_LOAD_ALL=1
 </pre>
@@ -1255,7 +1277,7 @@ On non-debian systems, that is not an option, but all is not lost:
 % wget -O .zshrc http://git.grml.org/f/grml-etc-core/etc/zsh/zshrc
 </pre>
 <p>
-If you would also like to get seperate function files (which you can put into
+If you would also like to get separate function files (which you can put into
 your <b>$fpath</b>), you can browse and download them at:
 </p>
 <p>
