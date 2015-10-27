@@ -44,7 +44,7 @@
                 <a class="plain" href="/contact/">Contact</a><br/>
               </p>
 
-            <div class="copyright">&copy; Copyright 2003-2014 Grml Live Linux</div>
+            <div class="copyright">&copy; Copyright 2003-2015 Grml Live Linux</div>
             <p>&nbsp;</p>
 
       </div>
