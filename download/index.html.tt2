@@ -215,14 +215,9 @@
     <br />
     For each released ISO image there is also a signature file, that should be verified with the following
     <a href="https://grml.org/download/gnupg-michael-prokop.txt">signing key</a>:
-    <pre>pub  4096R/96A87872B7EA3737 2010-07-14 Michael Prokop &lt;mail@michael-prokop.at&gt;
-     Key fingerprint = 33CC B136 401A FEC8 43A3  8763 96A8 7872 B7EA 3737
-     uid                            Michael Prokop &lt;mika@grml.org&gt;
-     uid                            Michael Prokop &lt;mika@debian.org&gt;
-     uid                            Michael Prokop &lt;michael@linuxtage.at&gt;
-     uid                            Michael Prokop &lt;prokop@grml-solutions.com&gt;
-     uid                            Michael Prokop &lt;michael.prokop@synpro.solutions&gt;
-     sub  4096R/257B6FD52892CF7E 2010-07-14</pre>
+    <pre>pub  4096R/96A87872B7EA3737 2010-07-14 Michael Prokop &lt;mail (at) michael-prokop.at&gt;
+Key fingerprint = 33CC B136 401A FEC8 43A3  8763 96A8 7872 B7EA 3737
+sub  4096R/257B6FD52892CF7E 2010-07-14</pre>
     </div></div>
 
     <div class="download_panel" id="download_panel4"><div>
