@@ -74,6 +74,17 @@ A non zero value activates a handler, which is called when a command can not
 be found. The handler is defined by GRML_ZSH_CNF_HANDLER (see below).
 <p></p>
 </dd>
+<dt><b>GRML_COMP_CACHING</b></dt><dd>
+If set to <i>yes</i> (the default), the setup will enable zsh's completion caching
+mechanism, with the caching data being placed into <i>$GRML_COMP_CACHE_DIR</i>.
+<p></p>
+</dd>
+<dt><b>GRML_COMP_CACHE_DIR</b></dt><dd>
+This defines where zsh's completion caching data will be placed, if
+<i>$GRML_COMP_CACHING</i> is active. The default is <i>${ZDOTDIR:-$HOME}/.cache</i>.
+The setup will ensure the directory exists before attempting to use it.
+<p></p>
+</dd>
 <dt><b>GRML_DISPLAY_BATTERY</b></dt><dd>
 If set to a value greater than zero, <i>grmlzshrc</i> will put the battery status
 into the right hand side interactive prompt. Supported OSes are <i>GNU/Linux</i>,
@@ -162,6 +173,56 @@ via the <b>DIRSTACKFILE</b> variable and it defaults to <b>~/.zdirs</b>. The
 The <b>DIRSTACKFILE</b> is loaded each time zsh starts, therefore freshly started
 zshs inherit the dirstack of the zsh that most recently updated
 <b>DIRSTACKFILE</b>.
+</p>
+<p>
+It is possible to apply a filter to the names of directories that will be
+committed to the persistent dirstack file. There are two ways to configure this
+filter: A general function based filter and a pattern based filter. Both are
+setup via styles in the <b>':grml:chpwd:dirstack'</b> context.
+</p>
+<p>
+To use a function based filter set the <i>filter</i> style for that context to the
+name of a function to call every time a directory name is to be added to the
+persistent dirstack. If the function's return value signals success (ie. return
+value "0"), the directory name is filtered out and <b>not</b> added to the
+persistent stack. Example:
+
+</p>
+<pre>
+function my_dirstack_filter() { [[ $1 == /tmp(|/*) ]] }
+zstyle ':grml:chpwd:dirstack' filter my_dirstack_filter
+</pre>
+<p>
+The pattern based filter uses a list of patterns passed to the <i>exclude</i>
+style in the aforementioned context. Each pattern is tested and the first that
+matches will keep the directory name from being added to the persistent stack.
+If none of the patterns matches, the name is added. example:
+
+</p>
+<pre>
+zstyle ':grml:chpwd:dirstack' exclude "/tmp(|/*)" "$HOME/tmp(|/*)"
+</pre>
+<p>
+The function based filter is more general, the pattern based filter easier to
+set up. If both filter variants are used at the same time, the function based
+filter will be executed <i>before</i> the pattern based one.
+</p>
+<p>
+If you would like to apply your filters while <i>loading</i> the persistent
+dirstack file, set the <i>filter-on-load</i> boolean style (the default is
+<i>false</i>):
+
+</p>
+<pre>
+zstyle ':grml:chpwd:dirstack' filter-on-load true
+</pre>
+<p>
+Setting the <i>filter-on-load</i> needs to be done in ".zshrc.pre" because the
+style needs to be set when the main setup is executing! The other styles do not
+have this limitation, but the initial filtering will obviously be done using
+the filters that are configured <b>at</b> <b>that</b> <b>point</b>. The rule of thumb
+is: If you want to filter on load, setup everything in ".zshrc.pre" otherwise
+".zshrc.local" works just as well.
 </p>
 <h2>DIRECTORY BASED PROFILES</h2>
 <p>
@@ -649,10 +710,6 @@ to modify the resolution on intel graphics chipsets.
 Lists files in current directory, which have been accessed within the
 last N days. N is an integer to be passed as first and only argument.
 If no argument is specified N is set to 1.
-<p></p>
-</dd>
-<dt><b>allulimit()</b></dt><dd>
-Sets all ulimit values to "unlimited".
 <p></p>
 </dd>
 <dt><b>any()</b></dt><dd>
@@ -1187,11 +1244,11 @@ Executes the commands on the versioned patch queue from current repository.
 rmdir current working directory
 <p></p>
 </dd>
-<dt><b>screen</b> (<i>/usr/bin/screen -c ${HOME}/.screenrc</i>)</dt><dd>
+<dt><b>screen</b> (<i>screen -c file</i>)</dt><dd>
 If invoking user is root, starts screen session with /etc/grml/screenrc
-as config file. If invoked by a regular user, start a screen session
-with users .screenrc config if it exists, else use /etc/grml/screenrc_grml
-as configuration.
+as config file. If invoked by a regular user and users .screenc does not exist,
+starts screen with /etc/grml/screenrc_grml config if it exists, else fallbacks
+to /etc/grml/screenrc.
 <p></p>
 </dd>
 <dt><b>su</b> (<i>sudo su</i>)</dt><dd>
