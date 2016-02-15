@@ -754,7 +754,7 @@ Linux Live system (CD/ISO)</p></div>
 -e &lt;extract_iso_name&gt;] [-g &lt;grml_name&gt;] [-i &lt;iso_name&gt;] [
 -o &lt;output_directory&gt;] [-r &lt;release_name&gt;] [-s &lt;suite&gt;] [
 -t &lt;template_directory&gt;] [-v &lt;version_number&gt;] [-U &lt;username&gt;] [
--AbBFnNqQuVz]</p></div>
+-w &lt;date&gt;] [-AbBFnNqQuVz]</p></div>
 </div>
 </div>
 <div class="sect1">
@@ -1041,7 +1041,7 @@ Specify name of the release.
 <p>
 Specify the Debian suite you want to use for your live-system. If unset defaults
 to "testing". Supported values are: stable, testing, unstable (or their
-corresponding release names like "wheezy"). Please be aware that recent Debian
+corresponding release names like "jessie"). Please be aware that recent Debian
 suites might require a recent base.tgz
 debootstrap.
 </p>
@@ -1086,6 +1086,26 @@ Specify version number of the release.
 <dd>
 <p>
 Increase verbosity in the build process.
+</p>
+</dd>
+<dt class="hdlist1">
+-w <strong>DATE</strong>
+</dt>
+<dd>
+<p>
+The wayback machine. Build the system using Debian archives from the specified
+date.  Valid date formats are yyyymmddThhmmssZ or simply yyyymmdd.  To learn
+which snapshots exist, i.e. which date strings are valid, simply browse the
+lists on <a href="http://snapshot.debian.org/">http://snapshot.debian.org/</a>.  If there is no import at the exact time
+you specified you will get the latest available timestamp which is before the
+time you specified.
+This option is useful especially for release and debugging builds - for example
+if you know that the Debian archive was in a good state on a specific date but
+you want to build it on another day in the future, where the archive might not
+be as needed anymore. Please be aware that this is restricted to the plain
+Debian repositories only, as referred to in /etc/apt/sources.list.d/debian.list
+(so neither the Grml repositories nor any further custom ones are affected by
+the wayback machine).
 </p>
 </dd>
 <dt class="hdlist1">
@@ -1171,7 +1191,7 @@ losing the simplicity in the build process.</p></div>
 recommended to <strong>always</strong> use the class GRMLBASE when building an ISO using
 grml-live, as well as the architecture dependent class which provides the kernel
 (being <em>I386</em> for x86_32 and <em>AMD64</em> for x86_64) and a GRML_* class (like
-GRML_SMALL, GRML_MEDIUM or GRML_FULL). The following files and directories are
+GRML_SMALL or GRML_FULL). The following files and directories are
 relevant for class GRMLBASE by default:</p></div>
 <div class="literalblock">
 <div class="content">
@@ -1222,25 +1242,13 @@ use this class.
 <li>
 <p>
 GRML_FULL: full featured Grml, also known as the "normal", full grml as
-introduced in December 2011 (~350MB ISO size).
+introduced in December 2011 (~460MB ISO size).
 </p>
 </li>
 <li>
 <p>
-GRML_MEDIUM: medium sized Grml version, used to be known as grml-medium
-until December 2011 (~220MB ISO size).
-</p>
-</li>
-<li>
-<p>
-GRML_SMALL: minimum sized Grml version, known as grml-small (~110MB ISO
+GRML_SMALL: minimum sized Grml version, known as grml-small (~230MB ISO
 size).
-</p>
-</li>
-<li>
-<p>
-GRML_XL: large size Grml version, used to be known as "full grml" until
-December 2011 (~700MB ISO size).
 </p>
 </li>
 <li>
@@ -1428,9 +1436,8 @@ chroot (check out "local mirror" to workaround this problem as far as possible)
 <div class="sect1">
 <h2 id="current_state">12. Current state of grml-live with squashfs-tools and kernel</h2>
 <div class="sectionbody">
-<div class="paragraph"><p>Use squashfs-tools &gt;=4.2-1 (available from Grml repositories as well as from
-Debian) to build Grml (based) ISOs featuring kernel version 2.6.38-grml[64] or
-newer.</p></div>
+<div class="paragraph"><p>Use squashfs-tools &gt;=4.2-1 to build Grml (based) ISOs featuring kernel version
+2.6.38-grml[64] or newer.</p></div>
 </div>
 </div>
 <div class="sect1">
@@ -1441,8 +1448,8 @@ newer.</p></div>
 <div class="paragraph"><p>The easiest way to get a running grml-live setup is to just use Grml.
 Of course using grml-live on a plain, original Debian installation is supported
 as well. So there we go.</p></div>
-<div class="paragraph"><p>What we have: plain, original Debian wheezy (7.x).</p></div>
-<div class="paragraph"><p>What we want: build a Grml ISO based on Debian/wheezy for the amd64 architecture
+<div class="paragraph"><p>What we have: plain, original Debian jessie (8.x).</p></div>
+<div class="paragraph"><p>What we want: build a Grml ISO based on Debian/jessie for the amd64 architecture
 using grml-live.</p></div>
 <div class="sect3">
 <h4 id="_instructions">13.1.1. Instructions</h4>
@@ -1496,7 +1503,7 @@ cat &gt; /etc/grml/grml-live.local &lt;&lt; EOF
 # CHROOT_INSTALL="/etc/grml/fai/chroot_install"
 ## adjust if necessary (defaults to /grml/grml-live):
 ## OUTPUT="/srv/grml-live"
-FAI_DEBOOTSTRAP="wheezy http://http.debian.net/debian/"
+FAI_DEBOOTSTRAP="jessie http://ftp.debian.org/debian/"
 # ARCH="amd64"
 CLASSES="GRMLBASE,GRML_FULL,AMD64"
 EOF</code></pre>
@@ -1604,46 +1611,7 @@ dpkg -i --force-confnew --force-confmiss /path/to/grml-live_..._all.deb</code></
 </div></div>
 </div>
 <div class="sect2">
-<h3 id="create-a-base-tgz">13.8. How do I create a base.tgz?</h3>
-<div class="paragraph"><p>First of all create the chroot using debootstrap:</p></div>
-<div class="literalblock">
-<div class="content">
-<pre><code>BASECHROOT='/tmp/basefile'
-debootstrap wheezy "$BASECHROOT" http://http.debian.net/debian
-tar -C "$BASECHROOT" --exclude='var/cache/apt/archives/*.deb' -zcf base.tar.gz ./</code></pre>
-</div></div>
-<div class="admonitionblock">
-<table><tr>
-<td class="icon">
-<img src="./images/icons/tip.png" alt="Tip" />
-</td>
-<td class="content">By default debootstrap builds a chroot matching the architecture of the running
-host system. If you&#8217;re using an amd64 system and want to build an i386 base.tgz
-then invoke debootstrap using the <em>--arch i386</em> option. Disclaimer: building an
-AMD64 base.tgz won&#8217;t work if you are using a 32bit kernel system of course.</td>
-</tr></table>
-</div>
-<div class="paragraph"><p>Then move the base.tar.gz to /etc/grml/fai/config/basefiles/$CLASSNAME.tar.gz.
-Use e.g. I386 as $CLASSNAME for i386 chroots and AMD64 for amd64 chroots.</p></div>
-<div class="paragraph"><p>Now executing grml-live should use this file as base system instead of executing
-debootstrap. Check out the output for something like:</p></div>
-<div class="literalblock">
-<div class="content">
-<pre><code>[...]
-ftar: extracting //etc/grml/fai/config/basefiles///AMD64.tar.gz to /srv/grml64_testing/grml_chroot//
-[...]</code></pre>
-</div></div>
-<div class="admonitionblock">
-<table><tr>
-<td class="icon">
-<img src="./images/icons/tip.png" alt="Tip" />
-</td>
-<td class="content">Existing base.tgz can be found at <a href="http://daily.grml.org/">http://daily.grml.org/</a></td>
-</tr></table>
-</div>
-</div>
-<div class="sect2">
-<h3 id="apt-cacher">13.9. Set up apt-cacher-ng for use with grml-live</h3>
+<h3 id="apt-cacher">13.8. Set up apt-cacher-ng for use with grml-live</h3>
 <div class="paragraph"><p>Make sure /etc/grml/grml-live.local provides according APT_PROXY and
 FAI_DEBOOTSTRAP:</p></div>
 <div class="literalblock">
@@ -1652,13 +1620,13 @@ FAI_DEBOOTSTRAP:</p></div>
 [...]
 APT_PROXY="http://localhost:3142/"
 [...]
-FAI_DEBOOTSTRAP="wheezy http://localhost:3142/http.debian.net/debian wheezy main contrib non-free"</code></pre>
+FAI_DEBOOTSTRAP="jessie http://localhost:3142/ftp.debian.org/debian jessie main contrib non-free"</code></pre>
 </div></div>
 <div class="paragraph"><p>Make sure apt-cacher-ng is running (<em>/etc/init.d/apt-cacher-ng restart</em>).
 That&#8217;s it.  All downloaded files will be cached in /var/cache/apt-cacher-ng then.</p></div>
 </div>
 <div class="sect2">
-<h3 id="revert_manifold">13.10. How do I revert the manifold feature from an ISO?</h3>
+<h3 id="revert_manifold">13.9. How do I revert the manifold feature from an ISO?</h3>
 <div class="paragraph"><p>The so called manifold feature Grml ISOs use by default allows one to use the same
 ISO for CD boot and USB boot. If you notice any problems when booting just
 revert the manifold feature running:</p></div>
@@ -1674,30 +1642,113 @@ syslinux) then just execute:</p></div>
 </div></div>
 </div>
 <div class="sect2">
-<h3 id="basetgz">13.11. How do I create a base tar.gz (I386.tar.gz or AMD64.tar.gz)</h3>
-<div class="paragraph"><p>Execute the following commands (requires root):</p></div>
+<h3 id="create-a-base-tgz">13.10. How do I create a base tar.gz (I386.tar.gz or AMD64.tar.gz)</h3>
+<div class="paragraph" id="basetgz"><p>First of all create the chroot using debootstrap (requires root):</p></div>
 <div class="literalblock">
 <div class="content">
-<pre><code>ARCH='amd64' # replace with i386 if necessary
-SUITE='wheezy' # using the current stable release should always work
-debootstrap --arch "$ARCH" --exclude=info,tasksel,tasksel-data "$SUITE" "$ARCH" http://debian.netcologne.de/debian
-cd "$ARCH"
-rm var/cache/apt/archives/*.deb
-tar zcf ../"${ARCH}".tar.gz *</code></pre>
+<pre><code>BASECHROOT='/tmp/basefile'  # path where the chroot gets generated
+SUITE='jessie'              # using the current stable release should always work
+debootstrap --exclude=info,tasksel,tasksel-data "$SUITE" "$BASECHROOT" http://ftp.debian.org/debian
+tar -C "$BASECHROOT" --exclude='var/cache/apt/archives/*.deb' -zcf "${SUITE}".tar.gz ./</code></pre>
 </div></div>
-<div class="paragraph"><p>And finally place the generated tarball in /etc/grml/fai/config/basefiles/ (note
-that it needs to be uppercase letters matching the class names, so: AMD64.tar.gz
-for amd64 and I386.tar.gz for i386).</p></div>
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<img src="./images/icons/tip.png" alt="Tip" />
+</td>
+<td class="content">By default debootstrap builds a chroot matching the architecture of the running
+host system. If you&#8217;re using an amd64 system and want to build an i386 base.tgz
+then invoke debootstrap using the <em>--arch i386</em> option. Disclaimer: building an
+AMD64 base.tgz won&#8217;t work if you are using a 32bit kernel system of course.</td>
+</tr></table>
+</div>
+<div class="paragraph"><p>Finally place the generated tarball in /etc/grml/fai/config/basefiles/ (note
+that it needs to be uppercase letters matching the class names, so: e.g.
+AMD64.tar.gz for amd64 and I386.tar.gz for i386).</p></div>
+<div class="paragraph"><p>Then executing grml-live should use this file as base system instead of executing
+debootstrap. Check out the output for something like:</p></div>
+<div class="literalblock">
+<div class="content">
+<pre><code>[...]
+ftar: extracting //etc/grml/fai/config/basefiles///AMD64.tar.gz to /srv/grml64_testing/grml_chroot//
+[...]</code></pre>
+</div></div>
+</div>
+<div class="sect2">
+<h3 id="localrepos">13.11. How to use your own local repository</h3>
+<div class="paragraph"><p>Let&#8217;s assume you have Debian package(s) in your filesystem inside
+<code>/home/foobar/local-packages</code> and want to provide them to your grml-live build.
+This can be achieved either 1) through a bind mount (using the MIRROR_DIRECTORY
+configuration) or 2) by serving a repository via HTTP.</p></div>
+<div class="sect3">
+<h4 id="_serving_via_bind_mount_mirror_directory">13.11.1. Serving via bind mount / MIRROR_DIRECTORY</h4>
+<div class="paragraph"><p>Make sure to create an according sources.list configuration file, e.g. using
+your own class name <code>CUSTOM</code>:</p></div>
+<div class="literalblock">
+<div class="content">
+<pre><code># cat &gt; /etc/grml/fai/config/files/etc/apt/sources.list.d/local-packages.list/CUSTOM &lt;&lt; EOF
+deb file:///home/foobar/local-packages ./
+EOF</code></pre>
+</div></div>
+<div class="paragraph"><p>Add the according MIRROR_DIRECTORY configuration to your grml-live configuration:</p></div>
+<div class="literalblock">
+<div class="content">
+<pre><code># echo "MIRROR_DIRECTORY='/home/foobar/packages'" &gt;&gt; /etc/grml/grml-live.local</code></pre>
+</div></div>
+<div class="paragraph"><p>Make sure the local directory looks like a mirror:</p></div>
+<div class="literalblock">
+<div class="content">
+<pre><code>% cd /home/foobar/packages
+% dpkg-scanpackages . /dev/null | gzip &gt; Packages.gz</code></pre>
+</div></div>
+<div class="paragraph"><p>Finally invoke grml-live with your class name (<code>CUSTOM</code> in this example) added
+to the list of classes on the command line (see grml-live option <code>-c</code>).</p></div>
+</div>
+<div class="sect3">
+<h4 id="_serving_a_repository_via_http">13.11.2. Serving a repository via HTTP</h4>
+<div class="paragraph"><p>Make sure to create an according sources.list configuration file, e.g. using
+your own class name <code>CUSTOM</code>:</p></div>
+<div class="literalblock">
+<div class="content">
+<pre><code># cat &gt; /etc/grml/fai/config/files/etc/apt/sources.list.d/local-packages.list/CUSTOM &lt;&lt; EOF
+deb http://127.0.0.1:8000/ ./
+EOF</code></pre>
+</div></div>
+<div class="paragraph"><p>Make sure the local directory is served via HTTP on the according IP address and
+port. For the <code>http://127.0.0.1:8000/</code> example from above it should be enough to
+just invoke:</p></div>
+<div class="literalblock">
+<div class="content">
+<pre><code>% cd /home/foobar/packages
+% dpkg-scanpackages . /dev/null | gzip &gt; Packages.gz
+% python -m SimpleHTTPServer 8000</code></pre>
+</div></div>
+<div class="admonitionblock">
+<table><tr>
+<td class="icon">
+<img src="./images/icons/tip.png" alt="Tip" />
+</td>
+<td class="content">Of course you can also use a real Debian repository setup using tools like
+reprepro(1) and/or using a real web server, though for quick debugging sessions
+python&#8217;s SimpleHTTPServer in combination with dpkg-scanpackages from package
+dpkg-dev is a simple and easy approach.</td>
+</tr></table>
+</div>
+<div class="paragraph"><p>Finally invoke grml-live with your class name (<code>CUSTOM</code> in this example) added
+to the list of classes on the command line (see grml-live option <code>-c</code>).</p></div>
+</div>
 </div>
 </div>
 </div>
 <div class="sect1">
 <h2 id="download">14. Download / install grml-live as a Debian package</h2>
 <div class="sectionbody">
-<div class="paragraph"><p>Debian packages are available through the grml-repository at
-<a href="http://deb.grml.org/pool/main/g/grml-live/">deb.grml.org</a>.  If you want to
-build a Debian package on your own (using for example a specific version or the
-current development tree), just execute:</p></div>
+<div class="paragraph"><p>Stable Debian packages are available through the grml-repository at
+<a href="http://deb.grml.org/pool/main/g/grml-live/">deb.grml.org</a> and the latest
+Git commits are available as Debian packages from
+<a href="http://jenkins.grml.org/job/grml-live-binaries/">jenkins.grml.org</a>.
+If you want to build a Debian package on your own (using for example a specific
+version or the current development tree), just execute:</p></div>
 <div class="literalblock">
 <div class="content">
 <pre><code>git clone git://git.grml.org/grml-live
@@ -1707,21 +1758,37 @@ debuild -us -uc</code></pre>
 </div>
 </div>
 <div class="sect1">
-<h2 id="source">15. Source</h2>
+<h2 id="run-from-git">15. Run grml-live directly from git</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>In case you want to run grml-live directly from the git repository checkout
+(after making sure all dependencies are installed), you should set
+<code>GRML_FAI_CONFIG</code> so that a) it finds the according FAI configuration files and
+b) does not use the config files of an possibly installed <code>grml-live</code> package.
+Usage example:</p></div>
+<div class="literalblock">
+<div class="content">
+<pre><code># export GRML_FAI_CONFIG=$(pwd)/etc/grml/fai
+# export SCRIPTS_DIRECTORY=$(pwd)/scripts
+# ./grml-live -s sid -a amd64 -c GRMLBASE,GRML_FULL,AMD64</code></pre>
+</div></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="source">16. Source</h2>
 <div class="sectionbody">
 <div class="paragraph"><p>The source of grml-live is available at
 <a href="https://github.com/grml/grml-live/">https://github.com/grml/grml-live/</a></p></div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="bugs">16. Bugs</h2>
+<h2 id="bugs">17. Bugs</h2>
 <div class="sectionbody">
 <div class="paragraph"><p>Please report feedback, <a href="http://grml.org/bugs/">bugreports</a> and wishes
 <a href="http://grml.org/contact/">to the Grml team</a>!</p></div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="documentation">17. Documentation</h2>
+<h2 id="documentation">18. Documentation</h2>
 <div class="sectionbody">
 <div class="paragraph"><p>The most recent grml-live documentation is available online at
 <a href="http://grml.org/grml-live/">http://grml.org/grml-live/</a> and for offline reading also available
@@ -1741,7 +1808,7 @@ in different formats:</p></div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="authors">18. Authors</h2>
+<h2 id="authors">19. Authors</h2>
 <div class="sectionbody">
 <div class="paragraph"><p>Michael Prokop &lt;<a href="mailto:mika@grml.org">mika@grml.org</a>&gt;</p></div>
 </div>
@@ -1750,7 +1817,8 @@ in different formats:</p></div>
 <div id="footnotes"><hr /></div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2013-12-11 11:53:34 CET
+Last updated
+ 2016-02-15 22:15:22 CET
 </div>
 </div>
 </body>
