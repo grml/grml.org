@@ -10,7 +10,7 @@
         </a>
       </div>
       <div>
-        <a href="https://www.snel.com/" target="_blank">
+        <a href="https://www.snelserver.com/" target="_blank">
         <img src="/sponsors/snel.png" width="300" height="70" alt="snel logo"/>
         </a>
       </div>
