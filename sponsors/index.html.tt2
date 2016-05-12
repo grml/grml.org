@@ -23,44 +23,70 @@
 <body>
 [% INCLUDE static.inc %]
 
-      <div class="content">
+    <div class="content">
 
-       <h1>Sponsors</h1>
+      <h1>Sponsors</h1>
 
       <p>This is a list of companies or organizations that provide ongoing support to Grml. Thanks to their support and assistance the Grml project can provide an excessive list of services for our users like free CDs, daily images (more than 16 different images), mailing lists, website, wiki etc. To be more precise without their support the <a href="/">Grml project</a> would not be able to provide all the services you know and love.</p>
 
-    <div class="sponsor_list">
-      <div class="entry">
-        <h3>Hostway Deutschland GmbH</h3>
-            <div style="float:left;margin-right:10px;" class="imagetext_image"><img width="300" border="0" height="100" title="" alt="" src="hostway.jpg"></div>
+      <div class="sponsor_list">
 
-		<p><a target="_blank" href="http://www.hostway.de/">Hostway
-		Deutschland</a> – more than just a hosting company.</p>
+        <div class="entry">
 
-		<p><a target="_blank" href="http://www.hostway.com/">Hostway</a>
-		is an international provider of dedicated hosting, shared
-		hosting, colocation, domain name registration, ecommerce
-		solutions and other Web-based services with a direct presence in
-		14 countries, and 600,000 customers worldwide.</p>
+          <h3>Hostway Deutschland GmbH</h3>
 
-		<p><a target="_blank" href="http://www.hostway.de/">Hostway
-		Deutschland</a> operates 5 independent data centers in Germany,
-		with 24/7 customer access and onsite staff. The network supports
-		IPv4 and IPv6, as well as the operation of high availability
-		solutions, involving different interconnected local or
-		international Hostway data centers. Additionally, the <a
-		target="_blank"
-		href="http://www.hostway.de/hep/">Hostway Enterprise
-		Platform</a>, provides a redundant infrastructure for high
-		performance customized cloud solutions (public, private, and
-		hybrid), including various add-on features, like CDN, IDS/IPS,
-		load balancing, as well as a wide range of managed services.</p>
+          <div style="float:left;margin-right:10px;" class="imagetext_image"><img width="300" border="0" height="100" title="" alt="" src="hostway.jpg"></div>
+
+            <p><a target="_blank" href="http://www.hostway.de/">Hostway
+            Deutschland</a> – more than just a hosting company.</p>
+
+            <p><a target="_blank" href="http://www.hostway.com/">Hostway</a>
+            is an international provider of dedicated hosting, shared
+            hosting, colocation, domain name registration, ecommerce
+            solutions and other Web-based services with a direct presence in
+            14 countries, and 600,000 customers worldwide.</p>
+
+            <p><a target="_blank" href="http://www.hostway.de/">Hostway
+            Deutschland</a> operates 5 independent data centers in Germany,
+            with 24/7 customer access and onsite staff. The network supports
+            IPv4 and IPv6, as well as the operation of high availability
+            solutions, involving different interconnected local or
+            international Hostway data centers. Additionally, the <a
+            target="_blank"
+            href="http://www.hostway.de/hep/">Hostway Enterprise
+            Platform</a>, provides a redundant infrastructure for high
+            performance customized cloud solutions (public, private, and
+            hybrid), including various add-on features, like CDN, IDS/IPS,
+            load balancing, as well as a wide range of managed services.</p>
 
           </div>
 
-    </div>
-    </div>
+        </div>
 
-    [% INCLUDE static_bottom.inc 
+        <div class="entry">
+
+          <h3>Snel</h3>
+
+          <div style="float:left;margin-right:10px;" class="imagetext_image"><img width="300" border="0" height="70" title="" alt="" src="snel.png"></div>
+
+            <p><a target="_blank" href="https://www.snel.com/">Snel.com</a> is a
+            Dutch hosting provider. Our company was founded in 2010 and we are
+            located in Rotterdam, a small dynamic city with a passionately
+            beating heart. In this small city we run a company that has a
+            passionately beating heart for hosting. We provide fast and simple
+            dedicated hosting solutions with a great focus on automation. In a
+            world where time is literally money we want our customers to save on
+            both by providing them dedicated servers with instant setup and an
+            automated platform with enough features to virtually do anything. We
+            believe that the simplicity of our services and treating customers
+            as friends sets us apart from the competition.</p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    [% INCLUDE static_bottom.inc
         sponsors = '1'
     %]

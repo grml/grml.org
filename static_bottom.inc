@@ -9,6 +9,11 @@
         <img src="/sponsors/hostway.jpg" width="300" height="100" alt="hostway logo"/>
         </a>
       </div>
+      <div>
+        <a href="https://www.snel.com/" target="_blank">
+        <img src="/sponsors/snel.png" width="300" height="70" alt="snel logo"/>
+        </a>
+      </div>
 </div>
 [% END %]
 <!-- Piwik -->
