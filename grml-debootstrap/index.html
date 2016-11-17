@@ -827,6 +827,15 @@ or virtual image file then. Customization of this process is possible as well.</
 </p>
 </dd>
 <dt class="hdlist1">
+<strong>--contrib</strong>
+</dt>
+<dd>
+<p>
+    Enable the <em>contrib</em> repository in COMPONENTS. By default only
+    the <em>main</em> repository is enabled.
+</p>
+</dd>
+<dt class="hdlist1">
 <strong>-d</strong>, <strong>--confdir</strong> <em>path</em>
 </dt>
 <dd>
@@ -858,6 +867,20 @@ or virtual image file then. Customization of this process is possible as well.</
 <p>
    Execute in very verbose way. Useful for debugging possible problems
    with grml-debootstrap or identify what&#8217;s actually executed.
+</p>
+</dd>
+<dt class="hdlist1">
+<strong>--efi</strong> <em>device</em>
+</dt>
+<dd>
+<p>
+    Partition where EFI boot manager should be installed to. If the
+    specified device doesn&#8217;t use a FAT filesystem yet grml-debootstrap
+    automatically creates the filesystem. If a FAT filesystem is already
+    present the filesystem creation is skipped. Please ensure that it&#8217;s
+    a valid FAT32 filesystem and the partition has the <em>boot</em> and <em>esp</em>
+    flags enabled. This option requires EFI support on the running system
+    and the option is NOT supported for Virtual Machine deployments.
 </p>
 </dd>
 <dt class="hdlist1">
@@ -975,6 +998,15 @@ or virtual image file then. Customization of this process is possible as well.</
 </p>
 </dd>
 <dt class="hdlist1">
+<strong>--non-free</strong>
+</dt>
+<dd>
+<p>
+    Enable the <em>non-free</em> repository in COMPONENTS. By default only
+    the <em>main</em> repository is enabled.
+</p>
+</dd>
+<dt class="hdlist1">
 <strong>--nopackages</strong>
 </dt>
 <dd>
@@ -1023,13 +1055,15 @@ or virtual image file then. Customization of this process is possible as well.</
 </p>
 </dd>
 <dt class="hdlist1">
-<strong>-r</strong>, <strong>--release</strong> <em>releasename</em>
+<strong>--post-scripts</strong> <em>directory</em>
 </dt>
 <dd>
 <p>
-    Specify release of new Debian system. Supported releases names: lenny,
-    squeeze, wheezy, jessie (note: requires a recent version of debootstrap)
-    and sid. Corresponding with configuration variable RELEASE.
+    Execute scripts from specified directory after executing the chroot script.
+    This allows customisation of the system after the chroot has been set up.
+    The environment variable $MNTPOINT is available inside the scripts for
+    direct access of the chroot.
+    Default directory: /etc/debootstrap/post-scripts/
 </p>
 </dd>
 <dt class="hdlist1">
@@ -1045,14 +1079,22 @@ or virtual image file then. Customization of this process is possible as well.</
 </p>
 </dd>
 <dt class="hdlist1">
-<strong>--scripts</strong> <em>directory</em>
+<strong>-r</strong>, <strong>--release</strong> <em>releasename</em>
 </dt>
 <dd>
 <p>
-    Execute scripts from specified directory. This allows customisation of
-    the system after the chroot has been set up. The environment variable
-    $MNTPOINT is available inside the scripts for direct access of the chroot.
-    Default directory: /etc/debootstrap/scripts/
+    Specify release of new Debian system. Supported releases names: lenny,
+    squeeze, wheezy, jessie, stretch (note: requires a recent version of debootstrap)
+    and sid. Corresponding with configuration variable RELEASE.
+</p>
+</dd>
+<dt class="hdlist1">
+<strong>--remove-configs</strong>
+</dt>
+<dd>
+<p>
+    Delete grml-debootstrap configuration files (/etc/debootstrap/*) from installed
+    system. Useful for reproducible builds or if you don&#8217;t want to leak information.
 </p>
 </dd>
 <dt class="hdlist1">
@@ -1089,9 +1131,10 @@ or virtual image file then. Customization of this process is possible as well.</
 </dt>
 <dd>
 <p>
-    Set up a Virtual Machine instead of installing to a partition or directory.
-    This allows deployment of a Virtual Machine. The options needs to be
-    combined with the --target option.
+    Set up a Virtual Machine using a regular file instead of installing to a
+    partition/block device or directory. This allows deployment of a Virtual
+    Machine. The options needs to be combined with the --target option
+    (<em>qemu-img create -f raw &#8230;</em> is executed on the specified target).
     Usage example: --vmfile --target /mnt/sda1/qemu.img
 </p>
 </dd>
@@ -1155,7 +1198,7 @@ any bootloader).</p></div>
 </div></div>
 <div class="paragraph"><p>Install default Debian release (jessie) on /dev/sda3 and install bootmanager
 Grub in MBR (master boot record) of /dev/sda and use /dev/sda3 as system partition.
-Use specified mirror instead of the default (<a href="http://http.debian.net/debian">http://http.debian.net/debian</a>) one.</p></div>
+Use specified mirror instead of the default (<a href="http://httpredir.debian.org/debian">http://httpredir.debian.org/debian</a>) one.</p></div>
 <div class="literalblock">
 <div class="content">
 <pre><code>mount /dev/sda1 /mnt/sda1
@@ -1251,13 +1294,13 @@ target=/dev/sda1</p></div>
 <pre><code>release=...</code></pre>
 </div></div>
 <div class="paragraph"><p>Specify release of new Debian system. Defaults to Debian jessie. Supported
-relases: lenny, squeeze, wheezy, jessie and sid. Usage example: release=sid</p></div>
+releases: lenny, squeeze, wheezy, jessie, stretch and sid. Usage example: release=sid</p></div>
 <div class="literalblock">
 <div class="content">
 <pre><code>mirror=...</code></pre>
 </div></div>
 <div class="paragraph"><p>Specify mirror which should be used for apt-get/aptitude instead
-of the default one (<a href="http://http.debian.net/debian">http://http.debian.net/debian</a>).
+of the default one (<a href="http://httpredir.debian.org/debian">http://httpredir.debian.org/debian</a>).
 Usage example: mirror=ftp://ftp.tugraz.at/mirror/debian</p></div>
 <div class="literalblock">
 <div class="content">
@@ -1323,6 +1366,10 @@ cellspacing="0" cellpadding="4">
 <td align="left" valign="top"><p class="table">works</p></td>
 </tr>
 <tr>
+<td align="left" valign="top"><p class="table">stretch</p></td>
+<td align="left" valign="top"><p class="table">works</p></td>
+</tr>
+<tr>
 <td align="left" valign="top"><p class="table">sid</p></td>
 <td align="left" valign="top"><p class="table">works[2]</p></td>
 </tr>
@@ -1338,12 +1385,15 @@ cellspacing="0" cellpadding="4">
 <div class="title">lenny release</div>
 <div class="paragraph"><p>[1] Please notice that lenny is an unsupported release within Debian nowadays.
 grml-debootstrap can handle the release but you really should not use lenny
-anymore unless you really know what you are doing. Choose Debian 7.0 (wheezy) or
+anymore unless you really know what you are doing. Choose Debian 8.0 (jessie) or
 something newer instead.</p></div>
 <div class="paragraph"><p>Notice that you need to specify a mirror providing the lenny release, the
-default (<a href="http://http.debian.net/debian">http://http.debian.net/debian</a>) doesn&#8217;t provide it any longer nowadays.
+default (<a href="http://httpredir.debian.org/debian">http://httpredir.debian.org/debian</a>) doesn&#8217;t provide it any longer nowadays.
 Set the mirror to e.g. <a href="http://archive.debian.org/debian/">http://archive.debian.org/debian/</a> if you don&#8217;t have
 your own lenny mirror.</p></div>
+<div class="paragraph"><p>You also need to specify a filesystem that&#8217;s supported by lenny, e.g.
+<em>--filesystem ext3</em> since grml-debootstrap&#8217;s current default (ext4) isn&#8217;t
+supported by lenny.</p></div>
 <div class="paragraph"><p>Also when debootstrapping lenny on a live system with a kernel version
 like "3.16-1-grml-amd64" lenny&#8217;s libc will fail to install with:</p></div>
 <div class="literalblock">
@@ -1400,7 +1450,7 @@ deploying a stable release and upgrade it after installation finished.</p></div>
 <div id="footer">
 <div id="footer-text">
 Last updated
- 2014-12-30 10:50:18 CET
+ 2016-11-17 12:09:18 CET
 </div>
 </div>
 </body>
