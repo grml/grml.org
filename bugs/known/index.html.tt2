@@ -36,6 +36,7 @@
 
         <ul>
           <li>System boot freezes during udev startup on some systems (e.g. on Supermicro boards and recent IBM server models). Workaround: use boot option <em>mgag200.modeset=0</em>. Tracked as <a href="http://bts.grml.org/grml/issue1334">Issue1334</a>.</li>
+          <li>PXE boot might fail with "Failed to load ldlinux.c32". This is <a href="https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=750244">#750244</a>. Workaround: copy /usr/lib/syslinux/modules/bios/ldlinux.c32 from the Grml system to your tftp root directory.</li>
         </ul>
 
 </div>
