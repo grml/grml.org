@@ -54,7 +54,7 @@ Architectures: i386 amd64
 Components: main
 Signed-By: 05483D2F0A254E5BC12AC73021E0CA38EA2EA4AB</pre>
 
-	<p>Then the following preferences file will keep packages from GRML to replace normal Debian packages:</p>
+	<p>Then the following <a href="https://manpages.debian.org/apt_preferences">preferences file</a> will keep packages from GRML to replace normal Debian packages, in <code>/etc/apt/preferences.d/grml.pref</code>:</p>
 	
 	<pre class="rahmen">
 Package: *
