@@ -65,6 +65,14 @@ Package: *
 Pin: release suite=grml-testing
 Pin-Priority: 1</pre>
 
+	<p>Also  note that you may have trouble installing the <code>grml-debian-keyring</code> package as APT will complain about the missing key. A workaround is to download it directly:</p>
+	
+	<pre class="rahmen">
+sudo wget -O /etc/apt/trusted.gpg.d/grml.gpg http://deb.grml.org/repo-key.gpg
+sudo apt-get update
+sudo apt-get install grml-debian-keyring
+</pre>
+
         <h2><a name="wallpapers"></a>Wallpapers and other media files provided by Grml</h2>
 
 	<p>Wallpapers, CD covers and similar media files are available in the
