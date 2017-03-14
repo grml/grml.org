@@ -58,12 +58,12 @@ Signed-By: 05483D2F0A254E5BC12AC73021E0CA38EA2EA4AB</pre>
 	
 	<pre class="rahmen">
 Package: *
-Pin: release suite=grml-stable
-Pin-Priority: 1
+Pin: release a=grml-stable
+Pin-Priority: 100
 
 Package: *
-Pin: release suite=grml-testing
-Pin-Priority: 1</pre>
+Pin: release a=grml-testing
+Pin-Priority: 100</pre>
 
 	<p>Also  note that you may have trouble installing the <code>grml-debian-keyring</code> package as APT will complain about the missing key. A workaround is to download it directly:</p>
 	
