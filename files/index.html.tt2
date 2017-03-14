@@ -44,6 +44,26 @@
 #  deb     http://deb.grml.org/ grml-testing main
 #  deb-src http://deb.grml.org/ grml-testing main</pre>
 
+	<p>If you are running Debian stretch or later, you may want to use the following <code>.sources</code> file, which will enforce the suite name and signing keys:</p>
+
+	<pre class="rahmen">
+Types: deb deb-src
+URIs: http://deb.grml.org/
+Suites: grml-stable grml-testing
+Components: main
+Signed-By: 05483D2F0A254E5BC12AC73021E0CA38EA2EA4AB</pre>
+
+	<p>Then the following preferences file will keep packages from GRML to replace normal Debian packages:</p>
+	
+	<pre class="rahmen">
+Package: *
+Pin: release suite=grml-stable
+Pin-Priority: 1
+
+Package: *
+Pin: release suite=grml-testing
+Pin-Priority: 1</pre>
+
         <h2><a name="wallpapers"></a>Wallpapers and other media files provided by Grml</h2>
 
 	<p>Wallpapers, CD covers and similar media files are available in the
