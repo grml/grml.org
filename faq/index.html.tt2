@@ -28,7 +28,7 @@
 
         <h1 align="center">FAQ for grml</h1>
 
-        <p><strong>Up2date:</strong> applies to Grml version 2014.11</p>
+        <p><strong>Up2date:</strong> applies to Grml version 2017.05</p>
 
         <p><a name="toc"></a><strong>Index:</strong></p>
 
@@ -42,6 +42,7 @@
           <li><a href="#releasename">What about the release name?</a></li>
           <li><a href="#requirements">Requirements for running Grml</a></li>
           <li><a href="#bootoptions">Which bootoptions does Grml support?</a></li>
+          <li><a href="#systemd">Why is Grml using systemd?</a></li>
           <li><a href="#known_issues">Are there any known issues with this release? How about reporting bugs?</a></li>
         </ol>
 
@@ -150,6 +151,60 @@
         course <a
         href="http://www.kernel.org/doc/Documentation/kernel-parameters.txt">kernel-parameters.txt</a>
         of the Linux kernel applies to Grml as well.</p>
+
+        <h3><a name="systemd"></a><a href="#toc">Why is Grml using systemd?</a></h3>
+
+        <p>The switch from file-rc to systemd happened for various reasons.
+        Grml used file-rc for many years, mainly because it provided a better
+        way to control startup behavior via its /etc/runlevel.conf configuration
+        than with using sysvinit. Though for us Grml developers this also meant
+        that whenever there have been any changes in Debian's startup
+        configuration we had to compare our /etc/runlevel.conf setup with what a
+        normal Debian system would give us. Users who wanted to remaster Grml
+        with a custom startup procedure as well had to practically fork
+        maintenance of the /etc/runlevel.conf file. This didn't only mean
+        tracking new features/services, but also solve any possible issues
+        around it - duplicating efforts and wasting developers time
+        unnecessarily. Lately we also started to see problems that no one else
+        seemed to have (or care about enough), for example with multiple network
+        cards we ran into race-conditions with resolvconf. Problems like that
+        turned out to be release stoppers for us.</p>
+
+        <p>systemd on the other hand provides great documentation, service
+        supervision, takes care of parallel service startup and is the default
+        init system on most Linux distributions nowadays. This means more users,
+        better testing and integration. Logging, startup time investigation (to
+        get a fast boot procedure) and identifying failed service startups with
+        sysvinit/file-rc was always hard, unreliable or even impossible under
+        certain conditions. bootlogd was unreliable (while `journalctl -b` is
+        available out-of-the-box with systemd), bootchart not nicely integrated
+        (while systemd-analyze blame/critical-chain works out-of-the-box) and we
+        aren't aware of any equivalence for e.g. `systemctl --failed`.</p>
+
+        <p>While migrating our stack to systemd is <em>not</em> fully finished
+        yet, its switch - at least so far - was easier than expected. It also
+        turns out that it gives users who want to remaster Grml (or build their
+        very own ISOs from scratch using grml-live) more flexibility and control
+        over the startup process. systemd's override.conf mechanism and preset
+        feature provides the flexibility to overwrite unwanted behavior, without
+        losing the option to use existing defaults.</p>
+
+        <p>Last but not least we think it's good that systemd is actively
+        maintained and receives attention. The sysvinit/file-rc ecosystem was
+        stagnating/non-existend for too many years. Grml used its own initrd
+        implementation in its very beginnings, until a more broadly available
+        initramfs-tools/ live-boot solution appeared, broadening the user base,
+        sharing goals amongst different (live) distributions. Back in the days
+        Grml - like many other live distributions - had to implement hardware
+        recognition on its own.  While udev received lots of complaints back
+        then, its integration actually solved all the hardware recognition for
+        the good. systemd's vision of stateless systems is something which helps
+        building live systems like Grml.</p>
+
+        <p>While we don't claim that systemd is perfect and doesn't have its
+        issues and drawbacks (like any software), we're happy about its
+        existence and more than happy about development and support by Debian's
+        systemd folks.</p>
 
         <a name="release"></a> <!-- old anchor -->
         <a name="bugreport"></a> <!-- old anchor -->
