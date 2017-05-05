@@ -32,7 +32,7 @@
 
         <p>Grml is a Debian based live system focusing on the needs of system administrators.
         This Grml release provides fresh software packages from Debian testing (AKA stretch) and is the first Grml release using systemd as its init system.
-        As usual it also incorporates up2date hardware support and fixes known bugs from the previous Grml release.</p>
+        As usual it also incorporates up to date hardware support and fixes known bugs from the previous Grml release.</p>
 
         <h3>Important Changes</h3>
 
@@ -40,14 +40,13 @@
 
           <li>Switch from file-rc to systemd as init system.
           grml-live (the build system for creating Grml (based) Linux live systems) still supports non-systemd systems using file-rc, though we don't plan to maintain this in the long run.
+          For the reasons <em>why</em> we actually switched to systemd please visit the <a href="/faq/#systemd">FAQ</a>.
           Due to the change to systemd some boot options in the current release might not work as before and some further issues might have been unnoticed yet.
           Please <a href="/bugs/">let us know</a> if you should stumble upon any such issues.</li>
 
           <li>New Grml repository signing key: 4096R/21E0CA38EA2EA4AB.
           If you're using the Grml repositories (<a href="https://deb.grml.org/">deb.grml.org</a>) please make sure to use a current version of the grml-debian-keyring package.
           The GPG key is also available via <a href="https://deb.grml.org/repo-key.gpg">https://deb.grml.org/repo-key.gpg</a>.</li>
-
-          <li>Switched from vlock to physlock for console/desktop locking</li>
 
         </ul>
 
