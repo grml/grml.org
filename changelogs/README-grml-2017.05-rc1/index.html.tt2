@@ -30,7 +30,7 @@
 
         <h3>About</h3>
 
-        <p>Grml is a Debian based live system focusing on system administrators.
+        <p>Grml is a Debian based live system focusing on the needs of system administrators.
         This Grml release provides fresh software packages from Debian testing (AKA stretch) and is the first Grml release using systemd as its init system.
         As usual it also incorporates up2date hardware support and fixes known bugs from the previous Grml release.</p>
 
@@ -48,8 +48,6 @@
           The GPG key is also available via <a href="https://deb.grml.org/repo-key.gpg">https://deb.grml.org/repo-key.gpg</a>.</li>
 
           <li>Switched from vlock to physlock for console/desktop locking</li>
-
-          <li>Usage of net.ifnames=0 as default boot option</li>
 
         </ul>
 

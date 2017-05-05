@@ -33,9 +33,11 @@
 
         <p>If you find additional bugs, please <a href="/bugs/">report them</a>.</p>
 
-        <h2>Known Bugs in Grml 2017.05</h2>
+        <h2>Known Bugs in Grml 2017.05-rc1</h2>
 
-        <p>No known yet.</p>
+        <ul>
+          <li><a href="https://github.com/grml/grml/issues/16">GRUB error message</a> ('error: null src bitmap in grub_video_bitmap_create_scaled') when choosing boot sub-menu in EFI mode</a>
+        </ul>
 
         <h2>Known Bugs in Grml 2014.11</h2>
 
