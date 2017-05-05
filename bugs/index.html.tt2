@@ -29,24 +29,17 @@
 
         <h1>Reporting Bugs</h1>
 
-	<p>
-	Please check for <a href="/bugs/known/">known bugs</a> first.</p>
+        <p>Please check for <a href="/bugs/known/">known bugs</a> before reporting new ones.</p>
 
-        <ul>
-          <li>Web: <a href="http://bts.grml.org/grml/user?@template=register">Register</a> and then <a href="http://bts.grml.org/grml/issue?@template=item">Create an issue</a></li>
-          <li>Using E-Mail: Send mail to <code>bugs (at) grml.org</code></li>
-        </ul>
+        <p>Send us your bug report to <code>bugs (at) grml.org</code>.</p>
 
-        <p>Please be as specific as possible.</p>
-
-	<p>
-        Include at least:
+        <p>Please be as specific as possible. Include at least:
         <ul>
             <li>Steps to reproduce the problem</li>
-            <li>Expected behaviour</li>
-            <li>Actual behaviour</li>
-            <li>Your system configuration (run <code>grml-hwinfo</code>)</li>
-            <li>Software versions (try <code>foo --version</code> or <code>dpkg -l foo</code>)</li>
+            <li>Expected behavior</li>
+            <li>Actual behavior</li>
+            <li>Your system configuration (e.g. run <code>grml-hwinfo</code>)</li>
+            <li>Software versions (<code>grml-version</code> and for the tool in question try <code>foo --version</code> or <code>dpkg -l foo</code>)</li>
         </ul>
         </p>
 
