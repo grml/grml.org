@@ -44,7 +44,7 @@
           Please <a href="/bugs/">let us know</a> if you should stumble upon any such issues.</li>
 
           <li>New Grml repository signing key: 4096R/21E0CA38EA2EA4AB.
-          If you're using the Grml repositories (<a href="https://deb.grml.org/">deb.grml.org</a> please make sure to use a current version of the grml-debian-keyring package.
+          If you're using the Grml repositories (<a href="https://deb.grml.org/">deb.grml.org</a>) please make sure to use a current version of the grml-debian-keyring package.
           The GPG key is also available via <a href="https://deb.grml.org/repo-key.gpg">https://deb.grml.org/repo-key.gpg</a>.</li>
 
           <li>Switched from vlock to physlock for console/desktop locking</li>
@@ -94,7 +94,7 @@
 
           </li>
 
-          <li><a href="/zsh/">grml-zshrc</a>:
+          <li><a href="/zsh/">grml-zshrc</a> (Zsh configuration):
 
             <ul>
               <li>Fall back to journalctl with llog + tlog aliases if /var/log/syslog doesn't exist</li>
@@ -111,7 +111,7 @@
 
           </li>
 
-          <li><a href="/grml-debootstrap/">grml-debootstrap</a>:
+          <li><a href="/grml-debootstrap/">grml-debootstrap</a> (wrapper around debootstrap for installing pure Debian):
 
             <ul>
               <li>Support Debian stretch and use Debian stretch as the new default release</li>
