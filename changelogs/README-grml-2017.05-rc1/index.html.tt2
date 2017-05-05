@@ -41,15 +41,15 @@
           <li>Switch from file-rc to systemd as init system.
           grml-live (the build system for creating Grml (based) Linux live systems) still supports non-systemd systems using file-rc, though we don't plan to maintain this in the long run.
           Due to the change to systemd some boot options in the current release might not work as before and some further issues might have been unnoticed yet.
-          Please <a href="/bugs/">let us know</a> if you should stumble upon any such issues.
+          Please <a href="/bugs/">let us know</a> if you should stumble upon any such issues.</li>
 
           <li>New Grml repository signing key: 4096R/21E0CA38EA2EA4AB.
           If you're using the Grml repositories (<a href="https://deb.grml.org/">deb.grml.org</a> please make sure to use a current version of the grml-debian-keyring package.
-          The GPG key is also available via <a href="https://deb.grml.org/repo-key.gpg">https://deb.grml.org/repo-key.gpg</a>.
+          The GPG key is also available via <a href="https://deb.grml.org/repo-key.gpg">https://deb.grml.org/repo-key.gpg</a>.</li>
 
-          <li>Switched from vlock to physlock for console/desktop locking
+          <li>Switched from vlock to physlock for console/desktop locking</li>
 
-          <li>Usage of net.ifnames=0 as default boot option
+          <li>Usage of net.ifnames=0 as default boot option</li>
 
         </ul>
 
@@ -61,79 +61,80 @@
 
           <li><a href="/grml2usb/">grml2usb</a> (tool to install Grml ISOs to USB devices):
 
-          <ul>
-            <li>Support usage of grml2usb on EFI systems
-            <li>New option --skip-usb-check to skip check whether target looks like a USB device
-            <li>New option --rw-blockdev for usage with read-only/forensic like devices
-          </ul>
+            <ul>
+              <li>Support usage of grml2usb on EFI systems</li>
+              <li>New option --skip-usb-check to skip check whether target looks like a USB device</li>
+              <li>New option --rw-blockdev for usage with read-only/forensic like devices</li>
+            </ul>
+          </li>
 
           <li><a href="/grml-live/">grml-live</a> (build system for creating Grml (based) Linux live systems):
 
-          <ul>
-            <li>Systemd support, providing backwards compatibility (non-systemd using file-rc) via FILE_RC class
-            <li>Provide wayback machine via "-w &lt;date&gt;" to install Debian packages from specific date
-            <li>Add support for netboot.xyz
-            <li>Add SHA-256 and SHA-512 hashes
-            <li>Generate /etc/issue with Grml release information
-            <li>Switch from aptitude to apt usage for software installation
-            <li>Output to "./grml" in current working directory by default
-            <li>If locales-all package is installed skip locales generation
-            <li>GRMLBASE/21-usersetup: add grml user to vboxsf group
-            <li>New script 94-update-smart-drivedb to update smartmontools' drive database
-            <li>templates: use net.ifnames=0 by default
-          </ul>
+            <ul>
+              <li>Systemd support, providing backwards compatibility (non-systemd using file-rc) via FILE_RC class</li>
+              <li>Provide wayback machine via "-w &lt;date&gt;" to install Debian packages from specific date</li>
+              <li>Add support for netboot.xyz</li>
+              <li>Add SHA-256 and SHA-512 hashes</li>
+              <li>Generate /etc/issue with Grml release information</li>
+              <li>Switch from aptitude to apt usage for software installation</li>
+              <li>Output to "./grml" in current working directory by default</li>
+              <li>If locales-all package is installed skip locales generation</li>
+              <li>GRMLBASE/21-usersetup: add grml user to vboxsf group</li>
+              <li>New script 94-update-smart-drivedb to update smartmontools' drive database</li>
+              <li>templates: use net.ifnames=0 by default</li>
+            </ul>
 
           </li>
 
           <li>grml-hwinfo (tool to collect hardware information):
 
-          <ul>
-            <li>Support options --force + --quiet for usage with cron
-            <li>Provide `acpi --everything` output in file `acpi.everything`
-            <li>ip: also store table specific route information
-          </ul>
+            <ul>
+              <li>Support options --force + --quiet for usage with cron</li>
+              <li>Provide `acpi --everything` output in file `acpi.everything`</li>
+              <li>ip: also store table specific route information</li>
+            </ul>
 
           </li>
 
           <li><a href="/zsh/">grml-zshrc</a>:
 
-          <ul>
-            <li>Fall back to journalctl with llog + tlog aliases if /var/log/syslog doesn't exist
-            <li>Make some ambiguous aliases optional via GRML_NO_APT_ALIASES + GRML_NO_SMALL_ALIASES
-            <li>Sync zsh-lookup with its upstream repository
-            <li>Add more robustness to completion caching setup
-            <li>Drop 'setopt nonomatch' configuration
-            <li>Rewrite large parts of persistent dirstack handling
-            <li>No longer explicitly set SHELL
-            <li>Add support for `fetch' in simple-extract()
-            <li>Several updates to the bk function, incl. option '-ra' to removal all (even hidden) backups
-            <li>Drop j alias (used for 'jobs -l')
-          </ul>
+            <ul>
+              <li>Fall back to journalctl with llog + tlog aliases if /var/log/syslog doesn't exist</li>
+              <li>Make some ambiguous aliases optional via GRML_NO_APT_ALIASES + GRML_NO_SMALL_ALIASES</li>
+              <li>Sync zsh-lookup with its upstream repository</li>
+              <li>Add more robustness to completion caching setup</li>
+              <li>Drop 'setopt nonomatch' configuration</li>
+              <li>Rewrite large parts of persistent dirstack handling</li>
+              <li>No longer explicitly set SHELL</li>
+              <li>Add support for `fetch' in simple-extract()</li>
+              <li>Several updates to the bk function, incl. option '-ra' to removal all (even hidden) backups</li>
+              <li>Drop j alias (used for 'jobs -l')</li>
+            </ul>
 
           </li>
 
           <li><a href="/grml-debootstrap/">grml-debootstrap</a>:
 
-          <ul>
-            <li>Support Debian stretch and use Debian stretch as the new default release
-            <li>Provide EFI support via --efi &lt;device&gt; option
-            <li>Drop sysfsutils from default software package list
-            <li>Don't generate rootfs entry in /etc/fstab if we don't know its UUID
-            <li>Don't fiddle around with /etc/hosts
-            <li>Honor GRUB_DISABLE_LINUX_UUID=true and don't set root=UUID then
-            <li>Export TARGET_HOSTNAME before running post-scripts
-            <li>Disable '^metadata_csum' feature when creating ext filesystem for jessie and older Debian releases
-            <li>Ensure that grub-pc/install_devices is pointing to the requested device
-            <li>Use parted to create partition table
-            <li>Rename --scripts to --post-scripts for consistency, accordingly disable SCRIPTS by default, replaced by POST_SCRIPTS
-            <li>Provide new option --remove-configs to delete grml-debootstrap configuration files from installed system
-            <li>Ensure that grub-pc is installed in VMs even when using --nopackages
-            <li>Provide hostname to pre-scripts by setting up /etc/hostname
-            <li>Make it more friendly to install on non-Debian distributions
-            <li>Drop contrib + non-free from default COMPONENTS, support --contrib + -non-free cmdline options
-            <li>Install firmware-linux only when non-free is among the COMPONENTS
-            <li>Use full fingerprint instead of short GPG key ids for Grml repository
-          </ul>
+            <ul>
+              <li>Support Debian stretch and use Debian stretch as the new default release</li>
+              <li>Provide EFI support via --efi &lt;device&gt; option</li>
+              <li>Drop sysfsutils from default software package list</li>
+              <li>Don't generate rootfs entry in /etc/fstab if we don't know its UUID</li>
+              <li>Don't fiddle around with /etc/hosts</li>
+              <li>Honor GRUB_DISABLE_LINUX_UUID=true and don't set root=UUID then</li>
+              <li>Export TARGET_HOSTNAME before running post-scripts</li>
+              <li>Disable '^metadata_csum' feature when creating ext filesystem for jessie and older Debian releases</li>
+              <li>Ensure that grub-pc/install_devices is pointing to the requested device</li>
+              <li>Use parted to create partition table</li>
+              <li>Rename --scripts to --post-scripts for consistency, accordingly disable SCRIPTS by default, replaced by POST_SCRIPTS</li>
+              <li>Provide new option --remove-configs to delete grml-debootstrap configuration files from installed system</li>
+              <li>Ensure that grub-pc is installed in VMs even when using --nopackages</li>
+              <li>Provide hostname to pre-scripts by setting up /etc/hostname</li>
+              <li>Make it more friendly to install on non-Debian distributions</li>
+              <li>Drop contrib + non-free from default COMPONENTS, support --contrib + -non-free cmdline options</li>
+              <li>Install firmware-linux only when non-free is among the COMPONENTS</li>
+              <li>Use full fingerprint instead of short GPG key ids for Grml repository</li>
+            </ul>
 
           </li>
 
