@@ -104,7 +104,7 @@
               <li>Rewrite large parts of persistent dirstack handling</li>
               <li>No longer explicitly set SHELL</li>
               <li>Add support for `fetch' in simple-extract()</li>
-              <li>Several updates to the bk function, incl. option '-ra' to removal all (even hidden) backups</li>
+              <li>Several updates to the bk function, e.g. new option '-ra' to remove all (even hidden) backups</li>
               <li>Drop j alias (used for 'jobs -l')</li>
             </ul>
 
@@ -128,7 +128,7 @@
               <li>Ensure that grub-pc is installed in VMs even when using --nopackages</li>
               <li>Provide hostname to pre-scripts by setting up /etc/hostname</li>
               <li>Make it more friendly to install on non-Debian distributions</li>
-              <li>Drop contrib + non-free from default COMPONENTS, support --contrib + -non-free cmdline options</li>
+              <li>Drop contrib + non-free from default COMPONENTS, support --contrib + --non-free cmdline options</li>
               <li>Install firmware-linux only when non-free is among the COMPONENTS</li>
               <li>Use full fingerprint instead of short GPG key ids for Grml repository</li>
             </ul>
@@ -146,7 +146,7 @@
 
         <h3>Packages</h3>
 
-        <p>Details about shipped packages and their versions on Grml are
+        <p>Details about shipped packages and their versions in Grml are
         available in the <a href="/files/#debian">Debian section</a>. Visit
         <a href="/files/grml64-full_2017.05/dpkg.list">dpkg_list</a> for a
         detailed list of packages shipped with Grml 2017.05(-rc1).</p>
@@ -236,7 +236,6 @@
         Christian Hofstaedtler,
         Christian Sturm,
         Christoph Berg,
-        Csillag Tamas,
         Daniel Hahler,
         Darshaka Pathirana,
         Dmitri Vereshchagin,
@@ -255,6 +254,7 @@
         Sebastian Boehm,
         Sebastian Pipping,
         Stefan Schlesinger,
+        Tamas Csillag,
         Thiago Perrotta,
         Thilo Six,
         Thomas Berger and
