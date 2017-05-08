@@ -36,7 +36,12 @@
         <h2>Known Bugs in Grml 2017.05-rc1</h2>
 
         <ul>
-          <li><a href="https://github.com/grml/grml/issues/16">GRUB error message</a> ('error: null src bitmap in grub_video_bitmap_create_scaled') when choosing boot sub-menu in EFI mode</a>
+          <li><a href="https://github.com/grml/grml/issues/12">ssh: login as root with password doesn't work </a></li>
+          <li><a href="https://github.com/grml/grml/issues/16">GRUB error message</a> ('error: null src bitmap in grub_video_bitmap_create_scaled') when choosing boot sub-menu in EFI mode</a></li>
+          <li><a href="https://github.com/grml/grml/issues/17">USB device from Kingston causing slow boot caused by xhci_hcd / USB 3</a></li>
+          <li><a href="https://github.com/grml/grml/issues/19">grml-quickconfig / run-welcome script not running at the very end of boot process</a></li>
+          <li><a href="https://github.com/grml/grml/issues/20">grml-x fails to start on Lenovo X250</a></li>
+          <li><a href="https://github.com/grml/grml/issues/21">booting with serial console support prompts for password of user root</a></li>
         </ul>
 
         <h2>Known Bugs in Grml 2014.11</h2>
