@@ -60,8 +60,8 @@
             <h2>News</h2>
             <div class="news">
             <p>08 May 2017: New <a href="/changelogs/README-grml-2017.05-rc1/">release candidate version 2017.05-rc1</a></p>
-            <p>07 Jan 2016: <a href="http://blog.grml.org/archives/394-Is-Grml-still-alive.html">Is Grml still alive?</a></p>
-            <p>17 Nov 2014: New <a href="/changelogs/README-grml-2014.11/">stable release version 2014.11</a> available</p>
+            <p>04 Jan 2017: State of <a href="http://blog.grml.org/archives/396-State-of-Grml-in-2017.html">Grml in 2017</a></p>
+            <p>22 Apr 2016: Booting <a href="http://blog.grml.org/archives/395-Booting-Grml-via-iPXE.html">Grml via iPXE</a></p>
             </div>
 
       </div>
