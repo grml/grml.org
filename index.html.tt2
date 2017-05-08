@@ -48,19 +48,18 @@
             </p>
             <br />
 
-            <!--
             <p style="text-align: center;">
             <b>Pre-Release:</b><br/><br/>
-            <a href="/download/prerelease/" class="button" style="padding: 12px; font-weight: bold;"><span>Download Grml 2014.10-rc1</span></a>
+            <a href="/download/prerelease/" class="button" style="padding: 12px; font-weight: bold;"><span>Download Grml 2017.05-rc1</span></a>
             </p>
             <br />
-            -->
 
             <img style="float: right; margin-left: 20px" src="/img/grmltux_small.jpg" alt="*" />
             <br />
 
             <h2>News</h2>
             <div class="news">
+            <p>08 May 2017: New <a href="/changelogs/README-grml-2017.05-rc1/">release candidate version 2017.05-rc1</a></p>
             <p>07 Jan 2016: <a href="http://blog.grml.org/archives/394-Is-Grml-still-alive.html">Is Grml still alive?</a></p>
             <p>17 Nov 2014: New <a href="/changelogs/README-grml-2014.11/">stable release version 2014.11</a> available</p>
             </div>
