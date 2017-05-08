@@ -114,14 +114,14 @@ exit;
     <h2>Options</h2>
 
     <select name="flavour" id="download_flavour" style="width:100%;">
-    <option value="full" selected="selected">grml-full (~415MB)</option>
-    <option value="small">grml-small (~195MB)</option>
+    <option value="full" selected="selected">grml-full (~600MB)</option>
+    <option value="small">grml-small (~280MB)</option>
     </select>
     <br /><br />
     <select name="arch" id="download_arch" style="width:100%;">
     <option value="amd64" selected="selected">64-bit PC (amd64)</option>
     <option value="i386">32-bit PC (i586+)</option>
-    <option value="96">One for both (~800MB)</option>
+    <option value="96">One for both (~1.2GB)</option>
     </select>
     <br />
     <br />
