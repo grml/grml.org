@@ -137,7 +137,7 @@ ii  facter                                       2.4.6-1                     all
 ii  fai-client                                   5.3.6                       all                         Fully Automatic Installation client package
 ii  fai-server                                   5.3.6                       all                         Fully Automatic Installation server package
 ii  fai-setup-storage                            5.3.6                       all                         automatically prepare storage devices
-ii  file                                         1:5.30-1                    i386                        Recognize the type of data in a file using "magic" numbers
+ii  file                                         1:5.29-3                    i386                        Recognize the type of data in a file using "magic" numbers
 ii  findutils                                    4.6.0+git+20161106-2        i386                        utilities for finding files--find, xargs
 ii  fio                                          2.16-1                      i386                        flexible I/O tester
 ii  firefox-esr                                  45.9.0esr-1                 i386                        Mozilla Firefox web browser - Extended Support Release (ESR)
@@ -513,8 +513,8 @@ ii  liblwres141:i386                             1:9.10.3.dfsg.P4-12.2       i38
 ii  liblz4-1:i386                                0.0~r131-2+b1               i386                        Fast LZ compression algorithm library - runtime
 ii  liblzma5:i386                                5.2.2-1.2+b1                i386                        XZ-format compression library
 ii  liblzo2-2:i386                               2.08-1.2+b2                 i386                        data compression library
-ii  libmagic-mgc                                 1:5.30-1                    i386                        File type determination library using "magic" numbers (compiled magic file)
-ii  libmagic1:i386                               1:5.30-1                    i386                        Recognize the type of data in a file using "magic" numbers - library
+ii  libmagic-mgc                                 1:5.29-3                    i386                        File type determination library using "magic" numbers (compiled magic file)
+ii  libmagic1:i386                               1:5.29-3                    i386                        Recognize the type of data in a file using "magic" numbers - library
 ii  libmailtools-perl                            2.18-1                      all                         Manipulate email in perl programs
 ii  libmime-lite-perl                            3.030-2                     all                         module for convenient MIME message creation
 ii  libmnl0:i386                                 1.0.4-2                     i386                        minimalistic Netlink communication library
