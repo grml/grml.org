@@ -31,7 +31,7 @@
 
         <p>Please check for <a href="/bugs/known/">known bugs</a> before reporting new ones.</p>
 
-        <p>Send us your bug report to <code>bugs (at) grml.org</code>.</p>
+        <p>Send us your bug report to <code>bugs (at) grml.org</code> or open a new issue <a href="https://github.com/grml/grml/issues">at our github issue tracker</a>.</p>
 
         <p>Please be as specific as possible. Include at least:
         <ul>
