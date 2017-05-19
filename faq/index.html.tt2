@@ -88,18 +88,14 @@
         <h3><a name="flavours"></a><a href="#toc">What are grml32 / grml64 and grml96?</a></h3>
 
         <ul>
-          <li>grml32-full: 32bit version (kernel and userspace), ~350MB</li>
-          <li>grml64-full: 64bit version (kernel and userspace), ~350MB</li>
-          <li>grml96-full: multi boot version (featuring the grml32-full and grml64-full ISOs combined on one ISO), ~700MB</li>
+          <li>grml32-full: 32bit version (kernel and userspace)</li>
+          <li>grml64-full: 64bit version (kernel and userspace)</li>
+          <li>grml96-full: multi boot version (featuring the grml32-full and grml64-full ISOs combined on one ISO)</li>
         </ul>
 
         <p>Unless you've a good reason to really choose the 32bit flavour we
-        strongly encourage you to use either the grml64 or the grml96
+        <em>strongly</em> encourage you to use either the grml64 or the grml96
         flavour.</p>
-
-        <p>Please notice that this schema was introduced starting with the
-        downsized Grml release 2011.12. Until then grml96 didn't exist and
-        grml32 was known as just 'grml'.</p>
 
         <h3><a name="grmlsmall"></a><a href="#toc">What is the difference between grml-full and grml-small?</a></h3>
 
