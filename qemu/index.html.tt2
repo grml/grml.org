@@ -61,8 +61,8 @@ chmod 666 /dev/kqemu /dev/net/tun     # adjust permissions</pre>
         <p>Install qemu (apt-get install qemu) and start it e.g. via:</p>
 
 <pre class="rahmen">
-qemu -cdrom -m 256 /dev/hdc          # if running from CD-ROM
-qemu -cdrom -m 256 /path/to/grml.iso # if running from harddisk
+qemu -m 256 -cdrom /dev/hdc          # if running from CD-ROM
+qemu -m 256 -cdrom /path/to/grml.iso # if running from harddisk
 </pre>
 
         <h2>Running QEMU with grml on Windows</h2>
