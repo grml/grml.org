@@ -48,6 +48,19 @@
           If you're using the Grml repositories (<a href="https://deb.grml.org/">deb.grml.org</a>) please make sure to use a current version of the grml-debian-keyring package.
           The GPG key is also available via <a href="https://deb.grml.org/repo-key.gpg">https://deb.grml.org/repo-key.gpg</a>.</li>
 
+          <li>Following <a href="https://www.debian.org/releases/stretch/i386/release-notes/ch-information.en.html#i386-is-now-almost-i686">Debian's switch</a>, the 32-bit PC support (known as the architecture 'i386' and what's provided by '<a href="/faq/#flavours">grml32</a>') now no longer covers a plain i586 processor.
+          The new baseline is the i686, although some i586 processors (e.g. the 'AMD Geode') will remain supported.
+          The following shell script may be a useful indicator (assuming only one processor is installed in the machine):
+
+<pre>
+  if grep -q '^flags.*\bfpu\b.*\btsc\b.*\bcx8\b.*\bcmov\b' /proc/cpuinfo; then
+     echo "OK (assuming all CPUs are of the same type)"
+  else
+     echo "NOT OK: Missing one or more of the required CPU extensions"
+  fi
+</pre>
+          </li>
+
         </ul>
 
         <h3>New features</h3>
