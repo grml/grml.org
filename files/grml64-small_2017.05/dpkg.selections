@@ -22,9 +22,11 @@ bzip2						install
 ca-certificates					install
 chntpw						install
 console-data					install
+console-setup					install
 console-setup-linux				install
 coreutils					install
 cpio						install
+cpufrequtils					install
 cron						install
 cryptsetup					install
 cryptsetup-bin					install
@@ -112,6 +114,7 @@ grub-pc						install
 grub-pc-bin					install
 grub2-common					install
 gzip						install
+haveged						install
 hdparm						install
 hostname					install
 htop						install
@@ -162,6 +165,7 @@ libc6:amd64					install
 libcap-ng0:amd64				install
 libcap2:amd64					install
 libcomerr2:amd64				install
+libcpufreq0					install
 libcryptsetup4:amd64				install
 libcurl3-gnutls:amd64				install
 libcwidget3v5:amd64				install
@@ -197,6 +201,7 @@ libgnutls30:amd64				install
 libgpg-error0:amd64				install
 libgpm2:amd64					install
 libgssapi-krb5-2:amd64				install
+libhavege1:amd64				install
 libhd21:amd64					install
 libhogweed4:amd64				install
 libhtml-parser-perl				install
@@ -335,6 +340,7 @@ logrotate					install
 lrzsz						install
 lsb-base					install
 lsof						install
+lsscsi						install
 lvm2						install
 mawk						install
 mbr						install
@@ -384,6 +390,7 @@ realpath					install
 reiserfsprogs					install
 resolvconf					install
 rfkill						install
+rng-tools					install
 rpcbind						install
 rsync						install
 rsyslog						install
@@ -429,6 +436,7 @@ wipe						install
 wireless-tools					install
 wpasupplicant					install
 xfsprogs					install
+xkb-data					install
 xxd						install
 xz-utils					install
 zip						install

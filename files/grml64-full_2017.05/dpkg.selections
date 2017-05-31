@@ -64,6 +64,7 @@ clonezilla					install
 cmospwd						install
 comgt						install
 console-data					install
+console-setup					install
 console-setup-linux				install
 coreutils					install
 cpio						install
@@ -219,6 +220,7 @@ grub2-common					install
 gsettings-desktop-schemas			install
 gtk-update-icon-cache				install
 gzip						install
+haveged						install
 hdparm						install
 hexedit						install
 hfsprogs					install
@@ -425,6 +427,7 @@ libgtk2.0-common				install
 libgtkmm-2.4-1v5:amd64				install
 libgudev-1.0-0:amd64				install
 libharfbuzz0b:amd64				install
+libhavege1:amd64				install
 libhd21:amd64					install
 libhogweed4:amd64				install
 libhtml-parser-perl				install
@@ -906,6 +909,7 @@ reiserfsprogs					install
 resolvconf					install
 rfkill						install
 rinse						install
+rng-tools					install
 rpcbind						install
 rpm						install
 rpm-common					install
