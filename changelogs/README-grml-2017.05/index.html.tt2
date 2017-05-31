@@ -153,10 +153,11 @@
 
         </ul>
 
-        <h3>Major changes between 2017.05-rc1 and stable release</h3>
+        <h3>Changes between release candidate version 2017.05-rc1 and stable release</h3>
 
         <ul>
-          <li>Updated kernel to 4.9.29</li>
+          <li>Update kernel to 4.9.29</li>
+          <li>Update Debian packages to most recent Debian/stretch versions as of 2017-05-30</li>
           <li>Avoid automatic LVM scanning</li>
           <li>Avoid automatic mdadm scanning</li>
           <li>Enable autologin for user root on serial console ttyS0</li>
@@ -199,24 +200,25 @@
         <h3>Updates</h3>
 
         <p>Packages are taken from Debian stretch/testing as of 30th of May 2017.
-        63 packages have been removed, and these 64 new packages
+        63 packages have been removed, and these 67 new packages
         have been added (excluding lib* and kernel image):</p>
 
 <pre class="rahmen">
-  apt-transport-https bats binwalk btrfs-progs cpp-6
-  distro-info-data espeak-ng-data exif firefox-esr
+  apt-transport-https bats binwalk btrfs-progs console-setup
+  cpp-6 distro-info-data espeak-ng-data exif firefox-esr
   firmware-amd-graphics firmware-cavium firmware-intel-sound
   firmware-misc-nonfree firmware-ti-connectivity freeipmi-common
   gcc-6-base gnome-icon-theme gnupg-agent graphicsmagick
-  graphicsmagick-imagemagick-compat gtk-update-icon-cache
+  graphicsmagick-imagemagick-compat gtk-update-icon-cache haveged
   initramfs-tools-core iptraf-ng keyutils linux-cpupower lynx
   lynx-common nethogs nilfs-tools nvme-cli partclone
-  perl-modules-5.24 perl-openssl-defaults physlock pinentry-curses
-  policykit-1 python3-binwalk python3.5 python3.5-minimal rake
-  ruby-deep-merge ruby-did-you-mean ruby-minitest ruby-net-telnet
-  ruby-nokogiri ruby-pkg-config ruby-power-assert ruby-rgen
-  ruby-test-unit ruby2.3 sg3-utils-udev stress syslinux-utils
-  systemd systemd-container systemd-sysv uml-utilities vim-gtk
+  perl-modules-5.24 perl-openssl-defaults physlock
+  pinentry-curses policykit-1 python3-binwalk python3.5
+  python3.5-minimal rake rng-tools ruby-deep-merge
+  ruby-did-you-mean ruby-minitest ruby-net-telnet ruby-nokogiri
+  ruby-pkg-config ruby-power-assert ruby-rgen ruby-test-unit
+  ruby2.3 sg3-utils-udev stress syslinux-utils systemd
+  systemd-container systemd-sysv uml-utilities vim-gtk
   vim-gui-common wireshark-qt xorriso xserver-xorg-input-libinput
   xserver-xorg-video-amdgpu xxd
 </pre>
