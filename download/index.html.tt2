@@ -77,45 +77,47 @@
 
 <div class="content">
 
-    <h1>Download Grml 2014.11</h1>
+    <h1>Download Grml 2017.05</h1>
 
     <p>Get the current stable release here.<br />
 
+    <!--
     <a href="prerelease/">Looking for the current pre-release version instead?</a></p>
+    -->
 
-    <p>Download the Grml flavour you need, then write it to a CD-R or an empty USB stick.</p>
+    <p>Download the Grml flavour you need, then write it to a CD-ROM/DVD or an empty USB stick.</p>
 
     <div class="download_group" id="download_group1_noscript">
     <div class="download_panel" id="download_panel1_noscript"><div>
         <a href="http://grml.org/download/mirrors/">Download from a specific mirror</a><br/>
         <br/>
         Direct download links:<br/>
-        <a href="http://download.grml.org/grml96-full_2014.11.iso">Grml96 full ISO</a> [<a href="http://download.grml.org/grml96-full_2014.11.iso.sha1.asc">Signature</a>]<br/>
-        <a href="http://download.grml.org/grml64-full_2014.11.iso">Grml64 full ISO</a> [<a href="http://download.grml.org/grml64-full_2014.11.iso.sha1.asc">Signature</a>]<br/>
-        <a href="http://download.grml.org/grml32-full_2014.11.iso">Grml32 full ISO</a> [<a href="http://download.grml.org/grml32-full_2014.11.iso.sha1.asc">Signature</a>]<br/>
-        <a href="http://download.grml.org/grml96-small_2014.11.iso">Grml96 small ISO</a> [<a href="http://download.grml.org/grml96-small_2014.11.iso.sha1.asc">Signature</a>]<br/>
-        <a href="http://download.grml.org/grml64-small_2014.11.iso">Grml64 small ISO</a> [<a href="http://download.grml.org/grml64-small_2014.11.iso.sha1.asc">Signature</a>]<br/>
-        <a href="http://download.grml.org/grml32-small_2014.11.iso">Grml32 small ISO</a> [<a href="http://download.grml.org/grml32-small_2014.11.iso.sha1.asc">Signature</a>]<br/>
+        <a href="http://download.grml.org/grml96-full_2017.05.iso">Grml96 full ISO</a> [<a href="http://download.grml.org/grml96-full_2017.05.iso.asc">Signature</a>]<br/>
+        <a href="http://download.grml.org/grml64-full_2017.05.iso">Grml64 full ISO</a> [<a href="http://download.grml.org/grml64-full_2017.05.iso.asc">Signature</a>]<br/>
+        <a href="http://download.grml.org/grml32-full_2017.05.iso">Grml32 full ISO</a> [<a href="http://download.grml.org/grml32-full_2017.05.iso.asc">Signature</a>]<br/>
+        <a href="http://download.grml.org/grml96-small_2017.05.iso">Grml96 small ISO</a> [<a href="http://download.grml.org/grml96-small_2017.05.iso.asc">Signature</a>]<br/>
+        <a href="http://download.grml.org/grml64-small_2017.05.iso">Grml64 small ISO</a> [<a href="http://download.grml.org/grml64-small_2017.05.iso.asc">Signature</a>]<br/>
+        <a href="http://download.grml.org/grml32-small_2017.05.iso">Grml32 small ISO</a> [<a href="http://download.grml.org/grml32-small_2017.05.iso.asc">Signature</a>]<br/>
         <br/>
         </div></div>
     </div>
 
     <div class="download_group" id="download_group1" style="display:none;">
     <form method="get" action="/download/bounce/">
-    <input type="hidden" name="version" value="2014.11"/>
+    <input type="hidden" name="version" value="2017.05"/>
     <div class="download_panel" id="download_panel1"><div>
 
     <h2>Options</h2>
 
     <select name="flavour" id="download_flavour" style="width:100%;">
-    <option value="full" selected="selected">grml-full (~460MB)</option>
-    <option value="small">grml-small (~230MB)</option>
+    <option value="full" selected="selected">grml-full (~600MB)</option>
+    <option value="small">grml-small (~280MB)</option>
     </select>
     <br /><br />
     <select name="arch" id="download_arch" style="width:100%;">
     <option value="amd64" selected="selected">64-bit PC (amd64)</option>
     <option value="i386">32-bit PC (i586+)</option>
-    <option value="96">One for both (~913MB)</option>
+    <option value="96">One for both (~1.2GB)</option>
     </select>
     <br />
     <br />
@@ -131,7 +133,7 @@
     -->
 
     <div style="font-size: 14pt;">
-    <p><a href="http://grml.org/changelogs/README-grml-2014.11">Release Notes</a></p>
+    <p><a href="http://grml.org/changelogs/README-grml-2017.05">Release Notes</a></p>
 
     </div>
     </div>
@@ -165,7 +167,7 @@
     }
 
     function update_links() {
-        var current_version = "2014.11";
+        var current_version = "2017.05";
         var product = 'grml';
         var arch = document.getElementById('download_arch').value;
         var flavour = document.getElementById('download_flavour').value;
@@ -177,7 +179,7 @@
         document.getElementById('download_link_mirror').href = mirror_url + iso;
         document.getElementById('download_link_mirror').innerHTML = '<br />Download Now<div class="download_relinfo">' + product + '-' + flavour + ' ' + current_version + '</div>';
         document.getElementById('download_link_bt').href = mirror_url + iso + '.torrent';
-        document.getElementById('download_link_signature').href = mirror_url + iso + '.sha1.asc';
+        document.getElementById('download_link_signature').href = mirror_url + iso + '.asc';
     }
 
     // hook update function
@@ -199,13 +201,13 @@
     <b>Alternate downloads</b><br /><br />
     <a href="http://daily.grml.org/">Daily images</a><br />
     <a href="http://download.grml.org/">Older releases</a><br />
-    <a href="http://download.grml.org/grml_sources-2014.11.tar.gz">Source code</a> (both archs)<br />
+    <a href="http://download.grml.org/grml_sources-2017.05.tar.gz">Source code</a> (both archs)<br />
     <br/>
     Netboot packages:<br/>
-    <a href="http://download.grml.org/grml_netboot_package_grml64-full_2014.11.tar.bz2">64-bit</a>
-    <a href="http://download.grml.org/grml_netboot_package_grml64-full_2014.11.tar.bz2.sha1.asc">(sig)</a>
-    <a href="http://download.grml.org/grml_netboot_package_grml32-full_2014.11.tar.bz2">32-bit</a>
-    <a href="http://download.grml.org/grml_netboot_package_grml32-full_2014.11.tar.bz2.sha1.asc">(sig)</a>
+    <a href="http://download.grml.org/grml_netboot_package_grml64-full_2017.05.tar.bz2">64-bit</a>
+    <a href="http://download.grml.org/grml_netboot_package_grml64-full_2017.05.tar.bz2.asc">(sig)</a>
+    <a href="http://download.grml.org/grml_netboot_package_grml32-full_2017.05.tar.bz2">32-bit</a>
+    <a href="http://download.grml.org/grml_netboot_package_grml32-full_2017.05.tar.bz2.asc">(sig)</a>
 
     <br />
     <br />
@@ -224,7 +226,7 @@ sub  4096R/257B6FD52892CF7E 2010-07-14</pre>
     <b>Boot from USB key</b><br />
     <br />
     Just <tt>dd(1)</tt> the downloaded ISO to an <abbr title="Any existing data will be overwritten by the dd command!">empty</abbr> USB key!<br /><br />
-    <code>dd if=grml64_2014.11.iso of=/dev/USB_KEY</code>
+    <code>dd if=grml64_2017.05.iso of=/dev/USB_KEY</code>
     <br /><br />
 
     <b>Troubleshooting</b><br /><br />
