@@ -72,10 +72,10 @@
 <pre class="rahmen">
 # IMPORTANT: please note that you might override an existing
 # configuration file in the current working directory! =>
-wget -O .zshrc http://git.grml.org/f/grml-etc-core/etc/zsh/zshrc
+wget -O .zshrc https://git.grml.org/f/grml-etc-core/etc/zsh/zshrc
 
 # Optionally also grab the user configration:
-# wget -O .zshrc.local  http://git.grml.org/f/grml-etc-core/etc/skel/.zshrc
+# wget -O .zshrc.local  https://git.grml.org/f/grml-etc-core/etc/skel/.zshrc
 </pre>
 
       <p>Tip: for <a href="https://www.archlinux.org/">Archlinux</a> linux users
@@ -102,8 +102,8 @@ wget -O .zshrc http://git.grml.org/f/grml-etc-core/etc/zsh/zshrc
 
       <p>The zsh-lovers archive includes the zsh-lovers manual page and several
       zsh configuration files. Get it from <a
-      href="http://deb.grml.org/pool/main/z/zsh-lovers/">the zsh-lovers
-      directory</a> at <a href="http://deb.grml.org/">the grml repository</a>.
+      href="https://deb.grml.org/pool/main/z/zsh-lovers/">the zsh-lovers
+      directory</a> at <a href="https://deb.grml.org/">the grml repository</a>.
 
       <p>Notice: If you would like to have zsh-lovers on your Debian system add
       the following line to /etc/apt/sources.list (run 'apt-get update
@@ -175,8 +175,8 @@ wget -O .zshrc http://git.grml.org/f/grml-etc-core/etc/zsh/zshrc
       <h3>German information:</h3>
 
       <ul>
-        <li><a href="http://www.michael-prokop.at/computer/tools_zsh.html">www.michael-prokop.at/computer/tools_zsh.html</a> - zsh-Seite von Michael Prokop</li>
-        <li><a href="http://www.michael-prokop.at/computer/tools_zsh_liebhaber.html">Zsh-Liebhaber-Seite</a> von Michael Prokop und Matthias Kopfermann</li>
+        <li><a href="https://www.michael-prokop.at/computer/tools_zsh.html">www.michael-prokop.at/computer/tools_zsh.html</a> - zsh-Seite von Michael Prokop</li>
+        <li><a href="https://www.michael-prokop.at/computer/tools_zsh_liebhaber.html">Zsh-Liebhaber-Seite</a> von Michael Prokop und Matthias Kopfermann</li>
       </ul>
 
       </div>
