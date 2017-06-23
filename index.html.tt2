@@ -59,9 +59,9 @@
 
             <h2>News</h2>
             <div class="news">
+            <p>23 Jun 2017: <a href="https://blog.grml.org/archives/399-New-Grml-developer-Darshaka-Pathirana.html">New Grml developer: Darshaka Pathirana</a></p>
             <p>31 May 2017: New <a href="/changelogs/README-grml-2017.05/">stable release 2017.05</a></p>
             <p>08 May 2017: New <a href="/changelogs/README-grml-2017.05-rc1/">release candidate version 2017.05-rc1</a></p>
-            <p>04 Jan 2017: State of <a href="http://blog.grml.org/archives/396-State-of-Grml-in-2017.html">Grml in 2017</a></p>
             </div>
 
       </div>
