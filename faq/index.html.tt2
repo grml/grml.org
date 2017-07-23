@@ -126,7 +126,7 @@
 
         <ul>
 
-          <li>Intel-compatible CPU (i586 or later, preferably Pentium class or higher)</li>
+          <li>Intel-compatible CPU (i686 or later, preferably Pentium class or higher; although some i586 processors e.g. the 'AMD Geode' are still supported)</li>
 
           <li>&gt;=256MB of RAM (&gt;=512MB recommended)</p>
 
