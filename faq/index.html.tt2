@@ -126,7 +126,7 @@
 
         <ul>
 
-          <li>Intel-compatible CPU (i586 or later, preferably Pentium class or higher)</li>
+          <li>Intel-compatible CPU (i686 or later, preferably Pentium Pro class or higher)</li>
 
           <li>&gt;=256MB of RAM (&gt;=512MB recommended)</p>
 
