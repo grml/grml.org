@@ -36,6 +36,8 @@
         <h2>Known Bugs in Grml 2017.05</h2>
 
         <ul>
+          <li><a href="https://github.com/grml/grml/issues/76">#76: gpm isn't started</a></li>
+          <li><a href="https://github.com/grml/grml/issues/65">#65: grml-terminalserver-config doesn't work</a></li>
           <li><a href="https://github.com/grml/grml/issues/55">#55: grml-hwinfo: sysdump causing grml-hwinfo to hang</a></li>
           <li><a href="https://github.com/grml/grml/issues/53">#53: grml-chroot not reliable with its recursive /dev bind mounts</a></li>
           <li><a href="https://github.com/grml/grml/issues/50">#50: locale issue during grml-autoconfig bootup</a></li>
