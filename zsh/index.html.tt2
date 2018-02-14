@@ -80,7 +80,7 @@ wget -O .zshrc https://git.grml.org/f/grml-etc-core/etc/zsh/zshrc
 
       <p>Tip: for <a href="https://www.archlinux.org/">Archlinux</a> linux users
       exists <a
-      href="https://www.archlinux.de/?page=PackageDetails;repo=extra;arch=i686;pkgname=grml-zsh-config">an
+      href="https://www.archlinux.org/packages/extra/any/grml-zsh-config/">an
       official grml-zsh-config package</a>.</p>
 
       <h2><a name="zshlovers"></a>zsh-lovers</h2>
