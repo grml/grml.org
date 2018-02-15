@@ -52,7 +52,7 @@ URIs: http://deb.grml.org/
 Suites: grml-stable grml-testing
 Architectures: i386 amd64
 Components: main
-Signed-By: 05483D2F0A254E5BC12AC73021E0CA38EA2EA4AB</pre>
+Signed-By: /usr/share/keyrings/grml-archive-keyring.gpg</pre>
 
 	<p>Then the following <a href="https://manpages.debian.org/apt_preferences">preferences file</a> will keep packages from GRML to replace normal Debian packages, in <code>/etc/apt/preferences.d/grml.pref</code>:</p>
 	
@@ -68,7 +68,7 @@ Pin-Priority: 100</pre>
 	<p>Also  note that you may have trouble installing the <code>grml-debian-keyring</code> package as APT will complain about the missing key. A workaround is to download it directly:</p>
 	
 	<pre class="rahmen">
-sudo wget -O /etc/apt/trusted.gpg.d/grml.gpg http://deb.grml.org/repo-key.gpg
+sudo wget -O /usr/share/keyrings/grml-archive-keyring.gpg http://deb.grml.org/repo-key.gpg
 sudo apt-get update
 sudo apt-get install grml-debian-keyring
 </pre>
