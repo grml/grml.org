@@ -199,7 +199,7 @@
 
     <div class="download_panel" id="download_panel3"><div>
     <b>Alternate downloads</b><br /><br />
-    <a href="http://daily.grml.org/">Daily images</a><br />
+    <a href="https://daily.grml.org/">Daily images</a><br />
     <a href="http://download.grml.org/">Older releases</a><br />
     <a href="http://download.grml.org/grml_sources-2017.05.tar.gz">Source code</a> (both archs)<br />
     <br/>
@@ -230,7 +230,7 @@ sub  4096R/257B6FD52892CF7E 2010-07-14</pre>
     <br /><br />
 
     <b>Troubleshooting</b><br /><br />
-    <a href="http://git.grml.org/?p=grml-live.git;a=blob_plain;f=templates/GRML/grml-cheatcodes.txt;hb=HEAD">Boot option guide</a>
+    <a href="https://git.grml.org/?p=grml-live.git;a=blob_plain;f=templates/GRML/grml-cheatcodes.txt;hb=HEAD">Boot option guide</a>
     <br /><br />
 
     </div></div>
@@ -239,7 +239,7 @@ sub  4096R/257B6FD52892CF7E 2010-07-14</pre>
 
     <h2>Git repositories</h2>
 
-    <p>The Grml team uses <a href="http://git-scm.com/">git</a> for
+    <p>The Grml team uses <a href="https://git-scm.com/">git</a> for
     managing software and packages. The repositories are available
     online at <a href="https://github.com/grml/">GitHub</a>.</p>
 
