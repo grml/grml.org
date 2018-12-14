@@ -147,7 +147,7 @@
         href="http://git.grml.org/?p=grml-live.git;a=blob_plain;f=templates/GRML/grml-cheatcodes.txt;hb=HEAD">grml-cheatcodes
         file</a> (also available via <a href="http://grml.org/cheatcodes/">grml.org/cheatcodes/</a>). Of
         course <a
-        href="http://www.kernel.org/doc/Documentation/kernel-parameters.txt">kernel-parameters.txt</a>
+        href="https://www.kernel.org/doc/html/latest/admin-guide/kernel-parameters.html">the command-line parameters</a>
         of the Linux kernel applies to Grml as well.</p>
 
         <h3><a name="systemd"></a><a href="#toc">Why is Grml using systemd?</a></h3>
