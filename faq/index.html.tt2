@@ -28,7 +28,7 @@
 
         <h1 align="center">FAQ for grml</h1>
 
-        <p><strong>Up2date:</strong> applies to Grml version 2017.05</p>
+        <p><strong>Up2date:</strong> applies to Grml version 2018.12</p>
 
         <p><a name="toc"></a><strong>Index:</strong></p>
 
@@ -117,10 +117,9 @@
 
         <h3><a name="releasename"></a><a href="#toc">What about the release name?</a></h3>
 
-        <p>Codename of Grml 2017.05 is "Freedatensuppe", which is
-        a wordplay (free data soup) on an austrian dish called <a href="https://de.wikipedia.org/wiki/Frittatensuppe">Frittatensuppe</a>.
-        (We stumbled upon this wordplay through <a href="https://twitter.com/shroombab/status/715650750689517568">a tweet from Barbara Wimmer</a>,
-        referencing a flyer based on a <a href="https://zwerkstatt.at/index.php/produkt/freedaten_h_indiaink/">shirt by zwerkstatt</a>).</p>
+        <p>Codename of Grml 2017.05 is "Gnackwatschn", which is
+        an austrian and bavarian word, meaning "hit in the neck".
+	We consider this an alternative to a facepalm.
 
         <h3><a name="requirements"></a><a href="#toc">Requirements for running Grml</a></h3>
 
@@ -128,7 +127,7 @@
 
           <li>Intel-compatible CPU (i686 or later, preferably Pentium class or higher; although some i586 processors e.g. the 'AMD Geode' are still supported)</li>
 
-          <li>&gt;=256MB of RAM (&gt;=512MB recommended)</p>
+          <li>&gt;=384MB of RAM (&gt;=512MB recommended)</p>
 
           <li>either a bootable CD-/DVD-ROM drive,
           a <a href="#usbboot">USB-boot capable system</a> or a
@@ -277,10 +276,17 @@ grml keyboard=de xkeyboard=de lang=at # enter this at the bootprompt
 
         <p>LVM (Logival Volumes) is <strong>not</strong> started by default to
         avoid any possible damage to your data. To get access to present LVM
-        devices just execute:</p>
+        devices execute (replace "$name" with the name of the PV):</p>
 
 <pre class="rahmen">
-# /etc/init.d/lvm2 start
+# Start lvm2-pvscan@$name
+</pre>
+
+        <p>or if you don't know its name, use:</p>
+
+<pre class="rahmen">
+# Start lvm2-lvmetad
+# vgchange -ay
 </pre>
 
         <p>If you want to enable LVM by default just boot using the 'lvm'
@@ -293,7 +299,7 @@ grml keyboard=de xkeyboard=de lang=at # enter this at the bootprompt
         your data. To get access to present SW-RAID devices just execute:</p>
 
 <pre class="rahmen">
-# /etc/init.d/mdadm-raid start
+# mdadm --asssemble --scan
 </pre>
 
         <p>If you want to enable SW-RAID by default just boot using
@@ -336,13 +342,12 @@ grml keyboard=de xkeyboard=de lang=at # enter this at the bootprompt
         <h3><a name="timezone"></a><a href="#toc">How do I configure
         timezone on my Grml system?</a></h3>
 
-        <p>Available bootoptions relevant in live-cd mode:</p>
+        <p>Available bootoptions relevant in live mode:</p>
 
         <ul>
-          <li>utc: set UTC, if your system clock is set to UTC (GMT)
-          <li>gmt: set UTC, if your system clock is set to UTC (GMT) [like bootoption utc]
-          <li>tz=$option: set timezone to corresponding $option, usage example:
-              tz=Europe/Vienna
+          <li>utc: set UTC, if your system/hardware clock is set to UTC (Coordinated Universal Time)
+	  <li>localtime: Hardware Clock is set to local time (LOCAL), this is the default
+          <li>tz=$option: set timezone to corresponding $option, usage example: tz=Europe/Vienna, defaults to UTC if unset
         </ul>
 
         <p>Further information: manpages hwclock(8), tzselect(1) and tzconfig(8); <a
@@ -353,17 +358,9 @@ grml keyboard=de xkeyboard=de lang=at # enter this at the bootprompt
 
         <h3><a name="hdinstall"></a><a href="#toc">Is it possible to install Grml to harddisk?</a></h3>
 
-        <p>Short anwer: No.</p>
-
-        <p>If you want to get a plain Debian system take a look at <a
-        href="/grml-debootstrap/">grml-debootstrap</a>.</p>
-
-        <p>Long(er) answer: yes it's possible to install Grml. But it's not
-        supported and you'll be on your own. That's why we decided to make it
-        not-so-obvious. If you really know what you're doing you'll find out on
-        your own. Reminder: use <a
-        href="/grml-debootstrap/">grml-debootstrap</a> or <a
-        href="http://www.debian.org/">Debian Installer</a> instead.</p>
+        <p>No. If you want to get a Debian system take a look at <a
+        href="/grml-debootstrap/">grml-debootstrap</a> (or use the <a
+        href="https://www.debian.org/">Debian Installer</a> instead).</p>
 
         <h2><a name="software"></a><a href="#toc">Software</a></h2>
 
