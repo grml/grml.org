@@ -38,7 +38,12 @@
 
         <ul>
 
-          <li>haveged is started when booting with boot option `ssh` (Boot option `services=haveged` starts it as well)
+          <li>When using the `ssh` boot option Grml automatically starts haveged, an userspace entropy daemon which
+          uses HAVEGE (HArdware Volatile Entropy Gathering and Expansion).
+          If you should notice a slow boot and want to force the startup of the haveged service (independent of usage of ssh boot option)
+          you can start the service via boot option `services=haveged`.
+          See e.g. <a href="https://daniel-lange.com/archives/152-Openssh-taking-minutes-to-become-available,-booting-takes-half-an-hour-...-because-your-server-waits-for-a-few-bytes-of-randomness.html">Openssh
+            taking minutes to become available [...]</a> for further information.
 
           <li>The cpufrequtils package with its loadcpufreq handling has been dropped. The cpufreq drivers are autoloaded and the powersave/ondemand driver is mature enough. The linux-cpupower tools provide the binaries as replacement for what cpufrequtils provided so far.
 
@@ -46,22 +51,26 @@
 /etc/apt/sources.list.d/grml.sources setup like:
 
 <pre>
+
 Types: deb deb-src
 URIs: http://deb.grml.org/
 Suites: grml-stable grml-testing
 Architectures: i386 amd64
 Components: main
 Signed-By: /usr/share/keyrings/grml-archive-keyring.gpg
+
 </pre>
 
 or you prefer the common sources.list setup you can use a /etc/apt/sources.list.d/grml.list like:
 
 <pre>
+
 deb [signed-by=/usr/share/keyrings/grml-archive-keyring.gpg] https://deb.grml.org/ grml-stable  main
 deb [signed-by=/usr/share/keyrings/grml-archive-keyring.gpg] https://deb.grml.org/ grml-testing main
+
 </pre>
 
-	   <a href="https://wiki.debian.org/DebianRepository/UseThirdParty">https://wiki.debian.org/DebianRepository/UseThirdParty</a> provides more general documentation about this setup.
+           <a href="https://wiki.debian.org/DebianRepository/UseThirdParty">https://wiki.debian.org/DebianRepository/UseThirdParty</a> provides more general documentation about this setup.
 
         </ul>
 

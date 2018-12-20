@@ -28,10 +28,18 @@
 
         <h1>Known Bugs</h1>
 
-        <p>We recently started to track issues at <a href="https://github.com/grml/grml/issues">github</a> (though haven't really migrated there yet).
-        Additional issues can be found in the Grml Bugtracker at <a href="http://bts.grml.org/grml/">bts.grml.org</a>.</p>
+        <p>We track issues at <a href="https://github.com/grml/grml/issues">github.com/grml/grml/issues</a>.
+	Several Grml sub-projects (grml-debootstrap, grml-etc-core, grml2usb,...) have their own repository and issue tracking,
+	see <a href="https://github.com/grml/">github.com/grml/</a> to get an overview. If you're unsure where to report an issue though,
+	feel free to use <a href="https://github.com/grml/grml/issues">github.com/grml/grml/issues</a> though.
 
         <p>If you find additional bugs, please <a href="/bugs/">report them</a>.</p>
+
+        <h2>Known Bugs in Grml 2018.12-rc1</h2>
+
+        <ul>
+          <li><a href="https://github.com/grml/grml/issues/109">#109: Failed unmounting /lib/live/mount/medium</a></li>
+        </ul>
 
         <h2>Known Bugs in Grml 2017.05</h2>
 
@@ -41,13 +49,6 @@
           <li><a href="https://github.com/grml/grml/issues/55">#55: grml-hwinfo: sysdump causing grml-hwinfo to hang</a></li>
           <li><a href="https://github.com/grml/grml/issues/53">#53: grml-chroot not reliable with its recursive /dev bind mounts</a></li>
           <li><a href="https://github.com/grml/grml/issues/50">#50: locale issue during grml-autoconfig bootup</a></li>
-        </ul>
-
-        <h2>Known Bugs in Grml 2014.11</h2>
-
-        <ul>
-          <li>System boot freezes during udev startup on some systems (e.g. on Supermicro boards and recent IBM server models). Workaround: use boot option <em>mgag200.modeset=0</em>. Tracked as <a href="http://bts.grml.org/grml/issue1334">Issue1334</a>.</li>
-          <li>PXE boot might fail with "Failed to load ldlinux.c32". This is <a href="https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=750244">#750244</a>. Workaround: copy /usr/lib/syslinux/modules/bios/ldlinux.c32 from the Grml system to your tftp root directory.</li>
         </ul>
 
 </div>
