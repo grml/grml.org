@@ -29,7 +29,7 @@
 
         <h1>Contact</h1>
 
-	<p>For general questions please join the Grml user mailinglist (see below).</p>
+        <p>For general questions please join the Grml user mailinglist (see below).</p>
 
         <p>If you have found a bug please <a href="/bugs/">report it</a>.</p>
 
@@ -54,19 +54,22 @@
         href="http://dir.gmane.org/gmane.linux.distributions.grml.user">via
         gmane</a> as well.</p>
 
-        <p>If you are interested in following the <strong>development of
-        Grml</strong> you might be interested in the <a
-        href="http://ml.grml.org/mailman/listinfo/grml-devel">Grml developer
+        <p>If you are interested in following the <strong>development of Grml</strong> you might be
+        interested in the <a href="http://ml.grml.org/mailman/listinfo/grml-devel">Grml developer
         mailing list</a>. The <a
         href="http://ml.grml.org/mailman/listinfo/git-commits">Grml repository
         commits mailing list</a> tracks all the pushed commits to <a
-        href="http://git.grml.org/">Grml's git repositories</a>.  Changes in
-        Grml's Debian repository can be tracked via the <a
+        href="https://git.grml.org/">Grml's git repositories</a>, while we're
+        also present on <a href="https://github.com/grml/">github</a>. Changes
+        in Grml's Debian repository can be tracked via the <a
         href="http://ml.grml.org/mailman/listinfo/grml-testing-changes">Grml
-        Testing-changes mailing list</a>. The <a
-        href="http://ml.grml.org/mailman/listinfo/bugs-changes">bug-changes</a>
-        mailing list tracks all messages sent to <a
-        href="http://bts.grml.org/">Grml's Bug Tracking System</a>.</p>
+        Testing-changes mailing list</a>. We track issues at <a
+        href="https://github.com/grml/grml/issues">github.com/grml/grml/issues</a>.
+        Several Grml sub-projects (grml-debootstrap, grml-etc-core,
+        grml2usb,...) have their own repository and issue tracking, see <a
+        href="https://github.com/grml/">github.com/grml/</a> to get an
+        overview. If you're unsure where to report an issue though, feel free
+        to use github.com/grml/grml/issues though.</p>
 
         <p><strong>Notice:</strong> All Grml mailing lists are <strong>English
         only</strong>.</p>
