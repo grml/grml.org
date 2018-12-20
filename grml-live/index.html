@@ -1,9 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
     "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
 <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
-<meta name="generator" content="AsciiDoc 8.6.9" />
+<meta name="generator" content="AsciiDoc 8.6.10" />
 <title>grml-live(8)</title>
 <style type="text/css">
 /* Shared CSS for AsciiDoc xhtml11 and html5 backends */
@@ -790,8 +791,7 @@ completely independent at the same time!</td>
 <td class="content">Please notice that you should have a fast network connection as all the Debian
 packages will be downloaded and installed via network. If you want to use a
 local mirror (strongly recommended if you plan to use grml-live more than once)
-checkout mkdebmirror (see /usr/share/doc/grml-live/examples/mkdebmirror),
-debmirror(1), reprepro(1) (see /usr/share/doc/grml-live/examples/reprepro/ for a
+checkout debmirror(1), reprepro(1) (see /usr/share/doc/grml-live/examples/reprepro/ for a
 sample configuration), apt-cacher(1) and approx(8). To avoid downloading the
 base system again and again check out <a href="#create-a-base-tgz">the base tar.gz feature</a>.</td>
 </tr></table>
@@ -853,12 +853,10 @@ really know that you do not want to update the chroot.
 <p>
 Specify the CLASSES to be used for building the ISO via FAI.  By default only
 the classes GRMLBASE, GRML_FULL and I386/AMD64 (depending on system
-architecture) are assumed, resulting in a base system of about 350MB
-total ISO size. If using a non-I386 system (like AMD64) you should specify the
-appropriate architecture as well. Additionally you can specify a class providing
-a grml-kernel (see <a href="#classes">the <em>CLASSES</em> section in this document</a> for
-details about available classes).  So instead of GRML_FULL you can also use
-GRML_SMALL and GRML_FULL.
+architecture) are assumed.  Additionally you can specify a class providing a
+(grml-)kernel (see <a href="#classes">the <em>CLASSES</em> section in this document</a> for
+details about available classes). So instead of GRML_FULL you can also use e.g.
+GRML_SMALL.
 </p>
 </dd>
 </dl></div>
@@ -1041,7 +1039,7 @@ Specify name of the release.
 <p>
 Specify the Debian suite you want to use for your live-system. If unset defaults
 to "testing". Supported values are: stable, testing, unstable (or their
-corresponding release names like "jessie"). Please be aware that recent Debian
+corresponding release names like "stretch"). Please be aware that recent Debian
 suites might require a recent base.tgz
 debootstrap.
 </p>
@@ -1122,7 +1120,7 @@ Use ZLIB instead of LZMA/XZ compression in mksquashfs part of the build process.
 <div class="sect1">
 <h2 id="usage-examples">5. Usage examples</h2>
 <div class="sectionbody">
-<div class="paragraph"><p>To get a Debian-stable and Grml-based Live-CD using /grml/grml-live
+<div class="paragraph"><p>To get a Debian-stable and Grml-based Live-CD using ./grml
 as build and output directory just run:</p></div>
 <div class="literalblock">
 <div class="content">
@@ -1226,6 +1224,17 @@ DEBORPHAN: get rid of all packages listed in output of deborphan
 </li>
 <li>
 <p>
+FILE_RC: instead of using systemd as init system use file-rc instead. file-rc
+was the init system used by Grml until and including stable release 2014.11,
+starting with beginning of 2016 Grml switched to systemd instead. If you want to
+build a live system in the old style using file-rc instead of systemd then enable
+this class. Please notice that support for file-rc is no longer being actively
+maintained (the Grml team happily accepts patches though) and file-rc (upstream
+wise) might disappear too.
+</p>
+</li>
+<li>
+<p>
 FRESHCLAM: execute freshclam (if it&#8217;s present) to update clamav definitions
 (increases resulting ISO size ~70MB). By default it&#8217;s skipped to avoid bigger
 ISO size.
@@ -1236,18 +1245,24 @@ ISO size.
 GRMLBASE: the main class responsible for getting a minimal subset of what&#8217;s
 defining a Grml system. Important parts of the buildprocess are specified in
 this class as well, so unless you have a really good reason you should always
-use this class.
+use this class. Please be aware that using <strong>just</strong> the GRMLBASE class won&#8217;t be
+enough, because the kernel packages (e.g. linux-image-i386-grml<br />
+linux-image-amd64-grml) are chosen in further GRML_* classes (to provide maximum
+flexibility with kernel selection). If you don&#8217;t want to use the existing
+GRML_FULL or GRML_SMALL classes, define your own CLASS file choosing the kernel
+package you want to use (and don&#8217;t forget to include your CLASS in the arguments
+of grml-live&#8217;s -c&#8230; command line option).
 </p>
 </li>
 <li>
 <p>
 GRML_FULL: full featured Grml, also known as the "normal", full grml as
-introduced in December 2011 (~460MB ISO size).
+introduced in December 2011 (~600MB ISO size).
 </p>
 </li>
 <li>
 <p>
-GRML_SMALL: minimum sized Grml version, known as grml-small (~230MB ISO
+GRML_SMALL: minimum sized Grml version, known as grml-small (~300MB ISO
 size).
 </p>
 </li>
@@ -1375,7 +1390,7 @@ installation process.</p></div>
 <div class="paragraph"><p>Directory with lists of software packages to be installed or removed.  The
 different classes describe what should find its way to your ISO.  When running
 "grml-live -c GRMLBASE,GRML_SMALL,AMD64 &#8230;" only the configuration of GRMLBASE,
-GRML_SMALL and and AMD64 will be taken. If you use <em>grml-live -c
+GRML_SMALL and AMD64 will be taken. If you use <em>grml-live -c
 GRMLBASE,GRML_SMALL,AMD64,FOOBAR &#8230;</em> then the files of GRMLBASE, GRML_SMALL,
 AMD64 <strong>plus</strong> the files from FOOBAR will be taken. So just create a new class to
 adjust the package selection according to your needs.  Please notice that the
@@ -1416,11 +1431,11 @@ on a plain, original Debian system.
 </li>
 <li>
 <p>
-enough free disk space; at least 800MB are required for a minimal grml-live
-run (~400MB for the chroot [$CHROOT_OUTPUT], ~150MB for the build target
-[$BUILD_OUTPUT] and \~150MB for the resulting ISO [$ISO_OUTPUT] plus some
-temporary files), if you plan to use GRML_FULL you should have at least 4GB of
-total free disk space
+enough free disk space; at least 1.5GB are required for a minimal grml-live
+run (~850MB for the chroot [$CHROOT_OUTPUT], ~300MB for the build target
+[$BUILD_OUTPUT], ~30MB for the netboot files and \~300MB for the resulting ISO
+[$ISO_OUTPUT] plus some temporary files), if you plan to use GRML_FULL you
+should have at least 4GB of total free disk space
 </p>
 </li>
 <li>
@@ -1448,8 +1463,8 @@ chroot (check out "local mirror" to workaround this problem as far as possible)
 <div class="paragraph"><p>The easiest way to get a running grml-live setup is to just use Grml.
 Of course using grml-live on a plain, original Debian installation is supported
 as well. So there we go.</p></div>
-<div class="paragraph"><p>What we have: plain, original Debian jessie (8.x).</p></div>
-<div class="paragraph"><p>What we want: build a Grml ISO based on Debian/jessie for the amd64 architecture
+<div class="paragraph"><p>What we have: plain, original Debian stretch (9.x).</p></div>
+<div class="paragraph"><p>What we want: build a Grml ISO based on Debian/stretch for the amd64 architecture
 using grml-live.</p></div>
 <div class="sect3">
 <h4 id="_instructions">13.1.1. Instructions</h4>
@@ -1501,9 +1516,9 @@ cat &gt; /etc/grml/grml-live.local &lt;&lt; EOF
 # SQUASHFS_BINARY='/usr/bin/mksquashfs'
 ## install local files into the chroot
 # CHROOT_INSTALL="/etc/grml/fai/chroot_install"
-## adjust if necessary (defaults to /grml/grml-live):
+## adjust if necessary (defaults to ./grml/):
 ## OUTPUT="/srv/grml-live"
-FAI_DEBOOTSTRAP="jessie http://ftp.debian.org/debian/"
+FAI_DEBOOTSTRAP="stretch http://ftp.debian.org/debian/"
 # ARCH="amd64"
 CLASSES="GRMLBASE,GRML_FULL,AMD64"
 EOF</code></pre>
@@ -1585,7 +1600,7 @@ adjust MIRROR_DIRECTORY in /etc/grml/grml-live.conf[.local] as well.</p></div>
 <div class="literalblock">
 <div class="content">
 <pre><code># cat &gt; /etc/grml/fai/config/package_config/MIKA &lt;&lt; EOF
-PACKAGES aptitude</code></pre>
+PACKAGES install</code></pre>
 </div></div>
 <div class="literalblock">
 <div class="content">
@@ -1620,7 +1635,7 @@ FAI_DEBOOTSTRAP:</p></div>
 [...]
 APT_PROXY="http://localhost:3142/"
 [...]
-FAI_DEBOOTSTRAP="jessie http://localhost:3142/ftp.debian.org/debian jessie main contrib non-free"</code></pre>
+FAI_DEBOOTSTRAP="stretch http://localhost:3142/ftp.debian.org/debian stretch main contrib non-free"</code></pre>
 </div></div>
 <div class="paragraph"><p>Make sure apt-cacher-ng is running (<em>/etc/init.d/apt-cacher-ng restart</em>).
 That&#8217;s it.  All downloaded files will be cached in /var/cache/apt-cacher-ng then.</p></div>
@@ -1647,7 +1662,7 @@ syslinux) then just execute:</p></div>
 <div class="literalblock">
 <div class="content">
 <pre><code>BASECHROOT='/tmp/basefile'  # path where the chroot gets generated
-SUITE='jessie'              # using the current stable release should always work
+SUITE='stretch'              # using the current stable release should always work
 debootstrap --exclude=info,tasksel,tasksel-data "$SUITE" "$BASECHROOT" http://ftp.debian.org/debian
 tar -C "$BASECHROOT" --exclude='var/cache/apt/archives/*.deb' -zcf "${SUITE}".tar.gz ./</code></pre>
 </div></div>
@@ -1818,7 +1833,7 @@ in different formats:</p></div>
 <div id="footer">
 <div id="footer-text">
 Last updated
- 2016-02-15 22:15:22 CET
+ 2018-10-25 14:47:41 UTC
 </div>
 </div>
 </body>
