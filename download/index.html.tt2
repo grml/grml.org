@@ -129,12 +129,11 @@
     <br />
 
     <div style="font-size: 14pt;">
-    <p><a href="http://grml.org/changelogs/README-grml-2017.05">Release Notes</a></p>
+    <p><a href="/changelogs/README-grml-2017.05">Release Notes</a></p>
 
     </div>
     </div>
     </div>
-
 
     <div class="download_panel" id="download_panel2"><div>
     <!-- fallback cgi buttons -->
@@ -197,7 +196,7 @@
     <b>Alternate downloads</b><br /><br />
     <a href="https://daily.grml.org/">Daily images</a><br />
     <a href="http://download.grml.org/">Older releases</a><br />
-    <a href="http://download.grml.org/grml_sources-2017.05.tar.gz">Source code</a> (both archs)<br />
+    <a href="http://download.grml.org/grml_sources-2017.05.tar.gz">Source code</a> (one tgz for both archs)<br />
     <br/>
     Netboot packages:<br/>
     <a href="http://download.grml.org/grml_netboot_package_grml64-full_2017.05.tar.bz2">64-bit</a>
