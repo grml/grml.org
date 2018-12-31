@@ -26,7 +26,7 @@
 
         <h1>Release Notes for Grml 2018.12 - codename <a href="/faq/#releasename">Gnackwatschn</a></h1>
 
-        <p><a href="/download/prerelease/">Download Now</a></p>
+        <p><a href="/download/">Download Now</a></p>
 
         <h3>About</h3>
 
@@ -43,7 +43,7 @@
           If you should notice a slow boot and want to force the startup of the haveged service (independent of usage of ssh boot option)
           you can start the service via boot option `services=haveged`.
           See e.g. <a href="https://daniel-lange.com/archives/152-Openssh-taking-minutes-to-become-available,-booting-takes-half-an-hour-...-because-your-server-waits-for-a-few-bytes-of-randomness.html">Openssh
-            taking minutes to become available [...]</a> for further information.
+          taking minutes to become available [...]</a> for further information.
 
           <li>The cpufrequtils package with its loadcpufreq handling has been dropped. The cpufreq drivers are autoloaded and the powersave/ondemand driver is mature enough. The linux-cpupower tools provide the binaries as replacement for what cpufrequtils provided so far.
 
