@@ -108,7 +108,6 @@ sudo apt-get install grml-debian-keyring
           <li><a href="grml32-small_2018.12/dpkg.selections">dpkg.selections</a> - software package listing</li>
           <li><a href="grml32-small_2018.12/dpkg.list">dpkg.list</a> - more detailed package list including version information</li>
           <li><a href="http://git.grml.org/?p=grml-live.git;a=blob_plain;f=templates/GRML/grml-cheatcodes.txt;hb=HEAD">grml-cheatcodes.txt</a> - boot options</li>
-          <li><a href="grml32-small_2018.12/nonfree-licenses.txt">nonfree-licenses.txt</a> - a list of used nonfree software and their licenses</li>
         </ul>
 
         <h3>grml64-small 2018.12</h3>
@@ -117,7 +116,6 @@ sudo apt-get install grml-debian-keyring
           <li><a href="grml64-small_2018.12/dpkg.selections">dpkg.selections</a> - software package listing</li>
           <li><a href="grml64-small_2018.12/dpkg.list">dpkg.list</a> - more detailed package list including version information</li>
           <li><a href="http://git.grml.org/?p=grml-live.git;a=blob_plain;f=templates/GRML/grml-cheatcodes.txt;hb=HEAD">grml-cheatcodes.txt</a> - boot options</li>
-          <li><a href="grml64-small_2018.12/nonfree-licenses.txt">nonfree-licenses.txt</a> - a list of used nonfree software and their licenses</li>
         </ul>
 
       </div>

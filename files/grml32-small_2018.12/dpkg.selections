@@ -288,6 +288,7 @@ libpam0g:i386					install
 libparted2:i386					install
 libpcap0.8:i386					install
 libpci3:i386					install
+libpcre2-8-0:i386				install
 libpcre3:i386					install
 libpcsclite1:i386				install
 libperl5.28:i386				install

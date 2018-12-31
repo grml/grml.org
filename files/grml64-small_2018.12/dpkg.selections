@@ -289,6 +289,7 @@ libpam0g:amd64					install
 libparted2:amd64				install
 libpcap0.8:amd64				install
 libpci3:amd64					install
+libpcre2-8-0:amd64				install
 libpcre3:amd64					install
 libpcsclite1:amd64				install
 libperl5.28:amd64				install

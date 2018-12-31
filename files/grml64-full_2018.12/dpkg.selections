@@ -11,6 +11,8 @@ aoetools					install
 apg						install
 apt						install
 apt-utils					install
+aptitude					install
+aptitude-common					install
 array-info					install
 ash						install
 atftp						install
@@ -365,6 +367,7 @@ libcunit1:amd64					install
 libcups2:amd64					install
 libcurl3-gnutls:amd64				install
 libcurl4:amd64					install
+libcwidget3v5:amd64				install
 libdaemon0:amd64				install
 libdate-manip-perl				install
 libdatrie1:amd64				install
@@ -689,7 +692,8 @@ libseccomp2:amd64				install
 libselinux1:amd64				install
 libsemanage-common				install
 libsemanage1:amd64				install
-libsensors4:amd64				install
+libsensors-config				install
+libsensors5:amd64				install
 libsepol1:amd64					install
 libserf-1-1:amd64				install
 libsgutils2-2					install
@@ -749,6 +753,7 @@ libtirpc3:amd64					install
 libtk8.6:amd64					install
 libtry-tiny-perl				install
 libtsk13					install
+libuchardet0:amd64				install
 libudev1:amd64					install
 libuniconf4.6					install
 libunistring2:amd64				install
@@ -791,6 +796,7 @@ libx11-6:amd64					install
 libx11-data					install
 libx11-xcb1:amd64				install
 libx86emu2:amd64				install
+libxapian30:amd64				install
 libxatracker2:amd64				install
 libxau6:amd64					install
 libxaw7:amd64					install

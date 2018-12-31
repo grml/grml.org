@@ -35,7 +35,7 @@
 
         <p>If you find additional bugs, please <a href="/bugs/">report them</a>.</p>
 
-        <h2>Known Bugs in Grml 2018.12-rc1</h2>
+        <h2>Known Bugs in Grml 2018.12</h2>
 
         <ul>
           <li><a href="https://github.com/grml/grml/issues/109">#109: Failed unmounting /lib/live/mount/medium</a></li>

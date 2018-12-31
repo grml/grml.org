@@ -11,6 +11,8 @@ aoetools					install
 apg						install
 apt						install
 apt-utils					install
+aptitude					install
+aptitude-common					install
 array-info					install
 ash						install
 atftp						install
@@ -302,6 +304,7 @@ libatk-bridge2.0-0:i386				install
 libatk1.0-0:i386				install
 libatk1.0-data					install
 libatkmm-1.6-1v5:i386				install
+libatomic1:i386					install
 libatspi2.0-0:i386				install
 libattr1:i386					install
 libattr1-dev:i386				install
@@ -364,6 +367,7 @@ libcunit1:i386					install
 libcups2:i386					install
 libcurl3-gnutls:i386				install
 libcurl4:i386					install
+libcwidget3v5:i386				install
 libdaemon0:i386					install
 libdate-manip-perl				install
 libdatrie1:i386					install
@@ -688,7 +692,8 @@ libseccomp2:i386				install
 libselinux1:i386				install
 libsemanage-common				install
 libsemanage1:i386				install
-libsensors4:i386				install
+libsensors-config				install
+libsensors5:i386				install
 libsepol1:i386					install
 libserf-1-1:i386				install
 libsgutils2-2					install
@@ -748,6 +753,7 @@ libtirpc3:i386					install
 libtk8.6:i386					install
 libtry-tiny-perl				install
 libtsk13					install
+libuchardet0:i386				install
 libudev1:i386					install
 libuniconf4.6					install
 libunistring2:i386				install
@@ -790,6 +796,7 @@ libx11-6:i386					install
 libx11-data					install
 libx11-xcb1:i386				install
 libx86emu2:i386					install
+libxapian30:i386				install
 libxatracker2:i386				install
 libxau6:i386					install
 libxaw7:i386					install
