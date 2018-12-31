@@ -162,7 +162,7 @@ deb [signed-by=/usr/share/keyrings/grml-archive-keyring.gpg] https://deb.grml.or
 
         <h3>Updates</h3>
 
-        <p>Packages are taken from Debian testing as of 19th of December 2018.
+        <p>Packages are taken from Debian testing as of 30th of December 2018.
         26 packages have been removed, and these 76 new packages
         have been added (excluding lib* and kernel image):</p>
 
