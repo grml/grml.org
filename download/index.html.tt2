@@ -125,10 +125,13 @@
     <br />
     <br />
 
+    <!--
     <a href="/download/prerelease/" class="button" style="padding: 12px; font-weight: bold;"><span>Get 2018.12-rc1 instead!</span></a>
     <br />
     <br />
     <br />
+    -->
+
 
     <div style="font-size: 14pt;">
     <p><a href="/changelogs/README-grml-2018.12">Release Notes</a></p>
@@ -197,14 +200,14 @@
     <div class="download_panel" id="download_panel3"><div>
     <b>Alternate downloads</b><br /><br />
     <a href="https://daily.grml.org/">Daily images</a><br />
-    <a href="http://download.grml.org/">Older releases</a><br />
+    <a href="https://download.grml.org/">Older releases</a><br />
     <a href="http://download.grml.org/grml_sources-2018.12.tar.gz">Source code</a> (one tgz for both archs)<br />
     <br/>
     Netboot packages:<br/>
     <a href="http://download.grml.org/grml_netboot_package_grml64-full_2018.12.tar.bz2">64-bit</a>
-    <a href="http://download.grml.org/grml_netboot_package_grml64-full_2018.12.tar.bz2.asc">(sig)</a>
+    <a href="http://download.grml.org/grml_netboot_package_grml64-full_2018.12.tar.bz2.sha1.asc">(signed sig)</a>
     <a href="http://download.grml.org/grml_netboot_package_grml32-full_2018.12.tar.bz2">32-bit</a>
-    <a href="http://download.grml.org/grml_netboot_package_grml32-full_2018.12.tar.bz2.asc">(sig)</a>
+    <a href="http://download.grml.org/grml_netboot_package_grml32-full_2018.12.tar.bz2.sha1.asc">(signed sig)</a>
 
     <br />
     <br />
