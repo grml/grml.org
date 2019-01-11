@@ -61,6 +61,7 @@
 
             <h2>News</h2>
             <div class="news">
+            <p>11 Jan 2019: Grml/Debian <a href="https://blog.grml.org/archives/402-GrmlDebian-Bug-Squashing-Party-in-Salzburg,-2019.html">Bug Squashing Party in Salzburg</a> (April 2019)</p>
             <p>31 Dec 2018: New <a href="/changelogs/README-grml-2018.12/">stable release 2018.12</a></p>
             <p>20 Dec 2018: New <a href="/changelogs/README-grml-2018.12-rc1/">release candidate version 2018.12-rc1</a></p>
             </div>
