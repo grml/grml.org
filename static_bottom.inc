@@ -2,7 +2,7 @@
 <div class="sponsors">
       <h3>Sponsors</h3>
       <p>
-        Grml is sponsored by several companies. For more information about our sponors check out the <a href="/sponsors/">Sponsors webpage</a>. Our main sponsors are:
+        Grml is sponsored by several companies. For more information about our sponsors check out the <a href="/sponsors/">Sponsors webpage</a>. Our main sponsors are:
       </p>
       <div>
         <a href="http://www.hostway.de/" target="_blank">
