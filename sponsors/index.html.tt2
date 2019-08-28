@@ -35,7 +35,7 @@
 
           <h3>Hostway Deutschland GmbH</h3>
 
-          <div style="float:left;margin-right:10px;" class="imagetext_image"><img width="300" border="0" height="100" title="" alt="" src="hostway.jpg"></div>
+          <a href="http://www.hostway.de/"><div style="float:left;margin-right:10px;" class="imagetext_image"><img width="300" border="0" height="100" title="" alt="" src="hostway.jpg"></div></a>
 
             <p><a target="_blank" href="http://www.hostway.de/">Hostway
             Deutschland</a> – more than just a hosting company.</p>
@@ -61,13 +61,11 @@
 
           </div>
 
-        </div>
-
         <div class="entry">
 
           <h3>Snel</h3>
 
-          <div style="float:left;margin-right:10px;" class="imagetext_image"><img width="300" border="0" height="70" title="" alt="" src="snel.png"></div>
+          <a href="https://www.snelserver.com/"><div style="float:left;margin-right:10px;" class="imagetext_image"><img width="300" border="0" height="70" title="" alt="" src="snel.png"></div></a>
 
             <p><a target="_blank" href="https://www.snelserver.com/">Snel</a> is a
             Dutch hosting provider. Our company was founded in 2010 and we are
@@ -81,15 +79,13 @@
             believe that the simplicity of our services and treating customers
             as friends sets us apart from the competition.</p>
 
-          </div>
-
         </div>
 
         <div class="entry">
 
           <h3>Server Hunter</h3>
 
-          <div style="float:left;margin-right:10px;" class="imagetext_image"><img width="300" border="0" height="40" title="" alt="" src="serverhunter.svg"></div>
+	  <a href="https://www.serverhunter.com/?utm_source=grml&utm_medium=logo&utm_content=website"><div style="float:left;margin-right:10px;" class="imagetext_image"><img width="300" border="0" height="40" title="" alt="" src="serverhunter.svg"></div></a>
 
             <p>Have you ever tried looking for a new VPS or dedicated server
             provider? There are millions of options and no way to easily search
@@ -99,8 +95,6 @@
             the products of hundreds of providers and makes it easy for you to
             filter, search and find that specific provider you're looking
             for.</p>
-
-          </div>
 
         </div>
 
