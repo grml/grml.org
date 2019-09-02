@@ -18,7 +18,7 @@
         <a href="https://www.serverhunter.com/?utm_source=grml&utm_medium=logo&utm_content=website" target="_blank">
         <img src="/sponsors/serverhunter.svg" width="300" alt="Server Hunter logo"/>
         </a>
-      </div>      
+      </div>
 </div>
 [% END %]
 <!-- Piwik -->

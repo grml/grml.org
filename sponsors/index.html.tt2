@@ -81,26 +81,26 @@
 
         </div>
 
-	<div class="entry">
+        <div class="entry">
 
-	    <h3>Server Hunter</h3>
+            <h3>Server Hunter</h3>
 
-	    <a href="https://www.serverhunter.com/?utm_source=grml&utm_medium=logo&utm_content=website">
-		<div style="float:left; padding: 20px;" class="imagetext_image">
-		    <img width="270" border="0" height="40" title="Server Hunter" alt="Server Hunter" src="serverhunter.svg">
-		</div>
-	    </a>
+            <a href="https://www.serverhunter.com/?utm_source=grml&utm_medium=logo&utm_content=website">
+                <div style="float:left; padding: 20px;" class="imagetext_image">
+                    <img width="270" border="0" height="40" title="Server Hunter" alt="Server Hunter" src="serverhunter.svg">
+                </div>
+            </a>
 
-	    <p>Have you ever tried looking for a new VPS or dedicated server
-	    provider? There are millions of options and no way to easily search
-	    through them. That's why <a target="_blank"
-	    href="https://www.serverhunter.com/?utm_source=grml&utm_medium=logo&utm_content=website">Server
-	    Hunter</a> automatically aggregates all
-	    the products of hundreds of providers and makes it easy for you to
-	    filter, search and find that specific provider you're looking
-	    for.</p>
+            <p>Have you ever tried looking for a new VPS or dedicated server
+            provider? There are millions of options and no way to easily search
+            through them. That's why <a target="_blank"
+            href="https://www.serverhunter.com/?utm_source=grml&utm_medium=logo&utm_content=website">Server
+            Hunter</a> automatically aggregates all
+            the products of hundreds of providers and makes it easy for you to
+            filter, search and find that specific provider you're looking
+            for.</p>
 
-	</div>
+        </div>
 
       </div>
 
