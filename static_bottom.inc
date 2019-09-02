@@ -14,6 +14,11 @@
         <img src="/sponsors/snel.png" width="300" height="70" alt="snel logo"/>
         </a>
       </div>
+      <div style="margin-top: 30px;">
+        <a href="https://www.serverhunter.com/?utm_source=grml&utm_medium=logo&utm_content=website" target="_blank">
+        <img src="/sponsors/serverhunter.svg" width="300" alt="Server Hunter logo"/>
+        </a>
+      </div>      
 </div>
 [% END %]
 <!-- Piwik -->
