@@ -1,9 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
     "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
 <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
-<meta name="generator" content="AsciiDoc 8.6.9" />
+<meta name="generator" content="AsciiDoc 8.6.10" />
 <title>grml-debootstrap(8)</title>
 <style type="text/css">
 /* Shared CSS for AsciiDoc xhtml11 and html5 backends */
@@ -754,12 +755,12 @@ asciidoc.install();
 <div class="sect1">
 <h2 id="_introduction">Introduction</h2>
 <div class="sectionbody">
-<div class="paragraph"><p>grml-debootstrap is a wrapper suite around debootstrap (and cdebootstrap if you
+<div class="paragraph"><p>grml-debootstrap is a wrapper suite around debootstrap (and cdebootstrap and mmdebstrap if you
 want) for installing a plain Debian system very fast and easy.</p></div>
 <div class="paragraph"><p>All you have to do is adjust a few variables in the configuration file
 /etc/debootstrap/config or specify some command line options and invoke
 grml-debootstrap. If invoked without any configuration modifications or command
-line options a dialog based frontend will be available to control some basic
+line options a dialog based front end will be available to control some basic
 configuration options.</p></div>
 <div class="paragraph"><p>A plain and base Debian system will be installed on the given device, directory
 or virtual image file then. Customization of this process is possible as well.</p></div>
@@ -793,7 +794,7 @@ or virtual image file then. Customization of this process is possible as well.</
 </dt>
 <dd>
 <p>
-    Enable Debian&#8217;s Backports repository (<a href="http://backports.debian.org/">http://backports.debian.org/</a>) via the
+    Enable Debian&#8217;s Backports repository via the
     /etc/apt/sources.list.d/backports.list configuration file. This provides the
     option to install Debian packages from Debian&#8217;s backports repository.
 </p>
@@ -867,6 +868,18 @@ or virtual image file then. Customization of this process is possible as well.</
 <p>
    Execute in very verbose way. Useful for debugging possible problems
    with grml-debootstrap or identify what&#8217;s actually executed.
+</p>
+</dd>
+<dt class="hdlist1">
+<strong>--defaultinterfaces</strong>
+</dt>
+<dd>
+<p>
+   Install a default /etc/network/interfaces file (enabling DHCP for all local
+   Ethernet, WLAN and WWAN interfaces using predictable network interface names
+   and using eth0 as traditional interface name for backward compatibility)
+   instead of taking over config from host system.
+   This option is automatically enabled when using --vm or --vmfile.
 </p>
 </dd>
 <dt class="hdlist1">
@@ -983,7 +996,6 @@ or virtual image file then. Customization of this process is possible as well.</
 <dd>
 <p>
     Do not copy /etc/network/interfaces from host system to the target.
-    This option is automatically enabled when using --vm or --vmfile.
 </p>
 </dd>
 <dt class="hdlist1">
@@ -1084,8 +1096,8 @@ or virtual image file then. Customization of this process is possible as well.</
 <dd>
 <p>
     Specify release of new Debian system. Supported releases names: lenny,
-    squeeze, wheezy, jessie, stretch (note: requires a recent version of debootstrap)
-    and sid. Corresponding with configuration variable RELEASE.
+    squeeze, wheezy, jessie, stretch, buster, bullseye and sid. Corresponding with configuration
+    variable RELEASE. Default release: buster
 </p>
 </dd>
 <dt class="hdlist1">
@@ -1095,6 +1107,17 @@ or virtual image file then. Customization of this process is possible as well.</
 <p>
     Delete grml-debootstrap configuration files (/etc/debootstrap/*) from installed
     system. Useful for reproducible builds or if you don&#8217;t want to leak information.
+</p>
+</dd>
+<dt class="hdlist1">
+<strong>--sshcopyid</strong>
+</dt>
+<dd>
+<p>
+    Use locally available public keys to authorise root login on the target system.
+    Similar to ssh-copy-id(1) (without the -i option) it checks if <code>ssh-add -L</code>
+    provides any output, and if so those keys are appended to
+    <em>/root/.ssh/authorized_keys</em> (creating the file and directory (with mode 0700)).
 </p>
 </dd>
 <dt class="hdlist1">
@@ -1123,6 +1146,7 @@ or virtual image file then. Customization of this process is possible as well.</
     partitioned.
     This allows deployment of a Virtual Machine. The options needs to be
     combined with the --target option.
+    This option automatically enables the --defaultinterfaces option.
     Usage example: --vm --target /dev/mapper/your-vm-disk
 </p>
 </dd>
@@ -1135,6 +1159,7 @@ or virtual image file then. Customization of this process is possible as well.</
     partition/block device or directory. This allows deployment of a Virtual
     Machine. The options needs to be combined with the --target option
     (<em>qemu-img create -f raw &#8230;</em> is executed on the specified target).
+    This option automatically enables the --defaultinterfaces option.
     Usage example: --vmfile --target /mnt/sda1/qemu.img
 </p>
 </dd>
@@ -1171,51 +1196,74 @@ docs and /etc/debootstrap/config for further information.</td>
 </div>
 </div>
 <div class="sect1">
+<h2 id="_networking">Networking</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>By default (that is, if none of the options <strong>--nointerfaces</strong>,
+<strong>--defaultinterfaces</strong>, <strong>--vmfile</strong> or <strong>--vm</strong> are given) /etc/network/interfaces
+will be copied from the host to the target system.</p></div>
+</div>
+</div>
+<div class="sect1">
 <h2 id="_usage_examples">Usage examples</h2>
 <div class="sectionbody">
 <div class="literalblock">
 <div class="content">
 <pre><code>grml-debootstrap --target /dev/sda1 --grub /dev/sda</code></pre>
 </div></div>
-<div class="paragraph"><p>Install default Debian release (jessie) on /dev/sda1 and install bootmanager
-Grub in MBR (master boot record) of /dev/sda and use /dev/sda1 as system partition.</p></div>
+<div class="paragraph"><p>Install default Debian release (buster) on /dev/sda1 and install bootmanager GRUB in MBR (master boot record) of /dev/sda.</p></div>
+<div class="literalblock">
+<div class="content">
+<pre><code>grml-debootstrap --release stretch --target /dev/sda1 --grub /dev/sda --hostname debian01 --password changeme</code></pre>
+</div></div>
+<div class="paragraph"><p>Install Debian release stretch on /dev/sda1 and install bootmanager GRUB in MBR (master boot record) of /dev/sda.
+Set hostname to <em>debian01</em> and password for user root to <em>changeme</em>.</p></div>
 <div class="literalblock">
 <div class="content">
 <pre><code>grml-debootstrap --target /dev/sda6 --grub /dev/sda --release sid</code></pre>
 </div></div>
-<div class="paragraph"><p>Install Debian unstable/sid on /dev/sda6, install bootmanager Grub in MBR
-(master boot record) of /dev/sda and use /dev/sda6 as system partition.</p></div>
+<div class="paragraph"><p>Install Debian unstable/sid on /dev/sda6 and install bootmanager GRUB in MBR (master boot record) of /dev/sda.</p></div>
+<div class="literalblock">
+<div class="content">
+<pre><code>DEBOOTSTRAP=mmdebstrap grml-debootstrap --target /dev/sda1 --grub /dev/sda</code></pre>
+</div></div>
+<div class="paragraph"><p>Install default Debian release (buster) on /dev/sda1 and install bootmanager GRUB in MBR (master boot record) of /dev/sda.
+Use mmdebstrap instead of default debootstrap tool for bootstrapping.</p></div>
+<div class="literalblock">
+<div class="content">
+<pre><code>grml-debootstrap --target /dev/mapper/vg0-rootfs --grub /dev/sda</code></pre>
+</div></div>
+<div class="paragraph"><p>Install default Debian release (buster) on LVM device /dev/mapper/vg0-rootfs and install bootmanager GRUB in MBR (master boot record) of /dev/sda.</p></div>
+<div class="literalblock">
+<div class="content">
+<pre><code>grml-debootstrap --efi /dev/sda1 --target /dev/sda2 --grub /dev/sda --efi</code></pre>
+</div></div>
+<div class="paragraph"><p>Install default Debian release (buster) on /dev/sda2 and install bootmanager GRUB in MBR (master boot record) of /dev/sda.
+Use /dev/sda1 as EFI partition (requires EFI support in booted system).</p></div>
 <div class="literalblock">
 <div class="content">
 <pre><code>mount /dev/sda1 /data/chroot
 grml-debootstrap --target /data/chroot</code></pre>
 </div></div>
-<div class="paragraph"><p>Install default Debian release (jessie) in directory /data/chroot (without
-any bootloader).</p></div>
+<div class="paragraph"><p>Install default Debian release (buster) in directory /data/chroot (without any bootloader).</p></div>
 <div class="literalblock">
 <div class="content">
 <pre><code>grml-debootstrap --target /dev/sda3 --grub /dev/sda  --mirror ftp://ftp.tugraz.at/mirror/debian</code></pre>
 </div></div>
-<div class="paragraph"><p>Install default Debian release (jessie) on /dev/sda3 and install bootmanager
-Grub in MBR (master boot record) of /dev/sda and use /dev/sda3 as system partition.
-Use specified mirror instead of the default (<a href="http://httpredir.debian.org/debian">http://httpredir.debian.org/debian</a>) one.</p></div>
+<div class="paragraph"><p>Install default Debian release (buster) on /dev/sda3 and install bootmanager GRUB in MBR (master boot record) of /dev/sda.
+Use specified mirror instead of the default (<a href="http://deb.debian.org/debian">http://deb.debian.org/debian</a>) one.</p></div>
 <div class="literalblock">
 <div class="content">
 <pre><code>mount /dev/sda1 /mnt/sda1
 grml-debootstrap --vmfile --vmsize 3G --target /mnt/sda1/qemu.img</code></pre>
 </div></div>
-<div class="paragraph"><p>Install default debian release (jessie) in a Virtual Machine file with
-3GB disk size (including Grub as bootmanager in MBR of the virtual disk file):</p></div>
+<div class="paragraph"><p>Install default debian release (buster) in a Virtual Machine file with 3GB disk size (including GRUB as bootmanager in MBR of the virtual disk file):</p></div>
 <div class="literalblock">
 <div class="content">
-<pre><code>mount -o loop /mnt/sda6/debian-CD-1.iso /mnt/iso
-grml-debootstrap --target /dev/sda1 --grub /dev/sda --iso file:/mnt/iso/debian/</code></pre>
+<pre><code>mount -o loop ./debian-CD-1.iso /media/cdrom
+grml-debootstrap --target /dev/sda1 --grub /dev/sda --iso /media/cdrom</code></pre>
 </div></div>
-<div class="paragraph"><p>Install Debian on /dev/sda1 using the loopback mounted Debian-ISO
-for the base-system and install bootmanager Grub in MBR (master boot record) of
-/dev/sda and use /dev/sda1 as system partition. Please notice, that the chroot
-system requires network access for all packages which are not part of the
-ISO.</p></div>
+<div class="paragraph"><p>Install Debian on /dev/sda1 using the loopback mounted Debian-ISO for the base-system and install bootmanager GRUB in MBR (master boot record) of /dev/sda.
+Please notice, that the chroot system requires network access for all packages which are not part of the ISO.</p></div>
 </div>
 </div>
 <div class="sect1">
@@ -1293,14 +1341,14 @@ target=/dev/sda1</p></div>
 <div class="content">
 <pre><code>release=...</code></pre>
 </div></div>
-<div class="paragraph"><p>Specify release of new Debian system. Defaults to Debian jessie. Supported
-releases: lenny, squeeze, wheezy, jessie, stretch and sid. Usage example: release=sid</p></div>
+<div class="paragraph"><p>Specify release of new Debian system. Defaults to Debian buster. Supported
+releases: lenny, squeeze, wheezy, jessie, stretch, buster, bullseye and sid. Usage example: release=stretch</p></div>
 <div class="literalblock">
 <div class="content">
 <pre><code>mirror=...</code></pre>
 </div></div>
 <div class="paragraph"><p>Specify mirror which should be used for apt-get/aptitude instead
-of the default one (<a href="http://httpredir.debian.org/debian">http://httpredir.debian.org/debian</a>).
+of the default one (<a href="http://deb.debian.org/debian">http://deb.debian.org/debian</a>).
 Usage example: mirror=ftp://ftp.tugraz.at/mirror/debian</p></div>
 <div class="literalblock">
 <div class="content">
@@ -1355,11 +1403,11 @@ cellspacing="0" cellpadding="4">
 </tr>
 <tr>
 <td align="left" valign="top"><p class="table">squeeze</p></td>
-<td align="left" valign="top"><p class="table">works</p></td>
+<td align="left" valign="top"><p class="table">works[1]</p></td>
 </tr>
 <tr>
 <td align="left" valign="top"><p class="table">wheezy</p></td>
-<td align="left" valign="top"><p class="table">works</p></td>
+<td align="left" valign="top"><p class="table">works[1]</p></td>
 </tr>
 <tr>
 <td align="left" valign="top"><p class="table">jessie</p></td>
@@ -1368,6 +1416,14 @@ cellspacing="0" cellpadding="4">
 <tr>
 <td align="left" valign="top"><p class="table">stretch</p></td>
 <td align="left" valign="top"><p class="table">works</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table">buster</p></td>
+<td align="left" valign="top"><p class="table">works</p></td>
+</tr>
+<tr>
+<td align="left" valign="top"><p class="table">bullseye</p></td>
+<td align="left" valign="top"><p class="table">works[2]</p></td>
 </tr>
 <tr>
 <td align="left" valign="top"><p class="table">sid</p></td>
@@ -1382,15 +1438,24 @@ cellspacing="0" cellpadding="4">
 <img src="./images/icons/note.png" alt="Note" />
 </td>
 <td class="content">
-<div class="title">lenny release</div>
-<div class="paragraph"><p>[1] Please notice that lenny is an unsupported release within Debian nowadays.
-grml-debootstrap can handle the release but you really should not use lenny
-anymore unless you really know what you are doing. Choose Debian 8.0 (jessie) or
-something newer instead.</p></div>
-<div class="paragraph"><p>Notice that you need to specify a mirror providing the lenny release, the
-default (<a href="http://httpredir.debian.org/debian">http://httpredir.debian.org/debian</a>) doesn&#8217;t provide it any longer nowadays.
+<div class="title">lenny/squeeze/wheezy release</div>
+<div class="paragraph"><p>[1] Please notice that releases like lenny, squeeze and wheezy are unsupported releases within Debian nowadays.
+grml-debootstrap can handle the releases but you really should not use them
+anymore unless you really know what you are doing.
+Choose the current Debian stable version instead.
+See <a href="https://wiki.debian.org/DebianReleases">https://wiki.debian.org/DebianReleases</a> for the list of supported releases.</p></div>
+<div class="paragraph"><p>Notice that you need to specify a mirror providing the lenny and squeeze releases, the
+default (<a href="http://deb.debian.org/debian">http://deb.debian.org/debian</a>) doesn&#8217;t provide it any longer nowadays.
 Set the mirror to e.g. <a href="http://archive.debian.org/debian/">http://archive.debian.org/debian/</a> if you don&#8217;t have
-your own lenny mirror.</p></div>
+your own lenny/squeeze mirror.</p></div>
+<div class="paragraph"><p>Older releases might also fail to install when running on top of recent kernel versions,
+throwing segfaults during debootstrap. This can be identified by the following messages inside kernel log (check with <em>dmesg</em>):</p></div>
+<div class="literalblock">
+<div class="content">
+<pre><code>dpkg[...] vsyscall attempted with vsyscall=none ip:[...]
+dpkg[...]: segfault at [...]</code></pre>
+</div></div>
+<div class="paragraph"><p>To work around this issue boot your system with the kernel boot option <em>vsyscall=emulate</em>.</p></div>
 <div class="paragraph"><p>You also need to specify a filesystem that&#8217;s supported by lenny, e.g.
 <em>--filesystem ext3</em> since grml-debootstrap&#8217;s current default (ext4) isn&#8217;t
 supported by lenny.</p></div>
@@ -1430,13 +1495,13 @@ deploying a stable release and upgrade it after installation finished.</p></div>
 <div class="sect1">
 <h2 id="_bugs">Bugs</h2>
 <div class="sectionbody">
-<div class="paragraph"><p>Probably. Please send bugreports to Michael Prokop &lt;<a href="mailto:mika@grml.org">mika@grml.org</a>&gt;.</p></div>
+<div class="paragraph"><p>Please report bugs towards <a href="https://github.com/grml/grml-debootstrap/issues">https://github.com/grml/grml-debootstrap/issues</a></p></div>
 </div>
 </div>
 <div class="sect1">
 <h2 id="_see_also">See also</h2>
 <div class="sectionbody">
-<div class="paragraph"><p>debootstrap (8), cdebootstrap (1).</p></div>
+<div class="paragraph"><p>debootstrap (8), cdebootstrap (1), mmdebstrap(1).</p></div>
 </div>
 </div>
 <div class="sect1">
@@ -1450,7 +1515,7 @@ deploying a stable release and upgrade it after installation finished.</p></div>
 <div id="footer">
 <div id="footer-text">
 Last updated
- 2016-11-17 12:09:18 CET
+ 2019-10-15 13:08:42 UTC
 </div>
 </div>
 </body>
