@@ -39,10 +39,10 @@
 
 	<pre class="rahmen">
 # Signing key is available in grml-debian-keyring
-#  deb     http://deb.grml.org/ grml-stable main
-#  deb-src http://deb.grml.org/ grml-stable main
-#  deb     http://deb.grml.org/ grml-testing main
-#  deb-src http://deb.grml.org/ grml-testing main</pre>
+#  deb     [signed-by=/usr/share/keyrings/grml-archive-keyring.gpg] http://deb.grml.org/ grml-stable main
+#  deb-src [signed-by=/usr/share/keyrings/grml-archive-keyring.gpg] http://deb.grml.org/ grml-stable main
+#  deb     [signed-by=/usr/share/keyrings/grml-archive-keyring.gpg] http://deb.grml.org/ grml-testing main
+#  deb-src [signed-by=/usr/share/keyrings/grml-archive-keyring.gpg] http://deb.grml.org/ grml-testing main</pre>
 
 	<p>If you are running Debian stretch or later, you may want to use the following <code>.sources</code> file, which will enforce the suite name and signing keys:</p>
 
@@ -65,7 +65,7 @@ Package: *
 Pin: release a=grml-testing
 Pin-Priority: 100</pre>
 
-	<p>Also  note that you may have trouble installing the <code>grml-debian-keyring</code> package as APT will complain about the missing key. A workaround is to download it directly:</p>
+	<p>Also note that you may have trouble installing the <code>grml-debian-keyring</code> package as APT will complain about the missing key. A workaround is to download it directly:</p>
 	
 	<pre class="rahmen">
 sudo wget -O /usr/share/keyrings/grml-archive-keyring.gpg https://deb.grml.org/repo-key.gpg
