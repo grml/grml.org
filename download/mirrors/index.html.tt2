@@ -59,8 +59,9 @@
 
             <hr />
 
-            <p><em>If you are interested in providing a mirror or a bittorrent link
-            for Grml please <a href="/contact/">contact us</a>.</em>/</p>
+            <p><em>If you are interested in providing a mirror for Grml please visit
+            <a href="https://github.com/grml/grml-mirrors">our grml-mirrors project</a>
+            or <a href="/contact/">contact us</a>.</em>/</p>
 
 </div>
 
