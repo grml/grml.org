@@ -40,7 +40,7 @@
         to boot Grml via network, because grml-terminalserver lets you create a
         floppydisk including a bootimage with your networkcard-driver to boot
         via network. If that's still not an option for you check out the <a
-            href="http://etherboot.org/wiki/index.php">gPXE</a> project.</p>
+            href="https://ipxe.org">iPXE</a> project.</p>
 
         <p>How to start grml-terminalserver? Just invoke grml-terminalserver as
         user root and follow the instructions. Take a look at the manpages
