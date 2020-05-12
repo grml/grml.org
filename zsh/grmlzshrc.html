@@ -1,287 +1,398 @@
-<?xml version="1.0"
-?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html>
 <head>
 <title>GRMLZSHRC</title>
-<meta name="generator" content="http://txt2tags.org" />
-<link rel="stylesheet" type="text/css" href="t2t-modern.css" />
+<meta name="generator" content="http://txt2tags.org">
+<link rel="stylesheet" href="t2t-modern.css">
+<style>
+body{background-color:#fff;color:#000;}
+hr{background-color:#000;border:0;color:#000;}
+hr.heavy{height:5px;}
+hr.light{height:1px;}
+img{border:0;display:block;}
+img.right{margin:0 0 0 auto;}
+img.center{border:0;margin:0 auto;}
+table th,table td{padding:4px;}
+.center,header{text-align:center;}
+table.center {margin-left:auto; margin-right:auto;}
+.right{text-align:right;}
+.left{text-align:left;}
+.tableborder,.tableborder td,.tableborder th{border:1px solid #000;}
+.underline{text-decoration:underline;}
+</style>
 </head>
 <body>
-<div class="header" id="header">
+<header>
+<hgroup>
 <h1>GRMLZSHRC</h1>
 <h3>September, 2014</h3>
-</div>
+</hgroup>
+</header>
+<article>
+
 <div class="body" id="body">
+
+<section>
 <h1>NAME</h1>
+
 <p>
 grmlzshrc - Grml's zsh setup
 </p>
+
+</section>
+<section>
 <h1>SYNOPSIS</h1>
+
 <p>
-<i>zsh</i> [<b>options</b>]...
+<em>zsh</em> [<strong>options</strong>]...
 </p>
+
+</section>
+<section>
 <h1>DESCRIPTION</h1>
+
 <p>
 The Grml project provides a fairly exhaustive interactive setup (referred to
-as <i>grmlzshrc</i> throughout this document) for the amazing unix shell zsh
+as <em>grmlzshrc</em> throughout this document) for the amazing unix shell zsh
 (<a href="http://zsh.sourceforge.net">http://zsh.sourceforge.net</a>). This is the reference manual for that
 setup.
 </p>
 <p>
-To use <i>grmlzshrc</i>, you need at least version 3.1.7 of zsh (although not all
+To use <em>grmlzshrc</em>, you need at least version 3.1.7 of zsh (although not all
 features are enabled in every version).
 </p>
 <p>
-<i>grmlzshrc</i> behaves differently depending on which user loads it. For the
-root user (<b>EUID</b> == 0) only a subset of features is loaded by default. This
-behaviour can be altered by setting the <b>GRML_ALWAYS_LOAD_ALL</b> STARTUP
+<em>grmlzshrc</em> behaves differently depending on which user loads it. For the
+root user (<strong>EUID</strong> == 0) only a subset of features is loaded by default. This
+behaviour can be altered by setting the <strong>GRML_ALWAYS_LOAD_ALL</strong> STARTUP
 VARIABLE (see below).
 </p>
 <p>
 Users may want to keep an up-to-date version of the setup (possibly from the
-git-sources) in <i>~/.zshrc</i>. If that happens on a system where the global
-zshrc is also a <i>grmlzshrc</i> (but possibly an older one), you can inhibit
+git-sources) in <em>~/.zshrc</em>. If that happens on a system where the global
+zshrc is also a <em>grmlzshrc</em> (but possibly an older one), you can inhibit
 loading the global version by doing:
-
+\
 </p>
+
 <pre>
 echo setopt no_global_rcs &gt;&gt; ~/.zshenv
 </pre>
+
 <p>
-Note, that this will disable <i>ANY</i> global files, except for the global
+Note, that this will disable <em>ANY</em> global files, except for the global
 zshenv file.
 </p>
-<h1>STARTUP VARIABLES</h1>
-<p>
-Some of the behaviour of <i>grmlzshrc</i> can be altered by setting certain shell
-variables. These may be set temporarily when starting zsh like this:
 
+</section>
+<section>
+<h1>STARTUP VARIABLES</h1>
+
+<p>
+Some of the behaviour of <em>grmlzshrc</em> can be altered by setting certain shell
+variables. These may be set temporarily when starting zsh like this:
+\
 </p>
+
 <pre>
 % GRML_DISPLAY_BATTERY=1 zsh
 </pre>
+
 <p>
-Or by setting them permanently in <b>zshrc.pre</b> (See AUXILIARY FILES below).
+Or by setting them permanently in <strong>zshrc.pre</strong> (See AUXILIARY FILES below).
 </p>
+
 <dl>
-<dt><b>BATTERY</b></dt><dd>
-Deprecated. Use <b>GRML_DISPLAY_BATTERY</b> instead.
+<dt><strong>BATTERY</strong></dt><dd>
+Deprecated. Use <strong>GRML_DISPLAY_BATTERY</strong> instead.
 <p></p>
 </dd>
-<dt><b>COMMAND_NOT_FOUND</b></dt><dd>
+<dt><strong>COMMAND_NOT_FOUND</strong></dt><dd>
 A non zero value activates a handler, which is called when a command can not
 be found. The handler is defined by GRML_ZSH_CNF_HANDLER (see below).
 <p></p>
 </dd>
-<dt><b>GRML_COMP_CACHING</b></dt><dd>
-If set to <i>yes</i> (the default), the setup will enable zsh's completion caching
-mechanism, with the caching data being placed into <i>$GRML_COMP_CACHE_DIR</i>.
+<dt><strong>GRML_COMP_CACHING</strong></dt><dd>
+If set to <em>yes</em> (the default), the setup will enable zsh's completion caching
+mechanism, with the caching data being placed into <em>$GRML_COMP_CACHE_DIR</em>.
 <p></p>
 </dd>
-<dt><b>GRML_COMP_CACHE_DIR</b></dt><dd>
+<dt><strong>GRML_COMP_CACHE_DIR</strong></dt><dd>
 This defines where zsh's completion caching data will be placed, if
-<i>$GRML_COMP_CACHING</i> is active. The default is <i>${ZDOTDIR:-$HOME}/.cache</i>.
+<em>$GRML_COMP_CACHING</em> is active. The default is <em>${ZDOTDIR:-$HOME}/.cache</em>.
 The setup will ensure the directory exists before attempting to use it.
 <p></p>
 </dd>
-<dt><b>GRML_DISPLAY_BATTERY</b></dt><dd>
-If set to a value greater than zero, <i>grmlzshrc</i> will put the battery status
-into the right hand side interactive prompt. Supported OSes are <i>GNU/Linux</i>,
-<i>FreeBSD</i>, <i>OpenBSD</i> and <i>Darwin</i>.
+<dt><strong>GRML_DISPLAY_BATTERY</strong></dt><dd>
+If set to a value greater than zero, <em>grmlzshrc</em> will put the battery status
+into the right hand side interactive prompt. Supported OSes are <em>GNU/Linux</em>,
+<em>FreeBSD</em>, <em>OpenBSD</em> and <em>Darwin</em>.
 <p></p>
 </dd>
-<dt><b>GRML_ZSH_CNF_HANDLER</b></dt><dd>
+<dt><strong>GRML_ZSH_CNF_HANDLER</strong></dt><dd>
 This variable contains the handler to be used by COMMAND_NOT_FOUND (see above)
 and defaults to "/usr/share/command-not-found/command-not-found".
 <p></p>
 </dd>
-<dt><b>GRML_NO_APT_ALIASES</b></dt><dd>
+<dt><strong>GRML_NO_APT_ALIASES</strong></dt><dd>
 A non-empty value inhibits the definition of apt-specific short aliases,
 such as ag, agi, ati etc.
 <p></p>
 </dd>
-<dt><b>GRML_NO_SMALL_ALIASES</b></dt><dd>
+<dt><strong>GRML_NO_SMALL_ALIASES</strong></dt><dd>
 A non-empty value inhibits the definition of 2-letter aliases such as da.
 ls, ll, la and other common ls-related aliases are exempt from this, as are
 the aliases inhibited by GRML_NO_APT_ALIASES.
 <p></p>
 </dd>
-<dt><b>GRMLSMALL_SPECIFIC</b></dt><dd>
+<dt><strong>GRMLSMALL_SPECIFIC</strong></dt><dd>
 Set this to zero to remove items in zsh config, which do not work in
 grml-small.
 <p></p>
 </dd>
-<dt><b>HISTFILE</b></dt><dd>
+<dt><strong>HISTFILE</strong></dt><dd>
 Where zsh saves the history. Default: ${HOME}/.zsh_history.
 <p></p>
 </dd>
-<dt><b>HISTSIZE</b></dt><dd>
+<dt><strong>HISTSIZE</strong></dt><dd>
 Number of commands to be kept in the history. On a Grml-CD this defaults to
 500, on a hard disk installation to 5000.
 <p></p>
 </dd>
-<dt><b>MAILCHECK</b></dt><dd>
+<dt><strong>MAILCHECK</strong></dt><dd>
 Sets the frequency in seconds for zsh to check for new mail. Defaults to 30.
 A value of zero turns off checking.
 <p></p>
 </dd>
-<dt><b>NOCOR</b></dt><dd>
+<dt><strong>NOCOR</strong></dt><dd>
 Non zero values deactivate automatic correction of commands.
 <p></p>
 </dd>
-<dt><b>NOMENU</b></dt><dd>
+<dt><strong>NOMENU</strong></dt><dd>
 If set to zero (default), allows selection from a menu, if there are at least
 five possible options of completion.
 <p></p>
 </dd>
-<dt><b>NOPRECMD</b></dt><dd>
+<dt><strong>NOPRECMD</strong></dt><dd>
 A non zero value disables precmd and preexec commands. These are functions
 that are run before every command (setting xterm/screen titles etc.).
 <p></p>
 </dd>
-<dt><b>REPORTTIME</b></dt><dd>
+<dt><strong>REPORTTIME</strong></dt><dd>
 Show time (user, system and cpu) used by external commands, if they run longer
 than the defined number of seconds (default: 5).
 <p></p>
 </dd>
-<dt><b>SAVEHIST</b></dt><dd>
+<dt><strong>SAVEHIST</strong></dt><dd>
 Number of commands to be stored in ${HISTFILE}. Defaults to 1000 on a Grml-CD
 and to 10000 on an installation on hard disk.
 <p></p>
 </dd>
-<dt><b>watch</b></dt><dd>
+<dt><strong>watch</strong></dt><dd>
 As in tcsh(1) an array of login/logout events to be reported by the shell
 builtin "log". For details see zshparam(1). Defaults to (notme root).
 <p></p>
 </dd>
-<dt><b>ZSH_NO_DEFAULT_LOCALE</b></dt><dd>
+<dt><strong>ZSH_NO_DEFAULT_LOCALE</strong></dt><dd>
 Import "/etc/default/locale", if set to zero (default).
 <p></p>
 </dd>
-<dt><b>ZSH_PROFILE_RC</b></dt><dd>
+<dt><strong>ZSH_PROFILE_RC</strong></dt><dd>
 A non zero value causes shell functions to be profiled. The results can be
 obtained with the zprof builtin command (see zshmodules(1) for details).
 <p></p>
 </dd>
-<dt><b>COMPDUMPFILE</b></dt><dd>
+<dt><strong>COMPDUMPFILE</strong></dt><dd>
 Specifies the location of the completion dump file. Default: $HOME/.zcompdump.
 </dd>
 </dl>
+
+</section>
+<section>
+<h1>GRML-ZSHRC SPECIFIC STYLES</h1>
+
+<p>
+Styles are a context sensitive configuration mechanism included with zsh. The
+shell uses it extensively in sub-systems like the completion and the VCS info
+system. It lives outside of the classic shell variable namespace, so it avoids
+polluting it. New functionality in grml's zshrc will likely use styles instead
+of variables. Some features of the setup (like the directory stack handling)
+already use styles. Those styles are documented with the specific features.
+This section documents more general styles.
+</p>
+
+<section>
+<h2>Context: :grml:completion:compinit</h2>
+
+<p>
+This context revolves around the zshrc's <em>compinit</em> function call, that
+initialises zsh's function based completion system.
+</p>
+
+<dl>
+<dt><strong>arguments</strong></dt><dd>
+This style allows the injection of arguments to the command line that is used
+to run compinit. It is a list style and its default is the empty list. Using
+this style, it's possible to add <strong>-i</strong> to <em>compinit</em> in order to disable
+<em>compaudit</em>.
+\
+
+<pre>
+zstyle ':grml:completion:compinit' arguments -i
+</pre>
+
+\
+Only do this, if you know what sort of security checks are disabled if
+<em>compaudit</em> is not active and if that's acceptable with your specific setup.
+\
+This style has to be set at the point that Grml's zshrc runs <em>compinit</em>. A
+possible way to achieve this is to set it in <em>~/.zshrc.pre</em> (see AUXILIARY
+FILES below for details).
+</dd>
+</dl>
+
+</section>
+</section>
+<section>
 <h1>FEATURE DESCRIPTION</h1>
+
 <p>
 This is an in depth description of non-standard features implemented by
-<i>grmlzshrc</i>.
+<em>grmlzshrc</em>.
 </p>
-<h2>DIRSTACK HANDLING</h2>
-<p>
-The dirstack in <i>grmlzshrc</i> has a persistent nature. It is stored into a
-file each time zsh's working directory is changed. That file can be configured
-via the <b>DIRSTACKFILE</b> variable and it defaults to <b>~/.zdirs</b>. The
-<b>DIRSTACKSIZE</b> variable defaults to <b>20</b> in this setup.
-</p>
-<p>
-The <b>DIRSTACKFILE</b> is loaded each time zsh starts, therefore freshly started
-zshs inherit the dirstack of the zsh that most recently updated
-<b>DIRSTACKFILE</b>.
-</p>
-<p>
-If you would like to <i>disable</i> the persistent dirstack feature altogether,
-you can do that by setting the boolean <i>enable</i> style to <i>false</i> in the
-right context (the default is <i>true</i>):
 
+<section>
+<h2>DIRSTACK HANDLING</h2>
+
+<p>
+The dirstack in <em>grmlzshrc</em> has a persistent nature. It is stored into a
+file each time zsh's working directory is changed. That file can be configured
+via the <strong>DIRSTACKFILE</strong> variable and it defaults to <strong>~/.zdirs</strong>. The
+<strong>DIRSTACKSIZE</strong> variable defaults to <strong>20</strong> in this setup.
 </p>
+<p>
+The <strong>DIRSTACKFILE</strong> is loaded each time zsh starts, therefore freshly started
+zshs inherit the dirstack of the zsh that most recently updated
+<strong>DIRSTACKFILE</strong>.
+</p>
+<p>
+If you would like to <em>disable</em> the persistent dirstack feature altogether,
+you can do that by setting the boolean <em>enable</em> style to <em>false</em> in the
+right context (the default is <em>true</em>):
+\
+</p>
+
 <pre>
 zstyle ':grml:chpwd:dirstack' enable false
 </pre>
+
 <p>
 It is possible to apply a filter to the names of directories that will be
 committed to the persistent dirstack file. There are two ways to configure this
 filter: A general function based filter and a pattern based filter. Both are
-setup via styles in the <b>':grml:chpwd:dirstack'</b> context.
+setup via styles in the <strong>':grml:chpwd:dirstack'</strong> context.
 </p>
 <p>
-To use a function based filter set the <i>filter</i> style for that context to the
+To use a function based filter set the <em>filter</em> style for that context to the
 name of a function to call every time a directory name is to be added to the
 persistent dirstack. If the function's return value signals success (ie. return
-value "0"), the directory name is filtered out and <b>not</b> added to the
+value "0"), the directory name is filtered out and <strong>not</strong> added to the
 persistent stack. Example:
-
+\
 </p>
+
 <pre>
 function my_dirstack_filter() { [[ $1 == /tmp(|/*) ]] }
 zstyle ':grml:chpwd:dirstack' filter my_dirstack_filter
 </pre>
+
 <p>
-The pattern based filter uses a list of patterns passed to the <i>exclude</i>
+The pattern based filter uses a list of patterns passed to the <em>exclude</em>
 style in the aforementioned context. Each pattern is tested and the first that
 matches will keep the directory name from being added to the persistent stack.
 If none of the patterns matches, the name is added. example:
-
+\
 </p>
+
 <pre>
 zstyle ':grml:chpwd:dirstack' exclude "/tmp(|/*)" "$HOME/tmp(|/*)"
 </pre>
+
 <p>
 The function based filter is more general, the pattern based filter easier to
 set up. If both filter variants are used at the same time, the function based
-filter will be executed <i>before</i> the pattern based one.
+filter will be executed <em>before</em> the pattern based one.
 </p>
 <p>
-If you would like to apply your filters while <i>loading</i> the persistent
-dirstack file, set the <i>filter-on-load</i> boolean style (the default is
-<i>false</i>):
-
+If you would like to apply your filters while <em>loading</em> the persistent
+dirstack file, set the <em>filter-on-load</em> boolean style (the default is
+<em>false</em>):
+\
 </p>
+
 <pre>
 zstyle ':grml:chpwd:dirstack' filter-on-load true
 </pre>
+
 <p>
-Setting the <i>filter-on-load</i> and <i>enable</i> styles needs to be done in
+Setting the <em>filter-on-load</em> and <em>enable</em> styles needs to be done in
 ".zshrc.pre" because the styles need to be set when the main setup is
 executing! The other styles do not have this limitation, but enabling the
 system as well as the initial filtering will obviously be done using settings
-and filters that are configured <b>at</b> <b>that</b> <b>point</b>.
+and filters that are configured <strong>at</strong> <strong>that</strong> <strong>point</strong>.
 </p>
 <p>
-With respect to <i>filter-on-load</i>, the rule of thumb is: If you want to filter
+With respect to <em>filter-on-load</em>, the rule of thumb is: If you want to filter
 on load, setup everything in ".zshrc.pre" otherwise ".zshrc.local" works just
 as well.
 </p>
+
+</section>
+<section>
 <h2>DIRECTORY BASED PROFILES</h2>
+
 <p>
 If you need to perform certain actions each time you enter certain
 directory-trees, this is the feature you are looking for.
 </p>
+
+<section>
 <h3>Initialisation</h3>
+
 <p>
 To initialise the system, you need to call the function `chpwd_profiles' at
-some point in your `zshrc.local'; preferably <b>after</b> you configured the
+some point in your `zshrc.local'; preferably <strong>after</strong> you configured the
 system. The configuration of the system is described further below.
 </p>
 <p>
 If you need to do initialisations the first time `chpwd_profiles' is called
 (which should be in your configuration file), you can do that in a function
-called "chpwd_profiles_init". That function needs to be defined <b>before</b>
+called "chpwd_profiles_init". That function needs to be defined <strong>before</strong>
 `chpwd_profiles' is called for this to work.
 </p>
 <p>
-During the <b>first</b> call of `chpwd_profiles' (and therefore all its profile
+During the <strong>first</strong> call of `chpwd_profiles' (and therefore all its profile
 functions) the parameter `$CHPWD_PROFILES_INIT' exists and is set to `1'. In
 all other cases, the parameter does not exist at all.
 </p>
+
+</section>
+<section>
 <h3>Styles and Profile-names</h3>
+
 <p>
-To store its configuration, the system uses <b>functions</b> and <b>styles</b>
+To store its configuration, the system uses <strong>functions</strong> and <strong>styles</strong>
 (zsh's context sensitive configuration system), such as this:
 </p>
 <p>
-
+\
 </p>
+
 <pre>
 zstyle ':chpwd:profiles:/usr/src/grml(|/|/*)'   profile grml
 zstyle ':chpwd:profiles:/usr/src/debian(|/|/*)' profile debian
 </pre>
+
 <p>
 When that's done and you enter a directory that matches the pattern in the
 third part of the context, a function called chpwd_profile_grml, for example,
@@ -296,13 +407,15 @@ A word about the context (the ':chpwd:profiles:*' stuff in the zstyle command)
 which is used: The third part in the context is matched against ${PWD}. That's
 why using a pattern such as /foo/bar(|/|/*) makes sense. Because that way the
 profile is detected for all these values of ${PWD}:
-
+\
 </p>
+
 <pre>
   /foo/bar
   /foo/bar/
   /foo/bar/baz
 </pre>
+
 <p>
 So, if you want to make double damn sure a profile works in /foo/bar and
 everywhere deeper in that tree, just use (|/|/*) and be happy.
@@ -312,31 +425,42 @@ The name of the detected profile will be available in a variable called
 'profile' in your functions. You don't need to do anything, it'll just be
 there.
 </p>
+
+</section>
+<section>
 <h3>Controlling Profile Execution</h3>
+
 <p>
 During its initialisation run, the system creates a parameter $CHPWD_PROFILE,
 which is set to the profile that was is currently active (the default value is
 "default"). That way you can avoid running code for a profile that is already
 active, by running code such as the following at the start of your function:
-
+\
 </p>
+
 <pre>
 function chpwd_profile_grml() {
     [[ ${profile} == ${CHPWD_PROFILE} ]] &amp;&amp; return 1
   ...
 }
 </pre>
+
 <p>
 If you know you are going to do that all the time for each and every
 directory-profile function you are ever going to write, you may also set the
 `re-execute' style to `false' (which only defaults to `true' for backwards
 compatibility), like this:
-
+\
 </p>
+
 <pre>
   zstyle ':chpwd:profiles:*' re-execute false
 </pre>
+
+</section>
+<section>
 <h3>Signaling availabily/profile changes</h3>
+
 <p>
 If you use this feature and need to know whether it is active in your current
 shell, there are several ways to do that. Here are two simple ways:
@@ -350,7 +474,7 @@ enough for you, you can use the following snippet:
 </p>
 <p>
 b) If that is not good enough, and you would prefer to be notified whenever a
-profile changes, you can solve that by making sure you start <b>every</b>
+profile changes, you can solve that by making sure you start <strong>every</strong>
 profile function you create like this:
 </p>
 <p>
@@ -361,219 +485,273 @@ function chpwd_profile_myprofilename() {
 }
 </p>
 <p>
-That makes sure you only get notified if a profile is <b>changed</b>, not
+That makes sure you only get notified if a profile is <strong>changed</strong>, not
 everytime you change directory. (To avoid this, you may also set the newer
 `re-execute' style like described further above instead of the test on top of
 the function.
 </p>
+
+</section>
+<section>
 <h3>Leaving Profiles</h3>
+
 <p>
 When the system switches from one profile to another, it executes a function
 named "chpwd_leave_profile_&lt;PREVIOUS-PROFILE-NAME&gt;()" before calling the
 profile-function for the new profile.
 </p>
+
+</section>
+<section>
 <h3>Version requirement</h3>
+
 <p>
-This feature requires zsh <i>4.3.3</i> or newer.
+This feature requires zsh <em>4.3.3</em> or newer.
 </p>
+
+</section>
+</section>
+<section>
 <h2>ACCEPTLINE WRAPPER</h2>
+
 <p>
-The <i>accept-line</i> wiget is the one that is taking action when the <b>return</b>
-key is hit. <i>grmlzshrc</i> uses a wrapper around that widget, which adds new
+The <em>accept-line</em> wiget is the one that is taking action when the <strong>return</strong>
+key is hit. <em>grmlzshrc</em> uses a wrapper around that widget, which adds new
 functionality.
 </p>
 <p>
 This wrapper is configured via styles. That means, you issue commands, that look
 like:
-
+\
 </p>
+
 <pre>
 zstyle 'context' style value
 </pre>
+
 <p>
 The context namespace, that we are using is 'acceptline'. That means, the actual
-context for your commands look like: <b>':acceptline:&lt;subcontext&gt;'</b>.
+context for your commands look like: <strong>':acceptline:&lt;subcontext&gt;'</strong>.
 </p>
 <p>
-Where <b>&lt;subcontext&gt;</b> is one of: <b>default</b>, <b>normal</b>, <b>force</b>, <b>misc</b>
-or <b>empty</b>.
+Where <strong>&lt;subcontext&gt;</strong> is one of: <strong>default</strong>, <strong>normal</strong>, <strong>force</strong>, <strong>misc</strong>
+or <strong>empty</strong>.
 </p>
+
+<section>
 <h3>Recognized Contexts</h3>
+
 <dl>
-<dt><b>default</b></dt><dd>
+<dt><strong>default</strong></dt><dd>
 This is the value, the context is initialized with.
-The <i>compwarnfmt and //rehash</i> styles are looked up in this context.
+The <em>compwarnfmt and //rehash</em> styles are looked up in this context.
 <p></p>
 </dd>
-<dt><b>normal</b></dt><dd>
+<dt><strong>normal</strong></dt><dd>
 If the first word in the command line is either a command, alias, function,
 builtin or reserved word, you are in this context.
 <p></p>
 </dd>
-<dt><b>force</b></dt><dd>
+<dt><strong>force</strong></dt><dd>
 This is the context, that is used if you hit enter again, after being warned
 about the existence of a _completion for the non-existing command you
 entered.
 <p></p>
 </dd>
-<dt><b>empty</b></dt><dd>
+<dt><strong>empty</strong></dt><dd>
 This is the context, you are in if the command line is empty or only
 consists of whitespace.
 <p></p>
 </dd>
-<dt><b>misc</b></dt><dd>
+<dt><strong>misc</strong></dt><dd>
 This context is in effect, if you entered something that does not match any
 of the above. (e.g.: variable assignments).
 </dd>
 </dl>
+
+</section>
+<section>
 <h3>Available Styles</h3>
+
 <dl>
-<dt><b>nocompwarn</b></dt><dd>
+<dt><strong>nocompwarn</strong></dt><dd>
 If you set this style to true, the warning about non existent commands,
-for which completions exist will not be issued. (Default: <b>false</b>)
+for which completions exist will not be issued. (Default: <strong>false</strong>)
 <p></p>
 </dd>
-<dt><b>compwarnfmt</b></dt><dd>
+<dt><strong>compwarnfmt</strong></dt><dd>
 The message, that is displayed to warn about the _completion issue.
-(default: <b>'%c will not execute and completion %f exists.'</b>)
+(default: <strong>'%c will not execute and completion %f exists.'</strong>)
 '%c' is replaced by the command name, '%f' by the completion's name.
 <p></p>
 </dd>
-<dt><b>rehash</b></dt><dd>
+<dt><strong>rehash</strong></dt><dd>
 If this is set, we'll force rehashing, if appropriate. (Defaults to
-<b>true</b> in <i>grmlzshrc</i>).
+<strong>true</strong> in <em>grmlzshrc</em>).
 <p></p>
 </dd>
-<dt><b>actions</b></dt><dd>
+<dt><strong>actions</strong></dt><dd>
 This can be a list of wigdets to call in a given context. If you need a
 specific order for these to be called, name them accordingly. The default value
-is an <b>empty list</b>.
+is an <strong>empty list</strong>.
 <p></p>
 </dd>
-<dt><b>default_action</b></dt><dd>
+<dt><strong>default_action</strong></dt><dd>
 The name of a widget, that is called after the widgets from 'actions'.
 By default, this will be '.accept-line' (which is the built-in accept-line
 widget).
 <p></p>
 </dd>
-<dt><b>call_default</b></dt><dd>
+<dt><strong>call_default</strong></dt><dd>
 If true in the current context, call the widget in the 'default_action'
-style. (The default is <b>true</b> in all contexts.)
+style. (The default is <strong>true</strong> in all contexts.)
 </dd>
 </dl>
+
+</section>
+</section>
+<section>
 <h2>PROMPT</h2>
+
 <p>
-The <i>grmlzshrc</i> now supplies three prompt themes compatible with zsh's
-<b>promptinit</b> system. The three themes are called <b>grml</b>, <b>grml-large</b> and
-<b>grml-chroot</b>.
+The <em>grmlzshrc</em> now supplies three prompt themes compatible with zsh's
+<strong>promptinit</strong> system. The three themes are called <strong>grml</strong>, <strong>grml-large</strong> and
+<strong>grml-chroot</strong>.
 </p>
 <p>
-By default, <b>grml</b> is used, unless <i>$GRMLPROMPT</i> is set to a value larger
-than zero, in which case <b>grml-large</b> is used. Lastly, if <i>$GRML_CHROOT</i> is
-non-empty, <b>grml-chroot</b> is used.
+By default, <strong>grml</strong> is used, unless <em>$GRMLPROMPT</em> is set to a value larger
+than zero, in which case <strong>grml-large</strong> is used. Lastly, if <em>$GRML_CHROOT</em> is
+non-empty, <strong>grml-chroot</strong> is used.
 </p>
 <p>
 As usual, with promptinit themes, the user may switch to a different theme using
-the <i>prompt</i> utility:
-
+the <em>prompt</em> utility:
+\
 </p>
+
 <pre>
     prompt grml-large
 </pre>
+
 <p>
-That will use the <b>grml-large</b> prompt theme.
+That will use the <strong>grml-large</strong> prompt theme.
 </p>
 <p>
 The themes are highly customisable. The main source of documentation about
-customisation is the main <b>grml</b> theme's doc-string, that is available via
+customisation is the main <strong>grml</strong> theme's doc-string, that is available via
 the following command:
-
+\
 </p>
+
 <pre>
     prompt -h grml
 </pre>
+
 <p>
 The other themes also come with doc-strings, but the main theme's is the
 canonical reference about all of them.
 </p>
 <p>
-This feature requires version <i>4.3.7</i> of the shell. Older versions will use
+This feature requires version <em>4.3.7</em> of the shell. Older versions will use
 the classic grml prompt as a fallback.
 </p>
 <p>
-A note to people who like customisation: If you are <b>not</b> using a prompt
+A note to people who like customisation: If you are <strong>not</strong> using a prompt
 theme for your customisation, but you're either statically setting $PS1 (or
 $PROMPT) or you're constructing one of those variables in zsh's \`precmd()'
-function, make sure you are turning the zsh's prompt theme system <b>off</b>
+function, make sure you are turning the zsh's prompt theme system <strong>off</strong>
 before doing so. A correct example customisation could look like this:
-
+\
 </p>
+
 <pre>
     # Turn the prompt system off:
     prompt off
     # Customise the prompt yourself:
     PS1='%~ %# '
 </pre>
+
 <p>
 You also add your own tokens by using the \`grml_theme_add_token()' function.
 Call the function without arguments for detailed documentation about that
 procedure.
 </p>
+
+</section>
+<section>
 <h2>GNU/SCREEN STATUS SETTING</h2>
+
 <p>
-<i>grmlzshrc</i> sets screen's hardstatus lines to the currently running command
-or <b>'zsh'</b> if the shell is idling at its prompt. If the current working
+<em>grmlzshrc</em> sets screen's hardstatus lines to the currently running command
+or <strong>'zsh'</strong> if the shell is idling at its prompt. If the current working
 directory is inside a repository unter version control, screen status is set
-to: <b>'zsh: &lt;repository name&gt;'</b> via zsh's vcs_info.
+to: <strong>'zsh: &lt;repository name&gt;'</strong> via zsh's vcs_info.
 </p>
+
+</section>
+<section>
 <h2>PERSISTENT HISTORY</h2>
+
 <p>
 If you got commands you consider important enough to be included in every
 shell's history, you can put them into $GRML_IMPORTANT_COMMANDS (which defaults
 for backward compatibility to ~/.important_commands) and they will be available
 via the usual history lookup widgets.
 </p>
+
+</section>
+</section>
+<section>
 <h1>REFERENCE</h1>
+
+<section>
 <h2>ENVIRONMENT VARIABLES</h2>
+
 <p>
-<i>grmlzshrc</i> sets some environment variables, which influence the
+<em>grmlzshrc</em> sets some environment variables, which influence the
 behaviour of applications.
 </p>
+
 <dl>
-<dt><b>COLORTERM</b></dt><dd>
+<dt><strong>COLORTERM</strong></dt><dd>
 Set to "yes". Some applications read this to learn about properties
 of the terminal they are running in.
 <p></p>
 </dd>
-<dt><b>EDITOR</b></dt><dd>
+<dt><strong>EDITOR</strong></dt><dd>
 If not already set, sets the default editor. Falls back to vi(1),
 if vim(1) is not available.
 <p></p>
 </dd>
-<dt><b>LESS_TERMCAP_*</b></dt><dd>
+<dt><strong>LESS_TERMCAP_*</strong></dt><dd>
 Some environment variables that add colour support to less(1) for viewing
 man pages. See termcap(5) for details.
 <p></p>
 </dd>
-<dt><b>MAIL</b></dt><dd>
+<dt><strong>MAIL</strong></dt><dd>
 The mailbox file for the current user is set to /var/mail/$USER, if not
 already set otherwise.
 <p></p>
 </dd>
-<dt><b>PAGER</b></dt><dd>
+<dt><strong>PAGER</strong></dt><dd>
 Set less(1) as default pager, if not already set to something different.
 </dd>
 </dl>
+
+</section>
+<section>
 <h2>OPTIONS</h2>
+
 <p>
-Apart from zsh's default options, <i>grmlzshrc</i> sets some options
+Apart from zsh's default options, <em>grmlzshrc</em> sets some options
 that change the behaviour of zsh. Options that change Z-shell's default
 settings are marked by &lt;grml&gt;. But note, that zsh's defaults vary depending
 on its emulation mode (csh, ksh, sh, or zsh). For details, see zshoptions(1).
 </p>
+
 <dl>
-<dt><b>append_history</b></dt><dd>
-Zsh sessions, that use <i>grmlzshrc</i>, will append their history list to the
+<dt><strong>append_history</strong></dt><dd>
+Zsh sessions, that use <em>grmlzshrc</em>, will append their history list to the
 history file, rather than replace it. Thus, multiple parallel zsh sessions
 will all have the new entries from their history lists added to the history
 file, in the order that they exit. The file will still be periodically
@@ -581,80 +759,80 @@ re-written to trim it when the number of lines grows 20% beyond the value
 specified by $SAVEHIST.
 <p></p>
 </dd>
-<dt><b>auto_cd</b> &lt;grml&gt;</dt><dd>
+<dt><strong>auto_cd</strong> &lt;grml&gt;</dt><dd>
 If a command is issued that can't be executed as a normal command, and the
 command is the name of a directory, perform the cd command to that directory.
 <p></p>
 </dd>
-<dt><b>auto_pushd</b> &lt;grml&gt;</dt><dd>
+<dt><strong>auto_pushd</strong> &lt;grml&gt;</dt><dd>
 Make cd push the old directory onto the directory stack.
 <p></p>
 </dd>
-<dt><b>completeinword</b> &lt;grml&gt;</dt><dd>
+<dt><strong>completeinword</strong> &lt;grml&gt;</dt><dd>
 If the cursor is inside a word, completion is done from both ends;
 instead of moving the cursor to the end of the word first and starting
 from there.
 <p></p>
 </dd>
-<dt><b>extended_glob</b> &lt;grml&gt;</dt><dd>
+<dt><strong>extended_glob</strong> &lt;grml&gt;</dt><dd>
 Treat the '#', '~' and '^' characters as active globbing pattern characters.
 <p></p>
 </dd>
-<dt><b>extended_history</b> &lt;grml&gt;</dt><dd>
+<dt><strong>extended_history</strong> &lt;grml&gt;</dt><dd>
 Save each command's beginning timestamp (in seconds since the epoch) and the
 duration (in seconds) to the history file.
 <p></p>
 </dd>
-<dt><b>hash_list_all</b></dt><dd>
+<dt><strong>hash_list_all</strong></dt><dd>
 Whenever a command completion is attempted, make sure the entire command
 path is hashed first. This makes the first completion slower.
 <p></p>
 </dd>
-<dt><b>histignorealldups</b> &lt;grml&gt;</dt><dd>
+<dt><strong>histignorealldups</strong> &lt;grml&gt;</dt><dd>
 If a new command line being added to the history list duplicates an
 older one, the older command is removed from the list, even if it is
 not the previous event.
 <p></p>
 </dd>
-<dt><b>histignorespace</b> &lt;grml&gt;</dt><dd>
+<dt><strong>histignorespace</strong> &lt;grml&gt;</dt><dd>
 Remove command lines from the history list when the first character on
 the line is a space, or when one of the expanded aliases contains a
 leading space. Note that the command lingers in the internal history
 until the next command is entered before it vanishes.
 <p></p>
 </dd>
-<dt><b>longlistjobs</b> &lt;grml&gt;</dt><dd>
+<dt><strong>longlistjobs</strong> &lt;grml&gt;</dt><dd>
 List jobs in long format by default.
 <p></p>
 </dd>
-<dt><b>nobeep</b> &lt;grml&gt;</dt><dd>
+<dt><strong>nobeep</strong> &lt;grml&gt;</dt><dd>
 Avoid to beep on errors in zsh command line editing (zle).
 <p></p>
 </dd>
-<dt><b>noglobdots</b></dt><dd>
+<dt><strong>noglobdots</strong></dt><dd>
 A wildcard character never matches a leading '.'.
 <p></p>
 </dd>
-<dt><b>nohup</b> &lt;grml&gt;</dt><dd>
+<dt><strong>nohup</strong> &lt;grml&gt;</dt><dd>
 Do not send the hangup signal (HUP:1) to running jobs when the shell exits.
 <p></p>
 </dd>
-<dt><b>nonomatch</b> &lt;grml&gt;</dt><dd>
+<dt><strong>nonomatch</strong> &lt;grml&gt;</dt><dd>
 If a pattern for filename generation has no matches, do not print an error
 and leave it unchanged in the argument list. This also applies to file
 expansion of an initial `~' or `='.
 <p></p>
 </dd>
-<dt><b>notify</b></dt><dd>
+<dt><strong>notify</strong></dt><dd>
 Report the status of background jobs immediately, rather than waiting until
 just before printing a prompt.
 <p></p>
 </dd>
-<dt><b>pushd_ignore_dups</b> &lt;grml&gt;</dt><dd>
+<dt><strong>pushd_ignore_dups</strong> &lt;grml&gt;</dt><dd>
 Don't push multiple copies of the same directory onto the directory stack.
 <p></p>
 </dd>
-<dt><b>share_history</b> &lt;grml&gt;</dt><dd>
+<dt><strong>share_history</strong> &lt;grml&gt;</dt><dd>
 As each line is added to the history file, it is checked to see if anything
 else was written out by another shell, and if so it is included in the
 history of the current shell too. Using !-style history, the commands from
@@ -663,166 +841,182 @@ type the "history" command. This option is activated for zsh versions &gt;= 4,
 only.
 </dd>
 </dl>
+
+</section>
+<section>
 <h2>KEYBINDINGS</h2>
+
 <p>
-Apart from zsh's default key bindings, <i>grmlzshrc</i> comes with its own set of
-key bindings. Note that bindings like <b>ESC-e</b> can also be typed as <b>ALT-e</b>
+Apart from zsh's default key bindings, <em>grmlzshrc</em> comes with its own set of
+key bindings. Note that bindings like <strong>ESC-e</strong> can also be typed as <strong>ALT-e</strong>
 on PC keyboards.
 </p>
+
 <dl>
-<dt><b>ESC-e</b></dt><dd>
+<dt><strong>ESC-e</strong></dt><dd>
 Edit the current command buffer in your favourite editor.
 <p></p>
 </dd>
-<dt><b>ESC-v</b></dt><dd>
+<dt><strong>ESC-v</strong></dt><dd>
 Deletes a word left of the cursor; seeing '/' as additional word separator.
 <p></p>
 </dd>
-<dt><b>CTRL-x-1</b></dt><dd>
+<dt><strong>CTRL-x-1</strong></dt><dd>
 Jump right after the first word.
 <p></p>
 </dd>
-<dt><b>CTRL-x-M()</b></dt><dd>
+<dt><strong>CTRL-x-M()</strong></dt><dd>
 Create directory under cursor or the selected area.
 To select an area press ctrl-@ and use the cursor.
 Use case: you type "mv abc ~/testa/testb/testc/" and remember that the
-directory does not exist yet -&gt; press <b>CTRL-xM</b> and problem solved.
+directory does not exist yet -&gt; press <strong>CTRL-xM</strong> and problem solved.
 <p></p>
 </dd>
-<dt><b>CTRL-x-p</b></dt><dd>
-Searches the last occurence of string before the cursor in the command history.
+<dt><strong>CTRL-x-p</strong></dt><dd>
+Searches the last occurrence of string before the cursor in the command history.
 <p></p>
 </dd>
-<dt><b>CTRL-x-z</b></dt><dd>
+<dt><strong>CTRL-x-z</strong></dt><dd>
 Display help on keybindings and zsh line editor. Press consecutively to page through content.
 <p></p>
 </dd>
-<dt><b>CTRL-z</b></dt><dd>
+<dt><strong>CTRL-z</strong></dt><dd>
 Brings a job, which got suspended with CTRL-z back to foreground.
 </dd>
 </dl>
+
+<section>
 <h3>Customisation</h3>
+
 <p>
 To customise keybindings, you can just use zsh's bindkey utility. However, if
-you plan to to use the `<i>zle-line-init</i>' or `<i>zle-line-finish</i>' hooks
+you plan to use the `<em>zle-line-init</em>' or `<em>zle-line-finish</em>' hooks
 yourself, make sure you call the following functions in the respective hook:
 </p>
+
 <ul>
-<li><b>zle-line-init</b>: <i>zle-smkx</i>
+<li><strong>zle-line-init</strong>: <em>zle-smkx</em>
 </li>
-<li><b>zle-line-finish</b>: <i>zle-rmkx</i>
+<li><strong>zle-line-finish</strong>: <em>zle-rmkx</em>
 </li>
 </ul>
+
 <p>
-This is <b>required</b> so the keybindings set up by <i>grmlzshrc</i> work. The
+This is <strong>required</strong> so the keybindings set up by <em>grmlzshrc</em> work. The
 reason for this is to turn the terminal into the right mode while zsh's line
-editor (zle) is running. This enables us to query <i>terminfo</i> about escape
+editor (zle) is running. This enables us to query <em>terminfo</em> about escape
 sequences for special keys and thus simplify and generalise our keybinding
 section.
 </p>
+
+</section>
+</section>
+<section>
 <h2>SHELL FUNCTIONS</h2>
+
 <p>
-<i>grmlzshrc</i> comes with a wide array of defined shell functions to ease the
+<em>grmlzshrc</em> comes with a wide array of defined shell functions to ease the
 user's life.
 </p>
+
 <dl>
-<dt><b>855resolution()</b></dt><dd>
+<dt><strong>855resolution()</strong></dt><dd>
 If 915resolution is available, issues a warning to the user to run it instead
 to modify the resolution on intel graphics chipsets.
 <p></p>
 </dd>
-<dt><b>accessed()</b></dt><dd>
+<dt><strong>accessed()</strong></dt><dd>
 Lists files in current directory, which have been accessed within the
 last N days. N is an integer to be passed as first and only argument.
 If no argument is specified N is set to 1.
 <p></p>
 </dd>
-<dt><b>any()</b></dt><dd>
+<dt><strong>any()</strong></dt><dd>
 Lists processes matching given pattern.
 <p></p>
 </dd>
-<dt><b>asc()</b></dt><dd>
+<dt><strong>asc()</strong></dt><dd>
 Login on the host provided as argument using autossh. Then reattach a GNU screen
 session if a detached session is around or detach a currently attached screen or
 else start a new screen.  This is especially useful for roadwarriors using GNU
 screen and ssh.
 <p></p>
 </dd>
-<dt><b>bk()</b></dt><dd>
+<dt><strong>bk()</strong></dt><dd>
 Simple backup management of a file or directory using standard unix programs.
 The target file name is the original name plus a time stamp attached. Symlinks
 and file attributes like mode, ownership and timestamps are preserved.
 <p></p>
 </dd>
-<dt><b>cdrecord()</b></dt><dd>
+<dt><strong>cdrecord()</strong></dt><dd>
 If the original cdrecord is not installed, issues a warning to the user to
 use the wodim binary instead. Wodim is the debian fork of Joerg Schillings
 cdrecord.
 <p></p>
 </dd>
-<dt><b>cdt()</b></dt><dd>
+<dt><strong>cdt()</strong></dt><dd>
 Creates a temporary directory using mktemp. Then changes current
 working directory to it.
 <p></p>
 </dd>
-<dt><b>changed()</b></dt><dd>
+<dt><strong>changed()</strong></dt><dd>
 Lists files in current directory, which have been changed within the
 last N days. N is an integer to be passed as first and only argument.
 If no argument is specified N is set to 1.
 <p></p>
 </dd>
-<dt><b>check_com()</b></dt><dd>
+<dt><strong>check_com()</strong></dt><dd>
 Returns true if given command exists either as program, function, alias,
 builtin or reserved word. If the option -c is given, only returns true,
 if command is a program.
 <p></p>
 </dd>
-<dt><b>checkhome()</b></dt><dd>
+<dt><strong>checkhome()</strong></dt><dd>
 Changes directory to $HOME on first invocation of zsh. This is necessary on
 Grml systems with autologin.
 <p></p>
 </dd>
-<dt><b>cl()</b></dt><dd>
+<dt><strong>cl()</strong></dt><dd>
 Changes current directory to the one supplied by argument and lists the files
 in it, including file names starting with ".".
 <p></p>
 </dd>
-<dt><b>dchange()</b></dt><dd>
+<dt><strong>dchange()</strong></dt><dd>
 Shows the changelog of given package in $PAGER.
 <p></p>
 </dd>
-<dt><b>dcopyright()</b></dt><dd>
+<dt><strong>dcopyright()</strong></dt><dd>
 Shows the copyright of given package in $PAGER.
 <p></p>
 </dd>
-<dt><b>debian2hd()</b></dt><dd>
+<dt><strong>debian2hd()</strong></dt><dd>
 Tells the user to use grml-debootstrap, if she wants to install debian to
 harddisk.
 <p></p>
 </dd>
-<dt><b>deswap()</b></dt><dd>
+<dt><strong>deswap()</strong></dt><dd>
 A trick from $LINUX-KERNELSOURCE/Documentation/power/swsusp.txt. It brings
 back interactive responsiveness after suspend, when the system is swapping
 heavily.
 <p></p>
 </dd>
-<dt><b>dnews()</b></dt><dd>
+<dt><strong>dnews()</strong></dt><dd>
 Shows the NEWS file for the given package in $PAGER.
 <p></p>
 </dd>
-<dt><b>edalias()</b></dt><dd>
+<dt><strong>edalias()</strong></dt><dd>
 Edit given alias.
 <p></p>
 </dd>
-<dt><b>edfunc()</b></dt><dd>
+<dt><strong>edfunc()</strong></dt><dd>
 Edit given shell function.
 <p></p>
 </dd>
-<dt><b>freload()</b></dt><dd>
+<dt><strong>freload()</strong></dt><dd>
 Reloads an autoloadable shell function (See autoload in zshbuiltins(1)).
 <p></p>
 </dd>
-<dt><b>grml_vcs_info_toggle_colour()</b></dt><dd>
+<dt><strong>grml_vcs_info_toggle_colour()</strong></dt><dd>
 Toggles between coloured and uncoloured formats in vcs_info configuration.
 This is useful with prompts that break if colour codes are in vcs_info
 format expansions (like the `clint' prompt and every other prompt that
@@ -832,115 +1026,117 @@ it will set all formats to grml's default values (either coloured or plain)
 again.
 <p></p>
 </dd>
-<dt><b>hgdi()</b></dt><dd>
+<dt><strong>hgdi()</strong></dt><dd>
 Use GNU diff with options -ubwd for mercurial.
 <p></p>
 </dd>
-<dt><b>hgstat()</b></dt><dd>
+<dt><strong>hgstat()</strong></dt><dd>
 Displays diffstat between the revision given as argument and tip (no
 argument means last revision).
 <p></p>
 </dd>
-<dt><b>hidiff()</b></dt><dd>
+<dt><strong>hidiff()</strong></dt><dd>
 Outputs highlighted diff; needs highstring(1).
 <p></p>
 </dd>
-<dt><b>is4()</b></dt><dd>
+<dt><strong>is4()</strong></dt><dd>
 Returns true, if zsh version is equal or greater than 4, else false.
 <p></p>
 </dd>
-<dt><b>is41()</b></dt><dd>
+<dt><strong>is41()</strong></dt><dd>
 Returns true, if zsh version is equal or greater than 4.1, else false.
 <p></p>
 </dd>
-<dt><b>is42()</b></dt><dd>
+<dt><strong>is42()</strong></dt><dd>
 Returns true, if zsh version is equal or greater than 4.2, else false.
 <p></p>
 </dd>
-<dt><b>is425()</b></dt><dd>
+<dt><strong>is425()</strong></dt><dd>
 Returns true, if zsh version is equal or greater than 4.2.5, else false.
 <p></p>
 </dd>
-<dt><b>is43()</b></dt><dd>
+<dt><strong>is43()</strong></dt><dd>
 Returns true, if zsh version is equal or greater than 4.3, else false.
 <p></p>
 </dd>
-<dt><b>is433()</b></dt><dd>
+<dt><strong>is433()</strong></dt><dd>
 Returns true, if zsh version is equal or greater than 4.3.3, else false.
 <p></p>
 </dd>
-<dt><b>isdarwin()</b></dt><dd>
+<dt><strong>isdarwin()</strong></dt><dd>
 Returns true, if running on darwin, else false.
 <p></p>
 </dd>
-<dt><b>isfreebsd()</b></dt><dd>
+<dt><strong>isfreebsd()</strong></dt><dd>
 Returns true, if running on FreeBSD, else false.
 <p></p>
 </dd>
-<dt><b>isgrml()</b></dt><dd>
+<dt><strong>isgrml()</strong></dt><dd>
 Returns true, if running on a grml system, else false.
 <p></p>
 </dd>
-<dt><b>isgrmlcd()</b></dt><dd>
+<dt><strong>isgrmlcd()</strong></dt><dd>
 Returns true, if running on a grml system from a live cd, else false.
 <p></p>
 </dd>
-<dt><b>isgrmlsmall()</b></dt><dd>
+<dt><strong>isgrmlsmall()</strong></dt><dd>
 Returns true, if run on grml-small, else false.
 <p></p>
 </dd>
-<dt><b>islinux()</b></dt><dd>
+<dt><strong>islinux()</strong></dt><dd>
 Returns true, if running on Linux, else false.
 <p></p>
 </dd>
-<dt><b>iso2utf()</b></dt><dd>
+<dt><strong>iso2utf()</strong></dt><dd>
 Changes every occurrence of the string iso885915 or ISO885915 in
 environment variables to UTF-8.
 <p></p>
 </dd>
-<dt><b>isopenbsd()</b></dt><dd>
+<dt><strong>isopenbsd()</strong></dt><dd>
 Returns true, if running on OpenBSD, else false.
 <p></p>
 </dd>
-<dt><b>isutfenv()</b></dt><dd>
+<dt><strong>isutfenv()</strong></dt><dd>
 Returns true, if run within an utf environment, else false.
 <p></p>
 </dd>
-<dt><b>mkcd()</b></dt><dd>
+<dt><strong>mkcd()</strong></dt><dd>
 Creates directory including parent directories, if necessary. Then changes
 current working directory to it.
 <p></p>
 </dd>
-<dt><b>modified()</b></dt><dd>
+<dt><strong>modified()</strong></dt><dd>
 Lists files in current directory, which have been modified within the
 last N days. N is an integer to be passed as first and only argument.
 If no argument is specified N is set to 1.
 <p></p>
 </dd>
-<dt><b>nt()</b></dt><dd>
+<dt><strong>nt()</strong></dt><dd>
 A helper function for the "e" glob qualifier to list all files newer
 than a reference file.
-
+\
 Example usages:
+
 <pre>
 % NTREF=/reference/file
 % ls -l *(e:nt:)
 % # Inline:
 % ls -l *(e:'nt /reference/file':)
 </pre>
+
 <p></p>
 </dd>
-<dt><b>profile()</b></dt><dd>
+<dt><strong>profile()</strong></dt><dd>
 Runs a command in zsh with profiling enabled (See startup variable
 ZSH_PROFILE_RC above).
 <p></p>
 </dd>
-<dt><b>salias()</b></dt><dd>
-Creates an alias whith sudo prepended, if $EUID is not zero. Run "salias -h"
+<dt><strong>salias()</strong></dt><dd>
+Creates an alias with sudo prepended, if $EUID is not zero. Run "salias -h"
 for details. See also xunfunction() below.
 <p></p>
 </dd>
-<dt><b>simple-extract()</b></dt><dd>
+<dt><strong>simple-extract()</strong></dt><dd>
 Tries to uncompress/unpack given files with the appropriate programs. If an URI
 starting with https, http or ftp is provided simple-extract tries to download
 and then uncompress/unpack the file. The choice is made along the filename
@@ -948,133 +1144,140 @@ ending. simple-extract will not delete the original archive (even on .gz,.bz2 or
 .xz) unless you use the '-d' option.
 <p></p>
 </dd>
-<dt><b>sll()</b></dt><dd>
+<dt><strong>sll()</strong></dt><dd>
 Prints details of symlinks given as arguments.
 <p></p>
 </dd>
-<dt><b>ssl-cert-fingerprints</b></dt><dd>
+<dt><strong>ssl-cert-fingerprints</strong></dt><dd>
 Prints the SHA512, SHA256, SHA1 and MD5 digest of a x509 certificate.
 First and only parameter must be a file containing a certificate. Use
 /dev/stdin as file if you want to pipe a certificate to these
 functions.
 <p></p>
 </dd>
-<dt><b>ssl-cert-info</b></dt><dd>
+<dt><strong>ssl-cert-info</strong></dt><dd>
 Prints all information of a x509 certificate including the SHA512,
 SHA256, SHA1 and MD5 digests. First and only parameter must be a file
 containing a certificate. Use /dev/stdin as file if you want to pipe a
 certificate to this function.
 <p></p>
 </dd>
-<dt><b>ssl-cert-sha512(), ssl-cert-sha256(), ssl-cert-sha1(), ssl-cert-md5()</b></dt><dd>
+<dt><strong>ssl-cert-sha512(), ssl-cert-sha256(), ssl-cert-sha1(), ssl-cert-md5()</strong></dt><dd>
 Prints the SHA512, SHA256, SHA1 respective MD5 digest of a x509
 certificate. First and only parameter must be a file containing a
 certificate. Use /dev/stdin as file if you want to pipe a certificate
 to this function.
 <p></p>
 </dd>
-<dt><b>Start(), Restart(), Stop(), Force-Reload(), Reload()</b></dt><dd>
+<dt><strong>Start(), Restart(), Stop(), Force-Reload(), Reload()</strong></dt><dd>
 Functions for controlling daemons.
+
 <pre>
 Example usage:
 % Restart ssh
 </pre>
+
 <p></p>
 </dd>
-<dt><b>trans()</b></dt><dd>
+<dt><strong>trans()</strong></dt><dd>
 Translates a word from german to english (-D) or vice versa (-E).
 <p></p>
 </dd>
-<dt><b>uchange()</b></dt><dd>
+<dt><strong>uchange()</strong></dt><dd>
 Shows upstreams changelog of a given package in $PAGER.
 <p></p>
 </dd>
-<dt><b>uprint()</b></dt><dd>
+<dt><strong>uprint()</strong></dt><dd>
 Works around the "print -l ${(u)foo}"-limitation on zsh older than 4.2.
 <p></p>
 </dd>
-<dt><b>utf2iso()</b></dt><dd>
+<dt><strong>utf2iso()</strong></dt><dd>
 Changes every occurrence of the string UTF-8 or utf-8 in environment
 variables to iso885915.
 <p></p>
 </dd>
-<dt><b>vim()</b></dt><dd>
+<dt><strong>vim()</strong></dt><dd>
 Wrapper for vim(1). It tries to set the title and hands vim the environment
 variable VIM_OPTIONS on the command line. So the user may define command
 line options, she always wants, in her .zshrc.local.
 <p></p>
 </dd>
-<dt><b>whatwhen()</b></dt><dd>
+<dt><strong>whatwhen()</strong></dt><dd>
 Searches the history for a given pattern and lists the results by date.
 The first argument is the search pattern. The second and third ones are
 optional and denote a search range (default: -100).
 <p></p>
 </dd>
-<dt><b>xcat()</b></dt><dd>
+<dt><strong>xcat()</strong></dt><dd>
 Tries to cat(1) file(s) given as parameter(s). Always returns true.
 See also xunfunction() below.
 <p></p>
 </dd>
-<dt><b>xsource()</b></dt><dd>
+<dt><strong>xsource()</strong></dt><dd>
 Tries to source the file(s) given as parameter(s). Always returns true.
 See zshbuiltins(1) for a detailed description of the source command.
 See also xunfunction() below.
 <p></p>
 </dd>
-<dt><b>xtrename()</b></dt><dd>
+<dt><strong>xtrename()</strong></dt><dd>
 Changes the title of xterm window from within screen(1). Run without
 arguments for details.
 <p></p>
 </dd>
-<dt><b>xunfunction()</b></dt><dd>
+<dt><strong>xunfunction()</strong></dt><dd>
 Removes the functions salias, xcat, xsource, xunfunction and zrcautoload.
 <p></p>
 </dd>
-<dt><b>zrcautoload()</b></dt><dd>
+<dt><strong>zrcautoload()</strong></dt><dd>
 Wrapper around the autoload builtin. Loads the definitions of functions
 from the file given as argument. Searches $fpath for the file. See also
 xunfunction() above.
 <p></p>
 </dd>
-<dt><b>zrclocal()</b></dt><dd>
+<dt><strong>zrclocal()</strong></dt><dd>
 Sources /etc/zsh/zshrc.local and ${HOME}/.zshrc.local. These are the files
 where own modifications should go. See also zshbuiltins(1) for a description
 of the source command.
 </dd>
 </dl>
+
+</section>
+<section>
 <h2>ALIASES</h2>
+
 <p>
-<i>grmlzshrc</i> comes with a wide array of predefined aliases to ease the user's
-life. A few aliases (like those involving <i>grep</i> or <i>ls</i>) use the option
-<i>--color=auto</i> for colourizing output. That option is part of <b>GNU</b>
+<em>grmlzshrc</em> comes with a wide array of predefined aliases to ease the user's
+life. A few aliases (like those involving <em>grep</em> or <em>ls</em>) use the option
+<em>--color=auto</em> for colourizing output. That option is part of <strong>GNU</strong>
 implementations of these tools, and will only be used if such an implementation
 is detected.
 </p>
+
 <dl>
-<dt><b>acp</b> (<i>apt-cache policy</i>)</dt><dd>
+<dt><strong>acp</strong> (<em>apt-cache policy</em>)</dt><dd>
 With no arguments prints out the priorities of each source. If a package name
 is given, it displays detailed information about the priority selection of the
 package.
 <p></p>
 </dd>
-<dt><b>acs</b> (<i>apt-cache search</i>)</dt><dd>
+<dt><strong>acs</strong> (<em>apt search</em>)</dt><dd>
 Searches debian package lists for the regular expression provided as argument.
 The search includes package names and descriptions. Prints out name and short
 description of matching packages.
 <p></p>
 </dd>
-<dt><b>acsh</b> (<i>apt-cache show</i>)</dt><dd>
+<dt><strong>acsh</strong> (<em>apt show</em>)</dt><dd>
 Shows the package records for the packages provided as arguments.
 <p></p>
 </dd>
-<dt><b>adg</b> (<i>apt-get dist-upgrade</i>)</dt><dd>
+<dt><strong>adg</strong> (<em>apt dist-upgrade</em>)</dt><dd>
 Performs an upgrade of all installed packages. Also tries to automatically
 handle changing dependencies with new versions of packages. As this may change
 the install status of (or even remove) installed packages, it is potentially
 dangerous to use dist-upgrade; invoked by sudo, if necessary.
 <p></p>
 </dd>
-<dt><b>ag</b> (<i>apt-get upgrade</i>)</dt><dd>
+<dt><strong>ag</strong> (<em>apt upgrade</em>)</dt><dd>
 Downloads and installs the newest versions of all packages currently installed
 on the system. Under no circumstances are currently installed packages removed,
 or packages not already installed retrieved and installed. New versions of
@@ -1083,11 +1286,11 @@ status of another package will be left at their current version. An update must
 be performed first (see au below); run by sudo, if necessary.
 <p></p>
 </dd>
-<dt><b>agi</b> (<i>apt-get install</i>)</dt><dd>
+<dt><strong>agi</strong> (<em>apt install</em>)</dt><dd>
 Downloads and installs or upgrades the packages given on the command line.
 If a hyphen is appended to the package name, the identified package will be
 removed if it is installed. Similarly a plus sign can be used to designate a
-package to install. This may be useful to override decisions made by apt-get's
+package to install. This may be useful to override decisions made by apt's
 conflict resolution system.
 A specific version of a package can be selected for installation by following
 the package name with an equals and the version of the package to select. This
@@ -1097,231 +1300,238 @@ and the version of the distribution or the Archive name (stable, testing, unstab
 Gets invoked by sudo, if user id is not 0.
 <p></p>
 </dd>
-<dt><b>ati</b> (<i>aptitude install</i>)</dt><dd>
+<dt><strong>ati</strong> (<em>aptitude install</em>)</dt><dd>
 Aptitude is a terminal-based package manager with a command line mode similar to
-apt-get (see agi above); invoked by sudo, if necessary.
+apt (see agi above); invoked by sudo, if necessary.
 <p></p>
 </dd>
-<dt><b>au</b> (<i>apt-get update</i>)</dt><dd>
+<dt><strong>au</strong> (<em>apt update</em>)</dt><dd>
 Resynchronizes the package index files from their sources. The indexes of
 available packages are fetched from the location(s) specified in
 /etc/apt/sources.list. An update should always be performed before an
 upgrade or dist-upgrade; run by sudo, if necessary.
 <p></p>
 </dd>
-<dt><b>da</b> (<i>du -sch</i>)</dt><dd>
+<dt><strong>da</strong> (<em>du -sch</em>)</dt><dd>
 Prints the summarized disk usage of the arguments as well as a grand total
 in human readable format.
 <p></p>
 </dd>
-<dt><b>dbp</b> (<i>dpkg-buildpackage</i>)</dt><dd>
+<dt><strong>dbp</strong> (<em>dpkg-buildpackage</em>)</dt><dd>
 Builds binary or source packages from sources (See: dpkg-buildpackage(1)).
 <p></p>
 </dd>
-<dt><b>debs-by-size</b> (<i>grep-status -FStatus -sInstalled-Size,Package -n "install ok installed" | paste -sd "  \n" | sort -rn</i>)</dt><dd>
+<dt><strong>debs-by-size</strong> (<em>grep-status -FStatus -sInstalled-Size,Package -n "install ok installed" | paste -sd "  \n" | sort -rn</em>)</dt><dd>
 Prints installed Packages sorted by size (descending).
 <p></p>
 </dd>
-<dt><b>dir</b> (<i>ls -lSrah</i>)</dt><dd>
+<dt><strong>dir</strong> (<em>ls -lSrah</em>)</dt><dd>
 Lists files (including dot files) sorted by size (biggest last) in long and
 human readable output format.
 <p></p>
 </dd>
-<dt><b>ge</b> (<i>grep-excuses</i>)</dt><dd>
+<dt><strong>ge</strong> (<em>grep-excuses</em>)</dt><dd>
 Searches the testing excuses files for a specific maintainer (See:
 grep-excuses(1)).
 <p></p>
 </dd>
-<dt><b>grep</b> (<i>grep --color=auto</i>)</dt><dd>
+<dt><strong>grep</strong> (<em>grep --color=auto</em>)</dt><dd>
 Shows grep output in nice colors, if available.
 <p></p>
 </dd>
-<dt><b>grml-version</b> (<i>cat /etc/grml_version</i>)</dt><dd>
+<dt><strong>grml-version</strong> (<em>cat /etc/grml_version</em>)</dt><dd>
 Prints version of running grml.
 <p></p>
 </dd>
-<dt><b>hbp</b> (<i>hg-buildpackage</i>)</dt><dd>
+<dt><strong>hbp</strong> (<em>hg-buildpackage</em>)</dt><dd>
 Helper program to maintain Debian packages with mercurial.
 <p></p>
 </dd>
-<dt><b>http</b> (<i>python -m SimpleHTTPServer</i>)</dt><dd>
+<dt><strong>http</strong> (<em>python -m SimpleHTTPServer</em>)</dt><dd>
 Basic HTTP server implemented in python. Listens on port 8000/tcp and
 serves current directory. Implements GET and HEAD methods.
 <p></p>
 </dd>
-<dt><b>insecscp</b> (<i>scp -o "StrictHostKeyChecking=no" -o "UserKnownHostsFile=/dev/null"</i>)</dt><dd>
+<dt><strong>insecscp</strong> (<em>scp -o "StrictHostKeyChecking=no" -o "UserKnownHostsFile=/dev/null"</em>)</dt><dd>
 scp with possible man-in-the-middle attack enabled. This is convenient, if the targets
 host key changes frequently, for example on virtualized test- or development-systems.
 To be used only inside trusted networks, of course.
 <p></p>
 </dd>
-<dt><b>insecssh</b> (<i>ssh -o "StrictHostKeyChecking=no" -o "UserKnownHostsFile=/dev/null"</i>)</dt><dd>
+<dt><strong>insecssh</strong> (<em>ssh -o "StrictHostKeyChecking=no" -o "UserKnownHostsFile=/dev/null"</em>)</dt><dd>
 ssh with possible man-in-the-middle attack enabled
 (for an explanation see insecscp above).
 <p></p>
 </dd>
-<dt><b>help-zshglob</b> (<i>H-Glob()</i>)</dt><dd>
+<dt><strong>help-zshglob</strong> (<em>H-Glob()</em>)</dt><dd>
 Runs the function H-Glob() to expand or explain wildcards.
 <p></p>
 </dd>
-<dt><b>j</b> (<i>jobs -l</i>)</dt><dd>
+<dt><strong>j</strong> (<em>jobs -l</em>)</dt><dd>
 Prints status of jobs in the current shell session in long format.
 <p></p>
 </dd>
-<dt><b>l</b> (<i>ls -l --color=auto</i>)</dt><dd>
+<dt><strong>l</strong> (<em>ls -l --color=auto</em>)</dt><dd>
 Lists files in long output format with indicator for filetype appended
 to filename. If the terminal supports it, with colored output.
 <p></p>
 </dd>
-<dt><b>la</b> (<i>ls -la --color=auto</i>)</dt><dd>
+<dt><strong>la</strong> (<em>ls -la --color=auto</em>)</dt><dd>
 Lists files in long colored output format. Including file names
 starting with ".".
 <p></p>
 </dd>
-<dt><b>lad</b> (<i>ls -d .*(/)</i>)</dt><dd>
+<dt><strong>lad</strong> (<em>ls -d .*(/)</em>)</dt><dd>
 Lists the dot directories (not their contents) in current directory.
 <p></p>
 </dd>
-<dt><b>lh</b> (<i>ls -hAl --color=auto</i>)</dt><dd>
+<dt><strong>lh</strong> (<em>ls -hAl --color=auto</em>)</dt><dd>
 Lists files in long and human readable output format in nice colors,
 if available. Includes file names starting with "." except "." and
 "..".
 <p></p>
 </dd>
-<dt><b>ll</b> (<i>ls -l --color=auto</i>)</dt><dd>
+<dt><strong>ll</strong> (<em>ls -l --color=auto</em>)</dt><dd>
 Lists files in long colored output format.
 <p></p>
 </dd>
-<dt><b>llog</b> (<i>$PAGER /var/log/syslog</i>)</dt><dd>
+<dt><strong>llog</strong> (<em>$PAGER /var/log/syslog</em>)</dt><dd>
 Opens syslog in pager.
 <p></p>
 </dd>
-<dt><b>ls</b> (<i>ls -C --color=auto</i>)</dt><dd>
+<dt><strong>ls</strong> (<em>ls -C --color=auto</em>)</dt><dd>
 Lists directory, entries are listed by columns and an indicator for
 file type is appended to each file name. Additionally the output is
 colored, if the terminal supports it.
 <p></p>
 </dd>
-<dt><b>lsa</b> (<i>ls -a .*(.)</i>)</dt><dd>
+<dt><strong>lsa</strong> (<em>ls -a .*(.)</em>)</dt><dd>
 Lists dot files in current working directory.
 <p></p>
 </dd>
-<dt><b>lsbig</b> (<i>ls -flh *(.OL[1,10])</i>)</dt><dd>
+<dt><strong>lsbig</strong> (<em>ls -flh *(.OL[1,10])</em>)</dt><dd>
 Displays the ten biggest files (long and human readable output format).
 <p></p>
 </dd>
-<dt><b>lsd</b> (<i>ls -d *(/)</i>)</dt><dd>
+<dt><strong>lsd</strong> (<em>ls -d *(/)</em>)</dt><dd>
 Shows directories.
 <p></p>
 </dd>
-<dt><b>lse</b> (<i>ls -d *(/^F)</i>)</dt><dd>
+<dt><strong>lse</strong> (<em>ls -d *(/^F)</em>)</dt><dd>
 Shows empty directories.
 <p></p>
 </dd>
-<dt><b>lsl</b> (<i>ls -l *(@)</i>)</dt><dd>
+<dt><strong>lsl</strong> (<em>ls -l *(@)</em>)</dt><dd>
 Lists symbolic links in current directory.
 <p></p>
 </dd>
-<dt><b>lsnew</b> (<i>ls -rl *(D.om[1,10])</i>)</dt><dd>
+<dt><strong>lsnew</strong> (<em>ls -rl *(D.om[1,10])</em>)</dt><dd>
 Displays the ten newest files (long output format).
 <p></p>
 </dd>
-<dt><b>lsnewdir</b> (<i>ls -rthdl *(/om[1,10]) .*(D/om[1,10])</i>)</dt><dd>
+<dt><strong>lsnewdir</strong> (<em>ls -rthdl *(/om[1,10]) .*(D/om[1,10])</em>)</dt><dd>
 Displays the ten newest directories and ten newest .directories.
 <p></p>
 </dd>
-<dt><b>lsold</b> (<i>ls -rtlh *(D.om[1,10])</i>)</dt><dd>
+<dt><strong>lsold</strong> (<em>ls -rtlh *(D.om[1,10])</em>)</dt><dd>
 Displays the ten oldest files (long output format).
 <p></p>
 </dd>
-<dt><b>lsolddir</b> (<i>ls -rthdl *(/Om[1,10]) .*(D/Om[1,10])</i>)</dt><dd>
+<dt><strong>lsolddir</strong> (<em>ls -rthdl *(/Om[1,10]) .*(D/Om[1,10])</em>)</dt><dd>
 Displays the ten oldest directories and ten oldest .directories.
 <p></p>
 </dd>
-<dt><b>lss</b> (<i>ls -l *(s,S,t)</i>)</dt><dd>
+<dt><strong>lss</strong> (<em>ls -l *(s,S,t)</em>)</dt><dd>
 Lists files in current directory that have the setuid, setgid or sticky bit
 set.
 <p></p>
 </dd>
-<dt><b>lssmall</b> (<i>ls -Srl *(.oL[1,10])</i>)</dt><dd>
+<dt><strong>lssmall</strong> (<em>ls -Srl *(.oL[1,10])</em>)</dt><dd>
 Displays the ten smallest files (long output format).
 <p></p>
 </dd>
-<dt><b>lsw</b> (<i>ls -ld *(R,W,X.^ND/)</i>)</dt><dd>
+<dt><strong>lsw</strong> (<em>ls -ld *(R,W,X.^ND/)</em>)</dt><dd>
 Displays all files which are world readable and/or world writable and/or
 world executable (long output format).
 <p></p>
 </dd>
-<dt><b>lsx</b> (<i>ls -l *(*)</i>)</dt><dd>
+<dt><strong>lsx</strong> (<em>ls -l *(*)</em>)</dt><dd>
 Lists only executable files.
 <p></p>
 </dd>
-<dt><b>mdstat</b> (<i>cat /proc/mdstat</i>)</dt><dd>
+<dt><strong>mdstat</strong> (<em>cat /proc/mdstat</em>)</dt><dd>
 Lists all active md (i.e. linux software raid) devices with some information
 about them.
 <p></p>
 </dd>
-<dt><b>mq</b> (<i>hg -R $(readlink -f $(hg root)/.hg/patches)</i>)</dt><dd>
+<dt><strong>mq</strong> (<em>hg -R $(readlink -f $(hg root)/.hg/patches)</em>)</dt><dd>
 Executes the commands on the versioned patch queue from current repository.
 <p></p>
 </dd>
-<dt><b>rmcdir</b> (<i>'cd ..; rmdir $OLDPWD || cd $OLDPWD</i>)</dt><dd>
+<dt><strong>rmcdir</strong> (<em>'cd ..; rmdir $OLDPWD || cd $OLDPWD</em>)</dt><dd>
 rmdir current working directory
 <p></p>
 </dd>
-<dt><b>screen</b> (<i>screen -c file</i>)</dt><dd>
+<dt><strong>screen</strong> (<em>screen -c file</em>)</dt><dd>
 If invoking user is root, starts screen session with /etc/grml/screenrc
 as config file. If invoked by a regular user and users .screenc does not exist,
 starts screen with /etc/grml/screenrc_grml config if it exists, else fallbacks
 to /etc/grml/screenrc.
 <p></p>
 </dd>
-<dt><b>su</b> (<i>sudo su</i>)</dt><dd>
+<dt><strong>su</strong> (<em>sudo su</em>)</dt><dd>
 If user is running a Grml live system, don't ask for any password, if she
 wants a root shell.
 <p></p>
 </dd>
-<dt><b>term2iso</b> (<i>echo 'Setting terminal to iso mode' ; print -n '\e%@'</i>)</dt><dd>
+<dt><strong>term2iso</strong> (<em>echo 'Setting terminal to iso mode' ; print -n '\e%@'</em>)</dt><dd>
 Sets mode from UTF-8 to ISO 2022 (See:
 <a href="http://www.cl.cam.ac.uk/~mgk25/unicode.html#term">http://www.cl.cam.ac.uk/~mgk25/unicode.html#term</a>).
 <p></p>
 </dd>
-<dt><b>term2utf</b> (<i>echo 'Setting terminal to utf-8 mode'; print -n '\e%G'</i>)</dt><dd>
+<dt><strong>term2utf</strong> (<em>echo 'Setting terminal to utf-8 mode'; print -n '\e%G'</em>)</dt><dd>
 Sets mode from ISO 2022 to UTF-8 (See:
 <a href="http://www.cl.cam.ac.uk/~mgk25/unicode.html#term">http://www.cl.cam.ac.uk/~mgk25/unicode.html#term</a>).
 <p></p>
 </dd>
-<dt><b>tlog</b> (<i>tail -f /var/log/syslog</i>)</dt><dd>
+<dt><strong>tlog</strong> (<em>tail -f /var/log/syslog</em>)</dt><dd>
 Prints syslog continuously (See tail(1)).
 <p></p>
 </dd>
-<dt><b>up</b> (<i>aptitude update ; aptitude safe-upgrade</i>)</dt><dd>
+<dt><strong>up</strong> (<em>aptitude update ; aptitude safe-upgrade</em>)</dt><dd>
 Performs a system update followed by a system upgrade using aptitude; run
 by sudo, if necessary. See au and ag above.
 <p></p>
 </dd>
-<dt><b>url-quote</b> (<i>autoload -U url-quote-magic ; zle -N self-insert url-quote-magic</i>)</dt><dd>
+<dt><strong>url-quote</strong> (<em>autoload -U url-quote-magic ; zle -N self-insert url-quote-magic</em>)</dt><dd>
 After calling, characters of URLs as typed get automatically escaped, if necessary, to
 protect them from the shell.
 <p></p>
 </dd>
-<dt><b>$(uname -r)-reboot</b> (<i>kexec -l --initrd=/boot/initrd.img-"$(uname -r)" --command-line=\"$(cat /proc/cmdline)\" /boot/vmlinuz-"$(uname -r)"</i>)</dt><dd>
+<dt><strong>$(uname -r)-reboot</strong> (<em>kexec -l --initrd=/boot/initrd.img-"$(uname -r)" --command-line=\"$(cat /proc/cmdline)\" /boot/vmlinuz-"$(uname -r)"</em>)</dt><dd>
 Reboots using kexec(8) and thus reduces boot time by skipping hardware initialization of BIOS/firmware.
 <p></p>
 </dd>
-<dt><b>...</b> (<i>cd ../../</i>)</dt><dd>
+<dt><strong>...</strong> (<em>cd ../../</em>)</dt><dd>
 Changes current directory two levels higher.
 </dd>
 </dl>
+
+</section>
+</section>
+<section>
 <h1>AUXILIARY FILES</h1>
+
 <p>
 This is a set of files, that - if they exist - can be used to customize the
-behaviour of <i>grmlzshrc</i>.
+behaviour of <em>grmlzshrc</em>.
 </p>
+
 <dl>
-<dt><b>.zshrc.pre</b></dt><dd>
-Sourced at the very beginning of <i>grmlzshrc</i>. Among other things, it can
-be used to permantenly change <i>grmlzshrc</i>'s STARTUP VARIABLES (see above):
+<dt><strong>.zshrc.pre</strong></dt><dd>
+Sourced at the very beginning of <em>grmlzshrc</em>. Among other things, it can
+be used to permantenly change <em>grmlzshrc</em>'s STARTUP VARIABLES (see above):
+\
 
 <pre>
 # show battery status in RPROMPT
@@ -1329,45 +1539,56 @@ GRML_DISPLAY_BATTERY=1
 # always load the complete setup, even for root
 GRML_ALWAYS_LOAD_ALL=1
 </pre>
+
 <p></p>
 </dd>
-<dt><b>.zshrc.local</b></dt><dd>
-Sourced right before loading <i>grmlzshrc</i> is finished. There is a global
+<dt><strong>.zshrc.local</strong></dt><dd>
+Sourced right before loading <em>grmlzshrc</em> is finished. There is a global
 version of this file (/etc/zsh/zshrc.local) which is sourced before the
 user-specific one.
 <p></p>
 </dd>
-<dt><b>.zdirs</b></dt><dd>
+<dt><strong>.zdirs</strong></dt><dd>
 Directory listing for persistent dirstack (see above).
 <p></p>
 </dd>
-<dt><b>.important_commands</b></dt><dd>
+<dt><strong>.important_commands</strong></dt><dd>
 List of commands, used by persistent history (see above).
 </dd>
 </dl>
+
+</section>
+<section>
 <h1>INSTALLATION ON NON-DEBIAN SYSTEMS</h1>
+
 <p>
 On Debian systems (<a href="http://www.debian.org">http://www.debian.org</a>) - and possibly Ubuntu
 (<a href="http://www.ubuntu.com">http://www.ubuntu.com</a>) and similar systems - it is very easy to get
-<i>grmlzshrc</i> via grml's .deb repositories.
+<em>grmlzshrc</em> via grml's .deb repositories.
 </p>
 <p>
 On non-debian systems, that is not an option, but all is not lost:
-
+\
 </p>
+
 <pre>
 % wget -O .zshrc http://git.grml.org/f/grml-etc-core/etc/zsh/zshrc
 </pre>
+
 <p>
 If you would also like to get separate function files (which you can put into
-your <b>$fpath</b>), you can browse and download them at:
+your <strong>$fpath</strong>), you can browse and download them at:
 </p>
 <p>
 <a href="http://git.grml.org/?p=grml-etc-core.git;a=tree;f=usr_share_grml/zsh;hb=HEAD">http://git.grml.org/?p=grml-etc-core.git;a=tree;f=usr_share_grml/zsh;hb=HEAD</a>
 </p>
+
+</section>
+<section>
 <h1>ZSH REFCARD TAGS</h1>
+
 <p>
-If you read <i>grmlzshrc</i>'s code you may notice strange looking comments in
+If you read <em>grmlzshrc</em>'s code you may notice strange looking comments in
 it. These are there for a purpose. grml's zsh-refcard is automatically
 generated from the contents of the actual configuration file. However, we need
 a little extra information on which comments and what lines of code to take
@@ -1379,62 +1600,66 @@ Here is what they mean:
 <p>
 List of tags (comment types) used:
 </p>
+
 <dl>
-<dt><b>#a#</b></dt><dd>
+<dt><strong>#a#</strong></dt><dd>
 Next line contains an important alias, that should be included in the
 grml-zsh-refcard. (placement tag: @@INSERT-aliases@@)
 <p></p>
 </dd>
-<dt><b>#f#</b></dt><dd>
+<dt><strong>#f#</strong></dt><dd>
 Next line contains the beginning of an important function. (placement
 tag: @@INSERT-functions@@)
 <p></p>
 </dd>
-<dt><b>#v#</b></dt><dd>
+<dt><strong>#v#</strong></dt><dd>
 Next line contains an important variable. (placement tag:
 @@INSERT-variables@@)
 <p></p>
 </dd>
-<dt><b>#k#</b></dt><dd>
+<dt><strong>#k#</strong></dt><dd>
 Next line contains an important keybinding. (placement tag:
 @@INSERT-keybindings@@)
 <p></p>
 </dd>
-<dt><b>#d#</b></dt><dd>
-Hashed directories list generation: <i>start</i>: denotes the start of a list of
-'hash -d' definitions. <i>end</i>: denotes its end. (placement tag:
+<dt><strong>#d#</strong></dt><dd>
+Hashed directories list generation: <em>start</em>: denotes the start of a list of
+'hash -d' definitions. <em>end</em>: denotes its end. (placement tag:
 @@INSERT-hasheddirs@@)
 <p></p>
 </dd>
-<dt><b>#A#</b></dt><dd>
-Abbreviation expansion list generation: <i>start</i>: denotes the beginning of
-abbreviations. <i>end</i>: denotes their end.
-
+<dt><strong>#A#</strong></dt><dd>
+Abbreviation expansion list generation: <em>start</em>: denotes the beginning of
+abbreviations. <em>end</em>: denotes their end.
+\
 Lines within this section that end in '#d .*' provide extra documentation to
 be included in the refcard. (placement tag: @@INSERT-abbrev@@)
 <p></p>
 </dd>
-<dt><b>#m#</b></dt><dd>
+<dt><strong>#m#</strong></dt><dd>
 This tag allows you to manually generate refcard entries for code lines that
 are hard/impossible to parse.
 Example:
+\
 
 <pre>
 #m# k ESC-h Call the run-help function
 </pre>
 
+\
 That would add a refcard entry in the keybindings table for 'ESC-h' with the
 given comment.
-
+\
 So the syntax is: #m# &lt;section&gt; &lt;argument&gt; &lt;comment&gt;
 <p></p>
 </dd>
-<dt><b>#o#</b></dt><dd>
+<dt><strong>#o#</strong></dt><dd>
 This tag lets you insert entries to the 'other' hash. Generally, this should
 not be used. It is there for things that cannot be done easily in another way.
 (placement tag: @@INSERT-other-foobar@@)
 </dd>
 </dl>
+
 <p>
 All of these tags (except for m and o) take two arguments, the first
 within the tag, the other after the tag:
@@ -1449,79 +1674,95 @@ that for the reader, the tag should not differ much from a regular comment.
 For zsh, it is a regular comment indeed. The numbers have got the following
 meanings:
 </p>
+
 <dl>
-<dt><b>0</b></dt><dd>
-<i>default</i>
+<dt><strong>0</strong></dt><dd>
+<em>default</em>
 <p></p>
 </dd>
-<dt><b>1</b></dt><dd>
-<i>system</i>
+<dt><strong>1</strong></dt><dd>
+<em>system</em>
 <p></p>
 </dd>
-<dt><b>2</b></dt><dd>
-<i>user</i>
+<dt><strong>2</strong></dt><dd>
+<em>user</em>
 <p></p>
 </dd>
-<dt><b>3</b></dt><dd>
-<i>debian</i>
+<dt><strong>3</strong></dt><dd>
+<em>debian</em>
 <p></p>
 </dd>
-<dt><b>4</b></dt><dd>
-<i>search</i>
+<dt><strong>4</strong></dt><dd>
+<em>search</em>
 <p></p>
 </dd>
-<dt><b>5</b></dt><dd>
-<i>shortcuts</i>
+<dt><strong>5</strong></dt><dd>
+<em>shortcuts</em>
 <p></p>
 </dd>
-<dt><b>6</b></dt><dd>
-<i>services</i>
+<dt><strong>6</strong></dt><dd>
+<em>services</em>
 </dd>
 </dl>
+
 <p>
 So, the following will add an entry to the 'functions' table in the 'system'
 section, with a (hopefully) descriptive comment:
-
+\
 </p>
+
 <pre>
 #f1# Edit an alias via zle
 edalias() {
 </pre>
-<p>
 
+<p>
+\
 It will then show up in the @@INSERT-aliases-system@@ replacement tag that can
 be found in 'grml-zsh-refcard.tex.in'. If the section number is omitted, the
 'default' section is assumed. Furthermore, in 'grml-zsh-refcard.tex.in'
 @@INSERT-aliases@@ is exactly the same as @@INSERT-aliases-default@@. If you
-want a list of <b>all</b> aliases, for example, use @@INSERT-aliases-all@@.
+want a list of <strong>all</strong> aliases, for example, use @@INSERT-aliases-all@@.
 </p>
+
+</section>
+<section>
 <h1>CONTRIBUTING</h1>
+
 <p>
 If you want to help to improve grml's zsh setup, clone the grml-etc-core
 repository from git.grml.org:
-
+\
 </p>
+
 <pre>
 % git clone git://git.grml.org/grml-etc-core.git
 </pre>
-<p>
-Make your changes, commit them; use '<b>git format-patch</b>' to create a series
-of patches and send those to the following address via '<b>git send-email</b>':
 
+<p>
+Make your changes, commit them; use '<strong>git format-patch</strong>' to create a series
+of patches and send those to the following address via '<strong>git send-email</strong>':
+\
 </p>
+
 <pre>
 grml-etc-core@grml.org
 </pre>
+
 <p>
 Doing so makes sure the right people get your patches for review and
 possibly inclusion.
 </p>
+
+</section>
+<section>
 <h1>STATUS</h1>
+
 <p>
-This manual page is the <b>reference</b> manual for <i>grmlzshrc</i>.
+This manual page is the <strong>reference</strong> manual for <em>grmlzshrc</em>.
 </p>
 <p>
-That means that in contrast to the existing refcard it should document <b>every</b>
+That means that in contrast to the existing refcard it should document <strong>every</strong>
 aspect of the setup.
 </p>
 <p>
@@ -1537,13 +1778,21 @@ the following pages:
 <p>
 Contributions are highly welcome.
 </p>
+
+</section>
+<section>
 <h1>AUTHORS</h1>
+
 <p>
 This manpage was written by Frank Terbeck &lt;<a href="mailto:ft@grml.org">ft@grml.org</a>&gt;, Joerg Woelke
 &lt;<a href="mailto:joewoe@fsmail.de">joewoe@fsmail.de</a>&gt;, Maurice McCarthy &lt;<a href="mailto:manselton@googlemail.com">manselton@googlemail.com</a>&gt; and Axel
 Beckert &lt;<a href="mailto:abe@deuxchevaux.org">abe@deuxchevaux.org</a>&gt;.
 </p>
+
+</section>
+<section>
 <h1>COPYRIGHT</h1>
+
 <p>
 Copyright (c) 2009-2013 Grml project &lt;<a href="http://grml.org">http://grml.org</a>&gt;
 </p>
@@ -1552,10 +1801,12 @@ This manpage is distributed under the terms of the GPL version 2.
 </p>
 <p>
 Most parts of grml's zshrc are distributed under the terms of GPL v2, too,
-except for <b>accept-line()</b> which are distributed under the same conditions
+except for <strong>accept-line()</strong> which are distributed under the same conditions
 as zsh itself (which is BSD-like).
 </p>
+</section>
 </div>
-<!-- xhtml code generated by txt2tags 2.6 (http://txt2tags.org) -->
-<!-- cmdline: txt2tags -\-target xhtml -\-css-sugar -\-style t2t-modern.css -o- grmlzshrc.t2t -->
-</body></html>
+
+<!-- html code generated by txt2tags 3.4 (http://txt2tags.org) -->
+<!-- cmdline: txt2tags -\-target html -\-style t2t-modern.css grmlzshrc.t2t -->
+</article></body></html>
