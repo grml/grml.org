@@ -56,9 +56,7 @@ FIXME
 
         <p>Highlighting the most relevant changes only:</p>
 
-        <ul>
-
-          <li>Misc:
+        <h4>Misc:</h4>
 
             <ul>
               <li>cloud-init support (grml-full only): TODO
@@ -66,10 +64,7 @@ FIXME
               <li>qemu-guest-agent: TODO
             </ul>
 
-          </li>
-
-
-          <li><a href="/grml-live/">grml-live</a> (build system for creating Grml (based) Linux live systems):
+        <h4><a href="/grml-live/">grml-live</a> (build system for creating Grml (based) Linux live systems):</h4>
 
             <ul>
               <li>Support for cloud-init (via GRML_FULL)
@@ -81,9 +76,7 @@ FIXME
               <li>Switch default mount point from /lib/live/mount/medium to /run/live/medium
             </ul>
 
-          </li>
-
-          <li><a href="/grml2usb/">grml2usb</a> (tool to install Grml ISO to usb device):
+        <h4><a href="/grml2usb/">grml2usb</a> (tool to install Grml ISO to usb device):</h4>
 
             <ul>
               <li>Support more syslinux module locations and support setting custom ones via option <em>--syslinux-libs=...</em>
@@ -93,12 +86,9 @@ FIXME
               <li>Add smoke autopkgtests to Debian packaging
               <li>Abort if required logo.16 file is missing
               <li>Avoid custom boot options getting duplicated when used with multiple ISOs
-            </li>
+            </ul>
 
-          </ul>
-
-
-          <li>grml-hwinfo (tool to collect hardware information):
+        <h4>grml-hwinfo (tool to collect hardware information):</h4>
 
             <ul>
               <li>Store output of `lscpu -e` in file `lscpu_extended`
@@ -111,9 +101,7 @@ FIXME
               <li>Recommend acpica-tools package and provide acpidump output (as root)
             </ul>
 
-          </li>
-
-          <li><a href="/zsh/">grml-zshrc</a> (Zsh configuration):
+        <h4><a href="/zsh/">grml-zshrc</a> (Zsh configuration):</h4>
 
             <ul>
               <li>Reset $REPLY parameter before calling prompt token functions
@@ -123,9 +111,7 @@ FIXME
               <li>Support PAGER='less -Mr' usage and fall back to vi if LESSOPEN is unset
             </ul>
 
-          </li>
-
-          <li><a href="/grml-debootstrap/">grml-debootstrap</a> (wrapper around debootstrap for installing pure Debian):
+        <h4><a href="/grml-debootstrap/">grml-debootstrap</a> (wrapper around debootstrap for installing pure Debian):</h4>
 
             <ul>
               <li>Support BOOT_APPEND usage outside of VMs
@@ -137,10 +123,6 @@ FIXME
               <li>/etc/fstab: provide header comment, pointing to man pages and systemctl daemon-reload
               <li>Add DHCP setting for Predictable Network Interface Names
             </ul>
-
-          </li>
-
-        </ul>
 
         <h3>Bits &amp; bolts</h3>
 
