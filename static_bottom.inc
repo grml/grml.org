@@ -5,6 +5,11 @@
         Grml is sponsored by several companies. For more information about our sponsors check out the <a href="/sponsors/">Sponsors webpage</a>. Our main sponsors are:
       </p>
       <div>
+        <a href="http://synpro.solutions/" target="_blank">
+        <img src="/sponsors/synpro.png" width="300" height="99" alt="SynPro Solutions logo"/>
+        </a>
+      </div>
+      <div>
         <a href="http://www.hostway.de/" target="_blank">
         <img src="/sponsors/hostway.jpg" width="300" height="100" alt="hostway logo"/>
         </a>

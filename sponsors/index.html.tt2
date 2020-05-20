@@ -27,7 +27,9 @@
 
       <h1>Sponsors</h1>
 
-      <p>This is a list of companies or organizations that provide ongoing support to Grml. Thanks to their support and assistance the Grml project can provide an excessive list of services for our users like free CDs, daily images (more than 16 different images), mailing lists, website, wiki etc. To be more precise without their support the <a href="/">Grml project</a> would not be able to provide all the services you know and love.</p>
+      <p>This is a list of companies or organizations that provide ongoing support to Grml.
+      Thanks to their support and assistance, the Grml project can offer an excessive list of services for our users like free CDs, daily images, mailing lists, website, wiki etc.
+      To be more precise without their support, the <a href="/">Grml project</a> would not be able to provide all the services you know and love.</p>
 
       <div class="sponsor_list">
 
@@ -99,6 +101,26 @@
             the products of hundreds of providers and makes it easy for you to
             filter, search and find that specific provider you're looking
             for.</p>
+
+        </div>
+
+        <br />
+
+        <div class="entry">
+
+            <h3>SynPro Solutions</h3>
+
+            <a href="https://synpro.solutions/?source=grml_website">
+                <div style="float:left; margin-right: 10px;" class="imagetext_image">
+                    <img width="300" border="0" height="99" title="SynPro Solutions" alt="SynPro Solutions" src="synpro.png">
+                </div>
+            </a>
+
+            <p>
+            <a href="https://synpro.solutions/?source=grml_website">SynPro Solutions</a> is an Austrian IT services company.
+            We are primarily located in Graz and focusing on system administration and its best practices, emergency response and strategic IT consulting.
+            We provide customized rescue systems, based on Grml to our customers and offer all kind of services related to Debian and Grml.
+            </p>
 
         </div>
 
