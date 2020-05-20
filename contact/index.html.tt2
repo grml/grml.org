@@ -51,9 +51,7 @@
         mailing list</a>.  Anyone can post to this mailing list, but if you
         are not already subscribed, your message will need moderator approval before being posted. This way
         we limit the amount of spam that makes it to the list.  The Grml user
-        mailing list is available <a
-        href="http://dir.gmane.org/gmane.linux.distributions.grml.user">via
-        gmane</a> as well.</p>
+        mailing list is also available via NNTP on <a href="https://gmane.io/">gmane.io</a>.</p>
 
         <p>If you are interested in following the <strong>development of Grml</strong> you might be
         interested in the <a href="http://ml.grml.org/mailman/listinfo/grml-devel">Grml developer
@@ -70,16 +68,15 @@
         grml2usb,...) have their own repository and issue tracking, see <a
         href="https://github.com/grml/">github.com/grml/</a> to get an
         overview. If you're unsure where to report an issue though, feel free
-        to use github.com/grml/grml/issues though.</p>
+        to use <a href="https://github.com/grml/grml/issues">github.com/grml/grml/issues</a> though.</p>
 
-        <p><strong>Notice:</strong> All Grml mailing lists are <strong>English
-        only</strong>.</p>
+        <p><strong>Notice:</strong> All Grml mailing lists are <strong>English only</strong>.</p>
 
         <a name="irc"></a>
         <h2>IRC</h2>
 
-        <p>You can find us in <a href="irc://irc.freenode.net/grml">#grml on
-        irc.freenode.org</a>. Channel language is English.</p>
+        <p>You can find us in <a href="irc://irc.freenode.net/grml">#grml on irc.freenode.org</a>.
+        The channel language is English.</p>
 
 </div>
 
