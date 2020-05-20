@@ -30,56 +30,32 @@
             <h2>Grml Developers</h2>
 
             <ul>
-                <li>Alexander Wirt (formorer)</li>
-                <li>Darshaka Pathirana (dpat)</li>
-                <li>Evgeni Golov (Zhenech)</li>
-                <li>Frank Terbeck (ft)</li>
-                <li>Michael Prokop (mika)</li>
+              <li>Alexander Wirt (formorer)</li>
+              <li>Darshaka Pathirana (dpat)</li>
+              <li>Frank Terbeck (ft)</li>
+              <li>Michael Prokop (mika)</li>
+            </ul>
+
+            <h2>Alumni Grml Developers</h2>
+
+            <ul>
+              <li>Alexander Steinböck</li>
+              <li>Andreas Gredler</li>
+              <li>Christian Hofstaedtler
+              <li>Evgeni Golov</li>
+              <li>Marcel Wichern</li>
+              <li>Markus Rekkenbeil</li>
+              <li>Matthias Kopfermann</li>
+              <li>Michael Gebetsroither</li>
+              <li>Moritz Augsburger</li>
+              <li>Rhonda D'Vine</li>
+              <li>Timo Boettcher</li>
+              <li>Tobias Klauser</li>
+              <li>Ulrich Dangel</li>
+              <li>Wolfgang Scheicher</li>
             </ul>
 
             <h2>Thanks</h2>
-
-            <ul>
-                <li>Adriana Teixera</li>
-                <li>Alexander 'Leo' Bergolth</li>
-                <li>Andreas Gredler</li>
-                <li>Andrey Rahmatulli</li>
-                <li>Antonio Diaz Diaz</li>
-                <li>Axel Beckert</li>
-                <li>Bernd Arnold</li>
-                <li>Bernhard Tittelbach</li>
-                <li>Carsten Hey</li>
-                <li>Christian Hofstaedtler</li>
-                <li>Christoph Biedl</li>
-                <li>Eduard Bloch</li>
-                <li>Rhonda D'Vine</li>
-                <li>Gregor Perner</li>
-                <li>Jan-Pieter Jacobs</li>
-                <li>Jens Kubieziel</li>
-                <li>Joerg Woelke</li>
-                <li>Jordan Uggla</li>
-                <li>Marc Haber</li>
-                <li>Marek Straka</li>
-                <li>Markus Rekkenbeil</li>
-                <li>Martin Krafft</li>
-                <li>Marvin Vek</li>
-                <li>Michael Gebetsroither</li>
-                <li>Michael Gissing</li>
-                <li>Michael Stapelberg</li>
-                <li>Michel Isard</li>
-                <li>Peter Palfrader</li>
-                <li>Richard Hartmann</li>
-                <li>Sedat Dilek</li>
-                <li>Sven Joachim</li>
-                <li>Thomas Koehler</li>
-                <li>Thorsten Glaser</li>
-                <li>Timo Boettcher</li>
-                <li>Tobias Klauser</li>
-                <li>Tonnerre Lombard</li>
-                <li>Ulrich Dangel</li>
-            </ul>
-
-            <h2>Special Thanks</h2>
 
             <ul>
               <li>Jogi Hofmüller and mur.at: hosting grml mailinglists</li>
