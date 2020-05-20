@@ -79,12 +79,11 @@ FIXME
               <li>Rebuild /var/lib/dpkg/available to install not-yet-installed packages in update runs
               <li>Sources list setup for security: switch from testing/updates to testing-security
               <li>Switch default mount point from /lib/live/mount/medium to /run/live/medium
-              <li>
             </ul>
 
           </li>
 
-          <li>grml2usb (tool to install Grml ISO to usb device)</li>
+          <li><a href="/grml2usb/">grml2usb</a> (tool to install Grml ISO to usb device):
 
             <ul>
               <li>Support more syslinux module locations and support setting custom ones via option <em>--syslinux-libs=...</em>
@@ -94,7 +93,9 @@ FIXME
               <li>Add smoke autopkgtests to Debian packaging
               <li>Abort if required logo.16 file is missing
               <li>Avoid custom boot options getting duplicated when used with multiple ISOs
-            </ul>
+            </li>
+
+          </ul>
 
 
           <li>grml-hwinfo (tool to collect hardware information):
@@ -161,61 +162,65 @@ FIXME
         22 packages have been removed, and these 26 new packages
         have been added (excluding lib*, *-common, python3-* and kernel image):</p>
 
-<pre class="rahmen">
-  bind9-dnsutils
-  bind9-libs (dependency of avahi-daemon, bind9-dnsutils, bind9host + libnss-mdns)
-  borgbackup
-  cloud-init
-  cpp-9 (replacement for cpp-8)
-  dnsutils
-  fuse3 (dependency of borgbackup, exfat-fuse, ntfs-3g, sshfs + testdisk)
-  gcc-10-base (replacement for gcc-8)
-  gcc-9-base (replacement for gcc-8)
-  iperf3
-  logsave (dependency of e2fsprogs)
-  lua-lpeg (dependency of nmap)
-  ncdu
-  pci.ids
-  perl-modules-5.30
-  python3.8 (replacement for python3.7)
-  python3.8-minimal (replacement for python3.7-minimal)
-  qemu-system-gui
-  radvd
-  ruby2.7 (replacement for ruby2.5)
-  runit-helper (dependency of acpi-support, acpid, irqbalance + openssh-server)
-  sound-theme-freedesktop (dependency of vim-gtk3)
-  tree
-  usb.ids (dependency of usbutils)
-  vim-gtk3
-  zstd
-</pre>
+        <ul>
+
+          <li>bind9-dnsutils
+          <li>bind9-libs (dependency of avahi-daemon, bind9-dnsutils, bind9host + libnss-mdns)
+          <li>borgbackup
+          <li>cloud-init
+          <li>cpp-9 (replacement for cpp-8)
+          <li>dnsutils
+          <li>fuse3 (dependency of borgbackup, exfat-fuse, ntfs-3g, sshfs + testdisk)
+          <li>gcc-10-base (replacement for gcc-8)
+          <li>gcc-9-base (replacement for gcc-8)
+          <li>iperf3
+          <li>logsave (dependency of e2fsprogs)
+          <li>lua-lpeg (dependency of nmap)
+          <li>ncdu
+          <li>pci.ids
+          <li>perl-modules-5.30
+          <li>python3.8 (replacement for python3.7)
+          <li>python3.8-minimal (replacement for python3.7-minimal)
+          <li>qemu-system-gui
+          <li>radvd
+          <li>ruby2.7 (replacement for ruby2.5)
+          <li>runit-helper (dependency of acpi-support, acpid, irqbalance + openssh-server)
+          <li>sound-theme-freedesktop (dependency of vim-gtk3)
+          <li>tree
+          <li>usb.ids (dependency of usbutils)
+          <li>vim-gtk3
+          <li>zstd
+
+        </ul>
 
         <p>These Debian packages have been removed/replaced (excluding lib*, *-data, *-common, python-* and kernel image):</p>
 
-<pre class="rahmen">
-  ash
-  cpp-8 (replaced with cpp-9)
-  cryptsetup-run
-  fuse
-  gcc-8-base (replaced with gcc-9-base + gcc-10-base)
-  gdbm-l10n
-  hfsprogs
-  ipsec-tools
-  lilo
-  linux-libc-dev
-  pm-utils
-  powermgmt-base
-  python3-prettytable
-  python3.7
-  python3.7-minimal
-  racoon
-  rng-tools
-  ruby-did-you-mean
-  ruby-json
-  ruby2.5 (replaced with ruby2.7)
-  tasksel
-  vim-gtk (replaced with vim-gtk3)
-</pre>
+        <ul>
+
+          <li>ash
+          <li>cpp-8 (replaced with cpp-9)
+          <li>cryptsetup-run
+          <li>fuse
+          <li>gcc-8-base (replaced with gcc-9-base + gcc-10-base)
+          <li>gdbm-l10n
+          <li>hfsprogs
+          <li>ipsec-tools
+          <li>lilo
+          <li>linux-libc-dev
+          <li>pm-utils
+          <li>powermgmt-base
+          <li>python3-prettytable
+          <li>python3.7
+          <li>python3.7-minimal
+          <li>racoon
+          <li>rng-tools
+          <li>ruby-did-you-mean
+          <li>ruby-json
+          <li>ruby2.5 (replaced with ruby2.7)
+          <li>tasksel
+          <li>vim-gtk (replaced with vim-gtk3)
+
+        </ul>
 
         <h3>Known issues</h3>
 
