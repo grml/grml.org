@@ -7,7 +7,6 @@
 <meta name="Keywords" content="ppc port of grml, grml.org" />
 <meta name="Description" content="ppc port webpage of grml.org" />
 <meta name="Abstract" content="grml, just another linux-distribution" />
-<meta name="fdse-index-as" content="http://www.grml.org/" />
 <meta name="Robots" content="index,follow" />
 <meta name="Language" content="english" />
 <meta name="identifier-url" content="http://www.grml.org/" />
