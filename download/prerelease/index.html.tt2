@@ -91,12 +91,12 @@
         <a href="https://grml.org/download/mirrors/">Download from a specific mirror</a><br/>
         <br/>
         Direct download links:<br/>
-        <a href="https://download.grml.org/devel/grml96-full_2020.06-rc1.iso">Grml96 full ISO</a> [<a href="https://download.grml.org/devel/grml96-full_2020.06-rc1.iso.asc">Signature</a>]<br/>
-        <a href="https://download.grml.org/devel/grml64-full_2020.06-rc1.iso">Grml64 full ISO</a> [<a href="https://download.grml.org/devel/grml64-full_2020.06-rc1.iso.asc">Signature</a>]<br/>
-        <a href="https://download.grml.org/devel/grml32-full_2020.06-rc1.iso">Grml32 full ISO</a> [<a href="https://download.grml.org/devel/grml32-full_2020.06-rc1.iso.asc">Signature</a>]<br/>
-        <a href="https://download.grml.org/devel/grml96-small_2020.06-rc1.iso">Grml96 small ISO</a> [<a href="https://download.grml.org/devel/grml96-small_2020.06-rc1.iso.asc">Signature</a>]<br/>
-        <a href="https://download.grml.org/devel/grml64-small_2020.06-rc1.iso">Grml64 small ISO</a> [<a href="https://download.grml.org/devel/grml64-small_2020.06-rc1.iso.asc">Signature</a>]<br/>
-        <a href="https://download.grml.org/devel/grml32-small_2020.06-rc1.iso">Grml32 small ISO</a> [<a href="https://download.grml.org/devel/grml32-small_2020.06-rc1.iso.asc">Signature</a>]<br/>
+        <a href="https://download.grml.org/devel/grml96-full_2020.06-rc1.iso">Grml96 full ISO</a> [<a href="https://download.grml.org/devel/grml96-full_2020.06-rc1.iso.sha1.asc">Signature</a>]<br/>
+        <a href="https://download.grml.org/devel/grml64-full_2020.06-rc1.iso">Grml64 full ISO</a> [<a href="https://download.grml.org/devel/grml64-full_2020.06-rc1.iso.sha1.asc">Signature</a>]<br/>
+        <a href="https://download.grml.org/devel/grml32-full_2020.06-rc1.iso">Grml32 full ISO</a> [<a href="https://download.grml.org/devel/grml32-full_2020.06-rc1.iso.sha1.asc">Signature</a>]<br/>
+        <a href="https://download.grml.org/devel/grml96-small_2020.06-rc1.iso">Grml96 small ISO</a> [<a href="https://download.grml.org/devel/grml96-small_2020.06-rc1.iso.sha1.asc">Signature</a>]<br/>
+        <a href="https://download.grml.org/devel/grml64-small_2020.06-rc1.iso">Grml64 small ISO</a> [<a href="https://download.grml.org/devel/grml64-small_2020.06-rc1.iso.sha1.asc">Signature</a>]<br/>
+        <a href="https://download.grml.org/devel/grml32-small_2020.06-rc1.iso">Grml32 small ISO</a> [<a href="https://download.grml.org/devel/grml32-small_2020.06-rc1.iso.sha1.asc">Signature</a>]<br/>
         <br/>
         </div></div>
     </div>
@@ -174,7 +174,7 @@
         document.getElementById('download_link_mirror').href = mirror_url + iso;
         document.getElementById('download_link_mirror').innerHTML = '<br />Download Now<div class="download_relinfo">' + product + '-' + flavour + ' ' + current_version + '</div>';
         // document.getElementById('download_link_bt').href = mirror_url + iso + '.torrent';
-        document.getElementById('download_link_signature').href = mirror_url + iso + '.asc';
+        document.getElementById('download_link_signature').href = mirror_url + iso + '.sha1.asc';
     }
 
     // hook update function
