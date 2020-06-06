@@ -32,12 +32,13 @@
         <h2>Current release</h2>
 
         <p>
-        <a href="README-grml-2018.12/">Release announcement for Grml 2018.12 - codename Gnackwatschn</a>
+        <a href="/changelogs/README-grml-2020.06-rc1/">Release announcement for Grml 2020.06-rc1 - codename Ausgehfuahangl</a>
         </p>
 
         <h2>Previous releases</h2>
 
         <ul>
+          <li><a href="README-grml-2018.12/">Grml 2018.12</a> - codename Gnackwatschn</a>
           <li><a href="README-grml-2017.05/">Grml 2017.05</a> - codename Freedatensuppe</li>
           <li><a href="README-grml-2014.11/">Grml 2014.11</a> - codename Gschistigschasti</li>
           <li><a href="README-grml-2014.03/">Grml 2014.03</a> - codename Ponywagon</li>

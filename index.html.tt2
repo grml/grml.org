@@ -10,7 +10,7 @@
 <meta name="fdse-index-as" content="http://grml.org/" />
 <meta name="Robots" content="index,follow" />
 <meta name="Language" content="english" />
-<meta name="identifier-url" content="http://grml.org/" />
+<meta name="identifier-url" content="https://grml.org/" />
 <meta name="MSSmartTagsPreventParsing" content="true" />
 <meta http-equiv="imagetoolbar" content="no" />
 <link rel="home" href="/" title="grml.org" />
@@ -33,7 +33,7 @@
             <h2>What is Grml?</h2>
 
             <p>Grml is a bootable live system (Live-CD) based on <a
-              href="http://www.debian.org/">Debian</a>. Grml includes a
+            href="https://www.debian.org/">Debian</a>. Grml includes a
             collection of GNU/Linux software especially for system
             administrators. Users don't have to install anything on fixed
             storage. Grml is especially well suited for administrative tasks like installation,
@@ -43,27 +43,25 @@
             <br />
 
             <p style="text-align: center;">
-	    <b>The <a href="/changelogs/README-grml-2018.12/">current release</a>:</b><br/><br/>
+            <b>The <a href="/changelogs/README-grml-2018.12/">current release</a>:</b><br/><br/>
             <a href="/download/" class="button" style="padding: 12px; font-weight: bold;"><span>Download Grml 2018.12</span></a>
             </p>
             <br />
 
-	    <!--
             <p style="text-align: center;">
             <b>Pre-Release:</b><br/><br/>
-            <a href="/download/prerelease/" class="button" style="padding: 12px; font-weight: bold;"><span>Download Grml 2018.12-rc1</span></a>
+            <a href="/download/prerelease/" class="button" style="padding: 12px; font-weight: bold;"><span>Download Grml 2020.06-rc1</span></a>
             </p>
             <br />
-	    -->
 
             <img style="float: right; margin-left: 20px" src="/img/grmltux_small.jpg" alt="*" />
             <br />
 
             <h2>News</h2>
             <div class="news">
+            <p>06 Jun 2020: New <a href="/changelogs/README-grml-2020.06-rc1/">release candidate version 2020.06-rc1</a></p>
             <p>11 Jan 2019: Grml/Debian <a href="https://blog.grml.org/archives/402-GrmlDebian-Bug-Squashing-Party-in-Salzburg,-2019.html">Bug Squashing Party in Salzburg</a> (April 2019)</p>
             <p>31 Dec 2018: New <a href="/changelogs/README-grml-2018.12/">stable release 2018.12</a></p>
-            <p>20 Dec 2018: New <a href="/changelogs/README-grml-2018.12-rc1/">release candidate version 2018.12-rc1</a></p>
             </div>
 
       </div>
