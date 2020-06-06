@@ -28,7 +28,7 @@
 
         <h1 align="center">FAQ for grml</h1>
 
-        <p><strong>Up2date:</strong> applies to Grml version 2018.12</p>
+        <p><strong>Up2date:</strong> applies to Grml version 2020.06</p>
 
         <p><a name="toc"></a><strong>Index:</strong></p>
 
@@ -117,9 +117,8 @@
 
         <h3><a name="releasename"></a><a href="#toc">What about the release name?</a></h3>
 
-        <p>Codename of Grml 2018.12 is "Gnackwatschn", which is
-        an austrian and bavarian word, meaning "hit in the neck".
-	We consider this an alternative to a facepalm; although a "Gnackwatschn" isn't usually self-inflicted.
+        <p>Codename of Grml 2020.06 is &quot;Ausgehfuahangl&quot;, which is
+	an austrian word for a face mask.</p>
 
         <h3><a name="requirements"></a><a href="#toc">Requirements for running Grml</a></h3>
 
@@ -275,17 +274,16 @@ grml keyboard=de xkeyboard=de lang=at # enter this at the bootprompt
         <h3><a name="lvm"></a><a href="#toc">Where are my LVM devices?</a></h3>
 
         <p>LVM (Logival Volumes) is <strong>not</strong> started by default to
-        avoid any possible damage to your data. To get access to present LVM
+        avoid any possible damage to your data. To activate present LVM
         devices execute (replace "$name" with the name of the PV):</p>
 
 <pre class="rahmen">
 # Start lvm2-pvscan@$name
 </pre>
 
-        <p>or if you don't know its name, use:</p>
+        <p>or if you don't know its name and to enable all present ones, use:</p>
 
 <pre class="rahmen">
-# Start lvm2-lvmetad
 # vgchange -ay
 </pre>
 
@@ -400,8 +398,8 @@ grml keyboard=de xkeyboard=de lang=at # enter this at the bootprompt
 
         <p>You want to deploy Grml in your data center, use it as part of your
         business or have an emergency case? You're happy with Grml but would
-        like to get your very own live cd (providing your favourite software
-        selection, special configuration, setup and your bootsplash)?
+        like to get your very own live system (providing your favourite software
+        selection, special configuration, setup and a custom bootsplash)?
         Please get in <a href="/contact/">touch with us</a>.</p>
 
       </div>

@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>grml.org - Release Notes: Grml 2020.06-rc1 - Codename CODENAME</title>
-<meta name="Title" content="grml.org - Release Notes: Grml 2020.06-rc1 CODENAME" />
+<title>grml.org - Release Notes: Grml 2020.06-rc1 - Codename Ausgehfuahangl</title>
+<meta name="Title" content="grml.org - Release Notes: Grml 2020.06-rc1 Ausgehfuahangl" />
 <meta name="Author" content="the Grml team [grml.org/team/]" />
 <meta name="Keywords" content="grml.org, Grml" />
 <meta name="Description" content="Release Notes of Grml 2020.06-rc1" />
@@ -24,7 +24,7 @@
 
       <div class="content">
 
-        <h1>Release Notes for Grml 2020.06-rc1 - codename <a href="/faq/#releasename">CODENAME</a></h1>
+        <h1>Release Notes for Grml 2020.06-rc1 - codename <a href="/faq/#releasename">Ausgehfuahangl</a></h1>
 
 <!--
 FIXME
@@ -72,11 +72,11 @@ FIXME
           <li><strong>qemu-guest-agent support</strong>: when running in appropriate environments (like <a href="https://www.proxmox.com/en/proxmox-ve">Proxmox VE</a>) this daemon exchanges information between the host and guest system (VM) (also see <a href="https://pve.proxmox.com/wiki/Qemu-guest-agent">Proxmox wiki</a> for further information).
           When booting Grml as a VM in such an environment, the network information is visible in the VM summary then, like:</li>
 
-            <img style="margin-left: 20px; margin-bottom: 20px; margin-top: 20px; border: 0" src="../../img/qemu-guest-agent.png" /> <!-- FIXME -->
+            <img style="margin-left: 20px; margin-bottom: 20px; margin-top: 20px; border: 0" src="../../img/qemu-guest-agent.png" />
 
           <li><strong>network information in grml-quickconfig</strong>: hostname, cloud-init, IP addresses and zeroconf/avahi information:</li>
 
-            <img style="margin-left: 20px; margin-bottom: 20px; margin-top: 20px; border: 0" src="../../img/grml-quickconfig.png" /> <!-- FIXME -->
+            <img style="margin-left: 20px; margin-bottom: 20px; margin-top: 20px; border: 0" src="../../img/grml-quickconfig.png" />
 
         </ul>
 
@@ -120,6 +120,7 @@ FIXME
         <h4><a href="/zsh/">grml-zshrc</a> (Zsh configuration):</h4>
 
         <ul>
+          <li>Add zstd support to simple-extract()
           <li>Reset $REPLY parameter before calling prompt token functions
           <li>Disable bracketed paste mode for dumb terminals
           <li>Fix urxvt multi-line issue
@@ -130,6 +131,7 @@ FIXME
         <h4><a href="/grml-debootstrap/">grml-debootstrap</a> (wrapper around debootstrap for installing pure Debian):</h4>
 
         <ul>
+          <li>Add support for .ssh/authorized_keys via cmdline option --sshcopyauth
           <li>Support BOOT_APPEND usage outside of VMs
           <li>Support <a href="https://gitlab.mister-muffin.de/josch/mmdebstrap">mmdebstrap</a> via DEBOOTSTRAP=mmdebstrap
           <li>Use new security.debian.org repository layout for bullseye and newer
@@ -151,12 +153,12 @@ FIXME
 
         <p>Details about shipped packages and their versions in Grml are
         available in the <a href="/files/#debian">Debian section</a>. Visit
-        <a href="/files/grml64-full_2020.06/dpkg.list">dpkg_list</a> (FIXME) for a
+        <a href="/files/grml64-full_2020.06/dpkg.list">dpkg_list</a> for a
         detailed list of packages shipped with Grml 2020.06(-rc1).</p>
 
         <h3>Updates</h3>
 
-        <p>Packages are taken from Debian testing as of FIXME of FIXME 2020.
+        <p>Packages are taken from Debian testing as of 6th of June 2020.
         22 packages have been removed, and these 28 new packages
         have been added (excluding lib*, *-common, python3-* and kernel image):</p>
 
