@@ -48,7 +48,7 @@ FIXME
           If you don't have any custom tools which rely on <em>/lib/live/mount/medium</em> (or its ancestor <em>/live/image</em>),
           then this change is irrelevant for you.
 
-          <li>Tools like grml2usb and grml-x have been ported from Python2 to Python3 (AKA py3k), we no longer support Python2 in our tools.
+          <li>Tools like grml2usb, grml-paste and grml-x have been ported from Python2 to Python3 (AKA py3k), we no longer support Python2 in our tools.
 
           <li>The live system no longer uses a custom Grml kernel, instead we switched to the linux-image packages provided by Debian.
 
@@ -250,6 +250,7 @@ FIXME
         András Korn,
         Antoine Beaupré,
         Axel Beckert,
+        Chris Hofstaedtler,
         Florian Apolloner,
         Garrett Holmstrom,
         Iru Cai,
