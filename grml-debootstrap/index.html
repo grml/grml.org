@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
 <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
-<meta name="generator" content="AsciiDoc 8.6.10" />
+<meta name="generator" content="AsciiDoc 9.0.0rc2" />
 <title>grml-debootstrap(8)</title>
 <style type="text/css">
 /* Shared CSS for AsciiDoc xhtml11 and html5 backends */
@@ -436,7 +436,7 @@ thead, p.table.header {
 p.table {
   margin-top: 0;
 }
-/* Because the table frame attribute is overriden by CSS in most browsers. */
+/* Because the table frame attribute is overridden by CSS in most browsers. */
 div.tableblock > table[frame="void"] {
   border-style: none;
 }
@@ -1110,6 +1110,17 @@ or virtual image file then. Customization of this process is possible as well.</
 </p>
 </dd>
 <dt class="hdlist1">
+<strong>--sshcopyauth</strong>
+</dt>
+<dd>
+<p>
+    Use locally available <em>$HOME/.ssh/authorized_keys</em> to authorise root login on the target system.
+    This installs <em>$HOME/.ssh/authorized_keys</em> as <em>/root/.ssh/authorized_keys</em> on
+    the target system. If a different file than <em>$HOME/.ssh/authorized_keys</em> should
+    be used, the environment variable <em>AUTHORIZED_KEYS_SOURCE</em> can be used.
+</p>
+</dd>
+<dt class="hdlist1">
 <strong>--sshcopyid</strong>
 </dt>
 <dd>
@@ -1515,7 +1526,7 @@ deploying a stable release and upgrade it after installation finished.</p></div>
 <div id="footer">
 <div id="footer-text">
 Last updated
- 2019-12-13 13:06:15 UTC
+ 2020-06-03 14:44:11 UTC
 </div>
 </div>
 </body>
