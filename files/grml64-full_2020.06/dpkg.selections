@@ -321,18 +321,12 @@ libbinutils:amd64				install
 libblas3:amd64					install
 libblkid1:amd64					install
 libbluetooth3:amd64				install
-libboost-atomic1.67.0:amd64			install
-libboost-chrono1.67.0:amd64			install
-libboost-date-time1.67.0:amd64			install
-libboost-filesystem1.67.0:amd64			install
+libboost-filesystem1.71.0:amd64			install
 libboost-iostreams1.71.0:amd64			install
-libboost-locale1.67.0:amd64			install
 libboost-locale1.71.0:amd64			install
-libboost-log1.67.0				install
-libboost-program-options1.67.0:amd64		install
-libboost-regex1.67.0:amd64			install
-libboost-system1.67.0:amd64			install
-libboost-thread1.67.0:amd64			install
+libboost-log1.71.0				install
+libboost-program-options1.71.0:amd64		install
+libboost-regex1.71.0:amd64			install
 libboost-thread1.71.0:amd64			install
 libbrlapi0.7:amd64				install
 libbrotli1:amd64				install
@@ -494,7 +488,6 @@ libhttp-message-perl				install
 libhttp-negotiate-perl				install
 libibverbs1:amd64				install
 libice6:amd64					install
-libicu63:amd64					install
 libicu67:amd64					install
 libid3tag0:amd64				install
 libidn11:amd64					install
@@ -545,7 +538,7 @@ libldb2:amd64					install
 libleatherman1.4.2:amd64			install
 liblinear4:amd64				install
 liblinux-lvm-perl				install
-libllvm9:amd64					install
+libllvm10:amd64					install
 liblmdb0:amd64					install
 liblocale-gettext-perl				install
 liblockfile-bin					install
@@ -578,6 +571,7 @@ libmount1:amd64					install
 libmpc3:amd64					install
 libmpdec2:amd64					install
 libmpfr6:amd64					install
+libmsgpackc2:amd64				install
 libmspack0:amd64				install
 libmtdev1:amd64					install
 libncurses6:amd64				install
@@ -653,7 +647,6 @@ libprotobuf22:amd64				install
 libproxy1v5:amd64				install
 libpsl5:amd64					install
 libpulse0:amd64					install
-libpython-stdlib:amd64				install
 libpython2-stdlib:amd64				install
 libpython2.7-minimal:amd64			install
 libpython2.7-stdlib:amd64			install
@@ -661,6 +654,7 @@ libpython3-stdlib:amd64				install
 libpython3.8:amd64				install
 libpython3.8-minimal:amd64			install
 libpython3.8-stdlib:amd64			install
+libqrencode4:amd64				install
 libqt5core5a:amd64				install
 libqt5dbus5:amd64				install
 libqt5gui5:amd64				install
@@ -717,6 +711,7 @@ libspeexdsp1:amd64				install
 libspice-server1:amd64				install
 libsqlite3-0:amd64				install
 libss2:amd64					install
+libssh-4:amd64					install
 libssh-gcrypt-4:amd64				install
 libssh2-1:amd64					install
 libssl1.1:amd64					install
@@ -976,8 +971,6 @@ puppet						install
 pv						install
 pwgen						install
 pxelinux					install
-python						install
-python-minimal					install
 python2						install
 python2-minimal					install
 python2.7					install
@@ -1040,6 +1033,7 @@ qemu-system-data				install
 qemu-system-gui:amd64				install
 qemu-system-x86					install
 qemu-utils					install
+qrencode					install
 radvd						install
 rake						install
 rdnssd						install
@@ -1127,6 +1121,7 @@ tgt						install
 thin-provisioning-tools				install
 tk						install
 tk8.6						install
+tmate						install
 tmux						install
 tree						install
 tshark						install

@@ -25,13 +25,13 @@ ii  atmel-firmware                      1.3-4                               all 
 ii  attr                                1:2.4.48-5                          i386         utilities for manipulating filesystem extended attributes
 ii  augeas-lenses                       1.12.0-2                            all          Set of lenses needed by libaugeas0 to parse config files
 ii  augeas-tools                        1.12.0-2                            i386         Augeas command line tools
-ii  autopsy                             2.24-3                              all          graphical interface to SleuthKit
+ii  autopsy                             2.24-4                              all          graphical interface to SleuthKit
 ii  avahi-daemon                        0.8-3                               i386         Avahi mDNS/DNS-SD daemon
 ii  avahi-utils                         0.8-3                               i386         Avahi browsing, publishing and discovery utilities
-ii  bacula-common                       9.6.3-1                             i386         network backup service - common support files
-ii  bacula-console                      9.6.3-1                             i386         network backup service - text console
-ii  bacula-fd                           9.6.3-1                             i386         network backup service - file daemon
-ii  bacula-sd                           9.6.3-1                             i386         network backup service - storage daemon
+ii  bacula-common                       9.6.5-2                             i386         network backup service - common support files
+ii  bacula-console                      9.6.5-2                             i386         network backup service - text console
+ii  bacula-fd                           9.6.5-2                             i386         network backup service - file daemon
+ii  bacula-sd                           9.6.5-2                             i386         network backup service - storage daemon
 ii  base-files                          11                                  i386         Debian base system miscellaneous files
 ii  base-passwd                         3.5.47                              i386         Debian base system master password and group files
 ii  bash                                5.0-6                               i386         GNU Bourne Again SHell
@@ -39,9 +39,9 @@ ii  bats                                1.1.0+git104-g1c83a1b-1.1           all 
 ii  bc                                  1.07.1-2+b2                         i386         GNU bc arbitrary precision calculator language
 ii  bcache-tools                        1.0.8-4                             i386         bcache userspace tools
 ii  beep                                1.4.9-1                             i386         advanced PC-speaker beeper
-ii  bind9-dnsutils                      1:9.16.3-1                          i386         Clients provided with BIND 9
-ii  bind9-host                          1:9.16.3-1                          i386         DNS Lookup Utility
-ii  bind9-libs:i386                     1:9.16.3-1                          i386         Shared Libraries used by BIND 9
+ii  bind9-dnsutils                      1:9.16.4-1                          i386         Clients provided with BIND 9
+ii  bind9-host                          1:9.16.4-1                          i386         DNS Lookup Utility
+ii  bind9-libs:i386                     1:9.16.4-1                          i386         Shared Libraries used by BIND 9
 ii  binfmt-support                      2.2.1-1                             i386         Support for extra binary formats
 ii  binutils                            2.34-8                              i386         GNU assembler, linker and binary utilities
 ii  binutils-common:i386                2.34-8                              i386         Common files for the GNU assembler, linker and binary utilities
@@ -52,14 +52,14 @@ ii  bonnie++                            1.98                                i386
 ii  boot-info-script                    0.78-1                              all          inspect boot environment
 ii  borgbackup                          1.1.11-5                            i386         deduplicating and compressing backup program
 ii  bridge-utils                        1.6-3                               i386         Utilities for configuring the Linux Ethernet bridge
-ii  brltty                              6.0+dfsg-5+b2                       i386         Access software for a blind person using a braille display
+ii  brltty                              6.0+dfsg-6                          i386         Access software for a blind person using a braille display
 ii  bsdmainutils                        11.1.2+b1                           i386         collection of more utilities from FreeBSD
-ii  bsdutils                            1:2.35.2-2                          i386         basic utilities from 4.4BSD-Lite
+ii  bsdutils                            1:2.35.2-4                          i386         basic utilities from 4.4BSD-Lite
 ii  btrfs-progs                         5.6-1                               i386         Checksumming Copy on Write Filesystem utilities
 ii  buffer                              1.19-12+b1                          i386         Buffering/reblocking program for tape backups, printing, etc.
 ii  busybox                             1:1.30.1-4                          i386         Tiny utilities for small and embedded systems
 ii  bzip2                               1.0.8-3                             i386         high-quality block-sorting file compressor - utilities
-ii  ca-certificates                     20190110                            all          Common CA certificates
+ii  ca-certificates                     20200601                            all          Common CA certificates
 ii  cabextract                          1.9-3                               i386         Microsoft Cabinet file unpacker
 ii  cciss-vol-status                    1.12-2                              i386         HP SmartArray RAID Volume Status Checker
 ii  cdebootstrap                        0.7.7+b12                           i386         Bootstrap a Debian system
@@ -79,13 +79,13 @@ ii  console-setup-linux                 1.195                               all 
 ii  coreutils                           8.30-3                              i386         GNU core utilities
 ii  cpio                                2.13+dfsg-2                         i386         GNU cpio -- a program to manage archives of files
 ii  cpp                                 4:9.2.1-3.1                         i386         GNU C preprocessor (cpp)
-ii  cpp-9                               9.3.0-13                            i386         GNU C preprocessor
+ii  cpp-9                               9.3.0-14                            i386         GNU C preprocessor
 ii  cpuid                               20200211-1                          i386         tool to dump x86 CPUID information about the CPU(s)
 ii  cron                                3.0pl1-136                          i386         process scheduling daemon
 ii  crosshurd                           1.7.56                              all          Install a Debian system
-ii  cryptsetup                          2:2.3.2-1                           i386         disk encryption support - startup scripts
-ii  cryptsetup-bin                      2:2.3.2-1                           i386         disk encryption support - command line tools
-ii  cryptsetup-initramfs                2:2.3.2-1                           all          disk encryption support - initramfs integration
+ii  cryptsetup                          2:2.3.3-1                           i386         disk encryption support - startup scripts
+ii  cryptsetup-bin                      2:2.3.3-1                           i386         disk encryption support - command line tools
+ii  cryptsetup-initramfs                2:2.3.3-1                           all          disk encryption support - initramfs integration
 ii  cu                                  1.07-27                             i386         call up another system
 ii  curl                                7.68.0-1                            i386         command line tool for transferring data with URL syntax
 ii  daemon                              0.6.4-1+b2                          i386         turns other processes into daemons
@@ -118,7 +118,7 @@ ii  dmraid                              1.0.0.rc16-8                        i386
 ii  dmsetup                             2:1.02.167-1+b1                     i386         Linux Kernel Device Mapper userspace library
 ii  dnsmasq                             2.80-1.1                            all          Small caching DNS proxy and DHCP/TFTP server
 ii  dnsmasq-base                        2.80-1.1                            i386         Small caching DNS proxy and DHCP/TFTP server
-ii  dnsutils                            1:9.16.3-1                          all          Transitional package for bind9-dnsutils
+ii  dnsutils                            1:9.16.4-1                          all          Transitional package for bind9-dnsutils
 ii  dos2unix                            7.4.0-2                             i386         convert text file line endings between CRLF and LF
 ii  dosfstools                          4.1-2                               i386         utilities for making and checking MS-DOS FAT filesystems
 ii  dpkg                                1.19.7                              i386         Debian package management system
@@ -130,7 +130,7 @@ ii  duplicity                           0.8.11.1612-1+b1                    i386
 ii  e2fsprogs                           1.45.6-1                            i386         ext2/ext3/ext4 file system utilities
 ii  ed                                  1.16-1                              i386         classic UNIX line editor
 ii  efibootmgr                          17-1                                i386         Interact with the EFI Boot Manager
-ii  eject                               2.35.2-2                            i386         ejects CDs and operates CD-Changers under Linux
+ii  eject                               2.35.2-4                            i386         ejects CDs and operates CD-Changers under Linux
 ii  espeak                              1.48.04+dfsg-8                      i386         Multi-lingual software speech synthesizer
 ii  espeak-data:i386                    1.48.04+dfsg-8                      i386         Multi-lingual software speech synthesizer: speech data files
 ii  espeak-ng-data:i386                 1.50+dfsg-6                         i386         Multi-lingual software speech synthesizer: speech data files
@@ -142,16 +142,16 @@ ii  exfat-fuse                          1.3.0-1                             i386
 ii  exfat-utils                         1.3.0-1                             i386         utilities to create, check, label and dump exFAT filesystem
 ii  exif                                0.6.21-2                            i386         command-line utility to show EXIF information in JPEG files
 ii  extundelete                         0.2.4-2                             i386         utility to recover deleted files from ext3/ext4 partition
-ii  facter                              3.11.0-4.1                          i386         collect and display facts about the system
+ii  facter                              3.11.0-4.2                          i386         collect and display facts about the system
 ii  fai-client                          5.9.4                               all          Fully Automatic Installation client package
 ii  fai-server                          5.9.4                               all          Fully Automatic Installation server package
 ii  fai-setup-storage                   5.9.4                               all          automatically prepare storage devices
 ii  fakeroot                            1.24-1                              i386         tool for simulating superuser privileges
-ii  fdisk                               2.35.2-2                            i386         collection of partitioning utilities
+ii  fdisk                               2.35.2-4                            i386         collection of partitioning utilities
 ii  file                                1:5.38-5                            i386         Recognize the type of data in a file using "magic" numbers
 ii  findutils                           4.7.0-1                             i386         utilities for finding files--find, xargs
-ii  fio                                 3.19-2                              i386         flexible I/O tester
-ii  firefox-esr                         68.8.0esr-1                         i386         Mozilla Firefox web browser - Extended Support Release (ESR)
+ii  fio                                 3.20-1                              i386         flexible I/O tester
+ii  firefox-esr                         68.9.0esr-1                         i386         Mozilla Firefox web browser - Extended Support Release (ESR)
 ii  firmware-amd-graphics               20190717-2                          all          Binary firmware for AMD/ATI graphics chips
 ii  firmware-atheros                    20190717-2                          all          Binary firmware for Qualcomm Atheros wireless cards
 ii  firmware-bnx2                       20190717-2                          all          Binary firmware for Broadcom NetXtremeII
@@ -176,20 +176,20 @@ ii  flashrom                            1.2-5                               i386
 ii  fluxbox                             1.3.5-2+b2                          i386         Highly configurable and low resource X11 Window manager
 ii  fontconfig                          2.13.1-4.2                          i386         generic font configuration library - support binaries
 ii  fontconfig-config                   2.13.1-4.2                          all          generic font configuration library - configuration
-ii  fonts-dejavu-core                   2.37-1                              all          Vera font family derivate with additional characters
+ii  fonts-dejavu-core                   2.37-2                              all          Vera font family derivate with additional characters
 ii  freeipmi-common                     1.6.4-3                             all          GNU implementation of the IPMI protocol - common files
 ii  fsarchiver                          0.8.5-2                             i386         file system archiver
-ii  fuse3                               3.9.0-2                             i386         Filesystem in Userspace (3.x version)
+ii  fuse3                               3.9.2-1                             i386         Filesystem in Userspace (3.x version)
 ii  gawk                                1:5.0.1+dfsg-1                      i386         GNU awk, a pattern scanning and processing language
 ii  gcc-10-base:i386                    10.1.0-3                            i386         GCC, the GNU Compiler Collection (base package)
-ii  gcc-9-base:i386                     9.3.0-13                            i386         GCC, the GNU Compiler Collection (base package)
+ii  gcc-9-base:i386                     9.3.0-14                            i386         GCC, the GNU Compiler Collection (base package)
 ii  gddrescue                           1.23-2                              i386         GNU data recovery tool
 ii  gdisk                               1.0.5-1                             i386         GPT fdisk text-mode partitioning tool
 ii  genisoimage                         9:1.1.11-3.1                        i386         Creates ISO-9660 CD-ROM filesystem images
 ii  gettext-base                        0.19.8.1-10                         i386         GNU Internationalization utilities for the base system
 ii  gir1.2-glib-2.0:i386                1.64.1-1                            i386         Introspection data for GLib, GObject, Gio and GModule
-ii  git                                 1:2.26.2-1                          i386         fast, scalable, distributed revision control system
-ii  git-man                             1:2.26.2-1                          all          fast, scalable, distributed revision control system (manual pages)
+ii  git                                 1:2.27.0-1                          i386         fast, scalable, distributed revision control system
+ii  git-man                             1:2.27.0-1                          all          fast, scalable, distributed revision control system (manual pages)
 ii  glib-networking:i386                2.64.2-1                            i386         network-related giomodules for GLib
 ii  glib-networking-common              2.64.2-1                            all          network-related giomodules for GLib - data files
 ii  glib-networking-services            2.64.2-1                            i386         network-related giomodules for GLib - D-Bus services
@@ -207,20 +207,20 @@ ii  gpgconf                             2.2.20-1                            i386
 ii  gpgsm                               2.2.20-1                            i386         GNU privacy guard - S/MIME version
 ii  gpgv                                2.2.20-1                            i386         GNU privacy guard - signature verification tool
 ii  gpm                                 1.20.7-6                            i386         General Purpose Mouse interface
-ii  graphicsmagick                      1.4+really1.3.35-2                  i386         collection of image processing tools
-ii  graphicsmagick-imagemagick-compat   1.4+really1.3.35-2                  all          image processing tools providing ImageMagick interface
+ii  graphicsmagick                      1.4+really1.3.35+hg16297-1          i386         collection of image processing tools
+ii  graphicsmagick-imagemagick-compat   1.4+really1.3.35+hg16297-1          all          image processing tools providing ImageMagick interface
 ii  grep                                3.4-1                               i386         GNU grep, egrep and fgrep
-ii  grml-autoconfig                     0.19.0                              all          main bootup process of a Grml (based) system
+ii  grml-autoconfig                     0.19.1                              all          main bootup process of a Grml (based) system
 ii  grml-crypt                          0.27                                all          wrapper around cryptsetup-luks
 ii  grml-debian-keyring                 2018.06.02                          all          GnuPG archive key of the grml.org repository
 ii  grml-debootstrap                    0.93                                all          wrapper around debootstrap for installing pure Debian
 ii  grml-desktop                        0.6.0                               all          configuration files for the X desktop at grml
 ii  grml-etc                            1.7.0                               all          etcetera files for the Grml system
-ii  grml-etc-core                       0.17.2                              all          core etcetera files for the Grml system
+ii  grml-etc-core                       0.17.3                              all          core etcetera files for the Grml system
 ii  grml-hwinfo                         0.15.3                              all          collect hardware information
-ii  grml-live                           0.35.4                              all          build system for creating a Grml (based) Linux live system
+ii  grml-live                           0.36.0                              all          build system for creating a Grml (based) Linux live system
 ii  grml-network                        0.11.3                              all          network related helper scripts
-ii  grml-paste                          0.7                                 all          command line interface for paste.grml.org
+ii  grml-paste                          0.8                                 all          command line interface for paste.grml.org
 ii  grml-policyrcd                      0.4.0                               all          wrapper for and around invoke-rc.d and policyrcd-script-zg2
 ii  grml-quickconfig                    0.21                                all          Menu framework for quick access of grml menu entries
 ii  grml-quickconfig-standard           0.21                                all          Standard menu entries for grml-quickconfig
@@ -231,14 +231,14 @@ ii  grml-terminalserver                 0.102.2                             all 
 ii  grml-tips                           0.7.2                               all          search for tips and hints via a keyword
 ii  grml-udev-config                    0.4.2                               all          custom udev configurations for the Grml live system
 ii  grml-x                              0.7.1                               all          wrapper for startx for running X Window System
-ii  grml2usb                            0.18.1                              i386         install Grml system / ISO to usb device
+ii  grml2usb                            0.18.3                              i386         install Grml system / ISO to usb device
 ii  groff-base                          1.22.4-5                            i386         GNU troff text-formatting system (base system components)
-ii  grub-common                         2.04-7                              i386         GRand Unified Bootloader (common files)
-ii  grub-efi-amd64-bin                  2.04-7                              i386         GRand Unified Bootloader, version 2 (EFI-AMD64 modules)
-ii  grub-efi-ia32-bin                   2.04-7                              i386         GRand Unified Bootloader, version 2 (EFI-IA32 modules)
-ii  grub-pc                             2.04-7                              i386         GRand Unified Bootloader, version 2 (PC/BIOS version)
-ii  grub-pc-bin                         2.04-7                              i386         GRand Unified Bootloader, version 2 (PC/BIOS modules)
-ii  grub2-common                        2.04-7                              i386         GRand Unified Bootloader (common files for version 2)
+ii  grub-common                         2.04-8                              i386         GRand Unified Bootloader (common files)
+ii  grub-efi-amd64-bin                  2.04-8                              i386         GRand Unified Bootloader, version 2 (EFI-AMD64 modules)
+ii  grub-efi-ia32-bin                   2.04-8                              i386         GRand Unified Bootloader, version 2 (EFI-IA32 modules)
+ii  grub-pc                             2.04-8                              i386         GRand Unified Bootloader, version 2 (PC/BIOS version)
+ii  grub-pc-bin                         2.04-8                              i386         GRand Unified Bootloader, version 2 (PC/BIOS modules)
+ii  grub2-common                        2.04-8                              i386         GRand Unified Bootloader (common files for version 2)
 ii  gsettings-desktop-schemas           3.36.1-1                            all          GSettings desktop-wide schemas
 ii  gtk-update-icon-cache               3.24.20-1                           i386         icon theme caching utility
 ii  gzip                                1.10-2                              i386         GNU compression utilities
@@ -252,7 +252,7 @@ ii  hostapd                             2:2.9.0-13                          i386
 ii  hostname                            3.23                                i386         utility to set/show the host name or domain name
 ii  htop                                2.2.0-2                             i386         interactive processes viewer
 ii  hwinfo                              21.70-1+b1                          i386         Hardware identification system
-ii  ifenslave                           2.10                                all          configure network interfaces for parallel routing (bonding)
+ii  ifenslave                           2.10+nmu1                           all          configure network interfaces for parallel routing (bonding)
 ii  iftop                               1.0~pre4-6                          i386         displays bandwidth usage information on an network interface
 ii  ifupdown                            0.8.35                              i386         high level tools to configure network interfaces
 ii  imvirt                              0.9.6-6                             all          detects several virtualizations
@@ -266,7 +266,7 @@ ii  ipcalc                              0.41-5                              all 
 ii  iperf                               2.0.13+dfsg1-1                      i386         Internet Protocol bandwidth measuring tool
 ii  iperf3                              3.7-3                               i386         Internet Protocol bandwidth measuring tool
 ii  ipmitool                            1.8.18-8                            i386         utility for IPMI control with kernel driver or LAN interface (daemon)
-ii  iproute2                            5.6.0-1                             i386         networking and traffic control tools
+ii  iproute2                            5.7.0-1                             i386         networking and traffic control tools
 ii  iptables                            1.8.4-3                             i386         administration tools for packet filtering and NAT
 ii  iptraf-ng                           1:1.1.4-6+b1                        i386         Next Generation Interactive Colorful IP LAN Monitor
 ii  iptstate                            2.2.6-1+b2                          i386         top-like interface to your netfilter connection-tracking table
@@ -295,23 +295,23 @@ ii  lftp                                4.8.4-2+b1                          i386
 ii  libacl1:i386                        2.2.53-8                            i386         access control list - shared library
 ii  libafflib0v5                        3.7.18-7                            i386         Advanced Forensics Format Library
 ii  libaio1:i386                        0.3.112-8                           i386         Linux kernel AIO access library - shared library
-ii  libapparmor1:i386                   2.13.4-1+b1                         i386         changehat AppArmor library
+ii  libapparmor1:i386                   2.13.4-3                            i386         changehat AppArmor library
 ii  libapr1:i386                        1.6.5-1+b1                          i386         Apache Portable Runtime Library
 ii  libaprutil1:i386                    1.6.1-4+b1                          i386         Apache Portable Runtime Utility Library
 ii  libapt-pkg-perl                     0.1.36+b2                           i386         Perl interface to libapt-pkg
 ii  libapt-pkg6.0:i386                  2.1.6                               i386         package management runtime library
 ii  libarchive13:i386                   3.4.3-1                             i386         Multi-format archive and compression library (shared library)
 ii  libargon2-1:i386                    0~20171227-0.2                      i386         memory-hard hashing function - runtime library
-ii  libasound2:i386                     1.2.2-2.1                           i386         shared library for ALSA applications
-ii  libasound2-data                     1.2.2-2.1                           all          Configuration files and profiles for ALSA drivers
-ii  libassuan0:i386                     2.5.3-7                             i386         IPC library for the GnuPG components
+ii  libasound2:i386                     1.2.2-2.2                           i386         shared library for ALSA applications
+ii  libasound2-data                     1.2.2-2.2                           all          Configuration files and profiles for ALSA drivers
+ii  libassuan0:i386                     2.5.3-7.1                           i386         IPC library for the GnuPG components
 ii  libasyncns0:i386                    0.8-6+b1                            i386         Asynchronous name service query library
 ii  libatk-bridge2.0-0:i386             2.34.1-3                            i386         AT-SPI 2 toolkit bridge - shared library
 ii  libatk1.0-0:i386                    2.36.0-2                            i386         ATK accessibility toolkit
 ii  libatk1.0-data                      2.36.0-2                            all          Common files for the ATK accessibility toolkit
 ii  libatkmm-1.6-1v5:i386               2.28.0-2                            i386         C++ wrappers for ATK accessibility toolkit (shared libraries)
 ii  libatomic1:i386                     10.1.0-3                            i386         support library providing __atomic built-in functions
-ii  libatopology2:i386                  1.2.2-2.1                           i386         shared library for handling ALSA topology definitions
+ii  libatopology2:i386                  1.2.2-2.2                           i386         shared library for handling ALSA topology definitions
 ii  libatspi2.0-0:i386                  2.36.0-2                            i386         Assistive Technology Service Provider Interface - shared library
 ii  libattr1:i386                       1:2.4.48-5                          i386         extended attribute handling - shared library
 ii  libaudit-common                     1:2.8.5-3                           all          Dynamic library for security auditing - common files
@@ -325,22 +325,16 @@ ii  libb-hooks-op-check-perl            0.22-1+b2                           i386
 ii  libb2-1:i386                        0.98.1-1.1                          i386         BLAKE2 family of hash functions
 ii  libbinutils:i386                    2.34-8                              i386         GNU binary utilities (private shared library)
 ii  libblas3:i386                       3.9.0-2                             i386         Basic Linear Algebra Reference implementations, shared library
-ii  libblkid1:i386                      2.35.2-2                            i386         block device ID library
+ii  libblkid1:i386                      2.35.2-4                            i386         block device ID library
 ii  libbluetooth3:i386                  5.50-1.2                            i386         Library to use the BlueZ Linux Bluetooth stack
-ii  libboost-atomic1.67.0:i386          1.67.0-18                           i386         atomic data types, operations, and memory ordering constraints
-ii  libboost-chrono1.67.0:i386          1.67.0-18                           i386         C++ representation of time duration, time point, and clocks
-ii  libboost-date-time1.67.0:i386       1.67.0-18                           i386         set of date-time libraries based on generic programming concepts
-ii  libboost-filesystem1.67.0:i386      1.67.0-18                           i386         filesystem operations (portable paths, iteration over directories, etc) in C++
+ii  libboost-filesystem1.71.0:i386      1.71.0-6+b2                         i386         filesystem operations (portable paths, iteration over directories, etc) in C++
 ii  libboost-iostreams1.71.0:i386       1.71.0-6+b2                         i386         Boost.Iostreams Library
-ii  libboost-locale1.67.0:i386          1.67.0-18                           i386         C++ facilities for localization
 ii  libboost-locale1.71.0:i386          1.71.0-6+b2                         i386         C++ facilities for localization
-ii  libboost-log1.67.0                  1.67.0-18                           i386         C++ logging library
-ii  libboost-program-options1.67.0:i386 1.67.0-18                           i386         program options library for C++
-ii  libboost-regex1.67.0:i386           1.67.0-18                           i386         regular expression library for C++
-ii  libboost-system1.67.0:i386          1.67.0-18                           i386         Operating system (e.g. diagnostics support) library
-ii  libboost-thread1.67.0:i386          1.67.0-18                           i386         portable C++ multi-threading
+ii  libboost-log1.71.0                  1.71.0-6+b2                         i386         C++ logging library
+ii  libboost-program-options1.71.0:i386 1.71.0-6+b2                         i386         program options library for C++
+ii  libboost-regex1.71.0:i386           1.71.0-6+b2                         i386         regular expression library for C++
 ii  libboost-thread1.71.0:i386          1.71.0-6+b2                         i386         portable C++ multi-threading
-ii  libbrlapi0.7:i386                   6.0+dfsg-5+b2                       i386         braille display access via BRLTTY - shared library
+ii  libbrlapi0.7:i386                   6.0+dfsg-6                          i386         braille display access via BRLTTY - shared library
 ii  libbrotli1:i386                     1.0.7-6.1                           i386         library implementing brotli encoder and decoder (shared libraries)
 ii  libbsd0:i386                        0.10.0-1                            i386         utility functions from BSD systems - shared library
 ii  libburn4:i386                       1.5.2-1                             i386         library to provide CD/DVD/BD writing functions
@@ -354,9 +348,9 @@ ii  libcairo-gobject2:i386              1.16.0-4                            i386
 ii  libcairo2:i386                      1.16.0-4                            i386         Cairo 2D vector graphics library
 ii  libcairomm-1.0-1v5:i386             1.12.2-4                            i386         C++ wrappers for Cairo (shared libraries)
 ii  libcanberra0:i386                   0.30-7                              i386         simple abstract interface for playing event sounds
-ii  libcap-ng0:i386                     0.7.9-2.1+b2                        i386         An alternate POSIX capabilities library
-ii  libcap2:i386                        1:2.34-2                            i386         POSIX 1003.1e capabilities (library)
-ii  libcap2-bin                         1:2.34-2                            i386         POSIX 1003.1e capabilities (utilities)
+ii  libcap-ng0:i386                     0.7.9-2.2                           i386         An alternate POSIX capabilities library
+ii  libcap2:i386                        1:2.36-1                            i386         POSIX 1003.1e capabilities (library)
+ii  libcap2-bin                         1:2.36-1                            i386         POSIX 1003.1e capabilities (utilities)
 ii  libcapstone3:i386                   4.0.1+really+3.0.5-2                i386         lightweight multi-architecture disassembly framework - library
 ii  libcbor0:i386                       0.5.0+dfsg-2                        i386         library for parsing and generating CBOR (RFC 7049)
 ii  libclamav9:i386                     0.102.3+dfsg-1                      i386         anti-virus utility for Unix - library
@@ -366,12 +360,12 @@ ii  libcolord2:i386                     1.4.4-2                             i386
 ii  libcom-err2:i386                    1.45.6-1                            i386         common error description library
 ii  libconfig-general-perl              2.63-1                              all          generic configuration module
 ii  libcpp-hocon0.1.7:i386              0.1.7-1+b2                          i386         C++ port of the TypesafeConfig library -- shared libraries
-ii  libcpupower1                        5.6.14-1                            i386         CPU frequency and voltage scaling tools for Linux (libraries)
+ii  libcpupower1                        5.6.14-2                            i386         CPU frequency and voltage scaling tools for Linux (libraries)
 ii  libcrypt1:i386                      1:4.4.16-1                          i386         libcrypt shared library
-ii  libcryptsetup12:i386                2:2.3.2-1                           i386         disk encryption support - shared library
+ii  libcryptsetup12:i386                2:2.3.3-1                           i386         disk encryption support - shared library
 ii  libctf-nobfd0:i386                  2.34-8                              i386         Compact C Type Format library (runtime, no BFD dependency)
 ii  libctf0:i386                        2.34-8                              i386         Compact C Type Format library (runtime, BFD dependency)
-ii  libcunit1:i386                      2.1-3-dfsg-2+b12                    i386         Unit Testing Library for C
+ii  libcunit1:i386                      2.1-3-dfsg-2.3                      i386         Unit Testing Library for C
 ii  libcups2:i386                       2.3.3-1                             i386         Common UNIX Printing System(tm) - Core library
 ii  libcurl3-gnutls:i386                7.68.0-1                            i386         easy-to-use client-side URL transfer library (GnuTLS flavour)
 ii  libcurl4:i386                       7.68.0-1                            i386         easy-to-use client-side URL transfer library (OpenSSL flavour)
@@ -404,9 +398,9 @@ ii  libdrm2:i386                        2.4.101-2                           i386
 ii  libdw1:i386                         0.176-1.1                           i386         library that provides access to the DWARF debug information
 ii  libdynaloader-functions-perl        0.003-1                             all          deconstructed dynamic C library loading
 ii  libedit2:i386                       3.1-20191231-1                      i386         BSD editline and history libraries
-ii  libefiboot1:i386                    37-2                                i386         Library to manage UEFI variables
-ii  libefivar1:i386                     37-2                                i386         Library to manage UEFI variables
-ii  libegl-mesa0:i386                   19.3.3-1                            i386         free implementation of the EGL API -- Mesa vendor library
+ii  libefiboot1:i386                    37-2.1                              i386         Library to manage UEFI variables
+ii  libefivar1:i386                     37-2.1                              i386         Library to manage UEFI variables
+ii  libegl-mesa0:i386                   20.1.1-1                            i386         free implementation of the EGL API -- Mesa vendor library
 ii  libegl1:i386                        1.3.1-1                             i386         Vendor neutral GL dispatch library -- EGL support
 ii  libelf1:i386                        0.176-1.1                           i386         library to read and write ELF files
 ii  libemail-date-format-perl           1.005-1                             all          Module to generate RFC-2822-valid date strings
@@ -419,13 +413,13 @@ ii  libestr0:i386                       0.1.10-2.1+b1                       i386
 ii  libevdev2:i386                      1.9.0+dfsg-1                        i386         wrapper library for evdev devices
 ii  libevent-2.1-7:i386                 2.1.11-stable-1                     i386         Asynchronous event notification library
 ii  libewf2                             20140807-2+b1                       i386         library with support for Expert Witness Compression Format
-ii  libexif12:i386                      0.6.21-9                            i386         library to parse EXIF files
+ii  libexif12:i386                      0.6.22-2                            i386         library to parse EXIF files
 ii  libexpat1:i386                      2.2.9-1                             i386         XML parsing C library - runtime library
 ii  libext2fs2:i386                     1.45.6-1                            i386         ext2/ext3/ext4 file system libraries
-ii  libfacter3.11.0:i386                3.11.0-4.1                          i386         collect and display facts about the system -- shared library
+ii  libfacter3.11.0:i386                3.11.0-4.2                          i386         collect and display facts about the system -- shared library
 ii  libfakeroot:i386                    1.24-1                              i386         tool for simulating superuser privileges - shared libraries
 ii  libfastjson4:i386                   0.99.8-2                            i386         fast json library for C
-ii  libfdisk1:i386                      2.35.2-2                            i386         fdisk partitioning library
+ii  libfdisk1:i386                      2.35.2-4                            i386         fdisk partitioning library
 ii  libfdt1:i386                        1.6.0-1                             i386         Flat Device Trees manipulation library
 ii  libffi7:i386                        3.3-4                               i386         Foreign Function Interface library runtime
 ii  libfftw3-single3:i386               3.3.8-2                             i386         Library for computing Fast Fourier Transforms - Single precision
@@ -444,15 +438,15 @@ ii  libfribidi0:i386                    1.0.8-2                             i386
 ii  libfstrm0:i386                      0.6.0-1+b1                          i386         Frame Streams (fstrm) library
 ii  libftdi1-2:i386                     1.4-2+b2                            i386         Library to control and program the FTDI USB controllers
 ii  libfuse2:i386                       2.9.9-3                             i386         Filesystem in Userspace (library)
-ii  libfuse3-3:i386                     3.9.0-2                             i386         Filesystem in Userspace (library) (3.x version)
-ii  libgbm1:i386                        19.3.3-1                            i386         generic buffer management API -- runtime
+ii  libfuse3-3:i386                     3.9.2-1                             i386         Filesystem in Userspace (library) (3.x version)
+ii  libgbm1:i386                        20.1.1-1                            i386         generic buffer management API -- runtime
 ii  libgc1c2:i386                       1:7.6.4-0.4                         i386         conservative garbage collector for C and C++
 ii  libgcc-s1:i386                      10.1.0-3                            i386         GCC support library
 ii  libgcrypt20:i386                    1.8.5-5                             i386         LGPL Crypto library - runtime library
 ii  libgdbm-compat4:i386                1.18.1-5                            i386         GNU dbm database routines (legacy support runtime version) 
 ii  libgdbm6:i386                       1.18.1-5                            i386         GNU dbm database routines (runtime version) 
-ii  libgdk-pixbuf2.0-0:i386             2.40.0+dfsg-4                       i386         GDK Pixbuf library
-ii  libgdk-pixbuf2.0-common             2.40.0+dfsg-4                       all          GDK Pixbuf library - data files
+ii  libgdk-pixbuf2.0-0:i386             2.40.0+dfsg-5                       i386         GDK Pixbuf library
+ii  libgdk-pixbuf2.0-common             2.40.0+dfsg-5                       all          GDK Pixbuf library - data files
 ii  libgeoip1:i386                      1.6.12-6                            i386         non-DNS IP-to-country resolver library
 ii  libgfapi0:i386                      7.6-1                               i386         GlusterFS gfapi shared library
 ii  libgfrpc0:i386                      7.6-1                               i386         GlusterFS libgfrpc shared library
@@ -460,23 +454,23 @@ ii  libgfxdr0:i386                      7.6-1                               i386
 ii  libgif7:i386                        5.1.9-1                             i386         library for GIF images (library)
 ii  libgirepository-1.0-1:i386          1.64.1-1                            i386         Library for handling GObject introspection data (runtime library)
 ii  libgl1:i386                         1.3.1-1                             i386         Vendor neutral GL dispatch library -- legacy GL support
-ii  libgl1-mesa-dri:i386                19.3.3-1                            i386         free implementation of the OpenGL API -- DRI modules
-ii  libglapi-mesa:i386                  19.3.3-1                            i386         free implementation of the GL API -- shared library
+ii  libgl1-mesa-dri:i386                20.1.1-1                            i386         free implementation of the OpenGL API -- DRI modules
+ii  libglapi-mesa:i386                  20.1.1-1                            i386         free implementation of the GL API -- shared library
 ii  libgles2:i386                       1.3.1-1                             i386         Vendor neutral GL dispatch library -- GLESv2 support
 ii  libglib2.0-0:i386                   2.64.3-1                            i386         GLib library of C routines
 ii  libglibmm-2.4-1v5:i386              2.64.2-1                            i386         C++ wrapper for the GLib toolkit (shared libraries)
 ii  libglusterfs0:i386                  7.6-1                               i386         GlusterFS shared library
 ii  libglvnd0:i386                      1.3.1-1                             i386         Vendor neutral GL dispatch library
-ii  libglx-mesa0:i386                   19.3.3-1                            i386         free implementation of the OpenGL API -- GLX vendor library
+ii  libglx-mesa0:i386                   20.1.1-1                            i386         free implementation of the OpenGL API -- GLX vendor library
 ii  libglx0:i386                        1.3.1-1                             i386         Vendor neutral GL dispatch library -- GLX support
-ii  libgmp10:i386                       2:6.2.0+dfsg-4                      i386         Multiprecision arithmetic library
-ii  libgnutls30:i386                    3.6.13-4                            i386         GNU TLS library - main runtime library
+ii  libgmp10:i386                       2:6.2.0+dfsg-6                      i386         Multiprecision arithmetic library
+ii  libgnutls30:i386                    3.6.14-2                            i386         GNU TLS library - main runtime library
 ii  libgomp1:i386                       10.1.0-3                            i386         GCC OpenMP (GOMP) support library
-ii  libgpg-error0:i386                  1.37-1                              i386         GnuPG development runtime library
+ii  libgpg-error0:i386                  1.38-1                              i386         GnuPG development runtime library
 ii  libgpm2:i386                        1.20.7-6                            i386         General Purpose Mouse - shared library
-ii  libgraphicsmagick-q16-3             1.4+really1.3.35-2                  i386         format-independent image processing - C shared library
+ii  libgraphicsmagick-q16-3             1.4+really1.3.35+hg16297-1          i386         format-independent image processing - C shared library
 ii  libgraphite2-3:i386                 1.3.14-1                            i386         Font rendering engine for Complex Scripts -- library
-ii  libgssapi-krb5-2:i386               1.17-7                              i386         MIT Kerberos runtime libraries - krb5 GSS-API Mechanism
+ii  libgssapi-krb5-2:i386               1.17-10                             i386         MIT Kerberos runtime libraries - krb5 GSS-API Mechanism
 ii  libgstreamer-plugins-base1.0-0:i386 1.16.2-4                            i386         GStreamer libraries from the "base" set
 ii  libgstreamer1.0-0:i386              1.16.2-2                            i386         Core GStreamer libraries and elements
 ii  libgtk-3-0:i386                     3.24.20-1                           i386         GTK graphical user interface library
@@ -499,10 +493,9 @@ ii  libhttp-message-perl                6.24-1                              all 
 ii  libhttp-negotiate-perl              6.01-1                              all          implementation of content negotiation
 ii  libibverbs1:i386                    29.0-1                              i386         Library for direct userspace use of RDMA (InfiniBand/iWARP)
 ii  libice6:i386                        2:1.0.9-2                           i386         X11 Inter-Client Exchange library
-ii  libicu63:i386                       63.2-3                              i386         International Components for Unicode
 ii  libicu67:i386                       67.1-2                              i386         International Components for Unicode
 ii  libid3tag0:i386                     0.15.1b-14                          i386         ID3 tag reading library from the MAD project
-ii  libidn11:i386                       1.33-2.2                            i386         GNU Libidn library, implementation of IETF IDN specifications
+ii  libidn11:i386                       1.33-2.4                            i386         GNU Libidn library, implementation of IETF IDN specifications
 ii  libidn2-0:i386                      2.3.0-1                             i386         Internationalized domain names (IDNA2008/TR46) library
 ii  libimlib2:i386                      1.6.1-2                             i386         image loading, rendering, saving library
 ii  libimport-into-perl                 1.002005-1                          all          module for importing packages into other packages
@@ -531,26 +524,26 @@ ii  libjansson4:i386                    2.12-1                              i386
 ii  libjbig0:i386                       2.1-3.1+b2                          i386         JBIGkit libraries
 ii  libjim0.79:i386                     0.79+dfsg0-2                        i386         small-footprint implementation of Tcl - shared library
 ii  libjpeg62-turbo:i386                1:1.5.2-2+b1                        i386         libjpeg-turbo JPEG runtime library
-ii  libjson-c4:i386                     0.13.1+dfsg-7                       i386         JSON manipulation library - shared library
+ii  libjson-c4:i386                     0.13.1+dfsg-9                       i386         JSON manipulation library - shared library
 ii  libjson-glib-1.0-0:i386             1.4.4-2                             i386         GLib JSON manipulation library
 ii  libjson-glib-1.0-common             1.4.4-2                             all          GLib JSON manipulation library (common files)
 ii  libjsoncpp1:i386                    1.7.4-3.1                           i386         library for reading and writing JSON for C++
 ii  libjte2:i386                        1.22-3                              i386         Jigdo Template Export - runtime library
-ii  libk5crypto3:i386                   1.17-7                              i386         MIT Kerberos runtime libraries - Crypto Library
+ii  libk5crypto3:i386                   1.17-10                             i386         MIT Kerberos runtime libraries - Crypto Library
 ii  libkeyutils1:i386                   1.6.1-2                             i386         Linux Key Management Utilities (library)
 ii  libklibc:i386                       2.0.7-1                             i386         minimal libc subset for use with initramfs
 ii  libkmod2:i386                       27+20200310-2                       i386         libkmod shared library
-ii  libkrb5-3:i386                      1.17-7                              i386         MIT Kerberos runtime libraries
-ii  libkrb5support0:i386                1.17-7                              i386         MIT Kerberos runtime libraries - Support library
+ii  libkrb5-3:i386                      1.17-10                             i386         MIT Kerberos runtime libraries
+ii  libkrb5support0:i386                1.17-10                             i386         MIT Kerberos runtime libraries - Support library
 ii  libksba8:i386                       1.4.0-2                             i386         X.509 and CMS support library
 ii  liblcms2-2:i386                     2.9-4+b1                            i386         Little CMS 2 color management library
 ii  libldap-2.4-2:i386                  2.4.50+dfsg-1                       i386         OpenLDAP libraries
 ii  libldap-common                      2.4.50+dfsg-1                       all          OpenLDAP common files for libraries
 ii  libldb2:i386                        2:2.0.8-2                           i386         LDAP-like embedded database - shared library
-ii  libleatherman1.4.2:i386             1.4.2+dfsg-2+b1                     i386         collection of C++ and CMake utility libraries - shared libraries
+ii  libleatherman1.4.2:i386             1.4.2+dfsg-2.1                      i386         collection of C++ and CMake utility libraries - shared libraries
 ii  liblinear4:i386                     2.3.0+dfsg-4                        i386         Library for Large Linear Classification
 ii  liblinux-lvm-perl                   0.17-2                              all          Perl module to access LVM status information
-ii  libllvm9:i386                       1:9.0.1-12                          i386         Modular compiler and toolchain technologies, runtime library
+ii  libllvm10:i386                      1:10.0.0-4                          i386         Modular compiler and toolchain technologies, runtime library
 ii  liblmdb0:i386                       0.9.24-1                            i386         Lightning Memory-Mapped Database shared library
 ii  liblocale-gettext-perl              1.07-4                              i386         module using libc functions for internationalization in Perl
 ii  liblockfile-bin                     1.16-1.1                            i386         support binaries for and cli utilities based on liblockfile
@@ -579,12 +572,13 @@ ii  libmodule-find-perl                 0.15-1                              all 
 ii  libmodule-runtime-perl              0.016-1                             all          Perl module for runtime module handling
 ii  libmoo-perl                         2.004000-1                          all          Minimalist Object Orientation library (with Moose compatibility)
 ii  libmotif-common                     2.3.8-2                             all          Motif - common files
-ii  libmount1:i386                      2.35.2-2                            i386         device mounting library
+ii  libmount1:i386                      2.35.2-4                            i386         device mounting library
 ii  libmpc3:i386                        1.1.0-1                             i386         multiple precision complex floating-point library
 ii  libmpdec2:i386                      2.4.2-3                             i386         library for decimal floating point arithmetic (runtime library)
 ii  libmpfr6:i386                       4.0.2-1                             i386         multiple precision floating-point computation
+ii  libmsgpackc2:i386                   3.0.1-3                             i386         binary-based efficient object serialization library
 ii  libmspack0:i386                     0.10.1-2                            i386         library for Microsoft compression formats (shared library)
-ii  libmtdev1:i386                      1.1.5-1.1                           i386         Multitouch Protocol Translation Library - shared library
+ii  libmtdev1:i386                      1.1.6-1                             i386         Multitouch Protocol Translation Library - shared library
 ii  libncurses6:i386                    6.2-1                               i386         shared libraries for terminal handling
 ii  libncursesw6:i386                   6.2-1                               i386         shared libraries for terminal handling (wide character support)
 ii  libnet-http-perl                    6.19-1                              all          module providing low-level HTTP connection client
@@ -596,17 +590,17 @@ ii  libnettle7:i386                     3.5.1+really3.5.1-2                 i386
 ii  libnewt0.52:i386                    0.52.21-4+b1                        i386         Not Erik's Windowing Toolkit - text mode windowing with slang
 ii  libnfnetlink0:i386                  1.0.1-3+b1                          i386         Netfilter netlink library
 ii  libnfsidmap2:i386                   0.25-5.1                            i386         NFS idmapping library
-ii  libnftnl11:i386                     1.1.6-1                             i386         Netfilter nftables userspace API library
+ii  libnftnl11:i386                     1.1.7-1                             i386         Netfilter nftables userspace API library
 ii  libnghttp2-14:i386                  1.41.0-2                            i386         library implementing HTTP/2 protocol (shared library)
 ii  libnl-3-200:i386                    3.4.0-1+b1                          i386         library for dealing with netlink sockets
 ii  libnl-cli-3-200:i386                3.4.0-1+b1                          i386         library for dealing with netlink sockets - cli helpers
 ii  libnl-genl-3-200:i386               3.4.0-1+b1                          i386         library for dealing with netlink sockets - generic netlink
 ii  libnl-nf-3-200:i386                 3.4.0-1+b1                          i386         library for dealing with netlink sockets - netfilter interface
 ii  libnl-route-3-200:i386              3.4.0-1+b1                          i386         library for dealing with netlink sockets - route interface
-ii  libnpth0:i386                       1.6-1                               i386         replacement for GNU Pth using system threads
+ii  libnpth0:i386                       1.6-2                               i386         replacement for GNU Pth using system threads
 ii  libnspr4:i386                       2:4.25-1                            i386         NetScape Portable Runtime Library
 ii  libnss-mdns:i386                    0.14.1-1                            i386         NSS module for Multicast DNS name resolution
-ii  libnss-myhostname:i386              245.5-3                             i386         nss module providing fallback resolution for the current hostname
+ii  libnss-myhostname:i386              245.6-1                             i386         nss module providing fallback resolution for the current hostname
 ii  libnss3:i386                        2:3.53-1                            i386         Network Security Service libraries
 ii  libntfs-3g883                       1:2017.3.23AR.3-3                   i386         read/write NTFS driver for FUSE (runtime library)
 ii  libnuma1:i386                       2.0.12-1+b1                         i386         Libraries for controlling NUMA policy
@@ -619,7 +613,7 @@ ii  libp11-kit0:i386                    0.23.20-1                           i386
 ii  libpam-modules:i386                 1.3.1-5                             i386         Pluggable Authentication Modules for PAM
 ii  libpam-modules-bin                  1.3.1-5                             i386         Pluggable Authentication Modules for PAM - helper binaries
 ii  libpam-runtime                      1.3.1-5                             all          Runtime support for the PAM library
-ii  libpam-systemd:i386                 245.5-3                             i386         system and service manager - PAM module
+ii  libpam-systemd:i386                 245.6-1                             i386         system and service manager - PAM module
 ii  libpam0g:i386                       1.3.1-5                             i386         Pluggable Authentication Modules library
 ii  libpango-1.0-0:i386                 1.44.7-4                            i386         Layout and rendering of internationalized text
 ii  libpangocairo-1.0-0:i386            1.44.7-4                            i386         Layout and rendering of internationalized text
@@ -632,14 +626,14 @@ ii  libparted-fs-resize0:i386           3.3-4                               i386
 ii  libparted2:i386                     3.3-4                               i386         disk partition manipulator - shared library
 ii  libpcap0.8:i386                     1.9.1-4                             i386         system interface for user-level packet capture
 ii  libpcaudio0:i386                    1.1-4                               i386         C API to different audio devices - shared library
-ii  libpci3:i386                        1:3.6.4-1                           i386         PCI utilities (shared library)
+ii  libpci3:i386                        1:3.7.0-1                           i386         PCI utilities (shared library)
 ii  libpciaccess0:i386                  0.14-1                              i386         Generic PCI access library for X
 ii  libpcre2-16-0:i386                  10.34-7                             i386         New Perl Compatible Regular Expression Library - 16 bit runtime files
 ii  libpcre2-32-0:i386                  10.34-7                             i386         New Perl Compatible Regular Expression Library - 32 bit runtime files
 ii  libpcre2-8-0:i386                   10.34-7                             i386         New Perl Compatible Regular Expression Library- 8 bit runtime files
-ii  libpcre3:i386                       2:8.39-12+b1                        i386         Old Perl 5 Compatible Regular Expression Library - runtime files
-ii  libpcsclite1:i386                   1.8.26-3                            i386         Middleware to access a smart card using PC/SC (library)
-ii  libperl5.30:i386                    5.30.2-1                            i386         shared Perl library
+ii  libpcre3:i386                       2:8.39-13                           i386         Old Perl 5 Compatible Regular Expression Library - runtime files
+ii  libpcsclite1:i386                   1.9.0-1                             i386         Middleware to access a smart card using PC/SC (library)
+ii  libperl5.30:i386                    5.30.3-4                            i386         shared Perl library
 ii  libpipeline1:i386                   1.5.2-2                             i386         Unix process pipeline manipulation library
 ii  libpixman-1-0:i386                  0.36.0-1                            i386         pixel-manipulation library for X and cairo
 ii  libpkcs11-helper1:i386              1.26-1+b1                           i386         library that simplifies the interaction with PKCS#11
@@ -653,9 +647,8 @@ ii  libprocps8:i386                     2:3.3.16-5                          i386
 ii  libprotobuf-c1:i386                 1.3.3-1+b1                          i386         Protocol Buffers C shared library (protobuf-c)
 ii  libprotobuf22:i386                  3.11.4-5                            i386         protocol buffers C++ library
 ii  libproxy1v5:i386                    0.4.15-13                           i386         automatic proxy configuration management library (shared)
-ii  libpsl5:i386                        0.21.0-1                            i386         Library for Public Suffix List (shared libraries)
+ii  libpsl5:i386                        0.21.0-1.1                          i386         Library for Public Suffix List (shared libraries)
 ii  libpulse0:i386                      13.0-5                              i386         PulseAudio client libraries
-ii  libpython-stdlib:i386               2.7.17-2                            i386         interactive high-level object-oriented language (Python2)
 ii  libpython2-stdlib:i386              2.7.17-2                            i386         interactive high-level object-oriented language (Python2)
 ii  libpython2.7-minimal:i386           2.7.18-1                            i386         Minimal subset of the Python language (version 2.7)
 ii  libpython2.7-stdlib:i386            2.7.18-1                            i386         Interactive high-level object-oriented language (standard library, version 2.7)
@@ -663,6 +656,7 @@ ii  libpython3-stdlib:i386              3.8.2-3                             i386
 ii  libpython3.8:i386                   3.8.3-1                             i386         Shared Python runtime library (version 3.8)
 ii  libpython3.8-minimal:i386           3.8.3-1                             i386         Minimal subset of the Python language (version 3.8)
 ii  libpython3.8-stdlib:i386            3.8.3-1                             i386         Interactive high-level object-oriented language (standard library, version 3.8)
+ii  libqrencode4:i386                   4.0.2-2                             i386         QR Code encoding library
 ii  libqt5core5a:i386                   5.12.5+dfsg-10+b1                   i386         Qt 5 core module
 ii  libqt5dbus5:i386                    5.12.5+dfsg-10+b1                   i386         Qt 5 D-Bus module
 ii  libqt5gui5:i386                     5.12.5+dfsg-10+b1                   i386         Qt 5 GUI module
@@ -681,7 +675,7 @@ ii  librpm8                             4.14.2.1+dfsg1-1.1+b1               i386
 ii  librpmbuild8                        4.14.2.1+dfsg1-1.1+b1               i386         RPM build shared library
 ii  librpmio8                           4.14.2.1+dfsg1-1.1+b1               i386         RPM IO shared library
 ii  librpmsign8                         4.14.2.1+dfsg1-1.1+b1               i386         RPM signing shared library
-ii  librsvg2-2:i386                     2.48.4+dfsg-1                       i386         SAX-based renderer library for SVG files (runtime)
+ii  librsvg2-2:i386                     2.48.7-1                            i386         SAX-based renderer library for SVG files (runtime)
 ii  librsync2:i386                      2.0.2-1                             i386         rsync remote-delta algorithm library
 ii  librtmp1:i386                       2.4+20151223.gitfa8646d.1-2+b1      i386         toolkit for RTMP streams (shared library)
 ii  libruby2.7:i386                     2.7.1-3                             i386         Libraries necessary to run Ruby 2.7
@@ -704,7 +698,7 @@ ii  libsigsegv2:i386                    2.12-2                              i386
 ii  libslang2:i386                      2.3.2-5                             i386         S-Lang programming library - runtime version
 ii  libslirp0:i386                      4.2.0-2                             i386         General purpose TCP-IP emulator library
 ii  libsm6:i386                         2:1.2.3-1                           i386         X11 Session Management library
-ii  libsmartcols1:i386                  2.35.2-2                            i386         smart column output alignment library
+ii  libsmartcols1:i386                  2.35.2-4                            i386         smart column output alignment library
 ii  libsmi2ldbl:i386                    0.4.8+dfsg2-16                      i386         library to access SMI MIB information
 ii  libsnappy1v5:i386                   1.1.8-1                             i386         fast compression/decompression library
 ii  libsndfile1:i386                    1.0.28-8                            i386         Library for reading/writing audio files
@@ -719,6 +713,7 @@ ii  libspeexdsp1:i386                   1.2~rc1.2-1.1                       i386
 ii  libspice-server1:i386               0.14.3-1                            i386         Implements the server side of the SPICE protocol
 ii  libsqlite3-0:i386                   3.31.1-5                            i386         SQLite 3 shared library
 ii  libss2:i386                         1.45.6-1                            i386         command-line interface parsing library
+ii  libssh-4:i386                       0.9.4-1                             i386         tiny C SSH library (OpenSSL flavor)
 ii  libssh-gcrypt-4:i386                0.9.4-1                             i386         tiny C SSH library (gcrypt flavor)
 ii  libssh2-1:i386                      1.8.0-2.1                           i386         SSH2 client-side library
 ii  libssl1.1:i386                      1.1.1g-1                            i386         Secure Sockets Layer toolkit - shared libraries
@@ -726,13 +721,13 @@ ii  libstartup-notification0:i386       0.12-6                              i386
 ii  libstdc++6:i386                     10.1.0-3                            i386         GNU Standard C++ Library v3
 ii  libstrictures-perl                  2.000006-1                          all          Perl module to turn on strict and make all warnings fatal
 ii  libsub-quote-perl                   2.006006-1                          all          helper modules for subroutines
-ii  libsvn1:i386                        1.13.0-4                            i386         Shared libraries used by Apache Subversion
+ii  libsvn1:i386                        1.14.0-1                            i386         Shared libraries used by Apache Subversion
 ii  libsysfs2:i386                      2.1.0+repack-6                      i386         interface library to sysfs - shared library
-ii  libsystemd0:i386                    245.5-3                             i386         systemd utility library
-ii  libtalloc2:i386                     2.3.0-5                             i386         hierarchical pool based memory allocator
+ii  libsystemd0:i386                    245.6-1                             i386         systemd utility library
+ii  libtalloc2:i386                     2.3.1-1                             i386         hierarchical pool based memory allocator
 ii  libtasn1-6:i386                     4.16.0-2                            i386         Manage ASN.1 structures (runtime)
 ii  libtcl8.6:i386                      8.6.10+dfsg-1                       i386         Tcl (the Tool Command Language) v8.6 - run-time library files
-ii  libtdb1:i386                        1.4.2-3+b1                          i386         Trivial Database - shared library
+ii  libtdb1:i386                        1.4.3-1                             i386         Trivial Database - shared library
 ii  libteam-utils                       1.30-1                              i386         library for controlling team network device -- userspace utilities
 ii  libteam5:i386                       1.30-1                              i386         library for communication with Netlink kernel module
 ii  libteamdctl0:i386                   1.30-1                              i386         library for communication with `teamd` process
@@ -757,7 +752,7 @@ ii  libtk8.6:i386                       8.6.10-1                            i386
 ii  libtry-tiny-perl                    0.30-1                              all          module providing minimalistic try/catch
 ii  libtsk13                            4.6.7-1                             i386         library for forensics analysis on volume and filesystem data
 ii  libuchardet0:i386                   0.0.7-1                             i386         universal charset detection library - shared library
-ii  libudev1:i386                       245.5-3                             i386         libudev shared library
+ii  libudev1:i386                       245.6-1                             i386         libudev shared library
 ii  libuniconf4.6                       4.6.1-14                            i386         C++ network libraries for rapid application development
 ii  libunistring2:i386                  0.9.10-4                            i386         Unicode string library for C
 ii  libunwind8:i386                     1.2.1-9                             i386         library to determine the call-chain of a program - runtime
@@ -768,8 +763,8 @@ ii  libusb-1.0-0:i386                   2:1.0.23-2                          i386
 ii  libusbredirparser1:i386             0.8.0-1+b1                          i386         Parser for the usbredir protocol (runtime)
 ii  libutempter0:i386                   1.1.6-6                             i386         privileged helper for utmp/wtmp updates (runtime)
 ii  libutf8proc2:i386                   2.5.0-1                             i386         C library for processing UTF-8 Unicode data (shared library)
-ii  libuuid1:i386                       2.35.2-2                            i386         Universally Unique ID library
-ii  libuv1:i386                         1.35.0-2                            i386         asynchronous event notification library - runtime library
+ii  libuuid1:i386                       2.35.2-4                            i386         Universally Unique ID library
+ii  libuv1:i386                         1.38.0-2                            i386         asynchronous event notification library - runtime library
 ii  libvdeplug2                         2.3.2+r586-2.2                      i386         Virtual Distributed Ethernet - Plug library
 ii  libvirglrenderer1:i386              0.8.2-2                             i386         virtual GPU for KVM virtualization
 ii  libvncclient1:i386                  0.9.12+dfsg-9                       i386         API to write one's own VNC server - client library
@@ -777,9 +772,9 @@ ii  libvncserver1:i386                  0.9.12+dfsg-9                       i386
 ii  libvorbis0a:i386                    1.3.6-2                             i386         decoder library for Vorbis General Audio Compression Codec
 ii  libvorbisenc2:i386                  1.3.6-2                             i386         encoder library for Vorbis General Audio Compression Codec
 ii  libvorbisfile3:i386                 1.3.6-2                             i386         high-level API for Vorbis General Audio Compression Codec
-ii  libvte-2.91-0:i386                  0.60.2-1+b1                         i386         Terminal emulator widget for GTK+ 3.0 - runtime files
-ii  libvte-2.91-common                  0.60.2-1+b1                         i386         Terminal emulator widget for GTK+ 3.0 - common files
-ii  libvulkan1:i386                     1.2.135.0-3                         i386         Vulkan loader library
+ii  libvte-2.91-0:i386                  0.60.3-1                            i386         Terminal emulator widget for GTK+ 3.0 - runtime files
+ii  libvte-2.91-common                  0.60.3-1                            i386         Terminal emulator widget for GTK+ 3.0 - common files
+ii  libvulkan1:i386                     1.2.141.0-1                         i386         Vulkan loader library
 ii  libwacom-common                     1.3-2                               all          Wacom model feature query library (common files)
 ii  libwacom2:i386                      1.3-2                               i386         Wacom model feature query library
 ii  libwayland-client0:i386             1.18.0-1                            i386         wayland compositor infrastructure - client library
@@ -797,14 +792,14 @@ ii  libwrap0:i386                       7.6.q-30                            i386
 ii  libwsutil11:i386                    3.2.4-1                             i386         network packet dissection utilities library -- shared library
 ii  libwvstreams4.6-base                4.6.1-14                            i386         C++ network libraries for rapid application development
 ii  libwvstreams4.6-extras              4.6.1-14                            i386         C++ network libraries for rapid application development
-ii  libwww-perl                         6.44-1                              all          simple and consistent interface to the world-wide web
+ii  libwww-perl                         6.45-2                              all          simple and consistent interface to the world-wide web
 ii  libwww-robotrules-perl              6.02-1                              all          database of robots.txt-derived permissions
 ii  libx11-6:i386                       2:1.6.9-2+b1                        i386         X11 client-side library
 ii  libx11-data                         2:1.6.9-2                           all          X11 client-side library
 ii  libx11-xcb1:i386                    2:1.6.9-2+b1                        i386         Xlib/XCB interface library
 ii  libx86emu3:i386                     3.1-1+b1                            i386         x86 emulation library
 ii  libxapian30:i386                    1.4.15-1                            i386         Search engine library
-ii  libxatracker2:i386                  19.3.3-1                            i386         X acceleration library -- runtime
+ii  libxatracker2:i386                  20.1.1-1                            i386         X acceleration library -- runtime
 ii  libxau6:i386                        1:1.0.8-1+b2                        i386         X11 authorisation library
 ii  libxaw7:i386                        2:1.0.13-1+b2                       i386         X11 Athena Widget library
 ii  libxcb-dri2-0:i386                  1.14-2                              i386         X C Binding, dri2 extension
@@ -843,7 +838,7 @@ ii  libxext6:i386                       2:1.3.3-1+b2                        i386
 ii  libxfixes3:i386                     1:5.0.3-2                           i386         X11 miscellaneous 'fixes' extension library
 ii  libxfont2:i386                      1:2.0.3-1                           i386         X11 font rasterisation library
 ii  libxft2:i386                        2.3.2-2                             i386         FreeType-based font drawing library for X
-ii  libxi6:i386                         2:1.7.9-1                           i386         X11 Input extension library
+ii  libxi6:i386                         2:1.7.10-1                          i386         X11 Input extension library
 ii  libxinerama1:i386                   2:1.1.4-2                           i386         X11 Xinerama extension library
 ii  libxkbcommon-x11-0:i386             0.10.0-1                            i386         library to create keymaps with the XKB X11 protocol
 ii  libxkbcommon0:i386                  0.10.0-1                            i386         library interface to the XKB compiler - shared library
@@ -867,16 +862,16 @@ ii  libxxf86vm1:i386                    1:1.1.4-1+b2                        i386
 ii  libyajl2:i386                       2.1.0-3                             i386         Yet Another JSON Library
 ii  libyaml-0-2:i386                    0.2.2-1                             i386         Fast YAML 1.1 parser and emitter library
 ii  libyaml-cpp0.6:i386                 0.6.3-9                             i386         YAML parser and emitter for C++
-ii  libz3-4:i386                        4.8.7-4                             i386         theorem prover from Microsoft Research - runtime libraries
-ii  libzstd1:i386                       1.4.4+dfsg-3                        i386         fast lossless compression algorithm
+ii  libz3-4:i386                        4.8.8-1                             i386         theorem prover from Microsoft Research - runtime libraries
+ii  libzstd1:i386                       1.4.5+dfsg-2                        i386         fast lossless compression algorithm
 ii  links2                              2.20.2-1+b1                         i386         Web browser running in both graphics and text mode
 ii  linux-base                          4.6                                 all          Linux image base package
-ii  linux-cpupower                      5.6.14-1                            i386         CPU power management tools for Linux
-ii  linux-image-5.6.0-2-686             5.6.14-1                            i386         Linux 5.6 for older PCs (signed)
-ii  linux-image-686                     5.6.14-1                            i386         Linux for older PCs (meta-package)
-ii  live-boot-grml                      1:20200527+grml.1                   all          Live System Boot Components
-ii  live-boot-grml-doc                  1:20200527+grml.1                   all          Live System Boot Components (documentation)
-ii  live-boot-grml-initramfs-tools      1:20200527+grml.1                   all          Live System Boot Components (initramfs-tools backend)
+ii  linux-cpupower                      5.6.14-2                            i386         CPU power management tools for Linux
+ii  linux-image-5.6.0-2-686             5.6.14-2                            i386         Linux 5.6 for older PCs (signed)
+ii  linux-image-686                     5.6.14-2                            i386         Linux for older PCs (meta-package)
+ii  live-boot-grml                      1:20200527+grml.2                   all          Live System Boot Components
+ii  live-boot-grml-doc                  1:20200527+grml.2                   all          Live System Boot Components (documentation)
+ii  live-boot-grml-initramfs-tools      1:20200527+grml.2                   all          Live System Boot Components (initramfs-tools backend)
 ii  lm-sensors                          1:3.6.0-2                           i386         utilities to read temperature/voltage/fan sensors
 ii  localepurge                         0.7.3.9                             all          reclaim disk space by removing unneeded localizations
 ii  locales                             2.30-8                              all          GNU C Library: National Language (locale) data [support]
@@ -897,7 +892,7 @@ ii  lynx                                2.9.0dev.5-1                        i386
 ii  lynx-common                         2.9.0dev.5-1                        all          shared files for lynx package
 ii  lzop                                1.04-1                              i386         fast compression program
 ii  make                                4.2.1-2                             i386         utility for directing compilation
-ii  man-db                              2.9.1-1                             i386         tools for reading manual pages
+ii  man-db                              2.9.2-1                             i386         tools for reading manual pages
 ii  mawk                                1.3.4.20200120-2                    i386         Pattern scanning and text processing language
 ii  mbr                                 1.2.1                               i386         Master Boot Record for IBM-PC compatible computers.
 ii  mc                                  3:4.8.24-2                          i386         Midnight Commander - a powerful file manager
@@ -916,20 +911,20 @@ ii  mksh                                59b-1                               i386
 ii  moblin-icon-theme                   0.10.0-2                            all          icon theme for moblin
 ii  moreutils                           0.63-1                              i386         additional Unix utilities
 ii  mosh                                1.3.2-2.1+b2                        i386         Mobile shell that supports roaming and intelligent local echo
-ii  mount                               2.35.2-2                            i386         tools for mounting and manipulating filesystems
+ii  mount                               2.35.2-4                            i386         tools for mounting and manipulating filesystems
 ii  mpt-status                          1.2.0-8+b1                          i386         get RAID status out of mpt (and other) HW RAID controllers
 ii  mtools                              4.0.24-1                            i386         Tools for manipulating MSDOS files
 ii  mtr-tiny                            0.93-2                              i386         Full screen ncurses traceroute tool
 ii  mtx                                 1.3.12-12                           i386         controls tape autochangers
 ii  multipath-tools                     0.8.3-1                             i386         maintain multipath block device access
-ii  nano                                4.9.2-1                             i386         small, friendly text editor inspired by Pico
+ii  nano                                4.9.3-1                             i386         small, friendly text editor inspired by Pico
 ii  ncdu                                1.14.1-1                            i386         ncurses disk usage viewer
 ii  ncurses-base                        6.2-1                               all          basic terminal type definitions
 ii  ncurses-bin                         6.2-1                               i386         terminal-related programs and man pages
 ii  ndisc6                              1.0.4-1                             i386         IPv6 diagnostic tools
 ii  net-tools                           1.60+git20180626.aebd88e-1          i386         NET-3 networking toolkit
 ii  netbase                             6.1                                 all          Basic TCP/IP networking system
-ii  netcat-openbsd                      1.217-1                             i386         TCP/IP swiss army knife
+ii  netcat-openbsd                      1.217-2                             i386         TCP/IP swiss army knife
 ii  nethogs                             0.8.5-2+b1                          i386         Net top tool grouping bandwidth per process
 ii  netsniff-ng                         0.6.5-1+b1                          i386         Linux network packet sniffer toolkit
 ii  nfs-common                          1:1.3.4-3                           i386         NFS support files common to client and server
@@ -946,10 +941,10 @@ ii  numactl                             2.0.12-1+b1                         i386
 ii  nvme-cli                            1.9-1                               i386         userspace tooling to control NVMe drives
 ii  nwipe                               0.28-1                              i386         Utility to securely erase disks
 ii  open-iscsi                          2.0.874-7.1                         i386         iSCSI initiator tools
-ii  open-vm-tools                       2:11.0.5-5                          i386         Open VMware Tools for virtual machines hosted on VMware (CLI)
-ii  openssh-client                      1:8.2p1-4                           i386         secure shell (SSH) client, for secure access to remote machines
-ii  openssh-server                      1:8.2p1-4                           i386         secure shell (SSH) server, for secure access from remote machines
-ii  openssh-sftp-server                 1:8.2p1-4                           i386         secure shell (SSH) sftp server module, for SFTP access from remote machines
+ii  open-vm-tools                       2:11.1.0-2                          i386         Open VMware Tools for virtual machines hosted on VMware (CLI)
+ii  openssh-client                      1:8.3p1-1                           i386         secure shell (SSH) client, for secure access to remote machines
+ii  openssh-server                      1:8.3p1-1                           i386         secure shell (SSH) server, for secure access from remote machines
+ii  openssh-sftp-server                 1:8.3p1-1                           i386         secure shell (SSH) sftp server module, for SFTP access from remote machines
 ii  openssl                             1.1.1g-1                            i386         Secure Sockets Layer toolkit - cryptographic utility
 ii  openvpn                             2.4.9-2                             i386         virtual private network daemon
 ii  partclone                           0.3.13+dfsg-4                       i386         Utility to clone and restore a partition
@@ -958,13 +953,13 @@ ii  partimage                           0.6.9-8                             i386
 ii  partimage-server                    0.6.9-8                             i386         server to use partimage across a network
 ii  passwd                              1:4.8.1-1                           i386         change and administer password and group data
 ii  patch                               2.7.6-6                             i386         Apply a diff file to an original
-ii  patchutils                          0.3.4-2+b1                          i386         Utilities to work with patches
-ii  pci.ids                             0.0~2020.04.08-1                    all          PCI ID Repository
-ii  pciutils                            1:3.6.4-1                           i386         PCI utilities
-ii  perl                                5.30.2-1                            i386         Larry Wall's Practical Extraction and Report Language
-ii  perl-base                           5.30.2-1                            i386         minimal Perl system
+ii  patchutils                          0.3.4-3                             i386         Utilities to work with patches
+ii  pci.ids                             0.0~2020.05.29-1                    all          PCI ID Repository
+ii  pciutils                            1:3.7.0-1                           i386         PCI utilities
+ii  perl                                5.30.3-4                            i386         Larry Wall's Practical Extraction and Report Language
+ii  perl-base                           5.30.3-4                            i386         minimal Perl system
 ii  perl-modules-5.28                   5.28.1-6                            all          Core Perl modules
-ii  perl-modules-5.30                   5.30.2-1                            all          Core Perl modules
+ii  perl-modules-5.30                   5.30.3-4                            all          Core Perl modules
 ii  perl-openssl-defaults:i386          5                                   i386         version compatibility baseline for Perl OpenSSL packages
 ii  physlock                            13-1                                i386         lightweight Linux console locking tool
 ii  pigz                                2.4-1                               i386         Parallel Implementation of GZip
@@ -978,14 +973,12 @@ ii  puppet                              5.5.19-1                            all 
 ii  pv                                  1.6.6-1                             i386         Shell pipeline element to meter data passing through
 ii  pwgen                               2.08-2                              i386         Automatic Password generation
 ii  pxelinux                            3:6.04~git20190206.bf6db5b4+dfsg1-2 all          collection of bootloaders (PXE network bootloader)
-ii  python                              2.7.17-2                            i386         interactive high-level object-oriented language (Python2 version)
-ii  python-minimal                      2.7.17-2                            i386         minimal subset of the Python2 language
 ii  python2                             2.7.17-2                            i386         interactive high-level object-oriented language (Python2 version)
 ii  python2-minimal                     2.7.17-2                            i386         minimal subset of the Python2 language
 ii  python2.7                           2.7.18-1                            i386         Interactive high-level object-oriented language (version 2.7)
 ii  python2.7-minimal                   2.7.18-1                            i386         Minimal subset of the Python language (version 2.7)
 ii  python3                             3.8.2-3                             i386         interactive high-level object-oriented language (default python3 version)
-ii  python3-attr                        19.3.0-4                            all          Attributes without boilerplate (Python 3)
+ii  python3-attr                        19.3.0-5                            all          Attributes without boilerplate (Python 3)
 ii  python3-binwalk                     2.2.0+dfsg1-1                       all          Python3 library for analyzing binary blobs and executable code
 ii  python3-blinker                     1.4+dfsg1-0.3                       all          fast, simple object-to-object and broadcast signaling library
 ii  python3-certifi                     2020.4.5.1-1                        all          root certificates for validating SSL certs and verifying TLS hosts (python3)
@@ -996,28 +989,28 @@ ii  python3-configobj                   5.0.6-4                             all 
 ii  python3-configshell-fb              1.1.fb25-1.1                        all          Python library for building configuration shells - Python 3
 ii  python3-crypto                      2.6.1-13.1+b1                       i386         cryptographic algorithms and protocols for Python 3
 ii  python3-cryptography                2.8-4                               i386         Python library exposing cryptographic recipes and primitives (Python 3)
-ii  python3-distutils                   3.8.2-2                             all          distutils package for Python 3.x
+ii  python3-distutils                   3.8.3-2                             all          distutils package for Python 3.x
 ii  python3-dnspython                   1.16.0-2                            all          DNS toolkit for Python 3
 ii  python3-fasteners                   0.14.1-2                            all          provides useful locks - Python 3.x
 ii  python3-future                      0.18.2-2                            all          Clean single-source support for Python 3 and 2 - Python 3.x
 ii  python3-gi                          3.36.0-3                            i386         Python 3 bindings for gobject-introspection libraries
 ii  python3-humanize                    2.4.0-1                             all          Python Humanize library (Python 3)
 ii  python3-idna                        2.9-1                               all          Python IDNA2008 (RFC 5891) handling (Python 3)
-ii  python3-importlib-metadata          1.6.0-1                             all          library to access the metadata for a Python package - Python 3.x
-ii  python3-jinja2                      2.10.1-2                            all          small but fast and easy to use stand-alone template engine
+ii  python3-importlib-metadata          1.6.0-2                             all          library to access the metadata for a Python package - Python 3.x
+ii  python3-jinja2                      2.11.2-1                            all          small but fast and easy to use stand-alone template engine
 ii  python3-json-pointer                2.0-2                               all          resolve JSON pointers - Python 3.x
 ii  python3-jsonpatch                   1.25-3                              all          library to apply JSON patches - Python 3.x
 ii  python3-jsonschema                  3.2.0-3                             all          An(other) implementation of JSON Schema (Draft 3 and 4) - Python 3.x
 ii  python3-jwt                         1.7.1-2                             all          Python 3 implementation of JSON Web Token
 ii  python3-ldb                         2:2.0.8-2                           i386         Python 3 bindings for LDB
-ii  python3-lib2to3                     3.8.2-2                             all          Interactive high-level object-oriented language (lib2to3)
+ii  python3-lib2to3                     3.8.3-2                             all          Interactive high-level object-oriented language (lib2to3)
 ii  python3-llfuse                      1.3.6+dfsg-2+b2                     i386         Python 3 bindings for the low-level FUSE API
 ii  python3-lockfile                    1:0.12.2-2.2                        all          file locking library for Python — Python 3 library
 ii  python3-markupsafe                  1.1.1-1+b1                          i386         HTML/XHTML/XML string library for Python 3
 ii  python3-minimal                     3.8.2-3                             i386         minimal subset of the Python language (default python3 version)
 ii  python3-monotonic                   1.5-3                               all          implementation of time.monotonic() - Python 3.x
-ii  python3-more-itertools              4.2.0-2                             all          library with routines for operating on iterables, beyond itertools (Python 3)
-ii  python3-oauthlib                    3.1.0-1                             all          generic, spec-compliant implementation of OAuth for Python3
+ii  python3-more-itertools              4.2.0-3                             all          library with routines for operating on iterables, beyond itertools (Python 3)
+ii  python3-oauthlib                    3.1.0-2                             all          generic, spec-compliant implementation of OAuth for Python3
 ii  python3-parted                      3.11.2-11.1+b2                      i386         Python 3 interface for libparted
 ii  python3-pkg-resources               46.1.3-1                            all          Package Discovery and Resource Access using pkg_resources
 ii  python3-pyparsing                   2.4.7-1                             all          alternative to creating and executing simple grammars - Python 3.x
@@ -1028,12 +1021,12 @@ ii  python3-rtslib-fb                   2.1.71-2                            all 
 ii  python3-samba                       2:4.11.5+dfsg-1+b1                  i386         Python 3 bindings for Samba
 ii  python3-setuptools                  46.1.3-1                            all          Python3 Distutils Enhancements
 ii  python3-six                         1.15.0-1                            all          Python 2 and 3 compatibility library (Python 3 interface)
-ii  python3-talloc:i386                 2.3.0-5                             i386         hierarchical pool based memory allocator - Python3 bindings
-ii  python3-tdb                         1.4.2-3+b1                          i386         Python3 bindings for TDB
+ii  python3-talloc:i386                 2.3.1-1                             i386         hierarchical pool based memory allocator - Python3 bindings
+ii  python3-tdb                         1.4.3-1                             i386         Python3 bindings for TDB
 ii  python3-urllib3                     1.25.9-1                            all          HTTP library with thread-safe connection pooling for Python3
-ii  python3-urwid                       2.0.1-3+b1                          i386         curses-based UI/widget library for Python 3
+ii  python3-urwid                       2.1.0-3                             i386         curses-based UI/widget library for Python 3
 ii  python3-yaml                        5.3.1-2                             i386         YAML parser and emitter for Python3
-ii  python3-zipp                        1.0.0-2                             all          pathlib-compatible Zipfile object wrapper - Python 3.x
+ii  python3-zipp                        1.0.0-3                             all          pathlib-compatible Zipfile object wrapper - Python 3.x
 ii  python3.8                           3.8.3-1                             i386         Interactive high-level object-oriented language (version 3.8)
 ii  python3.8-minimal                   3.8.3-1                             i386         Minimal subset of the Python language (version 3.8)
 ii  qemu-guest-agent                    1:5.0-5                             i386         Guest-side qemu-system agent
@@ -1042,6 +1035,7 @@ ii  qemu-system-data                    1:5.0-5                             all 
 ii  qemu-system-gui:i386                1:5.0-5                             i386         QEMU full system emulation binaries (user interface and audio support)
 ii  qemu-system-x86                     1:5.0-5                             i386         QEMU full system emulation binaries (x86)
 ii  qemu-utils                          1:5.0-5                             i386         QEMU utilities
+ii  qrencode                            4.0.2-2                             i386         QR Code encoder into PNG image
 ii  radvd                               1:2.17-2                            i386         Router Advertisement Daemon
 ii  rake                                13.0.1-4                            all          ruby make-like utility
 ii  rdnssd                              1.0.4-1                             i386         IPv6 recursive DNS server discovery daemon
@@ -1051,7 +1045,7 @@ ii  reiser4progs                        1.2.1-1                             i386
 ii  reiserfsprogs                       1:3.6.27-3                          i386         User-level tools for ReiserFS filesystems
 ii  resolvconf                          1.82                                all          name server information handler
 ii  restic                              0.9.6+ds-2                          i386         backup program with multiple revisions, encryption and more
-ii  rfkill                              2.35.2-2                            i386         tool for enabling and disabling wireless devices
+ii  rfkill                              2.35.2-4                            i386         tool for enabling and disabling wireless devices
 ii  rinse                               3.5                                 all          RPM installation environment
 ii  rpcbind                             1.2.5-8                             i386         converts RPC program numbers into universal addresses
 ii  rpm                                 4.14.2.1+dfsg1-1.1+b1               i386         package manager for RPM
@@ -1071,7 +1065,7 @@ ii  ruby-systemu                        2.6.5-1                             all 
 ii  ruby-test-unit                      3.3.5-1                             all          unit testing framework for Ruby
 ii  ruby-xmlrpc                         0.3.0-2                             all          XMLRPC library for Ruby
 ii  ruby2.7                             2.7.1-3                             i386         Interpreter of object-oriented scripting language Ruby
-ii  rubygems-integration                1.16                                all          integration of Debian Ruby packages with Rubygems
+ii  rubygems-integration                1.17.1                              all          integration of Debian Ruby packages with Rubygems
 ii  runit-helper                        2.8.15                              all          dh-runit implementation detail
 ii  samba                               2:4.11.5+dfsg-1+b1                  i386         SMB/CIFS file, print, and login server for Unix
 ii  samba-common                        2:4.11.5+dfsg-1                     all          common files used by both the Samba server and client
@@ -1097,23 +1091,23 @@ ii  snmp                                5.8+dfsg-2                          i386
 ii  socat                               1.7.3.4-1                           i386         multipurpose relay for bidirectional data transfer
 ii  sound-theme-freedesktop             0.8-2                               all          freedesktop.org sound theme
 ii  squashfs-tools                      1:4.4-2                             i386         Tool to create and append to squashfs filesystems
-ii  ssh                                 1:8.2p1-4                           all          secure shell client and server (metapackage)
+ii  ssh                                 1:8.3p1-1                           all          secure shell client and server (metapackage)
 ii  sshfs                               3.7.0+repack-1                      i386         filesystem client based on SSH File Transfer Protocol
 ii  ssmping                             0.9.1-3+b2                          i386         check your multicast connectivity
 ii  statserial                          1.1-25                              i386         Displays serial port modem status lines
 ii  strace                              5.5-3                               i386         System call tracer
 ii  stress                              1.0.4-7                             i386         tool to impose load on and stress test a computer system
 ii  stressant                           0.6.0                               all          simple stress testing and burn-in tool
-ii  subversion                          1.13.0-4                            i386         Advanced version control system
+ii  subversion                          1.14.0-1                            i386         Advanced version control system
 ii  sudo                                1.9.0-1                             i386         Provide limited super user privileges to specific users
 ii  sysfsutils                          2.1.0+repack-6                      i386         sysfs query tool and boot-time setup
 ii  syslinux                            3:6.04~git20190206.bf6db5b4+dfsg1-2 i386         collection of bootloaders (DOS FAT and NTFS bootloader)
 ii  syslinux-common                     3:6.04~git20190206.bf6db5b4+dfsg1-2 all          collection of bootloaders (common)
 ii  syslinux-utils                      3:6.04~git20190206.bf6db5b4+dfsg1-2 i386         collection of bootloaders (utilities)
 ii  sysstat                             12.3.2-1                            i386         system performance tools for Linux
-ii  systemd                             245.5-3                             i386         system and service manager
-ii  systemd-container                   245.5-3                             i386         systemd container/nspawn tools
-ii  systemd-sysv                        245.5-3                             i386         system and service manager - SysV links
+ii  systemd                             245.6-1                             i386         system and service manager
+ii  systemd-container                   245.6-1                             i386         systemd container/nspawn tools
+ii  systemd-sysv                        245.6-1                             i386         system and service manager - SysV links
 ii  sysvinit-utils                      2.96-3                              i386         System-V-like utilities
 ii  tar                                 1.30+dfsg-7                         i386         GNU version of the tar archiving utility
 ii  targetcli-fb                        2.1.fb49-1                          all          Command shell for managing the Linux LIO kernel target
@@ -1124,20 +1118,21 @@ ii  tcl8.6                              8.6.10+dfsg-1                       i386
 ii  tcpdump                             4.9.3-6                             i386         command-line network traffic analyzer
 ii  tcplay                              1.1-6                               i386         Free and simple TrueCrypt Implementation based on dm-crypt
 ii  tcptraceroute                       1.5beta7+debian-4.1+b1              i386         traceroute implementation using TCP packets
-ii  tdb-tools                           1.4.2-3+b1                          i386         Trivial Database - bundled binaries
+ii  tdb-tools                           1.4.3-1                             i386         Trivial Database - bundled binaries
 ii  telnet                              0.17-41.2                           i386         basic telnet client
 ii  testdisk                            7.1-5                               i386         Partition scanner and disk recovery tool, and PhotoRec file recovery tool
 ii  tgt                                 1:1.0.79-2                          i386         Linux SCSI target user-space daemon and tools
 ii  thin-provisioning-tools             0.8.5-4                             i386         Tools for handling thinly provisioned device-mapper meta-data
 ii  tk                                  8.6.9+1+b1                          i386         Toolkit for Tcl and X11 (default version) - windowing shell
 ii  tk8.6                               8.6.10-1                            i386         Tk toolkit for Tcl and X11 v8.6 - windowing shell
+ii  tmate                               2.4.0-1                             i386         terminal multiplexer with instant terminal sharing
 ii  tmux                                3.1b-1                              i386         terminal multiplexer
 ii  tree                                1.8.0-1                             i386         displays an indented directory tree, in color
 ii  tshark                              3.2.4-1                             i386         network traffic analyzer - console version
 ii  tsocks                              1.8beta5+ds1-1+b1                   i386         transparent network access through a SOCKS 4 or 5 proxy
 ii  tzdata                              2020a-1                             all          time zone and daylight-saving time data
-ii  ucf                                 3.0042                              all          Update Configuration File(s): preserve user changes to config files
-ii  udev                                245.5-3                             i386         /dev/ and hotplug management daemon
+ii  ucf                                 3.0043                              all          Update Configuration File(s): preserve user changes to config files
+ii  udev                                245.6-1                             i386         /dev/ and hotplug management daemon
 ii  udpcast                             20120424-2+b1                       i386         multicast file transfer tool
 ii  uml-utilities                       20070815.4-1                        i386         User-mode Linux (utility programs)
 ii  unp                                 2.0~pre7+nmu1                       all          unpack (almost) everything with one command
@@ -1145,11 +1140,11 @@ ii  unzip                               6.0-25                              i386
 ii  update-inetd                        4.50                                all          inetd configuration file updater
 ii  usb-modeswitch                      2.6.0-2                             i386         mode switching tool for controlling "flip flop" USB devices
 ii  usb-modeswitch-data                 20191128-3                          all          mode switching data for usb-modeswitch
-ii  usb.ids                             2020.03.28-1                        all          USB ID Repository
+ii  usb.ids                             2020.06.09-1                        all          USB ID Repository
 ii  usbutils                            1:012-2                             i386         Linux USB utilities
 ii  usbview                             2.0-21-g6fe2f4f-2                   i386         USB device viewer
-ii  util-linux                          2.35.2-2                            i386         miscellaneous system utilities
-ii  uuid-runtime                        2.35.2-2                            i386         runtime components for the Universally Unique ID library
+ii  util-linux                          2.35.2-4                            i386         miscellaneous system utilities
+ii  uuid-runtime                        2.35.2-4                            i386         runtime components for the Universally Unique ID library
 ii  vblade                              24-3                                i386         virtual AoE blade emulator
 ii  vim                                 2:8.2.0716-3                        i386         Vi IMproved - enhanced vi editor
 ii  vim-common                          2:8.2.0716-3                        all          Vi IMproved - Common files
@@ -1185,7 +1180,7 @@ ii  xfonts-75dpi                        1:1.0.4+nmu1                        all 
 ii  xfonts-base                         1:1.0.5                             all          standard fonts for X
 ii  xfonts-encodings                    1:1.0.4-2                           all          Encodings for X.Org fonts
 ii  xfonts-utils                        1:7.7+6                             i386         X Window System font utility programs
-ii  xfsdump                             3.1.6+nmu2+b1                       i386         Administrative utilities for the XFS filesystem
+ii  xfsdump                             3.1.9                               i386         Administrative utilities for the XFS filesystem
 ii  xfsprogs                            5.6.0-1+b1                          i386         Utilities for managing the XFS filesystem
 ii  xinit                               1.4.0-1                             i386         X server initialisation tool
 ii  xkb-data                            2.29-2                              all          X Keyboard Extension (XKB) configuration data
@@ -1214,4 +1209,4 @@ ii  zip                                 3.0-11+b1                           i386
 ii  zlib1g:i386                         1:1.2.11.dfsg-2                     i386         compression library - runtime
 ii  zsh                                 5.8-4                               i386         shell with lots of features
 ii  zsh-common                          5.8-4                               all          architecture independent files for Zsh
-ii  zstd                                1.4.4+dfsg-3                        i386         fast lossless compression algorithm -- CLI tool
+ii  zstd                                1.4.5+dfsg-2                        i386         fast lossless compression algorithm -- CLI tool

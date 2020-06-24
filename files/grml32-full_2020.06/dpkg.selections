@@ -322,18 +322,12 @@ libbinutils:i386				install
 libblas3:i386					install
 libblkid1:i386					install
 libbluetooth3:i386				install
-libboost-atomic1.67.0:i386			install
-libboost-chrono1.67.0:i386			install
-libboost-date-time1.67.0:i386			install
-libboost-filesystem1.67.0:i386			install
+libboost-filesystem1.71.0:i386			install
 libboost-iostreams1.71.0:i386			install
-libboost-locale1.67.0:i386			install
 libboost-locale1.71.0:i386			install
-libboost-log1.67.0				install
-libboost-program-options1.67.0:i386		install
-libboost-regex1.67.0:i386			install
-libboost-system1.67.0:i386			install
-libboost-thread1.67.0:i386			install
+libboost-log1.71.0				install
+libboost-program-options1.71.0:i386		install
+libboost-regex1.71.0:i386			install
 libboost-thread1.71.0:i386			install
 libbrlapi0.7:i386				install
 libbrotli1:i386					install
@@ -494,7 +488,6 @@ libhttp-message-perl				install
 libhttp-negotiate-perl				install
 libibverbs1:i386				install
 libice6:i386					install
-libicu63:i386					install
 libicu67:i386					install
 libid3tag0:i386					install
 libidn11:i386					install
@@ -545,7 +538,7 @@ libldb2:i386					install
 libleatherman1.4.2:i386				install
 liblinear4:i386					install
 liblinux-lvm-perl				install
-libllvm9:i386					install
+libllvm10:i386					install
 liblmdb0:i386					install
 liblocale-gettext-perl				install
 liblockfile-bin					install
@@ -578,6 +571,7 @@ libmount1:i386					install
 libmpc3:i386					install
 libmpdec2:i386					install
 libmpfr6:i386					install
+libmsgpackc2:i386				install
 libmspack0:i386					install
 libmtdev1:i386					install
 libncurses6:i386				install
@@ -650,7 +644,6 @@ libprotobuf22:i386				install
 libproxy1v5:i386				install
 libpsl5:i386					install
 libpulse0:i386					install
-libpython-stdlib:i386				install
 libpython2-stdlib:i386				install
 libpython2.7-minimal:i386			install
 libpython2.7-stdlib:i386			install
@@ -658,6 +651,7 @@ libpython3-stdlib:i386				install
 libpython3.8:i386				install
 libpython3.8-minimal:i386			install
 libpython3.8-stdlib:i386			install
+libqrencode4:i386				install
 libqt5core5a:i386				install
 libqt5dbus5:i386				install
 libqt5gui5:i386					install
@@ -714,6 +708,7 @@ libspeexdsp1:i386				install
 libspice-server1:i386				install
 libsqlite3-0:i386				install
 libss2:i386					install
+libssh-4:i386					install
 libssh-gcrypt-4:i386				install
 libssh2-1:i386					install
 libssl1.1:i386					install
@@ -973,8 +968,6 @@ puppet						install
 pv						install
 pwgen						install
 pxelinux					install
-python						install
-python-minimal					install
 python2						install
 python2-minimal					install
 python2.7					install
@@ -1037,6 +1030,7 @@ qemu-system-data				install
 qemu-system-gui:i386				install
 qemu-system-x86					install
 qemu-utils					install
+qrencode					install
 radvd						install
 rake						install
 rdnssd						install
@@ -1126,6 +1120,7 @@ tgt						install
 thin-provisioning-tools				install
 tk						install
 tk8.6						install
+tmate						install
 tmux						install
 tree						install
 tshark						install
