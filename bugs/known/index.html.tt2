@@ -34,12 +34,10 @@
 
         <p>If you find additional bugs, please <a href="/bugs/">report them</a>.</p>
 
-        <h2>Known Bugs in Grml 2020.06-rc1</h2>
+        <h2>Known Bugs in Grml 2020.06</h2>
 
         <ul>
-          <li><a href="https://github.com/grml/grml/issues/149">#149: grml96 fails to boot in EFI modus</a></li>
-          <li><a href="https://github.com/grml/grml-autoconfig/issues/10">#10: Bootoption `lvm` tries to enable deprecated lvm2-lvmetad.service</a></li>
-          <li><a href="https://github.com/grml/grml/issues/109">#109: Failed unmounting /lib/live/mount/medium</a></li>
+	  <li><a href="https://github.com/grml/grml/issues/109">#109: Failed unmounting /lib/live/mount/medium AKA /run/live/medium</a></li>
         </ul>
 
 </div>
