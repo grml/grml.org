@@ -40,7 +40,7 @@
           <li><a href="#whatmeans">What does Grml mean?</a></li>
           <li><a href="#releasename">What about the release name?</a></li>
           <li><a href="#requirements">Requirements for running Grml</a></li>
-          <li><a href="#bootoptions">Which bootoptions does Grml support?</a></li>
+          <li><a href="#bootoptions">Which boot options does Grml support?</a></li>
           <li><a href="#systemd">Why is Grml using systemd?</a></li>
           <li><a href="#known_issues">Are there any known issues with this release? How about reporting bugs?</a></li>
         </ol>
@@ -139,7 +139,7 @@
         <p>The Grml kernel includes support for speakup. For software,
         brltty and espeakup are included.</p>
 
-        <h3><a name="bootoptions"></a><a href="#toc">Which bootoptions does Grml support?</a></h3>
+        <h3><a name="bootoptions"></a><a href="#toc">Which boot options does Grml support?</a></h3>
 
         <p>Check out the <a
         href="http://git.grml.org/?p=grml-live.git;a=blob_plain;f=templates/GRML/grml-cheatcodes.txt;hb=HEAD">grml-cheatcodes
@@ -162,7 +162,7 @@
         tracking new features/services, but also solve any possible issues
         around it - duplicating efforts and wasting developers time
         unnecessarily. Lately we also started to see problems that no one else
-        seemed to have (or care about enough), for example with multiple network
+        seemed to have (or cared about enough), for example with multiple network
         cards we ran into race-conditions with resolvconf. Problems like that
         turned out to be release stoppers for us.</p>
 
@@ -173,34 +173,38 @@
         get a fast boot procedure) and identifying failed service startups with
         sysvinit/file-rc was always hard, unreliable or even impossible under
         certain conditions. bootlogd was unreliable (while `journalctl -b` is
-        available out-of-the-box with systemd), bootchart not nicely integrated
+        available out-of-the-box with systemd), bootchart was not nicely integrated
         (while systemd-analyze blame/critical-chain works out-of-the-box) and we
-        aren't aware of any equivalence for e.g. `systemctl --failed`.</p>
+        aren't aware of any equivalence for e.g.
+        `systemctl --failed`.</p>
 
-        <p>While migrating our stack to systemd is <em>not</em> fully finished
-        yet, its switch - at least so far - was easier than expected. It also
-        turns out that it gives users who want to remaster Grml (or build their
-        very own ISOs from scratch using grml-live) more flexibility and control
+        <p>It also turned out that it gives users who want to remaster Grml (or
+        build their very own ISOs from scratch using grml-live) more flexibility
+        and control
         over the startup process. systemd's override.conf mechanism and preset
         feature provides the flexibility to overwrite unwanted behavior, without
         losing the option to use existing defaults.</p>
 
-        <p>Last but not least we think it's good that systemd is actively
+        <p>We think it's good that systemd is actively
         maintained and receives attention. The sysvinit/file-rc ecosystem was
-        stagnating/non-existend for too many years. Grml used its own initrd
+        stagnating/non-existent for too many years. Grml used its own initrd
         implementation in its very beginnings, until a more broadly available
-        initramfs-tools/ live-boot solution appeared, broadening the user base,
+        initramfs-tools / live-boot solution appeared, broadening the user base,
         sharing goals amongst different (live) distributions. Back in the days
         Grml - like many other live distributions - had to implement hardware
-        recognition on its own.  While udev received lots of complaints back
-        then, its integration actually solved all the hardware recognition for
-        the good. systemd's vision of stateless systems is something which helps
-        building live systems like Grml.</p>
+        recognition on its own. While udev received lots of complaints back
+        then, its integration actually solved all the hardware recognition
+        problems for the good. systemd's vision of stateless systems is
+        something which helps building live systems like Grml.</p>
 
         <p>While we don't claim that systemd is perfect and doesn't have its
         issues and drawbacks (like any software), we're happy about its
         existence and more than happy about development and support by Debian's
         systemd folks.</p>
+
+        <p>With the Grml release 2020.06 we consider the migration of our stack
+        to systemd as complete. If you encounter problems please i
+        <a href="/bugs/">file a bug</a> and let us know.</p>
 
         <a name="release"></a> <!-- old anchor -->
         <a name="bugreport"></a> <!-- old anchor -->
@@ -214,10 +218,10 @@
         <h3><a name="usbboot"></a><a href="#toc">How do I boot Grml from a USB stick?</a></h3>
 
         <p>Check
-        out <a href="http://wiki.grml.org/doku.php?id=usb#grml2usb">grml2usb</a>
-        at the
-        <a href="http://wiki.grml.org/doku.php?id=usb">usb webpage in the
-        grml-wiki.</a></p>
+        out the <a href="https://grml.org/grml2usb/>grml2usb manpage</a>
+        and the grml-wiki page
+        <a href="http://wiki.grml.org/doku.php?id=usb">Boot Grml from
+        usb-stick/firewire-device</a></p>
 
         <h3><a name="store"></a><a name="persistency"></a><a href="#toc">Is it possible to store my settings?</a></h3>
 
@@ -231,9 +235,9 @@
         default for security reasons. Even local logins are not
         possible (unless you set a password or create new user
         accounts as root). You can create valid passwords using "sudo
-        passwd [username]" from the shell individually. To set a password
-        for users 'root' and 'grml' and enable SSH login you can use the 'ssh'
-        boot option, like 'ssh=yourpassword'.</p>
+        passwd [username]" from the shell individually.
+        With the <a href="#bootoptions">boot option</a> 'ssh' a password for the
+        users 'root' and 'grml' is and SSH login is enabled.</p>
 
         <h3><a name="version"></a><a href="#toc">How do I find out the version of Grml</a></h3>
 
@@ -242,12 +246,15 @@
 <pre class="rahmen">
 $ cat /etc/grml_version</pre>
 
-        <h3><a name="language"></a><a href="#toc">How do I change the language/keyboard settings?</a></h3>
+        <h3><a name="language"></a><a href="#toc">How do I change the language/keyboard layout?</a></h3>
 
-        <p>By default Grml uses english settings. But it is possible to
-        change the settings via using either the bootparam(s) lang,
-        keyboard and xkeyboard or via executing grml-lang when Grml is
-        already running. Usage examples:</p>
+        <p>The default language of the Grml system is English (en_US.UTF-8).
+        All other locales are removed by default.
+        But it is possible to change the keyboard layout via either using 'grml-quickconfig',
+        the <a href="#bootoptions">boot option(s)</a> 'lang', 'keyboard' and 'xkeyboard'
+        or via executing grml-lang when Grml is already running.</p>
+
+        <p>Boot option examples:</p>
 
 <pre class="rahmen">
 grml lang=de      # enter this at the bootprompt and you will get
@@ -256,14 +263,15 @@ grml lang=de      # enter this at the bootprompt and you will get
 grml keyboard=de xkeyboard=de lang=at # enter this at the bootprompt
                   # and you will get german keyboard and austrian
                   # language variables
-% grml-lang de    # enter this in the shell to switch keyboard layout
-                  # and $LANG settings in a running Grml system
 </pre>
 
-        <p>Note: run grml-setlang to get a dialog based frontend for
-        /etc/default/locale. Run grml-setkeyboard to get a dialog
-        based frontend for /etc/sysconfig/keyboard.</p>
+        <p>'grml-lang' example:</p>
 
+<pre class="rahmen">
+% grml-lang de    # enter this in the shell to switch keyboard layout
+</pre>
+
+        <p>Note: Run 'grml-setlang' to get a dialog based frontend for '/etc/default/locale'.</p>
 
         <h3><a name="wms"></a><a href="#toc">Which window managers can I use?</a></h3>
 
@@ -287,7 +295,7 @@ grml keyboard=de xkeyboard=de lang=at # enter this at the bootprompt
 </pre>
 
         <p>If you want to enable LVM by default just boot using the 'lvm'
-        bootoption which automatically enables LVM.</p>
+        <a href="#bootoptions">boot option</a> which automatically enables LVM.</p>
 
         <h3><a name="swraid"></a><a href="#toc">Where are my Software-RAID devices?</a></h3>
 
@@ -300,7 +308,7 @@ grml keyboard=de xkeyboard=de lang=at # enter this at the bootprompt
 </pre>
 
         <p>If you want to enable SW-RAID by default just boot using
-        the 'swraid' bootoption which enables automatic assembling of
+        the 'swraid' <a href="#bootoptions">boot option</a> which enables automatic assembling of
         software raid arrays.</p>
 
         <a name="terminalserver"></a>
@@ -339,13 +347,13 @@ grml keyboard=de xkeyboard=de lang=at # enter this at the bootprompt
         <h3><a name="timezone"></a><a href="#toc">How do I configure
         timezone on my Grml system?</a></h3>
 
-        <p>Available bootoptions relevant in live mode:</p>
+        <p>Availabe boot options:</p>
 
-        <ul>
-          <li>utc: set UTC, if your system/hardware clock is set to UTC (Coordinated Universal Time)
-	  <li>localtime: Hardware Clock is set to local time (LOCAL), this is the default
-          <li>tz=$option: set timezone to corresponding $option, usage example: tz=Europe/Vienna, defaults to UTC if unset
-        </ul>
+<pre class="rahmen">
+grml utc          # set UTC, if your system/hardware clock is set to UTC (Coordinated Universal Time)
+grml localtime    # Hardware Clock is set to local time (LOCAL), this is the default
+grml tz=$option   # set timezone to corresponding $option, usage example: tz=Europe/Vienna, defaults to UTC if unset
+</pre>
 
         <p>Further information: manpages hwclock(8), tzselect(1) and tzconfig(8); <a
         href="http://www.debian.org/doc/manuals/system-administrator/ch-sysadmin-time.html">Debian
