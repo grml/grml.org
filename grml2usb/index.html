@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
 <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
-<meta name="generator" content="AsciiDoc 8.6.10" />
+<meta name="generator" content="AsciiDoc 9.0.0rc2" />
 <title>grml2usb(8)</title>
 <style type="text/css">
 /* Shared CSS for AsciiDoc xhtml11 and html5 backends */
@@ -436,7 +436,7 @@ thead, p.table.header {
 p.table {
   margin-top: 0;
 }
-/* Because the table frame attribute is overriden by CSS in most browsers. */
+/* Because the table frame attribute is overridden by CSS in most browsers. */
 div.tableblock > table[frame="void"] {
   border-style: none;
 }
@@ -785,7 +785,7 @@ default MBR consider using <em>--syslinux-mbr</em> instead.</td>
 <h2 id="options">4. Options</h2>
 <div class="sectionbody">
 <div class="paragraph"><p>ISO[s] should be the path to one or multiple grml-ISOs and/or the path to
-the currently running live-system (being /lib/live/mount/medium).</p></div>
+the currently running live-system (being /run/live/medium).</p></div>
 <div class="paragraph"><p>The device either might be a device name like /dev/sdX1 or a directory. When
 specifying a device name the device is mounted automatically. When specifying a
 directory grml2usb is assuming that you did set up a bootloader on your own (or
@@ -918,7 +918,7 @@ multiple entries for removing different bootoptions at once.
 </dt>
 <dd>
 <p>
-Do not check for presence of bootflag on target device.
+Do not check for presence of boot flag on target device.
 </p>
 </dd>
 <dt class="hdlist1">
@@ -1109,7 +1109,7 @@ setup, like:</p></div>
 <div class="literalblock">
 <div class="content">
 <pre><code># mkfs.vfat /dev/loop1
-# grml2usb --bootloader-only /grml/isos/grml-small_2013.01.iso /dev/loop1</code></pre>
+# grml2usb --bootloader-only /grml/isos/grml64-small_2018.12.iso /dev/loop1</code></pre>
 </div></div>
 </div>
 <div class="sect2">
@@ -1117,7 +1117,7 @@ setup, like:</p></div>
 <div class="literalblock">
 <div class="content">
 <pre><code># blktrace -d /dev/sdX -o - | blkparse -i -
-# grml2usb grml_2013.01.iso /dev/sdX1</code></pre>
+# grml2usb grml64-full_2018.12.iso /dev/sdX1</code></pre>
 </div></div>
 </div>
 </div>
@@ -1329,7 +1329,7 @@ using the dd approach.</td>
 system available) running:</p></div>
 <div class="literalblock">
 <div class="content">
-<pre><code>% dd if=grml_2013.01.iso of=/dev/sdX</code></pre>
+<pre><code>% dd if=grml64-full_2018.12.iso of=/dev/sdX</code></pre>
 </div></div>
 <div class="paragraph"><p>where /dev/sdX is your USB device. Of course this doesn&#8217;t provide such a
 flexible system like with grml2usb (no multi-ISO setup, no additional default
@@ -1476,53 +1476,53 @@ of your grml2usb commandline (consider using the "--verbose" option).</p></div>
 <div class="sectionbody">
 <div class="literalblock">
 <div class="content">
-<pre><code># grml2usb /home/grml/grml_2013.01.iso /dev/sdX1</code></pre>
+<pre><code># grml2usb /home/grml/grml64-full_2018.12.iso /dev/sdX1</code></pre>
 </div></div>
 <div class="paragraph"><p>Install specified ISO on device /dev/sdX1.</p></div>
 <div class="literalblock">
 <div class="content">
-<pre><code># grml2usb /home/grml/grml_2013.01.iso /home/grml/grml_small_2013.01.iso /dev/sdX1</code></pre>
+<pre><code># grml2usb /home/grml/grml64-full_2018.12.iso /home/grml/grml32-full_2018.12.iso  /dev/sdX1</code></pre>
 </div></div>
 <div class="paragraph"><p>Install specified ISOs on device /dev/sdX1 for multibooting ISOs.</p></div>
 <div class="literalblock">
 <div class="content">
-<pre><code># grml2usb /lib/live/mount/medium /dev/sdX1</code></pre>
+<pre><code># grml2usb /run/live/medium /dev/sdX1</code></pre>
 </div></div>
 <div class="paragraph"><p>Install currently running Grml live system on device /dev/sdX1.</p></div>
 <div class="literalblock">
 <div class="content">
-<pre><code># grml2usb /lib/live/mount/medium /home/grml/grml_2013.01.iso /dev/sdX1</code></pre>
+<pre><code># grml2usb /run/live/medium /home/grml/grml64-full_2018.12.iso /dev/sdX1</code></pre>
 </div></div>
 <div class="paragraph"><p>Install currently running Grml live system and the specified
 ISO on device /dev/sdX1 for multibooting.</p></div>
 <div class="literalblock">
 <div class="content">
-<pre><code># grml2usb --fat16 /home/grml/grml_2013.01.iso /dev/sdX1</code></pre>
+<pre><code># grml2usb --fat16 /home/grml/grml64-full_2018.12.iso /dev/sdX1</code></pre>
 </div></div>
 <div class="paragraph"><p>Install specified ISO on device /dev/sdX1 and format partition /dev/sdX1 with
 FAT16 filesystem.</p></div>
 <div class="literalblock">
 <div class="content">
-<pre><code># grml2usb --grub --grub-mbr /home/grml/grml_2013.01.iso /dev/sdX1</code></pre>
+<pre><code># grml2usb --grub --grub-mbr /home/grml/grml64-full_2018.12.iso /dev/sdX1</code></pre>
 </div></div>
 <div class="paragraph"><p>Install specified ISO on device /dev/sdX1 and use grub as bootloader (instead of
 syslinux being the default) and install a master boot record (MBR) to the MBR of
 /dev/sdX.</p></div>
 <div class="literalblock">
 <div class="content">
-<pre><code># grml2usb --bootoptions="lang=de ssh=mysecret" grml_2013.01.iso /dev/sdX1
-# grml2usb --bootoptions="lang=de" --bootoptions="ssh=mysecret" grml_2013.01.iso /dev/sdX1</code></pre>
+<pre><code># grml2usb --bootoptions="lang=de ssh=mysecret" grml64-full_2018.12.iso /dev/sdX1
+# grml2usb --bootoptions="lang=de" --bootoptions="ssh=mysecret" grml64-full_2018.12.iso /dev/sdX1</code></pre>
 </div></div>
 <div class="paragraph"><p>Install specified ISO on device /dev/sdX1 and use "lang=de ssh=mysecret" as
 default bootoptions.</p></div>
 <div class="literalblock">
 <div class="content">
-<pre><code># grml2usb --remove-bootoption="vga=791" --remove-bootoption="nomce" grml_2013.01.iso /dev/sdX1</code></pre>
+<pre><code># grml2usb --remove-bootoption="vga=791" --remove-bootoption="nomce" grml64-full_2018.12.iso /dev/sdX1</code></pre>
 </div></div>
 <div class="paragraph"><p>Install specified ISO on device /dev/sdX1 remove vga=791 and nomce from existing bootoptions.</p></div>
 <div class="literalblock">
 <div class="content">
-<pre><code># grml2usb --bootoptions="persistent-path=%flavour_name" grml64_2010.04.iso grml_2010.04.iso /dev/sdX1</code></pre>
+<pre><code># grml2usb --bootoptions="persistent-path=%flavour_name" grml64-small_2018.12.iso grml32-small_2018.12.iso  /dev/sdX1</code></pre>
 </div></div>
 <div class="paragraph"><p>Install specified ISOs on device /dev/sdx and add parameter persistent-path
 to every menu entry. %flavour_name will be expanded to the flavour of the specific
@@ -1553,7 +1553,7 @@ iso, e.g. grml64 and grml.</p></div>
 <div id="footer">
 <div id="footer-text">
 Last updated
- 2017-09-23 11:52:01 UTC
+ 2020-06-03 13:04:51 UTC
 </div>
 </div>
 </body>

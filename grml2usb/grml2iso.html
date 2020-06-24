@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
 <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
-<meta name="generator" content="AsciiDoc 8.6.10" />
+<meta name="generator" content="AsciiDoc 9.0.0rc2" />
 <title>grml2iso(8)</title>
 <style type="text/css">
 /* Shared CSS for AsciiDoc xhtml11 and html5 backends */
@@ -436,7 +436,7 @@ thead, p.table.header {
 p.table {
   margin-top: 0;
 }
-/* Because the table frame attribute is overriden by CSS in most browsers. */
+/* Because the table frame attribute is overridden by CSS in most browsers. */
 div.tableblock > table[frame="void"] {
   border-style: none;
 }
@@ -753,36 +753,42 @@ asciidoc.install(2);
 <div class="paragraph"><p>grml2iso -o &lt;target.iso&gt; &lt;ISO[s]&gt;</p></div>
 <div class="sidebarblock">
 <div class="content">
-<div class="paragraph"><p>Important! The grml team does not take responsibility for loss of any data!</p></div>
+<div class="paragraph"><p>Important! The Grml team does not take responsibility for loss of any data!</p></div>
 </div></div>
 </div>
 </div>
 <div class="sect1">
 <h2 id="_introduction">3. Introduction</h2>
 <div class="sectionbody">
-<div class="paragraph"><p>grml2iso allows you to create a multiboot Grml ISO. You can specify
-two or more Grml ISOs and will get one single multiboot ISO as a result.
-grml2iso requires and uses grml2usb for this task and installs grub2
-as bootmanager on the multiboot ISO.</p></div>
+<div class="paragraph"><p>grml2iso allows you to create a multiboot Grml ISO.
+You can specify two or more Grml ISOs and will get one single multiboot ISO as a result.
+grml2iso requires and uses grml2usb for this task.</p></div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_options">4. Options</h2>
+<h2 id="_important">4. Important</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>The order of the provided ISOs matters for two reasons:</p></div>
+<div class="paragraph"><p>1) order in boot menu entries: the first ISO specified is listed as first (default) option in the boot menu, further ISOs will be listed below as next options</p></div>
+<div class="paragraph"><p>2) EFI image to be used: the EFI image for booting via (U)EFI will be taken from the last provided ISO.
+Therefore to be able to boot on 64bit EFI systems, you need to provide a 64bit ISO (like grml64-small or grml64-full) as <em>last</em> ISO in the grml2iso command line.</p></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_options">5. Options</h2>
 <div class="sectionbody">
 <div class="paragraph"><p>grml2iso supports the environment variables GRML2USB and WRKDIR.
 GRML2USB specifies the path to the grml2usb script you&#8217;d like to use.
 WRKDIR specifies the work directory for creating the filesystem.
-The work directory needs at least as much free disk space as the sum
-of all specified ISOs.</p></div>
+The work directory needs at least as much free disk space as the sum of all specified ISOs.</p></div>
 <div class="dlist"><dl>
 <dt class="hdlist1">
 <strong>-o &lt;target.iso&gt;</strong>
 </dt>
 <dd>
 <p>
-This option is mandatory and specifies where the resulting multiboot Grml ISO
-should be placed. Note that (to avoid any possible data loss) grml2iso will exit
-if the specified target.iso exists already.
+This option is mandatory and specifies where the resulting multiboot Grml ISO should be placed.
+Note that (to avoid any possible data loss) grml2iso will exit if the specified target.iso exists already.
 </p>
 </dd>
 <dt class="hdlist1">
@@ -790,8 +796,7 @@ if the specified target.iso exists already.
 </dt>
 <dd>
 <p>
-The content of the specified directory will be copied to the resulting
-multiboot Grml ISO.
+The content of the specified directory will be copied to the resulting multiboot Grml ISO.
 </p>
 </dd>
 <dt class="hdlist1">
@@ -815,7 +820,8 @@ Force the program to run and overwrite an existing ISO image.
 </dt>
 <dd>
 <p>
-Remove specified boot parameter from existing command line. Could be specified multiple times.
+Remove specified boot parameter from existing command line.
+Can be specified multiple times.
 </p>
 </dd>
 <dt class="hdlist1">
@@ -823,7 +829,8 @@ Remove specified boot parameter from existing command line. Could be specified m
 </dt>
 <dd>
 <p>
-Execute grml2usb with the specified parameters. For a list of valid parameters have a look at the <a href="http://grml.org/grml2usb/">grml2usb webpage</a> or the grml2usb manpage
+Execute grml2usb with the specified parameters.
+For a list of valid parameters have a look at the grml2usb(8) manual page.
 </p>
 </dd>
 <dt class="hdlist1">
@@ -831,72 +838,60 @@ Execute grml2usb with the specified parameters. For a list of valid parameters h
 </dt>
 <dd>
 <p>
-Generate a small ISO file which downloads the squashfs file from the
-specified URI. Due  to current limitations in busyboxs wget and DNS
-resolution, an URL can not contain a hostname but an IP only. This is
-useful if you want to boot systems which support booting ISO image from
-your local system. Besides the iso image this command also copies the
-squashfs file to the output directory.
+Generate a small ISO file which downloads the squashfs file from the specified URI.
+Due to current limitations in busyboxs wget and DNS resolution, an URL can not contain a hostname but an IP only.
+This is useful if you want to boot systems which support booting ISO image from your local system.
+Besides the ISO image this command also copies the squashfs file to the output directory.
 </p>
 </dd>
 </dl></div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_usage_examples">5. Usage examples</h2>
+<h2 id="_usage_examples">6. Usage examples</h2>
 <div class="sectionbody">
 <div class="literalblock">
 <div class="content">
-<pre><code># grml2iso -o /tmp/grml.iso grml_2009.05.iso grml64_2009.05.iso</code></pre>
+<pre><code># grml2iso -o /tmp/grml-multiboot.iso grml32-small_2020.06.iso grml64-small_2020.06.iso</code></pre>
 </div></div>
-<div class="paragraph"><p>Create multiboot ISO /tmp/grml.iso with grml_2009.05.iso and grml64_2009.05.iso.</p></div>
+<div class="paragraph"><p>Create multiboot ISO /tmp/grml-multiboot.iso with grml32-small_2020.06.iso and grml64-small_2020.06.iso.</p></div>
 <div class="literalblock">
 <div class="content">
-<pre><code># grml2iso -b 'lang=de ssh=passwd' -c /tmp/grml-content -o /srv/grml.iso /srv/grml/grml_2009.10.iso</code></pre>
+<pre><code># grml2iso -b 'lang=de ssh=passwd' -c /tmp/grml-content -o /srv/grml-multiboot.iso /srv/grml/grml32-small_2020.06.iso</code></pre>
 </div></div>
-<div class="paragraph"><p>Create a new ISO with additional boot parameters and copy the content
-from /tmp/grml-content to the generated ISO image.</p></div>
+<div class="paragraph"><p>Create a new ISO with additional boot parameters and copy the content from /tmp/grml-content to the generated ISO image.</p></div>
 <div class="literalblock">
 <div class="content">
-<pre><code># grml2iso -r quiet -r vga=791 -o /srv/grml.iso /srv/grml-small_2009.10.iso</code></pre>
+<pre><code># grml2iso -r quiet -r vga=791 -o /srv/grml-multiboot.iso /srv/grml64-small_2020.06.iso</code></pre>
 </div></div>
 <div class="paragraph"><p>Create a new ISO and remove existing boot parameters quiet and vga=791.</p></div>
 <div class="literalblock">
 <div class="content">
-<pre><code># GRML2USB=/srv/git/grml2usb grml2iso -o /srv/grml.iso /srv/grml/grml_2009.05.iso /srv/grml/grml64-medium_2009.05.iso</code></pre>
+<pre><code># GRML2USB=/srv/git/grml2usb/grml2usb grml2iso -o /srv/grml-multiboot.iso /srv/grml/grml32-small_2020.06.iso /srv/grml/grml64-medium_2020.06.iso</code></pre>
 </div></div>
-<div class="paragraph"><p>Create multiboot ISO /srv/grml.iso with grml_2009.05.iso and
-grml64-medium_2009.05.iso using /srv/git/grml2usb as grml2usb script.</p></div>
+<div class="paragraph"><p>Create multiboot ISO /srv/grml-multiboot.iso with grml32-small_2020.06.iso and grml64-medium_2020.06.iso using /srv/git/grml2usb/grml2usb as grml2usb script.</p></div>
 <div class="literalblock">
 <div class="content">
-<pre><code># WRKDIR=/mnt/test/grml-tmp grml2iso -o /mnt/test/grml.iso grml_2009.05.iso grml64_2009.05.iso</code></pre>
+<pre><code># WRKDIR=/mnt/test/grml-tmp grml2iso -o /mnt/test/grml-multiboot.iso grml32-small_2020.06.iso grml64-small_2020.06.iso</code></pre>
 </div></div>
-<div class="paragraph"><p>Use /mnt/test/grml-tmp as working directory for creating the multiboot ISO
-/mnt/test/grml.iso with grml_2009.05.iso and grml64_2009.05.iso.</p></div>
+<div class="paragraph"><p>Use /mnt/test/grml-tmp as working directory for creating the multiboot ISO /mnt/test/grml-multiboot.iso with grml32-small_2020.06.iso and grml64-small_2020.06.iso.</p></div>
 <div class="literalblock">
 <div class="content">
-<pre><code># grml2iso -p --skip-addons -o /srv/grml.iso /srv/grml-small_2009.10.iso /srv/grml64-small_2009.10.iso</code></pre>
+<pre><code># grml2iso -p --skip-addons -o /srv/grml-multiboot.iso /srv/grml64-small_2020.06.iso /srv/grml64-small_2020.06.iso</code></pre>
 </div></div>
 <div class="paragraph"><p>Don&#8217;t copy the addons from the specified ISO images</p></div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_online_resources">6. Online Resources</h2>
-<div class="sectionbody">
-<div class="paragraph"><p>Check out the <a href="http://grml.org/grml2usb/">grml2usb webpage</a> and the
-<a href="http://git.grml.org/?p=grml2usb.git">grml2usb git repository</a>.</p></div>
-</div>
-</div>
-<div class="sect1">
 <h2 id="_bugs">7. Bugs</h2>
 <div class="sectionbody">
-<div class="paragraph"><p>Please report feedback, bugreports and wishes <a href="#X7">to the author</a>.</p></div>
+<div class="paragraph"><p>Please report feedback, bug reports and wishes at <a href="https://github.com/grml/grml2usb/">https://github.com/grml/grml2usb/</a></p></div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="X7">8. Authors</h2>
+<h2 id="X7">8. Author</h2>
 <div class="sectionbody">
-<div class="paragraph"><p>Michael Prokop &lt;<a href="mailto:mika@grml.org">mika@grml.org</a>&gt; and Thorsten Glaser &lt;<a href="mailto:tg@mirbsd.org">tg@mirbsd.org</a>&gt;</p></div>
+<div class="paragraph"><p>Michael Prokop &lt;<a href="mailto:mika@grml.org">mika@grml.org</a>&gt;</p></div>
 </div>
 </div>
 </div>
@@ -904,7 +899,7 @@ grml64-medium_2009.05.iso using /srv/git/grml2usb as grml2usb script.</p></div>
 <div id="footer">
 <div id="footer-text">
 Last updated
- 2017-09-23 11:51:47 UTC
+ 2020-06-24 08:10:54 UTC
 </div>
 </div>
 </body>
