@@ -178,7 +178,7 @@
         document.getElementById('download_link_mirror').href = mirror_url + iso;
         document.getElementById('download_link_mirror').innerHTML = '<br />Download Now<div class="download_relinfo">' + product + '-' + flavour + ' ' + current_version + '</div>';
         document.getElementById('download_link_bt').href = mirror_url + iso + '.torrent';
-        document.getElementById('download_link_signature').href = mirror_url + iso + '.asc';
+        document.getElementById('download_link_signature').href = mirror_url + iso + '.sha1.asc';
     }
 
     // hook update function
