@@ -109,8 +109,8 @@
     <h2>Options</h2>
 
     <select name="flavour" id="download_flavour" style="width:100%;">
-    <option value="full" selected="selected">grml-full (~680MB)</option>
-    <option value="small">grml-small (~315MB)</option>
+    <option value="full" selected="selected">grml-full (~750MB)</option>
+    <option value="small">grml-small (~350MB)</option>
     </select>
     <br /><br />
     <select name="arch" id="download_arch" style="width:100%;">
@@ -160,7 +160,7 @@
     <script type="text/javascript">
     function update_arch() {
         var flavour = document.getElementById('download_flavour').value;
-        if (flavour == 'small') document.getElementById('download_arch').innerHTML = '<option value="amd64">64-bit PC (amd64)</option><option value="i386">32-bit PC (i686+)</option><option value="96">One for both (~600MB)</option>';
+        if (flavour == 'small') document.getElementById('download_arch').innerHTML = '<option value="amd64">64-bit PC (amd64)</option><option value="i386">32-bit PC (i686+)</option><option value="96">One for both (~670MB)</option>';
         if (flavour == 'full') document.getElementById('download_arch').innerHTML = '<option value="amd64">64-bit PC (amd64)</option><option value="i386">32-bit PC (i686+)</option><option value="96">One for both (~1.4GB)</option>';
         update_links();
     }
@@ -216,9 +216,10 @@
     <br />
     For each released ISO image there is also a signature file, that should be verified with the following
     <a href="https://grml.org/download/gnupg-michael-prokop.txt">signing key</a>:
-    <pre>pub  4096R/96A87872B7EA3737 2010-07-14 Michael Prokop &lt;mail (at) michael-prokop.at&gt;
-Key fingerprint = 33CC B136 401A FEC8 43A3  8763 96A8 7872 B7EA 3737
-sub  4096R/257B6FD52892CF7E 2010-07-14</pre>
+    <pre>pub  4096R/96A87872B7EA3737 2010-07-14 Michael Prokop &lt;mika (at) grml.org&gt;
+Key  fingerprint = 33CC B136 401A FEC8 43A3  8763 96A8 7872 B7EA 3737
+sub  rsa4096/257B6FD52892CF7E 2010-07-14 [E]
+sub  rsa4096/43A1FB9BCC87C963 2018-07-26 [A] [expires: 2022-05-20]</pre>
     </div></div>
 
     <div class="download_panel" id="download_panel4"><div>
