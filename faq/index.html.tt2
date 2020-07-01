@@ -217,11 +217,9 @@
         <!-- TODO: needs to be improved! -->
         <h3><a name="usbboot"></a><a href="#toc">How do I boot Grml from a USB stick?</a></h3>
 
-        <p>Check
-        out the <a href="https://grml.org/grml2usb/>grml2usb manpage</a>
+        <p>Check out the <a href="/grml2usb/">grml2usb manpage</a>
         and the grml-wiki page
-        <a href="http://wiki.grml.org/doku.php?id=usb">Boot Grml from
-        usb-stick/firewire-device</a></p>
+	&quot;<a href="http://wiki.grml.org/doku.php?id=usb">Boot Grml from usb-stick/firewire-device</a>&quot;.</p>
 
         <h3><a name="store"></a><a name="persistency"></a><a href="#toc">Is it possible to store my settings?</a></h3>
 
