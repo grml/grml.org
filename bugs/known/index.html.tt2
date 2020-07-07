@@ -37,7 +37,8 @@
         <h2>Known Bugs in Grml 2020.06</h2>
 
         <ul>
-	  <li><a href="https://github.com/grml/grml/issues/109">#109: Failed unmounting /lib/live/mount/medium AKA /run/live/medium</a></li>
+          <li><a href="https://github.com/grml/grml/issues/152">#152: grml-x sometimes crashes on start (e.g. when running under qemu)</a> (fixed in grml-x v0.7.2)</li>
+          <li><a href="https://github.com/grml/grml/issues/109">#109: Failed unmounting /lib/live/mount/medium AKA /run/live/medium</a></li>
         </ul>
 
 </div>
