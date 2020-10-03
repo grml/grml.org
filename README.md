@@ -1,4 +1,4 @@
-grml.org
+Grml Live Linux - Debian based Linux Live system
 ========
 
 This repository contains the website of the Grml project, located at https://grml.org/
