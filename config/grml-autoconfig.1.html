@@ -1,9 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
     "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
 <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
-<meta name="generator" content="AsciiDoc 8.6.9" />
+<meta name="generator" content="AsciiDoc 8.6.10" />
 <title>grml-autoconfig(1)</title>
 <style type="text/css">
 /* Shared CSS for AsciiDoc xhtml11 and html5 backends */
@@ -813,7 +814,7 @@ configuration and scripts which are used during system startup.</p></div>
 <div class="sect2">
 <h3 id="_determination_of_dcs_directory">Determination of DCS directory</h3>
 <div class="paragraph"><p>The DCS directory defaults to the root directory of the GRML live image
-(Note: the directory is known as /lib/live/mount/medium/ on a <em>running</em>
+(Note: the directory is known as /run/live/medium/ on a <em>running</em>
 Grml system then!). If a file system labeled GRMLCFG is found, the DCS
 directory is the root directory of that file system. Alternatively, the
 myconfig boot parameter can be used to directly specify a device which
@@ -1024,7 +1025,7 @@ noautoconfig
 You want to set some boot parameters permanently? That&#8217;s possible via
 adding a directory named <em>bootparams</em> to the Grml ISO which has to be
 located at the root-directory /bootparams/ (Note: the directory is known
-as /lib/live/mount/medium/bootparams/ on a <em>running</em> Grml system then!).
+as /run/live/medium/bootparams/ on a_running_Grml system then!).
 Place a textfile inside the directory containing the boot parameters
 which should be appended to default ones (this corresponds to booting
 without any special parameters).</p></div>
@@ -1132,7 +1133,7 @@ version of Grml you might have to overburn the ISO.</p></div>
 <div class="content">
 <pre><code>mkdir debs/ &amp;&amp; cp foobar.deb debs/</code></pre>
 </div></div>
-<div class="paragraph"><p>Notice: This directory will be located in /lib/live/mount/medium after burning the second
+<div class="paragraph"><p>Notice: This directory will be located in /run/live/medium after burning the second
 session.</p></div>
 <div class="paragraph"><p>Now create the second session containing this directory:</p></div>
 <div class="literalblock">
@@ -1242,7 +1243,8 @@ about how to report bugs.</p></div>
 <div id="footnotes"><hr /></div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2014-03-20 16:07:25 CET
+Last updated
+ 2019-03-21 13:50:31 UTC
 </div>
 </div>
 </body>
