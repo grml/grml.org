@@ -1,4 +1,4 @@
-<a href="https://grml.github.com"><img style="position: absolute; top: 0; right: 0; border: 0;" src="/img/forkme.png" alt="Fork me on GitHub"></a>
+<a href="https://grml.github.io"><img style="position: absolute; top: 0; right: 0; border: 0;" src="/img/forkme.png" alt="Fork me on GitHub"></a>
 
 <div class="container">
       <div class="menu">
@@ -36,7 +36,7 @@
                 <a class="plain" href="/bugs/">Reporting Bugs</a><br/>
                 <a class="plain" href="/bugs/known/">Known Bugs</a><br/>
                 <a class="plain" href="/beta/">Beta Versions</a><br/>
-                <a class="plain" href="https://grml.github.com/">Contribute</a><br/>
+                <a class="plain" href="https://grml.github.io/">Contribute</a><br/>
               </p>
             <h3>Get in touch</h3>
               <p>
