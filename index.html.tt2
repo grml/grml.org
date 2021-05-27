@@ -60,6 +60,7 @@
 
             <h2>News</h2>
             <div class="news">
+            <p>27 May 2021: <a href="https://blog.grml.org/archives/405-Grml-IRC-channel-moving-to-OFTC.html">Grml IRC channel moving to OFTC</a></p>
             <p>24 Jun 2020: New <a href="/changelogs/README-grml-2020.06/">stable release 2020.06</a></p>
             <p>06 Jun 2020: New <a href="/changelogs/README-grml-2020.06-rc1/">release candidate version 2020.06-rc1</a></p>
             </div>
