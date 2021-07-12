@@ -46,8 +46,6 @@
 
           <li>The network configuration tool <em>netcardconfig</em> no longer prompts for uncommon wireless/WiFi options, and therefore simplifying and speeding up its usage
 
-          <li>
-
         </ul>
 
         <h3>New features</h3>
@@ -57,11 +55,11 @@
         <h4>Misc:</h4>
 
         <ul>
-
           <li><strong>grml-terminalserver</strong>: support for UEFI PXE boot (now supporting BIOS boot via pxelinux and EFI boot via GRUB)
           <li><strong>netcardconfig</strong>: support for enabling blocked devices via rfkill
           <li><strong>forensic mode</strong>: improved handling for block device changes and parent device handling
           <li><strong>grml-chroot</strong>: support efivarfs in EFI environments
+        </ul>
 
         <h4><a href="/grml-live/">grml-live</a> (build system for creating Grml (based) Linux live systems):</h4>
 
@@ -132,15 +130,15 @@
         <h3>Updates</h3>
 
         <p>Packages are taken from Debian bullseye/testing as of 12th of July 2021.
-        12 packages have been removed, and these 17 new packages
+        12 packages have been removed, and these 19 new packages
         have been added (excluding lib*, *-common, perl-*, python3-* and kernel image):</p>
 
         <ul>
-
           <li>bsdextrautils (extra utilities from 4.4BSD-Lite, via util-linux)
           <li>cpp-10 (replacement for cpp-9, dependency of x11-xserver-utils)
           <li>firmware-ath9k-htc (firmware for AR7010 and AR9271 USB wireless adapters)
           <li>grub-efi-amd64-signed (signed GRUB package, for EFI PXE boot support in grml-terminalserver)
+          <li>inxi (full featured system information script)
           <li>jq (lightweight and flexible command-line JSON processor)
           <li>media-types (List of standard media types and their usual file extension)
           <li>mmdebstrap (create a Debian chroot)
@@ -149,6 +147,7 @@
           <li>python3.9 / python3.9-minimal (replacement for python3.8, new python version)
           <li>ruby-rubygems (Package management framework for Ruby)
           <li>shim-helpers-amd64-signed / shim-signed / shim-signed-common / shim-unsigned (Secure Boot chain-loading bootloader, for EFI PXE boot support in grml-terminalserver)
+          <li>speedtest-cli (command line interface for testing internet bandwidth using speedtest.net)
           <li>wireless-regdb (wireless regulatory database for Linux)
         </ul>
 
