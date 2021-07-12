@@ -42,9 +42,9 @@
 
         <ul>
 
-          <li>The <a href="https://blog.grml.org/archives/405-Grml-IRC-channel-moving-to-OFTC.html">the Grml IRC channel moved to OFTC</a>
+          <li>The <a href="https://blog.grml.org/archives/405-Grml-IRC-channel-moving-to-OFTC.html">Grml IRC channel moved to OFTC</a>
 
-          <li>The network configuration tool <em>netcardconfig</em> no longer prompts for uncommon wireless/WiFi options, and therefore simplifying and speeding up its usage
+          <li>The network configuration tool <em>netcardconfig</em> no longer prompts for uncommon wireless/WiFi options, to simplify and speed up its usage
 
         </ul>
 
@@ -86,9 +86,9 @@
         <h4>grml-hwinfo (tool to collect hardware information):</h4>
 
         <ul>
-          <li>store `ip netconf` output in file `ip_netconf`
-          <li>sysdump: rework ignore list code and ignore further files
-          <li>provide information to user if sysdump might be hanging
+          <li>store <em>ip netconf</em> output in file <em>ip_netconf</em>
+          <li><em>sysdump</em>: rework ignore list code and ignore further files
+          <li>provide information to user if <em>sysdump</em> might be hanging
         </ul>
 
         <h4><a href="/zsh/">grml-zshrc</a> (Zsh configuration):</h4>
@@ -130,8 +130,7 @@
         <h3>Updates</h3>
 
         <p>Packages are taken from Debian bullseye/testing as of 12th of July 2021.
-        12 packages have been removed, and these 19 new packages
-        have been added (excluding lib*, *-common, perl-*, python3-* and kernel image):</p>
+        The following 19 packages have been added (excluding lib*, *-common, perl-*, python3-* and kernel image):</p>
 
         <ul>
           <li>bsdextrautils (extra utilities from 4.4BSD-Lite, via util-linux)
@@ -151,7 +150,7 @@
           <li>wireless-regdb (wireless regulatory database for Linux)
         </ul>
 
-        <p>These Debian packages have been removed/replaced (excluding lib*, *-data, *-common, perl-*, python-* and kernel image):</p>
+        <p>The following 11 Debian packages have been removed/replaced (excluding lib*, *-data, *-common, perl-*, python-* and kernel image):</p>
 
         <ul>
 
@@ -175,12 +174,10 @@
 
         <h3>Feedback</h3>
 
-        <p>Your comments, bug reports, patches, and suggestions will help
-        fixing bugs and improving future releases. If you find a problem with
-        the release please check <a
-        href="/bugs/known/">the known bugs list</a> and report problems using information on <a
-        href="/bugs/">grml.org/bugs/</a>. Please send your feedback and
-        feature requests <a href="/contact/">to the Grml team</a>!</p>
+        <p>Your comments, bug reports, patches, and suggestions will help fixing bugs and improving future releases.
+        If you find a problem with the (pre-)release, please check <a href="/bugs/known/">the known bugs list</a> and report problems using information on <a href="/bugs/">grml.org/bugs/</a>.
+        We also welcome feature requests and any kind of constructive feedback.
+        If you want to reach out to the Grml team, please visit our <a href="/contact/">contact webpage</a>.</p>
 
         <a name="thanks"></a>
         <h3>Thanks</h3>
@@ -204,13 +201,8 @@
 
         <h3>More Information</h3>
 
-        <p>You can find out more about Grml on <a href="/">our website</a>, <a
-        href="/contact/#irc">IRC channel</a>, and <a
-        href="https://wiki.grml.org/">wiki</a>.
-
-        <p>To sign up for future Grml announcements, please subscribe to <a
-        href="http://ml.grml.org/mailman/listinfo/grml-announce">Grml's
-        announcement list</a>.</p>
+        <p>You can find out more about Grml on <a href="/">our website</a>, <a href="/contact/#irc">IRC channel</a>, and <a href="https://wiki.grml.org/">wiki</a>.
+        <p>To sign up for future Grml announcements, please subscribe to <a href="http://ml.grml.org/mailman/listinfo/grml-announce">Grml's announcement list</a> or follow our <a href="https://blog.grml.org/">blog</a>.</p>
 
 </div>
 
