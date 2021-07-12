@@ -34,6 +34,12 @@
 
         <p>If you find additional bugs, please <a href="/bugs/">report them</a>.</p>
 
+        <h2>Known Bugs in Grml 2021.07-rc1</h2>
+
+        <ul>
+          <li><a href="https://github.com/grml/grml/issues/172">#172: pppoeconf: Fails to work with recent ppp versions (>= 2.4.9)</a></li>
+        </ul>
+
         <h2>Known Bugs in Grml 2020.06</h2>
 
         <ul>
