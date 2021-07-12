@@ -27,7 +27,7 @@
 
         <h1 align="center">FAQ for grml</h1>
 
-        <p><strong>Up2date:</strong> applies to Grml version 2020.06</p>
+        <p><strong>Up2date:</strong> applies to Grml version 2021.07</p>
 
         <p><a name="toc"></a><strong>Index:</strong></p>
 
@@ -116,8 +116,9 @@
 
         <h3><a name="releasename"></a><a href="#toc">What about the release name?</a></h3>
 
-        <p>Codename of Grml 2020.06 is &quot;Ausgehfuahangl&quot;, which is
-	an austrian word for a face mask.</p>
+        <p>Codename of Grml 2021.07 is &quot;JauKerl&quot;.
+        <em>Jau</em> is german colloquial for <em>yes</em>, and <em>kerl</em> is german for <em>guy</em>,
+        while just <em>Jaukerl</em> is an austrian word for an injection.</p>
 
         <h3><a name="requirements"></a><a href="#toc">Requirements for running Grml</a></h3>
 
@@ -201,10 +202,6 @@
         issues and drawbacks (like any software), we're happy about its
         existence and more than happy about development and support by Debian's
         systemd folks.</p>
-
-        <p>With the Grml release 2020.06 we consider the migration of our stack
-        to systemd as complete. If you encounter problems please i
-        <a href="/bugs/">file a bug</a> and let us know.</p>
 
         <a name="release"></a> <!-- old anchor -->
         <a name="bugreport"></a> <!-- old anchor -->
