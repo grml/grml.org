@@ -223,7 +223,7 @@
           <b>Boot from USB key</b><br />
           <br />
           Just <kbd>dd(1)</kbd> the downloaded ISO to an <abbr title="Any existing data will be overwritten by the dd command!">empty</abbr> USB key!<br /><br />
-          <code>dd if=grml_2021.07-rc1.iso of=/dev/USB_KEY bs=4M status=progress conv=fdatasync</code>
+          <code class="keyboard">dd if=grml_2021.07-rc1.iso of=/dev/USB_KEY bs=4M status=progress conv=fdatasync</code>
           <br /><br />
 
           <b>Troubleshooting</b><br /><br />
@@ -242,18 +242,17 @@
 
     <p>Please verify all downloads!</p>
 
-    <p>Alongside the actual ISO files, the Grml mirrors publish the extra files <em>SHA256SUMS</em> and <em>SHA256SUMS.gpg</em>.<br />
+    <p>Alongside the actual download files (ISO, netboot, sources), the Grml mirrors publish the extra files <em>SHA256SUMS</em> and <em>SHA256SUMS.gpg</em>.<br />
     The <em><a href="https://download.grml.org/devel/SHA256SUMS">SHA256SUMS</a></em> file contains checksums for all available release files.<br />
     The <em><a href="https://download.grml.org/devel/SHA256SUMS.gpg">SHA256SUMS.gpg</a></em> file provides the GnuPG signature for that file.<br />
-    Once you have <em>SHA256SUMS</em> and <em>SHA256SUMS.gpg</em> in the same directory as your Grml downloads, verify the checksum file via:
-    </p>
+    Once you have <em>SHA256SUMS</em> and <em>SHA256SUMS.gpg</em> in the same directory as your Grml downloads, verify the checksum file via:</p>
 
 <code class="keyboard">
 gpg --keyid-format long --verify SHA256SUMS.gpg SHA256SUMS
 </code>
 
     <p>If you don't have <a href="https://grml.org/download/gnupg-michael-prokop.txt">our GnuPG signing key</a>
-    (<em>0x96A87872B7EA3737</em>, fingerprint <em>33CC B136 401A FEC8 43A3  8763 96A8 7872 B7EA 3737</em>), run:</p>
+    (key ID <em>0x96A87872B7EA3737</em>, fingerprint <em>33CC B136 401A FEC8 43A3  8763 96A8 7872 B7EA 3737</em>), run:</p>
 
 <code class="keyboard">
 gpg --keyid-format long --keyserver hkps://keys.openpgp.org --recv-keys 0x96A87872B7EA3737
