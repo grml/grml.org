@@ -150,17 +150,16 @@
           <li>wireless-regdb (wireless regulatory database for Linux)
         </ul>
 
-        <p>The following 11 Debian packages have been removed/replaced (excluding lib*, *-data, *-common, perl-*, python-* and kernel image):</p>
+        <p>The following 12 Debian packages have been removed/replaced (excluding lib*, *-data, *-common, perl-*, python-* and kernel image):</p>
 
         <ul>
-
           <li>comgt (Option GlobeTrotter and Vodafone datacard control tool, no longer considered relevant, please raise your voice if it should be part of the stable release!)
           <li>cpp-9 (replaced by cpp-10)
-          <li>python2 / python2-minimal / python2.7 / python2.7-minimal / python3.8 / python3.8-minimal (python2 is deprecated and python3.8 got replaced by python3.9)
+          <li>mime-support (replaced by media-types)
           <li>moblin-icon-theme (unmaintained upstream)
+          <li>python2 / python2-minimal / python2.7 / python2.7-minimal / python3.8 / python3.8-minimal (python2 is deprecated and python3.8 got replaced by python3.9)
           <li>usb.ids (USB ID Repository, no longer required by usbutils)
           <li>wvdial (Point-to-Point Protocol dialer, no longer considered relevant nowadays, please raise your voice if it should be part of the stable release!)
-
         </ul>
 
         <h3>Known issues</h3>
