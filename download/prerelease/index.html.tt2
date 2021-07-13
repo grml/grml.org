@@ -11,13 +11,12 @@
 <meta name="Language" content="english" />
 <meta name="identifier-url" content="https://grml.org/" />
 <meta name="MSSmartTagsPreventParsing" content="true" />
-<meta http-equiv="imagetoolbar" content="no" />
 <link rel="home" href="/" title="grml.org" />
 <link rel="help" href="/features/" title="About" />
 <link rel="author" href="/team/" title="Team" />
 <link rel="icon" href="/favicon.png" type="image/png" />
 <link rel="stylesheet" href="/style.css" type="text/css" />
-<style type="text/css">
+<style>
 #contentbox {
     padding-left: 20px;
     padding-right: 20px;
@@ -157,7 +156,7 @@
       </div>
       </form>
 
-      <script type="text/javascript">
+      <script>
       function update_arch() {
           var flavour = document.getElementById('download_flavour').value;
           if (flavour == 'small') document.getElementById('download_arch').innerHTML = '<option value="amd64">64-bit PC (amd64)</option><option value="i386">32-bit PC (i686+)</option><option value="96">One for both (~685MB)</option>';
@@ -213,7 +212,7 @@
         <div>
           <b>Boot from USB key</b><br />
           <br />
-          Just <tt>dd(1)</tt> the downloaded ISO to an <abbr title="Any existing data will be overwritten by the dd command!">empty</abbr> USB key!<br /><br />
+          Just <kbd>dd(1)</kbd> the downloaded ISO to an <abbr title="Any existing data will be overwritten by the dd command!">empty</abbr> USB key!<br /><br />
           <code>dd if=grml_2021.07-rc1.iso of=/dev/USB_KEY bs=4M status=progress conv=fdatasync</code>
           <br /><br />
 
@@ -239,22 +238,22 @@
     Once you have <em>SHA256SUMS</em> and <em>SHA256SUMS.gpg</em> in the same directory as your Grml downloads, verify the SHA256 checksum via:
     </p>
 
-<pre>
+<code>
 gpg --keyid-format long --verify SHA256SUMS.gpg SHA256SUMS
-</pre>
+</code>
 
-    <br />
-    If you don't have <a href="https://grml.org/download/gnupg-michael-prokop.txt">our GnuPG signing key</a> (<em>0x96A87872B7EA3737</em>, fingerprint <em>33CC B136 401A FEC8 43A3  8763 96A8 7872 B7EA 3737</em>), run:
+    <p>If you don't have <a href="https://grml.org/download/gnupg-michael-prokop.txt">our GnuPG signing key</a>
+    (<em>0x96A87872B7EA3737</em>, fingerprint <em>33CC B136 401A FEC8 43A3  8763 96A8 7872 B7EA 3737</em>), run:</p>
 
-<pre>
+<code>
 gpg --keyid-format long --keyserver hkps://keys.openpgp.org --recv-keys 0x96A87872B7EA3737
-</pre>
+</code>
 
-    Finally verify the checksum of your Grml downloads, via:
+    <p>Finally verify the checksum of your Grml downloads, via:</p>
 
-<pre>
+<code>
 sha256sum --ignore-missing -c SHA256SUMS
-</pre>
+</code>
 
     <h2>Source code</h2>
 
