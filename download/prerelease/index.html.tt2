@@ -76,7 +76,7 @@
 
 <div class="content">
 
-    <h1>Download Grml 2020.06-rc1</h1>
+    <h1>Download Grml 2021.07-rc1</h1>
 
     <p><strong>NOTE: This is a PRE-RELEASE, not a stable release yet.<br />
     You have been warned.</strong><br />
@@ -90,19 +90,19 @@
         <a href="https://grml.org/download/mirrors/">Download from a specific mirror</a><br/>
         <br/>
         Direct download links:<br/>
-        <a href="https://download.grml.org/devel/grml96-full_2020.06-rc1.iso">Grml96 full ISO</a> [<a href="https://download.grml.org/devel/grml96-full_2020.06-rc1.iso.sha1.asc">Signature</a>]<br/>
-        <a href="https://download.grml.org/devel/grml64-full_2020.06-rc1.iso">Grml64 full ISO</a> [<a href="https://download.grml.org/devel/grml64-full_2020.06-rc1.iso.sha1.asc">Signature</a>]<br/>
-        <a href="https://download.grml.org/devel/grml32-full_2020.06-rc1.iso">Grml32 full ISO</a> [<a href="https://download.grml.org/devel/grml32-full_2020.06-rc1.iso.sha1.asc">Signature</a>]<br/>
-        <a href="https://download.grml.org/devel/grml96-small_2020.06-rc1.iso">Grml96 small ISO</a> [<a href="https://download.grml.org/devel/grml96-small_2020.06-rc1.iso.sha1.asc">Signature</a>]<br/>
-        <a href="https://download.grml.org/devel/grml64-small_2020.06-rc1.iso">Grml64 small ISO</a> [<a href="https://download.grml.org/devel/grml64-small_2020.06-rc1.iso.sha1.asc">Signature</a>]<br/>
-        <a href="https://download.grml.org/devel/grml32-small_2020.06-rc1.iso">Grml32 small ISO</a> [<a href="https://download.grml.org/devel/grml32-small_2020.06-rc1.iso.sha1.asc">Signature</a>]<br/>
+        <a href="https://download.grml.org/devel/grml96-full_2021.07-rc1.iso">Grml96 full ISO</a> [<a href="https://download.grml.org/devel/grml96-full_2021.07-rc1.iso.asc">GPG Signature</a>]<br/>
+        <a href="https://download.grml.org/devel/grml64-full_2021.07-rc1.iso">Grml64 full ISO</a> [<a href="https://download.grml.org/devel/grml64-full_2021.07-rc1.iso.asc">GPG Signature</a>]<br/>
+        <a href="https://download.grml.org/devel/grml32-full_2021.07-rc1.iso">Grml32 full ISO</a> [<a href="https://download.grml.org/devel/grml32-full_2021.07-rc1.iso.asc">GPG Signature</a>]<br/>
+        <a href="https://download.grml.org/devel/grml96-small_2021.07-rc1.iso">Grml96 small ISO</a> [<a href="https://download.grml.org/devel/grml96-small_2021.07-rc1.iso.asc">GPG Signature</a>]<br/>
+        <a href="https://download.grml.org/devel/grml64-small_2021.07-rc1.iso">Grml64 small ISO</a> [<a href="https://download.grml.org/devel/grml64-small_2021.07-rc1.iso.asc">GPGP Signature</a>]<br/>
+        <a href="https://download.grml.org/devel/grml32-small_2021.07-rc1.iso">Grml32 small ISO</a> [<a href="https://download.grml.org/devel/grml32-small_2021.07-rc1.iso.asc">GPG Signature</a>]<br/>
         <br/>
         </div></div>
     </div>
 
     <div class="download_group" id="download_group1" style="display:none;">
     <form method="get" action="/download/bounce/">
-    <input type="hidden" name="version" value="2020.06-rc1"/>
+    <input type="hidden" name="version" value="2021.07-rc1"/>
     <div class="download_panel" id="download_panel1"><div>
 
     <h2>Options</h2>
@@ -124,7 +124,7 @@
     <br />
 
     <div style="font-size: 14pt;">
-    <p><a href="/changelogs/README-grml-2020.06-rc1/">Release Notes</a></p>
+    <p><a href="/changelogs/README-grml-2021.07-rc1/">Release Notes</a></p>
 
     </div>
     </div>
@@ -146,7 +146,7 @@
 <!--
     <a id="download_link_bt">BitTorrent Download</a><br />
 -->
-    <a id="download_link_signature">Get Checksum/Signature</a><br />
+    <a id="download_link_signature">Get GPG Signature</a><br />
     <a href="https://grml.org/download/mirrors/">Download from a specific mirror</a><br/>
     </div>
     </div></div>
@@ -161,7 +161,7 @@
     }
 
     function update_links() {
-        var current_version = "2020.06-rc1";
+        var current_version = "2021.07-rc1";
         var product = 'grml';
         var arch = document.getElementById('download_arch').value;
         var flavour = document.getElementById('download_flavour').value;
@@ -173,7 +173,7 @@
         document.getElementById('download_link_mirror').href = mirror_url + iso;
         document.getElementById('download_link_mirror').innerHTML = '<br />Download Now<div class="download_relinfo">' + product + '-' + flavour + ' ' + current_version + '</div>';
         // document.getElementById('download_link_bt').href = mirror_url + iso + '.torrent';
-        document.getElementById('download_link_signature').href = mirror_url + iso + '.sha1.asc';
+        document.getElementById('download_link_signature').href = mirror_url + iso + '.asc';
     }
 
     // hook update function
@@ -195,13 +195,11 @@
     <b>Alternate downloads</b><br /><br />
     <a href="https://daily.grml.org/">Daily images</a><br />
     <a href="https://download.grml.org/">Older releases</a><br />
-    <a href="https://download.grml.org/devel/grml_sources-2020.06-rc1.tar.gz">Source code</a> (one tgz for both architectures)<br />
+    <a href="https://download.grml.org/devel/grml_sources-2021.07-rc1.tar.gz">Source code</a> (one tgz for both architectures)<br />
     <br/>
     Netboot packages:<br/>
-    <a href="https://download.grml.org/devel/grml_netboot_package_grml64-full_2020.06-rc1.tar.bz2">64-bit</a>
-    <a href="https://download.grml.org/devel/grml_netboot_package_grml64-full_2020.06-rc1.tar.bz2.sha1.asc">(sig)</a>
-    <a href="https://download.grml.org/devel/grml_netboot_package_grml32-full_2020.06-rc1.tar.bz2">32-bit</a>
-    <a href="https://download.grml.org/devel/grml_netboot_package_grml32-full_2020.06-rc1.tar.bz2.sha1.asc">(sig)</a>
+    <a href="https://download.grml.org/devel/grml_netboot_package_grml64-full_2021.07-rc1.tar">64-bit</a>
+    <a href="https://download.grml.org/devel/grml_netboot_package_grml32-full_2021.07-rc1.tar">32-bit</a>
 
     <br />
     <br />
@@ -221,7 +219,7 @@ sub  rsa4096/43A1FB9BCC87C963 2018-07-26 [A] [expires: 2022-05-20]</pre>
     <b>Boot from USB key</b><br />
     <br />
     Just <tt>dd(1)</tt> the downloaded ISO to an <abbr title="Any existing data will be overwritten by the dd command!">empty</abbr> USB key!<br /><br />
-    <code>dd if=grml_2020.06-rc1.iso of=/dev/USB_KEY</code>
+    <code>dd if=grml_2021.07-rc1.iso of=/dev/USB_KEY</code>
     <br /><br />
 
     <b>Troubleshooting</b><br /><br />
