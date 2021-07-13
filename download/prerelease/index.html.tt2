@@ -66,8 +66,14 @@
     display: none;
 }
 .keyboard {
+    background-color: lightgrey;
+    color: #111;
+    font-family: "Ubuntu Mono", Consolas, Monaco, Courier, monospace;
     font-size: 70%;
-    margin-left: 20px;
+    line-height: 1.5rem;
+    padding: .5rem 1rem;
+    text-align: left;
+    text-shadow: none;
 }
 
 </style>
@@ -239,7 +245,7 @@
     <p>Alongside the actual ISO files, the Grml mirrors publish the extra files <em>SHA256SUMS</em> and <em>SHA256SUMS.gpg</em>.<br />
     The <em><a href="https://download.grml.org/devel/SHA256SUMS">SHA256SUMS</a></em> file contains checksums for all available release files.<br />
     The <em><a href="https://download.grml.org/devel/SHA256SUMS.gpg">SHA256SUMS.gpg</a></em> file provides the GnuPG signature for that file.<br />
-    Once you have <em>SHA256SUMS</em> and <em>SHA256SUMS.gpg</em> in the same directory as your Grml downloads, verify the SHA256 checksum via:
+    Once you have <em>SHA256SUMS</em> and <em>SHA256SUMS.gpg</em> in the same directory as your Grml downloads, verify the checksum file via:
     </p>
 
 <code class="keyboard">
