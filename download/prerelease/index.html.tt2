@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <title>grml.org - Download</title>
 <meta name="Title" content="grml.org - Download" />
@@ -50,8 +50,7 @@
     text-align: center;
     color: black;
     text-decoration: none;
-    padding: auto;
-    }
+}
 .largebutton:hover {
     background: #FFA862;
 }
@@ -68,6 +67,7 @@
 }
 .keyboard {
     font-size: 70%;
+    margin-left: 20px;
 }
 
 </style>
