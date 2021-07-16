@@ -216,12 +216,12 @@
 
         <p>Check out the <a href="/grml2usb/">grml2usb manpage</a>
         and the grml-wiki page
-	&quot;<a href="http://wiki.grml.org/doku.php?id=usb">Boot Grml from usb-stick/firewire-device</a>&quot;.</p>
+        &quot;<a href="http://wiki.grml.org/doku.php?id=usb">Boot Grml from usb-stick/firewire-device</a>&quot;.</p>
 
         <h3><a name="store"></a><a name="persistency"></a><a href="#toc">Is it possible to store my settings?</a></h3>
 
         <p>Yes, using the
-        a <a href="http://wiki.grml.org/doku.php?id=persistency">persistency
+        <a href="http://wiki.grml.org/doku.php?id=persistency">persistency
         feature</a>.</p>
 
         <h3><a name="password"></a><a href="#toc">What are the passwords of users on Grml?</a></h3>
