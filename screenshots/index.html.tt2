@@ -28,11 +28,17 @@
 
         <h1>Screenshots</h1>
 
-        <h2><a name="bootsplash"></a>Bootsplash</h2>
+        <h2><a name="bootsplash"></a>Bootsplash / BIOS</h2>
 
         <a href="vesamenu.png"><img style="border: 0" src="vesamenu.jpg" alt="Screenshot" /></a><br />
 
-        <p>This screenshot shows the bootsplash.</p>
+        <p>This screenshot shows the bootsplash in BIOS mode.</p>
+
+        <h2><a name="bootsplash"></a>Bootsplash / EFI</h2>
+
+        <a href="bootsplash_efi.png"><img style="border: 0" src="bootsplash_efi.jpg" alt="Screenshot" /></a><br />
+
+        <p>This screenshot shows the bootsplash in EFI mode.</p>
 
         <h2><a name="booting"></a>Booting</h2>
 
@@ -56,9 +62,9 @@
 
         <h2><a name="grml"></a>X Window System - fluxbox</h2>
 
-        <a href="grml_2020.06.png"><img style="border: 0" src="grml_2020.06.jpg" alt="Screenshot" /></a><br />
+        <a href="grml_2021.07.png"><img style="border: 0" src="grml_2021.07.jpg" alt="Screenshot" /></a><br />
 
-        <p>This screenshot shows Grml 2020.06 running the X Window system with the <a
+        <p>This screenshot shows Grml 2021.07 running the X Window system with the <a
         href="http://fluxbox.sourceforge.net/">fluxbox</a> window manager.</p>
 
       </div>

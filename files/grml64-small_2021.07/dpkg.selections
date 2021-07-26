@@ -369,7 +369,7 @@ libyaml-0-2:amd64				install
 libzstd1:amd64					install
 links						install
 linux-base					install
-linux-image-5.10.0-7-amd64			install
+linux-image-5.10.0-8-amd64			install
 linux-image-amd64				install
 live-boot-grml					install
 live-boot-grml-doc				install

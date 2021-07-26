@@ -34,18 +34,10 @@
 
         <p>If you find additional bugs, please <a href="/bugs/">report them</a>.</p>
 
-        <h2>Known Bugs in Grml 2021.07-rc1</h2>
+        <h2>Known Bugs in Grml 2021.07</h2>
 
         <ul>
-          <li><a href="https://github.com/grml/grml/issues/172">#172: pppoeconf: Fails to work with recent ppp versions (>= 2.4.9)</a></li>
-        </ul>
-
-        <h2>Known Bugs in Grml 2020.06</h2>
-
-        <ul>
-          <li><a href="https://github.com/grml/grml/issues/160">#160: bnx2x firmware files missing in initramfs/netboot packages</a> (fixed with updated netboot packages as of 2020-12-04)</li>
-          <li><a href="https://github.com/grml/grml/issues/152">#152: grml-x sometimes crashes on start (e.g. when running under qemu)</a> (fixed in grml-x v0.7.2)</li>
-          <li><a href="https://github.com/grml/grml/issues/109">#109: Failed unmounting /lib/live/mount/medium AKA /run/live/medium</a></li>
+          <li>None yet.</li>
         </ul>
 
 </div>

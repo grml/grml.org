@@ -878,7 +878,7 @@ libzstd1:i386					install
 links2						install
 linux-base					install
 linux-cpupower					install
-linux-image-5.10.0-7-686			install
+linux-image-5.10.0-8-686			install
 linux-image-686					install
 live-boot-grml					install
 live-boot-grml-doc				install

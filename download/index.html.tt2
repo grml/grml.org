@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <title>grml.org - Download</title>
 <meta name="Title" content="grml.org - Download" />
@@ -11,13 +11,12 @@
 <meta name="Language" content="english" />
 <meta name="identifier-url" content="https://grml.org/" />
 <meta name="MSSmartTagsPreventParsing" content="true" />
-<meta http-equiv="imagetoolbar" content="no" />
 <link rel="home" href="/" title="grml.org" />
 <link rel="help" href="/features/" title="About" />
 <link rel="author" href="/team/" title="Team" />
 <link rel="icon" href="/favicon.png" type="image/png" />
 <link rel="stylesheet" href="/style.css" type="text/css" />
-<style type="text/css">
+<style>
 #contentbox {
     padding-left: 20px;
     padding-right: 20px;
@@ -51,8 +50,7 @@
     text-align: center;
     color: black;
     text-decoration: none;
-    padding: auto;
-    }
+}
 .largebutton:hover {
     background: #FFA862;
 }
@@ -67,6 +65,17 @@
 .hide {
     display: none;
 }
+.keyboard {
+    background-color: lightgrey;
+    color: #111;
+    font-family: "Ubuntu Mono", Consolas, Monaco, Courier, monospace;
+    font-size: 70%;
+    line-height: 1.5rem;
+    padding: .5rem 1rem;
+    text-align: left;
+    text-shadow: none;
+}
+
 </style>
 
 </head>
@@ -76,170 +85,198 @@
 
 <div class="content">
 
-    <h1>Download Grml 2020.06</h1>
+    <h1>Download Grml 2021.07</h1>
 
     <p>Get the current stable release here.<br />
 
+<!--
     <a href="prerelease/">Looking for the current pre-release version instead?</a></p>
+-->
 
     <p>Download the Grml flavour you need, then write it to a CD-ROM/DVD or an empty USB stick.</p>
 
     <div class="download_group" id="download_group1_noscript">
-    <div class="download_panel" id="download_panel1_noscript"><div>
-        <a href="https://grml.org/download/mirrors/">Download from a specific mirror</a><br/>
-        <br/>
-        Direct download links:<br/>
-        <a href="https://download.grml.org/grml96-full_2020.06.iso">Grml96 full ISO</a> [<a href="https://download.grml.org/grml96-full_2020.06.iso.sha1.asc">Signature</a>]<br/>
-        <a href="https://download.grml.org/grml64-full_2020.06.iso">Grml64 full ISO</a> [<a href="https://download.grml.org/grml64-full_2020.06.iso.sha1.asc">Signature</a>]<br/>
-        <a href="https://download.grml.org/grml32-full_2020.06.iso">Grml32 full ISO</a> [<a href="https://download.grml.org/grml32-full_2020.06.iso.sha1.asc">Signature</a>]<br/>
-        <a href="https://download.grml.org/grml96-small_2020.06.iso">Grml96 small ISO</a> [<a href="https://download.grml.org/grml96-small_2020.06.iso.sha1.asc">Signature</a>]<br/>
-        <a href="https://download.grml.org/grml64-small_2020.06.iso">Grml64 small ISO</a> [<a href="https://download.grml.org/grml64-small_2020.06.iso.sha1.asc">Signature</a>]<br/>
-        <a href="https://download.grml.org/grml32-small_2020.06.iso">Grml32 small ISO</a> [<a href="https://download.grml.org/grml32-small_2020.06.iso.sha1.asc">Signature</a>]<br/>
-        <br/>
-        </div></div>
+      <div class="download_panel" id="download_panel1_noscript">
+        <div>
+          <a href="https://grml.org/download/mirrors/">Download from a specific mirror</a><br/>
+          <br/>
+          Direct download links:<br/>
+          <a href="https://download.grml.org/grml96-full_2021.07.iso">Grml96 full ISO</a> [<a href="https://download.grml.org/grml96-full_2021.07.iso.asc">GPG Signature</a>]<br/>
+          <a href="https://download.grml.org/grml64-full_2021.07.iso">Grml64 full ISO</a> [<a href="https://download.grml.org/grml64-full_2021.07.iso.asc">GPG Signature</a>]<br/>
+          <a href="https://download.grml.org/grml32-full_2021.07.iso">Grml32 full ISO</a> [<a href="https://download.grml.org/grml32-full_2021.07.iso.asc">GPG Signature</a>]<br/>
+          <a href="https://download.grml.org/grml96-small_2021.07.iso">Grml96 small ISO</a> [<a href="https://download.grml.org/grml96-small_2021.07.iso.asc">GPG Signature</a>]<br/>
+          <a href="https://download.grml.org/grml64-small_2021.07.iso">Grml64 small ISO</a> [<a href="https://download.grml.org/grml64-small_2021.07.iso.asc">GPGP Signature</a>]<br/>
+          <a href="https://download.grml.org/grml32-small_2021.07.iso">Grml32 small ISO</a> [<a href="https://download.grml.org/grml32-small_2021.07.iso.asc">GPG Signature</a>]<br/>
+          <br/>
+        </div>
+      </div>
     </div>
 
     <div class="download_group" id="download_group1" style="display:none;">
-    <form method="get" action="/download/bounce/">
-    <input type="hidden" name="version" value="2020.06"/>
-    <div class="download_panel" id="download_panel1"><div>
+      <form method="get" action="/download/bounce/">
+      <input type="hidden" name="version" value="2021.07"/>
+      <div class="download_panel" id="download_panel1">
+        <div>
 
-    <h2>Options</h2>
+          <h2>Options</h2>
 
-    <select name="flavour" id="download_flavour" style="width:100%;">
-    <option value="full" selected="selected">grml-full (~750MB)</option>
-    <option value="small">grml-small (~350MB)</option>
-    </select>
-    <br /><br />
-    <select name="arch" id="download_arch" style="width:100%;">
-    <option value="amd64" selected="selected">64-bit PC (amd64)</option>
-    <option value="i386">32-bit PC (i686+)</option>
-    <option value="96">One for both (~1.4GB)</option>
-    </select>
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
+          <select name="flavour" id="download_flavour" style="width:100%;">
+          <option value="full" selected="selected">grml-full (~786MB)</option>
+          <option value="small">grml-small (~400MB)</option>
+          </select>
+          <br /><br />
+          <select name="arch" id="download_arch" style="width:100%;">
+          <option value="amd64" selected="selected">64-bit PC (amd64)</option>
+          <option value="i386">32-bit PC (i686+)</option>
+          <option value="96">One for both (~1.5GB)</option>
+          </select>
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
 
-    <!--
-    <a href="/download/prerelease/" class="button" style="padding: 12px; font-weight: bold;"><span>Get 2020.06-rc1 instead!</span></a>
-    <br />
-    <br />
-    <br />
-    -->
+          <div style="font-size: 14pt;">
+            <p><a href="/changelogs/README-grml-2021.07/">Release Notes</a></p>
+          </div>
+
+        </div>
+      </div>
 
 
-    <div style="font-size: 14pt;">
-    <p><a href="/changelogs/README-grml-2020.06">Release Notes</a></p>
+      <!--
+      <a href="/download/prerelease/" class="button" style="padding: 12px; font-weight: bold;"><span>Get 2021.07-rc1 instead!</span></a>
+      <br />
+      <br />
+      <br />
+      -->
 
-    </div>
-    </div>
-    </div>
+      <div class="download_panel" id="download_panel2">
+        <div>
+          <!-- fallback cgi buttons -->
+          <div id="formbuttons">
+            <button name="filetype" value="iso" id="download_button_mirror" class="largebutton" style="width:100%;" type="submit">Download Now </button><br />
+            <!--
+            <button name="filetype" value="bt" id="download_button_bt" type="submit">Download using BitTorrent</button><br />
+            -->
+            <button name="filetype" value="signature" id="download_button_signature" type="submit">Get Checksum/Signature</button><br />
+            <a href="https://grml.org/download/mirrors/">Download from a specific mirror</a><br/>
+          </div>
+          <!-- JS links -->
+          <div id="linkbuttons" style="display:none;">
+            <a id="download_link_mirror" class="largebutton">Download Now</a><br />
+            <!--
+            <a id="download_link_bt">BitTorrent Download</a><br />
+            -->
+            <a id="download_link_signature">Get GPG Signature</a><br />
+            <a href="https://grml.org/download/mirrors/">Download from a specific mirror</a><br/>
+          </div>
+        </div>
+      </div>
+      </form>
 
-    <div class="download_panel" id="download_panel2"><div>
-    <!-- fallback cgi buttons -->
-    <div id="formbuttons">
-    <button name="filetype" value="iso" id="download_button_mirror" class="largebutton" style="width:100%;" type="submit">Download Now </button><br />
-    <button name="filetype" value="bt" id="download_button_bt" type="submit">Download using BitTorrent</button><br />
-    <button name="filetype" value="signature" id="download_button_signature" type="submit">Get Checksum/Signature</button><br />
-    <a href="https://grml.org/download/mirrors/">Download from a specific mirror</a><br/>
-    </div>
-    <!-- JS links -->
-    <div id="linkbuttons" style="display:none;">
-    <a id="download_link_mirror" class="largebutton">Download Now</a><br />
-    <a id="download_link_bt">BitTorrent Download</a><br />
-    <a id="download_link_signature">Get Checksum/Signature</a><br />
-    <a href="https://grml.org/download/mirrors/">Download from a specific mirror</a><br/>
-    </div>
-    </div></div>
+      <script>
+      function update_arch() {
+          var flavour = document.getElementById('download_flavour').value;
+          if (flavour == 'small') document.getElementById('download_arch').innerHTML = '<option value="amd64">64-bit PC (amd64)</option><option value="i386">32-bit PC (i686+)</option><option value="96">One for both (~685MB)</option>';
+          if (flavour == 'full') document.getElementById('download_arch').innerHTML = '<option value="amd64">64-bit PC (amd64)</option><option value="i386">32-bit PC (i686+)</option><option value="96">One for both (~1.45GB)</option>';
+          update_links();
+      }
 
-    </form>
-    <script type="text/javascript">
-    function update_arch() {
-        var flavour = document.getElementById('download_flavour').value;
-        if (flavour == 'small') document.getElementById('download_arch').innerHTML = '<option value="amd64">64-bit PC (amd64)</option><option value="i386">32-bit PC (i686+)</option><option value="96">One for both (~670MB)</option>';
-        if (flavour == 'full') document.getElementById('download_arch').innerHTML = '<option value="amd64">64-bit PC (amd64)</option><option value="i386">32-bit PC (i686+)</option><option value="96">One for both (~1.4GB)</option>';
-        update_links();
-    }
+      function update_links() {
+          var current_version = "2021.07";
+          var product = 'grml';
+          var arch = document.getElementById('download_arch').value;
+          var flavour = document.getElementById('download_flavour').value;
+          if (arch == 'amd64') product = 'grml64';
+          if (arch == 'i386') product = 'grml32';
+          if (arch == '96') product = 'grml96';
+          var iso = product + '-' + flavour + '_' + current_version + '.iso';
+          var mirror_url = "https://download.grml.org/";
+          document.getElementById('download_link_mirror').href = mirror_url + iso;
+          document.getElementById('download_link_mirror').innerHTML = '<br />Download Now<div class="download_relinfo">' + product + '-' + flavour + ' ' + current_version + '</div>';
+          // document.getElementById('download_link_bt').href = mirror_url + iso + '.torrent';
+          document.getElementById('download_link_signature').href = mirror_url + iso + '.asc';
+      }
 
-    function update_links() {
-        var current_version = "2020.06";
-        var product = 'grml';
-        var arch = document.getElementById('download_arch').value;
-        var flavour = document.getElementById('download_flavour').value;
-        if (arch == 'amd64') product = 'grml64';
-        if (arch == 'i386') product = 'grml32';
-        if (arch == '96') product = 'grml96';
-        var iso = product + '-' + flavour + '_' + current_version + '.iso';
-        var mirror_url = "https://download.grml.org/";
-        document.getElementById('download_link_mirror').href = mirror_url + iso;
-        document.getElementById('download_link_mirror').innerHTML = '<br />Download Now<div class="download_relinfo">' + product + '-' + flavour + ' ' + current_version + '</div>';
-        document.getElementById('download_link_bt').href = mirror_url + iso + '.torrent';
-        document.getElementById('download_link_signature').href = mirror_url + iso + '.sha1.asc';
-    }
-
-    // hook update function
-    document.getElementById('download_flavour').onchange = update_arch;
-    document.getElementById('download_arch').onchange = update_links;
-    // force initial link href set
-    update_links();
-    // only show our link "buttons"
-    document.getElementById('formbuttons').style.display = 'none';
-    document.getElementById('linkbuttons').style.display = '';
-    document.getElementById('download_group1').style.display = '';
-    document.getElementById('download_group1_noscript').style.display = 'none';
-    </script>
+      // hook update function
+      document.getElementById('download_flavour').onchange = update_arch;
+      document.getElementById('download_arch').onchange = update_links;
+      // force initial link href set
+      update_links();
+      // only show our link "buttons"
+      document.getElementById('formbuttons').style.display = 'none';
+      document.getElementById('linkbuttons').style.display = '';
+      document.getElementById('download_group1').style.display = '';
+      document.getElementById('download_group1_noscript').style.display = 'none';
+      </script>
     </div>
 
     <div class="download_group" id="download_group2">
 
-    <div class="download_panel" id="download_panel3"><div>
-    <b>Alternate downloads</b><br /><br />
-    <a href="https://daily.grml.org/">Daily images</a><br />
-    <a href="https://download.grml.org/">Older releases</a><br />
-    <a href="https://download.grml.org/grml_sources-2020.06.tar.gz">Source code</a> (one tgz for both archs)<br />
-    <br/>
-    Netboot packages:<br/>
-    <a href="https://download.grml.org/grml_netboot_package_grml64-full_2020.06.tar.bz2">64-bit</a>
-    <a href="https://download.grml.org/grml_netboot_package_grml64-full_2020.06.tar.bz2.sha1.asc">(signed sig)</a>
-    <a href="https://download.grml.org/grml_netboot_package_grml32-full_2020.06.tar.bz2">32-bit</a>
-    <a href="https://download.grml.org/grml_netboot_package_grml32-full_2020.06.tar.bz2.sha1.asc">(signed sig)</a>
+      <div class="download_panel" id="download_panel3">
+        <div>
+          <b>Alternate downloads</b><br /><br />
+          <a href="https://daily.grml.org/">Daily images</a><br />
+          <a href="https://download.grml.org/">Older releases</a><br />
+          <a href="https://download.grml.org/grml_sources-2021.07.tar.gz">Source code</a> (one tgz for both architectures)<br />
+          <br/>
+          Netboot packages:<br/>
+          <a href="https://download.grml.org/grml_netboot_package_grml64-full_2021.07.tar">64-bit</a>
+          <a href="https://download.grml.org/grml_netboot_package_grml32-full_2021.07.tar">32-bit</a>
+        </div>
+      </div>
 
-    <br />
-    <br />
-    <b>Signing Key</b>
-    <br />
-    Please verify all downloads using GnuPG!
-    <br />
-    For each released ISO image there is also a signature file, that should be verified with the following
-    <a href="https://grml.org/download/gnupg-michael-prokop.txt">signing key</a>:
-    <pre>pub  4096R/96A87872B7EA3737 2010-07-14 Michael Prokop &lt;mika (at) grml.org&gt;
-Key  fingerprint = 33CC B136 401A FEC8 43A3  8763 96A8 7872 B7EA 3737
-sub  rsa4096/257B6FD52892CF7E 2010-07-14 [E]
-sub  rsa4096/43A1FB9BCC87C963 2018-07-26 [A] [expires: 2022-05-20]</pre>
-    </div></div>
+      <div class="download_panel" id="download_panel4">
+        <div>
+          <b>Boot from USB key</b><br />
+          <br />
+          Just <kbd>dd(1)</kbd> the downloaded ISO to an <abbr title="Any existing data will be overwritten by the dd command!">empty</abbr> USB key!<br /><br />
+          <code class="keyboard">dd if=grml_2021.07.iso of=/dev/USB_KEY bs=4M status=progress conv=fdatasync</code>
+          <br /><br />
 
-    <div class="download_panel" id="download_panel4"><div>
-    <b>Boot from USB key</b><br />
-    <br />
-    Just <tt>dd(1)</tt> the downloaded ISO to an <abbr title="Any existing data will be overwritten by the dd command!">empty</abbr> USB key!<br /><br />
-    <code>dd if=grml64_2020.06.iso of=/dev/USB_KEY</code>
-    <br /><br />
+          <b>Troubleshooting</b><br /><br />
+          <a href="https://git.grml.org/?p=grml-live.git;a=blob_plain;f=templates/GRML/grml-cheatcodes.txt;hb=HEAD">Boot option guide</a>
+          <br />
+          <br />
+          <br />
+          <br />
 
-    <b>Troubleshooting</b><br /><br />
-    <a href="https://git.grml.org/?p=grml-live.git;a=blob_plain;f=templates/GRML/grml-cheatcodes.txt;hb=HEAD">Boot option guide</a>
-    <br /><br />
-
-    </div></div>
+        </div>
+      </div>
 
     </div>
 
-    <h2>Git repositories</h2>
+    <h2>Verify your download</h2>
 
-    <p>The Grml team uses <a href="https://git-scm.com/">git</a> for
-    managing software and packages. The repositories are available
-    online at <a href="https://github.com/grml/">GitHub</a>.</p>
+    <p>Please verify all downloads!</p>
+
+    <p>Alongside the actual download files (ISO, netboot, sources), the Grml mirrors publish the extra files <em>SHA256SUMS</em> and <em>SHA256SUMS.gpg</em>.<br />
+    The <em><a href="https://download.grml.org/SHA256SUMS">SHA256SUMS</a></em> file contains checksums for all available release files.<br />
+    The <em><a href="https://download.grml.org/SHA256SUMS.gpg">SHA256SUMS.gpg</a></em> file provides the GnuPG signature for that file.<br />
+    Once you have <em>SHA256SUMS</em> and <em>SHA256SUMS.gpg</em> in the same directory as your Grml downloads, verify the checksum file via:</p>
+
+<code class="keyboard">
+gpg --keyid-format long --verify SHA256SUMS.gpg SHA256SUMS
+</code>
+
+    <p>If you don't have <a href="https://grml.org/download/gnupg-michael-prokop.txt">our GnuPG signing key</a>
+    (key ID <em>0x96A87872B7EA3737</em>, fingerprint <em>33CC B136 401A FEC8 43A3  8763 96A8 7872 B7EA 3737</em>), run:</p>
+
+<code class="keyboard">
+gpg --keyid-format long --keyserver hkps://keys.openpgp.org --recv-keys 0x96A87872B7EA3737
+</code>
+
+    <p>Finally verify the checksum of your Grml downloads, via:</p>
+
+<code class="keyboard">
+sha256sum --ignore-missing -c SHA256SUMS
+</code>
+
+    <h2>Source code</h2>
+
+    <p>The Grml team uses <a href="https://git-scm.com/">Git</a> for managing software and packages.
+    The repositories are available online at <a href="https://github.com/grml/">GitHub</a>.</p>
 
     <div style="clear: both;"></div>
 

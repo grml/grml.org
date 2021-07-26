@@ -882,7 +882,7 @@ libzstd1:amd64					install
 links2						install
 linux-base					install
 linux-cpupower					install
-linux-image-5.10.0-7-amd64			install
+linux-image-5.10.0-8-amd64			install
 linux-image-amd64				install
 live-boot-grml					install
 live-boot-grml-doc				install

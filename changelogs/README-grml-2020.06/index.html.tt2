@@ -98,7 +98,7 @@
           <li>Add smoke autopkgtests to Debian packaging
           <li>Abort if required logo.16 file is missing
           <li>Avoid custom boot options getting duplicated when used with multiple ISOs
-          <li>grml2iso supports TODO
+          <li>grml2iso supports EFI boot
         </ul>
 
         <h4>grml-hwinfo (tool to collect hardware information):</h4>
