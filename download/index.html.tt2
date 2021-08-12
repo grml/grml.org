@@ -165,9 +165,7 @@
           <!-- JS links -->
           <div id="linkbuttons" style="display:none;">
             <a id="download_link_mirror" class="largebutton">Download Now</a><br />
-            <!--
             <a id="download_link_bt">BitTorrent Download</a><br />
-            -->
             <a id="download_link_signature">Get GPG Signature</a><br />
             <a href="https://grml.org/download/mirrors/">Download from a specific mirror</a><br/>
           </div>
