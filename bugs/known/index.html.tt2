@@ -37,7 +37,7 @@
         <h2>Known Bugs in Grml 2021.07</h2>
 
         <ul>
-          <li>None yet.</li>
+          <li><a href="https://github.com/grml/grml/issues/179">#179: 'Load to RAM boot option broken in BIOS mode (when booted with isolinux/syslinux) due to toram=%SQUASHFS_NAME% usage</a> (workaround: either use only `<em>toram</em>` to load the whole ISO/medium, or specify appropriate flavour name, like e.g. `<em>toram=grml64-full.squashfs</em>` for grml64-full)</li>
         </ul>
 
 </div>
