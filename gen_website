@@ -52,7 +52,7 @@ while (($have_mirmon) && (my $line = <$fh>)) {
         my $value = $2;
         $data->{$key} = $value;
     } elsif ($line eq '') {
-	my $url = sprintf ("http://%s%s", $data->{'site'}, $data->{'grml-http'});
+	my $url = sprintf ("https://%s%s", $data->{'site'}, $data->{'grml-http'});
        	next if get_last_state($url) eq 'f';
 	$mirrors->{ $data->{'country'} }->{ $data->{'site'} } = $data;
         $data = undef;
@@ -62,7 +62,7 @@ while (($have_mirmon) && (my $line = <$fh>)) {
 }
 
 if ($data) {
-	my $url = sprintf ("http://%s%s", $data->{'site'}, $data->{'grml-http'});
+	my $url = sprintf ("https://%s%s", $data->{'site'}, $data->{'grml-http'});
 	$mirrors->{ $data->{'country'} }->{ $data->{'site'} } = $data if get_last_state($url) eq 'f';
 }
 
