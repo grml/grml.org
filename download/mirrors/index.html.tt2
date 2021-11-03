@@ -37,19 +37,24 @@
             <ul>
               <li><a href="https://download.grml.org/">https://download.grml.org/</a></li>
             </ul>
-            [% FOREACH region IN mirrors.keys.sort %]
-                <h3>Mirrors in [% region.substr(3) %] </h3>
 
-                [% FOREACH mirror IN mirrors.$region.keys.sort %]
-                <p>[% mirror %] ([% mirrors.$region.$mirror.location %])</p>
+            [% FOREACH region IN mirrors.keys.sort %]
+              <h3>Mirrors in [% region.substr(3) %] </h3>
+
+              [% FOREACH mirror IN mirrors.$region.keys.sort %]
+              <p>[% mirror %] ([% mirrors.$region.$mirror.location %])</p>
                 [% FOREACH type IN [ 'grml-http' 'grml-rsync' 'grml-ftp' ] %]
                 [% NEXT UNLESS mirrors.$region.$mirror.$type %]
-                <ul>
-                  <li><a href="[% type.substr(5) %]://[% mirror %]/[% mirrors.$region.$mirror.$type %]">
-                  [% type.substr(5) %]://[% mirror %]/[% mirrors.$region.$mirror.$type %]</a></li>
-                </ul>
+              <ul>
+                  [% IF type.substr(5) == 'http' %]
+                <li><a href="https://[% mirror %]/[% mirrors.$region.$mirror.$type %]">https://[% mirror %]/[% mirrors.$region.$mirror.$type %]</a></li>
+                  [% ELSE %]
+                <li><a href="[% type.substr(5) %]://[% mirror %]/[% mirrors.$region.$mirror.$type %]">[% type.substr(5) %]://[% mirror %]/[% mirrors.$region.$mirror.$type %]</a></li>
+                  [% END %]
+              </ul>
+
                 [% END %]
-                [% END %]
+              [% END %]
             [% END %]
 
             <hr />
