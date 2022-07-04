@@ -15,8 +15,8 @@
         </a>
       </div>
       <div>
-        <a href="https://www.snelserver.com/" target="_blank">
-        <img src="/sponsors/snel.png" width="300" height="70" alt="snel logo"/>
+        <a href="https://www.snel.com/?utm_source=website&utm_medium=banner&utm_campaign=sponsored_banner&utm_id=grml-sponsored">
+        <img src="/sponsors/Logo-Snel.com.png" width="300" height="70" alt="snel logo"/>
         </a>
       </div>
       <div style="margin-top: 30px;">
