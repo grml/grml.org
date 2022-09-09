@@ -230,7 +230,7 @@
           <b>Boot from USB key</b><br />
           <br />
           Just <kbd>dd(1)</kbd> the downloaded ISO to an <abbr title="Any existing data will be overwritten by the dd command!">empty</abbr> USB key!<br /><br />
-          <code class="keyboard">dd bs=4M status=progress conv=fdatasync if=grml_2021.07.iso of=/dev/USB_KEY</code>
+          <code class="keyboard">dd bs=4M status=progress conv=fdatasync if=grml64-full_2021.07.iso of=/dev/USB_KEY</code>
           <br /><br />
 
           <b>Troubleshooting</b><br /><br />
