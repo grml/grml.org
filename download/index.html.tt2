@@ -89,9 +89,7 @@
 
     <p>Get the current stable release here.<br />
 
-<!--
     <a href="prerelease/">Looking for the current pre-release version instead?</a></p>
--->
 
     <p>Download the Grml flavour you need, then write it to a CD-ROM/DVD or an empty USB stick.</p>
 
@@ -144,12 +142,10 @@
       </div>
 
 
-      <!--
       <a href="/download/prerelease/" class="button" style="padding: 12px; font-weight: bold;"><span>Get 2021.07-rc1 instead!</span></a>
       <br />
       <br />
       <br />
-      -->
 
       <div class="download_panel" id="download_panel2">
         <div>

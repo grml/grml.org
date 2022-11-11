@@ -120,6 +120,10 @@
         <em>Jau</em> is german colloquial for <em>yes</em>, and <em>kerl</em> is german for <em>guy</em>,
         while just <em>Jaukerl</em> is an austrian word for an injection.</p>
 
+        <p>Codename of Grml 2022.11 is &quot;MalGuckes&quot;.
+        This is a wordplay on 'mal gucken' (german for 'we'll wait and see what happens), which we used to have with Sven Guckes, a friend of many of us and a long time contributor to Grml,
+        who sadly passed away way too early. The Grml team dedicates this release to Sven, RIP.</p>
+
         <h3><a name="requirements"></a><a href="#toc">Requirements for running Grml</a></h3>
 
         <ul>
