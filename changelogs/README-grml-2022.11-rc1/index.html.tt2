@@ -59,6 +59,7 @@
           <li><strong>grml-hwinfo</strong>: iterate over present disks to collect <em>sfdisk -d</em> information
           <li><strong>grml-terminalserver</strong>: suggest a proper IP range usage when configuring DHCP clients
           <li><strong>netcardconfig</strong>: netcardconfig: avoid suggesting default gateway if a default route exists already
+          <li>Integration of Memtest86+ v6, providing UEFI support
         </ul>
 
         <h4><a href="/grml-live/">grml-live</a> (build system for creating Grml (based) Linux live systems):</h4>
