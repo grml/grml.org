@@ -56,6 +56,7 @@
         <h4>Misc:</h4>
 
         <ul>
+          <li><strong>grml-hwinfo</strong>: iterate over present disks to collect <em>sfdisk -d</em> information
           <li><strong>grml-terminalserver</strong>: suggest a proper IP range usage when configuring DHCP clients
           <li><strong>netcardconfig</strong>: netcardconfig: avoid suggesting default gateway if a default route exists already
         </ul>
@@ -80,12 +81,6 @@
 
         <ul>
           <li>grml2iso: support parallel execution
-        </ul>
-
-        <h4>grml-hwinfo (tool to collect hardware information):</h4>
-
-        <ul>
-          <li>Iterate over present disks to collect <em>sfdisk -d</em> information
         </ul>
 
         <h4><a href="/zsh/">grml-zshrc</a> (Zsh configuration):</h4>
