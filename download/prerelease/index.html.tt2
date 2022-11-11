@@ -85,7 +85,7 @@
 
 <div class="content">
 
-    <h1>Download Grml 2021.07-rc1</h1>
+    <h1>Download Grml 2022.11-rc1</h1>
 
     <p><strong>NOTE: This is a PRE-RELEASE, not a stable release yet.<br />
     You have been warned.</strong><br />
@@ -100,12 +100,12 @@
           <a href="https://grml.org/download/mirrors/">Download from a specific mirror</a><br/>
           <br/>
           Direct download links:<br/>
-          <a href="https://download.grml.org/devel/grml96-full_2021.07-rc1.iso">Grml96 full ISO</a> [<a href="https://download.grml.org/devel/grml96-full_2021.07-rc1.iso.asc">GPG Signature</a>]<br/>
-          <a href="https://download.grml.org/devel/grml64-full_2021.07-rc1.iso">Grml64 full ISO</a> [<a href="https://download.grml.org/devel/grml64-full_2021.07-rc1.iso.asc">GPG Signature</a>]<br/>
-          <a href="https://download.grml.org/devel/grml32-full_2021.07-rc1.iso">Grml32 full ISO</a> [<a href="https://download.grml.org/devel/grml32-full_2021.07-rc1.iso.asc">GPG Signature</a>]<br/>
-          <a href="https://download.grml.org/devel/grml96-small_2021.07-rc1.iso">Grml96 small ISO</a> [<a href="https://download.grml.org/devel/grml96-small_2021.07-rc1.iso.asc">GPG Signature</a>]<br/>
-          <a href="https://download.grml.org/devel/grml64-small_2021.07-rc1.iso">Grml64 small ISO</a> [<a href="https://download.grml.org/devel/grml64-small_2021.07-rc1.iso.asc">GPGP Signature</a>]<br/>
-          <a href="https://download.grml.org/devel/grml32-small_2021.07-rc1.iso">Grml32 small ISO</a> [<a href="https://download.grml.org/devel/grml32-small_2021.07-rc1.iso.asc">GPG Signature</a>]<br/>
+          <a href="https://download.grml.org/devel/grml96-full_2022.11-rc1.iso">Grml96 full ISO</a> [<a href="https://download.grml.org/devel/grml96-full_2022.11-rc1.iso.asc">GPG Signature</a>]<br/>
+          <a href="https://download.grml.org/devel/grml64-full_2022.11-rc1.iso">Grml64 full ISO</a> [<a href="https://download.grml.org/devel/grml64-full_2022.11-rc1.iso.asc">GPG Signature</a>]<br/>
+          <a href="https://download.grml.org/devel/grml32-full_2022.11-rc1.iso">Grml32 full ISO</a> [<a href="https://download.grml.org/devel/grml32-full_2022.11-rc1.iso.asc">GPG Signature</a>]<br/>
+          <a href="https://download.grml.org/devel/grml96-small_2022.11-rc1.iso">Grml96 small ISO</a> [<a href="https://download.grml.org/devel/grml96-small_2022.11-rc1.iso.asc">GPG Signature</a>]<br/>
+          <a href="https://download.grml.org/devel/grml64-small_2022.11-rc1.iso">Grml64 small ISO</a> [<a href="https://download.grml.org/devel/grml64-small_2022.11-rc1.iso.asc">GPGP Signature</a>]<br/>
+          <a href="https://download.grml.org/devel/grml32-small_2022.11-rc1.iso">Grml32 small ISO</a> [<a href="https://download.grml.org/devel/grml32-small_2022.11-rc1.iso.asc">GPG Signature</a>]<br/>
           <br/>
         </div>
       </div>
@@ -113,21 +113,21 @@
 
     <div class="download_group" id="download_group1" style="display:none;">
       <form method="get" action="/download/bounce/">
-      <input type="hidden" name="version" value="2021.07-rc1"/>
+      <input type="hidden" name="version" value="2022.11-rc1"/>
       <div class="download_panel" id="download_panel1">
         <div>
 
           <h2>Options</h2>
 
           <select name="flavour" id="download_flavour" style="width:100%;">
-          <option value="full" selected="selected">grml-full (~786MB)</option>
-          <option value="small">grml-small (~400MB)</option>
+          <option value="full" selected="selected">grml-full (~860MB)</option>
+          <option value="small">grml-small (~485MB)</option>
           </select>
           <br /><br />
           <select name="arch" id="download_arch" style="width:100%;">
           <option value="amd64" selected="selected">64-bit PC (amd64)</option>
           <option value="i386">32-bit PC (i686+)</option>
-          <option value="96">One for both (~1.5GB)</option>
+          <option value="96">One for both (~1.7GB)</option>
           </select>
           <br />
           <br />
@@ -136,7 +136,7 @@
           <br />
 
           <div style="font-size: 14pt;">
-            <p><a href="/changelogs/README-grml-2021.07-rc1/">Release Notes</a></p>
+            <p><a href="/changelogs/README-grml-2022.11-rc1/">Release Notes</a></p>
           </div>
 
         </div>
@@ -169,13 +169,13 @@
       <script>
       function update_arch() {
           var flavour = document.getElementById('download_flavour').value;
-          if (flavour == 'small') document.getElementById('download_arch').innerHTML = '<option value="amd64">64-bit PC (amd64)</option><option value="i386">32-bit PC (i686+)</option><option value="96">One for both (~685MB)</option>';
-          if (flavour == 'full') document.getElementById('download_arch').innerHTML = '<option value="amd64">64-bit PC (amd64)</option><option value="i386">32-bit PC (i686+)</option><option value="96">One for both (~1.45GB)</option>';
+          if (flavour == 'small') document.getElementById('download_arch').innerHTML = '<option value="amd64">64-bit PC (amd64)</option><option value="i386">32-bit PC (i686+)</option><option value="96">One for both (~900MB)</option>';
+          if (flavour == 'full') document.getElementById('download_arch').innerHTML = '<option value="amd64">64-bit PC (amd64)</option><option value="i386">32-bit PC (i686+)</option><option value="96">One for both (~1.7GB)</option>';
           update_links();
       }
 
       function update_links() {
-          var current_version = "2021.07-rc1";
+          var current_version = "2022.11-rc1";
           var product = 'grml';
           var arch = document.getElementById('download_arch').value;
           var flavour = document.getElementById('download_flavour').value;
@@ -210,11 +210,11 @@
           <b>Alternate downloads</b><br /><br />
           <a href="https://daily.grml.org/">Daily images</a><br />
           <a href="https://download.grml.org/">Older releases</a><br />
-          <a href="https://download.grml.org/devel/grml_sources-2021.07-rc1.tar.gz">Source code</a> (one tgz for both architectures)<br />
+          <a href="https://download.grml.org/devel/grml_sources-2022.11-rc1.tar.gz">Source code</a> (one tgz for both architectures)<br />
           <br/>
           Netboot packages:<br/>
-          <a href="https://download.grml.org/devel/grml_netboot_package_grml64-full_2021.07-rc1.tar">64-bit</a>
-          <a href="https://download.grml.org/devel/grml_netboot_package_grml32-full_2021.07-rc1.tar">32-bit</a>
+          <a href="https://download.grml.org/devel/grml_netboot_package_grml64-full_2022.11-rc1.tar">64-bit</a>
+          <a href="https://download.grml.org/devel/grml_netboot_package_grml32-full_2022.11-rc1.tar">32-bit</a>
         </div>
       </div>
 
@@ -223,7 +223,7 @@
           <b>Boot from USB key</b><br />
           <br />
           Just <kbd>dd(1)</kbd> the downloaded ISO to an <abbr title="Any existing data will be overwritten by the dd command!">empty</abbr> USB key!<br /><br />
-          <code class="keyboard">dd if=grml_2021.07-rc1.iso of=/dev/USB_KEY bs=4M status=progress conv=fdatasync</code>
+          <code class="keyboard">dd if=grml_2022.11-rc1.iso of=/dev/USB_KEY bs=4M status=progress conv=fdatasync</code>
           <br /><br />
 
           <b>Troubleshooting</b><br /><br />
