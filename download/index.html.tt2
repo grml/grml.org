@@ -141,12 +141,6 @@
         </div>
       </div>
 
-
-      <a href="/download/prerelease/" class="button" style="padding: 12px; font-weight: bold;"><span>Get 2021.07-rc1 instead!</span></a>
-      <br />
-      <br />
-      <br />
-
       <div class="download_panel" id="download_panel2">
         <div>
           <!-- fallback cgi buttons -->
