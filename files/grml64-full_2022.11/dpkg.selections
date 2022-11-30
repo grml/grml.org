@@ -321,7 +321,7 @@ libblkid1:amd64					install
 libbluetooth3:amd64				install
 libboost-iostreams1.74.0:amd64			install
 libboost-thread1.74.0:amd64			install
-libbpf0:amd64					install
+libbpf1:amd64					install
 libbrlapi0.8:amd64				install
 libbrotli1:amd64				install
 libbsd0:amd64					install
@@ -344,6 +344,7 @@ libclamav9:amd64				install
 libclass-method-modifiers-perl			install
 libclass-xsaccessor-perl			install
 libcli1.10:amd64				install
+libclone-perl:amd64				install
 libcolord2:amd64				install
 libcom-err2:amd64				install
 libconfig-general-perl				install
@@ -489,7 +490,6 @@ libhttp-message-perl				install
 libhttp-negotiate-perl				install
 libibverbs1:amd64				install
 libice6:amd64					install
-libicu71:amd64					install
 libicu72:amd64					install
 libid3tag0:amd64				install
 libidn2-0:amd64					install
@@ -535,7 +535,7 @@ libldb2:amd64					install
 liblerc4:amd64					install
 liblinear4:amd64				install
 liblinux-lvm-perl				install
-libllvm14:amd64					install
+libllvm15:amd64					install
 liblmdb0:amd64					install
 liblocale-gettext-perl				install
 liblockfile-bin					install
@@ -646,7 +646,7 @@ libpoppler123:amd64				install
 libpopt0:amd64					install
 libprocps8:amd64				install
 libprotobuf-c1:amd64				install
-libprotobuf23:amd64				install
+libprotobuf32:amd64				install
 libpsl5:amd64					install
 libpulse0:amd64					install
 libpython3-stdlib:amd64				install
@@ -714,9 +714,9 @@ libteamdctl0:amd64				install
 libterm-readkey-perl				install
 libterm-size-perl				install
 libtevent0:amd64				install
-libtext-charwidth-perl				install
+libtext-charwidth-perl:amd64			install
 libtext-glob-perl				install
-libtext-iconv-perl				install
+libtext-iconv-perl:amd64			install
 libtext-wrapi18n-perl				install
 libtfm1:amd64					install
 libthai-data					install
@@ -826,7 +826,7 @@ libzstd1:amd64					install
 links2						install
 linux-base					install
 linux-cpupower					install
-linux-image-6.0.0-3-amd64			install
+linux-image-6.0.0-4-amd64			install
 linux-image-amd64				install
 live-boot-grml					install
 live-boot-grml-doc				install

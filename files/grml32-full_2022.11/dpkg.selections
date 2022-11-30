@@ -321,7 +321,7 @@ libblkid1:i386					install
 libbluetooth3:i386				install
 libboost-iostreams1.74.0:i386			install
 libboost-thread1.74.0:i386			install
-libbpf0:i386					install
+libbpf1:i386					install
 libbrlapi0.8:i386				install
 libbrotli1:i386					install
 libbsd0:i386					install
@@ -344,6 +344,7 @@ libclamav9:i386					install
 libclass-method-modifiers-perl			install
 libclass-xsaccessor-perl			install
 libcli1.10:i386					install
+libclone-perl:i386				install
 libcolord2:i386					install
 libcom-err2:i386				install
 libconfig-general-perl				install
@@ -488,7 +489,6 @@ libhttp-message-perl				install
 libhttp-negotiate-perl				install
 libibverbs1:i386				install
 libice6:i386					install
-libicu71:i386					install
 libicu72:i386					install
 libid3tag0:i386					install
 libidn2-0:i386					install
@@ -534,7 +534,7 @@ libldb2:i386					install
 liblerc4:i386					install
 liblinear4:i386					install
 liblinux-lvm-perl				install
-libllvm14:i386					install
+libllvm15:i386					install
 liblmdb0:i386					install
 liblocale-gettext-perl				install
 liblockfile-bin					install
@@ -642,7 +642,7 @@ libpoppler123:i386				install
 libpopt0:i386					install
 libprocps8:i386					install
 libprotobuf-c1:i386				install
-libprotobuf23:i386				install
+libprotobuf32:i386				install
 libpsl5:i386					install
 libpulse0:i386					install
 libpython3-stdlib:i386				install
@@ -710,9 +710,9 @@ libteamdctl0:i386				install
 libterm-readkey-perl				install
 libterm-size-perl				install
 libtevent0:i386					install
-libtext-charwidth-perl				install
+libtext-charwidth-perl:i386			install
 libtext-glob-perl				install
-libtext-iconv-perl				install
+libtext-iconv-perl:i386				install
 libtext-wrapi18n-perl				install
 libtfm1:i386					install
 libthai-data					install
@@ -822,7 +822,7 @@ libzstd1:i386					install
 links2						install
 linux-base					install
 linux-cpupower					install
-linux-image-6.0.0-3-686				install
+linux-image-6.0.0-4-686				install
 linux-image-686					install
 live-boot-grml					install
 live-boot-grml-doc				install

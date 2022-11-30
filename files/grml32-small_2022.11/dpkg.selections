@@ -145,6 +145,7 @@ initramfs-tools					install
 initramfs-tools-core				install
 iperf3						install
 iproute2					install
+iptables					install
 iptstate					install
 iputils-ping					install
 isc-dhcp-client					install
@@ -176,7 +177,7 @@ libavahi-common-data:i386			install
 libavahi-common3:i386				install
 libbinutils:i386				install
 libblkid1:i386					install
-libbpf0:i386					install
+libbpf1:i386					install
 libbrotli1:i386					install
 libbsd0:i386					install
 libbz2-1.0:i386					install
@@ -187,6 +188,7 @@ libcap-ng0:i386					install
 libcap2:i386					install
 libcap2-bin					install
 libcbor0.8:i386					install
+libclone-perl:i386				install
 libcom-err2:i386				install
 libcrypt1:i386					install
 libcryptsetup12:i386				install
@@ -250,6 +252,7 @@ libinih1:i386					install
 libio-html-perl					install
 libio-socket-ssl-perl				install
 libip4tc2:i386					install
+libip6tc2:i386					install
 libiperf0:i386					install
 libiw30:i386					install
 libjansson4:i386				install
@@ -354,9 +357,9 @@ libsystemd-shared:i386				install
 libsystemd0:i386				install
 libtasn1-6:i386					install
 libterm-readkey-perl				install
-libtext-charwidth-perl				install
+libtext-charwidth-perl:i386			install
 libtext-glob-perl				install
-libtext-iconv-perl				install
+libtext-iconv-perl:i386				install
 libtext-wrapi18n-perl				install
 libtimedate-perl				install
 libtinfo6:i386					install
@@ -381,7 +384,7 @@ libyaml-0-2:i386				install
 libzstd1:i386					install
 links						install
 linux-base					install
-linux-image-6.0.0-3-686				install
+linux-image-6.0.0-4-686				install
 linux-image-686					install
 live-boot-grml					install
 live-boot-grml-doc				install

@@ -27,7 +27,7 @@
 
         <h1 align="center">FAQ for grml</h1>
 
-        <p><strong>Up2date:</strong> applies to Grml version 2021.07</p>
+        <p><strong>Up2date:</strong> applies to Grml version 2022.11</p>
 
         <p><a name="toc"></a><strong>Index:</strong></p>
 
@@ -115,10 +115,6 @@
         software (amongst other things).</p>
 
         <h3><a name="releasename"></a><a href="#toc">What about the release name?</a></h3>
-
-        <p>Codename of Grml 2021.07 is &quot;JauKerl&quot;.
-        <em>Jau</em> is german colloquial for <em>yes</em>, and <em>kerl</em> is german for <em>guy</em>,
-        while just <em>Jaukerl</em> is an austrian word for an injection.</p>
 
         <p>Codename of Grml 2022.11 is &quot;MalGuckes&quot;.
         This is a wordplay on 'mal gucken' (german for 'we'll wait and see what happens), which we used to have with Sven Guckes, a friend of many of us and a long time contributor to Grml,

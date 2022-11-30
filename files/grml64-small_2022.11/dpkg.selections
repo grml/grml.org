@@ -145,6 +145,7 @@ initramfs-tools					install
 initramfs-tools-core				install
 iperf3						install
 iproute2					install
+iptables					install
 iptstate					install
 iputils-ping					install
 isc-dhcp-client					install
@@ -176,7 +177,7 @@ libavahi-common-data:amd64			install
 libavahi-common3:amd64				install
 libbinutils:amd64				install
 libblkid1:amd64					install
-libbpf0:amd64					install
+libbpf1:amd64					install
 libbrotli1:amd64				install
 libbsd0:amd64					install
 libbz2-1.0:amd64				install
@@ -187,6 +188,7 @@ libcap-ng0:amd64				install
 libcap2:amd64					install
 libcap2-bin					install
 libcbor0.8:amd64				install
+libclone-perl:amd64				install
 libcom-err2:amd64				install
 libcrypt1:amd64					install
 libcryptsetup12:amd64				install
@@ -250,6 +252,7 @@ libinih1:amd64					install
 libio-html-perl					install
 libio-socket-ssl-perl				install
 libip4tc2:amd64					install
+libip6tc2:amd64					install
 libiperf0:amd64					install
 libiw30:amd64					install
 libjansson4:amd64				install
@@ -354,9 +357,9 @@ libsystemd-shared:amd64				install
 libsystemd0:amd64				install
 libtasn1-6:amd64				install
 libterm-readkey-perl				install
-libtext-charwidth-perl				install
+libtext-charwidth-perl:amd64			install
 libtext-glob-perl				install
-libtext-iconv-perl				install
+libtext-iconv-perl:amd64			install
 libtext-wrapi18n-perl				install
 libtimedate-perl				install
 libtinfo6:amd64					install
@@ -382,7 +385,7 @@ libyaml-0-2:amd64				install
 libzstd1:amd64					install
 links						install
 linux-base					install
-linux-image-6.0.0-3-amd64			install
+linux-image-6.0.0-4-amd64			install
 linux-image-amd64				install
 live-boot-grml					install
 live-boot-grml-doc				install

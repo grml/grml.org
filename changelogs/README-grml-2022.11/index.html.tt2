@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>grml.org - Release Notes: Grml 2022.11-rc1 - Codename MalGuckes</title>
-<meta name="Title" content="grml.org - Release Notes: Grml 2022.11-rc1 MalGuckes" />
+<title>grml.org - Release Notes: Grml 2022.11 - Codename MalGuckes</title>
+<meta name="Title" content="grml.org - Release Notes: Grml 2022.11 MalGuckes" />
 <meta name="Author" content="the Grml team [grml.org/team/]" />
 <meta name="Keywords" content="grml.org, Grml" />
-<meta name="Description" content="Release Notes of Grml 2022.11-rc1" />
+<meta name="Description" content="Release Notes of Grml 2022.11" />
 <meta name="Abstract" content="Grml, the linux live-cd for sysadmins and texttool users" />
 <meta name="Robots" content="index,follow" />
 <meta name="Language" content="english" />
@@ -24,11 +24,9 @@
 
       <div class="content">
 
-        <h1>Release Notes for Grml 2022.11-rc1 - codename <a href="/faq/#releasename">MalGuckes</a></h1>
+        <h1>Release Notes for Grml 2022.11 - codename <a href="/faq/#releasename">MalGuckes</a></h1>
 
-        <p><strong>NOTE: the <a href="/changelogs/README-grml-2022.11/">stable release 2022.11</a> is already available!</strong></p>
-
-        <p><a href="/download/prerelease/">Download Now</a></p>
+        <p><a href="/download/">Download Now</a></p>
 
         <h3>About</h3>
 
@@ -97,8 +95,8 @@
         <h4><a href="/grml-debootstrap/">grml-debootstrap</a> (wrapper around debootstrap for installing pure Debian):</h4>
 
         <ul>
-	  <li>EFI support: fix for grub-install usage with efivarfs
-	  <li>Install dbus by default
+          <li>EFI support: fix for grub-install usage with efivarfs
+          <li>Install dbus by default
           <li>VMs: create partition with alignment starting at 4MiB + ending at 100%
         </ul>
 
@@ -169,10 +167,10 @@
 
         <p>Please visit the <a href="/bugs/known/">known bugs</a> web page.</p>
 
-        <h3>Download Grml 2022.11-rc1</h3>
+        <h3>Download Grml 2022.11</h3>
 
-        <p>Grml 2022.11-rc1 can be downloaded from
-        <a href="/download/prerelease/">grml.org/download/prerelease/</a>.</p>
+        <p>Grml 2022.11 can be downloaded from
+        <a href="/download/">grml.org/download/</a>.</p>
 
         <h3>Feedback</h3>
 
@@ -197,6 +195,7 @@
         d630,
         Evgeni Golov,
         Frank Terbeck,
+        haidinger,
         Hanabishi,
         Karl Voit,
         Manuel Rom,

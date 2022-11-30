@@ -34,17 +34,10 @@
 
         <p>If you find additional bugs, please <a href="/bugs/">report them</a>.</p>
 
-        <h2>Known Bugs in Grml 2022.11-rc1</h2>
+        <h2>Known Bugs in Grml 2022.11</h2>
 
         <ul>
-          <li><a href="https://github.com/grml/grml-terminalserver/issues/8">#8: grml-terminalserver fails to export NFS v3 share</a> (workaround: manually invoke `<em?>rpc.mountd with -d all</em>` on the system where you invoked grml-terminalserver)</li>
-          <li><a href="https://github.com/grml/grml/issues/193">#193: sysctl errors during boot: unrecognized option '--pattern'</a></li>
-        </ul>
-
-        <h2>Known Bugs in Grml 2021.07</h2>
-
-        <ul>
-          <li><a href="https://github.com/grml/grml/issues/179">#179: 'Load to RAM boot option broken in BIOS mode (when booted with isolinux/syslinux) due to toram=%SQUASHFS_NAME% usage</a> (workaround: either use only `<em>toram</em>` to load the whole ISO/medium, or specify appropriate flavour name, like e.g. `<em>toram=grml64-full.squashfs</em>` for grml64-full)</li>
+          <li>No known bugs, yet.</li>
         </ul>
 
 </div>
