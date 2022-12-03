@@ -126,7 +126,7 @@
 
           <li>Intel-compatible CPU (i686 or later, preferably Pentium class or higher; although some i586 processors e.g. the 'AMD Geode' are still supported)</li>
 
-          <li>&gt;=384MB of RAM (&gt;=512MB recommended)</p>
+          <li>&gt;=576MB of RAM (&gt;=1GB recommended)</p>
 
           <li>either a bootable CD-/DVD-ROM drive,
           a <a href="#usbboot">USB-boot capable system</a> or a
