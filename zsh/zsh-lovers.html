@@ -1,9 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
     "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
 <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
-<meta name="generator" content="AsciiDoc 8.6.9" />
+<meta name="generator" content="AsciiDoc 10.2.0" />
 <title>ZSH-LOVERS(1)</title>
 <style type="text/css">
 /* Shared CSS for AsciiDoc xhtml11 and html5 backends */
@@ -435,7 +436,7 @@ thead, p.table.header {
 p.table {
   margin-top: 0;
 }
-/* Because the table frame attribute is overriden by CSS in most browsers. */
+/* Because the table frame attribute is overridden by CSS in most browsers. */
 div.tableblock > table[frame="void"] {
   border-style: none;
 }
@@ -758,7 +759,7 @@ manpage.</p></div>
 <div class="paragraph"><p>Most of the tricks and oneliner come from the mailinglists zsh-users,
 zsh-workers, google, newsgroups and from ourself.  See section <strong>LINKS</strong> for
 details.</p></div>
-<div class="paragraph"><p>Note: This manpage (zsh-lovers(1)) is <strong>not</strong> an offical part of the Z shell! It&#8217;s
+<div class="paragraph"><p>Note: This manpage (zsh-lovers(1)) is <strong>not</strong> an official part of the Z shell! It&#8217;s
 just a just for fun - manpage ;)<br />
 For comments, bugreports and feedback take a quick look at the section <strong>BUGS</strong>.</p></div>
 </div>
@@ -820,7 +821,7 @@ Global aliases can be used anywhere in the command line. Example:</p></div>
 $ grep alias ~/.zsh/* C
 443</code></pre>
 </div></div>
-<div class="paragraph"><p>Some more or less useful global aliases (choose whether they are useful  or not
+<div class="paragraph"><p>Some more or less useful global aliases (choose whether they are useful or not
 for you on your own):</p></div>
 <div class="listingblock">
 <div class="content">
@@ -923,7 +924,7 @@ zstyle ':completion:*:*:xdvi:*' file-sort time</code></pre>
 zstyle ':completion:*:kill:*'   force-list always</code></pre>
 </div></div>
 <div class="paragraph"><p>If you end up using a directory  as  argument,  this  will  remove  the
-trailing slash (usefull in ln)</p></div>
+trailing slash (useful in ln)</p></div>
 <div class="listingblock">
 <div class="content">
 <pre><code>zstyle ':completion:*' squeeze-slashes true</code></pre>
@@ -994,7 +995,7 @@ See &#8220;man 1 zshexpn | less -p&#8221; Qualifiers for details.</p></div>
 # All files for which the owner hat read and execute permissions
   $ echo *(f:u+rx:)
 
-# The same, but also others dont have execute permissions
+# The same, but also others don't have execute permissions
   $ echo *(f:u+rx,o-x:)
 
 # brace expansion - example
@@ -1023,7 +1024,7 @@ See &#8220;man 1 zshexpn | less -p&#8221; Qualifiers for details.</p></div>
 # Remove zero length and .bak files in a directory
   $ rm -i *(.L0) *.bak(.)
 
-# print out files that dont have extensions
+# print out files that don't have extensions
   $ printf '%s\n' ^?*.*
   $ printf '%s\n' ^?*.[^.]*(D)
   $ ls -d -- ^?*.*(D)
@@ -1091,7 +1092,7 @@ See &#8220;man 1 zshexpn | less -p&#8221; Qualifiers for details.</p></div>
   # see above, but now omit executables
   $ ls **/*~*(${~${(j/|/)fignore}})(.^*)
 
-# Print out files that dont have extensions (require *setopt extendedglob*
+# Print out files that don't have extensions (require *setopt extendedglob*
 # and *setopt dotglob*)
   $ printf '%s\n' ^?*.*
 
@@ -1138,7 +1139,7 @@ See &#8220;man 1 zshexpn | less -p&#8221; Qualifiers for details.</p></div>
   $ print ${(r:10::0:)foo}
 
 # find the name of all the files in their home directory that have
-# more than 20 characters in their file names
+# 20 or more characters in their file names
   print -rl $HOME/${(l:20::?:)~:-}*
 
 # Save arrays
@@ -1217,7 +1218,7 @@ See &#8220;man 1 zshexpn | less -p&#8221; Qualifiers for details.</p></div>
   $ for i (./*.mp3){mpg321 --w - $i &gt; ${i:r}.wav}
 
 # Download with LaTeX2HTML  created Files (for example the ZSH-Guide):
-  $ for f in http://zsh.sunsite.dk/Guide/zshguide{,{01..08}}.html; do
+  $ for f in https://zsh.sourceforge.io/Guide/zshguide{,{01..08}}.html; do
   &gt;     lynx -source $f &gt;${f:t}
   &gt; done
 
@@ -1533,7 +1534,7 @@ for details.</p></div>
 </div>
 <div class="sect2">
 <h3 id="_redirection_examples">Redirection-Examples</h3>
-<div class="paragraph"><p>See zshmisc(1) for more informations (or less ${^fpath}/zmv(N))</p></div>
+<div class="paragraph"><p>See zshmisc(1) for more information (or less ${^fpath}/zmv(N))</p></div>
 <div class="listingblock">
 <div class="content">
 <pre><code># Append `exit 1' at the end of all *.sh - files
@@ -1613,7 +1614,7 @@ for details.</p></div>
   $ ls *
   1.c  1.foo  2.foo  3.foo  4.foo  foo.fnord
 
-# Rename "file.with.many.dots.txt" by substituting dots (exept for the last
+# Rename "file.with.many.dots.txt" by substituting dots (except for the last
 # one!) with a space
   $ touch {1..20}-file.with.many.dots.txt
   $ zmv '(*.*)(.*)' '${1//./ }$2'
@@ -1922,7 +1923,7 @@ for details.</p></div>
 
 # If a XML-file contains stuff like ``&lt;TAGA/&gt;'' and ``&lt;TAGB/&gt;'', number
 # this empty tags (ones ending in '/&gt;') so if encountered in the same
-# order, the preceeding tags would become ``&lt;TAGA/&gt;1&lt;/TAGA&gt;'' and
+# order, the preceding tags would become ``&lt;TAGA/&gt;1&lt;/TAGA&gt;'' and
 # ``&lt;TAGB/&gt;2&lt;/TAGB&gt;''
   $ zmodload zsh/mapfile
   $ cnt=0
@@ -2205,19 +2206,19 @@ Primary site
 </p>
 </dd>
 <dt class="hdlist1">
+Zsh Web Pages
+</dt>
+<dd>
+<p>
+    <strong><a href="https://zsh.sourceforge.io/">https://zsh.sourceforge.io/</a></strong>
+</p>
+</dd>
+<dt class="hdlist1">
 Project-page
 </dt>
 <dd>
 <p>
     <strong><a href="http://sourceforge.net/projects/zsh/">http://sourceforge.net/projects/zsh/</a></strong>
-</p>
-</dd>
-<dt class="hdlist1">
-Z shell page at sunsite.dk
-</dt>
-<dd>
-<p>
-    <strong><a href="http://zsh.sunsite.dk/">http://zsh.sunsite.dk/</a></strong>
 </p>
 </dd>
 <dt class="hdlist1">
@@ -2249,7 +2250,7 @@ ZSH-FAQ
 </dt>
 <dd>
 <p>
-    <strong><a href="http://zsh.dotsrc.org/FAQ/">http://zsh.dotsrc.org/FAQ/</a></strong>
+    <strong><a href="https://zsh.sourceforge.io/FAQ/zshfaq.html">https://zsh.sourceforge.io/FAQ/zshfaq.html</a></strong>
 </p>
 </dd>
 <dt class="hdlist1">
@@ -2257,7 +2258,7 @@ Userguide
 </dt>
 <dd>
 <p>
-    <strong><a href="http://zsh.sunsite.dk/Guide/">http://zsh.sunsite.dk/Guide/</a></strong>
+    <strong><a href="https://zsh.sourceforge.io/Guide/">https://zsh.sourceforge.io/Guide/</a></strong>
 </p>
 </dd>
 <dt class="hdlist1">
@@ -2269,43 +2270,11 @@ ZSH-Wiki
 </p>
 </dd>
 <dt class="hdlist1">
-A short introduction from BYU
-</dt>
-<dd>
-<p>
-    <strong><a href="http://docs.cs.byu.edu/linux/advanced/zsh.html">http://docs.cs.byu.edu/linux/advanced/zsh.html</a></strong>
-</p>
-</dd>
-<dt class="hdlist1">
 Mouse-Support ;)
 </dt>
 <dd>
 <p>
     <strong><a href="http://stchaz.free.fr/mouse.zsh">http://stchaz.free.fr/mouse.zsh</a></strong>
-</p>
-</dd>
-<dt class="hdlist1">
-Curtains up: introducing the Z shell
-</dt>
-<dd>
-<p>
-    <strong><a href="http://www-128.ibm.com/developerworks/linux/library/l-z.html?dwzone=linux">http://www-128.ibm.com/developerworks/linux/library/l-z.html?dwzone=linux</a></strong>
-</p>
-</dd>
-<dt class="hdlist1">
-ZSH-Liebhaberseite (german)
-</dt>
-<dd>
-<p>
-    <strong><a href="http://michael-prokop.at/computer/tools_zsh_liebhaber.html">http://michael-prokop.at/computer/tools_zsh_liebhaber.html</a></strong>
-</p>
-</dd>
-<dt class="hdlist1">
-ZSH-Seite von Michael Prokop (german)
-</dt>
-<dd>
-<p>
-    <strong><a href="http://michael-prokop.at/computer/tools_zsh.html">http://michael-prokop.at/computer/tools_zsh.html</a></strong>
 </p>
 </dd>
 <dt class="hdlist1">
@@ -2321,7 +2290,7 @@ ft&#8217;s zsh configuration
 </dt>
 <dd>
 <p>
-    <strong><a href="http://ft.bewatermyfriend.org/comp/zsh.html">http://ft.bewatermyfriend.org/comp/zsh.html</a></strong>
+    <strong><a href="http://ft.bewatermyfriend.org/computer/zsh.html">http://ft.bewatermyfriend.org/computer/zsh.html</a></strong>
 </p>
 </dd>
 <dt class="hdlist1">
@@ -2361,7 +2330,7 @@ IRC channel
 </dt>
 <dd>
 <p>
-    <strong>#zsh at irc.libera.chat</strong>
+    <strong>#zsh at irc.freenode.org</strong>
 </p>
 </dd>
 <dt class="hdlist1">
@@ -2388,14 +2357,14 @@ Thanks for your cool and incredible tips. We learned much from you!</p></div>
 <div class="content">
 <pre><code>Andrew 'zefram' Main  - http://www.fysh.org/~zefram/
 Barton E. Schaefer    - http://www.well.com/user/barts/
-Matthias Kopfermann   - http://www.infodrom.north.de/~matthi/
+Matthias Kopfermann   - http://www.guckes.net/zsh/lover.html
 Oliver Kiddle         - http://people.freenet.de/opk/
 Paul Falstad          - http://www.falstad.com/
 Peter Stephenson      - http://homepage.ntlworld.com/p.w.stephenson/
 Richard Coleman
 Stephane Chazelas     - http://stephane.chazelas.free.fr/
 Sven Guckes           - http://www.guckes.net/
-Sven Wischnowsky      - http://w9y.de/zsh/zshrc</code></pre>
+Sven Wischnowsky      - http://w9y.de/</code></pre>
 </div></div>
 </div>
 </div>
@@ -2433,9 +2402,9 @@ Also take a look at the section <strong>LINKS</strong> in this manpage.</p></div
 <div class="sect1">
 <h2 id="_bugs">BUGS</h2>
 <div class="sectionbody">
-<div class="paragraph"><p>Probably. This manpage might be never complete. So please report bugs,
-feedback and suggestions to &lt;<a href="mailto:zsh-lovers@michael-prokop.at">zsh-lovers@michael-prokop.at</a>&gt;. Thank
-you!</p></div>
+<div class="paragraph"><p>Probably. This manpage might be never complete.
+So please report bugs, feedback and suggestions via <a href="https://github.com/grml/zsh-lovers">https://github.com/grml/zsh-lovers</a>
+Thank you!</p></div>
 </div>
 </div>
 <div class="sect1">
@@ -2449,7 +2418,8 @@ Kopfermann.</p></div>
 <div id="footnotes"><hr /></div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2010-07-28 21:55:37 UTC
+Last updated
+ 2023-09-08 11:52:40 UTC
 </div>
 </div>
 </body>

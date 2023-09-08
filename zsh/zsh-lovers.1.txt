@@ -20,7 +20,7 @@ Most of the tricks and oneliner come from the mailinglists zsh-users,
 zsh-workers, google, newsgroups and from ourself.  See section *LINKS* for
 details.
 
-Note: This manpage (zsh-lovers(1)) is *not* an offical part of the Z shell! It's
+Note: This manpage (zsh-lovers(1)) is *not* an official part of the Z shell! It's
 just a just for fun - manpage ;) +
 For comments, bugreports and feedback take a quick look at the section *BUGS*.
 
@@ -76,7 +76,7 @@ $ alias -g C='| wc -l'
 $ grep alias ~/.zsh/* C
 443
 ----------------------
-Some more or less useful global aliases (choose whether they are useful  or not
+Some more or less useful global aliases (choose whether they are useful or not
 for you on your own):
 
 --------------------------------------------------------
@@ -180,7 +180,7 @@ zstyle ':completion:*:kill:*'   force-list always
 ---------------------------------------------------------------------------------------------------
 
 If you end up using a directory  as  argument,  this  will  remove  the
-trailing slash (usefull in ln)
+trailing slash (useful in ln)
 ---------------------------------------------------------------------------------------------------
 zstyle ':completion:*' squeeze-slashes true
 ---------------------------------------------------------------------------------------------------
@@ -250,7 +250,7 @@ See ``man 1 zshexpn | less -p'' Qualifiers for details.
 # All files for which the owner hat read and execute permissions
   $ echo *(f:u+rx:)
 
-# The same, but also others dont have execute permissions
+# The same, but also others don't have execute permissions
   $ echo *(f:u+rx,o-x:)
 
 # brace expansion - example
@@ -279,7 +279,7 @@ See ``man 1 zshexpn | less -p'' Qualifiers for details.
 # Remove zero length and .bak files in a directory
   $ rm -i *(.L0) *.bak(.)
 
-# print out files that dont have extensions
+# print out files that don't have extensions
   $ printf '%s\n' ^?*.*
   $ printf '%s\n' ^?*.[^.]*(D)
   $ ls -d -- ^?*.*(D)
@@ -347,7 +347,7 @@ See ``man 1 zshexpn | less -p'' Qualifiers for details.
   # see above, but now omit executables
   $ ls **/*~*(${~${(j/|/)fignore}})(.^*)
 
-# Print out files that dont have extensions (require *setopt extendedglob*
+# Print out files that don't have extensions (require *setopt extendedglob*
 # and *setopt dotglob*)
   $ printf '%s\n' ^?*.*
 
@@ -394,7 +394,7 @@ See ``man 1 zshexpn | less -p'' Qualifiers for details.
   $ print ${(r:10::0:)foo}
 
 # find the name of all the files in their home directory that have
-# more than 20 characters in their file names
+# 20 or more characters in their file names
   print -rl $HOME/${(l:20::?:)~:-}*
 
 # Save arrays
@@ -473,7 +473,7 @@ See ``man 1 zshexpn | less -p'' Qualifiers for details.
   $ for i (./*.mp3){mpg321 --w - $i > ${i:r}.wav}
 
 # Download with LaTeX2HTML  created Files (for example the ZSH-Guide):
-  $ for f in http://zsh.sunsite.dk/Guide/zshguide{,{01..08}}.html; do
+  $ for f in https://zsh.sourceforge.io/Guide/zshguide{,{01..08}}.html; do
   >     lynx -source $f >${f:t}
   > done
 
@@ -788,7 +788,7 @@ for details.
 
 Redirection-Examples
 ~~~~~~~~~~~~~~~~~~~~
-See zshmisc(1) for more informations (or less ${^fpath}/zmv(N))
+See zshmisc(1) for more information (or less ${^fpath}/zmv(N))
 
 -------------------------------------------------------------------------------
 # Append `exit 1' at the end of all *.sh - files
@@ -867,7 +867,7 @@ ZMV-Examples (require autoload zmv)
   $ ls *
   1.c  1.foo  2.foo  3.foo  4.foo  foo.fnord
 
-# Rename "file.with.many.dots.txt" by substituting dots (exept for the last
+# Rename "file.with.many.dots.txt" by substituting dots (except for the last
 # one!) with a space
   $ touch {1..20}-file.with.many.dots.txt
   $ zmv '(*.*)(.*)' '${1//./ }$2'
@@ -1172,7 +1172,7 @@ zsh/mapfile (require zmodload zsh/mapfile)
 
 # If a XML-file contains stuff like ``<TAGA/>'' and ``<TAGB/>'', number
 # this empty tags (ones ending in '/>') so if encountered in the same
-# order, the preceeding tags would become ``<TAGA/>1</TAGA>'' and
+# order, the preceding tags would become ``<TAGA/>1</TAGA>'' and
 # ``<TAGB/>2</TAGB>''
   $ zmodload zsh/mapfile
   $ cnt=0
@@ -1433,10 +1433,10 @@ LINKS
 -----
 Primary site::
     *http://www.zsh.org/[]*
+Zsh Web Pages::
+    *https://zsh.sourceforge.io/[]*
 Project-page::
     *http://sourceforge.net/projects/zsh/[]*
-Z shell page at sunsite.dk::
-    *http://zsh.sunsite.dk/[]*
 From Bash to Z Shell: Conquering the Command Line - the book::
     *http://www.bash2zsh.com/[]*
 "Zsh - die magische Shell" (german book about Zsh) by Sven Guckes and Julius Plenz::
@@ -1444,25 +1444,17 @@ From Bash to Z Shell: Conquering the Command Line - the book::
 Mailinglistarchive::
     *http://www.zsh.org/mla/[]*
 ZSH-FAQ::
-    *http://zsh.dotsrc.org/FAQ/[]*
+    *https://zsh.sourceforge.io/FAQ/zshfaq.html[]*
 Userguide::
-    *http://zsh.sunsite.dk/Guide/[]*
+    *https://zsh.sourceforge.io/Guide/[]*
 ZSH-Wiki::
     *http://zshwiki.org/home/[]*
-A short introduction from BYU::
-    *http://docs.cs.byu.edu/linux/advanced/zsh.html[]*
 Mouse-Support ;)::
     *http://stchaz.free.fr/mouse.zsh[]*
-Curtains up: introducing the Z shell::
-    *http://www-128.ibm.com/developerworks/linux/library/l-z.html?dwzone=linux[]*
-ZSH-Liebhaberseite (german)::
-    *http://michael-prokop.at/computer/tools_zsh_liebhaber.html[]*
-ZSH-Seite von Michael Prokop (german)::
-    *http://michael-prokop.at/computer/tools_zsh.html[]*
 ZSH Prompt introduction::
     *http://aperiodic.net/phil/prompt/[]*
 ft's zsh configuration::
-    *http://ft.bewatermyfriend.org/comp/zsh.html[]*
+    *http://ft.bewatermyfriend.org/computer/zsh.html[]*
 Adam's ZSH page::
     *http://www.adamspiers.org/computing/zsh/[]*
 Zzappers Best of ZSH Tips::
@@ -1472,7 +1464,7 @@ Zsh Webpage by Christian Schneider::
 The zsh-lovers webpage::
     *http://grml.org/zsh/[]*
 IRC channel::
-    *#zsh at irc.libera.chat*
+    *#zsh at irc.freenode.org*
 The Z shell reference-card (included in the zsh-lovers debian-package)::
     *http://www.bash2zsh.com/zsh_refcard/refcard.pdf[]*
 
@@ -1488,14 +1480,14 @@ In alphabetic order:
 -------------------------------------------------------------------------
 Andrew 'zefram' Main  - http://www.fysh.org/~zefram/
 Barton E. Schaefer    - http://www.well.com/user/barts/
-Matthias Kopfermann   - http://www.infodrom.north.de/~matthi/
+Matthias Kopfermann   - http://www.guckes.net/zsh/lover.html
 Oliver Kiddle         - http://people.freenet.de/opk/
 Paul Falstad          - http://www.falstad.com/
 Peter Stephenson      - http://homepage.ntlworld.com/p.w.stephenson/
 Richard Coleman
 Stephane Chazelas     - http://stephane.chazelas.free.fr/
 Sven Guckes           - http://www.guckes.net/
-Sven Wischnowsky      - http://w9y.de/zsh/zshrc
+Sven Wischnowsky      - http://w9y.de/
 -------------------------------------------------------------------------
 
 SEE ALSO
@@ -1529,9 +1521,9 @@ Also take a look at the section *LINKS* in this manpage.
 
 BUGS
 ----
-Probably. This manpage might be never complete. So please report bugs,
-feedback and suggestions to <zsh-lovers@michael-prokop.at>. Thank
-you!
+Probably. This manpage might be never complete.
+So please report bugs, feedback and suggestions via https://github.com/grml/zsh-lovers
+Thank you!
 
 COPYRIGHT
 ---------

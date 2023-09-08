@@ -1,13 +1,13 @@
 '\" t
 .\"     Title: zsh-lovers
 .\"    Author: [see the "AUTHORS" section]
-.\" Generator: DocBook XSL Stylesheets v1.78.1 <http://docbook.sf.net/>
-.\"      Date: 04/03/2014
+.\" Generator: DocBook XSL Stylesheets vsnapshot <http://docbook.sf.net/>
+.\"      Date: 09/08/2023
 .\"    Manual: \ \&
 .\"    Source: \ \&
 .\"  Language: English
 .\"
-.TH "ZSH\-LOVERS" "1" "04/03/2014" "\ \&" "\ \&"
+.TH "ZSH\-LOVERS" "1" "09/08/2023" "\ \&" "\ \&"
 .\" -----------------------------------------------------------------
 .\" * Define some portability stuff
 .\" -----------------------------------------------------------------
@@ -38,8 +38,8 @@ Whenever we look at the zsh manual we wonder why there are no examples or those 
 .sp
 Most of the tricks and oneliner come from the mailinglists zsh\-users, zsh\-workers, google, newsgroups and from ourself\&. See section \fBLINKS\fR for details\&.
 .sp
-Note: This manpage (zsh\-lovers(1)) is \fBnot\fR an offical part of the Z shell! It\(cqs just a just for fun \- manpage ;) For comments, bugreports and feedback take a quick look at the section \fBBUGS\fR\&.
-.SH "SHELL-SCRIPTING"
+Note: This manpage (zsh\-lovers(1)) is \fBnot\fR an official part of the Z shell! It\(cqs just a just for fun \- manpage ;) For comments, bugreports and feedback take a quick look at the section \fBBUGS\fR\&.
+.SH "SHELL\-SCRIPTING"
 .sp
 This section provides some examples for often needed shellscript\-stuff\&. Notice that you should not use otherwise most examples won\(cqt work\&. Parse options in shellscripts\&. Example taken from ZWS by Adam Chodorowski (http://www\&.chodorowski\&.com/projects/zws/):
 .sp
@@ -260,7 +260,7 @@ zstyle \*(Aq:completion:*:kill:*\*(Aq   force\-list always
 .RE
 .\}
 .sp
-If you end up using a directory as argument, this will remove the trailing slash (usefull in ln)
+If you end up using a directory as argument, this will remove the trailing slash (useful in ln)
 .sp
 .if n \{\
 .RS 4
@@ -351,7 +351,7 @@ Hint: A list of valid glob Qualifiers can be found in zshexpn(1)\&. See \(lqman 
 # All files for which the owner hat read and execute permissions
   $ echo *(f:u+rx:)
 
-# The same, but also others dont have execute permissions
+# The same, but also others don\*(Aqt have execute permissions
   $ echo *(f:u+rx,o\-x:)
 
 # brace expansion \- example
@@ -380,7 +380,7 @@ Hint: A list of valid glob Qualifiers can be found in zshexpn(1)\&. See \(lqman 
 # Remove zero length and \&.bak files in a directory
   $ rm \-i *(\&.L0) *\&.bak(\&.)
 
-# print out files that dont have extensions
+# print out files that don\*(Aqt have extensions
   $ printf \*(Aq%s\en\*(Aq ^?*\&.*
   $ printf \*(Aq%s\en\*(Aq ^?*\&.[^\&.]*(D)
   $ ls \-d \-\- ^?*\&.*(D)
@@ -448,7 +448,7 @@ Hint: A list of valid glob Qualifiers can be found in zshexpn(1)\&. See \(lqman 
   # see above, but now omit executables
   $ ls **/*~*(${~${(j/|/)fignore}})(\&.^*)
 
-# Print out files that dont have extensions (require *setopt extendedglob*
+# Print out files that don\*(Aqt have extensions (require *setopt extendedglob*
 # and *setopt dotglob*)
   $ printf \*(Aq%s\en\*(Aq ^?*\&.*
 
@@ -495,7 +495,7 @@ Hint: A list of valid glob Qualifiers can be found in zshexpn(1)\&. See \(lqman 
   $ print ${(r:10::0:)foo}
 
 # find the name of all the files in their home directory that have
-# more than 20 characters in their file names
+# 20 or more characters in their file names
   print \-rl $HOME/${(l:20::?:)~:\-}*
 
 # Save arrays
@@ -574,7 +574,7 @@ Hint: A list of valid glob Qualifiers can be found in zshexpn(1)\&. See \(lqman 
   $ for i (\&./*\&.mp3){mpg321 \-\-w \- $i > ${i:r}\&.wav}
 
 # Download with LaTeX2HTML  created Files (for example the ZSH\-Guide):
-  $ for f in http://zsh\&.sunsite\&.dk/Guide/zshguide{,{01\&.\&.08}}\&.html; do
+  $ for f in https://zsh\&.sourceforge\&.io/Guide/zshguide{,{01\&.\&.08}}\&.html; do
   >     lynx \-source $f >${f:t}
   > done
 
@@ -905,7 +905,7 @@ Modifiers are a powerful mechanism that let you modify the results returned by p
 .\}
 .SS "Redirection\-Examples"
 .sp
-See zshmisc(1) for more informations (or less ${^fpath}/zmv(N))
+See zshmisc(1) for more information (or less ${^fpath}/zmv(N))
 .sp
 .if n \{\
 .RS 4
@@ -993,7 +993,7 @@ See zshmisc(1) for more informations (or less ${^fpath}/zmv(N))
   $ ls *
   1\&.c  1\&.foo  2\&.foo  3\&.foo  4\&.foo  foo\&.fnord
 
-# Rename "file\&.with\&.many\&.dots\&.txt" by substituting dots (exept for the last
+# Rename "file\&.with\&.many\&.dots\&.txt" by substituting dots (except for the last
 # one!) with a space
   $ touch {1\&.\&.20}\-file\&.with\&.many\&.dots\&.txt
   $ zmv \*(Aq(*\&.*)(\&.*)\*(Aq \*(Aq${1//\&./ }$2\*(Aq
@@ -1373,7 +1373,7 @@ Please read zshmodules(1) first!
 
 # If a XML\-file contains stuff like ``<TAGA/>\*(Aq\*(Aq and ``<TAGB/>\*(Aq\*(Aq, number
 # this empty tags (ones ending in \*(Aq/>\*(Aq) so if encountered in the same
-# order, the preceeding tags would become ``<TAGA/>1</TAGA>\*(Aq\*(Aq and
+# order, the preceding tags would become ``<TAGA/>1</TAGA>\*(Aq\*(Aq and
 # ``<TAGB/>2</TAGB>\*(Aq\*(Aq
   $ zmodload zsh/mapfile
   $ cnt=0
@@ -1759,14 +1759,14 @@ Primary site
 \fBhttp://www\&.zsh\&.org/\fR
 .RE
 .PP
+Zsh Web Pages
+.RS 4
+\fBhttps://zsh\&.sourceforge\&.io/\fR
+.RE
+.PP
 Project\-page
 .RS 4
 \fBhttp://sourceforge\&.net/projects/zsh/\fR
-.RE
-.PP
-Z shell page at sunsite\&.dk
-.RS 4
-\fBhttp://zsh\&.sunsite\&.dk/\fR
 .RE
 .PP
 From Bash to Z Shell: Conquering the Command Line \- the book
@@ -1786,12 +1786,12 @@ Mailinglistarchive
 .PP
 ZSH\-FAQ
 .RS 4
-\fBhttp://zsh\&.dotsrc\&.org/FAQ/\fR
+\fBhttps://zsh\&.sourceforge\&.io/FAQ/zshfaq\&.html\fR
 .RE
 .PP
 Userguide
 .RS 4
-\fBhttp://zsh\&.sunsite\&.dk/Guide/\fR
+\fBhttps://zsh\&.sourceforge\&.io/Guide/\fR
 .RE
 .PP
 ZSH\-Wiki
@@ -1799,29 +1799,9 @@ ZSH\-Wiki
 \fBhttp://zshwiki\&.org/home/\fR
 .RE
 .PP
-A short introduction from BYU
-.RS 4
-\fBhttp://docs\&.cs\&.byu\&.edu/linux/advanced/zsh\&.html\fR
-.RE
-.PP
 Mouse\-Support ;)
 .RS 4
 \fBhttp://stchaz\&.free\&.fr/mouse\&.zsh\fR
-.RE
-.PP
-Curtains up: introducing the Z shell
-.RS 4
-\fBhttp://www\-128\&.ibm\&.com/developerworks/linux/library/l\-z\&.html?dwzone=linux\fR
-.RE
-.PP
-ZSH\-Liebhaberseite (german)
-.RS 4
-\fBhttp://michael\-prokop\&.at/computer/tools_zsh_liebhaber\&.html\fR
-.RE
-.PP
-ZSH\-Seite von Michael Prokop (german)
-.RS 4
-\fBhttp://michael\-prokop\&.at/computer/tools_zsh\&.html\fR
 .RE
 .PP
 ZSH Prompt introduction
@@ -1831,7 +1811,7 @@ ZSH Prompt introduction
 .PP
 ft\(cqs zsh configuration
 .RS 4
-\fBhttp://ft\&.bewatermyfriend\&.org/comp/zsh\&.html\fR
+\fBhttp://ft\&.bewatermyfriend\&.org/computer/zsh\&.html\fR
 .RE
 .PP
 Adam\(cqs ZSH page
@@ -1856,7 +1836,7 @@ The zsh\-lovers webpage
 .PP
 IRC channel
 .RS 4
-\fB#zsh at irc\&.libera\&.chat\fR
+\fB#zsh at irc\&.freenode\&.org\fR
 .RE
 .PP
 The Z shell reference\-card (included in the zsh\-lovers debian\-package)
@@ -1875,14 +1855,14 @@ In alphabetic order:
 .nf
 Andrew \*(Aqzefram\*(Aq Main  \- http://www\&.fysh\&.org/~zefram/
 Barton E\&. Schaefer    \- http://www\&.well\&.com/user/barts/
-Matthias Kopfermann   \- http://www\&.infodrom\&.north\&.de/~matthi/
+Matthias Kopfermann   \- http://www\&.guckes\&.net/zsh/lover\&.html
 Oliver Kiddle         \- http://people\&.freenet\&.de/opk/
 Paul Falstad          \- http://www\&.falstad\&.com/
 Peter Stephenson      \- http://homepage\&.ntlworld\&.com/p\&.w\&.stephenson/
 Richard Coleman
 Stephane Chazelas     \- http://stephane\&.chazelas\&.free\&.fr/
 Sven Guckes           \- http://www\&.guckes\&.net/
-Sven Wischnowsky      \- http://w9y\&.de/zsh/zshrc
+Sven Wischnowsky      \- http://w9y\&.de/
 .fi
 .if n \{\
 .RE
@@ -1921,7 +1901,7 @@ Manpages of zsh:
 Note: especially \fIman zshcontrib\fR covers very useful topics! Book: \fBFrom Bash to Z Shell\fR by Oliver Kiddle, Jerry Peck and Peter Stephenson\&. \fBISBN: 1590593766\fR\&. \- \fBbash2zsh\&.com\fR Also take a look at the section \fBLINKS\fR in this manpage\&.
 .SH "BUGS"
 .sp
-Probably\&. This manpage might be never complete\&. So please report bugs, feedback and suggestions to <zsh\-lovers@michael\-prokop\&.at>\&. Thank you!
+Probably\&. This manpage might be never complete\&. So please report bugs, feedback and suggestions via https://github\&.com/grml/zsh\-lovers Thank you!
 .SH "COPYRIGHT"
 .sp
 Copyright (C) Michael Prokop, Christian Schneider and Matthias Kopfermann\&.
