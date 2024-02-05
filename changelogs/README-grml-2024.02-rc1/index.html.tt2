@@ -35,7 +35,7 @@
         <h3>About</h3>
 
         <p>Grml is a Debian based live system focusing on the needs of system administrators.
-        This Grml release provides fresh software packages from Debian bookworm.
+        This Grml release provides fresh software packages from Debian trixie.
         As usual it also incorporates up to date hardware support and fixes known bugs from previous Grml releases.</p>
 
 <!--
