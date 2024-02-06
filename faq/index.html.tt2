@@ -120,6 +120,10 @@
         This is a wordplay on 'mal gucken' (german for 'we'll wait and see what happens), which we used to have with Sven Guckes, a friend of many of us and a long time contributor to Grml,
         who sadly passed away way too early. The Grml team dedicates this release to Sven, RIP.</p>
 
+        <p>Codename of Grml 2024.02 is &quot;Glumpad&quot;.
+        This is an austrian word for odds and ends, bits and pieces, useless stuff.
+        Related words in Austrian are &quot;Klumpert&quot; and &quot;Krimskrams&quot;, though the 'glum' and 'pad' might make the pronunciation more interesting.</p>
+
         <h3><a name="requirements"></a><a href="#toc">Requirements for running Grml</a></h3>
 
         <ul>

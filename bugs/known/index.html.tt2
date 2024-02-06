@@ -34,10 +34,10 @@
 
         <p>If you find additional bugs, please <a href="/bugs/">report them</a>.</p>
 
-        <h2>Known Bugs in Grml 2022.11</h2>
+        <h2>Known Bugs in Grml 2024.02-rc1</h2>
 
         <ul>
-          <li>No known bugs, yet.</li>
+          <li>ping as non-root fails due to missing capabilities (<a href="https://github.com/grml/grml-live/issues/143">#143</a>)</li>
         </ul>
 
 </div>

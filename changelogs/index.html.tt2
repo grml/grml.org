@@ -31,7 +31,7 @@
         <h2>Current release</h2>
 
         <p>
-        <a href="README-grml-2022.11/">Release announcement for Grml 2022.11 - codename MalGuckes</a>
+        <a href="README-grml-2024.02-rc1/">Release announcement for Grml 2024.02-rc1 - codename Glumpad</a>
         </p>
 
         <p>
@@ -40,6 +40,7 @@
         <h2>Previous releases</h2>
 
         <ul>
+          <li><a href="README-grml-2022.11/">Grml 2022.11</a> - codename MalGuckes</li>
           <li><a href="README-grml-2021.07/">Grml 2021.07</a> - codename JauKerl</li>
           <li><a href="README-grml-2020.06/">Grml 2020.06</a> - codename Ausgehfuahangl</li>
           <li><a href="README-grml-2018.12/">Grml 2018.12</a> - codename Gnackwatschn</li>
