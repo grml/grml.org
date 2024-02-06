@@ -13,7 +13,7 @@
             <h3>News</h3>
               <p>
                 <a class="plain" href="https://blog.grml.org/">Blog</a> &nbsp;
-                <a href="https://twitter.com/grmlproject"><img src="/img/twitter.png" alt="Follow grmlproject on Twitter" class="absmiddle" /></a>
+                <a href="https://hachyderm.io/@grmlproject"><img src="/img/mastodon.png" alt="Follow grmlproject on Mastodon" class="absmiddle" /></a>
                 <br/>
 
                 <a class="plain" href="/changelogs/">Release Notes</a><br/>
