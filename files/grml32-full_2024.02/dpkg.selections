@@ -70,6 +70,8 @@ coreutils					install
 cpio						install
 cpp						install
 cpp-13						install
+cpp-13-i686-linux-gnu				install
+cpp-i686-linux-gnu				install
 cpuid						install
 cron						install
 cron-daemon-common				install
@@ -177,6 +179,7 @@ fwupd						install
 fwupd-i386-signed				install
 gawk						install
 gcc-13-base:i386				install
+gcc-14-base:i386				install
 gddrescue					install
 gdisk						install
 genisoimage					install
@@ -428,7 +431,6 @@ libffi8:i386					install
 libfftw3-single3:i386				install
 libfido2-1:i386					install
 libfile-dirlist-perl				install
-libfile-find-rule-perl				install
 libfile-homedir-perl				install
 libfile-lchown-perl				install
 libfile-listing-perl				install
@@ -458,7 +460,7 @@ libgdbm6:i386					install
 libgdk-pixbuf-2.0-0:i386			install
 libgdk-pixbuf2.0-common				install
 libgee-0.8-2:i386				install
-libgensio4:i386					install
+libgensio6:i386					install
 libgeoip1:i386					install
 libgif7:i386					install
 libgirepository-1.0-1:i386			install
@@ -629,7 +631,6 @@ libnss-myhostname:i386				install
 libnss3:i386					install
 libntfs-3g89:i386				install
 libnuma1:i386					install
-libnumber-compare-perl				install
 libnvme1					install
 libogg0:i386					install
 libonig5:i386					install
@@ -745,7 +746,6 @@ libterm-readkey-perl				install
 libterm-size-perl				install
 libtevent0:i386					install
 libtext-charwidth-perl:i386			install
-libtext-glob-perl				install
 libtext-iconv-perl:i386				install
 libtext-wrapi18n-perl				install
 libthai-data					install
@@ -762,7 +762,7 @@ libtk8.6:i386					install
 libtry-tiny-perl				install
 libtsk19:i386					install
 libtss2-esys-3.0.2-0:i386			install
-libtss2-mu0:i386				install
+libtss2-mu-4.0.1-0:i386				install
 libtss2-sys1:i386				install
 libtss2-tcti-cmd0:i386				install
 libtss2-tcti-device0:i386			install
@@ -870,7 +870,7 @@ libzstd1:i386					install
 links2						install
 linux-base					install
 linux-cpupower					install
-linux-image-6.5.0-5-686				install
+linux-image-6.6.15-686				install
 linux-image-686					install
 live-boot-grml					install
 live-boot-grml-doc				install
@@ -1019,6 +1019,7 @@ python3-requests				install
 python3-rtslib-fb				install
 python3-samba					install
 python3-serial					install
+python3-setuptools				install
 python3-setuptools-scm				install
 python3-six					install
 python3-talloc:i386				install
@@ -1027,6 +1028,7 @@ python3-typing-extensions			install
 python3-urllib3					install
 python3-urwid					install
 python3-yaml					install
+python3-zombie-imp				install
 python3.11					install
 python3.11-minimal				install
 qemu-guest-agent				install
@@ -1143,7 +1145,6 @@ usb-modeswitch-data				install
 usbutils					install
 usbview						install
 usr-is-merged					install
-usrmerge					install
 util-linux					install
 util-linux-extra				install
 uuid-runtime					install

@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>grml.org - Release Notes: Grml 2024.02-rc1 - Codename Glumpad</title>
-<meta name="Title" content="grml.org - Release Notes: Grml 2024.02-rc1 Glumpad" />
+<title>grml.org - Release Notes: Grml 2024.02 - Codename Glumpad</title>
+<meta name="Title" content="grml.org - Release Notes: Grml 2024.02 Glumpad" />
 <meta name="Author" content="the Grml team [grml.org/team/]" />
 <meta name="Keywords" content="grml.org, Grml" />
-<meta name="Description" content="Release Notes of Grml 2024.02-rc1" />
+<meta name="Description" content="Release Notes of Grml 2024.02" />
 <meta name="Abstract" content="Grml, the linux live-cd for sysadmins and texttool users" />
 <meta name="Robots" content="index,follow" />
 <meta name="Language" content="english" />
@@ -24,9 +24,7 @@
 
       <div class="content">
 
-        <h1>Release Notes for Grml 2024.02-rc1 - codename <a href="/faq/#releasename">Glumpad</a></h1>
-
-        <p><strong>NOTE: the <a href="/changelogs/README-grml-2024.02/">stable release 2024.02</a> is already available!</strong></p>
+        <h1>Release Notes for Grml 2024.02 - codename <a href="/faq/#releasename">Glumpad</a></h1>
 
         <p><a href="/download/prerelease/">Download Now</a></p>
 
@@ -80,7 +78,7 @@
         <h3>Bits &amp; bolts</h3>
 
         <ul>
-          <li>Linux kernel <b>6.5</b>.</li>
+          <li>Linux kernel <b>6.6</b>.</li>
           <li>Fixed several bugs from the <a href="https://github.com/grml/grml/issues/">issue tracking system</a>.</li>
         </ul>
 
@@ -89,11 +87,11 @@
         <p>Details about shipped packages and their versions in Grml are
         available in the <a href="/files/#debian">Debian section</a>. Visit
         <a href="/files/grml64-full_2024.02/dpkg.list">dpkg_list</a> for a
-        detailed list of packages shipped with Grml 2024.02(-rc1).</p>
+        detailed list of packages shipped with Grml 2024.02.</p>
 
         <h3>Updates</h3>
 
-        <p>Packages are taken from Debian trixie/testing as of 2nd of February 2024.
+        <p>Packages are taken from Debian trixie/testing as of 26th of February 2024.
         The following 9 relevant packages have been added (excluding e.g. lib*, fonts*, *-base/*-bin/*-common/*-core/*-data, gcc-*/cpp-*, perl*, python*, ruby* and kernel image):</p>
 
         <ul>
@@ -125,10 +123,10 @@
 
         <p>Please visit the <a href="/bugs/known/">known bugs</a> web page.</p>
 
-        <h3>Download Grml 2024.02-rc1</h3>
+        <h3>Download Grml 2024.02</h3>
 
-        <p>Grml 2024.02-rc1 can be downloaded from
-        <a href="/download/prerelease/">grml.org/download/prerelease/</a>.</p>
+        <p>Grml 2024.02 can be downloaded from
+        <a href="/download/">grml.org/download/</a>.</p>
 
         <h3>Feedback</h3>
 

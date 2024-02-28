@@ -87,7 +87,7 @@ firmware-zd1211					install
 fsarchiver					install
 fuse3						install
 gawk						install
-gcc-13-base:i386				install
+gcc-14-base:i386				install
 gddrescue					install
 gdisk						install
 gettext-base					install
@@ -165,6 +165,8 @@ libaio1:i386					install
 libapparmor1:i386				install
 libapt-pkg6.0:i386				install
 libargon2-1:i386				install
+libasound2:i386					install
+libasound2-data					install
 libassuan0:i386					install
 libattr1:i386					install
 libaudit-common					install
@@ -213,7 +215,6 @@ libfastjson4:i386				install
 libfdisk1:i386					install
 libffi8:i386					install
 libfido2-1:i386					install
-libfile-find-rule-perl				install
 libfile-listing-perl				install
 libfile-slurp-perl				install
 libfile-which-perl				install
@@ -223,7 +224,7 @@ libgcc-s1:i386					install
 libgcrypt20:i386				install
 libgdbm-compat4:i386				install
 libgdbm6:i386					install
-libgensio4:i386					install
+libgensio6:i386					install
 libglib2.0-0:i386				install
 libgmp10:i386					install
 libgnutls30:i386				install
@@ -304,7 +305,6 @@ libnsl2:i386					install
 libnss-myhostname:i386				install
 libntfs-3g89:i386				install
 libnuma1:i386					install
-libnumber-compare-perl				install
 libopenipmi0					install
 libp11-kit0:i386				install
 libpam-modules:i386				install
@@ -354,7 +354,6 @@ libsystemd0:i386				install
 libtasn1-6:i386					install
 libterm-readkey-perl				install
 libtext-charwidth-perl:i386			install
-libtext-glob-perl				install
 libtext-iconv-perl:i386				install
 libtext-wrapi18n-perl				install
 libtimedate-perl				install
@@ -380,7 +379,7 @@ libyaml-0-2:i386				install
 libzstd1:i386					install
 links						install
 linux-base					install
-linux-image-6.5.0-5-686				install
+linux-image-6.6.15-686				install
 linux-image-686					install
 live-boot-grml					install
 live-boot-grml-doc				install
@@ -489,7 +488,6 @@ unp						install
 unzip						install
 usbutils					install
 usr-is-merged					install
-usrmerge					install
 util-linux					install
 util-linux-extra				install
 uuid-runtime					install

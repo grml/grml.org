@@ -70,6 +70,8 @@ coreutils					install
 cpio						install
 cpp						install
 cpp-13						install
+cpp-13-x86-64-linux-gnu				install
+cpp-x86-64-linux-gnu				install
 cpuid						install
 cron						install
 cron-daemon-common				install
@@ -177,6 +179,7 @@ fwupd						install
 fwupd-amd64-signed				install
 gawk						install
 gcc-13-base:amd64				install
+gcc-14-base:amd64				install
 gddrescue					install
 gdisk						install
 genisoimage					install
@@ -431,7 +434,6 @@ libffi8:amd64					install
 libfftw3-single3:amd64				install
 libfido2-1:amd64				install
 libfile-dirlist-perl				install
-libfile-find-rule-perl				install
 libfile-homedir-perl				install
 libfile-lchown-perl				install
 libfile-listing-perl				install
@@ -462,7 +464,7 @@ libgdbm6:amd64					install
 libgdk-pixbuf-2.0-0:amd64			install
 libgdk-pixbuf2.0-common				install
 libgee-0.8-2:amd64				install
-libgensio4:amd64				install
+libgensio6:amd64				install
 libgeoip1:amd64					install
 libgfapi0:amd64					install
 libgfrpc0:amd64					install
@@ -638,7 +640,6 @@ libnss-myhostname:amd64				install
 libnss3:amd64					install
 libntfs-3g89:amd64				install
 libnuma1:amd64					install
-libnumber-compare-perl				install
 libnvme1					install
 libogg0:amd64					install
 libonig5:amd64					install
@@ -758,7 +759,6 @@ libterm-readkey-perl				install
 libterm-size-perl				install
 libtevent0:amd64				install
 libtext-charwidth-perl:amd64			install
-libtext-glob-perl				install
 libtext-iconv-perl:amd64			install
 libtext-wrapi18n-perl				install
 libthai-data					install
@@ -775,7 +775,7 @@ libtk8.6:amd64					install
 libtry-tiny-perl				install
 libtsk19:amd64					install
 libtss2-esys-3.0.2-0:amd64			install
-libtss2-mu0:amd64				install
+libtss2-mu-4.0.1-0:amd64			install
 libtss2-sys1:amd64				install
 libtss2-tcti-cmd0:amd64				install
 libtss2-tcti-device0:amd64			install
@@ -892,7 +892,7 @@ libzstd1:amd64					install
 links2						install
 linux-base					install
 linux-cpupower					install
-linux-image-6.5.0-5-amd64			install
+linux-image-6.6.15-amd64			install
 linux-image-amd64				install
 live-boot-grml					install
 live-boot-grml-doc				install
@@ -1042,6 +1042,7 @@ python3-requests				install
 python3-rtslib-fb				install
 python3-samba					install
 python3-serial					install
+python3-setuptools				install
 python3-setuptools-scm				install
 python3-six					install
 python3-talloc:amd64				install
@@ -1050,6 +1051,7 @@ python3-typing-extensions			install
 python3-urllib3					install
 python3-urwid					install
 python3-yaml					install
+python3-zombie-imp				install
 python3.11					install
 python3.11-minimal				install
 qemu-guest-agent				install
@@ -1170,7 +1172,6 @@ usb-modeswitch-data				install
 usbutils					install
 usbview						install
 usr-is-merged					install
-usrmerge					install
 util-linux					install
 util-linux-extra				install
 uuid-runtime					install
