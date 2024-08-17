@@ -142,7 +142,7 @@
           <li>bugfixes for software RAID handling
 
           <li>and more updates... check out the <a
-          href="http://git.grml.org/?p=grml-debootstrap.git;a=blob;f=debian/changelog;hb=HEAD">Debian changelog</a> for details
+          href="https://git.grml.org/f/grml-debootstrap/debian/changelog">Debian changelog</a> for details
 
         </ul>
 

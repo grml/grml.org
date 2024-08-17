@@ -1,2 +1,2 @@
 RewriteEngine on
-RewriteRule zshrc$ http://git.grml.org/f/grml-etc-core/etc/zsh/zshrc
+RewriteRule zshrc$ https://git.grml.org/f/grml-etc-core/etc/zsh/zshrc

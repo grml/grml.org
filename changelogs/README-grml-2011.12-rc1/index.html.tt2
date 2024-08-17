@@ -59,7 +59,7 @@
 
         <ul>
           <li>Z-Shell configuration has been cleaned up. Quite a few functions
-            <a href="http://git.grml.org/?p=grml-etc-core.git;a=history;f=etc/zsh/zshrc">have been removed</a>
+            <a href="https://git.grml.org/?p=grml-etc-core.git;a=history;f=etc/zsh/zshrc">have been removed</a>
             from the default configuration.</li>
           <li>X11 environment has been downsized as well. The window manager is
             now fluxbox. idesk has been removed, all available software is now

@@ -227,7 +227,7 @@
           <br /><br />
 
           <b>Troubleshooting</b><br /><br />
-          <a href="https://git.grml.org/?p=grml-live.git;a=blob_plain;f=templates/GRML/grml-cheatcodes.txt;hb=HEAD">Boot option guide</a>
+          <a href="https://git.grml.org/f/grml-live/templates/GRML/grml-cheatcodes.txt">Boot option guide</a>
           <br />
           <br />
           <br />

@@ -74,7 +74,7 @@
           <li>automatically activate grml-testing repository for devel releases and daily snapshots
 
           <li>and several other updates... check out the <a
-          href="http://git.grml.org/?p=grml-live.git;a=blob;f=debian/changelog;hb=HEAD">Debian changelog</a> for details
+          href="https://git.grml.org/f/grml-live/debian/changelog">Debian changelog</a> for details
 
         </ul>
 
@@ -121,7 +121,7 @@
           sources.list from /etc/debootstrap/etc/apt/sources.list
 
           <li>and a lot more updates... check out the <a
-          href="http://git.grml.org/?p=grml-debootstrap.git;a=blob;f=debian/changelog;hb=HEAD">Debian changelog</a> for details
+          href="https://git.grml.org/f/grml-debootstrap/debian/changelog">Debian changelog</a> for details
 
         </ul>
 
@@ -146,7 +146,7 @@
           option (thanks to Michael Holzt and Marc Haber)</li>
 
           <li>(re-)implemented <a
-          href="http://git.grml.org/?p=grml-live.git;a=blob_plain;f=templates/GRML/grml-cheatcodes.txt;hb=HEAD">the
+          href="https://git.grml.org/f/grml-live/templates/GRML/grml-cheatcodes.txt">the
           isofrom and tohd bootoptions</a></li>
 
           <li>moved from syslog-ng to rsyslog</li>
