@@ -186,7 +186,7 @@
 
         </ul>
 
-        <p>Visit <a href="http://wiki.grml.org/doku.php?id=usb">the usb webpage
+        <p>Visit <a href="https://github.com/grml/grml/wiki/usb">the usb webpage
         in the grml wiki</a> and <a href="/grml2usb/">grml.org/grml2usb</a> for
         more details regarding grml2usb.</p>
 
@@ -269,7 +269,7 @@
         <h3>Bugfixes</h3>
 
         <p>Fixed several bugs and issues reported on <a
-        href="http://wiki.grml.org/doku.php?id=grml-medium_2009.05">grml-medium_2009.05 @
+        href="https://github.com/grml/grml/wiki/grml-medium_2009.05">grml-medium_2009.05 @
         grml-wiki</a> and in the <a href="http://bts.grml.org/grml/">bug
         tracking system</a>.</p>
 
@@ -327,7 +327,7 @@
         <h3>Known issues</h3>
 
         <p>Take a look at <a
-        href="http://wiki.grml.org/doku.php?id=grml-medium_2009.10">grml-medium_2009.10 @ grml-wiki</a>.
+        href="https://github.com/grml/grml/wiki/grml-medium_2009.10">grml-medium_2009.10 @ grml-wiki</a>.
         Please report problems using information on <a
           href="/bugs/">grml.org/bugs/</a>.</p>
 
@@ -341,7 +341,7 @@
         <p>Your comments, bug reports, patches, and suggestions will help
         fixing bugs and improving future releases. If you find a problem with
         the release please check <a
-          href="http://wiki.grml.org/doku.php?id=grml-medium_2009.10">grml-medium_2009.10 @
+          href="https://github.com/grml/grml/wiki/grml-medium_2009.10">grml-medium_2009.10 @
           grml-wiki</a> and report problems using information on <a
           href="/bugs/">grml.org/bugs/</a>. Please send your feedback and
         feature requests <a href="/contact/">to the grml-team</a>!</p>

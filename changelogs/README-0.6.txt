@@ -30,7 +30,7 @@ Release 0.6 - Codename Winterschlapfn (20060122)
 ================================================
 
 Fixed several bugs, including issues reported on
-http://wiki.grml.org/doku.php?id=grml_0.5
+https://github.com/grml/grml/wiki/grml_0.5
 
 Several improved, updated and extended configuration files.
 
@@ -152,7 +152,7 @@ Added 99 new packages (exluding lib* and *2.6.15-grml*):
   xcompmgr xen-tools xfree86-driver-synaptics xtrace xwit zsplit
 
 If you find a problem with the release please check
- http://wiki.grml.org/doku.php?id=grml_0.6
+ https://github.com/grml/grml/wiki/grml_0.6
 and report problems using information on http://grml.org/bugs/
 
 Changes since release 0.5 (20051024)

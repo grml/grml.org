@@ -52,7 +52,7 @@
         <h3>Bugfixes</h3>
 
         <p>Fixed several bugs and issues reported on <a
-        href="http://wiki.grml.org/doku.php?id=grml-small_0.2">grml-small_0.2
+        href="https://github.com/grml/grml/wiki/grml-small_0.2">grml-small_0.2
         @ grml-wiki</a>.</p>
 
         <h3>New features</h3>
@@ -125,7 +125,7 @@
          <h3>Known issues</h3>
 
          <p>Take a look at <a
-         href="http://wiki.grml.org/doku.php?id=grml-small_0.3">grml_0.3-small
+         href="https://github.com/grml/grml/wiki/grml-small_0.3">grml_0.3-small
          @ grml-wiki</a>.  Please report problems using information on
          <a href="/bugs/">grml.org/bugs/</a>.</p>
 
@@ -139,7 +139,7 @@
          <p>Your comments, bug reports, patches, and suggestions will
          help fix bugs and improve future releases. If you find a
          problem with the release please check <a
-         href="http://wiki.grml.org/doku.php?id=grml-small_0.3">grml_0.3-small
+         href="https://github.com/grml/grml/wiki/grml-small_0.3">grml_0.3-small
          @ grml-wiki</a> and report problems using information on <a
          href="/bugs/">grml.org/bugs/</a>. Please send your feedback,
          feature requests and bug reports to the grml-team!</p>

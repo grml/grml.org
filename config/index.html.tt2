@@ -40,7 +40,7 @@
 	  href="file:///usr/share/doc/grml-autoconfig/grml-autoconfig.1.html">/usr/share/doc/grml-autoconfig/grml-autoconfig.1.html</a>.</p>
 
 	<p><strong>Tip:</strong> Make sure to also check out the new <a
-	  href="http://wiki.grml.org/doku.php?id=persistency">persistency
+	  href="https://github.com/grml/grml/wiki/persistency">persistency
 	  features</a> of Grml.</p>
 
         <p>Any further wishes, feedback, bug reports? Please <a

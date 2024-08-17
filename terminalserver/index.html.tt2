@@ -50,7 +50,7 @@
         <p>Sure - of course you can boot Grml via PXE without having to use
         grml-terminalserver (for example if you already have a working NFS,
         tftp,... infrastructure). Take a look at <a
-            href="http://wiki.grml.org/doku.php?id=terminalserver#booting_grml_without_grml-terminalserver">the
+            href="https://github.com/grml/grml/wiki/terminalserver#booting_grml_without_grml-terminalserver">the
             instructions in the grml-wiki</a>.</p>
 
         <h2>Screenshots</h2>
@@ -70,7 +70,7 @@
         <h2>Known Issues / Further information</h2>
 
         <p>See <a
-        href="http://wiki.grml.org/doku.php?id=terminalserver">grml-wiki</a>.</p>
+        href="https://github.com/grml/grml/wiki/terminalserver">grml-wiki</a>.</p>
 
       </div>
 

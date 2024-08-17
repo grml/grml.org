@@ -1,6 +1,6 @@
 grml in the german LinuxUser magazine.
 
-A <a href="http://wiki.grml.org/doku.php?id=grml_linuxuser">special release of grml
+A <a href="https://github.com/grml/grml/wiki/grml_linuxuser">special release of grml
 named Bootenschnitzl@LU</a> is shipped with <a href="http://linux-user.de/">the
 german LinuxUser magazine</a>. You will also find an article about grml inside the
 magazine, so get your own copy!

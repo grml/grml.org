@@ -310,7 +310,7 @@
            <h3>10.06.2007</h3>
 
            <p>Results of the <a
-           href="http://wiki.grml.org/doku.php?id=survey07">grml user survey
+           href="https://github.com/grml/grml/wiki/survey07">grml user survey
            are available</a>.</p>
 
            <h3>18.05.2007</h3>
@@ -420,7 +420,7 @@
 
            <h3><a name="linuxuser200606"></a>18.05.2006</h3>
 
-           <p>A <a href="http://wiki.grml.org/doku.php?id=grml_linuxuser">special
+           <p>A <a href="https://github.com/grml/grml/wiki/grml_linuxuser">special
            release of grml named Bootenschnitzl@LU</a> is shipped with <a
            href="http://linux-user.de/">the german LinuxUser magazine</a>. You will
            also find an article about grml inside the magazine, so get your own

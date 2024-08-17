@@ -45,7 +45,7 @@
         <h3>Bugfixes</h3>
 
         <p>Fixed several bugs and and issues reported on <a
-        href="http://wiki.grml.org/doku.php?id=grml_0.8">grml_0.8 @
+        href="https://github.com/grml/grml/wiki/grml_0.8">grml_0.8 @
         grml-wiki</a>.</p>
 
         <h3>New features</h3>
@@ -154,8 +154,8 @@
 </pre>
 
          <p>Notice: some more modules (for example <a
-         href="http://wiki.grml.org/doku.php?id=ati">fglrx</a> and <a
-         href="http://wiki.grml.org/doku.php?id=nvidia">nvidia</a>) are not
+         href="https://github.com/grml/grml/wiki/ati">fglrx</a> and <a
+         href="https://github.com/grml/grml/wiki/nvidia">nvidia</a>) are not
          pre-installed but available through the <a
          href="http://deb.grml.org/">grml-repository</a>.</p>
 
@@ -247,7 +247,7 @@
 
          <p>As usual you can upgrade your grml harddisk system to the latest grml
          version running 'apt-get update; apt-get install grml'. Take a look at <a
-         href="http://wiki.grml.org/doku.php?id=upgrading">the upgrading webpage in
+         href="https://github.com/grml/grml/wiki/upgrading">the upgrading webpage in
          the grml-wiki</a> as well. Notice: If you are using grml in a productive
          environment and/or use a grml2hd installation we strongly recommend to
          subscribe to <a href="http://grml.org/mailinglist/">the grml-user
@@ -267,7 +267,7 @@
          <h3>Known issues</h3>
 
          <p>Take a look at <a
-         href="http://wiki.grml.org/doku.php?id=grml_0.9">grml_0.9 @ grml-wiki</a>.
+         href="https://github.com/grml/grml/wiki/grml_0.9">grml_0.9 @ grml-wiki</a>.
          Please report problems using information on <a
          href="/bugs/">grml.org/bugs/</a>.</p>
 
@@ -280,7 +280,7 @@
 
          <p>Your comments, bug reports, patches, and suggestions will help fix bugs
          and improve future releases. If you find a problem with the release please
-         check <a href="http://wiki.grml.org/doku.php?id=grml_0.9">grml_0.9 @
+         check <a href="https://github.com/grml/grml/wiki/grml_0.9">grml_0.9 @
          grml-wiki</a> and report problems using information on <a
          href="/bugs/">grml.org/bugs/</a>. Please send your feedback, feature
          requests and bug reports to the grml-team!</p>

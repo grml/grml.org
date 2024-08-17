@@ -35,7 +35,7 @@ Fixed several bugs, including:
   #20  grml-0.6: GRMLCFG does not work with floppy disk
   #21  hgrep:    hgrep returns always success
 
-and issues reported on http://wiki.grml.org/doku.php?id=grml_0.6
+and issues reported on https://github.com/grml/grml/wiki/grml_0.6
 
 Several improved, updated and extended configuration files.
 
@@ -123,7 +123,7 @@ Added 48 new packages (exluding lib* and *2.6.16-grml*):
   unixcw user-setup
 
 If you find a problem with the release please check
- http://wiki.grml.org/doku.php?id=grml_0.7
+ https://github.com/grml/grml/wiki/grml_0.7
 and report problems using information on http://grml.org/bugs/
 
 

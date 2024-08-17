@@ -53,7 +53,7 @@
         <h3>Bugfixes</h3>
 
         <p>Fixed several bugs and and issues reported on <a
-        href="http://wiki.grml.org/doku.php?id=grml-small_0.3">grml-small_0.3
+        href="https://github.com/grml/grml/wiki/grml-small_0.3">grml-small_0.3
         @ grml-wiki</a>.</p>
 
         <h3>New features</h3>
@@ -108,12 +108,12 @@
          <h3>Known issues</h3>
 
 	 <p>Take a look at <a
-	 href="http://wiki.grml.org/doku.php?id=release_candidate">grml_release
+	 href="https://github.com/grml/grml/wiki/release_candidate">grml_release
 	 candidate @ grml-wiki</a>.  Please report problems using
 	 information on <a href="/bugs/">grml.org/bugs/</a>.</p>
 	 <!--
          <p>Take a look at <a
-         href="http://wiki.grml.org/doku.php?id=grml-small_0.4">grml_0.4-small
+         href="https://github.com/grml/grml/wiki/grml-small_0.4">grml_0.4-small
          @ grml-wiki</a>.  Please report problems using information on
          <a href="/bugs/">grml.org/bugs/</a>.</p>
 	 -->
@@ -129,7 +129,7 @@
          <p>Your comments, bug reports, patches, and suggestions will
          help fix bugs and improve future releases. If you find a
          problem with the release please check <a
-         href="http://wiki.grml.org/doku.php?id=grml-small_0.4">grml_0.4-small
+         href="https://github.com/grml/grml/wiki/grml-small_0.4">grml_0.4-small
          @ grml-wiki</a> and report problems using information on <a
          href="/bugs/">grml.org/bugs/</a>. Please send your feedback,
          feature requests and bug reports to the grml-team!</p>
@@ -138,7 +138,7 @@
 	 <p>Your comments, bug reports, patches, and suggestions will
 	 help fix bugs and improve the upcoming stable release. If you
 	 find a problem with the release candidate please check <a
-	 href="http://wiki.grml.org/doku.php?id=release_candidate">grml_release
+	 href="https://github.com/grml/grml/wiki/release_candidate">grml_release
 	 candidate @ grml-wiki</a> and report problems using information
 	 on <a href="/bugs/">grml.org/bugs/</a>. Please send your
 	 feedback, feature requests and bug reports to the

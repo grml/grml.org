@@ -282,8 +282,8 @@ $ grep -ch grml .centericq/**/history | xargs echo | \
         <h3><a name="usbboot"></a><a href="#toc">How do I boot Grml from a USB stick?</a></h3>
 
         <p>Check out <a
-        href="http://wiki.grml.org/doku.php?id=usb#grml2usb">grml2usb</a> at the
-        <a href="http://wiki.grml.org/doku.php?id=usb">usb webpage in the
+        href="https://github.com/grml/grml/wiki/usb#grml2usb">grml2usb</a> at the
+        <a href="https://github.com/grml/grml/wiki/usb">usb webpage in the
         grml-wiki.</a></p>
 
         <h3><a name="store"></a><a href="#toc">Is it possible to store my settings?</a></h3>
@@ -319,7 +319,7 @@ $ grep -ch grml .centericq/**/history | xargs echo | \
         as well as the window manager fluxbox. Take a look at the <a
         href="/files/">'Debian-Information'-section</a> if you are searching for
         the package list. <a
-        href="http://wiki.grml.org/doku.php?id=accessibility">accessibility
+        href="https://github.com/grml/grml/wiki/accessibility">accessibility
         features</a> are <strong>NOT</strong> available/supported on grml-medium
         though.</p>
 
@@ -367,7 +367,7 @@ $ grep -ch grml .centericq/**/history | xargs echo | \
         <p>The 700MB-grml brings more than 2500 software packages. grml-small
         includes about 300 software packages, lacks documentation and manpages
         on the ISO. <a href="#terminalserver">grml-terminalserver</a> and <a
-        href="http://wiki.grml.org/doku.php?id=accessibility">accessibility
+        href="https://github.com/grml/grml/wiki/accessibility">accessibility
         features</a> are <strong>not</strong> available/supported on
         grml-small.</p>
 
@@ -393,7 +393,7 @@ $ grep -ch grml .centericq/**/history | xargs echo | \
 
         <ul>
 
-          <li><a href="http://wiki.grml.org/doku.php?id=grml_2011.05">issues regarding
+          <li><a href="https://github.com/grml/grml/wiki/grml_2011.05">issues regarding
           grml 2011.05</a> in <a href="http://wiki.grml.org/">the grml-wiki</a></li>
 	  <li><a href="http://bts.grml.org/">Grml bug tracking system</a></li>
 
@@ -425,7 +425,7 @@ $ grep -ch grml .centericq/**/history | xargs echo | \
         (pretty common especially on old hardware). Please consider using <a
         href="http://btmgr.sourceforge.net/">btmgr</a> then for booting your
         system. Also check out the <a
-        href="http://wiki.grml.org/doku.php?id=problems">problems webpage</a> in
+        href="https://github.com/grml/grml/wiki/problems">problems webpage</a> in
         <a href="http://wiki.grml.org/">the grml-wiki</a>. You still have
         problems? Feel free to <a href="/contact/">contact us</a>.</p>
 
@@ -440,7 +440,7 @@ $ grep -ch grml .centericq/**/history | xargs echo | \
         <h3><a name="utf8"></a><a href="#toc">I have problems with UTF-8 / Unicode</a></h3>
 
         <p>Check out <a
-        href="http://wiki.grml.org/doku.php?id=utf8">UTF8-webpage in the
+        href="https://github.com/grml/grml/wiki/utf8">UTF8-webpage in the
         grml-wiki</a>.</p>
 
         <h3><a name="cifsshare"></a><a href="#toc">Booting grml-small via PXE using a CIFS share fails</a></h3>
@@ -641,7 +641,7 @@ or use the shorter version:
         <p>It is possible to boot grml via USB (e.g. USB stick or harddisk),
         firewire, or running from a Compact Flash disk. It works out of the box;
         you don't need to modify anything. Check out <a
-        href="http://wiki.grml.org/doku.php?id=usb">the usb webpage in the
+        href="https://github.com/grml/grml/wiki/usb">the usb webpage in the
         grml-wiki</a> for more details.</p>
 
         <p>Your computer can not boot from CD-ROM but provides a floppy

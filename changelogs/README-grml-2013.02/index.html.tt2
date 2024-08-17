@@ -88,7 +88,7 @@
           starting with Grml 2013.02.
 
           <li>Debian's live-boot changed some persistency related settings.
-          Please visit <a href="http://wiki.grml.org/doku.php?id=persistency">
+          Please visit <a href="https://github.com/grml/grml/wiki/persistency">
           the persistency page in the Grml wiki</a> for further details.
 
         </ul>

@@ -51,7 +51,7 @@
         <h3>Bugfixes</h3>
 
         <p>Fixed several bugs and issues reported on <a
-        href="http://wiki.grml.org/doku.php?id=grml-small_0.4">grml-small
+        href="https://github.com/grml/grml/wiki/grml-small_0.4">grml-small
         0.4 @ grml-wiki</a>.</p>
 
         <h4>New grml-script:</h4>
@@ -203,7 +203,7 @@
 
          <p>As usual you can upgrade your grml harddisk system to the latest grml
          version running 'apt-get update; apt-get install grml'. Take a look at <a
-         href="http://wiki.grml.org/doku.php?id=upgrading">the upgrading webpage in
+         href="https://github.com/grml/grml/wiki/upgrading">the upgrading webpage in
          the grml-wiki</a> as well. Notice: If you are using grml in a productive
          environment and/or use a grml2hd installation we strongly recommend to
          subscribe to <a href="http://grml.org/mailinglist/">the grml-user
@@ -225,7 +225,7 @@
          <h3>Known issues</h3>
 
          <p>Take a look at <a
-         href="http://wiki.grml.org/doku.php?id=grml-small_2008.11">grml-small_2008.11 @ grml-wiki</a>.
+         href="https://github.com/grml/grml/wiki/grml-small_2008.11">grml-small_2008.11 @ grml-wiki</a>.
          Please report problems using information on <a
          href="/bugs/">grml.org/bugs/</a>.</p>
 
@@ -238,7 +238,7 @@
 
          <p>Your comments, bug reports, patches, and suggestions will help fix bugs
          and improve future releases. If you find a problem with the release please
-         check <a href="http://wiki.grml.org/doku.php?id=grml-small_2008.11">grml-small_2008.11 @
+         check <a href="https://github.com/grml/grml/wiki/grml-small_2008.11">grml-small_2008.11 @
          grml-wiki</a> and report problems using information on <a
          href="/bugs/">grml.org/bugs/</a>. Please send your feedback, feature
          requests and bug reports to the grml-team!</p>

@@ -70,13 +70,13 @@
           live-media-path=/live/$FLAVOUR (where $FLAVOUR corresponds to
           grml64-full, grml32-full, grml64-small, grml32-small) - for further
           details visit <a
-          href="http://wiki.grml.org/doku.php?id=terminalserver">terminalserver
+          href="https://github.com/grml/grml/wiki/terminalserver">terminalserver
           page in the Grml-Wiki</a>.</li>
 
           <li>Booting Grml from hard disk? Do not forget to add the
           live-media-path=... bootoption. Or even better: use grml-rescueboot.
           Full details at <a
-          href="http://wiki.grml.org/doku.php?id=rescueboot">rescueboot in the
+          href="https://github.com/grml/grml/wiki/rescueboot">rescueboot in the
           Grml-Wiki</a>.</li>
 
         </ul>
