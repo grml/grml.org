@@ -38,12 +38,12 @@ for us nowadays.</p>
 
 <h2>Current state</h2>
 
-<p>Thanks to our <a href="http://git.grml.org/?p=hg-to-git.git;a=summary">hg-to-git tools</a> the
+<p>Thanks to our <a href="https://git.grml.org/?p=hg-to-git.git;a=summary">hg-to-git tools</a> the
 migration itself took less than 1 hour and all repositories have been migrated from <a
-    href="http://hg.grml.org/">hg.grml.org</a> to <a href="http://git.grml.org/">git.grml.org</a>.</p>
+    href="http://hg.grml.org/">hg.grml.org</a> to <a href="https://git.grml.org/">git.grml.org</a>.</p>
 
 <p>By today (1st of october 2008) the grml mercurial repositories are deprecated and the official
-place for grml's sources is <strong><a href="http://git.grml.org/">git.grml.org</a></strong>. The mercurial hosting will be deactivated within the next few weeks.</p>
+place for grml's sources is <strong><a href="https://git.grml.org/">git.grml.org</a></strong>. The mercurial hosting will be deactivated within the next few weeks.</p>
 
 <p>All the documentation and scripts of grml are being updated to reflect the changes and updated URLs
 but it has not been finished yet. So if you find something still mentioning hg.grml.org instead of

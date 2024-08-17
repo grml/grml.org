@@ -250,7 +250,7 @@ $ grep -ch grml .centericq/**/history | xargs echo | \
 
         <p>We consider Knoppix as a brand name for live-cds nowadays and provide
         most of Knoppix' features as well. Grml uses (mostly) the same <a
-        href="http://git.grml.org/?p=grml-live.git;a=blob_plain;f=templates/GRML/grml-cheatcodes.txt;hb=HEAD">cheatcodes</a>
+        href="https://git.grml.org/f/grml-live/templates/GRML/grml-cheatcodes.txt">cheatcodes</a>
         for booting as Knoppix and even provides some extra ones. So if you are
         used to the basic Knoppix features you usually find them on the
         grml system as well.</p>
@@ -264,7 +264,7 @@ $ grep -ch grml .centericq/**/history | xargs echo | \
         <h3><a name="bootoptions"></a><a href="#toc">Which bootoptions does Grml support?</a></h3>
 
         <p>Check out the <a
-        href="http://git.grml.org/?p=grml-live.git;a=blob_plain;f=templates/GRML/grml-cheatcodes.txt;hb=HEAD">grml-cheatcodes
+        href="https://git.grml.org/f/grml-live/templates/GRML/grml-cheatcodes.txt">grml-cheatcodes
         file</a> (also available via <a href="http://grml.org/cheatcodes/">grml.org/cheatcodes/</a>). Of
         course <a
         href="http://www.kernel.org/doc/Documentation/kernel-parameters.txt">kernel-parameters.txt</a>
@@ -434,7 +434,7 @@ $ grep -ch grml .centericq/**/history | xargs echo | \
         <h3><a name="boot"></a><a href="#toc">grml does not boot on my computer!</a></h3>
 
         <p>Please take a look at <a
-        href="http://git.grml.org/?p=grml-live.git;a=blob_plain;f=templates/GRML/grml-cheatcodes.txt;hb=HEAD">the
+        href="https://git.grml.org/f/grml-live/templates/GRML/grml-cheatcodes.txt">the
         available bootparamters and cheatcodes</a> and '<a href="#booting">Which
         ways exist to boot grml?</a>'. Especially booting with 'acpi=off noapm
         noapic' might help. The bootparameter 'failsafe' provides minimal

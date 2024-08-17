@@ -144,7 +144,7 @@
         <h3><a name="bootoptions"></a><a href="#toc">Which bootoptions does Grml support?</a></h3>
 
         <p>Check out the <a
-        href="http://git.grml.org/?p=grml-live.git;a=blob_plain;f=templates/GRML/grml-cheatcodes.txt;hb=HEAD">grml-cheatcodes
+        href="https://git.grml.org/f/grml-live/templates/GRML/grml-cheatcodes.txt">grml-cheatcodes
         file</a> (also available via <a href="http://grml.org/cheatcodes/">grml.org/cheatcodes/</a>). Of
         course <a
         href="http://www.kernel.org/doc/Documentation/kernel-parameters.txt">kernel-parameters.txt</a>

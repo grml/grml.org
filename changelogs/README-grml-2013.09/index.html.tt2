@@ -75,7 +75,7 @@
 
           <li>zshrc: to enable <em>power completion</em> / abbreviation
           expansion use "ctrl-x ." instead of ",." (see <a
-          href="http://git.grml.org/?p=grml-etc-core.git;a=blob;f=debian/NEWS;h=7c72c464a1b9c3de23b08670aac868b48bd76ec8;hb=HEAD">debian/NEWS
+          href="https://git.grml.org/f/grml-etc-core/debian/NEWS">debian/NEWS
           for details</a>)
 
           <li>Grml does not ship <em>clamav anti-virus definitions</em> any

@@ -106,10 +106,10 @@
           the root directory of that file system. Alternatively, the myconfig
           boot parameter can be used to directly specify a device which is then
           taken as DCS directory (myconfig=/dev/sda1, for example). The <a
-          href="http://git.grml.org/?p=grml-autoconfig.git;a=blob;f=doc/grml-autoconfig.200905.txt;hb=HEAD">
+          href="https://git.grml.org/f/grml-autoconfig/doc/grml-autoconfig.200905.txt">
           documentation of the behavior up to Grml 2009.05 is documented</a> as
           well as <a href="
-          http://git.grml.org/?p=grml-autoconfig.git;a=blob;f=doc/grml-autoconfig.current.txt;hb=HEAD">the
+          https://git.grml.org/f/grml-autoconfig/doc/grml-autoconfig.current.txt">the
           behavior in current Grml versions</a>. Special thanks to Marc Haber
           for his work.</li>
 
@@ -198,7 +198,7 @@
           <li>use cdn.debian.net as default mirror</li>
 
           <li>several bugfixes and more updates... check out the <a
-          href="http://git.grml.org/?p=grml-debootstrap.git;a=blob;f=debian/changelog;hb=HEAD">Debian
+          href="https://git.grml.org/f/grml-debootstrap/debian/changelog">Debian
           changelog</a> for details</li>
 
         </ul>
