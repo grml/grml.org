@@ -147,18 +147,12 @@
           <!-- fallback cgi buttons -->
           <div id="formbuttons">
             <button name="filetype" value="iso" id="download_button_mirror" class="largebutton" style="width:100%;" type="submit">Download Now </button><br />
-            <!--
-            <button name="filetype" value="bt" id="download_button_bt" type="submit">Download using BitTorrent</button><br />
-            -->
             <button name="filetype" value="signature" id="download_button_signature" type="submit">Get Checksum/Signature</button><br />
             <a href="https://grml.org/download/mirrors/">Download from a specific mirror</a><br/>
           </div>
           <!-- JS links -->
           <div id="linkbuttons" style="display:none;">
             <a id="download_link_mirror" class="largebutton">Download Now</a><br />
-            <!--
-            <a id="download_link_bt">BitTorrent Download</a><br />
-            -->
             <a id="download_link_signature">Get GPG Signature</a><br />
             <a href="https://grml.org/download/mirrors/">Download from a specific mirror</a><br/>
           </div>
@@ -186,7 +180,6 @@
           var mirror_url = "https://download.grml.org/devel/";
           document.getElementById('download_link_mirror').href = mirror_url + iso;
           document.getElementById('download_link_mirror').innerHTML = '<br />Download Now<div class="download_relinfo">' + product + '-' + flavour + ' ' + current_version + '</div>';
-          // document.getElementById('download_link_bt').href = mirror_url + iso + '.torrent';
           document.getElementById('download_link_signature').href = mirror_url + iso + '.asc';
       }
 
