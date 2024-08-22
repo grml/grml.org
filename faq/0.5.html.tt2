@@ -350,7 +350,7 @@ $ grml-lang de    # enter this in the shell to switch keyboard layout
         <p>Report bugs via the tool reportbug which is part of the package
         grml-reportbug and provided with the grml system. If you don't know
         how to handle reportbug either take a look at <a
-        href="http://wiki.grml.org/doku.php?id=bugs">the bugs-webpage in
+        href="https://github.com/grml/grml/wiki/bugs">the bugs-webpage in
         the grml-wiki</a> or you can send us your bug report via the <a
         href="http://grml.org/bugs/">bugs-webpage</a>.</p>
 

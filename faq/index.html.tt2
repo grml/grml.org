@@ -216,12 +216,12 @@
 
         <p>Check out the <a href="/grml2usb/">grml2usb manpage</a>
         and the grml-wiki page
-        &quot;<a href="http://wiki.grml.org/doku.php?id=usb">Boot Grml from usb-stick/firewire-device</a>&quot;.</p>
+        &quot;<a href="https://github.com/grml/grml/wiki/usb">Boot Grml from usb-stick/firewire-device</a>&quot;.</p>
 
         <h3><a name="store"></a><a name="persistency"></a><a href="#toc">Is it possible to store my settings?</a></h3>
 
         <p>Yes, using the
-        <a href="http://wiki.grml.org/doku.php?id=persistency">persistency
+        <a href="https://github.com/grml/grml/wiki/persistency">persistency
         feature</a>.</p>
 
         <h3><a name="password"></a><a href="#toc">What are the passwords of users on Grml?</a></h3>
@@ -317,7 +317,7 @@ grml keyboard=de xkeyboard=de lang=at # enter this at the bootprompt
         <p>It is possible to boot Grml via USB (e.g. USB stick or
         harddisk), firewire, or running from a Compact Flash disk. It
         works out of the box; you don't need to modify anything. Check
-        out <a href="http://wiki.grml.org/doku.php?id=usb">the usb
+        out <a href="https://github.com/grml/grml/wiki/usb">the usb
         webpage in the grml-wiki</a> for more details.</p>
 
         <p>Your computer can not boot from CD-ROM but provides a

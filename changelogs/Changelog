@@ -9,7 +9,7 @@ Release 1.0 - codename Meilenschwein (20070518)
 ===============================================
 
 Fixed several bugs and issues reported on
-http://wiki.grml.org/doku.php?id=grml_0.9
+https://github.com/grml/grml/wiki/grml_0.9
 
 New grml-scripts (some selected ones):
 
@@ -146,7 +146,7 @@ Added 109 new packages (exluding lib* and *2.6.20-grml*):
   xserver-xorg-input-void xserver-xorg-video-intel xsteg xwatchwin zfs-fuse zzuf
 
 If you find a problem with the release please check
- http://wiki.grml.org/doku.php?id=grml_0.9
+ https://github.com/grml/grml/wiki/grml_0.9
 and report problems using information on http://grml.org/bugs/
 
 20061206
@@ -156,7 +156,7 @@ Release 0.9 - Codename Dioptrienotto (20061206)
 ================================================
 
 Fixed several bugs and issues reported on
-http://wiki.grml.org/doku.php?id=grml_0.8
+https://github.com/grml/grml/wiki/grml_0.8
 
 New grml-scripts (some selected ones):
 
@@ -277,7 +277,7 @@ Added 113 new packages (exluding lib* and *2.6.18-grml*):
   xserver-xorg-video-ivtv youtube-dl
 
 If you find a problem with the release please check
- http://wiki.grml.org/doku.php?id=grml_0.9
+ https://github.com/grml/grml/wiki/grml_0.9
 and report problems using information on http://grml.org/bugs/
 
 20060813
@@ -287,7 +287,7 @@ Release 0.8 - Codename Funkenzutzler (20060813)
 ================================================
 
 Fixed several bugs and issues reported on
-http://wiki.grml.org/doku.php?id=grml_0.7
+https://github.com/grml/grml/wiki/grml_0.7
 
 New grml-scripts (some selected ones):
 
@@ -398,7 +398,7 @@ Updates:
   xfonts-encodings xfonts-utils xkb-data xorg xutils-dev
 
 If you find a problem with the release please check
- http://wiki.grml.org/doku.php?id=grml_0.8
+ https://github.com/grml/grml/wiki/grml_0.8
 and report problems using information on http://grml.org/bugs/
 
 20060410
@@ -413,7 +413,7 @@ Fixed several bugs, including:
   #20  grml-0.6: GRMLCFG does not work with floppy disk
   #21  hgrep:    hgrep returns always success
 
-and issues reported on http://wiki.grml.org/doku.php?id=grml_0.6
+and issues reported on https://github.com/grml/grml/wiki/grml_0.6
 
 Several improved, updated and extended configuration files.
 
@@ -501,7 +501,7 @@ Added 48 new packages (exluding lib* and *2.6.16-grml*):
   unixcw user-setup
 
 If you find a problem with the release please check
- http://wiki.grml.org/doku.php?id=grml_0.7
+ https://github.com/grml/grml/wiki/grml_0.7
 and report problems using information on http://grml.org/bugs/
 
 20060122
@@ -511,7 +511,7 @@ Release 0.6 - Codename Winterschlapfn (20060122)
 ================================================
 
 Fixed several bugs, including issues reported on
-http://wiki.grml.org/doku.php?id=grml_0.5
+https://github.com/grml/grml/wiki/grml_0.5
 
 Several improved, updated and extended configuration files.
 
@@ -633,7 +633,7 @@ Added 99 new packages (exluding lib* and *2.6.15-grml*):
   xcompmgr xen-tools xfree86-driver-synaptics xtrace xwit zsplit
 
 If you find a problem with the release please check
- http://wiki.grml.org/doku.php?id=grml_0.6
+ https://github.com/grml/grml/wiki/grml_0.6
 and report problems using information on http://grml.org/bugs/
 
 20051024

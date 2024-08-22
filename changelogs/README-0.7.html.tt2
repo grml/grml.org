@@ -53,7 +53,7 @@
         </ul>
 
         <p>and issues reported on <a
-        href="http://wiki.grml.org/doku.php?id=grml_0.6">grml_0.6 @
+        href="https://github.com/grml/grml/wiki/grml_0.6">grml_0.6 @
         grml-wiki</a>.</p>
 
         <h3>New features</h3>
@@ -87,7 +87,7 @@
 
         <p>See <a href="/grml2hd/">grml.org/grml2hd/</a> for more details.</p>
 
-        <h4><a href="http://wiki.grml.org/doku.php?id=usb">grml2usb</a> (install grml
+        <h4><a href="https://github.com/grml/grml/wiki/usb">grml2usb</a> (install grml
         to usb stick):</h4>
 
         <ul>
@@ -132,8 +132,8 @@
 
          <p>Notice: madwifi-ng is available in /usr/src as debian package but not
          pre-installed because of conflicts with madwifi. Some more modules (for
-         example <a href="http://wiki.grml.org/doku.php?id=ati">fglrx</a> and <a
-         href="http://wiki.grml.org/doku.php?id=nvidia">nvidia</a>) are not
+         example <a href="https://github.com/grml/grml/wiki/ati">fglrx</a> and <a
+         href="https://github.com/grml/grml/wiki/nvidia">nvidia</a>) are not
          pre-installed but available through the <a
          href="http://grml.org/repos/">grml-repository</a>.</p>
 
@@ -187,12 +187,12 @@
          <h3>Known issues</h3>
 
          <p>None reported so far. Take a look at <a
-         href="http://wiki.grml.org/doku.php?id=grml_0.7">grml_0.7 @ grml-wiki</a>
+         href="https://github.com/grml/grml/wiki/grml_0.7">grml_0.7 @ grml-wiki</a>
          and <a href="http://bugs.grml.org/">the grml bug tracking system</a>.</p>
 
          <p>Your comments, bug reports, patches, and suggestions will help fix bugs
          and improve future releases. If you find a problem with the release please
-         check <a href="http://wiki.grml.org/doku.php?id=grml_0.7">grml_0.7 @
+         check <a href="https://github.com/grml/grml/wiki/grml_0.7">grml_0.7 @
          grml-wiki</a> and report problems using information on <a
          href="/bugs/">grml.org/bugs/</a>.</p>
 

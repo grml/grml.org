@@ -201,7 +201,7 @@
 
         <h3>More Information</h3>
 
-        <p>You can find out more about Grml on <a href="/">our website</a>, <a href="/contact/#irc">IRC channel</a>, and <a href="https://wiki.grml.org/">wiki</a>.
+        <p>You can find out more about Grml on <a href="/">our website</a>, <a href="/contact/#irc">IRC channel</a>, and <a href="https://github.com/grml/grml/wiki">wiki</a>.
         <p>To sign up for future Grml announcements, please subscribe to <a href="http://ml.grml.org/mailman/listinfo/grml-announce">Grml's announcement list</a> or follow our <a href="https://blog.grml.org/">blog</a>.</p>
 
 </div>

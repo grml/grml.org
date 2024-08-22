@@ -1,3 +1,3 @@
 results of grml user survey available
 
-The results of the grml user survey are <a href="http://wiki.grml.org/doku.php?id=survey07">available in the grml-wiki</a>.
+The results of the grml user survey are <a href="https://github.com/grml/grml/wiki/survey07">available in the grml-wiki</a>.

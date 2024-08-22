@@ -56,7 +56,7 @@
         <h3>Known issues</h3>
 
         <p>Take a look at <a
-        href="http://wiki.grml.org/doku.php?id=grml64-medium_0.1">grml64-medium_0.1
+        href="https://github.com/grml/grml/wiki/grml64-medium_0.1">grml64-medium_0.1
         @ grml-wiki</a>.  Please report problems using information on
         <a href="/bugs/">grml.org/bugs/</a>.</p>
 
@@ -70,7 +70,7 @@
         <p>Your comments, bug reports, patches, and suggestions will
         help fix bugs and improve future releases. If you find a
         problem with the release please check <a
-        href="http://wiki.grml.org/doku.php?id=grml64-medium_0.1">grml64-medium_0.1
+        href="https://github.com/grml/grml/wiki/grml64-medium_0.1">grml64-medium_0.1
         @ grml-wiki</a> and report problems using information on <a
         href="/bugs/">grml.org/bugs/</a>. Please send your feedback,
         feature requests and bug reports to the grml-team!</p>

@@ -33,7 +33,7 @@ Notice that there are several hacks to reduce the ISO-size, so you won't
 find for example documentation and manpages on the ISO.
 
 grml-small provides support for booting via USB, see
-http://wiki.grml.org/doku.php?id=usb for details.
+https://github.com/grml/grml/wiki/usb for details.
 
 Kernel is based on vanilla kernel 2.6.12 including several patches
 (MPPC/MPPE, Reiser4, Squashfs,...) but compared with the normal grml

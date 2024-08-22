@@ -57,7 +57,7 @@ New features:
   * udev fully replaces hotplug-light and discover.
   * booting via usb / firewire works out of the box; install grml-small
     on your usb-stick via grml2usb, see
-    http://wiki.grml.org/doku.php?id=usb for more details
+    https://github.com/grml/grml/wiki/usb for more details
   * configuration-framework: new bootparameters and scripts (save-config
     and restore-config), see http://grml.org/config/ for more details.
   * Merged/updated to features from grml(-large) [as far as possible].
@@ -80,7 +80,7 @@ Notes:
     you e.g. won't find documentation and manpages on the ISO.
 
   * grml-small provides support for booting via USB, see
-    http://wiki.grml.org/doku.php?id=usb for details.
+    https://github.com/grml/grml/wiki/usb for details.
 
   * To fit on a 55MB-ISO the software list has been reduced of
     course, see section "Debian-Information" on http://grml.org/files/ for more
@@ -105,7 +105,7 @@ Added 26 new packages (exluding lib* and *2.6.15-grml*):
   whiptail yaird
 
 If you find a problem with the release please check
- http://wiki.grml.org/doku.php?id=grml-small_0.2
+ https://github.com/grml/grml/wiki/grml-small_0.2
 and report problems using information on http://grml.org/bugs/
 
 Changes since release 0.1 (20050705)

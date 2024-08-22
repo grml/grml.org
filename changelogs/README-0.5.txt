@@ -203,7 +203,7 @@ Added 262 new packages (exluding lib* and *2.6.13-grml*):
 
 
 If you find a problem with the release please check
- http://wiki.grml.org/doku.php?id=grml_0.5
+ https://github.com/grml/grml/wiki/grml_0.5
 and report problems using information on http://grml.org/bugs/
 
 Changes since release 0.4 (20050515)

@@ -46,7 +46,7 @@
         <h3>Bugfixes</h3>
 
         <p>Fixed several bugs and and issues reported on <a
-        href="http://wiki.grml.org/doku.php?id=grml_0.9">grml_0.9 @
+        href="https://github.com/grml/grml/wiki/grml_0.9">grml_0.9 @
         grml-wiki</a>.</p>
 
         <h3>New features</h3>
@@ -174,8 +174,8 @@
 
          <p>Notice: some more modules
 	 <!-- <a
-         href="http://wiki.grml.org/doku.php?id=ati">fglrx</a> and <a
-         href="http://wiki.grml.org/doku.php?id=nvidia">nvidia</a>)
+         href="https://github.com/grml/grml/wiki/ati">fglrx</a> and <a
+         href="https://github.com/grml/grml/wiki/nvidia">nvidia</a>)
 	 -->
 	 are not pre-installed but available through the <a href="http://deb.grml.org/">grml-repository</a>.</p>
 
@@ -190,7 +190,7 @@
          yet UTF-8 aware (problem is located upstream, neither at Debian
          or grml itself). More information about UTF-8 at grml can be
          found at the <a
-         href="http://wiki.grml.org/doku.php?id=utf8">utf8 webpage in
+         href="https://github.com/grml/grml/wiki/utf8">utf8 webpage in
          the grml-wiki</a>.</p>
 
          <p><strong>get_tw_cli / get_3ware:</strong> get_tw_cli has been
@@ -259,7 +259,7 @@
 
          <p>As usual you can upgrade your grml harddisk system to the latest grml
          version running 'apt-get update; apt-get install grml'. Take a look at <a
-         href="http://wiki.grml.org/doku.php?id=upgrading">the upgrading webpage in
+         href="https://github.com/grml/grml/wiki/upgrading">the upgrading webpage in
          the grml-wiki</a> as well. Notice: If you are using grml in a productive
          environment and/or use a grml2hd installation we strongly recommend to
          subscribe to <a href="http://grml.org/mailinglist/">the grml-user
@@ -277,12 +277,12 @@
          <h3>Known issues</h3>
 
 	 <p>Take a look at <a
-	 href="http://wiki.grml.org/doku.php?id=release_candidate">grml_release
+	 href="https://github.com/grml/grml/wiki/release_candidate">grml_release
 	 candidate @ grml-wiki</a>.  Please report problems using
 	 information on <a href="/bugs/">grml.org/bugs/</a>.</p>
 	 <!--
          <p>Take a look at <a
-         href="http://wiki.grml.org/doku.php?id=grml_1.0">grml_1.0 @ grml-wiki</a>.
+         href="https://github.com/grml/grml/wiki/grml_1.0">grml_1.0 @ grml-wiki</a>.
          Please report problems using information on <a
          href="/bugs/">grml.org/bugs/</a>.</p>
 	 -->
@@ -297,7 +297,7 @@
 	 <!--
          <p>Your comments, bug reports, patches, and suggestions will help fix bugs
          and improve future releases. If you find a problem with the release please
-         check <a href="http://wiki.grml.org/doku.php?id=grml_1.0">grml_1.0 @
+         check <a href="https://github.com/grml/grml/wiki/grml_1.0">grml_1.0 @
          grml-wiki</a> and report problems using information on <a
          href="/bugs/">grml.org/bugs/</a>. Please send your feedback, feature
          requests and bug reports to the grml-team!</p>
@@ -306,7 +306,7 @@
 	 <p>Your comments, bug reports, patches, and suggestions will
 	 help fix bugs and improve the upcoming stable release. If you
 	 find a problem with the release candidate please check <a
-	 href="http://wiki.grml.org/doku.php?id=release_candidate">grml_release
+	 href="https://github.com/grml/grml/wiki/release_candidate">grml_release
 	 candidate @ grml-wiki</a> and report problems using information
 	 on <a href="/bugs/">grml.org/bugs/</a>. Please send your
 	 feedback, feature requests and bug reports to the
