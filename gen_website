@@ -13,7 +13,7 @@ use File::Temp qw (tempdir);
 use lib '/usr/share/perl5/';
 
 my $have_mirmon = 0;
-my $masterlist = '/usr/local/src/grml-mirrors/Mirrors.masterlist';
+my $masterlist = '/var/www/download.grml.org/grml-mirrors/Mirrors.masterlist';
 my $mirmonconf = '/etc/mirmon.conf';
 
 my $fh;
