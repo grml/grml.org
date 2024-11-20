@@ -2,6 +2,7 @@ RewriteEngine on
 RewriteRule index.html$  https://michael-prokop.at/blog/2007/12/22/make-console-work-comfortable/
 RewriteRule ^$           https://michael-prokop.at/blog/2007/12/22/make-console-work-comfortable/
 RewriteRule zshrc(/?)$   https://git.grml.org/f/grml-etc-core/etc/zsh/zshrc
+RewriteRule zshrc.local(/?)$   https://git.grml.org/f/grml-etc-core/etc/skel/.zshrc
 RewriteRule vimrc(/?)    https://git.grml.org/f/grml-etc-core/etc/vim/vimrc
 RewriteRule screenrc(/?) https://git.grml.org/f/grml-etc-core/etc/grml/screenrc_generic
 RewriteRule tmux.conf(/?) https://git.grml.org/f/grml-etc-core/etc/tmux.conf
