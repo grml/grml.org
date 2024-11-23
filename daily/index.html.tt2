@@ -1,44 +1,43 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<!DOCTYPE html>
+<html>
 <head>
-<title>grml.org: daily grml snapshots / builds</title>
+<title>grml.org - Daily Build</title>
+<meta name="Title" content="grml.org - Daily Build" />
+<meta name="Author" content="the grml team [www.grml.org/team/]" />
+<meta name="Keywords" content="grml.org, grml" />
+<meta name="Description" content="Information on daily builds" />
+<meta name="Abstract" content="grml, just another linux-distribution" />
 <meta name="Robots" content="index,follow" />
 <meta name="Language" content="english" />
-<meta name="identifier-url" content="https://daily.grml.org/" />
+<meta name="identifier-url" content="https://grml.org/" />
 <meta http-equiv="imagetoolbar" content="no" />
-<meta http-equiv="content-Type" content="application/xhtml+xml; charset=iso-8859-1" />
-<link rel="home" href="https://grml.org/" title="grml.org" />
+<link rel="home" href="/" title="grml.org" />
 <link rel="help" href="/features/" title="About" />
 <link rel="author" href="/team/" title="Team" />
-<link rel="contents" href="/sitemap/" title="Sitemap" />
-<link rel="search" href="/search/" title="Search" />
 <link rel="icon" href="/favicon.png" type="image/png" />
-<link rel="alternate" type="application/rss+xml" title="Subscribe RSS-feed" href="/index.rss" />
-<link rel="stylesheet" href="style.css" type="text/css" />
+<link rel="stylesheet" href="/style.css" type="text/css" />
 </head>
 
 <body>
+[% INCLUDE static.inc %]
 
-<div class="container">
-<div class="content">
+      <div class="content">
 
 <h1>Daily Grml snapshots</h1>
-
-<img src="../img/logo.png" style="float: right; margin-left: 20px" alt="*" />
 
 <h2>About</h2>
 
 <p>This page provides <strong>automatically generated snapshots</strong> of
-the <a href="https://grml.org/">Grml Linux Live system</a> which were built
-using <a href="https://grml.org/grml-live/">grml-live</a>. If you don't know
-what Grml is, please see <a href="https://grml.org/faq/">the Grml FAQ</a>.</p>
+the <a href="/">Grml Linux Live system</a> which were built
+using <a href="/grml-live/">grml-live</a>. If you don't know
+what Grml is, please see <a href="/faq/">the Grml FAQ</a>.</p>
 
 <p>WARNING: Feel free to use the ISOs but please note that they are not
-official <a href="https://grml.org/download/">stable releases</a>. They contain
+official <a href="/download/">stable releases</a>. They contain
 the latest code, but bugs are also likely. In fact, these snapshots may not
 work at all. So: <strong>PLEASE USE THEM WITH CAUTION!</strong></p>
 
-<p>Please <a href="https://grml.org/bugs/">report any bugs you notice</a>.</p>
+<p>Please <a href="/bugs/">report any bugs you notice</a>.</p>
 
 <h2>Download</h2>
 
@@ -123,11 +122,11 @@ of the respective Grml flavour (as well as the latest snapshot).
 
 <h2>Contact</h2>
 
-<p>Problems? Questions? <a href="https://grml.org/contact/">Contact us</a>.  But
+<p>Problems? Questions? <a href="/contact/">Contact us</a>.  But
 please do not forget to provide all the relevant information (especially which
 Grml flavour and version you are referring to).</p>
 
-</div>
-</div>
-</body>
-</html>
+
+      </div>
+
+[% INCLUDE static_bottom.inc %]
