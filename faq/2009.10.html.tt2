@@ -5,7 +5,7 @@
 <meta name="Author" content="the grml team [www.grml.org/team/]" />
 <meta name="Keywords" content="grml.org, grml" />
 <meta name="Description" content="FAQ of grml.org" />
-<meta name="Abstract" content="grml, just another linux-distribution" />
+<meta name="Abstract" content="Grml, a Live Linux distribution" />
 <meta name="Robots" content="index,follow" />
 <meta name="Language" content="english" />
 <meta name="identifier-url" content="https://grml.org/" />
@@ -506,14 +506,14 @@ SQUASHFS error: Unable to read inode [.....]</pre>
 
         <h3><a name="isolinux"></a><a href="#toc">Where's the old bootsplash?</a></h3>
 
-        <p>Starting with release 2009.10 Grml provides a menu based bootsplash. 
-        To adjust boot options just press the TAB-key. To directly switch to the 
-        old-style isolinux cmdline just press the escape key within 30 seconds. If you 
-        still need access to the old bootsplash layout (including the f2, f3,... 
+        <p>Starting with release 2009.10 Grml provides a menu based bootsplash.
+        To adjust boot options just press the TAB-key. To directly switch to the
+        old-style isolinux cmdline just press the escape key within 30 seconds. If you
+        still need access to the old bootsplash layout (including the f2, f3,...
         pages with further information regarding available bootoptions)
         select the entry 'Isolinux prompt' in the menu based bootsplash (just
-        press 'i' and ENTER for direct access to it). The timeout until either 
-        the selected entry is booted (if specified) or until the system will 
+        press 'i' and ENTER for direct access to it). The timeout until either
+        the selected entry is booted (if specified) or until the system will
         restore from the cmdline to the menu based bootsplash is 30 seconds.</p>
 
         <h3><a name="configure"></a><a href="#toc">Which tools exist to configure grml?</a></h3>
