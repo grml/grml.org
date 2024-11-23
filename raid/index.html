@@ -8,40 +8,6 @@
 
 <h1>RAID with Linux</h1>
 
-<h2>'Real' Hardware RAID</h2>
-
-<h3>3ware controller</h3>
-
-<p><a href="http://www.3ware.com/">3ware</a> controllers are supported in Vanilla
-kernel since 'ages'. A command line interface namend <a
-href="http://www.panduck.com/media/tw_cli.8.html">tw_cli</a> is available on <a
-href="http://www.3ware.com/support/download.asp">the download webpage at
-3ware.com</a>. A webinterface (providing remote access) is available through the
-debian-unofficial.org-project:
-
-<pre class="rahmen">
-deb     http://ftp.debian-unofficial.org/debian sarge main contrib non-free restricted
-deb-src http://ftp.debian-unofficial.org/debian sarge main contrib non-free restricted</pre>
-
-There are two packages available: 3ware-3dm2-new-binary (for 3ware 9550SX) and
-3ware-3dm2-old-binary (for 3ware 700x, 750x, 800x, 850x, 900xS, 950xS).
-3ware-3dm2-old-binary is included in <a href="http://grml.org/">grml</a>.
-
-<h3>ICP Vortex</h3>
-
-<p><a href="http://www.icp-vortex.com/">ICP Vortex</a> should work as well and
-provides <a
-href="http://www.vortex.de/german/download/rz_neu/linux/linux_d.htm">linux
-drivers</a> as well, but I've no experience in using them yet...</p>
-
-<h2>'Fake' Hardware RAID</h2>
-
-<p>That's stuff like Intel ICHx, VIA, Silicon, Adaptec and Promise RAID. Accessing
-such a RAID is possible with kernel 2.6 using <a
-href="http://sources.redhat.com/dm/">device mapper ('DM')</a> and <a
-href="http://people.redhat.com/~heinzm/sw/dmraid/">dmraid</a> (both provided by <a
-href="http://grml.org/">grml</a>) [kernel 2.4 requires ataraid].</p>
-
 <h2>Linux Software RAID</h2>
 
 <p>Important: there's a lot of documentation hanging around, describing how to use
@@ -70,28 +36,6 @@ cat /proc/mdstat                  # now wait until raid sync has finished (other
 SWRAID='mbr-only' grml2hd /dev/md0 --mbr /dev/md0   # install grml to raid
 cat /proc/mdstat                  # again wait until raid sync has finished
 </pre>
-
-<!--
-<p>To be able to boot your system now you have to make sure that lilo is installed on
-the first partition - in this case /dev/hda1.  Therefore stop /dev/md0 running 'mdadm
---manage --stop /dev/md0' and run lilo with the following /etc/lilo.conf (just the
-relevant part of it):</p>
-
-<pre class="rahmen">
-boot=/dev/hda1 # maybe even with 'bios=0x80'? not yet sure if needed
-root=/dev/md0</pre>
-
-<p>Now reboot into your harddisk installation. Important: if the first partition (in
-this case /dev/hda) is removed lilo won't boot anymore. Therefore we have to rerun
-lilo setting the following options in /etc/lilo.conf:</p>
-
-<pre class="rahmen">
-boot=/dev/md0
-root=/dev/md0
-raid-extra-boot=/dev/hda,/dev/hdc</pre>
-
-<p>That's it.</p>
--->
 
 <h3>Often needed commands</h3>
 
