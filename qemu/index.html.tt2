@@ -68,7 +68,7 @@ qemu -m 256 -cdrom /path/to/grml.iso # if running from harddisk
         <p><a href="qemu-1.png"><img style="border: 0" src="qemu-1.jpg"
         alt="screenshot 1" /></a> </p>
 
-        <p>First of all download <a href="http://www.h7.dion.ne.jp/~qemu-win/">QEMU
+        <p>First of all download <a href="https://www.qemu.org/download/#windows">QEMU
         for Windows</a>. <a href="/download/">Download
         the grml-iso</a> and put the QEMU files in the same directory as the
         grml-iso.</p>
