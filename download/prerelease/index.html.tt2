@@ -99,10 +99,8 @@
           <a href="https://grml.org/download/mirrors/">Download from a specific mirror</a><br/>
           <br/>
           Direct download links:<br/>
-          <a href="https://download.grml.org/devel/grml96-full_2024.02-rc1.iso">Grml96 full ISO</a> [<a href="https://download.grml.org/devel/grml96-full_2024.02-rc1.iso.asc">GPG Signature</a>]<br/>
           <a href="https://download.grml.org/devel/grml64-full_2024.02-rc1.iso">Grml64 full ISO</a> [<a href="https://download.grml.org/devel/grml64-full_2024.02-rc1.iso.asc">GPG Signature</a>]<br/>
           <a href="https://download.grml.org/devel/grml32-full_2024.02-rc1.iso">Grml32 full ISO</a> [<a href="https://download.grml.org/devel/grml32-full_2024.02-rc1.iso.asc">GPG Signature</a>]<br/>
-          <a href="https://download.grml.org/devel/grml96-small_2024.02-rc1.iso">Grml96 small ISO</a> [<a href="https://download.grml.org/devel/grml96-small_2024.02-rc1.iso.asc">GPG Signature</a>]<br/>
           <a href="https://download.grml.org/devel/grml64-small_2024.02-rc1.iso">Grml64 small ISO</a> [<a href="https://download.grml.org/devel/grml64-small_2024.02-rc1.iso.asc">GPG Signature</a>]<br/>
           <a href="https://download.grml.org/devel/grml32-small_2024.02-rc1.iso">Grml32 small ISO</a> [<a href="https://download.grml.org/devel/grml32-small_2024.02-rc1.iso.asc">GPG Signature</a>]<br/>
           <br/>
@@ -111,23 +109,27 @@
     </div>
 
     <div class="download_group" id="download_group1" style="display:none;">
-      <form method="get" action="/download/bounce/">
+      <form method="get" action="/download/bounce/" id="download_form">
       <input type="hidden" name="version" value="2024.02-rc1"/>
       <div class="download_panel" id="download_panel1">
         <div>
 
           <h2>Options</h2>
 
-          <select name="flavour" id="download_flavour" style="width:100%;">
-          <option value="full" selected="selected">grml-full (~900MB)</option>
-          <option value="small">grml-small (~495MB)</option>
-          </select>
+          <input type="radio" id="flavour_full" name="flavour" value="full" checked />
+          <label for="flavour_full">full (~900MB)</label>
+
+          <input type="radio" id="flavour_small" name="flavour" value="small" />
+          <label for="flavour_small">small (~495MB)</label>
+
           <br /><br />
-          <select name="arch" id="download_arch" style="width:100%;">
-          <option value="amd64" selected="selected">64-bit PC (amd64)</option>
-          <option value="i386">32-bit PC (i686+)</option>
-          <option value="96">One for both (~1.7GB)</option>
-          </select>
+
+          <input type="radio" id="arch_amd64" name="arch" value="amd64" checked />
+          <label for="arch_amd64">64-bit PC (amd64)</label>
+
+          <input type="radio" id="arch_i386" name="arch" value="i386" />
+          <label for="arch_i386">32-bit PC (i686+)</label>
+
           <br />
           <br />
           <br />
@@ -160,21 +162,15 @@
       </form>
 
       <script>
-      function update_arch() {
-          var flavour = document.getElementById('download_flavour').value;
-          if (flavour == 'small') document.getElementById('download_arch').innerHTML = '<option value="amd64">64-bit PC (amd64)</option><option value="i386">32-bit PC (i686+)</option><option value="96">One for both (~920MB)</option>';
-          if (flavour == 'full') document.getElementById('download_arch').innerHTML = '<option value="amd64">64-bit PC (amd64)</option><option value="i386">32-bit PC (i686+)</option><option value="96">One for both (~1.7GB)</option>';
-          update_links();
-      }
 
       function update_links() {
-          var current_version = "2024.02-rc1";
+          var formData = new FormData(document.getElementById('download_form'));
+          var current_version = formData.get('version');
+          var arch = formData.get('arch');
+          var flavour = formData.get('flavour');
           var product = 'grml';
-          var arch = document.getElementById('download_arch').value;
-          var flavour = document.getElementById('download_flavour').value;
           if (arch == 'amd64') product = 'grml64';
           if (arch == 'i386') product = 'grml32';
-          if (arch == '96') product = 'grml96';
           var iso = product + '-' + flavour + '_' + current_version + '.iso';
           var mirror_url = "https://download.grml.org/devel/";
           document.getElementById('download_link_mirror').href = mirror_url + iso;
@@ -183,8 +179,9 @@
       }
 
       // hook update function
-      document.getElementById('download_flavour').onchange = update_arch;
-      document.getElementById('download_arch').onchange = update_links;
+      document.querySelectorAll('#download_form input').forEach(function (elem) {
+        elem.onchange = update_links;
+      });
       // force initial link href set
       update_links();
       // only show our link "buttons"
