@@ -73,4 +73,4 @@ src="/img/grmlshirt_0.9.jpg" alt="the grml 0.9 shirt" /></a></p>
 
 <h3>Further Questions?</h3>
 
-<p><a href="http://grml.org/contact/">Contact us.</a></p>
+<p><a href="/contact/">Contact us.</a></p>

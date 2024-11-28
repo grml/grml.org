@@ -102,7 +102,7 @@ epdfview febootstrap makedev python-gnupginterface xulrunner-10.0
 <h3>Download Grml 2013.09</h3>
 
 <p>Grml 2013.09 can be downloaded from
-<a href="http://grml.org/download/">grml.org/download/</a>.</p>
+<a href="/download/">grml.org/download/</a>.</p>
 
 <h3>Feedback</h3>
 

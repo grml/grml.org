@@ -331,4 +331,4 @@ from <a href="http://daily.grml.org/">daily.grml.org</a>.</p>
 
 <h3>Further Questions?</h3>
 
-<p>Please feel free to <a href="http://grml.org/contact/">contact us.</a></p>
+<p>Please feel free to <a href="/contact/">contact us.</a></p>

@@ -81,7 +81,7 @@ limit is obviously a hard barrier. </p>
 users of non-Debian-based distros. What do you like, what's missing,
 what's bad for you? <a href="http://feedback.grml.org/">Send and
   share your feedback</a> or <a
-  href="http://grml.org/contact/">drop us a message</a>!</p>
+  href="/contact/">drop us a message</a>!</p>
 
 <strong>Thanks to everyone taking part in our survey!</strong>
 
@@ -581,7 +581,7 @@ etc.</p>
 for example KVM, others will not be included due to licensing
 issues. For a complete list of packages shipped by Grml have a look
 at <a
-  href="http://grml.org/files/release-2010.12/dpkg_get_selections">http://grml.org/files/release-2010.12/dpkg_get_selections
+  href="/files/release-2010.12/dpkg_get_selections">/files/release-2010.12/dpkg_get_selections
   </a></p>
 
 <p>We are currently in the process of reviewing all suggested

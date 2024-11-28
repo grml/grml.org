@@ -5,7 +5,7 @@ title = 'Release Notes: Grml 2012.05 - Codename Ponyhof'
 <p><a href="/screenshots/"><img align="right" style="margin-left: 20px;
 border: 0" src="/screenshots/grml_2012.05.jpg" alt="*" /></a></p>
 
-<p><a href="http://grml.org/download/">Download Now</a></p>
+<p><a href="/download/">Download Now</a></p>
 
 <h3>About</h3>
 
@@ -100,7 +100,7 @@ href="/bugs/">grml.org/bugs/</a>.</p>
 <h3>Download Grml 2012.05</h3>
 
 <p>Grml 2012.05 can be downloaded from
-<a href="http://grml.org/download/">grml.org/download/</a>.</p>
+<a href="/download/">grml.org/download/</a>.</p>
 
 <h3>Feedback</h3>
 

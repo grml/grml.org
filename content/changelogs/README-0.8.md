@@ -151,7 +151,7 @@ spca5xx, sysprof, thinkpad, tidev, truecrypt, vaiostat, zd1211
 href="https://github.com/grml/grml/wiki/ati">fglrx</a> and <a
 href="https://github.com/grml/grml/wiki/nvidia">nvidia</a>) are not
 pre-installed but available through the <a
-href="http://grml.org/repos/">grml-repository</a>.</p>
+href="/repos/">grml-repository</a>.</p>
 
 <p>See <a href="/kernel/">grml.org/kernel/</a> for more details regarding
 the grml-kernel.</p>
@@ -186,7 +186,7 @@ apt-get install libgl1-mesa-dri/experimental libgl1-mesa-glx/experimental
 <h3>Packages / Software</h3>
 
 <p>Details about shipped packages and their versions on grml are available at
-the <a href="http://grml.org/files/#debian">Debian section</a>.</p>
+the <a href="/files/#debian">Debian section</a>.</p>
 
 <h3>Updates</h3>
 
@@ -247,19 +247,19 @@ version running 'apt-get update; apt-get install grml'. Take a look at <a
 href="https://github.com/grml/grml/wiki/upgrading">the upgrading webpage in
 the grml-wiki</a> as well. Notice: If you are using grml in a productive
 environment and/or use a grml2hd installation we strongly recommend to
-subscribe to <a href="http://grml.org/mailinglist/">the grml-user
+subscribe to <a href="/mailinglist/">the grml-user
 mailinglist</a>!</p>
 
 <h3>Changes since release 0.7 (20060410)</h3>
 
 <ul>
-  <li>grml on <a href="http://grml.org/news/#wlt06">linuxdays graz and
+  <li>grml on <a href="/news/#wlt06">linuxdays graz and
   vienna 2006</a>
   <li>grml <a
   href="http://grml.supersized.org/archives/159-grml-in-the-german-LinuxUser-magazine.html">in
   the German LinuxUser magazine</a>.
   <li><a href="http://planet.grml.org/">Planet grml</a> available.
-  <li>Timo Boettcher joined <a href="http://grml.org/team/">the
+  <li>Timo Boettcher joined <a href="/team/">the
   grml-team</a>.
 </ul>
 
@@ -322,4 +322,4 @@ src="/img/grmlshirt_0.8.jpg" alt="the grml 0.8 shirt" /></a></p>
 
 <h3>Further Questions?</h3>
 
-<p><a href="http://grml.org/contact/">Contact us.</a></p>
+<p><a href="/contact/">Contact us.</a></p>

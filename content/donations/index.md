@@ -74,7 +74,7 @@ receive information regarding the account.</p>
   <li>ppc system (for ppc port)</li>
   <li>build server</li>
   <li>all kind of hardware for use with <a
-  href="http://grml.org/kernel/#modules">the extra modules of the grml-kernel</a></li>
+  href="/kernel/#modules">the extra modules of the grml-kernel</a></li>
 </ul>
 
 <p>Any other kind of hardware is welcome too of course. Please <a

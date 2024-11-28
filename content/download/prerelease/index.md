@@ -74,7 +74,7 @@ You have been warned.</strong><br />
 <div class="download_group" id="download_group1_noscript">
 <div class="download_panel" id="download_panel1_noscript">
 <div>
-  <a href="https://grml.org/download/mirrors/">Download from a specific mirror</a><br/>
+  <a href="/download/mirrors/">Download from a specific mirror</a><br/>
   <br/>
   Direct download links:<br/>
   <a href="https://download.grml.org/devel/grml64-full_2024.02-rc1.iso">Grml64 full ISO</a> [<a href="https://download.grml.org/devel/grml64-full_2024.02-rc1.iso.asc">GPG Signature</a>]<br/>
@@ -127,13 +127,13 @@ You have been warned.</strong><br />
   <div id="formbuttons">
     <button name="filetype" value="iso" id="download_button_mirror" class="largebutton" style="width:100%;" type="submit">Download Now </button><br />
     <button name="filetype" value="signature" id="download_button_signature" type="submit">Get Checksum/Signature</button><br />
-    <a href="https://grml.org/download/mirrors/">Download from a specific mirror</a><br/>
+    <a href="/download/mirrors/">Download from a specific mirror</a><br/>
   </div>
   <!-- JS links -->
   <div id="linkbuttons" style="display:none;">
     <a id="download_link_mirror" class="largebutton">Download Now</a><br />
     <a id="download_link_signature">Get GPG Signature</a><br />
-    <a href="https://grml.org/download/mirrors/">Download from a specific mirror</a><br/>
+    <a href="/download/mirrors/">Download from a specific mirror</a><br/>
   </div>
 </div>
 </div>
@@ -217,7 +217,7 @@ Once you have <em>SHA256SUMS</em> and <em>SHA256SUMS.gpg</em> in the same direct
 gpg --keyid-format long --verify SHA256SUMS.gpg SHA256SUMS
 </code>
 
-<p>If you don't have <a href="https://grml.org/download/gnupg-michael-prokop.txt">our GnuPG signing key</a>
+<p>If you don't have <a href="/download/gnupg-michael-prokop.txt">our GnuPG signing key</a>
 (key ID <em>0x96A87872B7EA3737</em>, fingerprint <em>33CC B136 401A FEC8 43A3  8763 96A8 7872 B7EA 3737</em>), run:</p>
 
 <code class="keyboard">

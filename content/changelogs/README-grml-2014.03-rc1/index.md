@@ -93,7 +93,7 @@ xulrunner-17.0
 <h3>Download Grml 2014.03-rc1</h3>
 
 <p>Grml 2014.03-rc1 can be downloaded from
-<a href="http://grml.org/download/prerelease/">grml.org/download/prerelease/</a>.</p>
+<a href="/download/prerelease/">grml.org/download/prerelease/</a>.</p>
 
 <h3>Feedback</h3>
 

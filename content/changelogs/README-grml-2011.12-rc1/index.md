@@ -5,7 +5,7 @@ title = 'Release Notes: Grml 2011.12-rc1 - Codename Knecht Rootrecht'
 <p><a href="/screenshots/"><img align="right" style="margin-left: 20px;
 border: 0" src="/screenshots/grml_2011.12-rc1.jpg" alt="*" /></a></p>
 
-<p><a href="http://grml.org/download/prerelease/">Download Now</a></p>
+<p><a href="/download/prerelease/">Download Now</a></p>
 
 <h3>About</h3>
 
@@ -124,7 +124,7 @@ href="/bugs/">grml.org/bugs/</a>.</p>
 <h3>Download Grml 2011.12-rc1</h3>
 
 <p>Grml 2011.12-rc1 can be downloaded from
-<a href="http://grml.org/download/prerelease/">grml.org/download/prerelease/</a>.</p>
+<a href="/download/prerelease/">grml.org/download/prerelease/</a>.</p>
 
 <!--
 <p>Grml 2011.12-rc1 can be downloaded from <a href="/download/">grml.org/download/</a>.</p>

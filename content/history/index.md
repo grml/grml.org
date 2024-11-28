@@ -32,7 +32,7 @@ grml wiki</a>!</p>
 
 <h3>11.03.2011</h3>
 
-<p><a href="http://grml.org/survey2011-results/">Results of the Grml user survey</a> available.</p>
+<p><a href="/survey2011-results/">Results of the Grml user survey</a> available.</p>
 
 <h3>09.03.2011</h3>
 
@@ -65,7 +65,7 @@ version 2010.12 available</a>.</p>
 november 2010 in the fantastic hackerspace <a
 href="http://metalab.at/">Metalab</a> in Vienna/Austria. Find the
 details about the meeting in the <a
-href="http://grml.org/reports/devmeeting_2010/">Minutes of the Grml
+href="/reports/devmeeting_2010/">Minutes of the Grml
 Developer Meeting 2010</a>.</p>
 
 <h3>12.10.2010</h3>
@@ -231,11 +231,11 @@ href="/download/#mirrors">the mirrors</a>.</p>
 
 <h3>01.10.2008</h3>
 
-<p><a href="http://grml.org/2008/10/01/">Migration from Mercurial to Git</a>.</p>
+<p><a href="/2008/10/01/">Migration from Mercurial to Git</a>.</p>
 
 <h3>21.08.2008</h3>
 
-<p><a href="http://grml.org/2008/08/21/">grml at Froscon 2008</a>.</p>
+<p><a href="/2008/08/21/">grml at Froscon 2008</a>.</p>
 
 
 <h3>26.02.2008</h3>
@@ -300,7 +300,7 @@ href="/2007/05/08/#release_1.0-rc1">available</a>.</p>
 
 <h3>26.02.2007</h3>
 
-<p>A <a href="http://grml.org/grml2hd/gallery/">screenshot
+<p>A <a href="/grml2hd/gallery/">screenshot
 gallery showing details of the grml2hd process is available
 online</a>.</p>
 
@@ -322,9 +322,9 @@ href="/zsh/#zshlovers">grml.org/zsh/</a> for details.</p>
 
 <h3>06.12.2006</h3>
 
-<p><a href="http://grml.org/files/README-0.9.html">grml 0.9 -
+<p><a href="/files/README-0.9.html">grml 0.9 -
 codename Dioptrienotto</a> and <a
-href="http://grml.org/files/README-0.3-small.html">grml-small
+href="/files/README-0.3-small.html">grml-small
 0.3 - codename Zwergenaufstand</a> are available.</p>
 
 <h3>02.12.2006</h3>
@@ -362,10 +362,10 @@ href="/mercurial/">grml.org/mercurial/</a>.</p>
 <h3>13.08.2006</h3>
 
 <p>grml 0.8 - Codename Funkenzutzler <a
-href="http://grml.org/download/">available</a>.</p>
+href="/download/">available</a>.</p>
 
 <p>The new release brings 117 new packages and many new features.  For
-details take a look at <a href="http://grml.org/files/README-0.8.html">the
+details take a look at <a href="/files/README-0.8.html">the
 release announcement</a>.</p>
 
 <h3>02.08.2006</h3>
@@ -389,7 +389,7 @@ href="http://www.linuxwochen.at/">linuxdays in vienna</a> took place.
 Mika once more held <a
 href="http://linuxwochen.at/2006/Programm_Wien:_grml_-_Linux_Live-CD_f%C3%BCr_Sysadmins_und_Geeks">a
 talk about grml</a> including a short feature demo of the <a
-href="http://grml.org/zsh/">Zsh</a>.  Read <a
+href="/zsh/">Zsh</a>.  Read <a
 href="http://grml.supersized.org/archives/162-grml-on-linuxdays-vienna-2006.html">the
 report in the grml develblog</a>.</p>
 
@@ -417,7 +417,7 @@ grml Live CD.</p>
 <p>grml 0.7 - Codename Bootenschnitzl <a href="/download/">is
 available</a>!<br /> The new release brings 48 new packages and many new
 features.  For details take a look at <a
-href="http://grml.org/files/README-0.7.html">the release
+href="/files/README-0.7.html">the release
 announcement</a>.</p>
 
 <h3>16.02.2006</h3>
@@ -431,11 +431,11 @@ href="http://dir.gmane.org/gmane.linux.distributions.grml.user">gmane.linux.dist
 <p>grml 0.6 - Codename Winterschlapfn <a href="/download/">is
 available</a>!<br /> The new release brings 99 new packages and many new
 features.  For details take a look at <a
-href="http://grml.org/files/README-0.6.txt">the release
+href="/files/README-0.6.txt">the release
 announcement</a>.</p>
 
 <p>grml-small 0.2 - Codename Corry is available!  For details take a look
-at <a href="http://grml.org/files/README-0.2-small.txt">the release
+at <a href="/files/README-0.2-small.txt">the release
 announcement</a>.</p>
 
 <h2>2005</h2>
@@ -453,7 +453,7 @@ mailinglist</a> is available.</p>
 <h3>09.11.2005</h3>
 
 <p>You like our work? Make a donation to support our work! See <a
-href="http://grml.org/donations/">grml.org/donations/</a> for
+href="/donations/">grml.org/donations/</a> for
 details.</p>
 
 <h3>24.10.2005</h3>
@@ -465,8 +465,8 @@ brings 262 new packages and many new features. For details take a look at
 <h3>01.09.2005</h3>
 
 <p>A german paper about grml is available online: <a
-href="http://grml.org/docs/grml-paper.de.pdf">grml-paper (170kB, PDF)</a>
-(also see <a href="http://grml.org/docs/">docs-section at grml.org</a>).
+href="/docs/grml-paper.de.pdf">grml-paper (170kB, PDF)</a>
+(also see <a href="/docs/">docs-section at grml.org</a>).
 That's 24 pages about technologies used at grml and some main information
 about grml itself.</p>
 
@@ -490,7 +490,7 @@ brings 192 new packages and many new features. For details take a look at
 
 <h3>21.04.2005</h3>
 
-<p>Julius Plenz wrote <a href="http://grml.org/zsh/#grmlzshrefcard">a
+<p>Julius Plenz wrote <a href="/zsh/#grmlzshrefcard">a
 reference card for the zsh configuration of grml</a>.</p>
 
 <h3>13.04.2005</h3>
@@ -513,7 +513,7 @@ in the talk.</p>
 
 <h3>23.03.2005</h3>
 
-<p>The <a href="http://grml.org/beta-tester/">beta-tester subproject</a>
+<p>The <a href="/beta-tester/">beta-tester subproject</a>
 started.</p>
 
 <h3>08.03.2005</h3>
@@ -525,7 +525,7 @@ started.</p>
 <p>grml 0.3 - Codename Hustenstopper <a href="/download/">is
 available</a>!<br /> The new release brings 191 new packages and
 many new features.  For details take a look at <a
-href="http://grml.org/files/README-0.3.txt">the release
+href="/files/README-0.3.txt">the release
 announcement</a>.</p>
 
 <p>Today several grml developers are going to arrive at <a
@@ -563,7 +563,7 @@ free.</p>
 <p>grml 0.2 - Codename Satura <a href="/download/">available</a>.<br />
 The new release brings 455 new packages and many new features.
 For details take a look at <a
-href="http://grml.org/files/README-0.2.txt">the release
+href="/files/README-0.2.txt">the release
 announcement</a>.</p>
 
 <h2>2004</h2>
@@ -656,4 +656,4 @@ local.grml.flames and local.grml.ressources.</p>
 
 <h3>16.09.2003</h3>
 
-<p>Registered <a href="http://grml.org/">grml.org</a></p>
+<p>Registered <a href="/">grml.org</a></p>

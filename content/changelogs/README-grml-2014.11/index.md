@@ -5,7 +5,7 @@ title = 'Release Notes: Grml 2014.11 - Codename Gschistigschasti'
 <p><a href="/screenshots/"><img align="right" style="margin-left: 20px;
 border: 0" src="/screenshots/grml_2014.11.jpg" alt="*" /></a></p>
 
-<p><a href="http://grml.org/download/">Download Now</a></p>
+<p><a href="/download/">Download Now</a></p>
 
 <h3>About</h3>
 
@@ -111,7 +111,7 @@ qemu-keymaps ruby1.9.1 tsconf xulrunner-24.0 zd1211-firmware
 <h3>Download Grml 2014.11</h3>
 
 <p>Grml 2014.11 can be downloaded from
-<a href="http://grml.org/download/">grml.org/download/</a>.</p>
+<a href="/download/">grml.org/download/</a>.</p>
 
 <h3>Feedback</h3>
 

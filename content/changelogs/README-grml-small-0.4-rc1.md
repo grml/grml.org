@@ -54,7 +54,7 @@ href="/kernel/">grml.org/kernel/</a> for more details.</p>
 <h3>Packages / Software</h3>
 
 <p>Details about shipped packages and their versions on grml are
-available at the <a href="http://grml.org/files/#debian">Debian
+available at the <a href="/files/#debian">Debian
 section</a>.</p>
 
 <h3>Updates</h3>
@@ -149,4 +149,4 @@ src="/img/grmlshirt_0.9.jpg" alt="the grml 0.9 shirt" /></a></p>
 
 <h3>Further Questions?</h3>
 
-<p><a href="http://grml.org/contact/">Contact us.</a></p>
+<p><a href="/contact/">Contact us.</a></p>

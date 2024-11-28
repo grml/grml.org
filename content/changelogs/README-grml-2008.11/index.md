@@ -233,7 +233,7 @@ version running 'apt-get update; apt-get install grml'. Take a look at <a
 href="https://github.com/grml/grml/wiki/upgrading">the upgrading webpage in
 the grml-wiki</a> as well. Notice: If you are using grml in a productive
 environment and/or use a grml2hd installation we strongly recommend to
-subscribe to <a href="http://grml.org/mailinglist/">the grml-user
+subscribe to <a href="/mailinglist/">the grml-user
 mailinglist</a>!</p>
 
 <h3>Major changes since release 1.1 (20080224)</h3>
@@ -295,4 +295,4 @@ announcement list</a>.</p>
 
 <h3>Further Questions?</h3>
 
-<p><a href="http://grml.org/contact/">Contact us.</a></p>
+<p><a href="/contact/">Contact us.</a></p>

@@ -108,7 +108,7 @@ pre-installed because of conflicts with madwifi. Some more modules (for
 example <a href="https://github.com/grml/grml/wiki/ati">fglrx</a> and <a
 href="https://github.com/grml/grml/wiki/nvidia">nvidia</a>) are not
 pre-installed but available through the <a
-href="http://grml.org/repos/">grml-repository</a>.</p>
+href="/repos/">grml-repository</a>.</p>
 
 <p>See <a href="/kernel/">grml.org/kernel/</a> for more details
 regarding the grml-kernel.</p>
@@ -150,7 +150,7 @@ unixcw user-setup
 version running 'apt-get update; apt-get install grml'. Notice: If you are
 using grml in a productive environment and/or use a grml2hd installation we
 strongly recommend to subscribe to <a
-href="http://grml.org/mailinglist/">the grml-user mailinglist</a>!</p>
+href="/mailinglist/">the grml-user mailinglist</a>!</p>
 
 <h3>Download grml 0.7</h3>
 
@@ -203,4 +203,4 @@ announcement list</a>.</p>
 
 <h3>Further Questions?</h3>
 
-<p><a href="http://grml.org/contact/">Contact us.</a></p>
+<p><a href="/contact/">Contact us.</a></p>

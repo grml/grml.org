@@ -105,7 +105,7 @@ on upgrade.</li>
 href="/zsh/#grmlzshrc">grmlzshrc(5)</a> is a manpage providing
 detailled information about grml's zsh configuration. On the grml
 system it is available offline via 'man grmlzshrc'. An <a
-href="http://grml.org/zsh/#grmlzshrc">online version is available</a>
+href="/zsh/#grmlzshrc">online version is available</a>
 as well. Special thanks to Joerg Woelke for his work.</li>
 
 <li><strong>Directory specific shell configuration with Zsh</strong>:
@@ -325,7 +325,7 @@ from <a href="http://daily.grml.org/">daily.grml.org</a>.</p>
 
 <h3>Further Questions?</h3>
 
-<p>Please feel free to <a href="http://grml.org/contact/">contact us.</a></p>
+<p>Please feel free to <a href="/contact/">contact us.</a></p>
 
 <h3>Credits</h3>
 

@@ -121,7 +121,7 @@ brltty and espeakup are included.</p>
 
 <p>Check out the <a
 href="https://git.grml.org/f/grml-live/templates/GRML/grml-cheatcodes.txt">grml-cheatcodes
-file</a> (also available via <a href="http://grml.org/cheatcodes/">grml.org/cheatcodes/</a>). Of
+file</a> (also available via <a href="/cheatcodes/">grml.org/cheatcodes/</a>). Of
 course <a
 href="https://www.kernel.org/doc/html/latest/admin-guide/kernel-parameters.html">the command-line parameters</a>
 of the Linux kernel applies to Grml as well.</p>

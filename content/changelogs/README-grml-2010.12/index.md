@@ -32,7 +32,7 @@ harddisk to run it. Due to on-the-fly decompression Grml includes about
 
 <li><strong>grml-rescueboot / loopback.cfg feature</strong> and <strong>grub-imageboot for ISO boot</strong> (more details available in '<a href="http://michael-prokop.at/blog/2011/01/07/booting-iso-images-from-within-grub2/">Booting ISO images from within GRUB2</a>')</li>
 
-<li>Initial release of <a href="http://grml.org/kantan/">Kantan</a>, an <strong>automated testing suite</strong> for continuous integration and a test environment; see <a href="http://grml.org/kantan/">grml.org/kantan/</a> for details (not shipped in Grml by default though)
+<li>Initial release of <a href="/kantan/">Kantan</a>, an <strong>automated testing suite</strong> for continuous integration and a test environment; see <a href="/kantan/">grml.org/kantan/</a> for details (not shipped in Grml by default though)
 
 <li><strong>Incremental grml-rebuildfstab</strong> triggered by udev events for faster execution time</li>
 
@@ -57,7 +57,7 @@ harddisk to run it. Due to on-the-fly decompression Grml includes about
 <h4>New features in <a href="/zsh/#grmlzshrc">Grml's Zsh</a></h4>
 
 <ul>
-<li>Fully documented, see <a href="http://grml.org/zsh/">grml.org/zsh</a>  (thanks to Joerg Woelke) - <a href="http://grml.org/zsh/grmlzshrc.html">available online</a> as well as offline ('man 5 grmlzshrc')
+<li>Fully documented, see <a href="/zsh/">grml.org/zsh</a>  (thanks to Joerg Woelke) - <a href="/zsh/grmlzshrc.html">available online</a> as well as offline ('man 5 grmlzshrc')
 <li>Uses zsh's built-in vcs_info and falls back to a grml-packaged version if the current version of zsh does not come with its own implementation
 </ul>
 
@@ -185,9 +185,9 @@ x11vnc-data xserver-xorg-video-nouveau zenity
 
 <ul>
 
-<li><a href="http://grml.org/reports/devmeeting_2010/">Grml developer meeting</a> in Vienna.</li>
+<li><a href="/reports/devmeeting_2010/">Grml developer meeting</a> in Vienna.</li>
 
-<li>Christian Hofstaedter joined the <a href="http://grml.org/team/">Grml team</a>.</li>
+<li>Christian Hofstaedter joined the <a href="/team/">Grml team</a>.</li>
 
 <li><a href="http://grml.supersized.org/archives/347-Event-Grml-at-FrOSCon-2010.html">Grml at FrOSCon 2010</a>.</li>
 
@@ -271,4 +271,4 @@ from <a href="http://daily.grml.org/">daily.grml.org</a>.</p>
 
 <h3>Further Questions?</h3>
 
-<p>Please feel free to <a href="http://grml.org/contact/">contact us.</a></p>
+<p>Please feel free to <a href="/contact/">contact us.</a></p>

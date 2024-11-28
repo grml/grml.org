@@ -134,7 +134,7 @@ ruby-ncurses seabios snmp v4l-utils
 <li>Grml development blog <a href="http://blog.grml.org/archives/350-A-new-home.html">moved to a new home</a> - now available at <a href="http://blog.grml.org/">blog.grml.org</a>.</li>
 
 <li>
-<a href="http://grml.org/survey2011-results/">Results of the Grml user survey</a> have been published.
+<a href="/survey2011-results/">Results of the Grml user survey</a> have been published.
 </li>
 
 <li>
@@ -165,7 +165,7 @@ href="/bugs/">grml.org/bugs/</a>.</p>
 
 <!--
 <p>Grml 2011.05 can be downloaded from
-<a href="http://grml.org/download/prerelease/">grml.org/download/prerelease/</a>.</p>
+<a href="/download/prerelease/">grml.org/download/prerelease/</a>.</p>
 -->
 
 <p>Grml 2011.05 can be downloaded from <a href="/download/">grml.org/download/</a>.</p>
@@ -216,7 +216,7 @@ Thorsten Glaser,
 Vsevolod Kozlov,
 for their contributions.</p>
 
-<p>We also would like to thank everyone who filled out the <a href="http://grml.org/survey2011-results/">Grml user survey 2011</a>.</p>
+<p>We also would like to thank everyone who filled out the <a href="/survey2011-results/">Grml user survey 2011</a>.</p>
 
 <!--
 <h3>Release of the stable version</h3>
@@ -240,4 +240,4 @@ from <a href="http://daily.grml.org/">daily.grml.org</a>.</p>
 
 <h3>Further Questions?</h3>
 
-<p>Please feel free to <a href="http://grml.org/contact/">contact us.</a></p>
+<p>Please feel free to <a href="/contact/">contact us.</a></p>

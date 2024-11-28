@@ -179,7 +179,7 @@ sends an application to another desktop.</p>
 <h3>Packages / Software</h3>
 
 <p>Details about shipped packages and their versions on grml are available at
-the <a href="http://grml.org/files/#debian">Debian section</a>.</p>
+the <a href="/files/#debian">Debian section</a>.</p>
 
 <h3>Updates</h3>
 
@@ -238,16 +238,16 @@ version running 'apt-get update; apt-get install grml'. Take a look at <a
 href="https://github.com/grml/grml/wiki/upgrading">the upgrading webpage in
 the grml-wiki</a> as well. Notice: If you are using grml in a productive
 environment and/or use a grml2hd installation we strongly recommend to
-subscribe to <a href="http://grml.org/mailinglist/">the grml-user
+subscribe to <a href="/mailinglist/">the grml-user
 mailinglist</a>!</p>
 
 <h3>Changes since release 0.9 (20061206)</h3>
 
 <ul>
-<li><a href="http://grml.org/grml2hd/gallery/">grml2hd screenshot gallery</a> available
-<li><a href="http://grml.org/user-survey/grml.txt">grml user survey</a> (results will be available soon)
+<li><a href="/grml2hd/gallery/">grml2hd screenshot gallery</a> available
+<li><a href="/user-survey/grml.txt">grml user survey</a> (results will be available soon)
 <li><a href="http://grml.supersized.org/archives/229-update-of-zsh-lovers-in-asciidoc-format.html">update of zsh-lovers</a>
-<li><a href="http://grml.org/team/">Frank Terbeck joined the grml-team</a>
+<li><a href="/team/">Frank Terbeck joined the grml-team</a>
 </ul>
 
 <h3>Known issues</h3>
@@ -299,7 +299,7 @@ grml-team!</p>
 Jacobs, Moritz Augsburger, Wolfgang Fuschlberger, Manuel Fuhr, Ronny
 Plattner, Robert Giebel and Martin Ahammer for their contributions.
 Many thanks to all of you who took part in <a
-href="http://grml.org/user-survey/grml.txt">the grml user survey</a>.
+href="/user-survey/grml.txt">the grml user survey</a>.
 Many thanks also to the ones of you who <a href="/donations/">donated
 something to the grml-team</a> and of course to all those who have sent
 feedback since the last release!</p>
@@ -321,4 +321,4 @@ src="/img/grmlshirt_0.9.jpg" alt="the grml 1.0 shirt" /></a></p>
 
 <h3>Further Questions?</h3>
 
-<p><a href="http://grml.org/contact/">Contact us.</a></p>
+<p><a href="/contact/">Contact us.</a></p>

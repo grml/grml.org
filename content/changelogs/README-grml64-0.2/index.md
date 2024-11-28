@@ -173,7 +173,7 @@ live-initramfs) some <strong>bootoptions</strong> might not work as
 expected or changed its behaviour. The grml team is working on merging
 outstanding features. If you think you found a bootoption that does not
 work as expected/documented please <a
-href="http://grml.org/bugs/">report it</a>.</p>
+href="/bugs/">report it</a>.</p>
 
 <p>The bootoption <strong>expert</strong> has been dropped. It is
 deprecated nowadays. The bootoption <strong>splash</strong> has been
@@ -281,7 +281,7 @@ version running 'apt-get update; apt-get install grml'. Take a look at <a
 href="https://github.com/grml/grml/wiki/upgrading">the upgrading webpage in
 the grml-wiki</a> as well. Notice: If you are using grml in a productive
 environment and/or use a grml2hd installation we strongly recommend to
-subscribe to <a href="http://grml.org/mailinglist/">the grml-user
+subscribe to <a href="/mailinglist/">the grml-user
 mailinglist</a>!</p>
 
 <h3>Changes since release 1.0 (20070518)</h3>
@@ -355,4 +355,4 @@ src="/img/grmlshirt_0.9.jpg" alt="the grml 0.9 shirt" /></a></p>
 
 <h3>Further Questions?</h3>
 
-<p><a href="http://grml.org/contact/">Contact us.</a></p>
+<p><a href="/contact/">Contact us.</a></p>

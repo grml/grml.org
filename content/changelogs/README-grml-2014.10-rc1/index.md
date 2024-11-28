@@ -107,7 +107,7 @@ xulrunner-24.0 zd1211-firmware
 <h3>Download Grml 2014.10-rc1</h3>
 
 <p>Grml 2014.10-rc1 can be downloaded from
-<a href="http://grml.org/download/prerelease/">grml.org/download/prerelease/</a>.</p>
+<a href="/download/prerelease/">grml.org/download/prerelease/</a>.</p>
 
 <h3>Feedback</h3>
 

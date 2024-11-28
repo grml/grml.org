@@ -114,7 +114,7 @@ href="/bugs/">grml.org/bugs/</a>.</p>
 <h3>Download Grml 2013.02</h3>
 
 <p>Grml 2013.02 can be downloaded from
-<a href="http://grml.org/download/">grml.org/download/</a>.</p>
+<a href="/download/">grml.org/download/</a>.</p>
 
 <h3>Feedback</h3>
 
