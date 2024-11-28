@@ -9,6 +9,9 @@ disableKinds:
   - taxonomy
   - term
 
+security:
+  enableInlineShortcodes: true
+
 markup:
   goldmark:
     renderer:

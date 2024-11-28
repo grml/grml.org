@@ -1,40 +1,68 @@
 +++
 title = 'Download - Mirror List'
 +++
-<p><strong>NOTE:</strong> Please visit the <a href="/download/">download webpage</a> if you don't need the full mirror list.</p>
+<strong>NOTE:</strong> Please visit the <a href="/download/">download webpage</a> if you don't need the full mirror list.
 
-<h2>Download via HTTPS/FTP</h2>
+## Download via HTTPS/FTP
 
-<p><a href="http://en.wikipedia.org/wiki/Geo_targeting">GeoIP</a>
-(automatically try to figure out the best matching mirror):</p>
+<a href="http://en.wikipedia.org/wiki/Geo_targeting">GeoIP</a> (automatically try to figure out the best matching mirror):
 
-<ul>
-    <li><a href="https://download.grml.org/">https://download.grml.org/</a></li>
-</ul>
+* <a href="https://download.grml.org/">https://download.grml.org/</a>
 
-TODO: use .Site.Data.mirrors
+{{< mirrorlist.inline >}}
 
-[% FOREACH region IN mirrors.keys.sort %]
-    <h3>Mirrors in [% region.substr(3) %] </h3>
+{{ $url := "https://raw.githubusercontent.com/grml/grml-mirrors/refs/heads/master/Mirrors.masterlist" }}
+{{ $mirror_types := slice "Grml-http" "Grml-rsync" "Grml-ftp" }}
+{{ $s := slice }}
+{{ $countries := slice }}
+{{ with resources.GetRemote $url }}
+  {{ with .Err }}
+    {{ errorf "%s" . }}
+  {{ else }}
+    {{ range split .Content "\n\n" }}
+    {{ $lines := split . "\n" }}
+    {{ $sitename := index (split (index $lines 0) " ") 1 }}
+    {{ $cachekey := (printf "%s.yaml" $sitename) }}
+    {{ $site := transform.Unmarshal ( resources.FromString $cachekey . ) }}
+    {{ $s = $s | append $site }}
+    {{ $countries = $countries | append (index $site "Country") }}
+    {{ end }}
+  {{ end }}
+{{ else }}
+  {{ errorf "Unable to fetch %q" $url }}
+{{ end }}
 
-    [% FOREACH mirror IN mirrors.$region.keys.sort %]
-    <p>[% mirror %] ([% mirrors.$region.$mirror.location %])</p>
-    [% FOREACH type IN [ 'grml-http' 'grml-rsync' 'grml-ftp' ] %]
-    [% NEXT UNLESS mirrors.$region.$mirror.$type %]
+{{ $countries = $countries | uniq | sort }}
+
+{{ range $countries }}
+  {{ $region := . }}
+  {{ $region_long := substr . 3 }}
+<h3>Mirrors in {{ $region_long }}</h3>
+
+  {{ range (where $s "Country" $region) }}
+    {{ $mirror := . }}
+    <p>{{ $mirror.Site }} ({{ $mirror.Location }})</p>
     <ul>
-        [% IF type.substr(5) == 'http' %]
-    <li><a href="https://[% mirror %]/[% mirrors.$region.$mirror.$type %]">https://[% mirror %]/[% mirrors.$region.$mirror.$type %]</a></li>
-        [% ELSE %]
-    <li><a href="[% type.substr(5) %]://[% mirror %]/[% mirrors.$region.$mirror.$type %]">[% type.substr(5) %]://[% mirror %]/[% mirrors.$region.$mirror.$type %]</a></li>
-        [% END %]
+    {{ range $mirror_types }}
+      {{ $type := . }}
+      {{ $urlfragment := index $mirror $type }}
+      {{ if $urlfragment }}
+        {{ $proto := substr $type 5 }}
+        {{ if eq $proto "http" }}
+        {{ $proto = "https" }}
+        {{ end }}
+        {{ $url := printf "%s://%s/%s" $proto $mirror.Site $urlfragment }}
+    <li><a href="{{ $url }}">{{ $url }}</a></li>
+      {{ end }}
+    {{ end }}
     </ul>
+  {{ end }}
+{{ end }}
 
-    [% END %]
-    [% END %]
-[% END %]
+{{< /mirrorlist.inline >}}
 
 <hr />
 
 <p><em>If you are interested in providing a mirror for Grml please visit
 <a href="https://github.com/grml/grml-mirrors">our grml-mirrors project</a>
-or <a href="/contact/">contact us</a>.</em>/</p>
+or <a href="/contact/">contact us</a>.</em></p>
