@@ -12,8 +12,6 @@
 <link rel="home" href="/" title="grml.org" />
 <link rel="help" href="/features/" title="About" />
 <link rel="author" href="/team/" title="Team" />
-<link rel="icon" href="/favicon.png" type="image/png" />
-<link rel="stylesheet" href="/style.css" type="text/css" />
 </head>
 <body>
 
@@ -3767,7 +3765,7 @@ dnstun.example.com.     3600    IN      A       192.168.1.1
 host.example.com.       3600    IN      A       192.168.1.1
 
 2. Configure dns2tcpd on host.example.com.:
-# cat /etc/dns2tcpd.conf 
+# cat /etc/dns2tcpd.conf
 listen = 192.168.1.1          #the ip dns2tcpd should listen on
 port = 53                     #" port " " " "
 user = nobody
@@ -3787,10 +3785,10 @@ Client-side:
 ~~~~~~~~~~~~
 You have two possibilities:
 - Use the DNS inside your network (DNS must allow resolving for external domains)
-# grep nameserver /etc/resolv.conf 
+# grep nameserver /etc/resolv.conf
 nameserver 172.16.42.1
 # dns2tcpc -z dnstun.example.com 172.16.42.1
-Available connection(s) : 
+Available connection(s) :
         ssh
 # dns2tcpc -r ssh -l 2222 -z dnstun.example.com 172.16.42.1 &
 Listening on port : 2222
@@ -3799,7 +3797,7 @@ user@host.example.com:~#
 
 - Directly contact the endpoint (port 53 UDP must be allowed outgoing)
 # dns2tcpc -z dnstun.example.com dnstun.example.com
-Available connection(s) : 
+Available connection(s) :
         ssh
 # dns2tcpc -r ssh -l 2222 -z dnstun.example.com dnstun.example.com &
 Listenning on port : 2222
