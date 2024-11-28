@@ -1,0 +1,19 @@
+baseurl: "https://grml.org"
+title: "Grml.org"
+languageCode: "en-us"
+defaultContentLanguage: "en"
+cleanDestinationDir: true
+disablePathToLower: true
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
+outputs:
+  home:
+    - html
+  page:
+    - html
+  section:
+    - html
