@@ -5,6 +5,10 @@ defaultContentLanguage: "en"
 cleanDestinationDir: true
 disablePathToLower: true
 
+disableKinds:
+  - taxonomy
+  - term
+
 markup:
   goldmark:
     renderer:
