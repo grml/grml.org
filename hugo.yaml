@@ -4,6 +4,7 @@ languageCode: "en-us"
 defaultContentLanguage: "en"
 cleanDestinationDir: true
 disablePathToLower: true
+disableHugoGeneratorInject: true
 
 disableKinds:
   - taxonomy
