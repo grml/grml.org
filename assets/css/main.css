@@ -44,7 +44,7 @@ html{color:#000;background:#FFF}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre
   #texbox {}
   .toc {font-size:70%}
   ol {font-size:70%}
-  .button { background-color: #FFDA62; -moz-border-radius: 5px; -webkit-border-radius: 5px; border: 1px solid #444; padding: 10px; width: 140px; text-decoration: none; font-size: 16px; text-shadow: #333333; color: #000000; line-height: 1; background-position: 0px 0px; }
+  .button { display: inline-block; background-color: #FFDA62; -moz-border-radius: 5px; -webkit-border-radius: 5px; border: 1px solid #444; padding: 10px; width: 140px; text-decoration: none; font-size: 16px; text-shadow: #333333; color: #000000; line-height: 1; background-position: 0px 0px; }
   .button:hover { background: #FFA862; text-decoration: none; }
   img.absmiddle { vertical-align: middle; margin-bottom: .25em; }
   .banner { padding-top: 0em; }
@@ -73,4 +73,8 @@ html{color:#000;background:#FFF}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre
 @media screen and (max-width: 800px) {
   div.container { width: auto; margin: auto; border: 0 none; }
   #forkme-header { display: none; }
+  .banner h1 { padding-top: 0.5em; }
+  /* contain width of sponsor logors */
+  footer { width: 100%; }
+  footer .sponsors img { width: 100%; height: auto; }
 }
