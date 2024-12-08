@@ -1,0 +1,2 @@
+#!/bin/bash
+hugo list all | awk -F, '{print $8" "$9" "$1 }' | sort | column -t

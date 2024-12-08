@@ -1,0 +1,55 @@
+name: Deploy
+
+on:
+  # Runs on pushes targeting the default branch
+  push:
+    branches: ["master"]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+permissions:
+  contents: read
+
+# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
+# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
+concurrency:
+  group: "deploy"
+  cancel-in-progress: false
+
+jobs:
+  # Build job
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: "0.135.0"
+          # extended: true
+
+      - name: Build
+        run: hugo --minify
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: artifact
+          path: public
+          if-no-files-found: error
+          include-hidden-files: true
+
+  # Deployment job
+  # Necessary to trigger a deployment webhook to our github app,
+  # which will do the actual work.
+  deploy:
+    environment:
+      name: production
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Dummy
+        id: deployment
+        run: /bin/true

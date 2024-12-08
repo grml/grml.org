@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="{{ site.Language.LanguageCode }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ printf "%s | %s" .Title site.Title }}{{ end }}</title>
+  <meta name="Author" content="the grml team [www.grml.org/team/]">
+  <meta name="Abstract" content="Grml, live-cd for sysadmins" />
+  <meta name="Robots" content="index,follow">
+  <meta name="Language" content="english">
+  <meta name="Keywords" content="Grml, grml.org, live-cd, Debian, live system, linux, sysadmins, system administrators, debian" />
+  <link rel="icon" type="image/svg" href="/favicon.svg">
+  <link rel="home" href="/" title="grml.org" />
+  <link rel="help" href="/features/" title="About" />
+  <link rel="author" href="/team/" title="Team" />
+  {{ partialCached "head/css.html" . }}
+</head>
+<body>
+  <div class="container">
+    <header>
+      {{ partial "header.html" . }}
+    </header>
+    {{ block "main" . }}{{ end }}
+    <footer>
+      {{ partial "footer.html" . }}
+    </footer>
+  </div>
+</body>
+</html>
