@@ -25,3 +25,11 @@ outputs:
     - html
   section:
     - html
+
+params:
+  current_release:
+    version: "2024.02"
+    codename: "Glumpad"
+  current_prerelease:
+    version: ""
+    codename: ""

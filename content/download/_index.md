@@ -1,6 +1,8 @@
 +++
 title = 'Download Grml 2024.02'
 +++
+{{< require_release_update "2024.02" >}}
+<!-- Note: for 2024.12, the entire page should be updated from the prerelease page -->
 
 <style>
 #contentbox {
@@ -66,9 +68,9 @@ title = 'Download Grml 2024.02'
 
 <p>Get the current stable release here.<br />
 
-<!--
-<a href="prerelease/">Looking for the current pre-release version instead?</a></p>
--->
+{{< if_have_prerelease >}}
+<a href="prerelease/">Looking for the current pre-release version {{< param_opt current_prerelease.version >}} instead?</a></p>
+{{</ if_have_prerelease >}}
 
 <p>Download the Grml flavour you need, then write it to a CD-ROM/DVD or an empty USB stick.</p>
 

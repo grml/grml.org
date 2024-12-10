@@ -10,6 +10,7 @@ feel free to use <a href="https://github.com/grml/grml/issues">github.com/grml/g
 <p>If you find additional bugs, please <a href="/bugs/">report them</a>.</p>
 
 <h2>Known Bugs in Grml 2024.02</h2>
+{{< require_release_update "2024.02" >}}
 
 <ul>
   <li>No known issues yet</li>

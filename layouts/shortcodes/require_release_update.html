@@ -1,0 +1,4 @@
+{{- $updated_for_release_version := (.Get 0) -}}
+{{- if (not (eq .Site.Params.current_release.version $updated_for_release_version)) -}}
+{{ errorf "Page not updated for current release: %s" $.Position }}
+{{- end -}}

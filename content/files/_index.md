@@ -26,7 +26,7 @@ Architectures: i386 amd64
 Components: main
 Signed-By: /usr/share/keyrings/grml-archive-keyring.gpg</pre>
 
-Then the following <a href="https://manpages.debian.org/apt_preferences">preferences file</a> will keep packages from GRML to replace normal Debian packages, in <code>/etc/apt/preferences.d/grml.pref</code>:
+Then the following <a href="https://manpages.debian.org/apt_preferences">preferences file</a> will keep packages from Grml to replace normal Debian packages, in <code>/etc/apt/preferences.d/grml.pref</code>:
 
 <pre class="rahmen">
 Package: *
@@ -56,36 +56,30 @@ sudo apt-get install grml-debian-keyring
 
 ## <a name="debian"></a>Package lists for the current release
 
-<h3>grml32-full 2022.11</h3>
+boot options for all flavours: <a href="https://git.grml.org/f/grml-live/templates/GRML/grml-cheatcodes.txt">grml-cheatcodes.txt</a>
+
+<h3>grml32-full {{< param current_release.version >}}</h3>
 
 <ul>
-  <li><a href="grml32-full_2022.11/dpkg.selections">dpkg.selections</a> - software package listing</li>
-  <li><a href="grml32-full_2022.11/dpkg.list">dpkg.list</a> - more detailed package list including version information</li>
-  <li><a href="https://git.grml.org/f/grml-live/templates/GRML/grml-cheatcodes.txt">grml-cheatcodes.txt</a> - boot options</li>
-  <li><a href="grml32-full_2022.11/nonfree-licenses.txt">nonfree-licenses.txt</a> - a list of used nonfree software and their licenses</li>
+  <li><a href="grml32-full_{{< param current_release.version >}}/dpkg.list">dpkg.list</a> - package list including version information</li>
+  <li><a href="grml32-full_{{< param current_release.version >}}/nonfree-licenses.txt">nonfree-licenses.txt</a> - a list of used nonfree software and their licenses</li>
 </ul>
 
-<h3>grml64-full 2022.11</h3>
+<h3>grml64-full {{< param current_release.version >}}</h3>
 
 <ul>
-  <li><a href="grml64-full_2022.11/dpkg.selections">dpkg.selections</a> - software package listing</li>
-  <li><a href="grml64-full_2022.11/dpkg.list">dpkg.list</a> - more detailed package list including version information</li>
-  <li><a href="https://git.grml.org/f/grml-live/templates/GRML/grml-cheatcodes.txt">grml-cheatcodes.txt</a> - boot options</li>
-  <li><a href="grml64-full_2022.11/nonfree-licenses.txt">nonfree-licenses.txt</a> - a list of used nonfree software and their licenses</li>
+  <li><a href="grml64-full_{{< param current_release.version >}}/dpkg.list">dpkg.list</a> - package list including version information</li>
+  <li><a href="grml64-full_{{< param current_release.version >}}/nonfree-licenses.txt">nonfree-licenses.txt</a> - a list of used nonfree software and their licenses</li>
 </ul>
 
-<h3>grml32-small 2022.11</h3>
+<h3>grml32-small {{< param current_release.version >}}</h3>
 
 <ul>
-  <li><a href="grml32-small_2022.11/dpkg.selections">dpkg.selections</a> - software package listing</li>
-  <li><a href="grml32-small_2022.11/dpkg.list">dpkg.list</a> - more detailed package list including version information</li>
-  <li><a href="https://git.grml.org/f/grml-live/templates/GRML/grml-cheatcodes.txt">grml-cheatcodes.txt</a> - boot options</li>
+  <li><a href="grml32-small_{{< param current_release.version >}}/dpkg.list">dpkg.list</a> - package list including version information</li>
 </ul>
 
-<h3>grml64-small 2022.11</h3>
+<h3>grml64-small {{< param current_release.version >}}</h3>
 
 <ul>
-  <li><a href="grml64-small_2022.11/dpkg.selections">dpkg.selections</a> - software package listing</li>
-  <li><a href="grml64-small_2022.11/dpkg.list">dpkg.list</a> - more detailed package list including version information</li>
-  <li><a href="https://git.grml.org/f/grml-live/templates/GRML/grml-cheatcodes.txt">grml-cheatcodes.txt</a> - boot options</li>
+  <li><a href="grml64-small_{{< param current_release.version >}}/dpkg.list">dpkg.list</a> - package list including version information</li>
 </ul>

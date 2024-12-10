@@ -4,7 +4,7 @@ title = 'FAQ for grml'
 
 <img style="float: right" src="/img/clanbomber.png" alt="*" />
 
-<strong>Up2date:</strong> applies to Grml version 2024.02
+<strong>Up2date:</strong> applies to Grml version {{< param current_release.version >}}
 
 <a name="toc"></a><strong>Index:</strong>
 
@@ -92,6 +92,7 @@ this when they want to express their dissatisfaction with
 software (amongst other things).</p>
 
 <h3><a name="releasename"></a><a href="#toc">What about the release name?</a></h3>
+{{< require_release_update "2024.02" >}}
 
 <p>Codename of Grml 2024.02 is &quot;Glumpad&quot;.
 This is an austrian word for odds and ends, bits and pieces, useless stuff.

@@ -5,10 +5,12 @@ icon = 'changelog'
 
 ## Current release
 
-<a href="README-grml-2024.02/">Release announcement for Grml 2024.02 - codename Glumpad</a>
+<a href="README-grml-{{< param current_release.version >}}/">Release announcement for Grml {{< param current_release.version >}} - codename {{< param current_release.codename >}}</a>
 
 ## Previous releases
 
+{{< require_release_update "2024.02" >}}
+* <a href="README-grml-2024.02/">Grml 2024.02</a> - codename Glumpad
 * <a href="README-grml-2022.11/">Grml 2022.11</a> - codename MalGuckes
 * <a href="README-grml-2021.07/">Grml 2021.07</a> - codename JauKerl
 * <a href="README-grml-2020.06/">Grml 2020.06</a> - codename Ausgehfuahangl
@@ -21,7 +23,7 @@ icon = 'changelog'
 * <a href="README-grml-2012.05/">Grml 2012.05</a> - codename Ponyhof
 * <a href="README-grml-2011.12/">Grml 2011.12</a> - codename Knecht Rootrecht
 * <a href="README-grml-2011.05/">Grml 2011.05</a> - codename Just Mari
-* <a href="README-grml-2010.12/">Grml 2010.12</a> - codename Gebr&uuml;der Grml
+* <a href="README-grml-2010.12/">Grml 2010.12</a> - codename Gebrüder Grml
 * <a href="README-grml-2010.04/">Grml 2010.04</a> - codename Grmlmonster
 * <a href="README-grml-2009.10/">Grml 2009.10</a> - codename Hello-Wien
 * <a href="README-grml-2009.05/">Grml 2009.05</a> - codename Lackdose-Allergie

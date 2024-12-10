@@ -1,0 +1,5 @@
+{{- /* This works like `param ...`, but renders nothing if the param does not exist or is empty(!). */ -}}
+{{- $name := (.Get 0) -}}
+{{- with $name -}}
+{{- $.Page.Param $name -}}
+{{- else }}{{ errorf "Missing param key: %s" $.Position }}{{ end -}}

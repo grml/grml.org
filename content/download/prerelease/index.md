@@ -1,5 +1,5 @@
 +++
-title = 'Download Grml 2024.02-rc1'
+title = 'Download Grml Release Candidate'
 +++
 
 <style>
@@ -64,11 +64,18 @@ title = 'Download Grml 2024.02-rc1'
 
 </style>
 
-<p><strong>NOTE: This is a PRE-RELEASE, not a stable release yet.<br />
-You have been warned.</strong><br />
+{{< if_have_prerelease >}}
+<p>
+    Current Release Candidate: <b>{{< param_opt current_prerelease.version >}}</b><br>
+    <br>
+    <b>NOTE: This is a PRE-RELEASE, not a stable release yet.</b><br>
+    You have been warned.<br>
+</p>
+{{</ if_have_prerelease >}}
 
 <a href="../">Looking for the stable release version instead?</a></p>
 
+{{< if_have_prerelease >}}
 <p>Download the Grml flavour you need, then write it to a CD-ROM/DVD or an empty USB stick.</p>
 
 <div class="download_group" id="download_group1_noscript">
@@ -77,10 +84,10 @@ You have been warned.</strong><br />
   <a href="/download/mirrors/">Download from a specific mirror</a><br/>
   <br/>
   Direct download links:<br/>
-  <a href="https://download.grml.org/devel/grml64-full_2024.02-rc1.iso">Grml64 full ISO</a> [<a href="https://download.grml.org/devel/grml64-full_2024.02-rc1.iso.asc">GPG Signature</a>]<br/>
-  <a href="https://download.grml.org/devel/grml32-full_2024.02-rc1.iso">Grml32 full ISO</a> [<a href="https://download.grml.org/devel/grml32-full_2024.02-rc1.iso.asc">GPG Signature</a>]<br/>
-  <a href="https://download.grml.org/devel/grml64-small_2024.02-rc1.iso">Grml64 small ISO</a> [<a href="https://download.grml.org/devel/grml64-small_2024.02-rc1.iso.asc">GPG Signature</a>]<br/>
-  <a href="https://download.grml.org/devel/grml32-small_2024.02-rc1.iso">Grml32 small ISO</a> [<a href="https://download.grml.org/devel/grml32-small_2024.02-rc1.iso.asc">GPG Signature</a>]<br/>
+  <a href="https://download.grml.org/devel/grml64-full_{{< param_opt current_prerelease.version >}}.iso">Grml64 full ISO</a> [<a href="https://download.grml.org/devel/grml64-full_{{< param_opt current_prerelease.version >}}.iso.asc">GPG Signature</a>]<br/>
+  <a href="https://download.grml.org/devel/grml32-full_{{< param_opt current_prerelease.version >}}.iso">Grml32 full ISO</a> [<a href="https://download.grml.org/devel/grml32-full_{{< param_opt current_prerelease.version >}}.iso.asc">GPG Signature</a>]<br/>
+  <a href="https://download.grml.org/devel/grml64-small_{{< param_opt current_prerelease.version >}}.iso">Grml64 small ISO</a> [<a href="https://download.grml.org/devel/grml64-small_{{< param_opt current_prerelease.version >}}.iso.asc">GPG Signature</a>]<br/>
+  <a href="https://download.grml.org/devel/grml32-small_{{< param_opt current_prerelease.version >}}.iso">Grml32 small ISO</a> [<a href="https://download.grml.org/devel/grml32-small_{{< param_opt current_prerelease.version >}}.iso.asc">GPG Signature</a>]<br/>
   <br/>
 </p>
 </div>
@@ -88,7 +95,7 @@ You have been warned.</strong><br />
 
 <div class="download_group" id="download_group1" style="display:none;">
 <form id="download_form" onsubmit="return false;">
-<input type="hidden" name="version" value="2024.02-rc1"/>
+<input type="hidden" name="version" value="{{< param_opt current_prerelease.version >}}"/>
 <div class="download_panel" id="download_panel1">
 <div>
 
@@ -115,7 +122,7 @@ You have been warned.</strong><br />
   <br />
 
   <div style="font-size: 14pt;">
-    <p><a href="/changelogs/README-grml-2024.02-rc1/">Release Notes</a></p>
+    <p><a href="/changelogs/README-grml-{{< param_opt current_prerelease.version >}}/">Release Notes</a></p>
   </div>
 
 </div>
@@ -164,11 +171,11 @@ document.getElementById('download_group1_noscript').style.display = 'none';
   <b>Alternate downloads</b><br /><br />
   <a href="https://daily.grml.org/">Daily images</a><br />
   <a href="https://download.grml.org/">Older releases</a><br />
-  <a href="https://download.grml.org/devel/grml_sources-2024.02-rc1.tar.gz">Source code</a> (one tgz for both architectures)<br />
+  <a href="https://download.grml.org/devel/grml_sources-{{< param_opt current_prerelease.version >}}.tar.gz">Source code</a> (one tgz for both architectures)<br />
   <br/>
   Netboot packages:<br/>
-  <a href="https://download.grml.org/devel/grml_netboot_package_grml64-full_2024.02-rc1.tar">64-bit</a>
-  <a href="https://download.grml.org/devel/grml_netboot_package_grml32-full_2024.02-rc1.tar">32-bit</a>
+  <a href="https://download.grml.org/devel/grml_netboot_package_grml64-full_{{< param_opt current_prerelease.version >}}.tar">64-bit</a>
+  <a href="https://download.grml.org/devel/grml_netboot_package_grml32-full_{{< param_opt current_prerelease.version >}}.tar">32-bit</a>
 </div>
 </div>
 
@@ -177,7 +184,7 @@ document.getElementById('download_group1_noscript').style.display = 'none';
   <b>Boot from USB key</b><br />
   <br />
   Just <kbd>dd(1)</kbd> the downloaded ISO to an <abbr title="Any existing data will be overwritten by the dd command!">empty</abbr> USB key!<br /><br />
-  <code class="keyboard">dd bs=4M status=progress conv=fdatasync if=grml64-full_2024.02-rc1.iso of=/dev/USB_KEY</code>
+  <code class="keyboard">dd bs=4M status=progress conv=fdatasync if=grml64-full_{{< param_opt current_prerelease.version >}}.iso of=/dev/USB_KEY</code>
   <br /><br />
   <b>Troubleshooting</b><br /><br />
   <a href="https://git.grml.org/f/grml-live/templates/GRML/grml-cheatcodes.txt">Boot option guide</a>
@@ -221,5 +228,7 @@ sha256sum --ignore-missing -c SHA256SUMS
 
 <p>The Grml team uses <a href="https://git-scm.com/">Git</a> for managing software and packages.
 The repositories are available online at <a href="https://github.com/grml/">GitHub</a>.</p>
+
+{{</ if_have_prerelease >}}
 
 <div style="clear: both;"></div>
