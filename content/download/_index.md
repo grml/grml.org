@@ -73,8 +73,8 @@ title = 'Download Grml 2024.02'
 <p>Download the Grml flavour you need, then write it to a CD-ROM/DVD or an empty USB stick.</p>
 
 <div class="download_group" id="download_group1_noscript">
-  <div class="download_panel" id="download_panel1_noscript">
-    <div>
+  <div id="download_panel1_noscript">
+    <p>
       <a href="/download/mirrors/">Download from a specific mirror</a><br/>
       <br/>
       Direct download links:<br/>
@@ -85,7 +85,7 @@ title = 'Download Grml 2024.02'
       <a href="https://download.grml.org/grml64-small_2024.02.iso">Grml64 small ISO</a> [<a href="https://download.grml.org/grml64-small_2024.02.iso.asc">GGP Signature</a>]<br/>
       <a href="https://download.grml.org/grml32-small_2024.02.iso">Grml32 small ISO</a> [<a href="https://download.grml.org/grml32-small_2024.02.iso.asc">GPG Signature</a>]<br/>
       <br/>
-    </div>
+    </p>
   </div>
 </div>
 
@@ -196,7 +196,6 @@ document.getElementById('download_group1_noscript').style.display = 'none';
   Just <kbd>dd(1)</kbd> the downloaded ISO to an <abbr title="Any existing data will be overwritten by the dd command!">empty</abbr> USB key!<br /><br />
   <code class="keyboard">dd bs=4M status=progress conv=fdatasync if=grml64-full_2024.02.iso of=/dev/USB_KEY</code>
   <br /><br />
-
   <b>Troubleshooting</b><br /><br />
   <a href="https://git.grml.org/f/grml-live/templates/GRML/grml-cheatcodes.txt">Boot option guide</a>
   <br />
