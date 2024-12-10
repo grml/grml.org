@@ -87,7 +87,7 @@ You have been warned.</strong><br />
 </div>
 
 <div class="download_group" id="download_group1" style="display:none;">
-<form method="get" action="/download/bounce/" id="download_form">
+<form id="download_form" onsubmit="return false;">
 <input type="hidden" name="version" value="2024.02-rc1"/>
 <div class="download_panel" id="download_panel1">
 <div>
@@ -119,25 +119,16 @@ You have been warned.</strong><br />
   </div>
 
 </div>
+</form>
 </div>
 
 <div class="download_panel" id="download_panel2">
 <div>
-  <!-- fallback cgi buttons -->
-  <div id="formbuttons">
-    <button name="filetype" value="iso" id="download_button_mirror" class="largebutton" style="width:100%;" type="submit">Download Now </button><br />
-    <button name="filetype" value="signature" id="download_button_signature" type="submit">Get Checksum/Signature</button><br />
-    <a href="/download/mirrors/">Download from a specific mirror</a><br/>
-  </div>
-  <!-- JS links -->
-  <div id="linkbuttons" style="display:none;">
     <a id="download_link_mirror" class="largebutton">Download Now</a><br />
     <a id="download_link_signature">Get GPG Signature</a><br />
     <a href="/download/mirrors/">Download from a specific mirror</a><br/>
-  </div>
 </div>
 </div>
-</form>
 
 <script>
 function update_links() {
@@ -161,9 +152,6 @@ document.querySelectorAll('#download_form input').forEach(function (elem) {
 });
 // force initial link href set
 update_links();
-// only show our link "buttons"
-document.getElementById('formbuttons').style.display = 'none';
-document.getElementById('linkbuttons').style.display = '';
 document.getElementById('download_group1').style.display = '';
 document.getElementById('download_group1_noscript').style.display = 'none';
 </script>
