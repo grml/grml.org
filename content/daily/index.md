@@ -23,34 +23,34 @@ The link named 'Older Versions' points to a directory that contains older availa
 #### grml-full
 
 <ul>
-  <li>grml64-full_testing (64bit x86 PC):
-    <a href="https://daily.grml.org/grml64-full_testing/latest/grml64-full_testing_latest.iso">latest ISO</a>
-    <a href="https://daily.grml.org/grml64-full_testing/latest/grml64-full_testing_latest.iso.sha256">sha256</a>
+  <li>grml-full-amd64-testing (64bit x86 PC):
+    <a href="https://daily.grml.org/grml-full-amd64-testing/latest/grml-full-amd64-testing_latest.iso">latest ISO</a>
+    <a href="https://daily.grml.org/grml-full-amd64-testing/latest/grml-full-amd64-testing_latest.iso.sha256">sha256</a>
     --
-    <a href="https://daily.grml.org/grml64-full_testing/">Older Versions</a>
+    <a href="https://daily.grml.org/grml-full-amd64-testing/">Older Versions</a>
   </li>
-  <li>grml-arm64-full_testing (64bit ARM):
-    <a href="https://daily.grml.org/grml-arm64-full_testing/latest/grml-arm64-full_testing_latest.iso">latest ISO</a>
-    <a href="https://daily.grml.org/grml-arm64-full_testing/latest/grml-arm64-full_testing_latest.iso.sha256">sha256</a>
+  <li>grml-full-arm64-testing (64bit ARM):
+    <a href="https://daily.grml.org/grml-full-arm64-testing/latest/grml-full-arm64-testing_latest.iso">latest ISO</a>
+    <a href="https://daily.grml.org/grml-full-arm64-testing/latest/grml-full-arm64-testing_latest.iso.sha256">sha256</a>
     --
-    <a href="https://daily.grml.org/grml-arm64-full_testing/">Older Versions</a>
+    <a href="https://daily.grml.org/grml-full-arm64-testing/">Older Versions</a>
   </li>
 </ul>
 
 #### grml-small
 
 <ul>
-  <li>grml64-small_testing (64bit x86 PC):
-    <a href="https://daily.grml.org/grml64-small_testing/latest/grml64-small_testing_latest.iso">latest ISO</a>
-    <a href="https://daily.grml.org/grml64-small_testing/latest/grml64-small_testing_latest.iso.sha256">sha256</a>
+  <li>grml-small-amd64-testing (64bit x86 PC):
+    <a href="https://daily.grml.org/grml-small-amd64-testing/latest/grml-small-amd64-testing_latest.iso">latest ISO</a>
+    <a href="https://daily.grml.org/grml-small-amd64-testing/latest/grml-small-amd64-testing_latest.iso.sha256">sha256</a>
     --
-    <a href="https://daily.grml.org/grml64-small_testing/">Older Versions</a>
+    <a href="https://daily.grml.org/grml-small-amd64-testing/">Older Versions</a>
   </li>
-  <li>grml-arm64-small_testing (64bit ARM):
-    <a href="https://daily.grml.org/grml-arm64-small_testing/latest/grml-arm64-small_testing_latest.iso">latest ISO</a>
-    <a href="https://daily.grml.org/grml-arm64-small_testing/latest/grml-arm64-small_testing_latest.iso.sha256">sha256</a>
+  <li>grml-small-arm64-testing (64bit ARM):
+    <a href="https://daily.grml.org/grml-small-arm64-testing/latest/grml-small-arm64-testing_latest.iso">latest ISO</a>
+    <a href="https://daily.grml.org/grml-small-arm64-testing/latest/grml-small-arm64-testing_latest.iso.sha256">sha256</a>
     --
-    <a href="https://daily.grml.org/grml-arm64-small_testing/">Older Versions</a>
+    <a href="https://daily.grml.org/grml-small-arm64-testing/">Older Versions</a>
   </li>
 </ul>
 
@@ -59,34 +59,34 @@ The link named 'Older Versions' points to a directory that contains older availa
 #### grml-full
 
 <ul>
-  <li>grml64-full_sid (64bit x86 PC):
-    <a href="https://daily.grml.org/grml64-full_sid/latest/grml64-full_sid_latest.iso">latest ISO</a>
-    <a href="https://daily.grml.org/grml64-full_sid/latest/grml64-full_sid_latest.iso.sha256">sha256</a>
+  <li>grml-full-amd64-unstable (64bit x86 PC):
+    <a href="https://daily.grml.org/grml-full-amd64-unstable/latest/grml-full-amd64-unstable_latest.iso">latest ISO</a>
+    <a href="https://daily.grml.org/grml-full-amd64-unstable/latest/grml-full-amd64-unstable_latest.iso.sha256">sha256</a>
     --
-    <a href="https://daily.grml.org/grml64-full_sid/">Older Versions</a>
+    <a href="https://daily.grml.org/grml-full-amd64-unstable/">Older Versions</a>
   </li>
-  <li>grml-arm64-full_sid (64bit ARM):
-    <a href="https://daily.grml.org/grml-arm64-full_sid/latest/grml-arm64-full_sid_latest.iso">latest ISO</a>
-    <a href="https://daily.grml.org/grml-arm64-full_sid/latest/grml-arm64-full_sid_latest.iso.sha256">sha256</a>
+  <li>grml-full-arm64-unstable (64bit ARM):
+    <a href="https://daily.grml.org/grml-full-arm64-unstable/latest/grml-full-arm64-unstable_latest.iso">latest ISO</a>
+    <a href="https://daily.grml.org/grml-full-arm64-unstable/latest/grml-full-arm64-unstable_latest.iso.sha256">sha256</a>
     --
-    <a href="https://daily.grml.org/grml-arm64-full_sid/">Older Versions</a>
+    <a href="https://daily.grml.org/grml-full-arm64-unstable/">Older Versions</a>
   </li>
 </ul>
 
 #### grml-small
 
 <ul>
-  <li>grml64-small_sid (64bit x86 PC):
-    <a href="https://daily.grml.org/grml64-small_sid/latest/grml64-small_sid_latest.iso">latest ISO</a>
-    <a href="https://daily.grml.org/grml64-small_sid/latest/grml64-small_sid_latest.iso.sha256">sha256</a>
+  <li>grml-small-amd64-unstable (64bit x86 PC):
+    <a href="https://daily.grml.org/grml-small-amd64-unstable/latest/grml-small-amd64-unstable_latest.iso">latest ISO</a>
+    <a href="https://daily.grml.org/grml-small-amd64-unstable/latest/grml-small-amd64-unstable_latest.iso.sha256">sha256</a>
     --
-    <a href="https://daily.grml.org/grml64-small_sid/">Older Versions</a>
+    <a href="https://daily.grml.org/grml-small-amd64-unstable/">Older Versions</a>
   </li>
-  <li>grml-arm64-small_sid (64bit ARM):
-    <a href="https://daily.grml.org/grml-arm64-small_sid/latest/grml-arm64-small_sid_latest.iso">latest ISO</a>
-    <a href="https://daily.grml.org/grml-arm64-small_sid/latest/grml-arm64-small_sid_latest.iso.sha256">sha256</a>
+  <li>grml-small-arm64-unstable (64bit ARM):
+    <a href="https://daily.grml.org/grml-small-arm64-unstable/latest/grml-small-arm64-unstable_latest.iso">latest ISO</a>
+    <a href="https://daily.grml.org/grml-small-arm64-unstable/latest/grml-small-arm64-unstable_latest.iso.sha256">sha256</a>
     --
-    <a href="https://daily.grml.org/grml-arm64-small_sid/">Older Versions</a>
+    <a href="https://daily.grml.org/grml-small-arm64-unstable/">Older Versions</a>
   </li>
 </ul>
 
