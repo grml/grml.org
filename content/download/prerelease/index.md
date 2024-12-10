@@ -84,10 +84,10 @@ title = 'Download Grml Release Candidate'
   <a href="/download/mirrors/">Download from a specific mirror</a><br/>
   <br/>
   Direct download links:<br/>
-  <a href="https://download.grml.org/devel/grml64-full_{{< param_opt current_prerelease.version >}}.iso">Grml64 full ISO</a> [<a href="https://download.grml.org/devel/grml64-full_{{< param_opt current_prerelease.version >}}.iso.asc">GPG Signature</a>]<br/>
-  <a href="https://download.grml.org/devel/grml32-full_{{< param_opt current_prerelease.version >}}.iso">Grml32 full ISO</a> [<a href="https://download.grml.org/devel/grml32-full_{{< param_opt current_prerelease.version >}}.iso.asc">GPG Signature</a>]<br/>
-  <a href="https://download.grml.org/devel/grml64-small_{{< param_opt current_prerelease.version >}}.iso">Grml64 small ISO</a> [<a href="https://download.grml.org/devel/grml64-small_{{< param_opt current_prerelease.version >}}.iso.asc">GPG Signature</a>]<br/>
-  <a href="https://download.grml.org/devel/grml32-small_{{< param_opt current_prerelease.version >}}.iso">Grml32 small ISO</a> [<a href="https://download.grml.org/devel/grml32-small_{{< param_opt current_prerelease.version >}}.iso.asc">GPG Signature</a>]<br/>
+  <a href="https://download.grml.org/devel/grml-full-{{< param_opt current_prerelease.version >}}-amd64.iso">Grml full ISO for 64bit PCs (amd64)</a> [<a href="https://download.grml.org/devel/grml-full-{{< param_opt current_prerelease.version >}}-amd64.iso.asc">GPG Signature</a>]<br/>
+  <a href="https://download.grml.org/devel/grml-full-{{< param_opt current_prerelease.version >}}-arm64.iso">Grml full ISO for 64bit ARM (arm64)</a> [<a href="https://download.grml.org/devel/grml-full-{{< param_opt current_prerelease.version >}}-arm64.iso.asc">GPG Signature</a>]<br/>
+  <a href="https://download.grml.org/devel/grml-small-{{< param_opt current_prerelease.version >}}-amd64.iso">Grml small ISO for 64bit PCs (amd64)</a> [<a href="https://download.grml.org/devel/grml-small-{{< param_opt current_prerelease.version >}}-amd64.iso.asc">GPG Signature</a>]<br/>
+  <a href="https://download.grml.org/devel/grml-small-{{< param_opt current_prerelease.version >}}-arm64.iso">Grml small ISO for 64bit ARM (arm64)</a> [<a href="https://download.grml.org/devel/grml-small-{{< param_opt current_prerelease.version >}}-arm64.iso.asc">GPG Signature</a>]<br/>
   <br/>
 </p>
 </div>
@@ -99,21 +99,22 @@ title = 'Download Grml Release Candidate'
 <div class="download_panel" id="download_panel1">
 <div>
 
-  <h2>Options</h2>
+  <h2>Size</h2>
 
   <input type="radio" id="flavour_full" name="flavour" value="full" checked />
   <label for="flavour_full">full (~900MB)</label>
-
+  &nbsp;
   <input type="radio" id="flavour_small" name="flavour" value="small" />
   <label for="flavour_small">small (~495MB)</label>
 
-  <br /><br />
+  <br />
 
+  <h2>Architecture</h2>
   <input type="radio" id="arch_amd64" name="arch" value="amd64" checked />
   <label for="arch_amd64">64-bit PC (amd64)</label>
-
-  <input type="radio" id="arch_i386" name="arch" value="i386" />
-  <label for="arch_i386">32-bit PC (i686+)</label>
+  &nbsp;
+  <input type="radio" id="arch_arm64" name="arch" value="arm64" />
+  <label for="arch_arm64">ARM (arm64)</label>
 
   <br />
   <br />
@@ -144,12 +145,10 @@ function update_links() {
     var arch = formData.get('arch');
     var flavour = formData.get('flavour');
     var product = 'grml';
-    if (arch == 'amd64') product = 'grml64';
-    if (arch == 'i386') product = 'grml32';
-    var iso = product + '-' + flavour + '_' + current_version + '.iso';
+    var iso = product + '-' + flavour + '-' + current_version + '-' + arch + '.iso';
     var mirror_url = "https://download.grml.org/devel/";
     document.getElementById('download_link_mirror').href = mirror_url + iso;
-    document.getElementById('download_link_mirror').innerHTML = '<br />Download Now<div class="download_relinfo">' + product + '-' + flavour + ' ' + current_version + '</div>';
+    document.getElementById('download_link_mirror').innerHTML = '<br />Download Now<div class="download_relinfo">' + product + '-' + flavour + ' ' + current_version + ' ' + arch + '</div>';
     document.getElementById('download_link_signature').href = mirror_url + iso + '.asc';
 }
 
@@ -174,8 +173,8 @@ document.getElementById('download_group1_noscript').style.display = 'none';
   <a href="https://download.grml.org/devel/grml_sources-{{< param_opt current_prerelease.version >}}.tar.gz">Source code</a> (one tgz for both architectures)<br />
   <br/>
   Netboot packages:<br/>
-  <a href="https://download.grml.org/devel/grml_netboot_package_grml64-full_{{< param_opt current_prerelease.version >}}.tar">64-bit</a>
-  <a href="https://download.grml.org/devel/grml_netboot_package_grml32-full_{{< param_opt current_prerelease.version >}}.tar">32-bit</a>
+  <a href="https://download.grml.org/devel/grml_netboot_package_grml-full-amd64-{{< param_opt current_prerelease.version >}}.tar">64-bit PC</a>
+  <a href="https://download.grml.org/devel/grml_netboot_package_grml-full-arm64-{{< param_opt current_prerelease.version >}}.tar">64-bit ARM</a>
 </div>
 </div>
 
@@ -184,7 +183,7 @@ document.getElementById('download_group1_noscript').style.display = 'none';
   <b>Boot from USB key</b><br />
   <br />
   Just <kbd>dd(1)</kbd> the downloaded ISO to an <abbr title="Any existing data will be overwritten by the dd command!">empty</abbr> USB key!<br /><br />
-  <code class="keyboard">dd bs=4M status=progress conv=fdatasync if=grml64-full_{{< param_opt current_prerelease.version >}}.iso of=/dev/USB_KEY</code>
+  <code class="keyboard">dd bs=4M status=progress conv=fdatasync if=grml-full-{{< param_opt current_prerelease.version >}}-amd64.iso of=/dev/USB_KEY</code>
   <br /><br />
   <b>Troubleshooting</b><br /><br />
   <a href="https://git.grml.org/f/grml-live/templates/GRML/grml-cheatcodes.txt">Boot option guide</a>
