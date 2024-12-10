@@ -31,5 +31,5 @@ params:
     version: "2024.02"
     codename: "Glumpad"
   current_prerelease:
-    version: ""
-    codename: ""
+    version: "pre2024.12-rc1"
+    codename: "TODO"
