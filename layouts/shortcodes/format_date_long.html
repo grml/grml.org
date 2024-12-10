@@ -1,0 +1,5 @@
+{{- $name := (.Get 0) -}}
+{{- with ($.Page.Param $name) }}
+{{- $t := time.AsTime . }}
+{{- time.Format "January 2, 2006" $t -}}
+{{ end -}}
