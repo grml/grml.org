@@ -10,7 +10,7 @@ icon = 'clanbomber'
 <p class="toc"><a href="#general">General:</a></p>
 <ol>
     <li><a href="#whatis">What is Grml?</a></li>
-    <li><a href="#flavours">What are grml32 / grml64 and grml96?</a></li>
+    <li><a href="#flavours">What are grml32, grml64 and grml96?</a></li>
     <li><a href="#grmlsmall">What is the difference between grml-full and grml-small?</a></li>
     <li><a href="#get">Where do I get Grml?</a></li>
     <li><a href="#whatmeans">What does Grml mean?</a></li>
@@ -60,17 +60,26 @@ collection of GNU/Linux software especially for system
 administrators. It specializes on administrative tasks like
 installation, deployment and system rescue.</p>
 
-<h3><a name="flavours"></a><a href="#toc">What are grml32 / grml64 and grml96?</a></h3>
+<h3><a name="flavours"></a><a href="#toc">What are grml32, grml64 and grml96?</a></h3>
+
+Up to Grml release 2024.04, these three flavours were offered:
 
 <ul>
-    <li>grml32-full: 32bit version (kernel and userspace)</li>
-    <li>grml64-full: 64bit version (kernel and userspace)</li>
+    <li>grml32-full: version for 32-bit x86 PCs (kernel and userspace)</li>
+    <li>grml64-full: version for 64-bit x86 PCs version (kernel and userspace)</li>
     <li>grml96-full: multi boot version (featuring the grml32-full and grml64-full ISOs combined on one ISO)</li>
 </ul>
 
-<p>Unless you've a good reason to really choose the 32bit flavour we
-<em>strongly</em> encourage you to use either the grml64 or the grml96
-flavour.</p>
+<p>It was <em>strongly</em> encouraged to use either the grml64 or the grml96
+flavours.</p>
+
+Since Grml release 2024.12 the release ISO names instead include the architecture.
+You will see, for example, `grml-full-2024.12-amd64.iso`, where `amd64` indicates this ISO is for an 64-bit x86 PC.
+
+The currently supported architectures are:
+
+* `amd64`: 64-bit x86 PCs (both AMD and Intel CPUs, despite the name)
+* `arm64`: 64-bit ARM
 
 <h3><a name="grmlsmall"></a><a href="#toc">What is the difference between grml-full and grml-small?</a></h3>
 
