@@ -9,6 +9,10 @@ If you're unsure where to report an issue though, feel free to use [github.com/g
 
 If you find additional bugs, please [report them](/bugs/)!
 
+## Known Bugs in Grml 2024.12-rc1
+
+* No known issues yet
+
 ## Known Bugs in Grml 2024.02
 {{< require_release_update "2024.02" >}}
 
