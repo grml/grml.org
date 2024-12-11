@@ -2,22 +2,18 @@
 title = 'Known Bugs'
 +++
 
-<p>We track issues at <a href="https://github.com/grml/grml/issues">github.com/grml/grml/issues</a>.
-Several Grml sub-projects (grml-debootstrap, grml-etc-core, grml2usb,...) have their own repository and issue tracking,
-see <a href="https://github.com/grml/">github.com/grml/</a> to get an overview. If you're unsure where to report an issue though,
-feel free to use <a href="https://github.com/grml/grml/issues">github.com/grml/grml/issues</a> though.
+We track issues at [github.com/grml/grml/issues](https://github.com/grml/grml/issues).
 
-<p>If you find additional bugs, please <a href="/bugs/">report them</a>.</p>
+Several Grml sub-projects (grml-debootstrap, grml-etc-core, grml2usb,...) have their own repository and issue tracking, see [github.com/grml/](https://github.com/grml/) to get an overview.
+If you're unsure where to report an issue though, feel free to use [github.com/grml/grml/issues](https://github.com/grml/grml/issues) though.
 
-<h2>Known Bugs in Grml 2024.02</h2>
+If you find additional bugs, please [report them](/bugs/)!
+
+## Known Bugs in Grml 2024.02
 {{< require_release_update "2024.02" >}}
 
-<ul>
-  <li>No known issues yet</li>
-</ul>
+* No known issues yet
 
-<h2>Known Bugs in Grml 2024.02-rc1</h2>
+## Known Bugs in Grml 2024.02-rc1
 
-<ul>
-  <li>ping as non-root fails due to missing capabilities (<a href="https://github.com/grml/grml-live/issues/143">#143</a>)</li>
-</ul>
+* ping as non-root fails due to missing capabilities ([#143](https://github.com/grml/grml-live/issues/143))
