@@ -1,122 +1,112 @@
 +++
 title = 'Release Notes: Grml 2024.02 - codename Glumpad'
+
+[params]
+release_version = '2024.02'
+release_packages_date = 2024-02-26
+download_page = 'download'
+kernel_version = '6.6'
 +++
 
-<p><a href="/download/">Download Now</a></p>
+[Download Now]({{< indirect_ref download_page >}})
 
-<h3>About</h3>
+### About
 
-<p>Grml is a Debian based live system focusing on the needs of system administrators.
+Grml is a Debian based live system focusing on the needs of system administrators.
 This Grml release provides fresh software packages from Debian trixie.
-As usual it also incorporates up to date hardware support and fixes known bugs from previous Grml releases.</p>
+As usual it also incorporates up to date hardware support and fixes known bugs from previous Grml releases.
 
-About <a href="/faq/#releasename">the codename</a>.
+About [the codename]({{< ref "faq#releasename" >}}).
 
-<h3>New features</h3>
+### New features
 
-<p>Highlighting the most relevant changes only:</p>
+Highlighting the most relevant changes only:
 
-<h4>Misc:</h4>
+#### Misc:
 
-<ul>
-<li><strong>grml-hwinfo</strong>: add inxi output and collect information about network devices via ethtool
-</ul>
+* **grml-hwinfo**: add inxi output and collect information about network devices via ethtool
 
-<h4><a href="/grml-live/">grml-live</a> (build system for creating Grml (based) Linux live systems):</h4>
+#### [grml-live](/grml-live/) - build system for creating Grml (based) Linux live systems
 
-<ul>
-<li>Initial arm64 / aarch64 support
-<li>Add support for Debian/trixie (current Debian/testing)
-<li>Use serial console with a setting of 115200n8 by default
-<li>Update zsh completion + ship it via Debian package
-<li>Unify boot options order between isolinux/syslinux and GRUB
-<li>Improved memtest + chainloader handling
-<li>Remove Grml release name from the boot options
-<li>Misc software related changes in GRMLBASE, GRML_SMALL + GRML_FULL classes
-</ul>
+* Initial arm64 / aarch64 support
+* Add support for Debian/trixie (current Debian/testing)
+* Use serial console with a setting of 115200n8 by default
+* Update zsh completion + ship it via Debian package
+* Unify boot options order between isolinux/syslinux and GRUB
+* Improved memtest + chainloader handling
+* Remove Grml release name from the boot options
+* Misc software related changes in GRMLBASE, GRML_SMALL + GRML_FULL classes
 
-<h4><a href="/zsh/">grml-zshrc</a> (Zsh configuration):</h4>
+#### [grml-zshrc](/zsh/) - Zsh configuration
 
-<ul>
-<li>zshrc: fixed outdated url in <em>weather</em> function
-<li>/etc/skel/.zshrc: suggest J as global alias for jq usage
-</ul>
+* zshrc: fixed outdated url in <em>weather</em> function
+* /etc/skel/.zshrc: suggest J as global alias for jq usage
 
-<h4><a href="/grml-debootstrap/">grml-debootstrap</a> (wrapper around debootstrap for installing pure Debian):</h4>
+#### [grml-debootstrap](/grml-debootstrap/) - wrapper around debootstrap for installing pure Debian
 
-<ul>
-<li>Initial arm64 support
-<li>Add EFI support for VMs
-<li>Don't install busybox any longer by default
-<li>Refactored error handling
-<li>Dropped support for installing releases before jessie
-<li>Use persistent device names under /dev/disk/by-id/ for GRUB's install_devices
-</ul>
+* Initial arm64 support
+* Add EFI support for VMs
+* Don't install busybox any longer by default
+* Refactored error handling
+* Dropped support for installing releases before jessie
+* Use persistent device names under /dev/disk/by-id/ for GRUB's install_devices
 
-<h3>Bits &amp; bolts</h3>
+### Bits & bolts
 
-<ul>
-<li>Linux kernel <b>6.6</b>.</li>
-<li>Fixed several bugs from the <a href="https://github.com/grml/grml/issues/">issue tracking system</a>.</li>
-</ul>
+* Linux kernel **{{< param kernel_version >}}**
+* Fixed several [bugs reported in the issue tracker](https://github.com/grml/grml/issues/).
 
-<h3>Packages</h3>
+### Packages
 
-<p>Details about shipped packages and their versions in Grml are
-available in the <a href="/files/#debian">Debian section</a>. Visit
-<a href="/files/grml64-full_2024.02/dpkg.list">dpkg_list</a> for a
-detailed list of packages shipped with Grml 2024.02.</p>
+Details about shipped packages and their versions in Grml are available in the [Debian section](/files/#debian).
+Visit [dpkg.list](/files/grml-full-{{< param release_version >}}/dpkg.list) for a detailed list of shipped packages.
 
-<h3>Updates</h3>
+### Updates
 
-<p>Packages are taken from Debian trixie/testing as of 26th of February 2024.
-The following 9 relevant packages have been added (excluding e.g. lib*, fonts*, *-base/*-bin/*-common/*-core/*-data, gcc-*/cpp-*, perl*, python*, ruby* and kernel image):</p>
+Packages are taken from Debian trixie/testing as of {{< format_date_long release_packages_date >}}.
 
-<ul>
-<li>dhcpcd: DHCPv4 and DHCPv6 dual-stack client (replacement for deprecated isc-dhcp-client)
-<li>f3: test real flash memory capacity
-<li>fwupd/fwupd-amd64-signed: Tools to manage UEFI firmware updates
-<li>lolcat: colorful `cat`
-<li>lz4: Fast LZ compression algorithm library - tool
-<li>pixz: (dependency of clonezilla)
-<li>toilet: display large colourful characters in text mode
-<li>udisks2: D-Bus service to access and manipulate storage devices
-</ul>
+The following 9 relevant packages have been added (excluding e.g. `lib*`, `fonts*`, `*-{base,bin,common,core,data}`, `{gcc,cpp}-*`, `perl*`, `python*`, `ruby*` and kernel image):
 
-<p>The following 9 Debian packages have been removed/replaced (excluding lib*, *-base/-bin/*-common/*-core/*-data, gcc-*/cpp-*, perl*, python*, ruby* and kernel image):</p>
+* dhcpcd: DHCPv4 and DHCPv6 dual-stack client (replacement for deprecated isc-dhcp-client)
+* f3: test real flash memory capacity
+* fwupd/fwupd-amd64-signed: Tools to manage UEFI firmware updates
+* lolcat: colorful `cat`
+* lz4: Fast LZ compression algorithm library - tool
+* pixz: (dependency of clonezilla)
+* toilet: display large colourful characters in text mode
+* udisks2: D-Bus service to access and manipulate storage devices
 
-<ul>
-<li>dmraid: obsolete (see <a href="https://bugs.debian.org/1056944">#1056944</a>)
-<li>dstat: unmaintained upstream (see <a href="https://bugs.debian.org/1034856">#1034856</a>)
-<li>fai-server: irrelevant, no longer a dependency of grml-live
-<li>fakeroot: irrelevant, no longer a dependency of devscripts
-<li>firmware-ath9k-htc: conflicts with/replaced by firmware-atheros
-<li>iso-codes: irrelevant, no longer a dependency of qemu-system-*
-<li>lsb-base: irrelevant, no longer a dependency of uml-utilities
-<li>lua-lpeg: irrelevant, no longer a dependency of nmap
-<li>thin-provisioning-tools: broken in Debian/testing (see <a href="https://bugs.debian.org/1041089">#1041089</a>)
-</ul>
+The following 9 Debian packages have been removed/replaced (excluding `lib*`, `fonts*`, `*-{base,bin,common,core,data}`, `{gcc,cpp}-*`, `perl*`, `python*`, `ruby*` and kernel image):
 
-<h3>Known issues</h3>
+* dmraid: obsolete (see <a href="https://bugs.debian.org/1056944">#1056944</a>)
+* dstat: unmaintained upstream (see <a href="https://bugs.debian.org/1034856">#1034856</a>)
+* fai-server: irrelevant, no longer a dependency of grml-live
+* fakeroot: irrelevant, no longer a dependency of devscripts
+* firmware-ath9k-htc: conflicts with/replaced by firmware-atheros
+* iso-codes: irrelevant, no longer a dependency of qemu-system-*
+* lsb-base: irrelevant, no longer a dependency of uml-utilities
+* lua-lpeg: irrelevant, no longer a dependency of nmap
+* thin-provisioning-tools: broken in Debian/testing (see <a href="https://bugs.debian.org/1041089">#1041089</a>)
 
-<p>Please visit the <a href="/bugs/known/">known bugs</a> web page.</p>
+### Known issues
 
-<h3>Download Grml 2024.02</h3>
+Please visit the [known bugs](/bugs/known/) web page.
 
-<p>Grml 2024.02 can be downloaded from
-<a href="/download/">grml.org/download/</a>.</p>
+### Download Grml {{< param release_version >}}
 
-<h3>Feedback</h3>
+Grml {{< param release_version >}} can be downloaded from [the download page]({{< indirect_ref download_page >}}).
 
-<p>Your comments, bug reports, patches, and suggestions will help fixing bugs and improving future releases.
-If you find a problem with the (pre-)release, please check <a href="/bugs/known/">the known bugs list</a> and report problems using information on <a href="/bugs/">grml.org/bugs/</a>.
+### Feedback
+
+Your comments, bug reports, patches, and suggestions will help fixing bugs and improving future releases.
+If you find a problem with the (pre-)release, please check [the known bugs list](/bugs/known/) and report problems using information on [grml.org/bugs/](/bugs/).
 We also welcome feature requests and any kind of constructive feedback.
-If you want to reach out to the Grml team, please visit our <a href="/contact/">contact webpage</a>.</p>
+If you want to reach out to the Grml team, please visit our [contact webpage](/contact/).
 
-<a name="thanks"></a>
-<h3>Thanks</h3>
+### Thanks
+{{< anchor thanks >}}
 
-<p>Many thanks in this release go to (alphabetically)
+Many thanks in this release go to (alphabetically)
 2f2a,
 Alhyene,
 anarcat,
@@ -137,11 +127,10 @@ Michael Schierl,
 Patrick Schleizer,
 Roland Sommer and
 willmcginnis
-for their contributions.</p>
+for their contributions.
 
-<h3>More Information</h3>
+### More Information
 
-<p>You can find out more about Grml on <a href="/">our website</a>, <a href="/contact/#irc">IRC channel</a>, and <a href="https://github.com/grml/grml/wiki">wiki</a>.
+You can find out more about Grml on [our website](/), [IRC channel](/contact/#irc), and the [wiki](https://github.com/grml/grml/wiki).
 
-<p>To sign up for future Grml announcements, please subscribe to <a href="http://ml.grml.org/mailman/listinfo/grml-announce">Grml's announcement list</a> or
-follow our <a href="https://blog.grml.org/">blog</a>.</p>
+To sign up for future Grml announcements, please subscribe to [Grml's announcement list](http://ml.grml.org/mailman/listinfo/grml-announce) or follow our [blog](https://blog.grml.org/).
