@@ -106,18 +106,10 @@ Related words in Austrian are "Klumpert" and "Krimskrams", though the "glum" and
 
 <h3><a name="requirements"></a><a href="#toc">Requirements for running Grml</a></h3>
 
-<ul>
-
-<li>Intel-compatible CPU (i686 or later, preferably Pentium class or higher; although some i586 processors e.g. the 'AMD Geode' are still supported)</li>
-
-<li>&gt;=576MB of RAM (&gt;=1GB recommended)</p>
-
-<li>either a bootable CD-/DVD-ROM drive,
-a <a href="#usbboot">USB-boot capable system</a> or a
-network card for booting via network/PXE (check
-out <a href="#terminalserver">grml-terminalserver</a>)</li>
-
-</ul>
+* 64-bit x86 CPU (Intel Prescott or later, or AMD K8 or later, in 64-bit mode)
+* or 64-bit ARM CPUs (v8)
+* at least 1GB RAM. Preferably more
+* either a [USB-boot capable system](#usbboot), a bootable CD-/DVD-ROM drive, or a network card for booting via network/PXE (check out [grml-terminalserver](#terminalserver))
 
 <h3><a name="accessibility"></a><a href="#toc">What does accessibility at Grml mean?</a></h3>
 
