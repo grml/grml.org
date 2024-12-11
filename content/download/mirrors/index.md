@@ -5,7 +5,7 @@ title = 'Download - Mirror List'
 
 ## Download via HTTPS/FTP
 
-<a href="http://en.wikipedia.org/wiki/Geo_targeting">GeoIP</a> (automatically try to figure out the best matching mirror):
+<a href="https://en.wikipedia.org/wiki/Geotargeting">GeoIP</a> (automatically try to figure out the best matching mirror):
 
 * <a href="https://download.grml.org/">https://download.grml.org/</a>
 

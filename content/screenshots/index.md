@@ -40,4 +40,4 @@ device with zsh and the completion mechanism of zsh running cdrecord.</p>
 <a href="grml_2022.11.png"><img style="border: 0" src="grml_2022.11.jpg" alt="Screenshot" /></a><br />
 
 <p>This screenshot shows Grml 2022.11 running the X Window system with the <a
-href="http://fluxbox.sourceforge.net/">fluxbox</a> window manager.</p>
+href="https://fluxbox.sourceforge.net/">fluxbox</a> window manager.</p>

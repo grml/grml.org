@@ -1,7 +1,6 @@
 RewriteEngine on
-RewriteRule index.rss$ http://blog.grml.org/feeds/index.rss2
+RewriteRule index.rss$ https://blog.grml.org/feeds/index.rss2
 RewriteRule news(/?)$ /
 AddDefaultCharset UTF-8
 
 ErrorDocument 404 /errors/404.html
-

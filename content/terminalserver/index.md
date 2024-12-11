@@ -7,7 +7,7 @@ icon = 'clanbomber'
 
 <p>Using grml-terminalserver you can boot grml via network. If your
 computer is able to boot via <a
-    href="http://en.wikipedia.org/wiki/PXE">PXE</a> (Preboot Execution
+    href="https://en.wikipedia.org/wiki/PXE">PXE</a> (Preboot Execution
 Environment) all you have to do is start grml-terminalserver on the host
 which should serve as booting server and boot Grml via network/PXE on
 the client(s) then. If your computer can't handle PXE you can still try

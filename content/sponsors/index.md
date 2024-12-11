@@ -13,25 +13,25 @@ To be more precise without their support, the <a href="/">Grml project</a> would
 
 ### Hostway Deutschland GmbH
 
-<a href="http://www.hostway.de/"><div style="float:left;margin-right:10px;" class="imagetext_image"><img width="300" border="0" height="100" title="" alt="" src="hostway.jpg"></div></a>
+<a href="https://www.hostway.de/"><div style="float:left;margin-right:10px;" class="imagetext_image"><img width="300" border="0" height="100" title="" alt="" src="hostway.jpg"></div></a>
 
-  <p><a target="_blank" href="http://www.hostway.de/">Hostway
+  <p><a target="_blank" href="https://www.hostway.de/">Hostway
   Deutschland</a> – more than just a hosting company.</p>
 
-  <p><a target="_blank" href="http://www.hostway.com/">Hostway</a>
+  <p><a target="_blank" href="https://www.hostway.de/">Hostway</a>
   is an international provider of dedicated hosting, shared
   hosting, colocation, domain name registration, ecommerce
   solutions and other Web-based services with a direct presence in
   14 countries, and 600,000 customers worldwide.</p>
 
-  <p><a target="_blank" href="http://www.hostway.de/">Hostway
+  <p><a target="_blank" href="https://www.hostway.de/">Hostway
   Deutschland</a> operates 5 independent data centers in Germany,
   with 24/7 customer access and onsite staff. The network supports
   IPv4 and IPv6, as well as the operation of high availability
   solutions, involving different interconnected local or
   international Hostway data centers. Additionally, the <a
   target="_blank"
-  href="http://www.hostway.de/hep/">Hostway Enterprise
+  href="https://www.hostway.de/">Hostway Enterprise
   Platform</a>, provides a redundant infrastructure for high
   performance customized cloud solutions (public, private, and
   hybrid), including various add-on features, like CDN, IDS/IPS,

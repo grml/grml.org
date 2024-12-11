@@ -8,7 +8,7 @@ icon = 'info'
 <ul>
     <li>What: Official Grml Developer Meeting</li>
     <li>Date: 4th and 5th of november 2010</li>
-    <li>Place: <a href="http://metalab.at/">Metalab</a>, Vienna/Austria</li>
+    <li>Place: <a href="https://metalab.at/">Metalab</a>, Vienna/Austria</li>
 </ul>
 
 <h3>Participants</h3>
@@ -152,7 +152,7 @@ donations!</p>
 
 <ul>
     <li>Thanks to generous sponsors for financially supporting the developer meeting</li>
-    <li>Thanks to <a href="http://metalab.at/">Metalab</a> for their kindly hosting in their hacker space</li>
+    <li>Thanks to <a href="https://metalab.at/">Metalab</a> for their kindly hosting in their hacker space</li>
 </ul>
 
 <h3>Conclusion</h3>

@@ -54,7 +54,7 @@ icon = 'clanbomber'
 <h3><a name="whatis"></a><a href="#toc">What is Grml?</a></h3>
 
 <p>Grml is a bootable live system (Live-CD) based
-on <a href="http://www.debian.org/">Debian</a>. It is not
+on <a href="https://www.debian.org/">Debian</a>. It is not
 necessary to install anything to a harddisk. Grml includes a
 collection of GNU/Linux software especially for system
 administrators. It specializes on administrative tasks like
@@ -295,17 +295,17 @@ works out of the box; you don't need to modify anything. Check
 out [the entry on USB boot](#usbboot) for more details.
 
 Your computer can not boot from CD-ROM but provides a floppy disk?
-Take a look at [btmgr](http://btmgr.sourceforge.net/),
+Take a look at [btmgr](https://sourceforge.net/projects/btmgr/),
 [ubcd4win](http://ubcd4win.com/faq.htm#floppy)
 or [sbm](http://linux.simple.be/tools/sbm).
 They provide support for booting from CD-ROM via a special floppy disk.
 
 grml-terminalserver makes it possible to boot your system via network
-using [PXE](http://en.wikipedia.org/wiki/Preboot_Execution_Environment)
+using [PXE](https://en.wikipedia.org/wiki/Preboot_Execution_Environment)
 (Preboot Execution Environment).
 If your network card does not provide support for booting via PXE you can
 still boot it either using the provided grub image by grml-terminalserver
-(for example via floppy drive) or using [gPXE](http://etherboot.org/wiki/).
+(for example via floppy drive) or using [gPXE](http://etherboot.org/).
 
 For more information, refer to the [grml-terminalserver webpage](/terminalserver/).
 
@@ -320,7 +320,7 @@ grml tz=$option   # set timezone to corresponding $option, usage example: tz=Eur
 </pre>
 
 Further information: manpages hwclock(8), tzselect(1) and tzconfig(8);
-[Debian GNU/Linux System Administrator's Manual Chapter 16 - Time](http://www.debian.org/doc/manuals/system-administrator/ch-sysadmin-time.html)
+[Debian Debian Administrator's Handbook - Time](https://www.debian.org/doc/manuals/debian-handbook/sect.config-misc.en.html)
 and
 [TimeZoneChanges in the Debian-Wiki](https://wiki.debian.org/TimeZoneChanges).
 

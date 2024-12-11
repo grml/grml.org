@@ -136,7 +136,7 @@ since the last release!</p>
 <h3>More Information</h3>
 
 <p>You can find out more about grml on <a href="/">our website</a>, <a
-href="/irc/">IRC channel</a>, and <a href="http://wiki.grml.org/">wiki</a>.
+href="/irc/">IRC channel</a>, and <a href="https://wiki.grml.org/">wiki</a>.
 
 <p>To sign up for future grml announcements, please subscribe to <a
 href="http://lists.mur.at/mailman/listinfo/grml-announce"> grml's

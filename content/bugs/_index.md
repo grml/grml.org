@@ -20,7 +20,7 @@ Please be as specific as possible. Include at least:
 * Your system configuration (e.g. run `grml-hwinfo`)
 * Software versions (`grml-version` and for the tool in question try `foo --version` or `dpkg -l foo`)
 
-Take a look at [How to Report Bugs Effectively](http://www.chiark.greenend.org.uk/~sgtatham/bugs.html).
+Take a look at [How to Report Bugs Effectively](https://www.chiark.greenend.org.uk/~sgtatham/bugs.html).
 
 Note: all bugs are made public.
 
