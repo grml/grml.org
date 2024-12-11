@@ -31,6 +31,6 @@ The default interactive shell is **[Zsh](/zsh/)** and is configured with a very 
 
 **grml-tips** provides useful tips and tricks for daily life on the command line.
 
-Visit the [FAQ](/faq/]) for answers to some Frequently Asked Questions.
+Visit the [FAQ](/faq/) for answers to some Frequently Asked Questions.
 
-You can browse the list of software (packages) provided by Grml - check out the [Debain section](/files/#debian).
+You can browse the list of software (packages) provided by Grml - check out the [Debian section](/files/#debian).
