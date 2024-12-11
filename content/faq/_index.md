@@ -1,5 +1,5 @@
 +++
-title = 'FAQ for grml'
+title = 'FAQ for Grml'
 icon = 'clanbomber'
 +++
 
