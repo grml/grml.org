@@ -28,7 +28,7 @@ The Grml user mailing list is also available via NNTP on [gmane.io](https://gman
 If you are interested in following the **development of Grml**, please join us on [IRC (see below)](#irc) and follow current changes on [GitHub](https://github.com/grml/).
 You can look at individual repositories and subscribe to changes, issues, PRs, and so on there.
 
-We track issues at [https://github.com/grml/grml/issues](github.com/grml/grml/issues).
+We track issues at [github.com/grml/grml/issues](https://github.com/grml/grml/issues).
 
 Several Grml sub-projects (grml-debootstrap, grml-etc-core, grml2usb,...) have their own repository and issue tracking, see [github.com/grml/](https://github.com/grml/) to get an overview.
 If you're unsure where to report an issue though, feel free to use [github.com/grml/grml/issues](https://github.com/grml/grml/issues) though.
