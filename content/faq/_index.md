@@ -192,9 +192,18 @@ systemd folks.</p>
 <!-- TODO: needs to be improved! -->
 <h3><a name="usbboot"></a><a href="#toc">How do I boot Grml from a USB stick?</a></h3>
 
-<p>Check out the <a href="/grml2usb/">grml2usb manpage</a>
-and the grml-wiki page
-&quot;<a href="https://github.com/grml/grml/wiki/usb">Boot Grml from usb-stick/firewire-device</a>&quot;.</p>
+Since Grml 2009.10 you can directly "dd" our ISOs to an empty USB stick/key, like this:
+
+<pre class="rahmen">
+dd if=grml64-full_2018.12.iso of=/dev/sdX           # OVERWRITES /dev/sdX!
+</pre>
+
+where /dev/sdX is your USB device. **Warning:** all previously stored data on the USB device will be lost.
+
+For more flexibility, please check out our [grml2usb tool](/grml2usb/) and its manual.
+
+On our wiki, you will find additional background information on [booting from USB](https://github.com/grml/grml/wiki/usb).
+On modern PCs, both `dd` and `grml2usb` just work.
 
 <h3><a name="store"></a><a name="persistency"></a><a href="#toc">Is it possible to store my settings?</a></h3>
 
@@ -292,11 +301,10 @@ software raid arrays.</p>
 <p>Of course running from CD/DVD is a common way to boot
 Grml. But Grml provides many more ways to boot:</p>
 
-<p>It is possible to boot Grml via USB (e.g. USB stick or
+It is possible to boot Grml via USB (e.g. USB stick or
 harddisk), firewire, or running from a Compact Flash disk. It
 works out of the box; you don't need to modify anything. Check
-out <a href="https://github.com/grml/grml/wiki/usb">the usb
-webpage in the grml-wiki</a> for more details.</p>
+out [the entry on USB boot](#usbboot) for more details.
 
 <p>Your computer can not boot from CD-ROM but provides a
 floppy disk? Take a look
