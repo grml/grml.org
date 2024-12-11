@@ -7,6 +7,14 @@ icon = 'changelog'
 
 <a href="README-grml-{{< param current_release.version >}}/">Release announcement for Grml {{< param current_release.version >}} - codename {{< param current_release.codename >}}</a>
 
+{{% if_have_prerelease %}}
+
+## Current pre-release
+
+<a href="README-grml-{{< param_opt current_prerelease.version >}}/">Changelog for Grml Pre-Release {{< param_opt current_prerelease.version >}} - codename {{< param_opt current_prerelease.codename >}}</a>
+
+{{%/ if_have_prerelease %}}
+
 ## Previous releases
 
 {{< require_release_update "2024.02" >}}
