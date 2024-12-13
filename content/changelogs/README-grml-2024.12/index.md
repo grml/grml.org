@@ -1,10 +1,10 @@
 +++
-title = 'Release Notes: Grml 2024.12-rc1 - codename XXX'
+title = 'Release Notes: Grml 2024.12 - codename Adventgrenze'
 
 [params]
-release_version = 'pre2024.12-rc1'
-release_packages_date = 2024-12-11
-download_page = 'download/prerelease'
+release_version = '2024.12'
+release_packages_date = 2024-12-19
+download_page = 'download'
 kernel_version = '6.12'
 +++
 
