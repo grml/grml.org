@@ -38,8 +38,8 @@ more...</a></p>
 
 <h2>News</h2>
 <div class="news">
-{{< require_release_update "2024.02" >}}
-<p>XXX Dec 2024: New <a href="/changelogs/README-grml-pre2024.12-rc1/">release candidate version 2024.12-rc1</a></p>
+{{< require_release_update "2024.12" >}}
+<p>19 Dec 2024: New <a href="/changelogs/README-grml-2024.12/">stable release version 2024.12</a></p>
 <p>28 Feb 2024: New <a href="/changelogs/README-grml-2024.02/">stable release 2024.02</a></p>
 <p>06 Feb 2024: New <a href="/changelogs/README-grml-2024.02-rc1/">release candidate version 2024.02-rc1</a></p>
 <p>16 Sep 2023: We're celebrating <a href="https://blog.grml.org/archives/411-20-years-of-grml.org.html">20 years of grml.org</a></p>

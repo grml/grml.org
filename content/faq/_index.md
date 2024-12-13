@@ -97,12 +97,11 @@ Grml comes close to "argl" or "grrr" in English.
 People use this when they want to express their dissatisfaction with software (amongst other things).
 
 <h3><a name="releasename"></a><a href="#toc">What about the release name?</a></h3>
-{{< require_release_update "2024.02" >}}
+{{< require_release_update "2024.12" >}}
 
-Codename of Grml 2024.02 is "Glumpad".
+Codename of Grml 2024.12 is "Adventgrenze".
 
-This is an Austrian word for odds and ends, bits and pieces, useless stuff.
-Related words in Austrian are "Klumpert" and "Krimskrams", though the "glum" and "pad" might make the pronunciation more interesting.
+XXX
 
 <h3><a name="requirements"></a><a href="#toc">Requirements for running Grml</a></h3>
 
