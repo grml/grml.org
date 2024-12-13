@@ -1,5 +1,10 @@
 +++
 title = 'Daily Grml snapshots'
+
+[params]
+iso_flavors = ['full', 'small']
+iso_suites = ['testing', 'unstable']
+iso_archs = ['amd64=64bit x86 PC', 'arm64=64bit ARM']
 +++
 
 This page provides <strong>automatically generated snapshots</strong> of the <a href="/">Grml Linux Live system</a> which were built using <a href="/grml-live/">grml-live</a>.
@@ -18,77 +23,40 @@ Note: the first link on each line points to the most recent available snapshot o
 The linked .sha256 files contain the sha256 checksum of the corresponding snapshot.
 The link named 'Older Versions' points to a directory that contains older available snapshots of the respective Grml flavour (as well as the latest snapshot).
 
-### Debian testing based Grml images
+{{< mirrorlist.inline >}}
+{{ range $.Page.Params.iso_suites }}
+  {{ $iso_suite := . }}
+<h3>Debian {{ $iso_suite }} based Grml images</h3>
 
-#### grml-full
-
-<ul>
-  <li>grml-full-amd64-testing (64bit x86 PC):
-    <a href="https://daily.grml.org/grml-full-amd64-testing/latest/grml-full-amd64-testing_latest.iso">latest ISO</a>
-    <a href="https://daily.grml.org/grml-full-amd64-testing/latest/grml-full-amd64-testing_latest.iso.sha256">sha256</a>
-    --
-    <a href="https://daily.grml.org/grml-full-amd64-testing/">Older Versions</a>
-  </li>
-  <li>grml-full-arm64-testing (64bit ARM):
-    <a href="https://daily.grml.org/grml-full-arm64-testing/latest/grml-full-arm64-testing_latest.iso">latest ISO</a>
-    <a href="https://daily.grml.org/grml-full-arm64-testing/latest/grml-full-arm64-testing_latest.iso.sha256">sha256</a>
-    --
-    <a href="https://daily.grml.org/grml-full-arm64-testing/">Older Versions</a>
-  </li>
-</ul>
-
-#### grml-small
+{{ range $.Page.Params.iso_flavors }}
+  {{ $iso_flavor := . }}
+<h4>grml-{{ $iso_flavor }}</h4>
 
 <ul>
-  <li>grml-small-amd64-testing (64bit x86 PC):
-    <a href="https://daily.grml.org/grml-small-amd64-testing/latest/grml-small-amd64-testing_latest.iso">latest ISO</a>
-    <a href="https://daily.grml.org/grml-small-amd64-testing/latest/grml-small-amd64-testing_latest.iso.sha256">sha256</a>
-    --
-    <a href="https://daily.grml.org/grml-small-amd64-testing/">Older Versions</a>
-  </li>
-  <li>grml-small-arm64-testing (64bit ARM):
-    <a href="https://daily.grml.org/grml-small-arm64-testing/latest/grml-small-arm64-testing_latest.iso">latest ISO</a>
-    <a href="https://daily.grml.org/grml-small-arm64-testing/latest/grml-small-arm64-testing_latest.iso.sha256">sha256</a>
-    --
-    <a href="https://daily.grml.org/grml-small-arm64-testing/">Older Versions</a>
-  </li>
+    {{ range $.Page.Params.iso_archs }}
+      {{ $s := split . "=" }}
+      {{ $iso_arch := index $s 0 }}
+      {{ $iso_arch_desc := index $s 1 }}
+
+      {{ $isoname := printf "grml-%s-%s-%s" $iso_flavor $iso_arch $iso_suite }}
+      {{ $isourlbase := printf "https://daily.grml.org/%s/" $isoname }}
+      {{ $isourl := printf "%slatest/%s_latest.iso" $isourlbase $isoname }}
+      <li>grml-{{ $iso_flavor }}-{{ $iso_arch }}-{{ $iso_suite }} ({{ $iso_arch_desc }}):
+        <a href="{{ $isourl }}">latest ISO</a>
+        <a href="{{ $isourl }}.sha256">sha256</a>
+        --
+        <a href="{{ $isourlbase }}">Older Versions</a>
+      </li>
+
+    {{ end }}
 </ul>
 
-### Debian unstable based Grml images
+{{ end }}
 
-#### grml-full
+{{ end }}
 
-<ul>
-  <li>grml-full-amd64-unstable (64bit x86 PC):
-    <a href="https://daily.grml.org/grml-full-amd64-unstable/latest/grml-full-amd64-unstable_latest.iso">latest ISO</a>
-    <a href="https://daily.grml.org/grml-full-amd64-unstable/latest/grml-full-amd64-unstable_latest.iso.sha256">sha256</a>
-    --
-    <a href="https://daily.grml.org/grml-full-amd64-unstable/">Older Versions</a>
-  </li>
-  <li>grml-full-arm64-unstable (64bit ARM):
-    <a href="https://daily.grml.org/grml-full-arm64-unstable/latest/grml-full-arm64-unstable_latest.iso">latest ISO</a>
-    <a href="https://daily.grml.org/grml-full-arm64-unstable/latest/grml-full-arm64-unstable_latest.iso.sha256">sha256</a>
-    --
-    <a href="https://daily.grml.org/grml-full-arm64-unstable/">Older Versions</a>
-  </li>
-</ul>
+{{< /mirrorlist.inline >}}
 
-#### grml-small
-
-<ul>
-  <li>grml-small-amd64-unstable (64bit x86 PC):
-    <a href="https://daily.grml.org/grml-small-amd64-unstable/latest/grml-small-amd64-unstable_latest.iso">latest ISO</a>
-    <a href="https://daily.grml.org/grml-small-amd64-unstable/latest/grml-small-amd64-unstable_latest.iso.sha256">sha256</a>
-    --
-    <a href="https://daily.grml.org/grml-small-amd64-unstable/">Older Versions</a>
-  </li>
-  <li>grml-small-arm64-unstable (64bit ARM):
-    <a href="https://daily.grml.org/grml-small-arm64-unstable/latest/grml-small-arm64-unstable_latest.iso">latest ISO</a>
-    <a href="https://daily.grml.org/grml-small-arm64-unstable/latest/grml-small-arm64-unstable_latest.iso.sha256">sha256</a>
-    --
-    <a href="https://daily.grml.org/grml-small-arm64-unstable/">Older Versions</a>
-  </li>
-</ul>
 
 ## Contact
 
