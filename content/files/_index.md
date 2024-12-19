@@ -28,7 +28,7 @@ If you are running Debian stretch or later, you may want to use the following <c
 Types: deb deb-src
 URIs: http://deb.grml.org/
 Suites: grml-stable grml-testing
-Architectures: i386 amd64
+Architectures: i386 amd64 arm64
 Components: main
 Signed-By: /usr/share/keyrings/grml-archive-keyring.gpg</pre>
 
