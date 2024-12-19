@@ -166,11 +166,11 @@ document.getElementById('download_group1_noscript').style.display = 'none';
   <b>Alternate downloads</b><br /><br />
   <a href="https://daily.grml.org/">Daily images</a><br />
   <a href="https://download.grml.org/">Older releases</a><br />
-  <a href="https://download.grml.org/grml_sources-{{< param current_release.version >}}.tar.gz">Source code</a> (one tgz for both architectures)<br />
+  <a href="https://download.grml.org/grml-{{< param current_release.version >}}-sources.tar">Source code</a> (one tar for both architectures)<br />
   <br/>
   Netboot packages:<br/>
-  <a href="https://download.grml.org/grml_netboot_package_grml-full-amd64_{{< param current_release.version >}}.tar">64-bit PC</a>
-  <a href="https://download.grml.org/grml_netboot_package_grml-full-arm64_{{< param current_release.version >}}.tar">64-bit ARM</a>
+  <a href="https://download.grml.org/grml-full-{{< param current_release.version >}}-amd64-netboot.tar">64-bit PC</a>
+  <a href="https://download.grml.org/grml-full-{{< param current_release.version >}}-arm64-netboot.tar">64-bit ARM</a>
 </div>
 </div>
 
@@ -197,13 +197,13 @@ document.getElementById('download_group1_noscript').style.display = 'none';
 
 <p>Please verify all downloads!</p>
 
-<p>Alongside the actual download files (ISO, netboot, sources), the Grml mirrors publish the extra files <em>SHA256SUMS</em> and <em>SHA256SUMS.gpg</em>.<br />
-The <em><a href="https://download.grml.org/SHA256SUMS">SHA256SUMS</a></em> file contains checksums for all available release files.<br />
-The <em><a href="https://download.grml.org/SHA256SUMS.gpg">SHA256SUMS.gpg</a></em> file provides the GnuPG signature for that file.<br />
-Once you have <em>SHA256SUMS</em> and <em>SHA256SUMS.gpg</em> in the same directory as your Grml downloads, verify the checksum file via:</p>
+<p>Alongside the actual download files (ISO, netboot, sources), the Grml mirrors publish the extra files <em>SHA256SUMS-{{< param current_release.version >}}</em> and <em>SHA256SUMS-{{< param current_release.version >}}.gpg</em>.<br />
+The <em><a href="https://download.grml.org/SHA256SUMS-{{< param current_release.version >}}">SHA256SUMS-{{< param current_release.version >}}</a></em> file contains checksums for all available release files.<br />
+The <em><a href="https://download.grml.org/SHA256SUMS-{{< param current_release.version >}}.gpg">SHA256SUMS-{{< param current_release.version >}}.gpg</a></em> file provides the GnuPG signature for that file.<br />
+Once you have <em>SHA256SUMS-{{< param current_release.version >}}</em> and <em>SHA256SUMS-{{< param current_release.version >}}.gpg</em> in the same directory as your Grml downloads, verify the checksum file via:</p>
 
 <code class="keyboard">
-gpg --keyid-format long --verify SHA256SUMS.gpg SHA256SUMS
+gpg --keyid-format long --verify SHA256SUMS-{{< param current_release.version >}}.gpg SHA256SUMS-{{< param current_release.version >}}
 </code>
 
 <p>If you don't have <a href="/download/gnupg-michael-prokop.txt">our GnuPG signing key</a>
@@ -216,7 +216,7 @@ gpg --keyid-format long --keyserver hkps://keys.openpgp.org --recv-keys 0x96A878
 <p>Finally verify the checksum of your Grml downloads, via:</p>
 
 <code class="keyboard">
-sha256sum --ignore-missing -c SHA256SUMS
+sha256sum --ignore-missing -c SHA256SUMS-{{< param current_release.version >}}
 </code>
 
 <h2>Source code</h2>
