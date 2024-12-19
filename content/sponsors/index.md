@@ -11,6 +11,23 @@ To be more precise without their support, the <a href="/">Grml project</a> would
 
 <div class="entry">
 
+### netcup
+
+  <a href="https://www.netcup.com/"><div style="float:left;margin-right:10px;" class="imagetext_image"><img width="300" border="0" title="" alt="" src="netcup.png"></div></a>
+
+  <p><a target="_blank" href="https://www.netcup.com/">netcup</a> is offering
+  high-quality services in operating and managing web hosting accounts, domains
+  and servers. Located in Karlsruhe, the Internet Service Provider (ISP) today
+  counts more than 200,000 customers, including individuals as well as notable
+  companies. A broad product range with high quality standards at fair prices is
+  what netcup's success is built on.</p>
+
+  <br />
+
+</div>
+
+<div class="entry">
+
 ### Hostway Deutschland GmbH
 
 <a href="https://www.hostway.de/"><div style="float:left;margin-right:10px;" class="imagetext_image"><img width="300" border="0" height="100" title="" alt="" src="hostway.jpg"></div></a>
