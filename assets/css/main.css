@@ -105,6 +105,13 @@ html{color:#000;background:#FFF}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre
       display: none;
   }
 
+  .wrap {
+      display: flex;
+      flex-flow: row wrap;
+      column-gap: 0em;
+  }
+  .wrap .item-box { flex: 2 50%; order: 1; }
+
   .mainandnav {
       padding-top: 1em;
       display: flex;
@@ -221,13 +228,16 @@ html{color:#000;background:#FFF}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre
 
 .leader-title {
     position: absolute;
-    top: 250px;
+    top: 100px;
     width: 100%;
     font-size: 60pt;
     font-weight: bold;
     text-align: center;
     text-shadow: 0px 5px 17px #666;
     color: white;
+}
+.leader-title small {
+    font-size: 50%;
 }
 
 .wrap-key {
@@ -237,17 +247,25 @@ html{color:#000;background:#FFF}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre
 }
 
 .item-box {
-    width: 50%;
-    display: inline-block;
+    /* width: 50%;
+    display: inline-block; */
+    /* padding: 2em; */
+}
+.item-box {
+    padding: 4em;
+    box-sizing: border-box;
 }
 .item-box-a {
     background: white;
 }
 .item-box-b {
-    width: 50%;
+    /* width: 50%;
     height: 500px;
     background: navajowhite;
-    display: inline-block;
+    display: inline-block; */
 }
-.item-box * {
+.glass {
+  /* Blur effect */
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
 }
