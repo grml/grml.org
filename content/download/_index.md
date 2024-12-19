@@ -1,5 +1,8 @@
 +++
 title = 'Download Grml 2024.02'
+[params]
+section = 'download'
+
 +++
 {{< require_release_update "2024.02" >}}
 <!-- Note: for 2024.12, the entire page should be updated from the prerelease page -->

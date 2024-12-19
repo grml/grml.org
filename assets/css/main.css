@@ -11,71 +11,243 @@ html{color:#000;background:#FFF}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre
 /* http://www.oswd.org/user/profile/id/6272                                    */
 /* http://alumnos.elo.utfsm.cl/~osrehe - thx!                                  */
 
+@font-face {
+    font-family: 'mw';
+    src: url('../fonts/mw-regular-webfont.woff2') format('woff2'),
+         url('../fonts/mw-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'mw';
+    src: url('../fonts/mw-bold-webfont.woff2') format('woff2'),
+         url('../fonts/mw-bold-webfont.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'mw';
+    src: url('../fonts/mw-italic-webfont.woff2') format('woff2'),
+         url('../fonts/mw-italic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'mwsans';
+    src: url('../fonts/mwsans-variablefont_wght-webfont.woff2') format('woff2'),
+         url('../fonts/mwsans-variablefont_wght-webfont.woff') format('woff');
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'mwsans';
+    src: url('../fonts/mwsans-italic-variablefont_wght-webfont.woff2') format('woff2'),
+         url('../fonts/mwsans-italic-variablefont_wght-webfont.woff') format('woff');
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'funds';
+    src: url('../fonts/funds-variablefont_wght-webfont.woff2') format('woff2'),
+         url('../fonts/funds-variablefont_wght-webfont.woff') format('woff');
+    font-weight: 200-1000;
+    font-style: normal;
+}
+
+:root {
+  --golden-fill: #F47820;
+  --golden-text: #C6550A;
+  --accent-fill: #ACACAC;
+  --accent-text: #6C6C6C;
+  --offblack: #333333;
+}
+
 @media all {
-  html {background-color: #FFDA62; height: 100%;}
-  body {font-family: verdana, tahoma, helvetica, arial, sans-serif; font-size: 14pt; background-color:#FFDA62; margin: 0; padding: 0; height:100%}
-  div.container {width: 80%; text-align: left; background-color:#FFFFFF; margin: 0px auto 0px auto; border-width: 0 1px 0 1px; border-color: #E5E5E5; border-style: solid;}
-  a {color:#C70036; text-decoration: underline}
-  a.current {color:#999999}
-  a:hover {text-decoration: underline}
-  a.plain {text-decoration: none}
-  a.plain:hover {text-decoration: underline}
-  a.smalllink {font-size: 80%}
+  /* default, including small devices (phones). Note they get a yellow background! */
+  html { background-color: var(--golden-fill); font-size: 12pt; }
+  body { font-family: 'mw', helvetica, arial, sans-serif; margin: 0; padding: 0; height:100%; }
+
+  a { color: var(--golden-text); text-decoration: underline; }
+  a:hover { text-decoration: none; }
+
   cite {font-size: 80%}
-  div.content {background-color:#FFFFFF; margin: 0em 0.5em 0.5em 9.6em}
-  div.content h3 a {color:#996666}
-  div.copyright {text-align:center; font-size:50%; color: #666;}
-  div.menu h3 a{color:#996666}
-  div.menu h3{font-size:80%; border: none; }
-  div.menu {width: 8em; float: left; clear: left; background-color:#FFFFFF; padding: 0.5em 0.5em 0.5em 0.5em; margin: 0.5em 0.5em 0em 0.3em}
-  div.news p { margin: 0; }
-  div.sponsors {background-color:#FFFFFF; margin: 0em 0.5em 0.5em 9.6em}
-  div.sponsors div {text-align:center; }
-  div.sub_links a {color: #FFFFFF}
-  div.sub_links {margin-top:0.5em; text-align:center; color: #FFFFFF; font-size:55%; clear: both; background-color:#8B8D7B}
-  h1 {color:navy; font-size:130%; font-weight:bold; padding-top: 1.5em; padding-bottom: 0.2em; }
-  h2 {color:black; font-size:105%; font-weight:bold; padding-top: 0.5em; padding-bottom: 0.2em; }
-  h3 {color:black; font-size:90%; font-weight:bold; padding-top: 0.5em; padding-bottom:0.3em; border-bottom-style:solid; border-bottom-width:1px; border-bottom-color:#CFB8B8;
-	margin-bottom:0em}
-  h4 {color:black; font-size:80%; font-weight:bold}
-  p {text-align:justify; color:black; font-size: 70%; line-height: 1.5em; padding-bottom: 0.4em;}
-  ul {font-size:70%; padding-bottom: 0.3em; }
-  li {list-style: circle; margin-left: 2em;}
-  #texbox {}
-  .toc {font-size:70%}
-  ol {font-size:70%}
-  .button { display: inline-block; background-color: #FFDA62; -moz-border-radius: 5px; -webkit-border-radius: 5px; border: 1px solid #444; padding: 10px; width: 140px; text-decoration: none; font-size: 16px; text-shadow: #333333; color: #000000; line-height: 1; background-position: 0px 0px; }
-  .button:hover { background: #FFA862; text-decoration: none; }
-  img.absmiddle { vertical-align: middle; margin-bottom: .25em; }
-  .banner { padding-top: 0em; }
-  .banner h1 { margin: 0; color: navy; font-size: 24pt; }
-  .banner h2 { margin: 0; color: navy; font-size: 11pt; }
-  .logo { padding-top: 1em; }
-  #searchbox { width: 8em; border: 1px solid #aaa; }
+
   b,strong { font-weight: bold; }
   i,em { font-style: italic; }
-  code,tt { font-family: 'Courier New', Courier, monospace; }
+
+  .container_page {
+      background-color: #FFFFFF;
+  }
+  .container_page header {
+      border-bottom: 0.2em solid var(--accent-fill);
+  }
+
+  header {
+    background-color: var(--golden-fill);
+    font-size: 14pt;
+    padding: 1em 1em 0.5em 1em;
+    line-height: 1em;
+  }
+  header #logo { float: left; height: 90px; width: 90px; padding-right: 1em; }
+  header nav {  /* logo width plus space */ }
+  header { font-family: 'funds', helvetica, arial, sans-serif; }
+  header nav a { color: black; text-decoration: none; padding-right: 1em; }
+  header nav a:hover { text-decoration: underline; }
+  header nav a.active { font-weight: bold; }
+  header nav.level1 { font-size: 120%; }
+  header nav.level2 { padding: 0.5em 0 0 0; }
+  header h1.site-title { font-size: 20pt; }
+
+  .container_page h1.site-title {
+      display: none;
+  }
+
+  .mainandnav {
+      padding-top: 1em;
+      display: flex;
+      flex-flow: row wrap;
+      column-gap: 0em;
+  }
+  .mainandnav main { width: auto; flex: 1 100%; order: 2; }
+  .mainandnav aside { flex: 1 auto; order: 1; }
+  main h1, main h2, main h3, main h4 { font-family: 'mwsans', helvetica, arial, sans-serif; }
+
+  aside { padding: 0 4em 0 4em; }
+  .container_page main { padding: 1em 4em 0 4em; line-height: 1.5em; }
+
+  main h1 a, main h2, main h3 a, main h4 a { color:black; text-decoration: none; }
+  main h1, main h1 a { font-size: 40pt; line-height: 1.3em; }
+  main h1 img { height: 40pt; padding-right: 10pt; vertical-align: bottom; }
+  main h1.title { padding-bottom: 0.5em; line-height: 1.1em; }
+  main h2, main h2 a { font-size: 30pt; line-height: 1.3em; }
+  main h3, main h3 a { font-size: 20pt; line-height: 1.3em; }
+  main h4, main h3 a { font-size: 15pt; line-height: 1.3em; }
+
+  main time { text-align: left; line-height: 2em; color: var(--accent-text); margin: 10px 0 0 0; display: block; padding: 0 1em 0 0; }
+
+  main p {text-align: justify; color:black; line-height: 1.5em; padding-bottom: 0.4em;}
+
+  main p a.plain { text-decoration: none; }
+  main p a.plain:hover { text-decoration: underline; }
+
+  main ul, main ol { padding-bottom: 0.3em; }
+  main ul li { list-style: circle; margin-left: 2em; }
+  main ol li { list-style: circle; margin-left: 2em; }
+  main code { font-family: monospace; color: #222; background: #f3f3f3; }
+  main pre { font-family: monospace; color: #222; background: #f3f3f3; margin: 0.2em 1em 0.2em 2em; padding: 0.5em; }
+  main blockquote { font-family: serif; font-size: 120%; padding-left: 2em; font-style: italic; }
+  main .postlist-item { padding-bottom: 2em; }
+
+  main ul.pagination { text-align: center; }
+  main ul.pagination li { display: inline; margin: 0 1em 0 0; }
+  main ul.pagination li.disabled a { text-decoration: none; }
+  main ul.pagination li.active a { text-decoration: none; color: black; }
+  /* need the space on small devices */
+  main ul.pagination li.disabled { display: none; }
+
+  footer { padding: 2em 2em 2em 2em; text-align: center; }
+  footer .copyright { color: var(--offblack); }
 }
 
-@media screen {
-  .active {background-color: #FFCC33}
-  .rahmen {background-color: #FEDB64; font-size: 70%; padding: 5px; border: 1px dotted black}
-  abbr[title], acronym[title] {border-bottom: 1px dotted #333; cursor: help}
-  #survey-header a { color: white; }
-  #survey-header { background-color:#AE0000; color:#FFFFFF; font-family:sans-serif; font-size:120%; font-weight:bold; left:0; padding:5px 0; margin-bottom: 15px; position:fixed; text-align:center; top:0; width:100%; z-index:101; }
+@media all and (max-width: 800px) {
+  aside h2 { display: inline; }
+  aside h2:after { content: ": "; }
+  aside nav, aside ul, aside ul li { display: inline; }
+  aside nav { padding-bottom: 0; }
+  /* hide "Subscribe" (RSS) group - what a hack */
+  aside h2:nth-of-type(3), aside nav:nth-of-type(3) { display: none; }
+  /* need larger click targets on mobile */
+  main ul.pagination { font-size: 16pt; line-height: 2em; }
 }
 
-@media print {
-  body {font-family: Verdana, Arial, Helvetica, sans-serif; color: #000000}
-  .rahmen {padding: 5px; border: 1px dotted black}
-  #survey-header {display: none}
+@media all and (min-width: 801px) {
+  /* assume tablet or desktop */
+/*
+  .mainandnav main { flex: 14 0; order: 1; }
+  .mainandnav aside { order: 2; min-width: 10em; }
+*/
+  div.container_page {
+      margin: 0 200px 0 0;
+  }
+  .container_home header h1.site-title {
+      padding: 0.5em 0 0 0;
+  }
+  .container_home header nav {
+      padding: 0.8em 0 0em 0;
+  }
+
+  footer { padding: 2em 20em 2em 6em; text-align: center; }
+
+  /* undo space saving */
+  main ul.pagination li.disabled { display: inline; }
+
+  /* reset padding set in media default */
+  aside { padding: 0; padding-top: 8em; }
+  aside h2 { font-weight: bold; color: var(--offblack); line-height: 2em; }
+  aside nav { padding-bottom: 2em; }
+  aside a { }
 }
 
-@media screen and (max-width: 800px) {
-  div.container { width: auto; margin: auto; border: 0 none; }
-  #forkme-header { display: none; }
-  .banner h1 { padding-top: 0.5em; }
-  /* contain width of sponsor logors */
-  footer { width: 100%; }
-  footer .sponsors img { width: 100%; height: auto; }
+@media all and (min-width: 801px) {
+    div.container_page {
+      text-align: left;
+      margin: 0 100px 0 0;
+    }
+}
+
+@media all and (min-width: 901px) {
+    div.container_page {
+      text-align: left;
+      margin: 0 200px 0 0;
+    }
+}
+
+@media all and (min-width: 1200px) {
+  /* large, restrict maximum width */
+  div.container_page {
+      width: 1000px;
+      margin: 0 auto 0 0;
+  }
+}
+
+.leader-box {
+    height: 500px;
+    background: black;
+    width: 100%;
+}
+
+.leader-title {
+    position: absolute;
+    top: 250px;
+    width: 100%;
+    font-size: 60pt;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 0px 5px 17px #666;
+    color: white;
+}
+
+.wrap-key {
+    width: 100%;
+    height: 500px;
+    position: relative;
+}
+
+.item-box {
+    width: 50%;
+    display: inline-block;
+}
+.item-box-a {
+    background: white;
+}
+.item-box-b {
+    width: 50%;
+    height: 500px;
+    background: navajowhite;
+    display: inline-block;
+}
+.item-box * {
 }

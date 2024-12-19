@@ -1,8 +1,19 @@
 {{ define "main" }}
-{{ partial "grml_menu.html" . }}
+<div class="container container_home">
+    <header>
+        {{ partial "header.html" . }}
+    </header>
+    <main>
+        <div class="content">
 
-<div class="content">
-    {{ .Content }}
+            {{ .Content }}
+
+            <div style="clear: both;"></div>
+        </div>
+    </main>
+    <footer>
+        {{ partial "footer.html" . }}
+    </footer>
 </div>
 
 {{ end }}

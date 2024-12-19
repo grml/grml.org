@@ -1,1 +1,21 @@
-<a href="https://grml.github.io" id="forkme-header"><img style="position: absolute; top: 0; right: 0; border: 0;" src="/img/forkme.png" alt="Fork me on GitHub"></a>
+{{ $page_section := .Page.Params.section -}}
+<a href="/" id="logo"><img src="/logoflat.svg" /></a>
+<h1 class="site-title">Grml Live Linux</h1>
+<nav class="level1">
+    <a href="/download/" {{ if eq $page_section "download" }}class="active" {{end}}>Download</a>
+    <a href="/faq/">FAQ & Docs</a>
+    <a href="https://blog.grml.org/">News</a>
+    <a href="https://grml.github.io">Contribute</a>
+    <a href="/contact/">Custom</a>
+</nav>
+{{ if eq $page_section "download" }}
+<nav class="level2">
+    <a href="/download/">Current Release</a>
+    <a href="/changelog/">Known Bugs</a>
+    <a href="/download/prerelease/">Beta</a>
+    <a href="/bugs/known/">Known Bugs</a>
+</nav>
+{{ end }}
+{{ if eq $page_section "docs" }}
+...
+{{ end }}
