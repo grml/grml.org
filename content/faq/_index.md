@@ -10,7 +10,7 @@ icon = 'clanbomber'
 <p class="toc"><a href="#general">General:</a></p>
 <ol>
     <li><a href="#whatis">What is Grml?</a></li>
-    <li><a href="#flavours">What are grml32 / grml64 and grml96?</a></li>
+    <li><a href="#flavours">What are grml32, grml64 and grml96?</a></li>
     <li><a href="#grmlsmall">What is the difference between grml-full and grml-small?</a></li>
     <li><a href="#get">Where do I get Grml?</a></li>
     <li><a href="#whatmeans">What does Grml mean?</a></li>
@@ -60,17 +60,26 @@ collection of GNU/Linux software especially for system
 administrators. It specializes on administrative tasks like
 installation, deployment and system rescue.</p>
 
-<h3><a name="flavours"></a><a href="#toc">What are grml32 / grml64 and grml96?</a></h3>
+<h3><a name="flavours"></a><a href="#toc">What are grml32, grml64 and grml96?</a></h3>
+
+Up to Grml release 2024.04, these three flavours were offered:
 
 <ul>
-    <li>grml32-full: 32bit version (kernel and userspace)</li>
-    <li>grml64-full: 64bit version (kernel and userspace)</li>
+    <li>grml32-full: version for 32-bit x86 PCs (kernel and userspace)</li>
+    <li>grml64-full: version for 64-bit x86 PCs version (kernel and userspace)</li>
     <li>grml96-full: multi boot version (featuring the grml32-full and grml64-full ISOs combined on one ISO)</li>
 </ul>
 
-<p>Unless you've a good reason to really choose the 32bit flavour we
-<em>strongly</em> encourage you to use either the grml64 or the grml96
-flavour.</p>
+<p>It was <em>strongly</em> encouraged to use either the grml64 or the grml96
+flavours.</p>
+
+Since Grml release 2024.12 the release ISO names instead include the architecture.
+You will see, for example, `grml-full-2024.12-amd64.iso`, where `amd64` indicates this ISO is for an 64-bit x86 PC.
+
+The currently supported architectures are:
+
+* `amd64`: 64-bit x86 PCs (both AMD and Intel CPUs, despite the name)
+* `arm64`: 64-bit ARM
 
 <h3><a name="grmlsmall"></a><a href="#toc">What is the difference between grml-full and grml-small?</a></h3>
 
@@ -88,27 +97,18 @@ Grml comes close to "argl" or "grrr" in English.
 People use this when they want to express their dissatisfaction with software (amongst other things).
 
 <h3><a name="releasename"></a><a href="#toc">What about the release name?</a></h3>
-{{< require_release_update "2024.02" >}}
+{{< require_release_update "2024.12" >}}
 
-Codename of Grml 2024.02 is "Glumpad".
+Codename of Grml 2024.12 is "Adventgrenze".
 
-This is an Austrian word for odds and ends, bits and pieces, useless stuff.
-Related words in Austrian are "Klumpert" and "Krimskrams", though the "glum" and "pad" might make the pronunciation more interesting.
+XXX
 
 <h3><a name="requirements"></a><a href="#toc">Requirements for running Grml</a></h3>
 
-<ul>
-
-<li>Intel-compatible CPU (i686 or later, preferably Pentium class or higher; although some i586 processors e.g. the 'AMD Geode' are still supported)</li>
-
-<li>&gt;=576MB of RAM (&gt;=1GB recommended)</p>
-
-<li>either a bootable CD-/DVD-ROM drive,
-a <a href="#usbboot">USB-boot capable system</a> or a
-network card for booting via network/PXE (check
-out <a href="#terminalserver">grml-terminalserver</a>)</li>
-
-</ul>
+* 64-bit x86 CPU (Intel Prescott or later, or AMD K8 or later, in 64-bit mode)
+* or 64-bit ARM CPUs (v8)
+* at least 1GB RAM. Preferably more
+* either a [USB-boot capable system](#usbboot), a bootable CD-/DVD-ROM drive, or a network card for booting via network/PXE (check out [grml-terminalserver](#terminalserver))
 
 <h3><a name="accessibility"></a><a href="#toc">What does accessibility at Grml mean?</a></h3>
 
