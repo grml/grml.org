@@ -9,11 +9,12 @@ If you're unsure where to report an issue though, feel free to use [github.com/g
 
 If you find additional bugs, please [report them](/bugs/)!
 
+## Known Bugs in Grml 2024.12
+{{< require_release_update "2024.12" >}}
+
+* SSH with random password is broken (see [grml-autoconfig#22](https://github.com/grml/grml-autoconfig/issues/22)) [workaround: set parameter in ssh boot option, like use `ssh=yoursecret`]
+* isolinux/BIOS boot is broken: bootid does not match (see [grml2usb@68](https://github.com/grml/grml2usb/issues/68)) [workaround: run `apt update; apt install grml2usb` to get grml2usb &gt; v0.20.5]
+
 ## Known Bugs in Grml 2024.02
-{{< require_release_update "2024.02" >}}
 
-* No known issues yet
-
-## Known Bugs in Grml 2024.02-rc1
-
-* ping as non-root fails due to missing capabilities ([#143](https://github.com/grml/grml-live/issues/143))
+* No known issues

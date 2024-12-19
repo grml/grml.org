@@ -28,8 +28,8 @@ outputs:
 
 params:
   current_release:
-    version: "2024.02"
-    codename: "Glumpad"
+    version: "2024.12"
+    codename: "Adventgrenze"
   current_prerelease:
     version: ""
     codename: ""
