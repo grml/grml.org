@@ -1,6 +1,10 @@
 +++
 title = 'Files'
 icon = 'clanbomber'
+
+[params]
+iso_flavors = ['full', 'small']
+iso_archs = ['amd64=64bit x86 PC', 'arm64=64bit ARM']
 +++
 
 ## <a name="grmlrepos"></a>Package Repository
@@ -56,30 +60,30 @@ sudo apt-get install grml-debian-keyring
 
 ## <a name="debian"></a>Package lists for the current release
 
-boot options for all flavours: <a href="https://git.grml.org/f/grml-live/templates/GRML/grml-cheatcodes.txt">grml-cheatcodes.txt</a>
+Boot options for all flavours: <a href="https://git.grml.org/f/grml-live/templates/GRML/grml-cheatcodes.txt">grml-cheatcodes.txt</a>
 
-<h3>grml32-full {{< param current_release.version >}}</h3>
+{{< filelist.inline >}}
+{{ $current_version := $.Site.Params.current_release.version }}
+{{ range $.Page.Params.iso_flavors }}
+  {{ $iso_flavor := . }}
 
+    {{ range $.Page.Params.iso_archs }}
+      {{ $s := split . "=" }}
+      {{ $iso_arch := index $s 0 }}
+      {{ $iso_arch_desc := index $s 1 }}
+      {{ $isoname := printf "grml-%s-%s-%s" $iso_flavor $current_version $iso_arch }}
+      {{ $urlbase := printf "https://download.grml.org/grml-%s-metadata/%s" $current_version $isoname }}
+
+<h3>grml-{{ $iso_flavor }} {{ $current_version }} {{ $iso_arch }}</h3>
 <ul>
-  <li><a href="grml32-full_{{< param current_release.version >}}/dpkg.list">dpkg.list</a> - package list including version information</li>
-  <li><a href="grml32-full_{{< param current_release.version >}}/nonfree-licenses.txt">nonfree-licenses.txt</a> - a list of used nonfree software and their licenses</li>
+    <li>
+    <a href="{{ $urlbase }}/dpkg.list">dpkg.list</a> - package list including version information
+    </li>
+    <li>
+    <a href="{{ $urlbase }}/nonfree-licenses.txt.gz">nonfree-licenses.txt</a> - a list of used non-free software and their licenses
+    </li>
 </ul>
+    {{ end }}
 
-<h3>grml64-full {{< param current_release.version >}}</h3>
-
-<ul>
-  <li><a href="grml64-full_{{< param current_release.version >}}/dpkg.list">dpkg.list</a> - package list including version information</li>
-  <li><a href="grml64-full_{{< param current_release.version >}}/nonfree-licenses.txt">nonfree-licenses.txt</a> - a list of used nonfree software and their licenses</li>
-</ul>
-
-<h3>grml32-small {{< param current_release.version >}}</h3>
-
-<ul>
-  <li><a href="grml32-small_{{< param current_release.version >}}/dpkg.list">dpkg.list</a> - package list including version information</li>
-</ul>
-
-<h3>grml64-small {{< param current_release.version >}}</h3>
-
-<ul>
-  <li><a href="grml64-small_{{< param current_release.version >}}/dpkg.list">dpkg.list</a> - package list including version information</li>
-</ul>
+{{ end }}
+{{< /filelist.inline >}}
