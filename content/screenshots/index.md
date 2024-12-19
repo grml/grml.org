@@ -25,19 +25,21 @@ icon = 'mycomputer'
 
 <a href="console.png"><img style="border: 0" src="console.jpg" alt="Screenshot" /></a><br />
 
-<p>This screenshot shows w3m with image support on a framebuffer device. That's what
-you'll see when running 'grml-info' on the console.</p>
+<p>
+This screenshot shows links2 on a framebuffer device.
+That's what you'll see when running 'grml-info' on the console.
+</p>
 
 <h2><a name="zsh"></a>zsh</h2>
 
 <a href="cdrec.png"><img style="border: 0" src="cdrec.jpg" alt="Screenshot" /></a><br />
 
-<p>This screenshot shows GNU screen running on console using framebuffer
+<p>This (nostalgic) screenshot shows GNU screen running on console using framebuffer
 device with zsh and the completion mechanism of zsh running cdrecord.</p>
 
 <h2><a name="grml"></a>X Window System - fluxbox</h2>
 
-<a href="grml_2022.11.png"><img style="border: 0" src="grml_2022.11.jpg" alt="Screenshot" /></a><br />
+<a href="grml_2024.12.png"><img style="border: 0" src="grml_2024.12.jpg" alt="Screenshot" /></a><br />
 
-<p>This screenshot shows Grml 2022.11 running the X Window system with the <a
+<p>This screenshot shows Grml 2024.12 running the X Window system with the <a
 href="https://fluxbox.sourceforge.net/">fluxbox</a> window manager.</p>
