@@ -7,6 +7,12 @@ iso_flavors = ['full', 'small']
 iso_archs = ['amd64=64bit x86 PC', 'arm64=64bit ARM']
 +++
 
+<!-- HACK: required to trigger generation of .htaccess file -->
+{{< htaccess.inline >}}
+{{ $htaccess := resources.Get "htaccess/files/.htaccess" | resources.ExecuteAsTemplate "files/.htaccess" . }}
+<!-- {{$htaccess.Permalink}} -->
+{{</ htaccess.inline >}}
+
 ## <a name="grmlrepos"></a>Package Repository
 
 Packages provided by the Grml team are available from the <a href="https://deb.grml.org/">Grml repository</a>.
