@@ -60,9 +60,16 @@ collection of GNU/Linux software especially for system
 administrators. It specializes on administrative tasks like
 installation, deployment and system rescue.</p>
 
-<h3><a name="flavours"></a><a href="#toc">What are grml32, grml64 and grml96?</a></h3>
+<h3><a name="flavours"></a><a href="#toc">What architectures are supported by Grml?</a></h3>
 
-Up to Grml release 2024.04, these three flavours were offered:
+The currently supported architectures are:
+
+* `amd64`: 64-bit x86 PCs (both AMD and Intel CPUs, despite the name)
+* `arm64`: 64-bit ARM
+
+<h3><a name="grml32"></a><a href="#toc">What were grml32, grml64 and grml96?</a></h3>
+
+Up to Grml release 2024.02, these three flavours were offered (for full and small each):
 
 <ul>
     <li>grml32-full: version for 32-bit x86 PCs (kernel and userspace)</li>
@@ -70,20 +77,18 @@ Up to Grml release 2024.04, these three flavours were offered:
     <li>grml96-full: multi boot version (featuring the grml32-full and grml64-full ISOs combined on one ISO)</li>
 </ul>
 
-<p>It was <em>strongly</em> encouraged to use either the grml64 or the grml96
-flavours.</p>
+It was <em>strongly</em> encouraged to use either the grml64 or the grml96 flavours.
 
-Since Grml release 2024.12 the release ISO names instead include the architecture.
+Since Grml release 2024.12, the grml32 flavour (for 32-bit x86 PCs) as well as the grml96 flavours no longer exist.
+
+A new naming convention was introduced to include the architecture and version information, being `grml-$FLAVOUR-$VERSION-$ARCH`.
+
+What was formerly known as `grml64` is now known as `grml-*-amd64`.
 You will see, for example, `grml-full-2024.12-amd64.iso`, where `amd64` indicates this ISO is for an 64-bit x86 PC.
-
-The currently supported architectures are:
-
-* `amd64`: 64-bit x86 PCs (both AMD and Intel CPUs, despite the name)
-* `arm64`: 64-bit ARM
 
 <h3><a name="grmlsmall"></a><a href="#toc">What is the difference between grml-full and grml-small?</a></h3>
 
-grml-small provides a reduced set of available software compared to grml-full.
+grml-small provides a reduced set of available software compared to grml-full, for example it doesn't provide the X.org window system.
 It provides the same Linux kernel image as grml-full and is fully binary compatible.
 Choose the grml-small flavour if size - for whatever reason - really matters to you.
 
@@ -101,7 +106,9 @@ People use this when they want to express their dissatisfaction with software (a
 
 Codename of Grml 2024.12 is "Adventgrenze".
 
-XXX
+In Austria, <a href="https://en.wikipedia.org/wiki/Advent_wreath">Advent wreaths</a> are called `Adventkränze`, and `Adventgrenze` is pronounced similarly; however, `Grenze` is the German word for `border`.
+
+Wir mögen Wortspiele(tm).
 
 <h3><a name="requirements"></a><a href="#toc">Requirements for running Grml</a></h3>
 
@@ -123,57 +130,7 @@ Of course [the command-line parameters](https://www.kernel.org/doc/html/latest/a
 
 <h3><a name="systemd"></a><a href="#toc">Why is Grml using systemd?</a></h3>
 
-The switch from file-rc to systemd happened for various reasons.
-Grml used file-rc for many years, mainly because it provided a better
-way to control startup behavior via its `/etc/runlevel.conf` configuration
-than with using sysvinit. Though for us Grml developers this also meant
-that whenever there have been any changes in Debian's startup
-configuration we had to compare our `/etc/runlevel.conf` setup with what a
-normal Debian system would give us. Users who wanted to remaster Grml
-with a custom startup procedure as well had to practically fork
-maintenance of the `/etc/runlevel.conf` file. This didn't only mean
-tracking new features/services, but also solve any possible issues
-around it - duplicating efforts and wasting developers time
-unnecessarily. Lately we also started to see problems that no one else
-seemed to have (or cared about enough), for example with multiple network
-cards we ran into race-conditions with `resolvconf`. Problems like that
-turned out to be release stoppers for us.
-
-systemd on the other hand provides great documentation, service
-supervision, takes care of parallel service startup and is the default
-init system on most Linux distributions nowadays. This means more users,
-better testing and integration. Logging, startup time investigation (to
-get a fast boot procedure) and identifying failed service startups with
-sysvinit/file-rc was always hard, unreliable or even impossible under
-certain conditions. bootlogd was unreliable (while `journalctl -b` is
-available out-of-the-box with systemd), bootchart was not nicely integrated
-(while systemd-analyze blame/critical-chain works out-of-the-box) and we
-aren't aware of any equivalence for e.g.
-`systemctl --failed`.
-
-It also turned out that it gives users who want to remaster Grml (or
-build their very own ISOs from scratch using `grml-live`) more flexibility
-and control
-over the startup process. systemd's `override.conf` mechanism and preset
-feature provides the flexibility to overwrite unwanted behavior, without
-losing the option to use existing defaults.
-
-We think it's good that systemd is actively
-maintained and receives attention. The `sysvinit`/`file-rc` ecosystem was
-stagnating/non-existent for too many years. Grml used its own initrd
-implementation in its very beginnings, until a more broadly available
-`initramfs-tools` / `live-boot` solution appeared, broadening the user base,
-sharing goals amongst different (live) distributions. Back in the days
-Grml - like many other live distributions - had to implement hardware
-recognition on its own. While udev received lots of complaints back
-then, its integration actually solved all the hardware recognition
-problems for the good. systemd's vision of stateless systems is
-something which helps building live systems like Grml.
-
-While we don't claim that systemd is perfect and doesn't have its
-issues and drawbacks (like any software), we're happy about its
-existence and more than happy about development and support by Debian's
-systemd folks.
+We're a modern Linux distribution.
 
 <a name="release"></a> <!-- old anchor -->
 <a name="bugreport"></a> <!-- old anchor -->
@@ -186,10 +143,10 @@ systemd folks.
 <!-- TODO: needs to be improved! -->
 <h3><a name="usbboot"></a><a href="#toc">How do I boot Grml from a USB stick?</a></h3>
 
-Since Grml 2009.10 you can directly "dd" our ISOs to an empty USB stick/key, like this:
+You can directly "dd" our ISOs to an empty USB stick/key, like this:
 
 <pre class="rahmen">
-dd if=grml64-full_2018.12.iso of=/dev/sdX           # OVERWRITES /dev/sdX!
+dd bs=4M status=progress if=grml-full-{{< param current_release.version >}}-amd64.iso of=/dev/sdX           # OVERWRITES /dev/sdX!
 </pre>
 
 where /dev/sdX is your USB device. **Warning:** all previously stored data on the USB device will be lost.
@@ -249,7 +206,7 @@ Note: Run `grml-setlang` to get a dialog based frontend for `/etc/default/locale
 
 <h3><a name="wms"></a><a href="#toc">Which window managers can I use?</a></h3>
 
-Starting with the 2011.12 release Grml provides [Fluxbox](http://www.fluxbox.org/) as window manager.
+Grml provides [Fluxbox](http://www.fluxbox.org/) as window manager on grml-full.
 
 <h3><a name="lvm"></a><a href="#toc">Where are my LVM devices?</a></h3>
 
@@ -284,28 +241,19 @@ If you want to enable SW-RAID by default just boot using the `swraid` [boot opti
 <a name="terminalserver"></a>
 <h3><a name="booting"></a><a href="#toc">Which ways exist to boot Grml?</a></h3>
 
-<!-- TODO: needs rework -->
+Of course booting from CD/DVD is still supported.
+But Grml provides more ways to boot:
 
-Of course running from CD/DVD is a common way to boot Grml.
-But Grml provides many more ways to boot:
-
-It is possible to boot Grml via USB (e.g. USB stick or
-harddisk), firewire, or running from a Compact Flash disk. It
-works out of the box; you don't need to modify anything. Check
-out [the entry on USB boot](#usbboot) for more details.
-
-Your computer can not boot from CD-ROM but provides a floppy disk?
-Take a look at [btmgr](https://sourceforge.net/projects/btmgr/),
-[ubcd4win](http://ubcd4win.com/faq.htm#floppy)
-or [sbm](http://linux.simple.be/tools/sbm).
-They provide support for booting from CD-ROM via a special floppy disk.
+The most common option to boot Grml is from a USB stick.
+It works out of the box; you don't need to modify anything.
+Check out [the entry on USB boot](#usbboot) for more details.
 
 grml-terminalserver makes it possible to boot your system via network
 using [PXE](https://en.wikipedia.org/wiki/Preboot_Execution_Environment)
 (Preboot Execution Environment).
 If your network card does not provide support for booting via PXE you can
 still boot it either using the provided grub image by grml-terminalserver
-(for example via floppy drive) or using [gPXE](http://etherboot.org/).
+or using [iPXE](http://etherboot.org/).
 
 For more information, refer to the [grml-terminalserver webpage](/terminalserver/).
 
