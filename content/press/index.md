@@ -9,6 +9,7 @@ icon = 'cdrom'
 
 ### English
 
+* <a href="https://9to5linux.com/debian-based-grml-2024-12-linux-distro-is-out-with-support-for-64-bit-arm-cpus">Debian-Based Grml 2024.12 Linux Distro Is Out with Support for 64-Bit ARM CPUs @ 9to5linux.com</a> [2024-12-20]
 * <a href="https://lwn.net/Articles/1003048/">Grml 2024.12 released @ lwn.net</a> [2024-12-20]
 * <a href="https://distrowatch.com/?newsid=12323">Distribution Release: Grml 2024.12 @ distrowatch.com</a> [2024-12-20]
 * <a href="https://distrowatch.com/?newsid=10430">Distribution Release: Grml 2018.12 @ distrowatch.com</a> [2018-12-31]
