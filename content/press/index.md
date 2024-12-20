@@ -9,6 +9,8 @@ icon = 'cdrom'
 
 ### English
 
+* <a href="https://lwn.net/Articles/1003048/">Grml 2024.12 released @ lwn.net</a> [2024-12-20]
+* <a href="https://distrowatch.com/?newsid=12323">Distribution Release: Grml 2024.12 @ distrowatch.com</a> [2024-12-20]
 * <a href="https://distrowatch.com/?newsid=10430">Distribution Release: Grml 2018.12 @ distrowatch.com</a> [2018-12-31]
 * <a href="http://distrowatch.com/?newsid=08079">Distribution Release: Grml 2013.09 @ distrowatch.com</a> [2013-09-29]
 * <a href="http://www.h-online.com/open/news/item/Rescue-system-Grml-2013-02-improves-diagnostic-tools-1814621.html">Rescue system Grml 2013.02 improves diagnostic tools @ h-online.com</a> [2013-03-01]
