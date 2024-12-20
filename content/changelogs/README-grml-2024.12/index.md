@@ -8,6 +8,8 @@ download_page = 'download'
 kernel_version = '6.11'
 +++
 
+<a href="/screenshots/"><img align="right" style="margin-left: 20px; border: 0" src="/screenshots/grml_2024.12.jpg" alt="*" /></a>
+
 [Download Now]({{< indirect_ref download_page >}})
 
 ### About
