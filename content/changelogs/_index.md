@@ -17,7 +17,8 @@ icon = 'changelog'
 
 ## Previous releases
 
-{{< require_release_update "2024.02" >}}
+{{< require_release_update "2024.12" >}}
+* <a href="README-grml-2024.12/">Grml 2024.12</a> - codename Adventgrenze
 * <a href="README-grml-2024.02/">Grml 2024.02</a> - codename Glumpad
 * <a href="README-grml-2022.11/">Grml 2022.11</a> - codename MalGuckes
 * <a href="README-grml-2021.07/">Grml 2021.07</a> - codename JauKerl

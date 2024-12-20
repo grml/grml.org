@@ -1,0 +1,29 @@
+Redirect temp /files/grml-cheatcodes.txt https://git.grml.org/f/grml-live/templates/GRML/grml-cheatcodes.txt
+Redirect temp /files/release-0.1-grml64/grml-cheatcodes.txt https://git.grml.org/f/grml-live/templates/GRML/grml-cheatcodes.txt
+Redirect temp /files/release-0.1/grml-cheatcodes.txt https://git.grml.org/f/grml-live/templates/GRML/grml-cheatcodes.txt
+Redirect temp /files/release-0.2/grml-cheatcodes.txt https://git.grml.org/f/grml-live/templates/GRML/grml-cheatcodes.txt
+Redirect temp /files/release-0.3/grml-cheatcodes.txt https://git.grml.org/f/grml-live/templates/GRML/grml-cheatcodes.txt
+Redirect temp /files/release-0.4-small/grml-cheatcodes.txt https://git.grml.org/f/grml-live/templates/GRML/grml-cheatcodes.txt
+Redirect temp /files/release-0.4/grml-cheatcodes.txt https://git.grml.org/f/grml-live/templates/GRML/grml-cheatcodes.txt
+Redirect temp /files/release-0.5/grml-cheatcodes.txt https://git.grml.org/f/grml-live/templates/GRML/grml-cheatcodes.txt
+Redirect temp /files/release-0.6/grml-cheatcodes.txt https://git.grml.org/f/grml-live/templates/GRML/grml-cheatcodes.txt
+Redirect temp /files/release-0.7/grml-cheatcodes.txt https://git.grml.org/f/grml-live/templates/GRML/grml-cheatcodes.txt
+Redirect temp /files/release-0.8/grml-cheatcodes.txt https://git.grml.org/f/grml-live/templates/GRML/grml-cheatcodes.txt
+Redirect temp /files/release-0.9/grml-cheatcodes.txt https://git.grml.org/f/grml-live/templates/GRML/grml-cheatcodes.txt
+Redirect temp /files/release-1.0/grml-cheatcodes.txt https://git.grml.org/f/grml-live/templates/GRML/grml-cheatcodes.txt
+
+{{ $current_version := .Site.Params.current_release.version }}
+
+Redirect temp /files/grml64-full_latest/dpkg.list https://ftp-master.grml.org/grml-{{ $current_version }}-metadata/grml-full-{{ $current_version }}-amd64/dpkg.list
+Redirect temp /files/grml64-full_latest/dpkg.selections https://ftp-master.grml.org/grml-{{ $current_version }}-metadata/grml-full-{{ $current_version }}-amd64/dpkg.selections
+Redirect temp /files/grml64-small_latest/dpkg.list https://ftp-master.grml.org/grml-{{ $current_version }}-metadata/grml-small-{{ $current_version }}-amd64/dpkg.list
+Redirect temp /files/grml64-small_latest/dpkg.selections https://ftp-master.grml.org/grml-{{ $current_version }}-metadata/grml-small-{{ $current_version }}-amd64/dpkg.selections
+
+Redirect temp /files/grml-full-latest-amd64/dpkg.list https://ftp-master.grml.org/grml-{{ $current_version }}-metadata/grml-full-{{ $current_version }}-amd64/dpkg.list
+Redirect temp /files/grml-full-latest-amd64/dpkg.selections https://ftp-master.grml.org/grml-{{ $current_version }}-metadata/grml-full-{{ $current_version }}-amd64/dpkg.selections
+Redirect temp /files/grml-full-latest-arm64/dpkg.list https://ftp-master.grml.org/grml-{{ $current_version }}-metadata/grml-full-{{ $current_version }}-amd64/dpkg.list
+Redirect temp /files/grml-full-latest-arm64/dpkg.selections https://ftp-master.grml.org/grml-{{ $current_version }}-metadata/grml-full-{{ $current_version }}-amd64/dpkg.selections
+Redirect temp /files/grml-small-latest-amd64/dpkg.list https://ftp-master.grml.org/grml-{{ $current_version }}-metadata/grml-small-{{ $current_version }}-arm64/dpkg.list
+Redirect temp /files/grml-small-latest-amd64/dpkg.selections https://ftp-master.grml.org/grml-{{ $current_version }}-metadata/grml-small-{{ $current_version }}-arm64/dpkg.selections
+Redirect temp /files/grml-small-latest-arm64/dpkg.list https://ftp-master.grml.org/grml-{{ $current_version }}-metadata/grml-small-{{ $current_version }}-arm64/dpkg.list
+Redirect temp /files/grml-small-latest-arm64/dpkg.selections https://ftp-master.grml.org/grml-{{ $current_version }}-metadata/grml-small-{{ $current_version }}-arm64/dpkg.selections

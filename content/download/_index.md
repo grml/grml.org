@@ -1,8 +1,8 @@
 +++
-title = 'Download Grml 2024.02'
+title = 'Download Grml 2024.12'
 +++
-{{< require_release_update "2024.02" >}}
-<!-- Note: for 2024.12, the entire page should be updated from the prerelease page -->
+<!-- at least: update page title -->
+{{< require_release_update "2024.12" >}}
 
 <style>
 #contentbox {
@@ -75,49 +75,52 @@ title = 'Download Grml 2024.02'
 <p>Download the Grml flavour you need, then write it to a CD-ROM/DVD or an empty USB stick.</p>
 
 <div class="download_group" id="download_group1_noscript">
-  <div id="download_panel1_noscript">
-    <p>
-      <a href="/download/mirrors/">Download from a specific mirror</a><br/>
-      <br/>
-      Direct download links:<br/>
-      <a href="https://download.grml.org/grml96-full_2024.02.iso">Grml96 full ISO</a> [<a href="https://download.grml.org/grml96-full_2024.02.iso.asc">GPG Signature</a>]<br/>
-      <a href="https://download.grml.org/grml64-full_2024.02.iso">Grml64 full ISO</a> [<a href="https://download.grml.org/grml64-full_2024.02.iso.asc">GPG Signature</a>]<br/>
-      <a href="https://download.grml.org/grml32-full_2024.02.iso">Grml32 full ISO</a> [<a href="https://download.grml.org/grml32-full_2024.02.iso.asc">GPG Signature</a>]<br/>
-      <a href="https://download.grml.org/grml96-small_2024.02.iso">Grml96 small ISO</a> [<a href="https://download.grml.org/grml96-small_2024.02.iso.asc">GPG Signature</a>]<br/>
-      <a href="https://download.grml.org/grml64-small_2024.02.iso">Grml64 small ISO</a> [<a href="https://download.grml.org/grml64-small_2024.02.iso.asc">GGP Signature</a>]<br/>
-      <a href="https://download.grml.org/grml32-small_2024.02.iso">Grml32 small ISO</a> [<a href="https://download.grml.org/grml32-small_2024.02.iso.asc">GPG Signature</a>]<br/>
-      <br/>
-    </p>
-  </div>
+<div id="download_panel1_noscript">
+<p>
+  <a href="/download/mirrors/">Download from a specific mirror</a><br/>
+  <br/>
+  Direct download links:<br/>
+  <a href="https://download.grml.org/grml-full-{{< param current_release.version >}}-amd64.iso">Grml full ISO for 64bit PCs (amd64)</a> [<a href="https://download.grml.org/grml-full-{{< param_opt current_release.version >}}-amd64.iso.asc">GPG Signature</a>]<br/>
+  <a href="https://download.grml.org/grml-full-{{< param current_release.version >}}-arm64.iso">Grml full ISO for 64bit ARM (arm64)</a> [<a href="https://download.grml.org/grml-full-{{< param_opt current_release.version >}}-arm64.iso.asc">GPG Signature</a>]<br/>
+  <a href="https://download.grml.org/grml-small-{{< param current_release.version >}}-amd64.iso">Grml small ISO for 64bit PCs (amd64)</a> [<a href="https://download.grml.org/grml-small-{{< param_opt current_release.version >}}-amd64.iso.asc">GPG Signature</a>]<br/>
+  <a href="https://download.grml.org/grml-small-{{< param current_release.version >}}-arm64.iso">Grml small ISO for 64bit ARM (arm64)</a> [<a href="https://download.grml.org/grml-small-{{< param_opt current_release.version >}}-arm64.iso.asc">GPG Signature</a>]<br/>
+  <br/>
+</p>
+</div>
 </div>
 
 <div class="download_group" id="download_group1" style="display:none;">
 <form id="download_form" onsubmit="return false;">
-<input type="hidden" name="version" value="2024.02"/>
+<input type="hidden" name="version" value="{{< param current_release.version >}}"/>
 <div class="download_panel" id="download_panel1">
 <div>
 
-<h2>Options</h2>
+  <h2>Size</h2>
 
-<select name="flavour" id="download_flavour" style="width:100%;">
-<option value="full" selected="selected">grml-full (~900MB)</option>
-<option value="small">grml-small (~500MB)</option>
-</select>
-<br /><br />
-<select name="arch" id="download_arch" style="width:100%;">
-<option value="amd64" selected="selected">64-bit PC (amd64)</option>
-<option value="i386">32-bit PC (i686+)</option>
-<option value="96">One for both (~1.8GB)</option>
-</select>
-<br />
-<br />
-<br />
-<br />
-<br />
+  <input type="radio" id="flavour_full" name="flavour" value="full" checked />
+  <label for="flavour_full">full (~900MB)</label>
+  &nbsp;
+  <input type="radio" id="flavour_small" name="flavour" value="small" />
+  <label for="flavour_small">small (~495MB)</label>
 
-<div style="font-size: 14pt;">
-  <p><a href="/changelogs/README-grml-2024.02/">Release Notes</a></p>
-</div>
+  <br />
+
+  <h2>Architecture</h2>
+  <input type="radio" id="arch_amd64" name="arch" value="amd64" checked />
+  <label for="arch_amd64">64-bit PC (amd64)</label>
+  &nbsp;
+  <input type="radio" id="arch_arm64" name="arch" value="arm64" />
+  <label for="arch_arm64">ARM (arm64)</label>
+
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+
+  <div style="font-size: 14pt;">
+    <p><a href="/changelogs/README-grml-{{< param current_release.version >}}/">Release Notes</a></p>
+  </div>
 
 </div>
 </form>
@@ -125,40 +128,30 @@ title = 'Download Grml 2024.02'
 
 <div class="download_panel" id="download_panel2">
 <div>
-  <div>
     <a id="download_link_mirror" class="largebutton">Download Now</a><br />
     <a id="download_link_signature">Get GPG Signature</a><br />
     <a href="/download/mirrors/">Download from a specific mirror</a><br/>
-  </div>
 </div>
 </div>
 
 <script>
-function update_arch() {
-    var flavour = document.getElementById('download_flavour').value;
-    if (flavour == 'small') document.getElementById('download_arch').innerHTML = '<option value="amd64">64-bit PC (amd64)</option><option value="i386">32-bit PC (i686+)</option><option value="96">One for both (~940MB)</option>';
-    if (flavour == 'full') document.getElementById('download_arch').innerHTML = '<option value="amd64">64-bit PC (amd64)</option><option value="i386">32-bit PC (i686+)</option><option value="96">One for both (~1.8GB)</option>';
-    update_links();
-}
-
 function update_links() {
-    var current_version = "2024.02";
+    var formData = new FormData(document.getElementById('download_form'));
+    var current_version = formData.get('version');
+    var arch = formData.get('arch');
+    var flavour = formData.get('flavour');
     var product = 'grml';
-    var arch = document.getElementById('download_arch').value;
-    var flavour = document.getElementById('download_flavour').value;
-    if (arch == 'amd64') product = 'grml64';
-    if (arch == 'i386') product = 'grml32';
-    if (arch == '96') product = 'grml96';
-    var iso = product + '-' + flavour + '_' + current_version + '.iso';
+    var iso = product + '-' + flavour + '-' + current_version + '-' + arch + '.iso';
     var mirror_url = "https://download.grml.org/";
     document.getElementById('download_link_mirror').href = mirror_url + iso;
-    document.getElementById('download_link_mirror').innerHTML = '<br />Download Now<div class="download_relinfo">' + product + '-' + flavour + ' ' + current_version + '</div>';
+    document.getElementById('download_link_mirror').innerHTML = '<br />Download Now<div class="download_relinfo">' + product + '-' + flavour + ' ' + current_version + ' ' + arch + '</div>';
     document.getElementById('download_link_signature').href = mirror_url + iso + '.asc';
 }
 
 // hook update function
-document.getElementById('download_flavour').onchange = update_arch;
-document.getElementById('download_arch').onchange = update_links;
+document.querySelectorAll('#download_form input').forEach(function (elem) {
+  elem.onchange = update_links;
+});
 // force initial link href set
 update_links();
 document.getElementById('download_group1').style.display = '';
@@ -173,11 +166,11 @@ document.getElementById('download_group1_noscript').style.display = 'none';
   <b>Alternate downloads</b><br /><br />
   <a href="https://daily.grml.org/">Daily images</a><br />
   <a href="https://download.grml.org/">Older releases</a><br />
-  <a href="https://download.grml.org/grml_sources-2024.02.tar.gz">Source code</a> (one tgz for both architectures)<br />
+  <a href="https://download.grml.org/grml-{{< param current_release.version >}}-sources.tar">Source code</a> (one tar for both architectures)<br />
   <br/>
   Netboot packages:<br/>
-  <a href="https://download.grml.org/grml_netboot_package_grml64-full_2024.02.tar">64-bit</a>
-  <a href="https://download.grml.org/grml_netboot_package_grml32-full_2024.02.tar">32-bit</a>
+  <a href="https://download.grml.org/grml-full-{{< param current_release.version >}}-amd64-netboot.tar">64-bit PC</a>
+  <a href="https://download.grml.org/grml-full-{{< param current_release.version >}}-arm64-netboot.tar">64-bit ARM</a>
 </div>
 </div>
 
@@ -186,7 +179,7 @@ document.getElementById('download_group1_noscript').style.display = 'none';
   <b>Boot from USB key</b><br />
   <br />
   Just <kbd>dd(1)</kbd> the downloaded ISO to an <abbr title="Any existing data will be overwritten by the dd command!">empty</abbr> USB key!<br /><br />
-  <code class="keyboard">dd bs=4M status=progress conv=fdatasync if=grml64-full_2024.02.iso of=/dev/USB_KEY</code>
+  <code class="keyboard">dd bs=4M status=progress conv=fdatasync if=grml-full-{{< param current_release.version >}}-amd64.iso of=/dev/USB_KEY</code>
   <br /><br />
   <b>Troubleshooting</b><br /><br />
   <a href="https://git.grml.org/f/grml-live/templates/GRML/grml-cheatcodes.txt">Boot option guide</a>
@@ -194,6 +187,7 @@ document.getElementById('download_group1_noscript').style.display = 'none';
   <br />
   <br />
   <br />
+
 </div>
 </div>
 
@@ -203,13 +197,13 @@ document.getElementById('download_group1_noscript').style.display = 'none';
 
 <p>Please verify all downloads!</p>
 
-<p>Alongside the actual download files (ISO, netboot, sources), the Grml mirrors publish the extra files <em>SHA256SUMS</em> and <em>SHA256SUMS.gpg</em>.<br />
-The <em><a href="https://download.grml.org/SHA256SUMS">SHA256SUMS</a></em> file contains checksums for all available release files.<br />
-The <em><a href="https://download.grml.org/SHA256SUMS.gpg">SHA256SUMS.gpg</a></em> file provides the GnuPG signature for that file.<br />
-Once you have <em>SHA256SUMS</em> and <em>SHA256SUMS.gpg</em> in the same directory as your Grml downloads, verify the checksum file via:</p>
+<p>Alongside the actual download files (ISO, netboot, sources), the Grml mirrors publish the extra files <em>SHA256SUMS-{{< param current_release.version >}}</em> and <em>SHA256SUMS-{{< param current_release.version >}}.gpg</em>.<br />
+The <em><a href="https://download.grml.org/SHA256SUMS-{{< param current_release.version >}}">SHA256SUMS-{{< param current_release.version >}}</a></em> file contains checksums for all available release files.<br />
+The <em><a href="https://download.grml.org/SHA256SUMS-{{< param current_release.version >}}.gpg">SHA256SUMS-{{< param current_release.version >}}.gpg</a></em> file provides the GnuPG signature for that file.<br />
+Once you have <em>SHA256SUMS-{{< param current_release.version >}}</em> and <em>SHA256SUMS-{{< param current_release.version >}}.gpg</em> in the same directory as your Grml downloads, verify the checksum file via:</p>
 
 <code class="keyboard">
-gpg --keyid-format long --verify SHA256SUMS.gpg SHA256SUMS
+gpg --keyid-format long --verify SHA256SUMS-{{< param current_release.version >}}.gpg SHA256SUMS-{{< param current_release.version >}}
 </code>
 
 <p>If you don't have <a href="/download/gnupg-michael-prokop.txt">our GnuPG signing key</a>
@@ -222,7 +216,7 @@ gpg --keyid-format long --keyserver hkps://keys.openpgp.org --recv-keys 0x96A878
 <p>Finally verify the checksum of your Grml downloads, via:</p>
 
 <code class="keyboard">
-sha256sum --ignore-missing -c SHA256SUMS
+sha256sum --ignore-missing -c SHA256SUMS-{{< param current_release.version >}}
 </code>
 
 <h2>Source code</h2>

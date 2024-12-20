@@ -8,8 +8,9 @@ title = 'Features and main goals of Grml'
 [<img style="border: 0" src="/img/zsh_lover.png" alt="*" />](/zsh/) Grml - Linux for zsh lovers
 
 Grml provides an excellent selection of software packages for installation, deployment and system rescue.
-You'll get **sysadmin's favourite tools**.
-Choose between a x86 and an amd64 version depending on your needs or just grab the multiboot ISO grml96, providing 64bit and 32bit ISOs in one single place.
+You'll get **every sysadmin's favourite tools**.
+
+Choose between a 64-bit x86 PC and an ARM version, depending on your hardware.
 
 Grml provides several scripts and utils which **make life easier**.
 
