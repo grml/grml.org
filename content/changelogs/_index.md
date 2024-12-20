@@ -15,7 +15,7 @@ icon = 'changelog'
 
 {{%/ if_have_prerelease %}}
 
-## Previous releases
+## List of Grml releases
 
 {{< require_release_update "2024.12" >}}
 * <a href="README-grml-2024.12/">Grml 2024.12</a> - codename Adventgrenze
