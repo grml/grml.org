@@ -173,7 +173,6 @@ Many thanks in this release go to (alphabetically)
 András Korn,
 Antoine Beaupré,
 Christopher Bock,
-crpbm,
 pasja,
 Patrick Schleizer
 and
