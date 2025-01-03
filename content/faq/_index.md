@@ -253,7 +253,7 @@ using [PXE](https://en.wikipedia.org/wiki/Preboot_Execution_Environment)
 (Preboot Execution Environment).
 If your network card does not provide support for booting via PXE you can
 still boot it either using the provided grub image by grml-terminalserver
-or using [iPXE](http://etherboot.org/).
+or using [iPXE](https://ipxe.org/).
 
 For more information, refer to the [grml-terminalserver webpage](/terminalserver/).
 
