@@ -5,21 +5,26 @@ set -e
 # IMPORTANT: please note that you might override existing
 # configuration files in the current working directory!
 if command -v wget >/dev/null 2>&1 ; then
-  wget -O .screenrc     https://git.grml.org/f/grml-etc-core/etc/grml/screenrc_generic
-  wget -O .tmux.conf    https://git.grml.org/f/grml-etc-core/etc/tmux.conf
-  wget -O .vimrc        https://git.grml.org/f/grml-etc-core/etc/vim/vimrc
-  wget -O .zshrc        https://git.grml.org/f/grml-etc-core/etc/zsh/zshrc
-  wget -O .zshenv       https://git.grml.org/f/grml-etc-core/etc/zsh/zshenv
+  wget -O .screenrc   https://grml.org/console/screenrc
+  wget -O .tmux.conf  https://grml.org/console/tmux.conf
+  wget -O .vimrc      https://grml.org/console/vimrc
+  wget -O .zshrc      https://grml.org/console/zshrc
   # optional:
-  # wget -O .zshrc.local https://git.grml.org/f/grml-etc-core/etc/skel/.zshrc
+  # wget -O .zshrc.local https://grml.org/console/zshrc.local
 elif command -v curl >/dev/null 2>&1 ; then
-  curl -L -o .screenrc   https://git.grml.org/f/grml-etc-core/etc/grml/screenrc_generic
-  curl -L -o .tmux.conf  https://git.grml.org/f/grml-etc-core/etc/tmux.conf
-  curl -L -o .vimrc      https://git.grml.org/f/grml-etc-core/etc/vim/vimrc
-  curl -L -o .zshrc      https://git.grml.org/f/grml-etc-core/etc/zsh/zshrc
-  curl -L -o .zshenv     https://git.grml.org/f/grml-etc-core/etc/zsh/zshenv
+  curl -L -o .screenrc   https://grml.org/console/screenrc
+  curl -L -o .tmux.conf  https://grml.org/console/tmux.conf
+  curl -L -o .vimrc      https://grml.org/console/vimrc
+  curl -L -o .zshrc      https://grml.org/console/zshrc
   # optional:
-  # curl -L -o .zshrc.local  https://git.grml.org/f/grml-etc-core/etc/skel/.zshrc
+  # wget -O .zshrc.local https://grml.org/console/zshrc.local
+elif command -v fetch >/dev/null 2>&1 ; then
+  fetch -o .screenrc   https://grml.org/console/screenrc
+  fetch -o .tmux.conf  https://grml.org/console/tmux.conf
+  fetch -o .vimrc      https://grml.org/console/vimrc
+  fetch -o .zshrc      https://grml.org/console/zshrc
+  # optional:
+  # fetch -o .zshrc.local https://grml.org/console/zshrc.local
 else
   echo 'Error: neither wget nor curl available for retrieving configuration files.' >&2
   exit 1
