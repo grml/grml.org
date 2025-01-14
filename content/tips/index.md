@@ -15,7 +15,14 @@ layout = 'tips'
 <a name="{{ $number }}"></a>
 Grml Tip Number {{ $number }}<br>
 {{ $tip := . -}}
-<pre>{{ htmlEscape $tip -}}</pre>
+{{- range (split (strings.TrimSuffix "\n" $tip) "\n") -}}
+{{ $code := . -}}
+{{- if or (strings.Contains $code "#") (strings.Contains $code "%") -}}
+{{ highlight $code "shell" }}
+{{- else -}}
+<pre>{{ htmlEscape $code }}</pre>
+{{- end -}}
+{{- end -}}
 <hr>
 {{ $number = add $number 1 }}
 
