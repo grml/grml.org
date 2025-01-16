@@ -53,7 +53,7 @@ qemu-system-aarch64 \
     -drive if=pflash,format=raw,unit=0,file.filename=/usr/share/AAVMF/AAVMF_CODE.no-secboot.fd,file.locking=off,readonly=on \
     -drive if=pflash,unit=1,file=efi_vars.fd \
     -monitor unix:qemu-monitor-socket,server,nowait \
-    -cdrom ~/grml-full-{{< param current_release.version >}}-arm64.iso
+    -cdrom ./grml-full-{{< param current_release.version >}}-arm64.iso
 </pre>
 
 To access the QEMU monitor, you can use socat on a separate terminal:
@@ -82,9 +82,9 @@ qemu-system-x86_64 \
     -cpu max \
     -m 2048 \
     -drive if=pflash,format=raw,unit=0,file.filename=/usr/share/OVMF/OVMF_CODE_4M.fd,file.locking=off,readonly=on \
-    -drive if=pflash,unit=1,file="efi_vars.fd \
+    -drive if=pflash,unit=1,file=efi_vars.fd \
     -monitor stdio \
-    -cdrom ~/grml-full-{{< param current_release.version >}}-amd64.iso
+    -cdrom ./grml-full-{{< param current_release.version >}}-amd64.iso
 </pre>
 
 ### Boot Grml ISO on amd64 (64-bit PC), Legacy BIOS
@@ -98,7 +98,7 @@ qemu-system-x86_64 \
     -cpu max \
     -m 2048 \
     -monitor stdio \
-    -cdrom ~/grml-full-{{< param current_release.version >}}-amd64.iso
+    -cdrom ./grml-full-{{< param current_release.version >}}-amd64.iso
 </pre>
 
 ## Running Grml under QEMU on Windows
