@@ -1,11 +1,11 @@
 {{ partial "grml_menu.html" . }}
 
-<div class="content">
+<div class="page_content">
     {{ if .Params.Icon }}
     <p><img style="float: right" src="/img/{{ .Params.Icon }}.png" alt="*" /></p>
     {{ end }}
 
-    <h1>{{ .Title }}</h1>
+    <h1 class="title">{{ .Title }}</h1>
 
     {{ .Content }}
 

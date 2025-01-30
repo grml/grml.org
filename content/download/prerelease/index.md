@@ -43,7 +43,7 @@ title = 'Download Grml Release Candidate'
 .download_relinfo {
     font-size: 10pt;
     margin-top: 0.8em;
-    }
+}
 .download_group {
     border-bottom: 1px dotted gray;
     overflow: auto;
@@ -55,7 +55,7 @@ title = 'Download Grml Release Candidate'
     background-color: lightgrey;
     color: #111;
     font-family: "Ubuntu Mono", Consolas, Monaco, Courier, monospace;
-    font-size: 70%;
+    font-size: 8pt;
     line-height: 1.5rem;
     padding: .5rem 1rem;
     text-align: left;
