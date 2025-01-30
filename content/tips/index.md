@@ -7,10 +7,10 @@ layout = 'tips'
 {{ $url := "https://raw.githubusercontent.com/grml/grml-tips/refs/heads/master/grml_tips" }}
 {{ $s := slice }}
 {{ $number := 0 }}
-{{ with resources.GetRemote $url }}
+{{ with try (resources.GetRemote $url) }}
   {{ with .Err }}
     {{ errorf "%s" . }}
-  {{ else }}
+  {{ else with .Value }}
     {{- range (split (strings.TrimSuffix "-- \n" .Content) "\n-- \n") -}}
 <a name="{{ $number }}"></a>
 Grml Tip Number {{ $number }}<br>

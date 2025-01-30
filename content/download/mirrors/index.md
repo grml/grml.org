@@ -15,10 +15,10 @@ title = 'Download - Mirror List'
 {{ $mirror_types := slice "Grml-http" "Grml-rsync" "Grml-ftp" }}
 {{ $s := slice }}
 {{ $countries := slice }}
-{{ with resources.GetRemote $url }}
+{{ with try (resources.GetRemote $url) }}
   {{ with .Err }}
     {{ errorf "%s" . }}
-  {{ else }}
+  {{ else with .Value }}
     {{ range split .Content "\n\n" }}
     {{ $lines := split . "\n" }}
     {{ $sitename := index (split (index $lines 0) " ") 1 }}
