@@ -1735,7 +1735,7 @@ just invoke:</p></div>
 <div class="content">
 <pre><code>% cd /home/foobar/packages
 % dpkg-scanpackages . /dev/null | gzip &gt; Packages.gz
-% python -m SimpleHTTPServer 8000</code></pre>
+% python -m http.server 8000</code></pre>
 </div></div>
 <div class="admonitionblock">
 <table><tr>
@@ -1744,8 +1744,8 @@ just invoke:</p></div>
 </td>
 <td class="content">Of course you can also use a real Debian repository setup using tools like
 reprepro(1) and/or using a real web server, though for quick debugging sessions
-python&#8217;s SimpleHTTPServer in combination with dpkg-scanpackages from package
-dpkg-dev is a simple and easy approach.</td>
+python&#8217;s <a href="https://docs.python.org/3/library/http.server.html">http.server</a>
+in combination with dpkg-scanpackages from package dpkg-dev is a simple and easy approach.</td>
 </tr></table>
 </div>
 <div class="paragraph"><p>Finally invoke grml-live with your class name (<code>CUSTOM</code> in this example) added
