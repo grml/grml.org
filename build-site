@@ -1,0 +1,23 @@
+#!/bin/bash
+set -ex
+
+mkdir -p source-repos
+for reponame in grml2usb grml-debootstrap grml-live grml-x; do
+  rm -rf "source-repos/$reponame"
+  git clone --depth 1 https://github.com/grml/"$reponame" source-repos/"$reponame"
+done
+
+cp source-repos/grml-debootstrap/grml-debootstrap.8.txt content/grml-debootstrap/index.adoc
+cp source-repos/grml-x/grml-x.txt content/grml-x/index.adoc
+
+cp source-repos/grml2usb/grml2usb.8.txt content/grml2usb/_index.adoc
+cat > content/grml2usb/grml2iso.adoc <<EOT
++++
+url = 'grml2usb/grml2iso.html'
++++
+EOT
+cat source-repos/grml2usb/grml2iso.8.txt content/grml2usb/grml2iso.adoc
+
+cp source-repos/grml-live/docs/grml-live.txt content/grml-live/index.adoc
+
+hugo --minify
