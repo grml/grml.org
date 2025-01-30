@@ -12,6 +12,11 @@ html{color:#000;background:#FFF}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre
 /* http://alumnos.elo.utfsm.cl/~osrehe - thx!                                  */
 
 @media all {
+  /* necessary for asciidoc stuff to work */
+  *, ::before, ::after {
+    box-sizing: border-box
+  }
+
   html {background-color: #FFDA62; height: 100%;}
   body {font-family: verdana, tahoma, helvetica, arial, sans-serif; font-size: 11pt; background-color:#FFDA62; margin: 0; padding: 0; height:100%}
   div.container {width: 80%; text-align: left; background-color:#FFFFFF; margin: 0px auto 0px auto; border-width: 0 1px 0 1px; border-color: #E5E5E5; border-style: solid;}
@@ -57,6 +62,24 @@ html{color:#000;background:#FFF}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre
     background-color: lightgrey;
     font-family: "Ubuntu Mono", Consolas, Monaco, Courier, monospace;
     padding: .5rem 1rem;
+  }
+
+  /* asciidoc support */
+
+  .admonitionblock>table {
+    border-collapse: separate;
+    border: 0;
+    width: 100%;
+    padding-top: 1em;
+    padding-bottom: 1em;
+  }
+  .admonitionblock>table td.icon {
+    text-align: center;
+    width: 12em;
+  }
+  .admonitionblock>table td.icon .title {
+    font-weight: bold;
+    text-transform: uppercase;
   }
 }
 
