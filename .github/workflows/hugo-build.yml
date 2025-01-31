@@ -30,3 +30,11 @@ jobs:
         run: sudo apt install -y asciidoctor
       - name: Build
         run: ./build-site
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: website
+          path: public
+          if-no-files-found: error
+          include-hidden-files: true
+
