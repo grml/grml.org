@@ -12,8 +12,13 @@ html{color:#000;background:#FFF}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre
 /* http://alumnos.elo.utfsm.cl/~osrehe - thx!                                  */
 
 @media all {
+  /* necessary for asciidoc stuff to work */
+  *, ::before, ::after {
+    box-sizing: border-box
+  }
+
   html {background-color: #FFDA62; height: 100%;}
-  body {font-family: verdana, tahoma, helvetica, arial, sans-serif; font-size: 14pt; background-color:#FFDA62; margin: 0; padding: 0; height:100%}
+  body {font-family: verdana, tahoma, helvetica, arial, sans-serif; font-size: 11pt; background-color:#FFDA62; margin: 0; padding: 0; height:100%}
   div.container {width: 80%; text-align: left; background-color:#FFFFFF; margin: 0px auto 0px auto; border-width: 0 1px 0 1px; border-color: #E5E5E5; border-style: solid;}
   a {color:#C70036; text-decoration: underline}
   a.current {color:#999999}
@@ -21,45 +26,66 @@ html{color:#000;background:#FFF}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre
   a.plain {text-decoration: none}
   a.plain:hover {text-decoration: underline}
   a.smalllink {font-size: 80%}
-  cite {font-size: 80%}
-  div.content {background-color:#FFFFFF; margin: 0em 0.5em 0.5em 9.6em}
-  div.content h3 a {color:#996666}
-  div.copyright {text-align:center; font-size:50%; color: #666;}
-  div.menu h3 a{color:#996666}
-  div.menu h3{font-size:80%; border: none; }
-  div.menu {width: 8em; float: left; clear: left; background-color:#FFFFFF; padding: 0.5em 0.5em 0.5em 0.5em; margin: 0.5em 0.5em 0em 0.3em}
+  div.page_content {background-color:#FFFFFF; margin: 0em 0.8em 0.8em 12em; }
+  div.page_content h3 a {color:#996666}
+  div.copyright { text-align:center; font-size: 70%; color: #666; }
+  div.menu h3 a { color:#996666; }
+  div.menu h3 { font-size: 100%; border: none; }
+  div.menu {width: 12em; float: left; clear: left; background-color:#FFFFFF; padding: 0.8em 0.8em 0.8em 0.8em; }
   div.news p { margin: 0; }
-  div.sponsors {background-color:#FFFFFF; margin: 0em 0.5em 0.5em 9.6em}
+  div.sponsors {background-color:#FFFFFF; margin: 0em 0.8em 0.8em 12em; }
   div.sponsors div {text-align:center; }
   div.sub_links a {color: #FFFFFF}
-  div.sub_links {margin-top:0.5em; text-align:center; color: #FFFFFF; font-size:55%; clear: both; background-color:#8B8D7B}
-  h1 {color:navy; font-size:130%; font-weight:bold; padding-top: 1.5em; padding-bottom: 0.2em; }
-  h2 {color:black; font-size:105%; font-weight:bold; padding-top: 0.5em; padding-bottom: 0.2em; }
-  h3 {color:black; font-size:90%; font-weight:bold; padding-top: 0.5em; padding-bottom:0.3em; border-bottom-style:solid; border-bottom-width:1px; border-bottom-color:#CFB8B8;
+  div.sub_links {margin-top:0.5em; text-align:center; color: #FFFFFF; font-size: 66%; clear: both; background-color:#8B8D7B}
+  h1 {color:navy; font-size:150%; font-weight:bold; line-height: 2.2; }
+  h1.title { padding-top: 1.2em; }
+  h2 {color:black; font-size:130%; font-weight:bold; line-height: 2.2; }
+  h3 {color:black; font-size:120%; font-weight:bold; padding-top: 0.5em; padding-bottom: 0.3em; border-bottom-style:solid; border-bottom-width:1px; border-bottom-color:#CFB8B8;
 	margin-bottom:0em}
-  h4 {color:black; font-size:80%; font-weight:bold}
-  p {text-align:justify; color:black; font-size: 70%; line-height: 1.5em; padding-bottom: 0.4em;}
-  ul {font-size:70%; padding-bottom: 0.3em; }
+  h4 {color:black; font-size:110%; font-weight:bold}
+  p {text-align:justify; color:black; line-height: 1.5em; padding-bottom: 0.4em;}
+  ul {padding-bottom: 0.3em; }
   li {list-style: circle; margin-left: 2em;}
   #texbox {}
-  .toc {font-size:70%}
-  ol {font-size:70%}
-  .button { display: inline-block; background-color: #FFDA62; -moz-border-radius: 5px; -webkit-border-radius: 5px; border: 1px solid #444; padding: 10px; width: 140px; text-decoration: none; font-size: 16px; text-shadow: #333333; color: #000000; line-height: 1; background-position: 0px 0px; }
-  .button:hover { background: #FFA862; text-decoration: none; }
+  .frontpage_button { display: inline-block; background-color: #FFDA62; -moz-border-radius: 5px; -webkit-border-radius: 5px; border: 1px solid #444; padding: 10px; width: 14em; text-decoration: none; font-size: 14pt; color: #000000; line-height: 1; background-position: 0px 0px; padding: 1em; font-weight: bold; }
+  .frontpage_button:hover { background: #FFA862; text-decoration: none; }
   img.absmiddle { vertical-align: middle; margin-bottom: .25em; }
-  .banner { padding-top: 0em; }
-  .banner h1 { margin: 0; color: navy; font-size: 24pt; }
-  .banner h2 { margin: 0; color: navy; font-size: 11pt; }
+  .banner { padding-top: 0; }
+  .banner h1 { margin: 0; color: navy; line-height: 1; font-size: 24pt; padding-top: 1.2em; }
+  .banner h2 { margin: 0; color: navy; line-height: 1; font-size: 11pt; padding-top: 0.8em; }
   .logo { padding-top: 1em; }
   #searchbox { width: 8em; border: 1px solid #aaa; }
   b,strong { font-weight: bold; }
   i,em { font-style: italic; }
-  code,tt { font-family: 'Courier New', Courier, monospace; }
+  code,tt { font-family: "Ubuntu Mono", Consolas, Monaco, Courier, monospace; }
+  pre {
+    background-color: lightgrey;
+    font-family: "Ubuntu Mono", Consolas, Monaco, Courier, monospace;
+    padding: .5rem 1rem;
+  }
+
+  /* asciidoc support */
+
+  .admonitionblock>table {
+    border-collapse: separate;
+    border: 0;
+    width: 100%;
+    padding-top: 1em;
+    padding-bottom: 1em;
+  }
+  .admonitionblock>table td.icon {
+    text-align: center;
+    width: 12em;
+  }
+  .admonitionblock>table td.icon .title {
+    font-weight: bold;
+    text-transform: uppercase;
+  }
 }
 
 @media screen {
   .active {background-color: #FFCC33}
-  .rahmen {background-color: #FEDB64; font-size: 70%; padding: 5px; border: 1px dotted black}
+  .rahmen {background-color: #FEDB64; padding: 5px; border: 1px dotted black}
   abbr[title], acronym[title] {border-bottom: 1px dotted #333; cursor: help}
   #survey-header a { color: white; }
   #survey-header { background-color:#AE0000; color:#FFFFFF; font-family:sans-serif; font-size:120%; font-weight:bold; left:0; padding:5px 0; margin-bottom: 15px; position:fixed; text-align:center; top:0; width:100%; z-index:101; }

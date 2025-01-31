@@ -21,14 +21,14 @@ more...</a></p>
 
 <p style="text-align: center;">
 <b>The <a href="/changelogs/README-grml-{{< param current_release.version >}}/">current release</a>:</b><br/><br/>
-<a href="/download/" class="button" style="padding: 12px; font-weight: bold;"><span>Download Grml {{< param current_release.version >}}</span></a>
+<a href="/download/" class="frontpage_button"><span>Download<br><br>Grml {{< param current_release.version >}}</span></a>
 </p>
 <br />
 
 {{< if_have_prerelease >}}
 <p style="text-align: center;">
 <b>The <a href="/changelogs/README-grml-{{< param_opt current_prerelease.version >}}/">current pre-release</a>:</b><br/><br/>
-<a href="/download/prerelease/" class="button" style="padding: 12px; font-weight: bold;"><span>Download Grml {{< param_opt current_prerelease.version >}}</span></a>
+<a href="/download/prerelease/" class="frontpage_button"><span>Download<br><br>Grml {{< param_opt current_prerelease.version >}}</span></a>
 </p>
 <br />
 {{</ if_have_prerelease >}}

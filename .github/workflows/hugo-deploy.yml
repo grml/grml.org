@@ -31,8 +31,10 @@ jobs:
           hugo-version: "0.142.0"
           # extended: true
 
+      - name: Install asciidoctor
+        run: sudo apt install -y asciidoctor
       - name: Build
-        run: hugo --minify
+        run: ./build-site
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
