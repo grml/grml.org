@@ -19,77 +19,63 @@ find information regarding the zsh on grml.</p>
 
 <h2><a name="grmlzshrefcard"></a>grml-zsh-refcard</h2>
 
-<p>The grml-zsh-refcard provides a short overview of defined aliases,
+The grml-zsh-refcard provides a short overview of defined aliases,
 functions and settings of zsh on the grml system. Download it, print it
-and improve your zsh skills!</p>
+and improve your zsh skills!
 
-<ul>
-  <li><a href="grml-zsh-refcard.pdf">grml-zsh-refcard.pdf</a> (~108kB)</li>
-</ul>
+* [grml-zsh-refcard.pdf](grml-zsh-refcard.pdf) (~108kB)
 
 <h2><a name="grmlzshrc"></a>grmlzshrc(5)</h2>
 
-<p>grmlzshrc(5) is a manpage providing detailled information about grml's
-zsh configuration. On the grml system it is available offline via 'man
-grmlzshrc'. An online version is available as well:</p>
+grmlzshrc(5) is a manpage providing detailled information about grml's
+zsh configuration. On the grml system it is available offline via `man
+grmlzshrc`. An online version is available as well:
 
-<ul>
-  <li><a href="grmlzshrc.html">grmlzshrc.html</a> (~50kB)</li>
-</ul>
+* [grmlzshrc(5)](grmlzshrc.html)
 
 <h2><a name="grmlzshconfig"></a>grml-zsh-config</h2>
 
-<p>You do not have to use grml/Debian to use grml's zsh configuration.
+You do not have to use grml/Debian to use grml's zsh configuration.
 Just retrieve and install the configuration files in your home directory
-via executing for example:</p>
+via executing for example:
 
-<pre class="rahmen">
-# IMPORTANT: please note that you might override an existing
-# configuration file in the current working directory! =>
-wget -O .zshrc https://git.grml.org/f/grml-etc-core/etc/zsh/zshrc
+    # IMPORTANT: please note that you might override an existing
+    # configuration file in the current working directory! =>
+    wget -O .zshrc      https://grml.org/console/zshrc
 
-# Optionally also grab the user configration:
-# wget -O .zshrc.local  https://git.grml.org/f/grml-etc-core/etc/skel/.zshrc
-</pre>
+    # Optionally also grab the user configration:
+    # wget -O .zshrc.local https://grml.org/console/zshrc.local
 
-<p>Tip: for <a href="https://www.archlinux.org/">Archlinux</a> linux users
-exists <a
-href="https://www.archlinux.org/packages/extra/any/grml-zsh-config/">an
-official grml-zsh-config package</a>.</p>
+Tip: [Archlinux](https://www.archlinux.org/) users may use an
+[official grml-zsh-config package](https://www.archlinux.org/packages/extra/any/grml-zsh-config/).
 
 <h2><a name="zshlovers"></a>zsh-lovers</h2>
 
-<p>zsh-lovers is a small project which tries to collect tips, tricks and
-examples for the Z shell. Authors of the zsh-lovers manual page are <a
-href="https://www.strcat.de/">Christian 'strcat' Schneider</a>, <a
-href="/team/">Matthias Kopfermann</a> and <a href="/team/">Michael
-Prokop</a>.</p>
+zsh-lovers is a small project which tries to collect tips, tricks and
+examples for the Z shell. Authors of the zsh-lovers manual page are
+[Christian 'strcat' Schneider](https://www.strcat.de/),
+[Matthias Kopfermann](/team/) and [Michael Prokop](/team/).
 
-<p>Main part of zsh-lovers is the manual page which is available in
-several formats:</p>
+Main part of zsh-lovers is the manual page which is available in
+several formats:
 
-<ul>
-  <li><a href="zsh-lovers.1">zsh-lovers.1</a> (manual page) </li>
-  <li><a href="zsh-lovers.pdf">zsh-lovers.pdf</a></li>
-  <li><a href="zsh-lovers.html">zsh-lovers.html</a></li>
-</ul>
+* [zsh-lovers.1](zsh-lovers.1) (manual page)
+* [zsh-lovers.pdf](zsh-lovers.pdf)
+* [zsh-lovers.html](zsh-lovers.html)
 
-<p>The zsh-lovers archive includes the zsh-lovers manual page and several
-zsh configuration files. Get it from <a
-href="https://deb.grml.org/pool/main/z/zsh-lovers/">the zsh-lovers
-directory</a> at <a href="https://deb.grml.org/">the grml repository</a>.
+The zsh-lovers archive includes the zsh-lovers manual page and several
+zsh configuration files. Get it from the [zsh-lovers directory](https://deb.grml.org/pool/main/z/zsh-lovers/)
+at [the grml repository](https://deb.grml.org/).
 
-<p>Notice: If you would like to have zsh-lovers on your Debian system add
-the following line to /etc/apt/sources.list (run 'apt-get update
-&amp;&amp; apt-get install zsh-lovers'):</p>
+Notice: If you would like to have zsh-lovers on your Debian system add
+the following line to /etc/apt/sources.list (run `apt-get update
+&& apt-get install zsh-lovers`):
 
-<pre class="rahmen">
-# grml-repository
-  deb     http://deb.grml.org/ grml-stable  main</pre>
+    # grml-repository
+    deb     http://deb.grml.org/ grml-stable  main</pre>
 
-<p>If you find any bugs or suggestions please <a
-  href="mailto:zsh-lover@michael-prokop.at">mail us</a>! Feedback is
-welcome - help us to improve it!</p>
+If you find any bugs or suggestions please [mail us](mailto:zsh-lover@michael-prokop.at)!
+Feedback is welcome - help us to improve it!
 
 <h2><a name="resources"></a>Resources</h2>
 

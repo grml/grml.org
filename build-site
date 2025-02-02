@@ -1,23 +1,41 @@
 #!/bin/bash
-set -ex
+set -exuo pipefail
 
-mkdir -p source-repos
-for reponame in grml2usb grml-debootstrap grml-live grml-x; do
-  rm -rf "source-repos/$reponame"
-  git clone --depth 1 https://github.com/grml/"$reponame" source-repos/"$reponame"
-done
+function git_clone() {
+  local repo_name="$1"
+  mkdir -p source-repos
+  rm -rf "source-repos/$repo_name"
+  git clone --depth 1 https://github.com/grml/"$repo_name" source-repos/"$repo_name"
+}
 
-cp source-repos/grml-debootstrap/grml-debootstrap.8.txt content/grml-debootstrap/index.adoc
-cp source-repos/grml-x/grml-x.txt content/grml-x/index.adoc
+function copy_set_url() {
+  local source_file="$1"
+  local dest_file="$2"
+  local url="$3"
 
-cp source-repos/grml2usb/grml2usb.8.txt content/grml2usb/_index.adoc
-cat > content/grml2usb/grml2iso.adoc <<EOT
+  cat > "$dest_file" <<EOT
 +++
-url = 'grml2usb/grml2iso.html'
+url = '$url'
 +++
 EOT
-cat source-repos/grml2usb/grml2iso.8.txt content/grml2usb/grml2iso.adoc
+  cat "$source_file" >> "$dest_file"
+}
 
+git_clone grml2usb
+cp source-repos/grml2usb/grml2usb.8.txt content/grml2usb/_index.adoc
+copy_set_url source-repos/grml2usb/grml2iso.8.txt content/grml2usb/grml2iso.adoc grml2usb/grml2iso.html
+
+git_clone grml-debootstrap
+cp source-repos/grml-debootstrap/grml-debootstrap.8.txt content/grml-debootstrap/index.adoc
+
+git_clone grml-etc-core
+cp source-repos/grml-etc-core/doc/grmlzshrc.adoc content/zsh/grmlzshrc.adoc
+copy_set_url source-repos/grml-etc-core/doc/grmlzshrc.adoc content/zsh/grmlzshrc.adoc zsh/grmlzshrc.html
+
+git_clone grml-live
 cp source-repos/grml-live/docs/grml-live.txt content/grml-live/index.adoc
+
+git_clone grml-x
+cp source-repos/grml-x/grml-x.txt content/grml-x/index.adoc
 
 hugo --minify
