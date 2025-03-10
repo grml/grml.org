@@ -19,14 +19,27 @@ Packages provided by the Grml team are available from the <a href="https://deb.g
 
 <p>Note that using the Grml repository on standard Debian systems is <b>not recommended</b>. If you just want our console configuration, read <a href="/console/">"Make console work comfortable"</a>.</p>
 
-<pre class="rahmen">
-# Signing key is available in grml-debian-keyring
-#  deb     [signed-by=/usr/share/keyrings/grml-archive-keyring.gpg] http://deb.grml.org/ grml-stable main
-#  deb-src [signed-by=/usr/share/keyrings/grml-archive-keyring.gpg] http://deb.grml.org/ grml-stable main
-#  deb     [signed-by=/usr/share/keyrings/grml-archive-keyring.gpg] http://deb.grml.org/ grml-testing main
-#  deb-src [signed-by=/usr/share/keyrings/grml-archive-keyring.gpg] http://deb.grml.org/ grml-testing main</pre>
+If you are running Debian **trixie** or later, use grml-keyring from Debian:
 
-If you are running Debian stretch or later, you may want to use the following <code>.sources</code> file, which will enforce the suite name and signing keys:
+<pre class="rahmen">
+$ apt install grml-keyring
+$ ln -s /usr/share/grml-keyring/grml.sources /etc/apt/sources.list/
+$ cat &lt;&lt;EOT >/etc/apt/preferences.d/grml.pref
+Package: *
+Pin: release a=grml-stable
+Pin-Priority: 100
+
+Package: *
+Pin: release a=grml-testing
+Pin-Priority: 100
+EOT
+</pre>
+
+---
+
+Instructions for Debian **stretch, buster, bullseye and bookworm**:
+
+Put the following snippet into /etc/apt/sources.list/grml.sources:
 
 <pre class="rahmen">
 Types: deb deb-src
@@ -34,7 +47,8 @@ URIs: http://deb.grml.org/
 Suites: grml-stable grml-testing
 Architectures: i386 amd64 arm64
 Components: main
-Signed-By: /usr/share/keyrings/grml-archive-keyring.gpg</pre>
+Signed-By: /usr/share/keyrings/grml-archive-keyring.gpg
+</pre>
 
 Then the following <a href="https://manpages.debian.org/apt_preferences">preferences file</a> will keep packages from Grml to replace normal Debian packages, in <code>/etc/apt/preferences.d/grml.pref</code>:
 
