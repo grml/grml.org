@@ -63,19 +63,10 @@ several formats:
 * [zsh-lovers.pdf](zsh-lovers.pdf)
 * [zsh-lovers.html](zsh-lovers.html)
 
-The zsh-lovers archive includes the zsh-lovers manual page and several
-zsh configuration files. Get it from the [zsh-lovers directory](https://deb.grml.org/pool/main/z/zsh-lovers/)
-at [the grml repository](https://deb.grml.org/).
+The zsh-lovers archive includes the zsh-lovers manual page and several zsh configuration files.
+It's available through the zsh-lovers packages from [the Grml repository](/files/).
 
-Notice: If you would like to have zsh-lovers on your Debian system add
-the following line to /etc/apt/sources.list (run `apt-get update
-&& apt-get install zsh-lovers`):
-
-    # grml-repository
-    deb     http://deb.grml.org/ grml-stable  main</pre>
-
-If you find any bugs or suggestions please [mail us](mailto:zsh-lover@michael-prokop.at)!
-Feedback is welcome - help us to improve it!
+Feedback is welcome via [github.com/grml/zsh-lovers](https://github.com/grml/zsh-lovers).
 
 <h2><a name="resources"></a>Resources</h2>
 
@@ -131,11 +122,4 @@ Feedback is welcome - help us to improve it!
   <li><a href="https://zshwiki.org/home/links/configs">zsh-configuration-files @ zshwiki.org </a></li>
   <li><a href="http://www.dotfiles.com/index.php?app_id=4">zshrcs @ dotfiles.com</a></li>
   -->
-</ul>
-
-<h3>German information:</h3>
-
-<ul>
-  <li><a href="https://www.michael-prokop.at/computer/tools_zsh.html">www.michael-prokop.at/computer/tools_zsh.html</a> - zsh-Seite von Michael Prokop</li>
-  <li><a href="https://www.michael-prokop.at/computer/tools_zsh_liebhaber.html">Zsh-Liebhaber-Seite</a> von Michael Prokop und Matthias Kopfermann</li>
 </ul>
