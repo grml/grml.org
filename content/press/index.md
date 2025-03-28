@@ -55,6 +55,8 @@ icon = 'cdrom'
 
 <h3>German</h3>
 
+* <a href="https://www.linux-magazin.de/news/grml-2024-12-adventgrenze-kennt-64-bit-arm-cpus/">Grml 2024.12 „Adventgrenze“ kennt 64-Bit-ARM-CPUs - linux-magazin.de</a> [23.12.2024]
+* <a href="https://www.linux-magazin.de/news/grml-2022-11-malguckes-mit-frischem-unterbau/">Grml 2022.11 MalGuckes mit frischem Unterbau - linux-magazin.de</a> [02.12.2022]
 * <a href="https://www.linux-magazin.de/news/grml-2021-07-betreibt-produktpflege/">Grml 2021.07 betreibt Produktpflege</a> [28.07.2021]
 * <a href="http://www.pro-linux.de/news/1/24803/rettungsdistribution-grml-201705-setzt-auf-systemd.html">Rettungsdistribution Grml 2017.05 setzt auf Systemd - pro-linux.de</a> [02.06.2017]
 * <a href="http://www.linux-magazin.de/NEWS/Grml-2017.05-setzt-auf-Systemd">Grml 2017.05 setzt auf Systemd - linux-magazin.de</a> [02.06.2017]
@@ -222,6 +224,13 @@ icon = 'cdrom'
 
 Articles about Grml or Grml ISO shipped as part of magazines:
 
+* <a href="https://www.linux-community.de/ausgaben/linuxuser/2025/03/heft-dvd-03-2025/">Grml 2024.12 shipped on DVD of german Linux User magazine 03/2025</a>
+* <a href="https://www.linux-magazin.de/ausgaben/2025/03/einfuehrung/">Grml 2024.12 shipped on DVD of german Linux Magazine 03/2025</a>
+* <a href="https://www.linux-community.de/ausgaben/linuxuser/2025/01/drei-distributionen-zur-systemrettung-im-vergleich/">Grml in german Linux User magazine 01/2025 - Drei Distributionen zur Systemrettung im Vergleich</a>
+* <a href="https://www.linux-community.de/ausgaben/linuxuser/2025/01/heft-dvd-01-2025/">Grml 2024.12 shipped on DVD of german Linux User magazine 01/2025</a>
+* <a href="https://www.linux-magazin.de/ausgaben/2025/01/rescue-systeme/">Grml in german Linux Magazine 01/2025 - Distributionen zur Systemrettung im Vergleich</a>
+* <a href="https://www.linux-magazin.de/ausgaben/2021/10/einfuehrung/">Grml 2021.07 shipped on DVD of german Linux Magazine 10/2021</a>
+* <a href="https://www.linux-magazin.de/ausgaben/2015/09/rescue-systeme/">Grml featured in Linux-Magazin 09/2015</a>
 * <a href="http://blog.grml.org/archives/393-Grml-2014.11-shipped-on-DVD-of-german-Linux-User-magazine-022015.html">Grml 2014.11 shipped on DVD of german Linux User magazine 02/2015</a>
 * <a href="http://blog.grml.org/archives/389-Grml-2014.03-shipped-on-DVD-of-german-Linux-User-magazine-062014.html">Grml 2014.03 shipped on DVD of german Linux User magazine 06/2014</a>
 * <a href="http://blog.grml.org/archives/388-Grml-2014.03-shipped-on-german-magazine-iX-Kompakt-Security-2014.html">Grml 2014.03 shipped on german magazine iX Kompakt Security 2014</a>
@@ -230,15 +239,15 @@ Articles about Grml or Grml ISO shipped as part of magazines:
 * <a href="http://www.linux-community.de/Internal/Artikel/Print-Artikel/LinuxUser/2013/12/12-2013/%28article_body_offset%29/2">Grml shipped on DVD of german magazine LinuxUser 12/2013</a>
 * <a href="http://blog.grml.org/archives/373-Grml-featured-in-Linux-User-032012.html">Grml featured in Linux User 03/2012</a>
 * <a href="http://blog.grml.org/archives/346-Grml-in-ct-extra-Netzwerke-012011.html">Grml in c't extra Netzwerke 01/2011</a>
-* <a href="http://blog.grml.org/archives/345-Grml-in-DELUG-edition-of-Linux-Magazine-0311.html">Grml in DELUG edition of Linux Magazine 03/11</a>
-* <a href="http://blog.grml.org/archives/336-Grml-2010.04-shipped-with-LinuxUser-72010.html">Grml 2010.04 shipped with LinuxUser 7/2010</a>
+* <a href="http://blog.grml.org/archives/345-Grml-in-DELUG-edition-of-Linux-Magazine-0311.html">Grml in DELUG edition of Linux Magazine 03/2011</a>
+* <a href="http://blog.grml.org/archives/336-Grml-2010.04-shipped-with-LinuxUser-72010.html">Grml 2010.04 shipped with LinuxUser 07/2010</a>
 * <a href="http://blog.grml.org/archives/335-Grml-article-in-freiesMagazin-062010.html">Grml article in freiesMagazin 06/2010</a>
 * <a href="http://blog.grml.org/archives/323-grml-shipped-with-ct-extra-032009-Netzwerke.html">Grml in c't extra 03/2009 Netzwerke</a>
-* <a href="http://blog.grml.org/archives/314-Grml-2009.05-LinuxUser-Edition.html">Grml DVD and article in LinuxUser 2009/08</a>
-* <a href="http://blog.grml.org/archives/313-grml-2009.05-in-Linux-Magazin-200908.html">Grml in Linux Magazin 2009/08 (DELUG DVD-version)</a>
+* <a href="http://blog.grml.org/archives/314-Grml-2009.05-LinuxUser-Edition.html">Grml DVD and article in LinuxUser 08/2009</a>
+* <a href="http://blog.grml.org/archives/313-grml-2009.05-in-Linux-Magazin-200908.html">Grml in Linux Magazin 08/2009 (DELUG DVD-version)</a>
 * <a href="http://blog.grml.org/archives/307-grml-in-german-magazine-ct-kompakt-012009.html">Grml in c't kompakt 01/2009</a>
 * <a href="http://blog.grml.org/archives/302-grml-mentioned-in-ct-072009.html">Grml in c't 07/2009</a>
-* <a href="http://blog.grml.org/archives/296-grml-in-linux-user-magazine-200902.html">Grml in LinuxUser magazine 2009/02</a>
+* <a href="http://blog.grml.org/archives/296-grml-in-linux-user-magazine-200902.html">Grml in LinuxUser magazine 02/2009</a>
 * <a href="http://blog.grml.org/archives/279-grml-1.1-in-LinuxUser-052008.html">Grml 1.1 in LinuxUser 05/2008</a>
 * <a href="http://blog.grml.org/archives/265-grml-in-ct-special-Netzwerke.html">Grml (pre-release of 1.1) in c't special 02/2008 'Netzwerke' magazine</a>
 * <a href="http://blog.grml.org/archives/249-grml-grml64-grml-small-in-LinuxUser-072007.html">grml 1.0 / grml64 0.1 /grml-small 0.4 in LinuxUser 07/2007 (media edition)</a>
