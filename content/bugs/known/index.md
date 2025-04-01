@@ -14,6 +14,7 @@ If you find additional bugs, please [report them](/bugs/)!
 
 * SSH with random password is broken (see [grml-autoconfig#22](https://github.com/grml/grml-autoconfig/issues/22)) [workaround: set parameter in ssh boot option, like use `ssh=yoursecret`]
 * When installing with grml2usb, isolinux/BIOS boot fails: bootid does not match (see [grml2usb@68](https://github.com/grml/grml2usb/issues/68)) [workaround: run `apt update; apt install grml2usb` to get grml2usb &gt; v0.20.5]
+* Dell iDRAC (versions 8 and 9) virtual console stops working during boot process (see [grml#227](https://github.com/grml/grml/issues/227)) [workaround: use a current [Daily Grml ISO](/daily/)]
 
 ## Known Bugs in Grml 2024.02
 
