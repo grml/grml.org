@@ -14,12 +14,17 @@ title = 'The Grml Team'
 * Alexander Steinböck
 * Alexander Wirt
 * Andreas Gredler
+* Daniel K. Gebhart
 * Evgeni Golov
+* Julius Plenz
 * Marcel Wichern
+* Mario Lang
 * Markus Rekkenbeil
+* Martin Hecher
 * Matthias Kopfermann
 * Michael Gebetsroither
 * Moritz Augsburger
+* Nico Golde
 * Rhonda D'Vine
 * Timo Boettcher
 * Tobias Klauser
