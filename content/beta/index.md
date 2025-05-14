@@ -19,9 +19,9 @@ These builds are not tested.
 
 {{% if_no_prerelease %}}
 
-Shortly before we publish a new release a release candidate version is made available to the public.
+Sometimes shortly before we publish a new stable release, a release candidate version is made available to the public.
 
-Currently s no release candidate is available.
+Currently no release candidate is available.
 
 {{%/ if_no_prerelease %}}
 
