@@ -122,7 +122,7 @@ Wir mögen Wortspiele(tm).
 <h3><a name="accessibility"></a><a href="#toc">What does accessibility at Grml mean?</a></h3>
 
 The Grml kernel includes support for speakup.
-For software, brltty and espeakup are included.
+For software, brltty and espeakup are included in grml-full.
 
 <h3><a name="bootoptions"></a><a href="#toc">Which boot options does Grml support?</a></h3>
 
