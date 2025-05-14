@@ -10,12 +10,14 @@ icon = 'clanbomber'
 <p class="toc"><a href="#general">General:</a></p>
 <ol>
     <li><a href="#whatis">What is Grml?</a></li>
-    <li><a href="#flavours">What are grml32, grml64 and grml96?</a></li>
+    <li><a href="#flavours">What architectures are supported by Grml?</a></li>
+    <li><a href="#grml32">What were grml32, grml64 and grml96?</a></li>
     <li><a href="#grmlsmall">What is the difference between grml-full and grml-small?</a></li>
     <li><a href="#get">Where do I get Grml?</a></li>
     <li><a href="#whatmeans">What does Grml mean?</a></li>
     <li><a href="#releasename">What about the release name?</a></li>
     <li><a href="#requirements">Requirements for running Grml</a></li>
+    <li><a href="#accessibility">What does accessibility at Grml mean?</a></li>
     <li><a href="#bootoptions">Which boot options does Grml support?</a></li>
     <li><a href="#systemd">Why is Grml using systemd?</a></li>
     <li><a href="#known_issues">Are there any known issues with this release? How about reporting bugs?</a></li>
