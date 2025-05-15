@@ -102,10 +102,10 @@ title = 'Download Grml Release Candidate'
   <h2>Size</h2>
 
   <input type="radio" id="flavour_full" name="flavour" value="full" checked />
-  <label for="flavour_full">full (~900MB)</label>
+  <label for="flavour_full">full (~1GB)</label>
   &nbsp;
   <input type="radio" id="flavour_small" name="flavour" value="small" />
-  <label for="flavour_small">small (~495MB)</label>
+  <label for="flavour_small">small (~540MB)</label>
 
   <br />
 

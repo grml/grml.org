@@ -32,8 +32,8 @@ outputs:
 
 params:
   current_release:
-    version: "2024.12"
-    codename: "Adventgrenze"
+    version: "2025.05"
+    codename: "Nudlaug"
   current_prerelease:
     version: ""
     codename: ""
