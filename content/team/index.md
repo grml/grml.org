@@ -23,7 +23,7 @@ title = 'The Grml Team'
 * Martin Hecher
 * Matthias Kopfermann
 * Michael Gebetsroither
-* Moritz Augsburger
+* Martha Augsburger
 * Nico Golde
 * Rhonda D'Vine
 * Timo Boettcher

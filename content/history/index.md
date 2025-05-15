@@ -210,7 +210,7 @@ grml 2008.11.</p>
 
 <h3>12.12.2008</h3>
 
-<p>Moritz Augsburger joined <a href="/team/">the grml-team</a>.</p>
+<p>Martha Augsburger joined <a href="/team/">the grml-team</a>.</p>
 
 <h3>01.12.2008</h3>
 

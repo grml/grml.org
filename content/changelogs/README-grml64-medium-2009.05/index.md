@@ -192,7 +192,7 @@ tsconf xserver-common
 
 <ul>
 
-<li>Moritz Augsburger joined <a href="/team/">the grml-team</a>
+<li>Martha Augsburger joined <a href="/team/">the grml-team</a>
 
 </ul>
 
@@ -235,7 +235,7 @@ feature requests <a href="/contact/">to the grml-team</a>!</p>
 <p>Many thanks in this release go to Thomas Lehmann, Wernfried Haas,
 Jan-Hendrik Zab, Christian Hofstaedtler, Ralf Moll, Marc Haber,
 Thorsten Glaser, Lothar Speil, Michael Whapples, Andreas Korsten,
-Baptiste Daroussin, Ulrich Dangel and Moritz Augsburger
+Baptiste Daroussin, Ulrich Dangel and Martha Augsburger
 for their contributions. Many thanks also to the ones of you who
 <a href="/donations/">donated something to the grml-team</a> and
 of course to all those who have sent feedback since the last
