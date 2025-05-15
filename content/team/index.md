@@ -20,10 +20,10 @@ title = 'The Grml Team'
 * Marcel Wichern
 * Mario Lang
 * Markus Rekkenbeil
+* Martha Augsburger
 * Martin Hecher
 * Matthias Kopfermann
 * Michael Gebetsroither
-* Martha Augsburger
 * Nico Golde
 * Rhonda D'Vine
 * Timo Boettcher
