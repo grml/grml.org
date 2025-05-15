@@ -296,7 +296,7 @@ grml-team!</p>
 <h3>Thanks</h3>
 
 <p>Many thanks in this release go to Michael Schierl, Jan-Pieter
-Jacobs, Moritz Augsburger, Wolfgang Fuschlberger, Manuel Fuhr, Ronny
+Jacobs, Martha Augsburger, Wolfgang Fuschlberger, Manuel Fuhr, Ronny
 Plattner, Robert Giebel and Martin Ahammer for their contributions.
 Many thanks to all of you who took part in <a
 href="/user-survey/grml.txt">the grml user survey</a>.

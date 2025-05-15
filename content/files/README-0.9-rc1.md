@@ -293,7 +293,7 @@ grml-team!</p>
 <h3>Thanks</h3>
 
 <p>Many thanks in this release go to Wolfgang Karall, Frank
-Terbeck, Alexander Bernauer, Moritz Augsburger, Arnt Karlsen
+Terbeck, Alexander Bernauer, Martha Augsburger, Arnt Karlsen
 and Marc Haber for their contributions. Many thanks also to the
 ones of you who <a href="/donations/">donated something to the
 grml-team</a> and of course to all those who have sent feedback
