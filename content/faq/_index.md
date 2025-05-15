@@ -104,13 +104,13 @@ Grml comes close to "argl" or "grrr" in English.
 People use this when they want to express their dissatisfaction with software (amongst other things).
 
 <h3><a name="releasename"></a><a href="#toc">What about the release name?</a></h3>
-{{< require_release_update "2024.12" >}}
+{{< require_release_update "2025.05" >}}
 
-Codename of Grml 2024.12 is "Adventgrenze".
+Codename of Grml 2025.05 is "Nudlaug".
 
-In Austria, <a href="https://en.wikipedia.org/wiki/Advent_wreath">Advent wreaths</a> are called `Adventkränze`, and `Adventgrenze` is pronounced similarly; however, `Grenze` is the German word for `border`.
+In Austria, <a href="https://www.dasneuewien.at/wiener-dialekt-verstehen-bedeutung/2043">Nudlaug</a> describes a person who reacts very slowly or literally 'dawdles around'.
 
-Wir mögen Wortspiele(tm).
+Many nations are dragging their feet on urgent climate issues and instead throw stones at human rights and international agreements, out of their glass houses. We believe leaders of such nations are Nudlaugn.
 
 <h3><a name="requirements"></a><a href="#toc">Requirements for running Grml</a></h3>
 
