@@ -304,7 +304,7 @@ Bash is largely a subset of Zsh and you don't have to throw away your knowledge 
 
 Do you have a question which is not answered in the FAQ or in the provided
 [documentation](/docs/) (execute `grml-info` on your Grml system for offline
-documentation)?  Also check out `grml-tips $KEYWORD` on your Grml system.
+documentation)? Also check out `grml-tips $KEYWORD` on your Grml system or [online](/tips/).
 
 Take a look at both our website and the [wiki](https://github.com/grml/grml/wiki).
 A good place to become part of the community is the [Grml mailinglist](/mailinglist/).
