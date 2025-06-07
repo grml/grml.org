@@ -13,13 +13,13 @@ if command -v wget >/dev/null 2>&1 ; then
   # optional:
   # wget -O .zshrc.local https://grml.org/console/zshrc.local
 elif command -v curl >/dev/null 2>&1 ; then
-  curl -L -o .screenrc   https://grml.org/console/screenrc
-  curl -L -o .tmux.conf  https://grml.org/console/tmux.conf
-  curl -L -o .vimrc      https://grml.org/console/vimrc
-  curl -L -o .zshrc      https://grml.org/console/zshrc
-  curl -L -o .zshenv     https://grml.org/console/zshenv
+  curl -sSfL -o .screenrc   https://grml.org/console/screenrc
+  curl -sSfL -o .tmux.conf  https://grml.org/console/tmux.conf
+  curl -sSfL -o .vimrc      https://grml.org/console/vimrc
+  curl -sSfL -o .zshrc      https://grml.org/console/zshrc
+  curl -sSfL -o .zshenv     https://grml.org/console/zshenv
   # optional:
-  # wget -O .zshrc.local https://grml.org/console/zshrc.local
+  # curl -sSfL -o .zshrc.local https://grml.org/console/zshrc.local
 elif command -v fetch >/dev/null 2>&1 ; then
   fetch -o .screenrc   https://grml.org/console/screenrc
   fetch -o .tmux.conf  https://grml.org/console/tmux.conf
