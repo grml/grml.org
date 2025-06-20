@@ -33,7 +33,7 @@ cp source-repos/grml-etc-core/doc/grmlzshrc.adoc content/zsh/grmlzshrc.adoc
 copy_set_url source-repos/grml-etc-core/doc/grmlzshrc.adoc content/zsh/grmlzshrc.adoc zsh/grmlzshrc.html
 
 git_clone grml-live
-cp source-repos/grml-live/docs/grml-live.txt content/grml-live/index.adoc
+cp source-repos/grml-live/docs/grml-live.8.txt content/grml-live/index.adoc
 
 git_clone grml-x
 cp source-repos/grml-x/grml-x.txt content/grml-x/index.adoc
