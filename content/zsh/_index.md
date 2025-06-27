@@ -46,6 +46,9 @@ via executing for example:
     # Optionally also grab the user configration:
     # wget -O .zshrc.local https://grml.org/console/zshrc.local
 
+Also take a look at [grml-config.sh](/scripts/grml-config.sh)
+which is described in more detail on [mika's blog](/console).
+
 Tip: [Archlinux](https://www.archlinux.org/) users may use an
 [official grml-zsh-config package](https://www.archlinux.org/packages/extra/any/grml-zsh-config/).
 
