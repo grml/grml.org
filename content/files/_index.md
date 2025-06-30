@@ -23,7 +23,7 @@ If you are running Debian **trixie** or later, use grml-keyring from Debian:
 
 <pre class="rahmen">
 $ apt install grml-keyring
-$ ln -s /usr/share/grml-keyring/grml.sources /etc/apt/sources.list/
+$ ln -s /usr/share/grml-keyring/grml.sources /etc/apt/sources.list.d/
 $ cat &lt;&lt;EOT >/etc/apt/preferences.d/grml.pref
 Package: *
 Pin: release a=grml-stable
@@ -37,9 +37,9 @@ EOT
 
 ---
 
-Instructions for Debian **stretch, buster, bullseye and bookworm**:
+Instructions for Debian **bullseye and bookworm**:
 
-Put the following snippet into /etc/apt/sources.list/grml.sources:
+Put the following snippet into /etc/apt/sources.list.d/grml.sources:
 
 <pre class="rahmen">
 Types: deb deb-src
@@ -47,7 +47,7 @@ URIs: http://deb.grml.org/
 Suites: grml-stable grml-testing
 Architectures: i386 amd64 arm64
 Components: main
-Signed-By: /usr/share/keyrings/grml-archive-keyring.gpg
+Signed-By: /usr/share/keyrings/grml-archive-keyring.pgp
 </pre>
 
 Then the following <a href="https://manpages.debian.org/apt_preferences">preferences file</a> will keep packages from Grml to replace normal Debian packages, in <code>/etc/apt/preferences.d/grml.pref</code>:
@@ -64,7 +64,7 @@ Pin-Priority: 100</pre>
 Also note that you may have trouble installing the <code>grml-debian-keyring</code> package as APT will complain about the missing key. A workaround is to download it directly:
 
 <pre class="rahmen">
-sudo wget -O /usr/share/keyrings/grml-archive-keyring.gpg https://deb.grml.org/repo-key.gpg
+sudo wget -O /usr/share/keyrings/grml-archive-keyring.pgp https://deb.grml.org/repo-key.pgp
 sudo apt-get update
 sudo apt-get install grml-debian-keyring
 </pre>
