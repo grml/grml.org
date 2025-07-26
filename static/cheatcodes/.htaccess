@@ -1,0 +1,2 @@
+RewriteEngine on
+RewriteRule ^$	https://git.grml.org/f/grml-live/templates/GRML/grml-cheatcodes.txt
