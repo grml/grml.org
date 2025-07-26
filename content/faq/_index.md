@@ -12,6 +12,7 @@ icon = 'clanbomber'
     <li><a href="#whatis">What is Grml?</a></li>
     <li><a href="#flavours">What architectures are supported by Grml?</a></li>
     <li><a href="#grml32">What were grml32, grml64 and grml96?</a></li>
+    <li><a href="#grml32download">Where can I download grml32?</a></li>
     <li><a href="#grmlsmall">What is the difference between grml-full and grml-small?</a></li>
     <li><a href="#get">Where do I get Grml?</a></li>
     <li><a href="#whatmeans">What does Grml mean?</a></li>
@@ -87,6 +88,16 @@ A new naming convention was introduced to include the architecture and version i
 
 What was formerly known as `grml64` is now known as `grml-*-amd64`.
 You will see, for example, `grml-full-2024.12-amd64.iso`, where `amd64` indicates this ISO is for an 64-bit x86 PC.
+
+<h3><a name="grml32download"></a><a href="#toc">Where can I download grml32?</a></h3>
+
+Grml32 (the 32-bit x86 PCs flavour of Grml) <a href="#grml32">is no longer supported</a>.
+If you're looking for the latest available version of grml32, the following ISOs are available:
+
+<ul>
+<li><a href="https://archive.grml.org/grml32-full_2024.02.iso">grml32-full_2024.02.iso</a> (859MB, sha256: 61bb2c27e4f0946944fcb883bea1674275cdf2f1303a7bdef58758a3c2d62c4b)</li>
+<li><a href="https://archive.grml.org/grml32-small_2024.02.iso">grml32-small_2024.02.iso</a> (458MB, sha256: 9614340254024ef0e89dcf57fd3d385a87ada27ec2015bf800784816e0e02bc4)</li>
+</ul>
 
 <h3><a name="grmlsmall"></a><a href="#toc">What is the difference between grml-full and grml-small?</a></h3>
 
