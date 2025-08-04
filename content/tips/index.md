@@ -6,7 +6,7 @@ layout = 'tips'
 
 {{ $url := "https://raw.githubusercontent.com/grml/grml-tips/refs/heads/master/grml_tips" }}
 {{ $s := slice }}
-{{ $number := 0 }}
+{{ $number := 1 }}
 {{ with try (resources.GetRemote $url) }}
   {{ with .Err }}
     {{ errorf "%s" . }}
