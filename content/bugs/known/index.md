@@ -9,14 +9,12 @@ If you're unsure where to report an issue though, feel free to use [github.com/g
 
 If you find additional bugs, please [report them](/bugs/)!
 
+## Known Bugs in Grml 2025.08
+{{< require_release_update "2025.08" >}}
+
+None!
+
 ## Known Bugs in Grml 2025.05
-{{< require_release_update "2025.05" >}}
 
 * Boot option `keyboard=...` has no effect on keyboard layout (see [grml#232](https://github.com/grml/grml/issues/232)). Workaround: run `grml-lang de`, `loadkeys de` or alike after booting.
 * Boot option `lang=...` breaks the console character set and doesn't set the keyboard layout (see [grml#232](https://github.com/grml/grml/issues/232)). Workaround: boot *without* lang=... option and invoke `grml-lang de`, `loadkeys de` or alike after booting.
-
-## Known Bugs in Grml 2024.12
-
-* SSH with random password is broken (see [grml-autoconfig#22](https://github.com/grml/grml-autoconfig/issues/22)). Workaround: set parameter in ssh boot option, like use `ssh=yoursecret`.
-* When installing with grml2usb, isolinux/BIOS boot fails: bootid does not match (see [grml2usb@68](https://github.com/grml/grml2usb/issues/68)). Workaround: run `apt update; apt install grml2usb` to get grml2usb &gt; v0.20.5.
-* Dell iDRAC (versions 8 and 9) virtual console stops working during boot process (see [grml#227](https://github.com/grml/grml/issues/227)). Workaround: use a current [Daily Grml ISO](/daily/).

@@ -1,8 +1,8 @@
 +++
-title = 'Download Grml 2025.05'
+title = 'Download Grml 2025.08'
 +++
 <!-- at least: update page title -->
-{{< require_release_update "2025.05" >}}
+{{< require_release_update "2025.08" >}}
 
 <style>
 #contentbox {
