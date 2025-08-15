@@ -10,7 +10,7 @@ If you are looking for information on the Zsh take a look at the <a href="/zsh/"
 
 The available boot options are documented at <a href="/cheatcodes/">the cheatcodes webpage</a>.
 
-Many tips and tricks can be found in the <a href="https://wiki.grml.org/">grml-wiki (wiki.grml.org)</a>.
+Many tips and tricks can be found in the <a href="https://wiki.grml.org/">grml-wiki (wiki.grml.org)</a> and in <a href="/tips/">grml-tips</a>.
 
 ## Guides
 
