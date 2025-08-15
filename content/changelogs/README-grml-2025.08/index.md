@@ -38,7 +38,19 @@ The highlight of this release is it being based on the Debian 13 trixie release.
 
 #### [grml-live](https://github.com/grml/grml-live/) - build system for creating Grml (based) Linux live systems:
 
-* TBD
+* Support building Debian forky based images
+* Incorporate previously separate packages grml-autoconfig, grml-etc, grml-scripts, grml-udev-config
+* Add Hungarian keyboard support, with `keyboard=hu`
+* Add German "neo" keyboard variant, with `keyboard=de-neo`
+* New `PACKAGE skip` feature for `package_config` lists
+* Fix `lang=`/`keyboard=` boot options
+* Built ISOs are now reproducible
+* Split out clamav packages into pre-existing `FRESHCLAM` class
+* Install Device Tree files ("DTBs") if installed by packages into `/boot/dtbs`
+* Support classes for addon templates
+* Fix file accessibility issue for bootstrap keyring
+* Remove duplicated El Torito boot data on amd64
+* Remove non-UTF-8 locales, remove outdated locales
 
 #### [grml-scripts](https://github.com/grml/grml-scripts) - console scripts:
 
@@ -112,8 +124,6 @@ If you are interested in our consulting services, need a special feature in Grml
 
 Many thanks in this release go to (alphabetically)
 
-**TODO**
-
 [Christopher Bock](https://github.com/crpb),
 [Komeil Parseh](https://github.com/mmdbalkhi),
 [Martin Schürrer](https://github.com/MSch),
@@ -121,7 +131,7 @@ Many thanks in this release go to (alphabetically)
 [Roman Volosatovs](https://github.com/rvolosatovs),
 [Sebastian Boehm](https://github.com/sometimesfood)
 and
-[https://github.com/lexxua](Volodymyr Fedorov)
+[Volodymyr Fedorov](https://github.com/lexxua)
 for their contributions. ❤️
 
 Once again [netcup](https://www.netcup.com/) contributed financially, this time specifically to this release. Thank you, [netcup](https://www.netcup.com/) ❤️
