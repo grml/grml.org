@@ -17,7 +17,8 @@ icon = 'changelog'
 
 ## List of Grml releases
 
-{{< require_release_update "2025.05" >}}
+{{< require_release_update "2025.08" >}}
+* <a href="README-grml-2025.08/">Grml 2025.08</a> - codename Oneinonein
 * <a href="README-grml-2025.05/">Grml 2025.05</a> - codename Nudlaug
 * <a href="README-grml-2024.12/">Grml 2024.12</a> - codename Adventgrenze
 * <a href="README-grml-2024.02/">Grml 2024.02</a> - codename Glumpad

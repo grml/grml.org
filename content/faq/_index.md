@@ -115,13 +115,11 @@ Grml comes close to "argl" or "grrr" in English.
 People use this when they want to express their dissatisfaction with software (amongst other things).
 
 <h3><a name="releasename"></a><a href="#toc">What about the release name?</a></h3>
-{{< require_release_update "2025.05" >}}
+{{< require_release_update "2025.08" >}}
 
-Codename of Grml 2025.05 is "Nudlaug".
+Codename of Grml 2025.08 is "Oneinonein".
 
-In Austria, <a href="https://www.dasneuewien.at/wiener-dialekt-verstehen-bedeutung/2043">Nudlaug</a> describes a person who reacts very slowly or literally 'dawdles around'.
-
-Many nations are dragging their feet on urgent climate issues and instead throw stones at human rights and international agreements, out of their glass houses. We believe leaders of such nations are Nudlaugn.
+Make your own choice if you read it as one-in-one-in, or O-Nein-o-Nein! (In German: oh no, oh no!)
 
 <h3><a name="requirements"></a><a href="#toc">Requirements for running Grml</a></h3>
 

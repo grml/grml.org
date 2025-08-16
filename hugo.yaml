@@ -32,8 +32,8 @@ outputs:
 
 params:
   current_release:
-    version: "2025.05"
-    codename: "Nudlaug"
+    version: "2025.08"
+    codename: "Oneinonein"
   current_prerelease:
     version: ""
     codename: ""
