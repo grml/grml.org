@@ -133,4 +133,4 @@ for their contributions.
 
 You can find out more about Grml on [our website](/), [IRC channel](/contact/#irc), and the [wiki](https://github.com/grml/grml/wiki).
 
-To sign up for future Grml announcements, please subscribe to [Grml's announcement list](http://ml.grml.org/mailman/listinfo/grml-announce) or follow our [blog](https://blog.grml.org/).
+To sign up for future Grml announcements, please subscribe to [Grml's announcement list](http://ml.grml.org/postorius/lists/grml-announce.ml.grml.org) or follow our [blog](https://blog.grml.org/).

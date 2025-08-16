@@ -115,7 +115,7 @@ details...</a>.</p>
 
 <h3>13.02.2010</h3>
 
-<p>New <a href="http://ml.grml.org/mailman/listinfo/grml-devel">Grml developer mailinglist</a>.</p>
+<p>New <a href="http://ml.grml.org/postorius/lists/grml-devel.ml.grml.org">Grml developer mailinglist</a>.</p>
 
 <h2>2009</h2>
 

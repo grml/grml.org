@@ -259,7 +259,7 @@ ufsutils zerofree
 <ul>
 
 <li>Grml <a href="http://grml.supersized.org/archives/336-Grml-goes-microblogging.html">goes microblogging</a>.</li>
-<li>New <a href="http://ml.grml.org/mailman/listinfo/grml-devel">Grml developer mailinglist</a>.</li>
+<li>New <a href="http://ml.grml.org/postorius/lists/grml-devel.ml.grml.org">Grml developer mailinglist</a>.</li>
 
 </ul>
 
