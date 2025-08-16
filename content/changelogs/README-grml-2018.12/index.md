@@ -232,5 +232,5 @@ href="/contact/#irc">IRC channel</a>, and <a
 href="https://github.com/grml/grml/wiki">wiki</a>.
 
 <p>To sign up for future Grml announcements, please subscribe to <a
-href="http://ml.grml.org/mailman/listinfo/grml-announce">Grml's
+href="http://ml.grml.org/postorius/lists/grml-announce.ml.grml.org">Grml's
 announcement list</a>.</p>

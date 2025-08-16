@@ -14,9 +14,9 @@ For commercial support and services please send us mail to `business (at) grml.o
 ## Mailing lists
 {{< anchor mailinglist >}}
 
-If you want to be notified when a **new Grml release** is available, subscribe to the read-only [Grml announce mailing list](http://ml.grml.org/mailman/listinfo/grml-announce).
+If you want to be notified when a **new Grml release** is available, subscribe to the read-only [Grml announce mailing list](http://ml.grml.org/postorius/lists/grml-announce.ml.grml.org).
 
-If you want to participate in the **user mailing list of Grml**, please subscribe to the [Grml user mailing list](http://ml.grml.org/mailman/listinfo/grml).
+If you want to participate in the **user mailing list of Grml**, please subscribe to the [Grml user mailing list](http://ml.grml.org/postorius/lists/grml.ml.grml.org).
 Anyone can post to this mailing list, but if you are not already subscribed, your message will need moderator approval before being posted.
 This way we limit the amount of spam that makes it to the list.
 The Grml user mailing list is also available via NNTP on [gmane.io](https://gmane.io/).

@@ -187,5 +187,5 @@ for their contributions.</p>
 
 <p>You can find out more about Grml on <a href="/">our website</a>, <a href="/contact/#irc">IRC channel</a>, and <a href="https://github.com/grml/grml/wiki">wiki</a>.
 
-<p>To sign up for future Grml announcements, please subscribe to <a href="http://ml.grml.org/mailman/listinfo/grml-announce">Grml's announcement list</a> or
+<p>To sign up for future Grml announcements, please subscribe to <a href="http://ml.grml.org/postorius/lists/grml-announce.ml.grml.org">Grml's announcement list</a> or
 follow our <a href="https://blog.grml.org/">blog</a>.</p>
