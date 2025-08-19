@@ -135,7 +135,7 @@ For software, brltty and espeakup are included in grml-full.
 
 <h3><a name="bootoptions"></a><a href="#toc">Which boot options does Grml support?</a></h3>
 
-Check out the [grml-cheatcodes file](https://git.grml.org/f/grml-live/config/media-files/GRMLBASE/GRML/GRML_NAME/grml-cheatcodes.txt) (also available via [grml.org/cheatcodes/](/cheatcodes/)).
+Check out the [grml-cheatcodes file](/cheatcodes/).
 
 Of course [the command-line parameters](https://www.kernel.org/doc/html/latest/admin-guide/kernel-parameters.html) of the Linux kernel applies to Grml as well.
 

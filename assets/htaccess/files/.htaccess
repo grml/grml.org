@@ -1,16 +1,16 @@
-Redirect temp /files/grml-cheatcodes.txt https://git.grml.org/f/grml-live/templates/GRML/grml-cheatcodes.txt
-Redirect temp /files/release-0.1-grml64/grml-cheatcodes.txt https://git.grml.org/f/grml-live/templates/GRML/grml-cheatcodes.txt
-Redirect temp /files/release-0.1/grml-cheatcodes.txt https://git.grml.org/f/grml-live/templates/GRML/grml-cheatcodes.txt
-Redirect temp /files/release-0.2/grml-cheatcodes.txt https://git.grml.org/f/grml-live/templates/GRML/grml-cheatcodes.txt
-Redirect temp /files/release-0.3/grml-cheatcodes.txt https://git.grml.org/f/grml-live/templates/GRML/grml-cheatcodes.txt
-Redirect temp /files/release-0.4-small/grml-cheatcodes.txt https://git.grml.org/f/grml-live/templates/GRML/grml-cheatcodes.txt
-Redirect temp /files/release-0.4/grml-cheatcodes.txt https://git.grml.org/f/grml-live/templates/GRML/grml-cheatcodes.txt
-Redirect temp /files/release-0.5/grml-cheatcodes.txt https://git.grml.org/f/grml-live/templates/GRML/grml-cheatcodes.txt
-Redirect temp /files/release-0.6/grml-cheatcodes.txt https://git.grml.org/f/grml-live/templates/GRML/grml-cheatcodes.txt
-Redirect temp /files/release-0.7/grml-cheatcodes.txt https://git.grml.org/f/grml-live/templates/GRML/grml-cheatcodes.txt
-Redirect temp /files/release-0.8/grml-cheatcodes.txt https://git.grml.org/f/grml-live/templates/GRML/grml-cheatcodes.txt
-Redirect temp /files/release-0.9/grml-cheatcodes.txt https://git.grml.org/f/grml-live/templates/GRML/grml-cheatcodes.txt
-Redirect temp /files/release-1.0/grml-cheatcodes.txt https://git.grml.org/f/grml-live/templates/GRML/grml-cheatcodes.txt
+Redirect temp /files/grml-cheatcodes.txt https://grml.org/cheatcodes/
+Redirect temp /files/release-0.1-grml64/grml-cheatcodes.txt https://grml.org/cheatcodes/
+Redirect temp /files/release-0.1/grml-cheatcodes.txt https://grml.org/cheatcodes/
+Redirect temp /files/release-0.2/grml-cheatcodes.txt https://grml.org/cheatcodes/
+Redirect temp /files/release-0.3/grml-cheatcodes.txt https://grml.org/cheatcodes/
+Redirect temp /files/release-0.4-small/grml-cheatcodes.txt https://grml.org/cheatcodes/
+Redirect temp /files/release-0.4/grml-cheatcodes.txt https://grml.org/cheatcodes/
+Redirect temp /files/release-0.5/grml-cheatcodes.txt https://grml.org/cheatcodes/
+Redirect temp /files/release-0.6/grml-cheatcodes.txt https://grml.org/cheatcodes/
+Redirect temp /files/release-0.7/grml-cheatcodes.txt https://grml.org/cheatcodes/
+Redirect temp /files/release-0.8/grml-cheatcodes.txt https://grml.org/cheatcodes/
+Redirect temp /files/release-0.9/grml-cheatcodes.txt https://grml.org/cheatcodes/
+Redirect temp /files/release-1.0/grml-cheatcodes.txt https://grml.org/cheatcodes/
 
 {{ $current_version := .Site.Params.current_release.version }}
 

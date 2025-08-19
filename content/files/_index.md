@@ -80,7 +80,7 @@ sudo apt-get install grml-debian-keyring
 
 ## <a name="debian"></a>Package lists for the current release
 
-Boot options for all flavours: <a href="https://git.grml.org/f/grml-live/config/media-files/GRMLBASE/GRML/GRML_NAME/grml-cheatcodes.txt">grml-cheatcodes.txt</a>
+Boot options for all flavours: <a href="/cheatcodes/">grml-cheatcodes.txt</a>
 
 {{< filelist.inline >}}
 {{ $current_version := $.Site.Params.current_release.version }}

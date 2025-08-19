@@ -556,7 +556,7 @@ default console configuration (framebuffer) does not work.</p>
 <p>As one user requested a way to automatically start user-supplied
 scripts, we want to mention that there's already the
 &quot;script&quot; bootoption (see <a
-  href="http://git.grml.org/?p=grml-live.git;a=blob_plain;f=templates/GRML/grml-cheatcodes.txt;hb=HEAD">grml-cheatcodes.txt</a>).</p>
+  href="/cheatcodes/">grml-cheatcodes.txt</a>).</p>
 
 <p>Surprisingly &quot;forensic&quot; is also quite often mentioned
 as bootoption. If you're interested in a special product on IT

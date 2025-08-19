@@ -49,7 +49,7 @@ New bootparameters/cheatcodes (some selected ones):
   * debnet       search through local partitions for file /etc/network/interfaces,
                  copy /etc/network to running system and restart networking then
 
-  See http://www.grml.org/files/release-0.2-small/grml-cheatcodes.txt
+  See https://grml.org/cheatcodes/
   for more details about boot options.
 
 New features:
