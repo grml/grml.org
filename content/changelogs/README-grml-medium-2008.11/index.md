@@ -129,7 +129,7 @@ screenshot</a>)
 option (thanks to Michael Holzt and Marc Haber)</li>
 
 <li>(re-)implemented <a
-href="https://git.grml.org/f/grml-live/templates/GRML/grml-cheatcodes.txt">the
+href="https://git.grml.org/f/grml-live/config/media-files/GRMLBASE/GRML/GRML_NAME/grml-cheatcodes.txt">the
 isofrom and tohd bootoptions</a></li>
 
 <li>moved from syslog-ng to rsyslog</li>
