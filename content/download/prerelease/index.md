@@ -186,7 +186,7 @@ document.getElementById('download_group1_noscript').style.display = 'none';
   <code class="keyboard">dd bs=4M status=progress conv=fdatasync if=grml-full-{{< param_opt current_prerelease.version >}}-amd64.iso of=/dev/USB_KEY</code>
   <br /><br />
   <b>Troubleshooting</b><br /><br />
-  <a href="https://git.grml.org/f/grml-live/templates/GRML/grml-cheatcodes.txt">Boot option guide</a>
+  <a href="https://git.grml.org/f/grml-live/config/media-files/GRMLBASE/GRML/GRML_NAME/grml-cheatcodes.txt">Boot option guide</a>
   <br />
   <br />
   <br />
