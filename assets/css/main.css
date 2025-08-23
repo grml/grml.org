@@ -34,6 +34,7 @@ html{color:#000;background:#FFF}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre
   div.news p { margin: 0 }
   div.sponsors { background-color: #FFFFFF; margin: 0em 0.8em 0.8em 12em }
   div.sponsors div { text-align: center }
+  div.sponsors div img { max-width: 300px; }
   div.sub_links a { color: #FFFFFF }
   div.sub_links { margin-top: 0.5em; text-align: center; color: #FFFFFF; font-size: 66%; clear: both; background-color: #8B8D7B }
   h1 { color: navy; font-size: 150%; font-weight: bold; line-height: 2.2 }
