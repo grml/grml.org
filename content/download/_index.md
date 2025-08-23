@@ -27,9 +27,6 @@ title = 'Download Grml 2025.08'
     background: #FFDA62;
     height: 90px;
     border: 1px solid gray;
-    -moz-border-radius:3px;
-    -webkit-border-radius:3px;
-    -o-border-radius:3px;
     border-radius:3px;
     margin-bottom: 0.5em;
     font-size: 15pt;

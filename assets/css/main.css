@@ -46,7 +46,7 @@ html{color:#000;background:#FFF}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre
   ul {padding-bottom: 0.3em; }
   li {list-style: circle; margin-left: 2em;}
   #texbox {}
-  .frontpage_button { display: inline-block; background-color: #FFDA62; -moz-border-radius: 5px; -webkit-border-radius: 5px; border: 1px solid #444; padding: 10px; width: 14em; text-decoration: none; font-size: 14pt; color: #000000; line-height: 1; background-position: 0px 0px; padding: 1em; font-weight: bold; }
+  .frontpage_button { display: inline-block; background-color: #FFDA62; border-radius: 5px; border: 1px solid #444; padding: 10px; width: 14em; text-decoration: none; font-size: 14pt; color: #000000; line-height: 1; background-position: 0px 0px; padding: 1em; font-weight: bold; }
   .frontpage_button:hover { background: #FFA862; text-decoration: none; }
   img.absmiddle { vertical-align: middle; margin-bottom: .25em; }
   .banner { padding-top: 0; }
