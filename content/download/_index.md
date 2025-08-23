@@ -23,21 +23,23 @@ title = 'Download Grml 2025.08'
     width: auto;
 }
 .largebutton {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
     width: 100%;
-    background: #FFDA62;
-    height: 90px;
+    background-color: #FFDA62;
+    min-height: 90px;
     border: 1px solid gray;
-    border-radius:3px;
+    border-radius: 3px;
     margin-bottom: 0.5em;
     font-size: 15pt;
     font-weight: bold;
-    display: block;
-    text-align: center;
     color: black;
     text-decoration: none;
 }
 .largebutton:hover {
-    background: #FFA862;
+    background-color: #FFA862;
 }
 .download_relinfo {
     font-size: 10pt;
