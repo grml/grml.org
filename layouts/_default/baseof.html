@@ -16,14 +16,12 @@
   {{ partialCached "head/css.html" . }}
 </head>
 <body>
-  <div class="container">
-    <header>
-      {{ partial "header.html" . }}
-    </header>
-    {{ block "main" . }}{{ end }}
-    <footer>
-      {{ partial "footer.html" . }}
-    </footer>
-  </div>
+  <header>
+    {{ partial "header.html" . }}
+  </header>
+  {{ block "main" . }}{{ end }}
+  <footer>
+    {{ partial "footer.html" . }}
+  </footer>
 </body>
 </html>

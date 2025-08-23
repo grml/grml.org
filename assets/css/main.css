@@ -17,9 +17,8 @@ html{color:#000;background:#FFF}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre
     box-sizing: border-box
   }
 
-  html {background-color: #FFDA62; height: 100%;}
-  body {font-family: verdana, tahoma, helvetica, arial, sans-serif; font-size: 11pt; background-color:#FFDA62; margin: 0; padding: 0; height:100%}
-  div.container {width: 80%; text-align: left; background-color:#FFFFFF; margin: 0px auto 0px auto; border-width: 0 1px 0 1px; border-color: #E5E5E5; border-style: solid;}
+  :root {background-color: #FFDA62; font-size: 11pt; font-family: verdana, tahoma, helvetica, arial, sans-serif; font-size: 11pt; height: 100%; background-color:#FFDA62; margin: 0; padding: 0}
+  body {width: 80%; text-align: left; background-color:#FFFFFF; margin: 0px auto 0px auto; border-width: 0 1px 0 1px; border-color: #E5E5E5; border-style: solid;}
   a {color:#C70036; text-decoration: underline}
   a.current {color:#999999}
   a:hover {text-decoration: underline}
@@ -100,7 +99,7 @@ html{color:#000;background:#FFF}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre
 }
 
 @media screen and (max-width: 800px) {
-  div.container { width: auto; margin: auto; border: 0 none; }
+  body { width: auto; margin: auto; border: 0 none; }
   #forkme-header { display: none; }
   .banner h1 { padding-top: 0.5em; }
   /* contain width of sponsor logors */
