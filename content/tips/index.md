@@ -12,8 +12,7 @@ layout = 'tips'
     {{ errorf "%s" . }}
   {{ else with .Value }}
     {{- range (split (strings.TrimSuffix "-- \n" .Content) "\n-- \n") -}}
-<a name="{{ $number }}"></a>
-Grml Tip Number {{ $number }}<br>
+<span id="{{ $number }}">Grml Tip Number {{ $number }}</span><br>
 {{ $tip := . -}}
 {{- range (split (strings.TrimSuffix "\n" $tip) "\n") -}}
 {{ $code := . -}}

@@ -152,8 +152,7 @@ If you find a problem with the (pre-)release, please check <a href="/bugs/known/
 We also welcome feature requests and any kind of constructive feedback.
 If you want to reach out to the Grml team, please visit our <a href="/contact/">contact webpage</a>.</p>
 
-<a name="thanks"></a>
-<h3>Thanks</h3>
+<h3 id="thanks">Thanks</h3>
 
 <p>Many thanks in this release go to (alphabetically)
 a-wing,

@@ -187,8 +187,7 @@ feature requests <a href="/contact/">to the Grml team</a>!</p>
 <li><a href="/irc/">#grml on irc.freenode.org</a>
 </ul>
 
-<a name="thanks"></a>
-<h3>Thanks</h3>
+<h3 id="thanks">Thanks</h3>
 
 <p>The Grml team specially wants to thank <strong>Marianne</strong>, you know who you are!</p>
 

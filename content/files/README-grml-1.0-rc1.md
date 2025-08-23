@@ -160,7 +160,7 @@ regarding the grml-kernel.</p>
 
 <h3>Important Changes</h3>
 
-<p><a name="utf8"></a><strong>UTF-8:</strong> grml uses UTF8 as
+<p id="utf8"><strong>UTF-8:</strong> grml uses UTF8 as
 default encoding. You can deactivate UTF-8 environment via
 booting with bootoption lang=$LANG-iso.  Some software is not
 yet UTF-8 aware (problem is located upstream, neither at Debian

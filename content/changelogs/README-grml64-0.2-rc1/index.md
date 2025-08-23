@@ -321,7 +321,7 @@ requests and bug reports to the grml-team!</p>
 <li><a href="/irc/">#grml on irc.freenode.org</a>
 </ul>
 
-<h3>Thanks</h3>
+<h3 id="thanks">Thanks</h3>
 
 <p>Many thanks in this release go to Henning
 Sprang, Thomas Lange, Michael Schmitt, Daniel

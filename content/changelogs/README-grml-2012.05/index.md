@@ -111,8 +111,7 @@ href="/bugs/known/">the known bugs list</a> and report problems using informatio
 href="/bugs/">grml.org/bugs/</a>. Please send your feedback and
 feature requests <a href="/contact/">to the Grml team</a>!</p>
 
-<a name="thanks"></a>
-<h3>Thanks</h3>
+<h3 id="thanks">Thanks</h3>
 
 <p>Many thanks in this release go to (alphabetically) Axel Beckert,
 Charles A. Hewson, ChiCuong HA, Christian Hofstaedtler, Christoph Biedl, Christopher
