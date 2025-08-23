@@ -100,20 +100,28 @@ title = 'Download Grml Release Candidate'
 
   <h2>Size</h2>
 
-  <input type="radio" id="flavour_full" name="flavour" value="full" checked />
-  <label for="flavour_full">full (~1GB)</label>
+  <label>
+    <input type="radio" id="flavour_full" name="flavour" value="full" checked />
+    full (~1GB)
+  </label>
   &nbsp;
-  <input type="radio" id="flavour_small" name="flavour" value="small" />
-  <label for="flavour_small">small (~540MB)</label>
+  <label>
+    <input type="radio" id="flavour_small" name="flavour" value="small" />
+    small (~540MB)
+  </label>
 
   <br />
 
   <h2>Architecture</h2>
-  <input type="radio" id="arch_amd64" name="arch" value="amd64" checked />
-  <label for="arch_amd64">64-bit PC (amd64)</label>
+  <label>
+    <input type="radio" id="arch_amd64" name="arch" value="amd64" checked />
+    64-bit PC (amd64)
+  </label>
   &nbsp;
-  <input type="radio" id="arch_arm64" name="arch" value="arm64" />
-  <label for="arch_arm64">ARM (arm64)</label>
+  <label>
+    <input type="radio" id="arch_arm64" name="arch" value="arm64" />
+    ARM (arm64)
+  </label>
 
   <br />
   <br />
