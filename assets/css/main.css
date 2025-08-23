@@ -56,12 +56,13 @@ html{color:#000;background:#FFF}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre
   b,strong { font-weight: bold }
   i,em { font-style: italic }
   code,tt { font-family: "Ubuntu Mono", Consolas, Monaco, Courier, monospace }
-  pre {
-    background-color: lightgrey;
-    font-family: "Ubuntu Mono", Consolas, Monaco, Courier, monospace;
-    padding: .5rem 1rem;
-  }
+  pre { background-color: lightgrey; font-family: "Ubuntu Mono", Consolas, Monaco, Courier, monospace; padding: .5rem 1rem; white-space-collapse: preserve; text-wrap-mode: wrap }
+  abbr[title], acronym[title] { border-bottom: 1px dotted #333; cursor: help }
   .long-hex-value { font-family: monospace; letter-spacing: -1px; overflow-wrap: anywhere }
+  .active { background-color: #FFCC33 }
+  .rahmen { background-color: #FEDB64; padding: 5px; border: 1px dotted black }
+  #survey-header a { color: white }
+  #survey-header { background-color: #AE0000; color: #FFFFFF; font-family: sans-serif; font-size: 120%; font-weight: bold; left: 0; padding: 5px 0; margin-bottom: 15px; position: fixed; text-align: center; top: 0; width: 100%; z-index: 101 }
 
   /* asciidoc support */
 
@@ -80,15 +81,6 @@ html{color:#000;background:#FFF}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre
     font-weight: bold;
     text-transform: uppercase;
   }
-}
-
-@media screen {
-  .active { background-color: #FFCC33 }
-  .rahmen { background-color: #FEDB64; padding: 5px; border: 1px dotted black }
-  pre { white-space-collapse: preserve; text-wrap-mode: wrap }
-  abbr[title], acronym[title] { border-bottom: 1px dotted #333; cursor: help }
-  #survey-header a { color: white }
-  #survey-header { background-color: #AE0000; color: #FFFFFF; font-family: sans-serif; font-size: 120%; font-weight: bold; left: 0; padding: 5px 0; margin-bottom: 15px; position: fixed; text-align: center; top: 0; width: 100%; z-index: 101 }
 }
 
 @media print {
