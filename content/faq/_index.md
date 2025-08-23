@@ -95,8 +95,8 @@ Grml32 (the 32-bit x86 PCs flavour of Grml) <a href="#grml32">is no longer suppo
 If you're looking for the latest available version of grml32, the following ISOs are available:
 
 <ul>
-<li><a href="https://archive.grml.org/grml32-full_2024.02.iso">grml32-full_2024.02.iso</a> (859MB, sha256: 61bb2c27e4f0946944fcb883bea1674275cdf2f1303a7bdef58758a3c2d62c4b)</li>
-<li><a href="https://archive.grml.org/grml32-small_2024.02.iso">grml32-small_2024.02.iso</a> (458MB, sha256: 9614340254024ef0e89dcf57fd3d385a87ada27ec2015bf800784816e0e02bc4)</li>
+<li><a href="https://archive.grml.org/grml32-full_2024.02.iso">grml32-full_2024.02.iso</a> (859MB, sha256: <span class="long-hex-value">61bb2c27e4f0946944fcb883bea1674275cdf2f1303a7bdef58758a3c2d62c4b</span>)</li>
+<li><a href="https://archive.grml.org/grml32-small_2024.02.iso">grml32-small_2024.02.iso</a> (458MB, sha256: <span class="long-hex-value">9614340254024ef0e89dcf57fd3d385a87ada27ec2015bf800784816e0e02bc4</span>)</li>
 </ul>
 
 <h3><a name="grmlsmall"></a><a href="#toc">What is the difference between grml-full and grml-small?</a></h3>

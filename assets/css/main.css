@@ -63,6 +63,7 @@ html{color:#000;background:#FFF}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre
     font-family: "Ubuntu Mono", Consolas, Monaco, Courier, monospace;
     padding: .5rem 1rem;
   }
+  .long-hex-value { font-family: monospace; letter-spacing: -1px; overflow-wrap: anywhere; }
 
   /* asciidoc support */
 
