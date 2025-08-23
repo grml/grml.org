@@ -26,12 +26,12 @@ html{color:#000;background:#FFF}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre
   a.plain {text-decoration: none}
   a.plain:hover {text-decoration: underline}
   a.smalllink {font-size: 80%}
-  div.page_content {background-color:#FFFFFF; margin: 0em 0.8em 0.8em 12em; }
-  div.page_content h3 a {color:#996666}
+  main {background-color:#FFFFFF; margin: 0em 0.8em 0.8em 12em; }
+  main h3 a {color:#996666}
   div.copyright { text-align:center; font-size: 70%; color: #666; }
-  div.menu h3 a { color:#996666; }
-  div.menu h3 { font-size: 100%; border: none; }
-  div.menu {width: 12em; float: left; clear: left; background-color:#FFFFFF; padding: 0.8em 0.8em 0.8em 0.8em; }
+  nav h3 a { color:#996666; }
+  nav h3 { font-size: 100%; border: none; }
+  nav {width: 12em; float: left; clear: left; background-color:#FFFFFF; padding: 0.8em 0.8em 0.8em 0.8em; }
   div.news p { margin: 0; }
   div.sponsors {background-color:#FFFFFF; margin: 0em 0.8em 0.8em 12em; }
   div.sponsors div {text-align:center; }
