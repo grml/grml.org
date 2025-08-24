@@ -1,6 +1,6 @@
 {{ partial "grml_menu.html" . }}
 
-<div class="page_content">
+<main>
     {{ if .Params.Icon }}
     <p><img style="float: right" src="/img/{{ .Params.Icon }}.png" alt="*" /></p>
     {{ end }}
@@ -10,4 +10,4 @@
     {{ .Content }}
 
     <div style="clear: both;"></div>
-</div>
+</main>

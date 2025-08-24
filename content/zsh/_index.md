@@ -10,14 +10,14 @@ href="#grmlzshconfig">grml-zsh-config</a> / <a
 href="#zshlovers">zsh-lovers</a> / <a
 href="#resources">Resources</a></p>
 
-<h2><a name="intro"></a>Introduction</h2>
+<h2 id="intro">Introduction</h2>
 
 <p>One of the main features of the grml system is the <a
 href="https://zsh.sourceforge.net/">zsh</a> (Z shell). The zsh is the default
 <em>interactive</em> shell of the grml system. On this webpage you will
 find information regarding the zsh on grml.</p>
 
-<h2><a name="grmlzshrefcard"></a>grml-zsh-refcard</h2>
+<h2 id="grmlzshrefcard">grml-zsh-refcard</h2>
 
 The grml-zsh-refcard provides a short overview of defined aliases,
 functions and settings of zsh on the grml system. Download it, print it
@@ -25,7 +25,7 @@ and improve your zsh skills!
 
 * [grml-zsh-refcard.pdf](grml-zsh-refcard.pdf) (~108kB)
 
-<h2><a name="grmlzshrc"></a>grmlzshrc(5)</h2>
+<h2 id="grmlzshrc">grmlzshrc(5)</h2>
 
 grmlzshrc(5) is a manpage providing detailled information about grml's
 zsh configuration. On the grml system it is available offline via `man
@@ -33,7 +33,7 @@ grmlzshrc`. An online version is available as well:
 
 * [grmlzshrc(5)](grmlzshrc.html)
 
-<h2><a name="grmlzshconfig"></a>grml-zsh-config</h2>
+<h2 id="grmlzshconfig">grml-zsh-config</h2>
 
 You do not have to use grml/Debian to use grml's zsh configuration.
 Just retrieve and install the configuration files in your home directory
@@ -52,7 +52,7 @@ which is described in more detail on [mika's blog](/console).
 Tip: [Archlinux](https://www.archlinux.org/) users may use an
 [official grml-zsh-config package](https://www.archlinux.org/packages/extra/any/grml-zsh-config/).
 
-<h2><a name="zshlovers"></a>zsh-lovers</h2>
+<h2 id="zshlovers">zsh-lovers</h2>
 
 zsh-lovers is a small project which tries to collect tips, tricks and
 examples for the Z shell. Authors of the zsh-lovers manual page are
@@ -71,7 +71,7 @@ It's available through the zsh-lovers packages from [the Grml repository](/files
 
 Feedback is welcome via [github.com/grml/zsh-lovers](https://github.com/grml/zsh-lovers).
 
-<h2><a name="resources"></a>Resources</h2>
+<h2 id="resources">Resources</h2>
 
 <h3>General/Useful:</h3>
 

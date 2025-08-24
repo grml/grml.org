@@ -289,7 +289,7 @@ requests and bug reports to the grml-team!</p>
   <li><a href="/irc/">#grml on irc.freenode.org</a>
 </ul>
 
-<h3>Thanks</h3>
+<h3 id="thanks">Thanks</h3>
 
 <p>Many thanks in this release go to Florian Keller for his code
 contributions, to Jörg Müller for the releasename, to Ulrich Dangel,

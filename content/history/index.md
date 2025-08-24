@@ -167,7 +167,7 @@ article about grml titled "Grml: Schweizer Messer für Admins"
 (meaning: "grml: swiss army knife for admins"). The included DVD
 provides a grml 2008.11 ISO as well.</p>
 
-<h3>05.05.2009</h3><a name="osdc09"></a>
+<h3 id="osdc09">05.05.2009</h3>
 
 <p>Mika was talking about grml in a german talk named '<a
 href="http://www.netways.de/osdc/y2009/programm/v/grml/">grml - das
@@ -346,7 +346,7 @@ repository commits mailinglist</a> available.</p>
 
 <p>Big update of <a href="/zsh/#grmlzshrefcard">grml-zsh-refcard</a>.</p>
 
-<h3><a name="mercurial"></a>21.10.2006</h3>
+<h3 id="mercurial">21.10.2006</h3>
 
 <p>grml.org uses <a
 href="http://www.selenic.com/mercurial/wiki/index.cgi">Mercurial</a>
@@ -374,7 +374,7 @@ release announcement</a>.</p>
 href="http://grml.supersized.org/archives/173-grml-0.8-release-candidate-1-available.html">is
 available</a>.</p>
 
-<h3><a name="wlt06"></a>05.06.2006</h3>
+<h3 id="wlt06">05.06.2006</h3>
 
 <p>grml on linuxdays graz and vienna 2006.</p>
 
@@ -393,7 +393,7 @@ href="/zsh/">Zsh</a>.  Read <a
 href="http://grml.supersized.org/archives/162-grml-on-linuxdays-vienna-2006.html">the
 report in the grml develblog</a>.</p>
 
-<h3><a name="linuxuser200606"></a>18.05.2006</h3>
+<h3 id="linuxuser200606">18.05.2006</h3>
 
 <p>A <a href="https://github.com/grml/grml/wiki/grml_linuxuser">special
 release of grml named Bootenschnitzl@LU</a> is shipped with <a
@@ -644,7 +644,7 @@ href="http://www.linuxlots.com/~fawcett/yard/index.html">yard</a>, wrote some
 zsh-scripts (zsh will be the default-shell of grml) and wrote a first (unpublished)
 design-guide.</p>
 
-<h2><a name="2003"></a>2003</h2>
+<h2 id="2003">2003</h2>
 
 <h3>23.09.2003</h3>
 

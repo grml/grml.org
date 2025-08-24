@@ -186,7 +186,7 @@ grml-team!</p>
 <li><a href="/irc/">#grml on irc.freenode.org</a>
 </ul>
 
-<h3>Thanks</h3>
+<h3 id="thanks">Thanks</h3>
 
 <p>Many thanks in this release go to Rafael Steiner for the grub-in-isolinux
 feature and to all those who have sent feedback since the last release!</p>

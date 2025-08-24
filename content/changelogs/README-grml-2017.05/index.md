@@ -136,7 +136,7 @@ The following shell script may be a useful indicator (assuming only one processo
 <li>Fixed several bugs from the <a href="https://github.com/grml/grml/issues">bug tracking system</a>.</li>
 </ul>
 
-<h3><a name="changes-between-rc-and-stable"></a>Changes between release candidate version 2017.05-rc1 and stable release</h3>
+<h3 id="changes-between-rc-and-stable">Changes between release candidate version 2017.05-rc1 and stable release</h3>
 
 <ul>
   <li>Update kernel to 4.9.29</li>
@@ -241,8 +241,7 @@ the release please check <a
   href="/bugs/">grml.org/bugs/</a>. Please send your feedback and
 feature requests <a href="/contact/">to the Grml team</a>!</p>
 
-<a name="thanks"></a>
-<h3>Thanks</h3>
+<h3 id="thanks">Thanks</h3>
 
 <p>Many thanks in this release go to (alphabetically)
 Andras Korn,

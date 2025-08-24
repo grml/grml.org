@@ -20,10 +20,9 @@ more...</a></p>
 <br />
 
 <p style="text-align: center;">
-<b>The <a href="/changelogs/README-grml-{{< param current_release.version >}}/">current release</a>:</b><br/><br/>
-<a href="/download/" class="frontpage_button"><span>Download<br><br>Grml {{< param current_release.version >}}</span></a>
+<b>The <a href="/changelogs/README-grml-{{< param current_release.version >}}/">current release</a>:</b>
+<a href="/download/" class="frontpage_button"><span>Download</span><span>Grml {{< param current_release.version >}}</span></a>
 </p>
-<br />
 
 {{< if_have_prerelease >}}
 <p style="text-align: center;">

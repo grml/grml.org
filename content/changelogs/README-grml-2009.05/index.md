@@ -256,7 +256,7 @@ feature requests <a href="/contact/">to the grml-team</a>!</p>
 <li><a href="/irc/">#grml on irc.freenode.org</a>
 </ul>
 
-<h3>Thanks</h3>
+<h3 id="thanks">Thanks</h3>
 
 <p>Many thanks in this release go to Thomas Lehmann, Wernfried Haas,
 Jan-Hendrik Zab, Christian Hofstaedtler, Ralf Moll, Marc Haber,

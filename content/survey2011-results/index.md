@@ -60,7 +60,7 @@ that feature or provide proper multi language form support in Google
 Docs. Also the evaluation of custom answers turned out to be a lot
 of work.</p>
 
-<h2><a name="conclusion"></a>Conclusion</h2>
+<h2 id="conclusion">Conclusion</h2>
 
 <p>Our strong focus on system administration tasks has been affirmed
 by our users in 2007 and today. We will continue to aim to be the
@@ -85,7 +85,7 @@ what's bad for you? <a href="http://feedback.grml.org/">Send and
 
 <strong>Thanks to everyone taking part in our survey!</strong>
 
-<h3><a name="toc"></a>Table of Content - the Answers</h3>
+<h3 id="toc">Table of Content - the Answers</h3>
 
 <ul>
   <li>About you
@@ -150,7 +150,7 @@ what's bad for you? <a href="http://feedback.grml.org/">Send and
 
 <h2>About you</h2>
 
-<h3><a name="since_when"></a>Since when have you been using Grml?</h3>
+<h3 id="since_when">Since when have you been using Grml?</h3>
 
 <img src="./img/since_when.png" alt="*" />
 
@@ -158,7 +158,7 @@ what's bad for you? <a href="http://feedback.grml.org/">Send and
 newer users which we consider a good sign to provide high quality
 together with enough innovation.</p>
 
-<h3><a name="stumble"></a>How did you stumble upon Grml?</h3>
+<h3 id="stumble">How did you stumble upon Grml?</h3>
 
 <img src="./img/stumble.png" alt="*" />
 
@@ -168,7 +168,7 @@ through official media press. We consider this result as a healthy
 combination and a proof of the rule how important word-of-mouth
 recommendations are. Our favourite custom answer: The internet.</p>
 
-<h3><a name="located"></a>Where are you located?</h3>
+<h3 id="located">Where are you located?</h3>
 
 <img src="./img/location.png" alt="*" />
 
@@ -181,7 +181,7 @@ York/US) and ftp.tw.debian.org (Taiwan) our mirror coverage improved
 a bit already, but our efforts toward improving Grml's coverage
 outside Europe won't stop.</p>
 
-<h3><a name="knowledge"></a>Level of Linux knowledge</h3>
+<h3 id="knowledge">Level of Linux knowledge</h3>
 
 <img src="./img/linux_knowledge.png" alt="*" />
 
@@ -189,7 +189,7 @@ outside Europe won't stop.</p>
 fits well in our focus. We think we are on track with our user
 base.</p>
 
-<h3><a name="operating_systems"></a>Which operating systems do you use?</h3>
+<h3 id="operating_systems">Which operating systems do you use?</h3>
 
 <img src="./img/operating_systems.png" alt="*" />
 
@@ -199,7 +199,7 @@ been Solaris, Haiku, Netware, HPUX, AIX, MS-DOS/FreeDOS, irix, Palm
 OS5 and Symbian S40, whereas Solaris was the leading answer in
 &quot;others&quot; with an overall count of 23.</p>
 
-<h3><a name="distributions"></a>If you are using Linux, which distributions do you use?</h3>
+<h3 id="distributions">If you are using Linux, which distributions do you use?</h3>
 
 <img src="./img/distributions.png" alt="*" />
 
@@ -214,7 +214,7 @@ Quirky, 1x Mandriva, 1x Scientific Linux, 1x Sabayon, 1x OpenBSD
 say that most of our users seem to be used to Debian(-based)
 distributions.</p>
 
-<h3><a name="project_name"></a>Did you start your own Open Source project?</h3>
+<h3 id="project_name">Did you start your own Open Source project?</h3>
 
 <p>We got 32 answers, which namely included the following Open
 source projects: bley, wApua, unburden_home_dir, xpt, Hag
@@ -227,7 +227,7 @@ Nagiosms, MirBSD, My personal gooogle, SNPpy, bixfile, ngircd,
 MikeBrother, HME, gocr, octopus-window-manager, wedabecha, libgpmi /
 v7us / libmawk / scconfig / libporty and a lot more.</p>
 
-<h3><a name="project_areas"></a>Are you involved in any FLOSS projects? If so in which
+<h3 id="project_areas">Are you involved in any FLOSS projects? If so in which
   areas?</h3>
 
 <img src="./img/floss_projects.png" alt="*" />
@@ -239,7 +239,7 @@ Debian and got featured several times on planet.debian.org.</p>
 
 <h2>Company &amp; Use case</h2>
 
-<h3><a name="environments"></a>In which environments do you use Grml?</h3>
+<h3 id="environments">In which environments do you use Grml?</h3>
 
 <img src="./img/environments_for_grml.png" alt="*" />
 
@@ -251,7 +251,7 @@ should provide some examples how to use Grml in different
 environments (Rescue system for virtualised systems, deployment
 etc.)</p>
 
-<h3><a name="company_name"></a>If you are using Grml in a company, what is the name of the
+<h3 id="company_name">If you are using Grml in a company, what is the name of the
   company?</h3>
 
 <p>We got several names of companies using Grml. Amongst them are
@@ -259,18 +259,18 @@ established universities as well as well known companies. Thanks for
 your feedback, we plan to provide the list through a separate
 webpage in the near future.</p>
 
-<h3><a name="company_size"></a>Size of the company</h3>
+<h3 id="company_size">Size of the company</h3>
 
 <img src="./img/company_size.png" alt="*" />
 
-<h3><a name="company_industry"></a>Industry of the company</h3>
+<h3 id="company_industry">Industry of the company</h3>
 
 <p>No big surprises - most companies are IT related. However there
 are some non-IT related industries like ecology, healthcare, online
 gambling and tourism as well. Now we are sure that Grml is used in
 all different kinds of industries and well accepted.</p>
 
-<h3><a name="company_quote"></a>Is there anything you and/or your
+<h3 id="company_quote">Is there anything you and/or your
     company would like to say about Grml?</h3>
 
 <p>First of all, thanks for all the nice and interesting answers.
@@ -309,7 +309,7 @@ This was one of the most fun parts to read in the whole survey.</p>
 
 <h2>Questions about Grml</h2>
 
-<h3><a name="bootmedia"></a>Which boot media are you using for Grml?</h3>
+<h3 id="bootmedia">Which boot media are you using for Grml?</h3>
 
 <img src="./img/boot_media.png" alt="*" />
 
@@ -362,7 +362,7 @@ larger environments we consider 28% to be an excellent value.</p>
   feature</a> more prominently as it seems that there is a market
 for it.</p>
 
-<h3><a name="using_grml_for"></a>Ever used Grml for...</h3>
+<h3 id="using_grml_for">Ever used Grml for...</h3>
 
 <img src="./img/using_grml_for.png" alt="*" />
 
@@ -376,7 +376,7 @@ and Programming (16%) truly are. This result means that we should
 keep the Linux Desktop and Programming tasks in mind though the main
 focus is still on the classic use cases.</p>
 
-<h3><a name="creative_solution"></a>What's your most creative solution with Grml?</h3>
+<h3 id="creative_solution">What's your most creative solution with Grml?</h3>
 
 <p>Ok guys, again. Your answers were really cool and nice, and we
 are sorry to only give you some quotes but it would take up several
@@ -430,7 +430,7 @@ pages:</p>
 <p>Most solutions are related to deployment and rescue. But some are
 also using it for other purpose like a modified desktop systems.</p>
 
-<h3><a name="why_using_grml"></a>Why are you using Grml?</h3>
+<h3 id="why_using_grml">Why are you using Grml?</h3>
 
 <p>Also just a short overview but it seems that the most important
 reasons for using Grml are:</p>
@@ -518,7 +518,7 @@ answers:</p>
 
 <h2>Tools &amp; Programs</h2>
 
-<h3><a name="using_programs"></a>Which programs did you use at least once?</h3>
+<h3 id="using_programs">Which programs did you use at least once?</h3>
 
 <img src="./img/which_programs.png" alt="*" />
 
@@ -543,7 +543,7 @@ chroot, binding /sys, /proc and /dev to the chroot) as well as
 grml-quickstart. We plan to improve our documentation to cover those
 not so well known tools.</p>
 
-<h3><a name="bootoptions"></a>Which bootoptions do you use?</h3>
+<h3 id="bootoptions">Which bootoptions do you use?</h3>
 
 <img src="./img/bootoptions.png" alt="*" />
 
@@ -563,7 +563,7 @@ as bootoption. If you're interested in a special product on IT
 forensics you might want to check out <a
   href="http://grml-forensic.org/">Grml-Forensic</a>.</p>
 
-<h3><a name="windowmanagers"></a>Which windowmanagers do you use on Grml?</h3>
+<h3 id="windowmanagers">Which windowmanagers do you use on Grml?</h3>
 
 <img src="./img/using_window_managers.png" alt="*" />
 
@@ -575,7 +575,7 @@ etc.</p>
 <p>Because many window managers were mentioned we may reassess the
 (re)inclusion of some small window managers.</p>
 
-<h3><a name="tools"></a>Which tools would you like to see on Grml?</h3>
+<h3 id="tools">Which tools would you like to see on Grml?</h3>
 
 <p>Several tools mentioned here are already included in Grml like
 for example KVM, others will not be included due to licensing
@@ -589,7 +589,7 @@ packages and may come up with details at a later date.</p>
 
 <h2>Future of Grml</h2>
 
-<h3><a name="flavours"></a>Which Grml-flavors make sense?</h3>
+<h3 id="flavours">Which Grml-flavors make sense?</h3>
 
 <img src="./img/grml_flavours.png" alt="*" />
 
@@ -605,7 +605,7 @@ grml-full in our community, we will continue to ship grml-medium as
 it's the perfect and recommended starting point for customized Grml
 distributions.</p>
 
-<h3><a name="dvd"></a>Should we produce a DVD image instead of a CD image?</h3>
+<h3 id="dvd">Should we produce a DVD image instead of a CD image?</h3>
 
 <img src="./img/dvd_images.png" alt="*" />
 
@@ -613,7 +613,7 @@ distributions.</p>
 comment besides the graphics and what has been mentioned
 already.</p>
 
-<h3><a name="ship_windowmanagers"></a>Should we ship multiple window managers?</h3>
+<h3 id="ship_windowmanagers">Should we ship multiple window managers?</h3>
 
 <img src="./img/window_managers.png" alt="*" />
 
@@ -622,7 +622,7 @@ commonly want to use their favourite window manager. As already
 stated we will reassess the (re)inclusion of some small window
 managers because of your answers.</p>
 
-<h3><a name="debian_stable"></a>Do you use Grml packages on Debian-Stable?</h3>
+<h3 id="debian_stable">Do you use Grml packages on Debian-Stable?</h3>
 
 <img src="./img/grml_packages_on_debian.png" alt="*" />
 
@@ -630,7 +630,7 @@ managers because of your answers.</p>
 except for grml2usb on Debian stable. Consensus is to not put too
 much effort into it.</p>
 
-<h3><a name="what_should_be_changed"></a>What else should be changed in Grml?</h3>
+<h3 id="what_should_be_changed">What else should be changed in Grml?</h3>
 
 <p>Besides some UX things like better artwork/no links (the browser)
 after startup in X.org etc. most feedback was quite positive. We got
@@ -640,7 +640,7 @@ others. We are looking into your requests.</p>
 
 <h2>Anything else?</h2>
 
-<h3><a name="wishlist"></a>Wishlist for improvements on Grml</h3>
+<h3 id="wishlist">Wishlist for improvements on Grml</h3>
 
 <p>We got some really nice ideas like inclusion of support for other
 boot images in our GRUB environment or multiarch CDs. Better
@@ -649,7 +649,7 @@ times. Oh and more professionalism for our wallpapers. It seems that
 at least in one work environment our wallpaper caused some
 blush.</p>
 
-<h3><a name="famous_last_words"></a>Did we forget anything? Any famous last words?</h3>
+<h3 id="famous_last_words">Did we forget anything? Any famous last words?</h3>
 
 <p>This is again mainly positive things, so just some examples:</p>
 
