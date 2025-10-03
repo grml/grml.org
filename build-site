@@ -22,8 +22,8 @@ EOT
 }
 
 git_clone grml2usb
-cp source-repos/grml2usb/grml2usb.8.txt content/grml2usb/_index.adoc
-copy_set_url source-repos/grml2usb/grml2iso.8.txt content/grml2usb/grml2iso.adoc grml2usb/grml2iso.html
+cp source-repos/grml2usb/grml2usb.8.adoc content/grml2usb/_index.adoc
+copy_set_url source-repos/grml2usb/grml2iso.8.adoc content/grml2usb/grml2iso.adoc grml2usb/grml2iso.html
 
 git_clone grml-debootstrap
 cp source-repos/grml-debootstrap/grml-debootstrap.8.adoc content/grml-debootstrap/index.adoc
