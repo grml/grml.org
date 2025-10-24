@@ -224,11 +224,16 @@ icon = 'cdrom'
 
 Articles about Grml or Grml ISO shipped as part of magazines:
 
+* <a href="https://www.linux-magazin.de/ausgaben/2025/11/einfuehrung/">Grml 2025.08 shipped on DVD of german Linux Magazine 11/2025</a>
+* <a href="https://www.linux-community.de/ausgaben/linuxuser/2025/10/heft-dvd-10-2025/">Grml 2025.08 shipped on DVD of german LinuxUser 10/2025</a>
+* <a href="https://www.linux-magazin.de/ausgaben/2025/06/bitparade/">Grml in german Linux Magazine 06/2025 - Fünf spezielle Distributionen für System- und Netzwerkadministratoren</a>
 * <a href="https://www.linux-community.de/ausgaben/linuxuser/2025/03/heft-dvd-03-2025/">Grml 2024.12 shipped on DVD of german Linux User magazine 03/2025</a>
 * <a href="https://www.linux-magazin.de/ausgaben/2025/03/einfuehrung/">Grml 2024.12 shipped on DVD of german Linux Magazine 03/2025</a>
 * <a href="https://www.linux-community.de/ausgaben/linuxuser/2025/01/drei-distributionen-zur-systemrettung-im-vergleich/">Grml in german Linux User magazine 01/2025 - Drei Distributionen zur Systemrettung im Vergleich</a>
 * <a href="https://www.linux-community.de/ausgaben/linuxuser/2025/01/heft-dvd-01-2025/">Grml 2024.12 shipped on DVD of german Linux User magazine 01/2025</a>
 * <a href="https://www.linux-magazin.de/ausgaben/2025/01/rescue-systeme/">Grml in german Linux Magazine 01/2025 - Distributionen zur Systemrettung im Vergleich</a>
+* <a href="https://www.linux-community.de/ausgaben/linuxuser/2024/05/heft-dvd-05-2024/">Grml 2024.02 shipped on DVD of german Linux User magazine 06/2024</a>
+* <a href="https://shop.pcwelt.de/linuxwelt/linuxwelt-magazin-hefte-einzel-ausgaben/linuxwelt-03-2024">Grml 2024.02 shipped on DVD of german Linux Welt magazine 3/2024</a>
 * <a href="https://www.linux-magazin.de/ausgaben/2021/10/einfuehrung/">Grml 2021.07 shipped on DVD of german Linux Magazine 10/2021</a>
 * <a href="https://www.linux-magazin.de/ausgaben/2015/09/rescue-systeme/">Grml featured in Linux-Magazin 09/2015</a>
 * <a href="http://blog.grml.org/archives/393-Grml-2014.11-shipped-on-DVD-of-german-Linux-User-magazine-022015.html">Grml 2014.11 shipped on DVD of german Linux User magazine 02/2015</a>
