@@ -32,8 +32,8 @@ outputs:
 
 params:
   current_release:
-    version: "2025.08"
-    codename: "Oneinonein"
+    version: "2025.12"
+    codename: "Postwurfsendung"
   current_prerelease:
     version: ""
     codename: ""

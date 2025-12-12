@@ -9,12 +9,11 @@ If you're unsure where to report an issue though, feel free to use [github.com/g
 
 If you find additional bugs, please [report them](/bugs/)!
 
+## Known Bugs in Grml 2025.12
+{{< require_release_update "2025.12" >}}
+
+There are currently no known bugs.
+
 ## Known Bugs in Grml 2025.08
-{{< require_release_update "2025.08" >}}
 
 None!
-
-## Known Bugs in Grml 2025.05
-
-* Boot option `keyboard=...` has no effect on keyboard layout (see [grml#232](https://github.com/grml/grml/issues/232)). Workaround: run `grml-lang de`, `loadkeys de` or alike after booting.
-* Boot option `lang=...` breaks the console character set and doesn't set the keyboard layout (see [grml#232](https://github.com/grml/grml/issues/232)). Workaround: boot *without* lang=... option and invoke `grml-lang de`, `loadkeys de` or alike after booting.

@@ -115,11 +115,12 @@ Grml comes close to "argl" or "grrr" in English.
 People use this when they want to express their dissatisfaction with software (amongst other things).
 
 <h3 id="releasename"><a href="#toc">What about the release name?</a></h3>
-{{< require_release_update "2025.08" >}}
+{{< require_release_update "2025.12" >}}
 
-Codename of Grml 2025.08 is "Oneinonein".
+Codename of Grml 2025.12 is "Postwurfsendung".
 
-Make your own choice if you read it as one-in-one-in, or O-Nein-o-Nein! (In German: oh no, oh no!)
+Traditionally the Christkind gives us presents, like Father Christmas does in other countries.
+In more modern times, the postal service throws ("wurf") us over packages and other deliveries ("Sendungen").
 
 <h3 id="requirements"><a href="#toc">Requirements for running Grml</a></h3>
 
