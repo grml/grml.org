@@ -51,7 +51,7 @@ qemu-system-aarch64 \
     -cpu max \
     -m 2048 \
     -drive if=pflash,format=raw,unit=0,file.filename=/usr/share/AAVMF/AAVMF_CODE.no-secboot.fd,file.locking=off,readonly=on \
-    -drive if=pflash,unit=1,file=efi_vars.fd \
+    -drive if=pflash,format=raw,unit=1,file=efi_vars.fd \
     -monitor unix:qemu-monitor-socket,server,nowait \
     -cdrom ./grml-full-{{< param current_release.version >}}-arm64.iso
 </pre>
