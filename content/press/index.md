@@ -9,6 +9,8 @@ icon = 'cdrom'
 
 ### English
 
+* <a href="https://9to5linux.com/grml-2025-12-linux-distro-is-out-based-on-debian-forky-and-linux-kernel-6-17">Grml 2025.12 Linux Distro Is Out Based on Debian Forky and Linux Kernel 6.17 @ 9to5linux.com</a> [2025-12-12]
+* <a href="https://distrowatch.com/?newsid=12664">Distribution Release: Grml 2025.12 @ distrowatch.com</a> [2025-12-12]
 * <a href="https://9to5linux.com/debian-based-grml-2024-12-linux-distro-is-out-with-support-for-64-bit-arm-cpus">Debian-Based Grml 2024.12 Linux Distro Is Out with Support for 64-Bit ARM CPUs @ 9to5linux.com</a> [2024-12-20]
 * <a href="https://lwn.net/Articles/1003048/">Grml 2024.12 released @ lwn.net</a> [2024-12-20]
 * <a href="https://distrowatch.com/?newsid=12323">Distribution Release: Grml 2024.12 @ distrowatch.com</a> [2024-12-20]
@@ -55,6 +57,8 @@ icon = 'cdrom'
 
 <h3>German</h3>
 
+* <a href="https://www.linux-community.de/nachrichten/grml-2025-12-raeumt-unter-der-haube-auf/">Grml 2025.12 räumt unter der Haube auf - linux-community.de</a> [13.12.2025]
+* <a href="https://www.linux-magazin.de/news/grml-2025-12-raeumt-unter-der-haube-auf/">Grml 2025.12 räumt unter der Haube auf - linux-magazin.de</a> [13.12.2025]
 * <a href="https://www.linux-magazin.de/news/grml-2024-12-adventgrenze-kennt-64-bit-arm-cpus/">Grml 2024.12 „Adventgrenze“ kennt 64-Bit-ARM-CPUs - linux-magazin.de</a> [23.12.2024]
 * <a href="https://www.linux-magazin.de/news/grml-2022-11-malguckes-mit-frischem-unterbau/">Grml 2022.11 MalGuckes mit frischem Unterbau - linux-magazin.de</a> [02.12.2022]
 * <a href="https://www.linux-magazin.de/news/grml-2021-07-betreibt-produktpflege/">Grml 2021.07 betreibt Produktpflege</a> [28.07.2021]
@@ -187,6 +191,7 @@ icon = 'cdrom'
 
 ### Other languages
 
+* <a href="https://linuxforum.dk/grml-2025-12-ny-linux-distro-med-debian-og-kernel-6-17/">Grml 2025.12: Ny Linux Distro Med Debian Og Kernel 6.17 @ linuxforum.dk</a>
 * <a href="http://www.linux.pl/?id=news&show=6399">Grml 2013.02 wydany @ linux.pl</a>
 * <a href="http://dug.net.pl/news/486/">Grml 2013.02 wydany @ dug.net.pl</a>
 * <a href="http://dug.net.pl/news/415/">Grml 2012.05 Ponyhof został wydany @ dug.net.pl</a>
