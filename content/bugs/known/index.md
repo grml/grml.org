@@ -12,7 +12,8 @@ If you find additional bugs, please [report them](/bugs/)!
 ## Known Bugs in Grml 2025.12
 {{< require_release_update "2025.12" >}}
 
-There are currently no known bugs.
+* grml-terminalserver is broken (see: [grml-terminalserver#17](https://github.com/grml/grml-terminalserver/issues/17), [grml-terminalserver#19](https://github.com/grml/grml-terminalserver/issues/19))
+* memtest is missing (see: [grml#273](https://github.com/grml/grml/issues/273))
 
 ## Known Bugs in Grml 2025.08
 
