@@ -12,7 +12,7 @@ title = 'Download - Mirror List'
 {{< mirrorlist.inline >}}
 
 {{ $url := "https://raw.githubusercontent.com/grml/grml-mirrors/refs/heads/master/Mirrors.masterlist" }}
-{{ $mirror_types := slice "Grml-http" "Grml-rsync" "Grml-ftp" }}
+{{ $mirror_types := slice "Grml-https" "Grml-rsync" "Grml-ftp" }}
 {{ $s := slice }}
 {{ $countries := slice }}
 {{ with try (resources.GetRemote $url) }}
@@ -48,9 +48,6 @@ title = 'Download - Mirror List'
       {{ $urlfragment := index $mirror $type }}
       {{ if $urlfragment }}
         {{ $proto := substr $type 5 }}
-        {{ if eq $proto "http" }}
-        {{ $proto = "https" }}
-        {{ end }}
         {{ $url := printf "%s://%s/%s" $proto $mirror.Site $urlfragment }}
     <li><a href="{{ $url }}">{{ $url }}</a></li>
       {{ end }}
