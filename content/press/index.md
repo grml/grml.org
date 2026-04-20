@@ -229,6 +229,7 @@ icon = 'cdrom'
 
 Articles about Grml or Grml ISO shipped as part of magazines:
 
+* <a href="https://www.linux-community.de/ausgaben/linuxuser/2026/03/heft-dvd-03-2026/">Grml 2025.12 shipped on DVD of german LinuxUser 03/2026</a>
 * <a href="https://www.linux-magazin.de/ausgaben/2025/11/einfuehrung/">Grml 2025.08 shipped on DVD of german Linux Magazine 11/2025</a>
 * <a href="https://www.linux-community.de/ausgaben/linuxuser/2025/10/heft-dvd-10-2025/">Grml 2025.08 shipped on DVD of german LinuxUser 10/2025</a>
 * <a href="https://www.linux-magazin.de/ausgaben/2025/06/bitparade/">Grml in german Linux Magazine 06/2025 - Fünf spezielle Distributionen für System- und Netzwerkadministratoren</a>
