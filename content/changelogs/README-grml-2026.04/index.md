@@ -42,18 +42,18 @@ Detailed changes: [grml-live v0.55.1 to v0.56.0](https://github.com/grml/grml-li
 
     `git log --oneline --no-merges --after "2025-12-11 18:41:18 +0100"`
 
-#### [grml-debootstrap](https://github.com/grml/grml-debootstrap) - Debian system install tool
+#### [grml-debootstrap](https://github.com/grml/grml-debootstrap) - Debian system install tool:
 
 * Dropped support for Debian v11 / bullseye and replaced isc-dhcp-client with dhcpcd-base ([grml/grml-debootstrap#366](https://github.com/grml/grml-debootstrap/pull/366))
 * Added Raspberry Pi image generation support [grml/grml-debootstrap#335](https://github.com/grml/grml-debootstrap/pull/335))
 
 Detailed changes: [grml-debootstrap v0.123 to v0.127](https://github.com/grml/grml-debootstrap/compare/v0.123...v0.127)
 
-#### [grml-terminalserver](https://github.com/grml/grml-terminalserver) - terminalserver for Grml
+#### [grml-terminalserver](https://github.com/grml/grml-terminalserver) - terminalserver for Grml:
 
 * Add support for dnsmasq as DHCP server alternative ([grml/grml-terminalserver#20](https://github.com/grml/grml-terminalserver/pull/20))
 
-#### [grml2usb](https://github.com/grml/grml2usb) - install Grml ISOs to USB keys
+#### [grml2usb](https://github.com/grml/grml2usb) - install Grml ISOs to USB keys:
 
 * Uses GRUB for BIOS boot ([grml/grml2usb#104](https://github.com/grml/grml2usb/pull/104))
 * Droppd mkisofs/genisoimage support, requires xorriso ([ff92ca9](https://github.com/grml/grml2usb/commit/ff92ca9))
@@ -82,7 +82,7 @@ The following relevant package has been added (excluding e.g. `lib*`, `fonts*`, 
 
 * bubblewrap (a dependcy of vim-gtk3)
 
-The following 11 Debian packages have been removed/replaced (excluding `lib*`, `fonts*`, `*-{base,bin,common,core,data}`, `{gcc,cpp}-*`, `perl*`, `python*`, `ruby*` and kernel image):
+The following Debian packages have been removed/replaced (excluding `lib*`, `fonts*`, `*-{base,bin,common,core,data}`, `{gcc,cpp}-*`, `perl*`, `python*`, `ruby*` and kernel image):
 
 * isc-dhcp-server (Removed from Debian/testing, see [isc-dhcp REMOVED from testing](https://tracker.debian.org/news/1714828/isc-dhcp-removed-from-testing/))
 * isolinux (see: [grml/grml-live#459](https://github.com/grml/grml-live/pull/459))
