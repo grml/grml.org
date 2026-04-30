@@ -23,6 +23,8 @@ About [the codename]({{< ref "faq#releasename" >}}).
 ### Important changes
 
 * This release is based on Debian testing/forky as of April 2026.
+* BIOS boot uses GRUB2 instead of ISOLINUX ([grml/grml-live#459](https://github.com/grml/grml-live/pull/459))
+* `en_DK.UTF-8` is used as new default for LC_TIME ([grml/grml-live#265](https://github.com/grml/grml-live/issue/265), [grml/grml-live#276](https://github.com/grml/grml-live/issue/276), [grml/grml-live#482](https://github.com/grml/grml-live/pull/482))
 
 ### New and removed features
 
@@ -30,34 +32,32 @@ New software since the Grml 2025.12 release is included, and we continued to cle
 
 #### [grml-live](https://github.com/grml/grml-live/) - build system for creating Grml (based) Linux live systems:
 
-* Uses GRUB 2 for BIOS boot instead of ISOLINUX ([grml/grml-live#459](https://github.com/grml/grml-live/pull/459))
-* grml-terminalserver was added on arm64 ([grml/grml-live#480](https://github.com/grml/grml-live/pull/480))
-* Uses en_DK.UTF-8 as new default for LC_TIME ([grml/grml-live#265](https://github.com/grml/grml-live/issue/265), [grml/grml-live#276](https://github.com/grml/grml-live/issue/276), [grml/grml-live#482](https://github.com/grml/grml-live/pull/482))
-* Incorporate previously separate package grml-hostname ([grml/grml#225](https://github.com/grml/grml/issues/225), [grml/grml-live#425](https://github.com/grml/grml-live/pull/415))
+* Incorporate previously separate package grml-scripts ([grml/grml#225](https://github.com/grml/grml/issues/225), [grml/grml-live#425](https://github.com/grml/grml-live/pull/415))
 
 Detailed changes: [grml-live v0.55.1 to v0.56.0](https://github.com/grml/grml-live/compare/v0.55.1...v0.56.0) [[^1]]
 
-[^1]: [1]: Note, that when comparing the changes between [grml-live v0.55.1 to v0.56.0](https://github.com/grml/grml-live/compare/v0.55.1...v0.56.0) it includes all commits from grml-hostname.
-    To only list the changes from grml-live v0.55.1 to v0.56.0 use the following git command to exclude all commits from grml-hostname which were created before grml-live v0.55.1 was released.
+[^1]: [1]: Note, that when comparing the changes between [grml-live v0.55.1 to v0.56.0](https://github.com/grml/grml-live/compare/v0.55.1...v0.56.0) it includes all commits from grml-scripts.
+    To only list the changes from grml-live v0.55.1 to v0.56.0 use the following git command to exclude all commits from grml-scripts which were created before grml-live v0.55.1 was released.
 
     `git log --oneline --no-merges --after "2025-12-11 18:41:18 +0100"`
 
 #### [grml-debootstrap](https://github.com/grml/grml-debootstrap) - Debian system install tool:
 
-* Dropped support for Debian v11 / bullseye and replaced isc-dhcp-client with dhcpcd-base ([grml/grml-debootstrap#366](https://github.com/grml/grml-debootstrap/pull/366))
-* Added Raspberry Pi image generation support [grml/grml-debootstrap#335](https://github.com/grml/grml-debootstrap/pull/335))
+* Drop support for Debian v11 / bullseye and replaced isc-dhcp-client with dhcpcd-base ([grml/grml-debootstrap#366](https://github.com/grml/grml-debootstrap/pull/366))
+* Add Raspberry Pi image generation support [grml/grml-debootstrap#335](https://github.com/grml/grml-debootstrap/pull/335))
 
 Detailed changes: [grml-debootstrap v0.123 to v0.127](https://github.com/grml/grml-debootstrap/compare/v0.123...v0.127)
 
 #### [grml-terminalserver](https://github.com/grml/grml-terminalserver) - terminalserver for Grml:
 
 * Add support for dnsmasq as DHCP server alternative ([grml/grml-terminalserver#20](https://github.com/grml/grml-terminalserver/pull/20))
+* Add to arm64 ISO ([grml/grml-live#480](https://github.com/grml/grml-live/pull/480))
 
 #### [grml2usb](https://github.com/grml/grml2usb) - install Grml ISOs to USB keys:
 
-* Uses GRUB for BIOS boot ([grml/grml2usb#104](https://github.com/grml/grml2usb/pull/104))
-* Droppd mkisofs/genisoimage support, requires xorriso ([ff92ca9](https://github.com/grml/grml2usb/commit/ff92ca9))
-* Replaced mbrldr/mbrmgr with syslinux MBR ([c695dda](https://github.com/grml/grml2usb/commit/c695dda))
+* Use GRUB2 for BIOS boot ([grml/grml2usb#104](https://github.com/grml/grml2usb/pull/104))
+* Drop mkisofs/genisoimage support, requires xorriso ([ff92ca9](https://github.com/grml/grml2usb/commit/ff92ca9))
+* Replace mbrldr/mbrmgr with syslinux MBR ([c695dda](https://github.com/grml/grml2usb/commit/c695dda))
 
 Detailed changes: [grml2usb v0.20.10..v0.20.13](https://github.com/grml/grml2usb/compare/v0.20.10...v0.20.13)
 
