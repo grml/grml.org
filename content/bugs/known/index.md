@@ -9,12 +9,12 @@ If you're unsure where to report an issue though, feel free to use [github.com/g
 
 If you find additional bugs, please [report them](/bugs/)!
 
+## Known Bugs in Grml 2026.04
+
+None!
+
 ## Known Bugs in Grml 2025.12
 {{< require_release_update "2025.12" >}}
 
 * grml-terminalserver is broken. Please update grml-terminalserver to the latest version (see: [grml-terminalserver#17](https://github.com/grml/grml-terminalserver/issues/17), [grml-terminalserver#19](https://github.com/grml/grml-terminalserver/issues/19))
 * memtest is missing. Please use one of the latest [Daily Grml snapshots](https://grml.org/daily/) (see: [grml#273](https://github.com/grml/grml/issues/273))
-
-## Known Bugs in Grml 2025.08
-
-None!

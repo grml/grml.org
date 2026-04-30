@@ -1,8 +1,8 @@
 +++
-title = 'Download Grml 2025.12'
+title = 'Download Grml 2026.04'
 +++
 <!-- at least: update page title -->
-{{< require_release_update "2025.12" >}}
+{{< require_release_update "2026.04" >}}
 
 <style>
 #contentbox {
@@ -98,12 +98,12 @@ title = 'Download Grml 2025.12'
 
   <label>
     <input type="radio" id="flavour_full" name="flavour" value="full" checked />
-    full (~1GB)
+    full (~1.1GB)
   </label>
   &nbsp;
   <label>
     <input type="radio" id="flavour_small" name="flavour" value="small" />
-    small (~580MB)
+    small (~610MB)
   </label>
 
   <br />

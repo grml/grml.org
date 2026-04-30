@@ -115,12 +115,11 @@ Grml comes close to "argl" or "grrr" in English.
 People use this when they want to express their dissatisfaction with software (amongst other things).
 
 <h3 id="releasename"><a href="#toc">What about the release name?</a></h3>
-{{< require_release_update "2025.12" >}}
+{{< require_release_update "2026.04" >}}
 
-Codename of Grml 2025.12 is "Postwurfsendung".
+Codename of Grml 2026.04 is "CashFloh".
 
-Traditionally the Christkind gives us presents, like Father Christmas does in other countries.
-In more modern times, the postal service throws ("wurf") us over packages and other deliveries ("Sendungen").
+A flea with a good cashflow. :)
 
 <h3 id="requirements"><a href="#toc">Requirements for running Grml</a></h3>
 
