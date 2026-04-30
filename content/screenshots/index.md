@@ -3,13 +3,7 @@ title = 'Screenshots'
 icon = 'mycomputer'
 +++
 
-<h2 id="bootsplash">Bootsplash / BIOS</h2>
-
-<a href="vesamenu.png"><img style="border: 0" src="vesamenu.jpg" alt="Screenshot" /></a><br />
-
-<p>This screenshot shows the bootsplash in BIOS mode.</p>
-
-<h2 id="bootsplash">Bootsplash / EFI</h2>
+<h2 id="bootsplash">Bootsplash</h2>
 
 <a href="bootsplash_efi.png"><img style="border: 0" src="bootsplash_efi.jpg" alt="Screenshot" /></a><br />
 
