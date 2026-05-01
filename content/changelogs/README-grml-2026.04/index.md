@@ -80,7 +80,7 @@ Packages are taken from Debian testing/forky, as of {{< format_date_long release
 
 The following relevant package has been added (excluding e.g. `lib*`, `fonts*`, `*-{base,bin,common,core,data}`, `{gcc,cpp}-*`, `perl*`, `python*`, `ruby*` and kernel image):
 
-* bubblewrap (a dependcy of vim-gtk3)
+* bubblewrap (a dependency of vim-gtk3)
 
 The following Debian packages have been removed/replaced (excluding `lib*`, `fonts*`, `*-{base,bin,common,core,data}`, `{gcc,cpp}-*`, `perl*`, `python*`, `ruby*` and kernel image):
 

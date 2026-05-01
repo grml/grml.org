@@ -9,6 +9,7 @@ Contact our press team at: press (at) grml.org
 
 ### English
 
+* [Grml 2026.04 Linux Distro Is Out with Linux Kernel 6.19, Based on Debian 14 Forky @ 9to5linux.com](https://9to5linux.com/grml-2026-04-linux-distro-is-out-with-linux-kernel-6-19-based-on-debian-14-forky) [2026-04-30]
 * [Grml 2025.12 Linux Distro Is Out Based on Debian Forky and Linux Kernel 6.17 @ 9to5linux.com](https://9to5linux.com/grml-2025-12-linux-distro-is-out-based-on-debian-forky-and-linux-kernel-6-17) [2025-12-12]
 * [Distribution Release: Grml 2025.12 @ distrowatch.com](https://distrowatch.com/?newsid=12664) [2025-12-12]
 * [Debian-Based Grml 2024.12 Linux Distro Is Out with Support for 64-Bit ARM CPUs @ 9to5linux.com](https://9to5linux.com/debian-based-grml-2024-12-linux-distro-is-out-with-support-for-64-bit-arm-cpus) [2024-12-20]
