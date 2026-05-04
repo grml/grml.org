@@ -38,7 +38,7 @@ New software since the Debian 13 release is included, and we continued to clean 
 
 Detailed changes: [grml-live v0.55.1 to v0.54.1](https://github.com/grml/grml-live/compare/v0.54.1...v0.55.1) [[^1]]
 
-[^1]: [1]: Note, that when comparing the changes between [grml-live v0.55.1 to v0.54.1](https://github.com/grml/grml-live/compare/v0.54.1...v0.55.1) it includes all commits from grml-desktop.
+[^1]: Note, that when comparing the changes between [grml-live v0.55.1 to v0.54.1](https://github.com/grml/grml-live/compare/v0.54.1...v0.55.1) it includes all commits from grml-desktop.
     To only list the changes from grml-live v0.55.1 to v0.54.1 use the following git command to exclude all commits which are pulled in from grml-desktop:
 
     `git log --oneline --no-merges v0.54.1..v0.55.1 ^83c27dcf`

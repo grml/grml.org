@@ -75,6 +75,9 @@ html{color:#000;background:#FFF}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre
   i,em { font-style: italic }
   code,tt { font-family: "Ubuntu Mono", Consolas, Monaco, Courier, monospace }
   pre { background-color: lightgrey; font-family: "Ubuntu Mono", Consolas, Monaco, Courier, monospace; padding: .5rem 1rem; white-space-collapse: preserve; text-wrap-mode: wrap }
+  .footnotes { margin-top: 1em }
+  .footnotes ol { margin-left: 2em; padding-bottom: 0.3em }
+  .footnotes ol li { list-style: decimal }
   abbr[title], acronym[title] { border-bottom: 1px dotted #333; cursor: help }
   .long-hex-value { font-family: monospace; letter-spacing: -1px; overflow-wrap: anywhere }
   .active { background-color: #FFCC33 }
