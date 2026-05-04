@@ -37,10 +37,8 @@ New software since the Grml 2025.12 release is included, and we continued to cle
 
 Detailed changes: [grml-live v0.55.1 to v0.56.0](https://github.com/grml/grml-live/compare/v0.55.1...v0.56.0) [[^1]]
 
-[^1]: [1]: Note, that when comparing the changes between [grml-live v0.55.1 to v0.56.0](https://github.com/grml/grml-live/compare/v0.55.1...v0.56.0) it includes all commits from grml-scripts.
-    To only list the changes from grml-live v0.55.1 to v0.56.0 use the following git command to exclude all commits from grml-scripts which were created before grml-live v0.55.1 was released.
-
-    `git log --oneline --no-merges --after "2025-12-11 18:41:18 +0100"`
+[^1]: [1]: Note, when comparing changes between [grml-live v0.55.1 and v0.56.0](https://github.com/grml/grml-live/compare/v0.55.1...v0.56.0) all commits from grml-scripts are included.
+    To list just the changes from grml-live v0.55.1 to v0.56.0, use the following command to exclude all grml-scripts commits created before grml-live v0.55.1 was released: `git log --oneline --no-merges --after "2025-12-11 18:41:18 +0100"`
 
 #### [grml-debootstrap](https://github.com/grml/grml-debootstrap) - Debian system install tool:
 
