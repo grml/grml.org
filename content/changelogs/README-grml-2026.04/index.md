@@ -23,8 +23,9 @@ About [the codename]({{< ref "faq#releasename" >}}).
 ### Important changes
 
 * This release is based on Debian testing/forky as of April 2026.
-* BIOS boot uses GRUB2 instead of ISOLINUX ([grml/grml-live#459](https://github.com/grml/grml-live/pull/459))
 * `en_DK.UTF-8` is used as new default for LC_TIME ([grml/grml-live#265](https://github.com/grml/grml-live/issue/265), [grml/grml-live#276](https://github.com/grml/grml-live/issue/276), [grml/grml-live#482](https://github.com/grml/grml-live/pull/482))
+* BIOS boot uses GRUB2 instead of ISOLINUX ([grml/grml-live#459](https://github.com/grml/grml-live/pull/459)). \
+  To successfully install this release on USB media, update `grml2usb` to at least version 0.20.13 (or use the `dd(1)` method). You should drop grml2usb's `--syslinux` parameter &mdash; the ISOs solely support GRUB2 for booting.
 
 ### New and removed features
 
