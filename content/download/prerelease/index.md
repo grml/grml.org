@@ -83,10 +83,10 @@ title = 'Download Grml Release Candidate'
   <a href="/download/mirrors/">Download from a specific mirror</a><br/>
   <br/>
   Direct download links:<br/>
-  <a href="https://download.grml.org/devel/grml-full-{{< param_opt current_prerelease.version >}}-amd64.iso">Grml full ISO for 64bit PCs (amd64)</a> [<a href="https://download.grml.org/devel/grml-full-{{< param_opt current_prerelease.version >}}-amd64.iso.asc">GPG Signature</a>]<br/>
-  <a href="https://download.grml.org/devel/grml-full-{{< param_opt current_prerelease.version >}}-arm64.iso">Grml full ISO for 64bit ARM (arm64)</a> [<a href="https://download.grml.org/devel/grml-full-{{< param_opt current_prerelease.version >}}-arm64.iso.asc">GPG Signature</a>]<br/>
-  <a href="https://download.grml.org/devel/grml-small-{{< param_opt current_prerelease.version >}}-amd64.iso">Grml small ISO for 64bit PCs (amd64)</a> [<a href="https://download.grml.org/devel/grml-small-{{< param_opt current_prerelease.version >}}-amd64.iso.asc">GPG Signature</a>]<br/>
-  <a href="https://download.grml.org/devel/grml-small-{{< param_opt current_prerelease.version >}}-arm64.iso">Grml small ISO for 64bit ARM (arm64)</a> [<a href="https://download.grml.org/devel/grml-small-{{< param_opt current_prerelease.version >}}-arm64.iso.asc">GPG Signature</a>]<br/>
+  <a href="https://download.grml.org/devel/grml-full-{{< param_opt current_prerelease.version >}}-amd64.iso">Grml full ISO for 64bit PCs (amd64)</a> [<a href="https://ftp-master.grml.org/devel/grml-full-{{< param_opt current_prerelease.version >}}-amd64.iso.asc">GPG Signature</a>]<br/>
+  <a href="https://download.grml.org/devel/grml-full-{{< param_opt current_prerelease.version >}}-arm64.iso">Grml full ISO for 64bit ARM (arm64)</a> [<a href="https://ftp-master.grml.org/devel/grml-full-{{< param_opt current_prerelease.version >}}-arm64.iso.asc">GPG Signature</a>]<br/>
+  <a href="https://download.grml.org/devel/grml-small-{{< param_opt current_prerelease.version >}}-amd64.iso">Grml small ISO for 64bit PCs (amd64)</a> [<a href="https://ftp-master.grml.org/devel/grml-small-{{< param_opt current_prerelease.version >}}-amd64.iso.asc">GPG Signature</a>]<br/>
+  <a href="https://download.grml.org/devel/grml-small-{{< param_opt current_prerelease.version >}}-arm64.iso">Grml small ISO for 64bit ARM (arm64)</a> [<a href="https://ftp-master.grml.org/devel/grml-small-{{< param_opt current_prerelease.version >}}-arm64.iso.asc">GPG Signature</a>]<br/>
   <br/>
 </p>
 </div>
@@ -154,9 +154,10 @@ function update_links() {
     var product = 'grml';
     var iso = product + '-' + flavour + '-' + current_version + '-' + arch + '.iso';
     var mirror_url = "https://download.grml.org/devel/";
+    var ftpmaster_url = "https://ftp-master.grml.org/devel/";
     document.getElementById('download_link_mirror').href = mirror_url + iso;
     document.getElementById('download_link_mirror').innerHTML = '<br />Download Now<div class="download_relinfo">' + product + '-' + flavour + ' ' + current_version + ' ' + arch + '</div>';
-    document.getElementById('download_link_signature').href = mirror_url + iso + '.asc';
+    document.getElementById('download_link_signature').href = ftpmaster_url + iso + '.asc';
 }
 
 // hook update function
@@ -209,8 +210,8 @@ document.getElementById('download_group1_noscript').style.display = 'none';
 <p>Please verify all downloads!</p>
 
 <p>Alongside the actual download files (ISO, netboot, sources), the Grml mirrors publish the extra files <em>SHA256SUMS</em> and <em>SHA256SUMS.gpg</em>.<br />
-The <em><a href="https://download.grml.org/devel/SHA256SUMS">SHA256SUMS</a></em> file contains checksums for all available release files.<br />
-The <em><a href="https://download.grml.org/devel/SHA256SUMS.gpg">SHA256SUMS.gpg</a></em> file provides the GnuPG signature for that file.<br />
+The <em><a href="https://ftp-master.grml.org/devel/SHA256SUMS">SHA256SUMS</a></em> file contains checksums for all available release files.<br />
+The <em><a href="https://ftp-master.grml.org/devel/SHA256SUMS.gpg">SHA256SUMS.gpg</a></em> file provides the GnuPG signature for that file.<br />
 Once you have <em>SHA256SUMS</em> and <em>SHA256SUMS.gpg</em> in the same directory as your Grml downloads, verify the checksum file via:</p>
 
 <code class="keyboard">
