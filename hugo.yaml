@@ -1,6 +1,6 @@
 baseurl: "https://grml.org"
 title: "Grml.org"
-languageCode: "en-us"
+locale: "en-US"
 defaultContentLanguage: "en"
 cleanDestinationDir: true
 disablePathToLower: true
