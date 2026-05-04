@@ -92,7 +92,7 @@ Boot options for all flavours: <a href="/cheatcodes/">grml-cheatcodes.txt</a>
       {{ $iso_arch := index $s 0 }}
       {{ $iso_arch_desc := index $s 1 }}
       {{ $isoname := printf "grml-%s-%s-%s" $iso_flavor $current_version $iso_arch }}
-      {{ $urlbase := printf "https://download.grml.org/grml-%s-metadata/%s" $current_version $isoname }}
+      {{ $urlbase := printf "https://ftp-master.grml.org/grml-%s-metadata/%s" $current_version $isoname }}
 
 <h3>grml-{{ $iso_flavor }} {{ $current_version }} {{ $iso_arch }}</h3>
 <ul>
