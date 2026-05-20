@@ -32,16 +32,18 @@ title = 'Download Grml 2026.04'
     width: 100%;
     background-color: #FFDA62;
     min-height: 90px;
-    border: 1px solid gray;
-    border-radius: 3px;
+    border: 1px solid #444;
+    border-radius: 5px;
     margin-bottom: 0.5em;
     font-size: 25pt;
-    font-weight: 1000;
+    font-weight: bold;
     color: black;
     text-decoration: none;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.12);
 }
 .largebutton:hover {
     background-color: #FFA862;
+    text-decoration: none;
 }
 .download_relinfo {
     font-size: 12pt;
