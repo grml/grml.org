@@ -30,7 +30,7 @@ To be more precise without their support, the <a href="/">Grml project</a> would
 
 ### kyberio GmbH
 
-<a href="https://www.kyberio.com/"><div style="float:left;margin-right:10px;" class="imagetext_image"><img width="300" border="0" title="" alt="" src="kyberio.png"></div></a>
+<a href="https://www.kyberio.com/"><div style="float:left;margin-right:10px;" class="imagetext_image"><img width="300" border="0" title="" alt="" src="kyberio.svg"></div></a>
 
   <p><a target="_blank" href="https://www.kyberio.com/">kyberio</a>
   – more than just a hosting company.</p>
