@@ -41,15 +41,14 @@ To be more precise without their support, the <a href="/">Grml project</a> would
   solutions and other Web-based services with a direct presence in
   14 countries, and 600,000 customers worldwide.</p>
 
-  <p><a target="_blank" href="https://www.kyberio.com/">kyberio
-  </a> operates 5 independent data centers in Germany,
+  <p><a target="_blank" href="https://www.kyberio.com/">kyberio</a>
+  operates 5 independent data centers in Germany,
   with 24/7 customer access and onsite staff. The network supports
   IPv4 and IPv6, as well as the operation of high availability
   solutions, involving different interconnected local or
-  international kyberio data centers. Additionally, the <a
-  target="_blank"
-  href="https://www.kyberio.com/">kyberio Enterprise
-  Platform</a>, provides a redundant infrastructure for high
+  international kyberio data centers. Additionally, the
+  <a target="_blank" href="https://www.kyberio.com/">kyberio Enterprise Platform</a>,
+  provides a redundant infrastructure for high
   performance customized cloud solutions (public, private, and
   hybrid), including various add-on features, like CDN, IDS/IPS,
   load balancing, as well as a wide range of managed services.</p>
