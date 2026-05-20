@@ -19,18 +19,32 @@ more...</a></p>
 
 <br />
 
-<p style="text-align: center;">
-<b>The <a href="/changelogs/README-grml-{{< param current_release.version >}}/">current release</a>:</b>
+<div class="frontpage_releaseinfo">
+<h2>Current Release: {{< param current_release.version >}}</h2>
+<div class="frontpage_actions">
+<a href="/changelogs/README-grml-{{< param current_release.version >}}/" class="frontpage_button outline"><span>Release Notes</span><span>Grml {{< param current_release.version >}}</span></a>
 <a href="/download/" class="frontpage_button"><span>Download</span><span>Grml {{< param current_release.version >}}</span></a>
-</p>
+</div>
+</div>
 
 {{< if_have_prerelease >}}
-<p style="text-align: center;">
-<b>The <a href="/changelogs/README-grml-{{< param_opt current_prerelease.version >}}/">current pre-release</a>:</b><br/><br/>
-<a href="/download/prerelease/" class="frontpage_button"><span>Download<br><br>Grml {{< param_opt current_prerelease.version >}}</span></a>
-</p>
-<br />
+<div class="frontpage_releaseinfo">
+<h2>Current Pre-release: {{< param_opt current_prerelease.version >}}</h2>
+<div class="frontpage_actions">
+<a href="/changelogs/README-grml-{{< param_opt current_prerelease.version >}}/" class="frontpage_button outline"><span>Release Notes</span><span>Grml {{< param_opt current_prerelease.version >}}</span></a>
+<a href="/download/prerelease/" class="frontpage_button"><span>Download</span><span>Grml {{< param_opt current_prerelease.version >}}</span></a>
+</div>
+</div>
 {{</ if_have_prerelease >}}
+
+<div class="frontpage_releaseinfo">
+<h2>Daily Snapshots</h2>
+<div class="frontpage_actions">
+<a href="https://daily.grml.org/grml-full-amd64-testing/latest/" class="frontpage_button outline"><span>grml-full testing</span><span>amd64</span></a>
+<a href="https://daily.grml.org/grml-full-arm64-testing/latest/" class="frontpage_button outline"><span>grml-full testing</span><span>arm64</span></a>
+</div>
+<p><a href="/daily/">More daily snapshots →</a></p>
+</div>
 
 <img style="float: right; margin-left: 20px" src="/img/grmltux_small.jpg" alt="*" />
 <br />

@@ -14,7 +14,6 @@ title = 'Download Grml 2026.04'
     width: 288px;
     margin-bottom: 2em;
     margin-top: 1em;
-    font-size: 10pt;
 }
 .download_panel>div {
     margin-right: 20px;
@@ -23,30 +22,34 @@ title = 'Download Grml 2026.04'
     width: auto;
 }
 .largebutton {
+    font-family: 'funds', helvetica, arial, sans-serif;
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
+    line-height: 0.9;
     width: 100%;
     background-color: #FFDA62;
     min-height: 90px;
-    border: 1px solid gray;
-    border-radius: 3px;
+    border: 1px solid #444;
+    border-radius: 5px;
     margin-bottom: 0.5em;
-    font-size: 15pt;
+    font-size: 25pt;
     font-weight: bold;
     color: black;
     text-decoration: none;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.12);
 }
 .largebutton:hover {
     background-color: #FFA862;
+    text-decoration: none;
 }
 .download_relinfo {
-    font-size: 10pt;
-    margin-top: 0.8em;
+    font-size: 12pt;
+    margin-top: 0.5em;
 }
 .download_group {
-    border-bottom: 1px dotted gray;
+    border-bottom: 1px solid #CFB8B8;
     overflow: auto;
 }
 .hide {
@@ -65,7 +68,10 @@ title = 'Download Grml 2026.04'
 
 </style>
 
-<p>Get the current stable release here.<br />
+<p>
+  Get the current stable release here.
+  Read the <a href="/changelogs/README-grml-{{< param current_release.version >}}/">Release Notes</a>.
+</p>
 
 {{< if_have_prerelease >}}
 <a href="prerelease/">Looking for the current pre-release version {{< param_opt current_prerelease.version >}} instead?</a></p>
@@ -121,13 +127,8 @@ title = 'Download Grml 2026.04'
 
   <br />
   <br />
-  <br />
-  <br />
-  <br />
 
-  <div style="font-size: 14pt;">
-    <p><a href="/changelogs/README-grml-{{< param current_release.version >}}/">Release Notes</a></p>
-  </div>
+  <p><a href="/changelogs/README-grml-{{< param current_release.version >}}/">Release Notes</a></p>
 
 </div>
 </form>
@@ -152,7 +153,7 @@ function update_links() {
     var mirror_url = "https://download.grml.org/";
     var ftpmaster_url = "https://ftp-master.grml.org/";
     document.getElementById('download_link_mirror').href = mirror_url + iso;
-    document.getElementById('download_link_mirror').innerHTML = '<br />Download Now<div class="download_relinfo">' + product + '-' + flavour + ' ' + current_version + ' ' + arch + '</div>';
+    document.getElementById('download_link_mirror').innerHTML = 'Download Now<div class="download_relinfo">' + product + '-' + flavour + ' ' + current_version + ' ' + arch + '</div>';
     document.getElementById('download_link_signature').href = ftpmaster_url + iso + '.asc';
 }
 
