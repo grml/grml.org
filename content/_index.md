@@ -37,6 +37,15 @@ more...</a></p>
 </div>
 {{</ if_have_prerelease >}}
 
+<div class="frontpage_releaseinfo">
+<h2>Daily Snapshots</h2>
+<div class="frontpage_actions">
+<a href="https://daily.grml.org/grml-full-amd64-testing/latest/" class="frontpage_button outline"><span>grml-full testing</span><span>amd64</span></a>
+<a href="https://daily.grml.org/grml-full-arm64-testing/latest/" class="frontpage_button outline"><span>grml-full testing</span><span>arm64</span></a>
+</div>
+<p><a href="/daily/">More daily snapshots →</a></p>
+</div>
+
 <img style="float: right; margin-left: 20px" src="/img/grmltux_small.jpg" alt="*" />
 <br />
 
