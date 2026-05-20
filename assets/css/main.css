@@ -118,6 +118,13 @@ html{color:#000;background:#FFF}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre
   #texbox {}
   .frontpage_button { font-family: 'funds', helvetica, arial, sans-serif; display: flex; flex-flow: column nowrap; justify-content: center; align-items: center; gap: 1rem; width: 14em; padding: 1.4rem; margin: 1rem auto; min-height: 60px; background-color: #FFDA62; border-radius: 5px; border: 1px solid #444; text-decoration: none; font-size: 14pt; color: #000000; line-height: 1; background-position: 0px 0px; font-weight: bold }
   .frontpage_button:hover { background: #FFA862; text-decoration: none }
+  .frontpage_button.outline { background-color: #FFFFFF; border: 1px solid #888; font-weight: normal; box-shadow: none }
+  .frontpage_button.outline:hover { background-color: #F4F4F4 }
+  .frontpage_releaseinfo { border: 1px solid #888; border-radius: 1rem; padding: 1.2rem 1.5rem 1.5rem; margin: 1.5rem auto; max-width: 40rem; text-align: center }
+  .frontpage_releaseinfo h2 { margin: 0 0 0.6rem; line-height: 1.3 }
+  .frontpage_actions { display: flex; flex-flow: row wrap; justify-content: center; align-items: stretch; gap: 1rem }
+  .frontpage_actions .frontpage_button { margin: 0; width: 14em; box-shadow: 0 2px 4px rgba(0,0,0,0.12) }
+  .frontpage_actions .frontpage_button.outline { box-shadow: none }
   img.absmiddle { vertical-align: middle; margin-bottom: .25em }
   .banner { padding-top: 1rem; padding-bottom: 1rem; }
   .banner h1, .banner h2 { font-family: 'funds', helvetica, arial, sans-serif; }
