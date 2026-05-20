@@ -47,7 +47,7 @@ title = 'Download Grml Release Candidate'
     margin-top: 0.5em;
 }
 .download_group {
-    border-bottom: 1px dotted gray;
+    border-bottom: 1px solid #CFB8B8;
     overflow: auto;
 }
 .hide {
