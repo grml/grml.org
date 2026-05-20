@@ -98,7 +98,7 @@ html{color:#000;background:#FFF}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre
   main h3 a { color: #996666 }
   div.copyright { text-align: center; font-size: 70%; color: #666 }
   nav h3 a { color: #996666 }
-  nav h3 { font-size: 100%; border: none }
+  nav h3 { font-size: 100%; border: none; font-weight: bold; }
   nav { background-color: #FFFFFF; padding: 0.8em; font-family: 'mwsans', helvetica, arial, sans-serif }
   div.news p { margin: 0 }
   div.sponsors { background-color: #FFFFFF; margin: 0 0.8em 0.8em 0 }
@@ -107,11 +107,11 @@ html{color:#000;background:#FFF}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre
   div.sub_links a { color: #FFFFFF }
   div.sub_links { margin-top: 0.5em; text-align: center; color: #FFFFFF; font-size: 66%; clear: both; background-color: #8B8D7B }
   h1, h2, h3, h4 { font-family: 'mwsans', helvetica, arial, sans-serif }
-  h1 { color: navy; font-size: 150%; font-weight: bold; line-height: 2.2 }
+  h1 { color: navy; font-size: 150%; font-weight: bold; line-height: 2.2; }
   h1.title { padding-top: 1.2em }
-  h2 { color: black; font-size: 130%; font-weight: bold; line-height: 2.2 }
-  h3 { color: black; font-size: 120%; font-weight: bold; padding-top: 0.5em; padding-bottom: 0.3em; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #CFB8B8; margin-bottom: 0em }
-  h4 { color: black; font-size: 110%; font-weight: bold }
+  h2 { color: black; font-size: 130%; font-weight: bold; line-height: 2.2; }
+  main h3 { color: black; font-size: 120%; font-weight: bold; padding-top: 0.5em; margin-bottom: 0.7em; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #CFB8B8; }
+  main h4 { color: black; font-size: 110%; font-weight: bold; padding-top: 0.3em; margin-bottom: 0.2em; }
   p { text-align: justify; color: black; line-height: 1.5em; padding-bottom: 0.4em }
   ul { padding-bottom: 0.3em }
   li { list-style: circle; margin-left: 2em }
@@ -137,6 +137,7 @@ html{color:#000;background:#FFF}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre
   code,tt { font-family: "Ubuntu Mono", Consolas, Monaco, Courier, monospace }
   pre { background-color: lightgrey; font-family: "Ubuntu Mono", Consolas, Monaco, Courier, monospace; padding: .5rem 1rem; white-space-collapse: preserve; text-wrap-mode: wrap }
   .footnotes { margin-top: 1em }
+  .footnotes hr { border: none; border-top: 1px solid #CFB8B8; }
   .footnotes ol { margin-left: 2em; padding-bottom: 0.3em }
   .footnotes ol li { list-style: decimal }
   abbr[title], acronym[title] { border-bottom: 1px dotted #333; cursor: help }
