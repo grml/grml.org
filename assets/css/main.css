@@ -101,7 +101,9 @@ html{color:#000;background:#FFF}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre
   nav h3 { font-size: 100%; border: none; font-weight: bold; }
   nav { background-color: #FFFFFF; padding: 0.8em; font-family: 'mwsans', helvetica, arial, sans-serif }
   div.news p { margin: 0 }
-  div.sponsors { background-color: #FFFFFF; margin: 2em 0.8em 0.8em 0; border-top: 1px solid #CFB8B8; padding-top: 0.8em; }
+  div.sponsors { background-color: #FFFFFF; margin: 2em 0.8em 0.8em 0; border-top: 1px solid #CFB8B8; padding-top: 0.8em; display: grid; grid-template-columns: repeat(2, 1fr); column-gap: 1rem; row-gap: 0.8rem; align-items: center }
+  div.sponsors > p { grid-column: 1 / -1 }
+  div.sponsors > div:last-child:nth-child(even) { grid-column: 1 / -1 }
   div.sponsors div { text-align: center }
   div.sponsors div img { max-width: 300px; }
   div.sub_links a { color: #FFFFFF }
@@ -189,5 +191,6 @@ html{color:#000;background:#FFF}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre
   main p { line-height: 1.2rem }
 
   .banner h1 { padding-top: 0.5em }
+  div.sponsors { grid-template-columns: 1fr }
   .sponsors img { max-width: 50vw }
 }
