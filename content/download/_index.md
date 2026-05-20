@@ -14,7 +14,6 @@ title = 'Download Grml 2026.04'
     width: 288px;
     margin-bottom: 2em;
     margin-top: 1em;
-    font-size: 10pt;
 }
 .download_panel>div {
     margin-right: 20px;
@@ -69,7 +68,10 @@ title = 'Download Grml 2026.04'
 
 </style>
 
-<p>Get the current stable release here.<br />
+<p>
+  Get the current stable release here.
+  Read the <a href="/changelogs/README-grml-{{< param current_release.version >}}/">Release Notes</a>.
+</p>
 
 {{< if_have_prerelease >}}
 <a href="prerelease/">Looking for the current pre-release version {{< param_opt current_prerelease.version >}} instead?</a></p>
@@ -125,13 +127,8 @@ title = 'Download Grml 2026.04'
 
   <br />
   <br />
-  <br />
-  <br />
-  <br />
 
-  <div style="font-size: 14pt;">
-    <p><a href="/changelogs/README-grml-{{< param current_release.version >}}/">Release Notes</a></p>
-  </div>
+  <p><a href="/changelogs/README-grml-{{< param current_release.version >}}/">Release Notes</a></p>
 
 </div>
 </form>

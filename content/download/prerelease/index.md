@@ -12,7 +12,6 @@ title = 'Download Grml Release Candidate'
     width: 288px;
     margin-bottom: 2em;
     margin-top: 1em;
-    font-size: 10pt;
 }
 .download_panel>div {
     margin-right: 20px;
@@ -76,7 +75,10 @@ title = 'Download Grml Release Candidate'
 </p>
 {{</ if_have_prerelease >}}
 
-<a href="../">Looking for the stable release version instead?</a></p>
+<p>
+  <a href="../">Looking for the stable release version instead?</a>
+  Read the <a href="/changelogs/README-grml-{{< param_opt current_prerelease.version >}}/">Release Notes</a>.
+</p>
 
 {{< if_have_prerelease >}}
 <p>Download the Grml flavour you need, then write it to a CD-ROM/DVD or an empty USB stick.</p>
@@ -129,13 +131,7 @@ title = 'Download Grml Release Candidate'
 
   <br />
   <br />
-  <br />
-  <br />
-  <br />
-
-  <div style="font-size: 14pt;">
-    <p><a href="/changelogs/README-grml-{{< param_opt current_prerelease.version >}}/">Release Notes</a></p>
-  </div>
+  <p><a href="/changelogs/README-grml-{{< param_opt current_prerelease.version >}}/">Release Notes</a></p>
 
 </div>
 </form>
