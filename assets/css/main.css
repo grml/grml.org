@@ -166,6 +166,76 @@ html{color:#000;background:#FFF}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre
     font-weight: bold;
     text-transform: uppercase;
   }
+
+  /* Block titles (listing/literal/sidebar/image/dlist titles) */
+  .listingblock > .title,
+  .literalblock > .title,
+  .imageblock   > .title,
+  .sidebarblock > .content > .title,
+  .dlist > .title,
+  .ulist > .title,
+  .olist > .title,
+  .exampleblock > .title {
+    font-weight: bold;
+    padding-bottom: 0.3em;
+  }
+
+  /* Listing / literal block spacing (inner <pre> is already styled) */
+  .listingblock, .literalblock { margin: 0.8em 0; }
+
+  /* Sidebar callout — visually distinct box */
+  .sidebarblock {
+    background-color: #FEDB64;
+    border: 1px solid #CFB8B8;
+    padding: 0.8em 1em;
+    margin: 1em 0;
+  }
+  .sidebarblock > .content > .paragraph:last-child > p { padding-bottom: 0 }
+
+  /* Description list (option lists in grml-debootstrap/grml-live/grml2usb) */
+  .dlist > dl { margin: 0.5em 0 }
+  .dlist > dl > dt.hdlist1 { font-weight: bold; margin-top: 0.6em }
+  .dlist > dl > dd { margin-left: 1.8em }
+  .dlist > dl > dd > p:last-child { padding-bottom: 0 }
+
+  /* Horizontal description list (table form, used in grml2usb error/reason) */
+  .hdlist > table { border-collapse: collapse; margin: 1em 0 }
+  .hdlist > table td.hdlist1 {
+    font-weight: bold;
+    padding: 0.3em 1em 0.3em 0;
+    vertical-align: top;
+    white-space: nowrap;
+  }
+  .hdlist > table td.hdlist2 { padding: 0.3em 0; vertical-align: top }
+  .hdlist > table td.hdlist2 > p { padding-bottom: 0 }
+
+  /* Data tables (Supported Releases on grml-debootstrap) */
+  table.tableblock { border-collapse: collapse; margin: 1em 0 }
+  table.tableblock > caption.title {
+    font-weight: bold;
+    text-align: left;
+    padding-bottom: 0.4em;
+    caption-side: top;
+  }
+  table.tableblock.frame-ends {
+    border-top: 1px solid #CFB8B8;
+    border-bottom: 1px solid #CFB8B8;
+  }
+  table.tableblock.grid-all th.tableblock,
+  table.tableblock.grid-all td.tableblock { border: 1px solid #CFB8B8 }
+  th.tableblock, td.tableblock { padding: 0.3em 0.6em }
+  .tableblock.halign-left   { text-align: left }
+  .tableblock.halign-right  { text-align: right }
+  .tableblock.halign-center { text-align: center }
+  .tableblock.valign-top    { vertical-align: top }
+  .tableblock.valign-middle { vertical-align: middle }
+  .tableblock.valign-bottom { vertical-align: bottom }
+  p.tableblock { padding-bottom: 0; text-align: inherit }
+  p.tableblock + p.tableblock { margin-top: 0.4em }
+
+  /* Restore decimal numbering for ordered lists inside asciidoc content
+     (li{list-style:circle} above would otherwise strip numbers) */
+  .olist ol > li { list-style: decimal }
 }
 
 @media print {
