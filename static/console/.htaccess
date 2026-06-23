@@ -6,5 +6,6 @@ RewriteRule zshrc.local$   https://git.grml.org/f/grml-etc-core/etc/skel/.zshrc
 RewriteRule zshenv$        https://git.grml.org/f/grml-etc-core/etc/zsh/zshenv
 RewriteRule vimrc$         https://git.grml.org/f/grml-etc-core/etc/vim/vimrc
 RewriteRule screenrc$      https://git.grml.org/f/grml-etc-core/etc/grml/screenrc_generic
+RewriteRule screenrc_v4$   https://git.grml.org/f/grml-etc-core/etc/grml/screenrc_generic_v4
 RewriteRule tmux.conf$     https://git.grml.org/f/grml-etc-core/etc/tmux.conf
 AddDefaultCharset UTF-8
