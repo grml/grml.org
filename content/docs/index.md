@@ -32,7 +32,9 @@ The Live ISO can be configured at run time. See:
 
 ### grml-live
 
-[grml-live](/grml-live/): build framework based on FAI for generating a grml and Debian based Linux Live system (CD/ISO)
+[grml-live](/grml-live/): build framework for the Grml Live Linux system
+
+Read this if you want to build your own Grml-based system.
 
 ### grml-terminalserver
 
