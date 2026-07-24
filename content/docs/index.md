@@ -34,10 +34,10 @@ The Live ISO can be configured at run time. See:
 
 <a href="/grml-live/">grml-live</a>: build framework based on FAI for generating a grml and Debian based Linux Live system (CD/ISO)
 
-### grml-x
-
-<a href="/grml-x/">grml-x</a>: create xorg.conf file (providing hardware detection) and start X window system
-
 ### grml-terminalserver
 
 <a href="/terminalserver/">grml-terminalserver</a>: boot grml via network
+
+### grml-x
+
+<a href="/grml-x/">grml-x</a>: create xorg.conf file (providing hardware detection) and start X window system
