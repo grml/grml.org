@@ -5,12 +5,12 @@ icon = 'doc'
 
 ## FAQ & zsh
 
-Frequently asked questions and answers can be found in the section <a href="/faq/">FAQ</a>.
-If you are looking for information on the Zsh take a look at the <a href="/zsh/">zsh-webpage</a>.
+Frequently asked questions and answers can be found in the section [FAQ](/faq/).
+If you are looking for information on the Zsh take a look at the [zsh-webpage](/zsh/).
 
-The available boot options are documented at <a href="/cheatcodes/">the cheatcodes webpage</a>.
+The available boot options are documented at [the cheatcodes webpage](/cheatcodes/).
 
-Many tips and tricks can be found in the <a href="https://wiki.grml.org/">grml-wiki (wiki.grml.org)</a> and in <a href="/tips/">grml-tips</a>.
+Many tips and tricks can be found in the [grml-wiki](https://wiki.grml.org/) and in [grml-tips](/tips/).
 
 ## Live ISO Configuration
 
@@ -24,20 +24,20 @@ The Live ISO can be configured at run time. See:
 
 ### grml2usb
 
-<a href="/grml2usb/">grml2usb</a>: install grml ISO(s) on usb device for booting
+[grml2usb](/grml2usb/): install grml ISO(s) on usb device for booting
 
 ### grml-debootstrap
 
-<a href="/grml-debootstrap/">grml-debootstrap</a>: wrapper around debootstrap for installing plain Debian via grml
+[grml-debootstrap](/grml-debootstrap/): wrapper around debootstrap for installing plain Debian via grml
 
 ### grml-live
 
-<a href="/grml-live/">grml-live</a>: build framework based on FAI for generating a grml and Debian based Linux Live system (CD/ISO)
+[grml-live](/grml-live/): build framework based on FAI for generating a grml and Debian based Linux Live system (CD/ISO)
 
 ### grml-terminalserver
 
-<a href="/terminalserver/">grml-terminalserver</a>: boot grml via network
+[grml-terminalserver](/terminalserver/): boot grml via network
 
 ### grml-x
 
-<a href="/grml-x/">grml-x</a>: create xorg.conf file (providing hardware detection) and start X window system
+[grml-x](/grml-x/): create xorg.conf file (providing hardware detection) and start X window system
