@@ -35,6 +35,7 @@ copy_set_url source-repos/grml-etc-core/doc/grmlzshrc.adoc content/zsh/grmlzshrc
 git_clone grml-live
 cp source-repos/grml-live/docs/grml-live.8.adoc content/grml-live/index.adoc
 copy_set_url source-repos/grml-live/docs/grml-autoconfig.1.adoc content/config/grml-autoconfig.1.adoc config/grml-autoconfig.1.html
+copy_set_url source-repos/grml-live/docs/grml-autoconfig.8.adoc content/config/grml-autoconfig.8.adoc config/grml-autoconfig.8.html
 
 git_clone grml-x
 cp source-repos/grml-x/grml-x.txt content/grml-x/index.adoc

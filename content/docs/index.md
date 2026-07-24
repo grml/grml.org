@@ -12,6 +12,14 @@ The available boot options are documented at <a href="/cheatcodes/">the cheatcod
 
 Many tips and tricks can be found in the <a href="https://wiki.grml.org/">grml-wiki (wiki.grml.org)</a> and in <a href="/tips/">grml-tips</a>.
 
+## Live ISO Configuration
+
+The Live ISO can be configured at run time. See:
+
+* [grml-autoconfig(1)](/config/grml-autoconfig.1.html) and [grml-autoconfig(8)](/config/grml-autoconfig.8.html)
+* [persistency](https://github.com/grml/grml/wiki/persistency)
+* [boot cheatcodes](/cheatcodes/) - especially `netscript=`
+
 ## Guides
 
 ### grml2usb

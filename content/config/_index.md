@@ -4,9 +4,9 @@ icon = 'floppy'
 +++
 
 Starting with version 0.5 Grml provides a configuration system.
-Please see [grml-autoconfig.1.html](grml-autoconfig.1.html) for details.
+Please see [grml-autoconfig(1)](grml-autoconfig.1.html) and [grml-autoconfig(8)](grml-autoconfig.8.html) for details.
 
-In a running Grml Live ISO, you can also read it via `man 1 grml-autoconfig`.
+In a running Grml Live ISO, you can also read it via `man 1 grml-autoconfig` and `man 8 grml-autoconfig`.
 
 **Tip:** Make sure to also check out the new [persistency features](https://github.com/grml/grml/wiki/persistency) of Grml.
 
