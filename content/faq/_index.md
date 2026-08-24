@@ -34,6 +34,7 @@ icon = 'clanbomber'
     <li><a href="#wms">Which window managers can I use?</a></li>
     <li><a href="#lvm">Where are my LVM devices?</a></li>
     <li><a href="#swraid">Where are my Software-RAID devices?</a></li>
+    <li><a href="#xfsv4">Why does my XFS v4 filesystems not mount?</a></li>
     <li><a href="#booting">Which ways exist to boot Grml?</a></li>
     <li><a href="#timezone">How do I configure timezone on my Grml system?</a></li>
     <li><a href="#hdinstall">Is it possible to install Grml to harddisk?</a></li>
@@ -248,6 +249,16 @@ To get access to present SW-RAID devices execute:
 </pre>
 
 If you want to enable SW-RAID by default just boot using the `swraid` [boot option](#bootoptions) which enables automatic assembling of software raid arrays.
+
+<h3 id="xfsv4"><a href="#toc">Why does my XFS v4 filesystems not mount?</a></h3>
+
+XFS filesystems created as version 4 are [deprecated in the Linux kernel since commit f69260511c69](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=f69260511c69).
+
+As Grml uses the Linux kernel unchanged from Debian, this means XFS v4 filesystems cannot be mounted anymore since Linux kernel 6.18, which corresponds to Grml 2026.04.
+
+If you have such an old filesystem, you can try to use an older Grml release, for example Grml 2025.12.
+
+See [Debian bug #1126710](https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=1126710) for details.
 
 <a id="terminalserver"></a>
 <h3 id="booting"><a href="#toc">Which ways exist to boot Grml?</a></h3>
