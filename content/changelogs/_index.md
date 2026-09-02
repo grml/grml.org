@@ -17,7 +17,8 @@ icon = 'changelog'
 
 ## List of Grml releases
 
-{{< require_release_update "2026.04" >}}
+{{< require_release_update "2026.09" >}}
+* <a href="README-grml-2026.09/">Grml 2026.09</a> - codename Hättiwaritätti
 * <a href="README-grml-2026.04/">Grml 2026.04</a> - codename CashFloh
 * <a href="README-grml-2025.12/">Grml 2025.12</a> - codename Postwurfsendung
 * <a href="README-grml-2025.08/">Grml 2025.08</a> - codename Oneinonein

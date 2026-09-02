@@ -51,8 +51,8 @@ more...</a></p>
 
 <h2>News</h2>
 <div class="news">
-{{< require_release_update "2026.04" >}}
-<p>30 April 2026: New <a href="/changelogs/README-grml-2026.04/">stable release 2026.04</a></p>
-<p>12 December 2025: New <a href="/changelogs/README-grml-2025.12/">stable release 2025.12</a></p>
-<p>16 August 2025: New <a href="/changelogs/README-grml-2025.08/">stable release 2025.08</a></p>
+{{< require_release_update "2026.09" >}}
+<p>3. September 2026: New <a href="/changelogs/README-grml-2026.09/">stable release 2026.09</a></p>
+<p>30. April 2026: New <a href="/changelogs/README-grml-2026.04/">stable release 2026.04</a></p>
+<p>12. December 2025: New <a href="/changelogs/README-grml-2025.12/">stable release 2025.12</a></p>
 </div>

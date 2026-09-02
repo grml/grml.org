@@ -116,11 +116,11 @@ Grml comes close to "argl" or "grrr" in English.
 People use this when they want to express their dissatisfaction with software (amongst other things).
 
 <h3 id="releasename"><a href="#toc">What about the release name?</a></h3>
-{{< require_release_update "2026.04" >}}
+{{< require_release_update "2026.09" >}}
 
-Codename of Grml 2026.04 is "CashFloh".
+Codename of Grml 2026.09 is "Hättiwaritätti".
 
-A flea with a good cashflow. :)
+Austrian form of "wannabe". This release took us a while.
 
 <h3 id="requirements"><a href="#toc">Requirements for running Grml</a></h3>
 
