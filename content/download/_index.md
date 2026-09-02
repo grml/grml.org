@@ -109,7 +109,7 @@ title = 'Download Grml 2026.04'
   &nbsp;
   <label>
     <input type="radio" id="flavour_small" name="flavour" value="small" />
-    small (~610MB)
+    small (~640MB)
   </label>
 
   <br />
