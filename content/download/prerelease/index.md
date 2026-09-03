@@ -9,7 +9,7 @@ title = 'Download Grml Release Candidate'
 }
 .download_panel {
     float: left;
-    width: 288px;
+    width: 25em;
     margin-bottom: 2em;
     margin-top: 1em;
 }
