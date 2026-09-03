@@ -50,7 +50,6 @@ Detailed changes: [grml-debootstrap v0.127 to v0.130](https://github.com/grml/gr
 ### Bits & bolts
 
 * Linux kernel **{{< param kernel_version >}}**
-<!-- misc -->
 * `exfat` support is now available in the initramfs, for booting from exfat-formatted USB devices.
 * `grml2usb`: when `grub-install` fails, add hint for required GNU GRUB packages.
 * GRUB now [sources hook files](https://github.com/grml/grml-live/commit/be75e4ba94971122e472e3c64705e9524a0aea2f) and respects [${extraopts}](https://github.com/grml/grml-live/commit/3f4b93ffb516271321ea0714856008f15a9b4c03).
