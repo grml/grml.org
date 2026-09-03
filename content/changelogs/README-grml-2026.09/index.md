@@ -88,6 +88,9 @@ Please visit the [known bugs](/bugs/known/) web page.
 
 Grml {{< param release_version >}} can be downloaded from [the download page]({{< indirect_ref download_page >}}).
 
+In 2026.04 ISOLINUX was replaced with GRUB 2 for BIOS boot.
+When using `grml2usb` to install Grml to USB media, make sure to use at least version 0.20.14.
+
 ### Feedback
 
 Your comments, bug reports, patches, and suggestions will help fixing bugs and improving future releases.

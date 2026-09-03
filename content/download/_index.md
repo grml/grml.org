@@ -189,7 +189,9 @@ document.getElementById('download_group1_noscript').style.display = 'none';
   <br />
   Just <kbd>dd(1)</kbd> the downloaded ISO to an <abbr title="Any existing data will be overwritten by the dd command!">empty</abbr> USB key!<br /><br />
   <code class="keyboard">dd bs=4M status=progress conv=fdatasync if=grml-full-{{< param current_release.version >}}-amd64.iso of=/dev/USB_KEY</code>
-  <br /><br />
+  <br /><br/>
+  <tt>grml2usb</tt> users: use version 0.20.14 or newer.
+  <br /><br/>
   <b>Troubleshooting</b><br /><br />
   <a href="/cheatcodes/">Boot option guide</a>
   <br />
