@@ -32,8 +32,8 @@ outputs:
 
 params:
   current_release:
-    version: "2026.04"
-    codename: "CashFloh"
+    version: "2026.09"
+    codename: "Hättiwaritätti"
   current_prerelease:
     version: ""
     codename: ""
