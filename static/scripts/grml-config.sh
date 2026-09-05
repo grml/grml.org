@@ -12,6 +12,7 @@ if command -v wget >/dev/null 2>&1 ; then
   wget -O .zshenv     https://grml.org/console/zshenv
   # optional:
   # wget -O .zshrc.local https://grml.org/console/zshrc.local
+  # wget -O .screenrc_v4   https://grml.org/console/screenrc_v4
 elif command -v curl >/dev/null 2>&1 ; then
   curl -sSfL -o .screenrc   https://grml.org/console/screenrc
   curl -sSfL -o .tmux.conf  https://grml.org/console/tmux.conf
@@ -20,6 +21,7 @@ elif command -v curl >/dev/null 2>&1 ; then
   curl -sSfL -o .zshenv     https://grml.org/console/zshenv
   # optional:
   # curl -sSfL -o .zshrc.local https://grml.org/console/zshrc.local
+  # curl -sSfL -o .screenrc_v4   https://grml.org/console/screenrc_v4
 elif command -v fetch >/dev/null 2>&1 ; then
   fetch -o .screenrc   https://grml.org/console/screenrc
   fetch -o .tmux.conf  https://grml.org/console/tmux.conf
@@ -28,6 +30,7 @@ elif command -v fetch >/dev/null 2>&1 ; then
   fetch -o .zshenv     https://grml.org/console/zshenv
   # optional:
   # fetch -o .zshrc.local https://grml.org/console/zshrc.local
+  # fetch -o .screenrc_v4   https://grml.org/console/screenrc_v4
 else
   echo 'Error: neither wget, curl not fetch  available for retrieving configuration files.' >&2
   exit 1
