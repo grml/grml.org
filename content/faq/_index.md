@@ -281,7 +281,7 @@ For more information, refer to the [grml-terminalserver webpage](/terminalserver
 
 <h3 id="timezone"><a href="#toc">How do I configure timezone on my Grml system?</a></h3>
 
-Availabe boot options:
+Available boot options:
 
 <pre class="rahmen">
 grml utc          # set UTC, if your system/hardware clock is set to UTC (Coordinated Universal Time)

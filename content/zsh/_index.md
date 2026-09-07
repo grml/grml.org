@@ -27,7 +27,7 @@ and improve your zsh skills!
 
 <h2 id="grmlzshrc">grmlzshrc(5)</h2>
 
-grmlzshrc(5) is a manpage providing detailled information about grml's
+grmlzshrc(5) is a manpage providing detailed information about grml's
 zsh configuration. On the grml system it is available offline via `man
 grmlzshrc`. An online version is available as well:
 
@@ -43,7 +43,7 @@ via executing for example:
     # configuration file in the current working directory! =>
     wget -O .zshrc      https://grml.org/console/zshrc
 
-    # Optionally also grab the user configration:
+    # Optionally also grab the user configuration:
     # wget -O .zshrc.local https://grml.org/console/zshrc.local
 
 Also take a look at [grml-config.sh](/scripts/grml-config.sh)
