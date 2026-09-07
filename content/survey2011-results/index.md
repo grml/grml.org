@@ -285,7 +285,7 @@ This was one of the most fun parts to read in the whole survey.</p>
   lost data with testdisk</li>
 
   <li>Pure Awesome in tiny ~700 MB :D Seriously, lots of big thanks
-  for maintaing such a great project! Also; kudos for the great
+  for maintaining such a great project! Also; kudos for the great
   naming convention!</li>
 
   <li>A real Swiss Army Knife for Linux sysadmins.</li>

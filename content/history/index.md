@@ -638,7 +638,7 @@ infrastructure and improve things we don't like that much.</p>
 
 <h3>October 2003 - Juli 2004</h3>
 
-<p>We collected ressources for building a new distribution (many ideas,
+<p>We collected resources for building a new distribution (many ideas,
 websites,...). We created <a href="/img/grml_bart.png">a vmware-image</a> based on <a
 href="http://www.linuxlots.com/~fawcett/yard/index.html">yard</a>, wrote some
 zsh-scripts (zsh will be the default-shell of grml) and wrote a first (unpublished)

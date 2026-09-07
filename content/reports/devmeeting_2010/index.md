@@ -45,7 +45,7 @@ Gebi, Jimmy and formorer are joining at ~10:15, Rhonda joins in the afternoon. O
     <li>Artwork for upcoming release: different sizes of Tux</li>
     <li>Gebi will work on a framework for non-free tools for improved handling of hardware RAID controllers, truecrypt,...</li>
     <li>We decided to not invest any time in non-free firmware as our current system works pretty well out-of-the-box already and if there should be need for further discussions around inclusion of non-free firmware people should report it</li>
-    <li>Acknowledgment regarding main programming languages used within Grml: Shell and Python are to be prefered unless there are good reasons against it, exceptions need good reasoning</li>
+    <li>Acknowledgment regarding main programming languages used within Grml: Shell and Python are to be preferred unless there are good reasons against it, exceptions need good reasoning</li>
     <li>grml-etc-core should ship /etc/gitconfig in the future (instead of /etc/skel/.gitconfig for user-only config) to provide system wide configuration of some important defaults</li>
     <li>Detailed review of GRMLBASE software selection - the class is considered as base for any remastered ISOs and should provide software that either needs to be present because the live system wouldn't work otherwise or software we expect to get with every Grml based live system (lvm, madm, openssh,...)</li>
     <li>locales: /usr/share/locales shouldn't be removed overall but be made configurable (besides the already existing LOCALES class)&nbsp;</li>
@@ -132,7 +132,7 @@ ideas what Grml is and how we as a team can improve Grml.</p>
 <li>Change grml-rebuildfstab to only modify current device and do not scan whole system on every event.</li>
 <li>Code reviews: we won't use an extra tool but push work in separate branches inside git and ask the according maintainer and/or other developers for feedback. The workflow with merge + signed-off will be documented accordingly</li>
 <li>Workflow for Debian packaging/VCS: Mika presented his git-dch/git-buildpackage workflow - will be documented properly. As soon as the workflow is documented uploads for all core developers to grml-testing at deb.grml.org will be enabled.</li>
-<li>Improve Grml page in german and english wikipedia, needs updates to reflect recent developement. Rhonda will take care of it.</li>
+<li>Improve Grml page in german and english wikipedia, needs updates to reflect recent development. Rhonda will take care of it.</li>
 <li>Grml-Monster: we would like to get our own mascot with appropriate license for distribution</li>
 <li>Would be nice to have a directory specific configuration for grml-live, Mika wants to take care of it.</li>
 <li>Finished bug squashing with 84 open bugs, only 6 open release stoppers of which some are already pending.</li>
