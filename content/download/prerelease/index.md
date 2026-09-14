@@ -177,7 +177,6 @@ document.getElementById('download_group1_noscript').style.display = 'none';
 <div>
   <b>Alternate downloads</b><br /><br />
   <a href="https://daily.grml.org/">Daily images</a><br />
-  <a href="https://download.grml.org/">Older releases</a><br />
   <a href="https://download.grml.org/devel/grml_sources-{{< param_opt current_prerelease.version >}}.tar.gz">Source code</a> (one tgz for both architectures)<br />
   <br/>
   Netboot packages:<br/>
