@@ -85,9 +85,9 @@ title = 'Download Grml 2026.09'
   <a href="/download/mirrors/">Download from a specific mirror</a><br/>
   <br/>
   Direct download links:<br/>
-  <a href="https://download.grml.org/grml-full-{{< param current_release.version >}}-amd64.iso">Grml full ISO for 64bit PCs (amd64)</a> [<a href="https://ftp-master.grml.org/grml-full-{{< param_opt current_release.version >}}-amd64.iso.asc">GPG Signature</a>]<br/>
+  <a href="https://download.grml.org/grml-full-{{< param current_release.version >}}-amd64.iso">Grml full ISO for 64bit x86 PCs (amd64)</a> [<a href="https://ftp-master.grml.org/grml-full-{{< param_opt current_release.version >}}-amd64.iso.asc">GPG Signature</a>]<br/>
   <a href="https://download.grml.org/grml-full-{{< param current_release.version >}}-arm64.iso">Grml full ISO for 64bit ARM (arm64)</a> [<a href="https://ftp-master.grml.org/grml-full-{{< param_opt current_release.version >}}-arm64.iso.asc">GPG Signature</a>]<br/>
-  <a href="https://download.grml.org/grml-small-{{< param current_release.version >}}-amd64.iso">Grml small ISO for 64bit PCs (amd64)</a> [<a href="https://ftp-master.grml.org/grml-small-{{< param_opt current_release.version >}}-amd64.iso.asc">GPG Signature</a>]<br/>
+  <a href="https://download.grml.org/grml-small-{{< param current_release.version >}}-amd64.iso">Grml small ISO for 64bit x86 PCs (amd64)</a> [<a href="https://ftp-master.grml.org/grml-small-{{< param_opt current_release.version >}}-amd64.iso.asc">GPG Signature</a>]<br/>
   <a href="https://download.grml.org/grml-small-{{< param current_release.version >}}-arm64.iso">Grml small ISO for 64bit ARM (arm64)</a> [<a href="https://ftp-master.grml.org/grml-small-{{< param_opt current_release.version >}}-arm64.iso.asc">GPG Signature</a>]<br/>
   <br/>
 </p>
@@ -117,7 +117,7 @@ title = 'Download Grml 2026.09'
   <h2>Architecture</h2>
   <label>
     <input type="radio" id="arch_amd64" name="arch" value="amd64" checked />
-    64-bit PC (amd64)
+    64-bit x86 PC (amd64)
   </label>
   &nbsp;
   <label>
@@ -177,7 +177,7 @@ document.getElementById('download_group1_noscript').style.display = 'none';
   <a href="https://download.grml.org/grml-{{< param current_release.version >}}-sources.tar">Source code</a> (one tar for both architectures)<br />
   <br/>
   Netboot packages:<br/>
-  <a href="https://download.grml.org/grml-full-{{< param current_release.version >}}-amd64-netboot.tar">64-bit PC</a>
+  <a href="https://download.grml.org/grml-full-{{< param current_release.version >}}-amd64-netboot.tar">64-bit x86 PC</a>
   <a href="https://download.grml.org/grml-full-{{< param current_release.version >}}-arm64-netboot.tar">64-bit ARM</a>
 </div>
 </div>
